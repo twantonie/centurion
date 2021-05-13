@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -86,7 +86,9 @@ $(function() {
 
 <div class="header">
   <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -97,14 +99,37 @@ $(function() {
 <p>Contains the audio API, for playing as sound effects and music.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacecen_1_1channels"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1channels.html">cen::channels</a></td></tr>
+<tr class="memdesc:namespacecen_1_1channels"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains functions related to audio channels. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1music.html">cen::music</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a music file.  <a href="classcen_1_1music.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1sound__effect.html">cen::sound_effect</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a sound effect.  <a href="classcen_1_1sound__effect.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__sound__effect.html">cen::basic_sound_effect</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a sound effect.  <a href="classcen_1_1basic__sound__effect.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ga652508490c53af3f32df983ee1456854"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#ga652508490c53af3f32df983ee1456854">cen::channel_index</a> = int</td></tr>
+<tr class="separator:ga652508490c53af3f32df983ee1456854"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7fd39958c3355458d2b4cb2cba24606f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#ga7fd39958c3355458d2b4cb2cba24606f">cen::group_index</a> = int</td></tr>
+<tr class="separator:ga7fd39958c3355458d2b4cb2cba24606f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa2e80f918396ede432649eae682172f1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#gaa2e80f918396ede432649eae682172f1">cen::channel_finished_callback</a> = void(SDLCALL *)(<a class="el" href="group__audio.html#ga652508490c53af3f32df983ee1456854">channel_index</a>) noexcept</td></tr>
+<tr class="separator:gaa2e80f918396ede432649eae682172f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga58704391a83548938aa57dbaafa5b51d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#ga58704391a83548938aa57dbaafa5b51d">cen::sound_effect</a> = <a class="el" href="classcen_1_1basic__sound__effect.html">basic_sound_effect</a>&lt; detail::owning_type &gt;</td></tr>
+<tr class="memdesc:ga58704391a83548938aa57dbaafa5b51d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an owning sound effect.  <a href="group__audio.html#ga58704391a83548938aa57dbaafa5b51d">More...</a><br /></td></tr>
+<tr class="separator:ga58704391a83548938aa57dbaafa5b51d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad7f587461ff6d13a784c0f4ef2df25c5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#gad7f587461ff6d13a784c0f4ef2df25c5">cen::sound_effect_handle</a> = <a class="el" href="classcen_1_1basic__sound__effect.html">basic_sound_effect</a>&lt; detail::handle_type &gt;</td></tr>
+<tr class="memdesc:gad7f587461ff6d13a784c0f4ef2df25c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a non-owning sound effect.  <a href="group__audio.html#gad7f587461ff6d13a784c0f4ef2df25c5">More...</a><br /></td></tr>
+<tr class="separator:gad7f587461ff6d13a784c0f4ef2df25c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf3a86cfc4c2fe2dc15c97ea586603831"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#gaf3a86cfc4c2fe2dc15c97ea586603831">cen::sound_font_visit_callback</a> = int(SDLCALL *)(<a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a>, void *) noexcept</td></tr>
+<tr class="separator:gaf3a86cfc4c2fe2dc15c97ea586603831"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -116,7 +141,7 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="group__audio.html#ggaef827dcc53a287d0cae4abcb00d3bda2ac68271a63ddbc431c307beb7d2918275">cen::fade_status::out</a> = MIX_FADING_OUT
 <br />
  }</td></tr>
-<tr class="memdesc:gaef827dcc53a287d0cae4abcb00d3bda2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mirrors the values of the <code>Mix_Fading</code> enum.  <a href="group__audio.html#gaef827dcc53a287d0cae4abcb00d3bda2">More...</a><br /></td></tr>
+<tr class="memdesc:gaef827dcc53a287d0cae4abcb00d3bda2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides values that represent different fade playback states.  <a href="group__audio.html#gaef827dcc53a287d0cae4abcb00d3bda2">More...</a><br /></td></tr>
 <tr class="separator:gaef827dcc53a287d0cae4abcb00d3bda2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga031d8555460da0d56819cb782b4716c3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#ga031d8555460da0d56819cb782b4716c3">cen::music_type</a> { <br />
 &#160;&#160;<a class="el" href="group__audio.html#gga031d8555460da0d56819cb782b4716c3aad921d60486366258809553a3db49a4a">cen::music_type::unknown</a> = MUS_NONE, 
@@ -138,17 +163,80 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="group__audio.html#gga031d8555460da0d56819cb782b4716c3add8d1f209673c94a6ca6f9ef255ce489">cen::music_type::opus</a> = MUS_OPUS
 <br />
  }</td></tr>
-<tr class="memdesc:ga031d8555460da0d56819cb782b4716c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mirrors the values of the <code>Mix_MusicType</code> enum.  <a href="group__audio.html#ga031d8555460da0d56819cb782b4716c3">More...</a><br /></td></tr>
+<tr class="memdesc:ga031d8555460da0d56819cb782b4716c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides values that represent different supported music types.  <a href="group__audio.html#ga031d8555460da0d56819cb782b4716c3">More...</a><br /></td></tr>
 <tr class="separator:ga031d8555460da0d56819cb782b4716c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ga462a74948e0ba031964712eb23c5484b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#ga462a74948e0ba031964712eb23c5484b">cen::channels::on_finished</a> (<a class="el" href="group__audio.html#gaa2e80f918396ede432649eae682172f1">channel_finished_callback</a> callback) noexcept</td></tr>
+<tr class="memdesc:ga462a74948e0ba031964712eb23c5484b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns a callback for when a channel finishes its playback.  <a href="group__audio.html#ga462a74948e0ba031964712eb23c5484b">More...</a><br /></td></tr>
+<tr class="separator:ga462a74948e0ba031964712eb23c5484b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5ebbf64b3a70f7f8344e69e440cab25c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#ga5ebbf64b3a70f7f8344e69e440cab25c">cen::channels::allocate</a> (const int count) noexcept -&gt; int</td></tr>
+<tr class="memdesc:ga5ebbf64b3a70f7f8344e69e440cab25c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the amount of channels managed by the mixer.  <a href="group__audio.html#ga5ebbf64b3a70f7f8344e69e440cab25c">More...</a><br /></td></tr>
+<tr class="separator:ga5ebbf64b3a70f7f8344e69e440cab25c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga63d941e2b8888aa3832861e13782db8a"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#ga63d941e2b8888aa3832861e13782db8a">cen::channels::reserve</a> (const int count) noexcept -&gt; int</td></tr>
+<tr class="memdesc:ga63d941e2b8888aa3832861e13782db8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reserves a group of channels for the use of the application.  <a href="group__audio.html#ga63d941e2b8888aa3832861e13782db8a">More...</a><br /></td></tr>
+<tr class="separator:ga63d941e2b8888aa3832861e13782db8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9e858e73369e0315903c662df9431a5a"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#ga9e858e73369e0315903c662df9431a5a">cen::channels::expire</a> (const <a class="el" href="group__audio.html#ga652508490c53af3f32df983ee1456854">channel_index</a> channel, const <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; int &gt; ms) noexcept(noexcept(ms.count())) -&gt; <a class="el" href="classcen_1_1result.html">result</a></td></tr>
+<tr class="memdesc:ga9e858e73369e0315903c662df9431a5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a channel to stop playing after the specified amount of time.  <a href="group__audio.html#ga9e858e73369e0315903c662df9431a5a">More...</a><br /></td></tr>
+<tr class="separator:ga9e858e73369e0315903c662df9431a5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae0b3f25f29d1a9109b69878a630879aa"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#gae0b3f25f29d1a9109b69878a630879aa">cen::channels::remove_expiration</a> (const <a class="el" href="group__audio.html#ga652508490c53af3f32df983ee1456854">channel_index</a> channel) noexcept -&gt; <a class="el" href="classcen_1_1result.html">result</a></td></tr>
+<tr class="memdesc:gae0b3f25f29d1a9109b69878a630879aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the current expiration from the specified channel.  <a href="group__audio.html#gae0b3f25f29d1a9109b69878a630879aa">More...</a><br /></td></tr>
+<tr class="separator:gae0b3f25f29d1a9109b69878a630879aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad67543bc014490038b4ddb09767f4e77"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#gad67543bc014490038b4ddb09767f4e77">cen::channels::set_group</a> (const <a class="el" href="group__audio.html#ga652508490c53af3f32df983ee1456854">channel_index</a> channel, const <a class="el" href="group__audio.html#ga7fd39958c3355458d2b4cb2cba24606f">group_index</a> group) noexcept -&gt; <a class="el" href="classcen_1_1result.html">result</a></td></tr>
+<tr class="memdesc:gad67543bc014490038b4ddb09767f4e77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the group that a channel belongs to.  <a href="group__audio.html#gad67543bc014490038b4ddb09767f4e77">More...</a><br /></td></tr>
+<tr class="separator:gad67543bc014490038b4ddb09767f4e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga72d0eb4ce90784f5071e87d0267572ac"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#ga72d0eb4ce90784f5071e87d0267572ac">cen::channels::reset_group</a> (const <a class="el" href="group__audio.html#ga652508490c53af3f32df983ee1456854">channel_index</a> channel) noexcept -&gt; <a class="el" href="classcen_1_1result.html">result</a></td></tr>
+<tr class="memdesc:ga72d0eb4ce90784f5071e87d0267572ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the group that a channel is assigned to.  <a href="group__audio.html#ga72d0eb4ce90784f5071e87d0267572ac">More...</a><br /></td></tr>
+<tr class="separator:ga72d0eb4ce90784f5071e87d0267572ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1afa59e1f728be43820cee172666ce95"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#ga1afa59e1f728be43820cee172666ce95">cen::channels::group_count</a> (const <a class="el" href="group__audio.html#ga7fd39958c3355458d2b4cb2cba24606f">group_index</a> group=-1) noexcept -&gt; int</td></tr>
+<tr class="memdesc:ga1afa59e1f728be43820cee172666ce95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of channels in the specified group.  <a href="group__audio.html#ga1afa59e1f728be43820cee172666ce95">More...</a><br /></td></tr>
+<tr class="separator:ga1afa59e1f728be43820cee172666ce95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2e2c4c6b511152d7471a8fdf8118277d"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#ga2e2c4c6b511152d7471a8fdf8118277d">cen::channels::first_available</a> (const <a class="el" href="group__audio.html#ga7fd39958c3355458d2b4cb2cba24606f">group_index</a> group) noexcept -&gt; std::optional&lt; <a class="el" href="group__audio.html#ga652508490c53af3f32df983ee1456854">channel_index</a> &gt;</td></tr>
+<tr class="memdesc:ga2e2c4c6b511152d7471a8fdf8118277d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the first available channel in the specified group.  <a href="group__audio.html#ga2e2c4c6b511152d7471a8fdf8118277d">More...</a><br /></td></tr>
+<tr class="separator:ga2e2c4c6b511152d7471a8fdf8118277d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1c27037022c2e87700b2dbaa63d56e46"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#ga1c27037022c2e87700b2dbaa63d56e46">cen::channels::most_recent</a> (const <a class="el" href="group__audio.html#ga7fd39958c3355458d2b4cb2cba24606f">group_index</a> group) -&gt; std::optional&lt; <a class="el" href="group__audio.html#ga652508490c53af3f32df983ee1456854">channel_index</a> &gt;</td></tr>
+<tr class="memdesc:ga1c27037022c2e87700b2dbaa63d56e46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the most recently playing channel in the specified group.  <a href="group__audio.html#ga1c27037022c2e87700b2dbaa63d56e46">More...</a><br /></td></tr>
+<tr class="separator:ga1c27037022c2e87700b2dbaa63d56e46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga129e5fa4c60eeba6c0e18107d63b2416"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#ga129e5fa4c60eeba6c0e18107d63b2416">cen::channels::oldest</a> (const <a class="el" href="group__audio.html#ga7fd39958c3355458d2b4cb2cba24606f">group_index</a> group) -&gt; std::optional&lt; <a class="el" href="group__audio.html#ga652508490c53af3f32df983ee1456854">channel_index</a> &gt;</td></tr>
+<tr class="memdesc:ga129e5fa4c60eeba6c0e18107d63b2416"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the oldest playing channel in the specified group.  <a href="group__audio.html#ga129e5fa4c60eeba6c0e18107d63b2416">More...</a><br /></td></tr>
+<tr class="separator:ga129e5fa4c60eeba6c0e18107d63b2416"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga45aa3eac6ffe05fce3966b0e75948d79"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#ga45aa3eac6ffe05fce3966b0e75948d79">cen::to_string</a> (const <a class="el" href="classcen_1_1music.html">music</a> &amp;<a class="el" href="classcen_1_1music.html">music</a>) -&gt; std::string</td></tr>
 <tr class="memdesc:ga45aa3eac6ffe05fce3966b0e75948d79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a textual representation of a <code>music</code> instance.  <a href="group__audio.html#ga45aa3eac6ffe05fce3966b0e75948d79">More...</a><br /></td></tr>
 <tr class="separator:ga45aa3eac6ffe05fce3966b0e75948d79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga993c1ccd18c5d8c5d01ff8736eb3bbca"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#ga993c1ccd18c5d8c5d01ff8736eb3bbca">cen::operator&lt;&lt;</a> (std::ostream &amp;stream, const <a class="el" href="classcen_1_1music.html">music</a> &amp;<a class="el" href="classcen_1_1music.html">music</a>) -&gt; std::ostream &amp;</td></tr>
 <tr class="memdesc:ga993c1ccd18c5d8c5d01ff8736eb3bbca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a textual representation of a <code>music</code> instance.  <a href="group__audio.html#ga993c1ccd18c5d8c5d01ff8736eb3bbca">More...</a><br /></td></tr>
 <tr class="separator:ga993c1ccd18c5d8c5d01ff8736eb3bbca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4343edd2e0c221d09ee44e2a0653e0e2"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#ga4343edd2e0c221d09ee44e2a0653e0e2">cen::get_sound</a> (const int channel) noexcept -&gt; <a class="el" href="group__audio.html#gad7f587461ff6d13a784c0f4ef2df25c5">sound_effect_handle</a></td></tr>
+<tr class="memdesc:ga4343edd2e0c221d09ee44e2a0653e0e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a handle to the sound effect currently associated with the specified channel.  <a href="group__audio.html#ga4343edd2e0c221d09ee44e2a0653e0e2">More...</a><br /></td></tr>
+<tr class="separator:ga4343edd2e0c221d09ee44e2a0653e0e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad1fe385ddf4f31f50d24833301f1042e"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#gad1fe385ddf4f31f50d24833301f1042e">cen::to_string</a> (const <a class="el" href="group__audio.html#ga58704391a83548938aa57dbaafa5b51d">sound_effect</a> &amp;sound) -&gt; std::string</td></tr>
+<tr class="memdesc:gad1fe385ddf4f31f50d24833301f1042e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a textual representation of a sound effect.  <a href="group__audio.html#gad1fe385ddf4f31f50d24833301f1042e">More...</a><br /></td></tr>
+<tr class="separator:gad1fe385ddf4f31f50d24833301f1042e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga729b0a7cee4a359ca4665ff5d42fa6a4"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#ga729b0a7cee4a359ca4665ff5d42fa6a4">cen::operator&lt;&lt;</a> (std::ostream &amp;stream, const <a class="el" href="group__audio.html#ga58704391a83548938aa57dbaafa5b51d">sound_effect</a> &amp;sound) -&gt; std::ostream &amp;</td></tr>
+<tr class="memdesc:ga729b0a7cee4a359ca4665ff5d42fa6a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a textual representation of a sound effect.  <a href="group__audio.html#ga729b0a7cee4a359ca4665ff5d42fa6a4">More...</a><br /></td></tr>
+<tr class="separator:ga729b0a7cee4a359ca4665ff5d42fa6a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa24edb45045c23f7d8186db5f76bf366"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#gaa24edb45045c23f7d8186db5f76bf366">cen::set_sound_fonts</a> (const <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> paths) noexcept -&gt; <a class="el" href="classcen_1_1result.html">result</a></td></tr>
+<tr class="memdesc:gaa24edb45045c23f7d8186db5f76bf366"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the paths to the available SoundFont files.  <a href="group__audio.html#gaa24edb45045c23f7d8186db5f76bf366">More...</a><br /></td></tr>
+<tr class="separator:gaa24edb45045c23f7d8186db5f76bf366"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga159dcb1a73be4e577a6dcc8fdc33c23f"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#ga159dcb1a73be4e577a6dcc8fdc33c23f">cen::get_sound_fonts</a> () noexcept -&gt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a></td></tr>
+<tr class="memdesc:ga159dcb1a73be4e577a6dcc8fdc33c23f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a path to a SoundFont file.  <a href="group__audio.html#ga159dcb1a73be4e577a6dcc8fdc33c23f">More...</a><br /></td></tr>
+<tr class="separator:ga159dcb1a73be4e577a6dcc8fdc33c23f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8bacc7d13fa419c32ee44ff15fe361eb"><td class="memTemplParams" colspan="2">template&lt;typename T  = void&gt; </td></tr>
+<tr class="memitem:ga8bacc7d13fa419c32ee44ff15fe361eb"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__audio.html#ga8bacc7d13fa419c32ee44ff15fe361eb">cen::each_sound_font</a> (<a class="el" href="group__audio.html#gaf3a86cfc4c2fe2dc15c97ea586603831">sound_font_visit_callback</a> callable, T *data=nullptr) noexcept -&gt; <a class="el" href="classcen_1_1result.html">result</a></td></tr>
+<tr class="memdesc:ga8bacc7d13fa419c32ee44ff15fe361eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visits each available SoundFont path.  <a href="group__audio.html#ga8bacc7d13fa419c32ee44ff15fe361eb">More...</a><br /></td></tr>
+<tr class="separator:ga8bacc7d13fa419c32ee44ff15fe361eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Callbacks</h2></td></tr>
+<tr class="memitem:ga2ee357ba9533ff331e696700dac8001e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#ga2ee357ba9533ff331e696700dac8001e">cen::music_finished_callback</a> = void(SDLCALL *)() noexcept</td></tr>
+<tr class="separator:ga2ee357ba9533ff331e696700dac8001e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaca82bae2cdd7497d539f3a35308212ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#gaca82bae2cdd7497d539f3a35308212ca">cen::on_music_finished</a> (<a class="el" href="group__audio.html#ga2ee357ba9533ff331e696700dac8001e">music_finished_callback</a> callback) noexcept</td></tr>
+<tr class="memdesc:gaca82bae2cdd7497d539f3a35308212ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the callback that is invoked each time the music finishes playing or is stopped as a result of <code><a class="el" href="classcen_1_1music.html#a48cee0f510ad73ed3729c40c9018a735" title="Stops ALL currently playing and fading music.">cen::music::halt()</a></code>.  <a href="group__audio.html#gaca82bae2cdd7497d539f3a35308212ca">More...</a><br /></td></tr>
+<tr class="separator:gaca82bae2cdd7497d539f3a35308212ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Music-related comparison operators</h2></td></tr>
 <tr class="memitem:gaf72595df3886dbb34dbcf030d14333d2"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">cen::operator==</a> (const <a class="el" href="group__audio.html#gaef827dcc53a287d0cae4abcb00d3bda2">fade_status</a> lhs, const Mix_Fading rhs) noexcept -&gt; bool</td></tr>
 <tr class="memdesc:gaf72595df3886dbb34dbcf030d14333d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the fading status values represent are the same.  <a href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">More...</a><br /></td></tr>
 <tr class="separator:gaf72595df3886dbb34dbcf030d14333d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -173,15 +261,114 @@ Functions</h2></td></tr>
 <tr class="memitem:ga6014832d98c6f0149660ba42273a9955"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#ga6014832d98c6f0149660ba42273a9955">cen::operator!=</a> (const Mix_MusicType lhs, const <a class="el" href="group__audio.html#ga031d8555460da0d56819cb782b4716c3">music_type</a> rhs) noexcept -&gt; bool</td></tr>
 <tr class="memdesc:ga6014832d98c6f0149660ba42273a9955"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the music type values aren't the same.  <a href="group__audio.html#ga6014832d98c6f0149660ba42273a9955">More...</a><br /></td></tr>
 <tr class="separator:ga6014832d98c6f0149660ba42273a9955"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad1fe385ddf4f31f50d24833301f1042e"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#gad1fe385ddf4f31f50d24833301f1042e">cen::to_string</a> (const <a class="el" href="classcen_1_1sound__effect.html">sound_effect</a> &amp;sound) -&gt; std::string</td></tr>
-<tr class="memdesc:gad1fe385ddf4f31f50d24833301f1042e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a textual representation of a sound effect.  <a href="group__audio.html#gad1fe385ddf4f31f50d24833301f1042e">More...</a><br /></td></tr>
-<tr class="separator:gad1fe385ddf4f31f50d24833301f1042e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga729b0a7cee4a359ca4665ff5d42fa6a4"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#ga729b0a7cee4a359ca4665ff5d42fa6a4">cen::operator&lt;&lt;</a> (std::ostream &amp;stream, const <a class="el" href="classcen_1_1sound__effect.html">sound_effect</a> &amp;sound) -&gt; std::ostream &amp;</td></tr>
-<tr class="memdesc:ga729b0a7cee4a359ca4665ff5d42fa6a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a textual representation of a sound effect.  <a href="group__audio.html#ga729b0a7cee4a359ca4665ff5d42fa6a4">More...</a><br /></td></tr>
-<tr class="separator:ga729b0a7cee4a359ca4665ff5d42fa6a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Contains the audio API, for playing as sound effects and music. </p>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="gaa2e80f918396ede432649eae682172f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa2e80f918396ede432649eae682172f1">&#9670;&nbsp;</a></span>channel_finished_callback</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group__audio.html#gaa2e80f918396ede432649eae682172f1">cen::channel_finished_callback</a> = typedef void(SDLCALL*)(<a class="el" href="group__audio.html#ga652508490c53af3f32df983ee1456854">channel_index</a>) noexcept</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga652508490c53af3f32df983ee1456854"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga652508490c53af3f32df983ee1456854">&#9670;&nbsp;</a></span>channel_index</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group__audio.html#ga652508490c53af3f32df983ee1456854">cen::channel_index</a> = typedef int</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga7fd39958c3355458d2b4cb2cba24606f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7fd39958c3355458d2b4cb2cba24606f">&#9670;&nbsp;</a></span>group_index</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group__audio.html#ga7fd39958c3355458d2b4cb2cba24606f">cen::group_index</a> = typedef int</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga2ee357ba9533ff331e696700dac8001e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2ee357ba9533ff331e696700dac8001e">&#9670;&nbsp;</a></span>music_finished_callback</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group__audio.html#ga2ee357ba9533ff331e696700dac8001e">cen::music_finished_callback</a> = typedef void(SDLCALL*)() noexcept</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga58704391a83548938aa57dbaafa5b51d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga58704391a83548938aa57dbaafa5b51d">&#9670;&nbsp;</a></span>sound_effect</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__audio.html#ga58704391a83548938aa57dbaafa5b51d">cen::sound_effect</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Represents an owning sound effect. </p>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="gad7f587461ff6d13a784c0f4ef2df25c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad7f587461ff6d13a784c0f4ef2df25c5">&#9670;&nbsp;</a></span>sound_effect_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__audio.html#gad7f587461ff6d13a784c0f4ef2df25c5">cen::sound_effect_handle</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Represents a non-owning sound effect. </p>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="gaf3a86cfc4c2fe2dc15c97ea586603831"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf3a86cfc4c2fe2dc15c97ea586603831">&#9670;&nbsp;</a></span>sound_font_visit_callback</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group__audio.html#gaf3a86cfc4c2fe2dc15c97ea586603831">cen::sound_font_visit_callback</a> = typedef int(SDLCALL*)(<a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a>, void*) noexcept</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="gaef827dcc53a287d0cae4abcb00d3bda2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaef827dcc53a287d0cae4abcb00d3bda2">&#9670;&nbsp;</a></span>fade_status</h2>
@@ -203,8 +390,9 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Mirrors the values of the <code>Mix_Fading</code> enum. </p>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+<p>Provides values that represent different fade playback states. </p>
+<dl class="section since"><dt>Since</dt><dd>3.0.0</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code>Mix_Fading</code> </dd></dl>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggaef827dcc53a287d0cae4abcb00d3bda2a334c4a4c42fdb79d7ebc3e73b517e6f8"></a>none&#160;</td><td class="fielddoc"><p>No currently fading music. </p>
 </td></tr>
@@ -236,8 +424,9 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Mirrors the values of the <code>Mix_MusicType</code> enum. </p>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+<p>Provides values that represent different supported music types. </p>
+<dl class="section since"><dt>Since</dt><dd>3.0.0</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code>Mix_MusicType</code> </dd></dl>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga031d8555460da0d56819cb782b4716c3aad921d60486366258809553a3db49a4a"></a>unknown&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="gga031d8555460da0d56819cb782b4716c3a28dafd4a8cb5f33065e93cbc83862563"></a>mp3&#160;</td><td class="fielddoc"></td></tr>
@@ -253,6 +442,441 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ga5ebbf64b3a70f7f8344e69e440cab25c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5ebbf64b3a70f7f8344e69e440cab25c">&#9670;&nbsp;</a></span>allocate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::channels::allocate </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>count</em></td><td>)</td>
+          <td> -&gt; int
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Changes the amount of channels managed by the mixer. </p>
+<dl class="section note"><dt>Note</dt><dd>The the channel count is decreased, the removed channels are stopped.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">count</td><td>the total amount of channels managed by the mixer.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the number of allocated channels.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code>Mix_AllocateChannels</code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga8bacc7d13fa419c32ee44ff15fe361eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8bacc7d13fa419c32ee44ff15fe361eb">&#9670;&nbsp;</a></span>each_sound_font()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T  = void&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::each_sound_font </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__audio.html#gaf3a86cfc4c2fe2dc15c97ea586603831">sound_font_visit_callback</a>&#160;</td>
+          <td class="paramname"><em>callable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>data</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Visits each available SoundFont path. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>the type of the associated data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callable</td><td>the callable that will be invoked for each SoundFont path. </td></tr>
+    <tr><td class="paramname">data</td><td>optional user data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the operation was successful; <code>failure</code> otherwise.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code>Mix_EachSoundFont</code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga9e858e73369e0315903c662df9431a5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9e858e73369e0315903c662df9431a5a">&#9670;&nbsp;</a></span>expire()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::channels::expire </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__audio.html#ga652508490c53af3f32df983ee1456854">channel_index</a>&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>ms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets a channel to stop playing after the specified amount of time. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>the channel that will be affected. </td></tr>
+    <tr><td class="paramname">ms</td><td>the duration of the expiration.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the operation was successful; <code>failure</code> otherwise.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code>Mix_ExpireChannel</code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga2e2c4c6b511152d7471a8fdf8118277d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2e2c4c6b511152d7471a8fdf8118277d">&#9670;&nbsp;</a></span>first_available()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::channels::first_available </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__audio.html#ga7fd39958c3355458d2b4cb2cba24606f">group_index</a>&#160;</td>
+          <td class="paramname"><em>group</em></td><td>)</td>
+          <td> -&gt; std::optional&lt;<a class="el" href="group__audio.html#ga652508490c53af3f32df983ee1456854">channel_index</a>&gt;
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the first available channel in the specified group. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">group</td><td>the channel group that will be checked.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>an available channel index in the specified group; <code>std::nullopt</code> if no channel was available.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga4343edd2e0c221d09ee44e2a0653e0e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4343edd2e0c221d09ee44e2a0653e0e2">&#9670;&nbsp;</a></span>get_sound()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::get_sound </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>channel</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__audio.html#gad7f587461ff6d13a784c0f4ef2df25c5">sound_effect_handle</a>
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a handle to the sound effect currently associated with the specified channel. </p>
+<dl class="section note"><dt>Note</dt><dd>There might not be a sound effect associated with the specified channel, in which case the returned handle is null.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>the channel associated with the desired sound effect.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a handle to the sound effect associated with the specified channel.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga159dcb1a73be4e577a6dcc8fdc33c23f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga159dcb1a73be4e577a6dcc8fdc33c23f">&#9670;&nbsp;</a></span>get_sound_fonts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::get_sound_fonts </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a>
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a path to a SoundFont file. </p>
+<dl class="section return"><dt>Returns</dt><dd>a path to a SoundFonts file; can be null.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code>Mix_GetSoundFonts</code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga1afa59e1f728be43820cee172666ce95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1afa59e1f728be43820cee172666ce95">&#9670;&nbsp;</a></span>group_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::channels::group_count </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__audio.html#ga7fd39958c3355458d2b4cb2cba24606f">group_index</a>&#160;</td>
+          <td class="paramname"><em>group</em> = <code>-1</code></td><td>)</td>
+          <td> -&gt; int
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the number of channels in the specified group. </p>
+<dl class="section note"><dt>Note</dt><dd>If the supplied group is <code>-1</code>, then this function returns the total amount of channels.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">group</td><td>the index of the channel group that will be checked.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the number of channels in the group.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga1c27037022c2e87700b2dbaa63d56e46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1c27037022c2e87700b2dbaa63d56e46">&#9670;&nbsp;</a></span>most_recent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::channels::most_recent </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__audio.html#ga7fd39958c3355458d2b4cb2cba24606f">group_index</a>&#160;</td>
+          <td class="paramname"><em>group</em></td><td>)</td>
+          <td> -&gt; std::optional&lt;<a class="el" href="group__audio.html#ga652508490c53af3f32df983ee1456854">channel_index</a>&gt;
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the most recently playing channel in the specified group. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">group</td><td>the channel group that will be checked.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the most recently playing channel in the group; <code>std::nullopt</code> if it couldn't be determined.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga129e5fa4c60eeba6c0e18107d63b2416"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga129e5fa4c60eeba6c0e18107d63b2416">&#9670;&nbsp;</a></span>oldest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::channels::oldest </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__audio.html#ga7fd39958c3355458d2b4cb2cba24606f">group_index</a>&#160;</td>
+          <td class="paramname"><em>group</em></td><td>)</td>
+          <td> -&gt; std::optional&lt;<a class="el" href="group__audio.html#ga652508490c53af3f32df983ee1456854">channel_index</a>&gt;
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the oldest playing channel in the specified group. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">group</td><td>the channel group that will be checked.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the oldest playing channel in the group; <code>std::nullopt</code> if it couldn't be determined.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga462a74948e0ba031964712eb23c5484b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga462a74948e0ba031964712eb23c5484b">&#9670;&nbsp;</a></span>on_finished()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::channels::on_finished </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__audio.html#gaa2e80f918396ede432649eae682172f1">channel_finished_callback</a>&#160;</td>
+          <td class="paramname"><em>callback</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Assigns a callback for when a channel finishes its playback. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>the callback that will be used; can safely be null to disable the callback.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><code>Mix_ChannelFinished</code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="gaca82bae2cdd7497d539f3a35308212ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaca82bae2cdd7497d539f3a35308212ca">&#9670;&nbsp;</a></span>on_music_finished()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::on_music_finished </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__audio.html#ga2ee357ba9533ff331e696700dac8001e">music_finished_callback</a>&#160;</td>
+          <td class="paramname"><em>callback</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the callback that is invoked each time the music finishes playing or is stopped as a result of <code><a class="el" href="classcen_1_1music.html#a48cee0f510ad73ed3729c40c9018a735" title="Stops ALL currently playing and fading music.">cen::music::halt()</a></code>. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Make sure that your callback doesn't throw (or at least doesn't leak) any exceptions.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>the callback.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
 <a id="ga322c699fa08098bd801164819d2f4cc8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga322c699fa08098bd801164819d2f4cc8">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[1/4]</span></h2>
 
@@ -511,7 +1135,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1sound__effect.html">sound_effect</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__audio.html#ga58704391a83548938aa57dbaafa5b51d">sound_effect</a> &amp;&#160;</td>
           <td class="paramname"><em>sound</em>&#160;</td>
         </tr>
         <tr>
@@ -733,6 +1357,205 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="gae0b3f25f29d1a9109b69878a630879aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae0b3f25f29d1a9109b69878a630879aa">&#9670;&nbsp;</a></span>remove_expiration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::channels::remove_expiration </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__audio.html#ga652508490c53af3f32df983ee1456854">channel_index</a>&#160;</td>
+          <td class="paramname"><em>channel</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Removes the current expiration from the specified channel. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>the channel that will be affected.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the operation was successful; <code>failure</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga63d941e2b8888aa3832861e13782db8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga63d941e2b8888aa3832861e13782db8a">&#9670;&nbsp;</a></span>reserve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::channels::reserve </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>count</em></td><td>)</td>
+          <td> -&gt; int
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reserves a group of channels for the use of the application. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">count</td><td>the desired amount of channels to be reserved.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the number of reserved channels.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code>Mix_ReserveChannels</code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga72d0eb4ce90784f5071e87d0267572ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga72d0eb4ce90784f5071e87d0267572ac">&#9670;&nbsp;</a></span>reset_group()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::channels::reset_group </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__audio.html#ga652508490c53af3f32df983ee1456854">channel_index</a>&#160;</td>
+          <td class="paramname"><em>channel</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resets the group that a channel is assigned to. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>the channel which reset to belong to the default channel group.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the channel group was reset successfully; <code>failure</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="gad67543bc014490038b4ddb09767f4e77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad67543bc014490038b4ddb09767f4e77">&#9670;&nbsp;</a></span>set_group()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::channels::set_group </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__audio.html#ga652508490c53af3f32df983ee1456854">channel_index</a>&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__audio.html#ga7fd39958c3355458d2b4cb2cba24606f">group_index</a>&#160;</td>
+          <td class="paramname"><em>group</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the group that a channel belongs to. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>the channel that will be affected. </td></tr>
+    <tr><td class="paramname">group</td><td>the group will be assigned to the channel.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the group was assigned successfully; <code>failure</code> otherwise.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code>Mix_GroupChannel</code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="gaa24edb45045c23f7d8186db5f76bf366"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa24edb45045c23f7d8186db5f76bf366">&#9670;&nbsp;</a></span>set_sound_fonts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::set_sound_fonts </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a>&#160;</td>
+          <td class="paramname"><em>paths</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the paths to the available SoundFont files. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">paths</td><td>a string of SoundFont paths, separated by semicolons.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the operation was successful; <code>failure</code> otherwise.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code>Mix_SetSoundFonts</code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
 <a id="ga45aa3eac6ffe05fce3966b0e75948d79"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga45aa3eac6ffe05fce3966b0e75948d79">&#9670;&nbsp;</a></span>to_string() <span class="overload">[1/2]</span></h2>
 
@@ -782,7 +1605,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">auto cen::to_string </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1sound__effect.html">sound_effect</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__audio.html#ga58704391a83548938aa57dbaafa5b51d">sound_effect</a> &amp;&#160;</td>
           <td class="paramname"><em>sound</em></td><td>)</td>
           <td> -&gt; std::string
 </td>

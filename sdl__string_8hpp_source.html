@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/sdl_string.hpp Source File</title>
+        <title>Centurion: src/centurion/core/sdl_string.hpp Source File</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_033c555e8ea57d729336171de4fce59a.html">core</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -101,63 +101,59 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span>  <span class="comment">// unique_ptr</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span>  <span class="comment">// string</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="centurion__cfg_8hpp.html">centurion_cfg.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../detail/sdl_deleter.hpp&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="czstring_8hpp.html">czstring.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;detail/sdl_deleter.hpp&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="owner_8hpp.html">owner.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#ifdef CENTURION_USE_PRAGMA_ONCE</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif  // CENTURION_USE_PRAGMA_ONCE</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="owner_8hpp.html">owner.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecen.html">cen</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecen.html">cen</a> {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classcen_1_1sdl__string.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcen_1_1sdl__string.html">sdl_string</a> final</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classcen_1_1sdl__string.html#aad2e3e35baf5dc398c6c330525eba72e">   40</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classcen_1_1sdl__string.html#aad2e3e35baf5dc398c6c330525eba72e">sdl_string</a>(<a class="code" href="namespacecen.html#a922c9ffa0c4b1b0dcaf50b7c6033a809">owner&lt;zstring&gt;</a> str) noexcept : m_str{str}</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  {}</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classcen_1_1sdl__string.html#a07180944d70330e5199a603ad5452513">   50</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1sdl__string.html#a07180944d70330e5199a603ad5452513">get</a>() const noexcept -&gt; <a class="code" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">return</span> m_str.get();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classcen_1_1sdl__string.html#a9bfb6d532fa925f7c814dccb093690c4">   65</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1sdl__string.html#a9bfb6d532fa925f7c814dccb093690c4">copy</a>() const -&gt; std::<span class="keywordtype">string</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">if</span> (m_str)</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classcen_1_1sdl__string.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcen_1_1sdl__string.html">sdl_string</a> final</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classcen_1_1sdl__string.html#aad2e3e35baf5dc398c6c330525eba72e">   36</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classcen_1_1sdl__string.html#aad2e3e35baf5dc398c6c330525eba72e">sdl_string</a>(<a class="code" href="group__core.html#ga922c9ffa0c4b1b0dcaf50b7c6033a809">owner&lt;zstring&gt;</a> str) noexcept : m_str{str}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  {}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classcen_1_1sdl__string.html#a07180944d70330e5199a603ad5452513">   46</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1sdl__string.html#a07180944d70330e5199a603ad5452513">get</a>() const noexcept -&gt; <a class="code" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">return</span> m_str.get();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classcen_1_1sdl__string.html#a9bfb6d532fa925f7c814dccb093690c4">   61</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1sdl__string.html#a9bfb6d532fa925f7c814dccb093690c4">copy</a>() const -&gt; std::<span class="keywordtype">string</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">if</span> (m_str)</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <span class="keywordflow">return</span> std::string{<a class="code" href="classcen_1_1sdl__string.html#a07180944d70330e5199a603ad5452513">get</a>()};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <span class="keywordflow">return</span> std::string{<a class="code" href="classcen_1_1sdl__string.html#a07180944d70330e5199a603ad5452513">get</a>()};</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <span class="keywordflow">return</span> std::string{};</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <span class="keywordflow">return</span> std::string{};</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classcen_1_1sdl__string.html#a573b82a35aaa8c9a7595d31119ed8240">   84</a></span>&#160;  <span class="keyword">explicit</span> <span class="keyword">operator</span> bool() const noexcept</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">return</span> m_str.operator bool();</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classcen_1_1sdl__string.html#a573b82a35aaa8c9a7595d31119ed8240">   80</a></span>&#160;  <span class="keyword">explicit</span> <span class="keyword">operator</span> bool() const noexcept</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">return</span> m_str.operator bool();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  std::unique_ptr&lt;char, detail::sdl_deleter&lt;char&gt;&gt; m_str;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  std::unique_ptr&lt;char, detail::sdl_deleter&lt;char&gt;&gt; m_str;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;};</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}  <span class="comment">// namespace cen</span></div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}  <span class="comment">// namespace cen</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#endif  // CENTURION_SDL_STRING_HEADER</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif  // CENTURION_SDL_STRING_HEADER</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclasscen_1_1sdl__string_html"><div class="ttname"><a href="classcen_1_1sdl__string.html">cen::sdl_string</a></div><div class="ttdoc">Represents a string obtained from SDL, usually a char* that has to be freed using SDL_free.</div><div class="ttdef"><b>Definition:</b> sdl_string.hpp:30</div></div>
+<div class="ttc" id="aclasscen_1_1sdl__string_html"><div class="ttname"><a href="classcen_1_1sdl__string.html">cen::sdl_string</a></div><div class="ttdoc">Represents a string obtained from SDL, usually a char* that has to be freed using SDL_free.</div><div class="ttdef"><b>Definition:</b> sdl_string.hpp:26</div></div>
+<div class="ttc" id="agroup__core_html_ga922c9ffa0c4b1b0dcaf50b7c6033a809"><div class="ttname"><a href="group__core.html#ga922c9ffa0c4b1b0dcaf50b7c6033a809">cen::owner</a></div><div class="ttdeci">T owner</div><div class="ttdoc">Tag used to denote ownership of raw pointers directly in code.</div><div class="ttdef"><b>Definition:</b> owner.hpp:20</div></div>
 <div class="ttc" id="aowner_8hpp_html"><div class="ttname"><a href="owner_8hpp.html">owner.hpp</a></div></div>
-<div class="ttc" id="anamespacecen_html"><div class="ttname"><a href="namespacecen.html">cen</a></div><div class="ttdoc">The top-level namespace that all components of the library reside in.</div><div class="ttdef"><b>Definition:</b> area.hpp:16</div></div>
-<div class="ttc" id="aclasscen_1_1sdl__string_html_a9bfb6d532fa925f7c814dccb093690c4"><div class="ttname"><a href="classcen_1_1sdl__string.html#a9bfb6d532fa925f7c814dccb093690c4">cen::sdl_string::copy</a></div><div class="ttdeci">auto copy() const -&gt; std::string</div><div class="ttdoc">Returns a copy of the internal string.</div><div class="ttdef"><b>Definition:</b> sdl_string.hpp:65</div></div>
-<div class="ttc" id="acenturion__cfg_8hpp_html"><div class="ttname"><a href="centurion__cfg_8hpp.html">centurion_cfg.hpp</a></div></div>
-<div class="ttc" id="aclasscen_1_1sdl__string_html_aad2e3e35baf5dc398c6c330525eba72e"><div class="ttname"><a href="classcen_1_1sdl__string.html#aad2e3e35baf5dc398c6c330525eba72e">cen::sdl_string::sdl_string</a></div><div class="ttdeci">sdl_string(owner&lt; zstring &gt; str) noexcept</div><div class="ttdef"><b>Definition:</b> sdl_string.hpp:40</div></div>
+<div class="ttc" id="anamespacecen_html"><div class="ttname"><a href="namespacecen.html">cen</a></div><div class="ttdoc">The top-level namespace that all components of the library reside in.</div><div class="ttdef"><b>Definition:</b> channels.hpp:12</div></div>
+<div class="ttc" id="agroup__core_html_ga24997ff418228ddb51ae13e2805288a4"><div class="ttname"><a href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">cen::czstring</a></div><div class="ttdeci">const char * czstring</div><div class="ttdoc">Alias for a const C-style null-terminated string.</div><div class="ttdef"><b>Definition:</b> czstring.hpp:16</div></div>
+<div class="ttc" id="aclasscen_1_1sdl__string_html_a9bfb6d532fa925f7c814dccb093690c4"><div class="ttname"><a href="classcen_1_1sdl__string.html#a9bfb6d532fa925f7c814dccb093690c4">cen::sdl_string::copy</a></div><div class="ttdeci">auto copy() const -&gt; std::string</div><div class="ttdoc">Returns a copy of the internal string.</div><div class="ttdef"><b>Definition:</b> sdl_string.hpp:61</div></div>
+<div class="ttc" id="aclasscen_1_1sdl__string_html_aad2e3e35baf5dc398c6c330525eba72e"><div class="ttname"><a href="classcen_1_1sdl__string.html#aad2e3e35baf5dc398c6c330525eba72e">cen::sdl_string::sdl_string</a></div><div class="ttdeci">sdl_string(owner&lt; zstring &gt; str) noexcept</div><div class="ttdoc">Creates a string.</div><div class="ttdef"><b>Definition:</b> sdl_string.hpp:36</div></div>
 <div class="ttc" id="aczstring_8hpp_html"><div class="ttname"><a href="czstring_8hpp.html">czstring.hpp</a></div></div>
-<div class="ttc" id="anamespacecen_html_a922c9ffa0c4b1b0dcaf50b7c6033a809"><div class="ttname"><a href="namespacecen.html#a922c9ffa0c4b1b0dcaf50b7c6033a809">cen::owner</a></div><div class="ttdeci">T owner</div><div class="ttdoc">Tag used to denote ownership of raw pointers directly in code.</div><div class="ttdef"><b>Definition:</b> owner.hpp:24</div></div>
-<div class="ttc" id="anamespacecen_html_a24997ff418228ddb51ae13e2805288a4"><div class="ttname"><a href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">cen::czstring</a></div><div class="ttdeci">const char * czstring</div><div class="ttdoc">Alias for a const C-style null-terminated string.</div><div class="ttdef"><b>Definition:</b> czstring.hpp:18</div></div>
-<div class="ttc" id="aclasscen_1_1sdl__string_html_a07180944d70330e5199a603ad5452513"><div class="ttname"><a href="classcen_1_1sdl__string.html#a07180944d70330e5199a603ad5452513">cen::sdl_string::get</a></div><div class="ttdeci">auto get() const noexcept -&gt; czstring</div><div class="ttdoc">Returns the internal string, which might be null.</div><div class="ttdef"><b>Definition:</b> sdl_string.hpp:50</div></div>
+<div class="ttc" id="aclasscen_1_1sdl__string_html_a07180944d70330e5199a603ad5452513"><div class="ttname"><a href="classcen_1_1sdl__string.html#a07180944d70330e5199a603ad5452513">cen::sdl_string::get</a></div><div class="ttdeci">auto get() const noexcept -&gt; czstring</div><div class="ttdoc">Returns the internal string, which might be null.</div><div class="ttdef"><b>Definition:</b> sdl_string.hpp:46</div></div>
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
 </div>

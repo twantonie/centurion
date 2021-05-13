@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: cen::basic_point&lt; T &gt; Class Template Reference</title>
+        <title>Centurion: cen::basic_point Class Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -95,7 +95,7 @@ $(function() {
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classcen_1_1basic__point-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">cen::basic_point&lt; T &gt; Class Template Reference<span class="mlabels"><span class="mlabel">final</span></span><div class="ingroups"><a class="el" href="group__geometry.html">Geometry</a></div></div>  </div>
+<div class="title">cen::basic_point Class Reference<div class="ingroups"><a class="el" href="group__math.html">Math</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -106,73 +106,82 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:adc21c54b6267e1ce2fdd124a922e250e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#adc21c54b6267e1ce2fdd124a922e250e">value_type</a> = typename <a class="el" href="classcen_1_1point__traits.html">point_traits</a>&lt; T &gt;::<a class="el" href="classcen_1_1basic__point.html#adc21c54b6267e1ce2fdd124a922e250e">value_type</a></td></tr>
-<tr class="memdesc:adc21c54b6267e1ce2fdd124a922e250e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The actual representation type, i.e. <code>int</code> or <code>float</code>.  <a href="classcen_1_1basic__point.html#adc21c54b6267e1ce2fdd124a922e250e">More...</a><br /></td></tr>
-<tr class="separator:adc21c54b6267e1ce2fdd124a922e250e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae057e24111cf79575a281f118cf911cb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">point_type</a> = typename <a class="el" href="classcen_1_1point__traits.html">point_traits</a>&lt; T &gt;::<a class="el" href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">point_type</a></td></tr>
-<tr class="memdesc:ae057e24111cf79575a281f118cf911cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The SDL point type, i.e. <code>SDL_Point</code> or <code>SDL_FPoint</code>.  <a href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">More...</a><br /></td></tr>
-<tr class="separator:ae057e24111cf79575a281f118cf911cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a029c9beaca63bd7d8e36316bb0a263dd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#a029c9beaca63bd7d8e36316bb0a263dd">value_type</a> = typename <a class="el" href="classcen_1_1point__traits.html">point_traits</a>&lt; T &gt;::<a class="el" href="classcen_1_1basic__point.html#a029c9beaca63bd7d8e36316bb0a263dd">value_type</a></td></tr>
+<tr class="memdesc:a029c9beaca63bd7d8e36316bb0a263dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The actual representation type, i.e. <code>int</code> or <code>float</code>.  <a href="classcen_1_1basic__point.html#a029c9beaca63bd7d8e36316bb0a263dd">More...</a><br /></td></tr>
+<tr class="separator:a029c9beaca63bd7d8e36316bb0a263dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3af4ec5f6e0fb87fca30b107164295c9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#a3af4ec5f6e0fb87fca30b107164295c9">point_type</a> = typename <a class="el" href="classcen_1_1point__traits.html">point_traits</a>&lt; T &gt;::<a class="el" href="classcen_1_1basic__point.html#a3af4ec5f6e0fb87fca30b107164295c9">point_type</a></td></tr>
+<tr class="memdesc:a3af4ec5f6e0fb87fca30b107164295c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The SDL point type, i.e. <code>SDL_Point</code> or <code>SDL_FPoint</code>.  <a href="classcen_1_1basic__point.html#a3af4ec5f6e0fb87fca30b107164295c9">More...</a><br /></td></tr>
+<tr class="separator:a3af4ec5f6e0fb87fca30b107164295c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afc70c77e6b99c69593d9c58091aae094"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#afc70c77e6b99c69593d9c58091aae094">basic_point</a> () noexcept=default</td></tr>
-<tr class="memdesc:afc70c77e6b99c69593d9c58091aae094"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a zero-initialized point.  <a href="classcen_1_1basic__point.html#afc70c77e6b99c69593d9c58091aae094">More...</a><br /></td></tr>
-<tr class="separator:afc70c77e6b99c69593d9c58091aae094"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad24cdf27419a909a2705f2d822325d68"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#ad24cdf27419a909a2705f2d822325d68">basic_point</a> (const <a class="el" href="classcen_1_1basic__point.html#adc21c54b6267e1ce2fdd124a922e250e">value_type</a> <a class="el" href="classcen_1_1basic__point.html#ab595cf6e827268b70bee89f786886890">x</a>, const <a class="el" href="classcen_1_1basic__point.html#adc21c54b6267e1ce2fdd124a922e250e">value_type</a> <a class="el" href="classcen_1_1basic__point.html#a19090bd294a1481b3552f7abef913820">y</a>) noexcept</td></tr>
-<tr class="memdesc:ad24cdf27419a909a2705f2d822325d68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a point with the specified coordinates.  <a href="classcen_1_1basic__point.html#ad24cdf27419a909a2705f2d822325d68">More...</a><br /></td></tr>
-<tr class="separator:ad24cdf27419a909a2705f2d822325d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cedc4e1f77ba8cec3fd05816a4555f5"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#a6cedc4e1f77ba8cec3fd05816a4555f5">set_x</a> (const <a class="el" href="classcen_1_1basic__point.html#adc21c54b6267e1ce2fdd124a922e250e">value_type</a> <a class="el" href="classcen_1_1basic__point.html#ab595cf6e827268b70bee89f786886890">x</a>) noexcept</td></tr>
-<tr class="memdesc:a6cedc4e1f77ba8cec3fd05816a4555f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the x-coordinate of the point.  <a href="classcen_1_1basic__point.html#a6cedc4e1f77ba8cec3fd05816a4555f5">More...</a><br /></td></tr>
-<tr class="separator:a6cedc4e1f77ba8cec3fd05816a4555f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad448db7dbb580318ef9ebf45224ee110"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#ad448db7dbb580318ef9ebf45224ee110">set_y</a> (const <a class="el" href="classcen_1_1basic__point.html#adc21c54b6267e1ce2fdd124a922e250e">value_type</a> <a class="el" href="classcen_1_1basic__point.html#a19090bd294a1481b3552f7abef913820">y</a>) noexcept</td></tr>
-<tr class="memdesc:ad448db7dbb580318ef9ebf45224ee110"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the y-coordinate of the point.  <a href="classcen_1_1basic__point.html#ad448db7dbb580318ef9ebf45224ee110">More...</a><br /></td></tr>
-<tr class="separator:ad448db7dbb580318ef9ebf45224ee110"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab595cf6e827268b70bee89f786886890"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#ab595cf6e827268b70bee89f786886890">x</a> () const noexcept -&gt; <a class="el" href="classcen_1_1basic__point.html#adc21c54b6267e1ce2fdd124a922e250e">value_type</a></td></tr>
-<tr class="memdesc:ab595cf6e827268b70bee89f786886890"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the x-coordinate of the point.  <a href="classcen_1_1basic__point.html#ab595cf6e827268b70bee89f786886890">More...</a><br /></td></tr>
-<tr class="separator:ab595cf6e827268b70bee89f786886890"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19090bd294a1481b3552f7abef913820"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#a19090bd294a1481b3552f7abef913820">y</a> () const noexcept -&gt; <a class="el" href="classcen_1_1basic__point.html#adc21c54b6267e1ce2fdd124a922e250e">value_type</a></td></tr>
-<tr class="memdesc:a19090bd294a1481b3552f7abef913820"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the y-coordinate of the point.  <a href="classcen_1_1basic__point.html#a19090bd294a1481b3552f7abef913820">More...</a><br /></td></tr>
-<tr class="separator:a19090bd294a1481b3552f7abef913820"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfe3176a65578ec0bbfb19fe5d077b20"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#acfe3176a65578ec0bbfb19fe5d077b20">get</a> () noexcept -&gt; <a class="el" href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">point_type</a> &amp;</td></tr>
-<tr class="memdesc:acfe3176a65578ec0bbfb19fe5d077b20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the internal point representation.  <a href="classcen_1_1basic__point.html#acfe3176a65578ec0bbfb19fe5d077b20">More...</a><br /></td></tr>
-<tr class="separator:acfe3176a65578ec0bbfb19fe5d077b20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44e113899b52e696f919aa2413446817"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#a44e113899b52e696f919aa2413446817">get</a> () const noexcept -&gt; const <a class="el" href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">point_type</a> &amp;</td></tr>
-<tr class="memdesc:a44e113899b52e696f919aa2413446817"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the internal point representation.  <a href="classcen_1_1basic__point.html#a44e113899b52e696f919aa2413446817">More...</a><br /></td></tr>
-<tr class="separator:a44e113899b52e696f919aa2413446817"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab98350d485dc9d8df9002fee7d9b39e2"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#ab98350d485dc9d8df9002fee7d9b39e2">data</a> () noexcept -&gt; <a class="el" href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">point_type</a> *</td></tr>
-<tr class="memdesc:ab98350d485dc9d8df9002fee7d9b39e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the internal point representation.  <a href="classcen_1_1basic__point.html#ab98350d485dc9d8df9002fee7d9b39e2">More...</a><br /></td></tr>
-<tr class="separator:ab98350d485dc9d8df9002fee7d9b39e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f74984e2402af869d4ba4785ac9fb0e"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#a5f74984e2402af869d4ba4785ac9fb0e">data</a> () const noexcept -&gt; const <a class="el" href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">point_type</a> *</td></tr>
-<tr class="memdesc:a5f74984e2402af869d4ba4785ac9fb0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the internal point representation.  <a href="classcen_1_1basic__point.html#a5f74984e2402af869d4ba4785ac9fb0e">More...</a><br /></td></tr>
-<tr class="separator:a5f74984e2402af869d4ba4785ac9fb0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8b2c5692d4d47e2dd0e8b9ddb45703e"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#af8b2c5692d4d47e2dd0e8b9ddb45703e">operator point_type</a> () const noexcept</td></tr>
-<tr class="memdesc:af8b2c5692d4d47e2dd0e8b9ddb45703e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts to the internal representation.  <a href="classcen_1_1basic__point.html#af8b2c5692d4d47e2dd0e8b9ddb45703e">More...</a><br /></td></tr>
-<tr class="separator:af8b2c5692d4d47e2dd0e8b9ddb45703e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2df0ec5864e348b840da761499e5a8c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#a2df0ec5864e348b840da761499e5a8c2">operator point_type *</a> () noexcept</td></tr>
-<tr class="memdesc:a2df0ec5864e348b840da761499e5a8c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the internal point.  <a href="classcen_1_1basic__point.html#a2df0ec5864e348b840da761499e5a8c2">More...</a><br /></td></tr>
-<tr class="separator:a2df0ec5864e348b840da761499e5a8c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5cbceae5a53e23faeb4a186403d76be"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#ac5cbceae5a53e23faeb4a186403d76be">operator const point_type *</a> () const noexcept</td></tr>
-<tr class="memdesc:ac5cbceae5a53e23faeb4a186403d76be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the internal point.  <a href="classcen_1_1basic__point.html#ac5cbceae5a53e23faeb4a186403d76be">More...</a><br /></td></tr>
-<tr class="separator:ac5cbceae5a53e23faeb4a186403d76be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2662928096822b6792887cbbff00bfa5"><td class="memTemplParams" colspan="2">template&lt;typename Archive &gt; </td></tr>
-<tr class="memitem:a2662928096822b6792887cbbff00bfa5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#a2662928096822b6792887cbbff00bfa5">serialize</a> (Archive &amp;archive)</td></tr>
-<tr class="memdesc:a2662928096822b6792887cbbff00bfa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serializes the point.  <a href="classcen_1_1basic__point.html#a2662928096822b6792887cbbff00bfa5">More...</a><br /></td></tr>
-<tr class="separator:a2662928096822b6792887cbbff00bfa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab474dd2122faab7e9875513639a1f956"><td class="memTemplParams" colspan="2">template&lt;typename Archive &gt; </td></tr>
+<tr class="memitem:ab474dd2122faab7e9875513639a1f956"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#ab474dd2122faab7e9875513639a1f956">serialize</a> (Archive &amp;archive)</td></tr>
+<tr class="memdesc:ab474dd2122faab7e9875513639a1f956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serializes the point.  <a href="classcen_1_1basic__point.html#ab474dd2122faab7e9875513639a1f956">More...</a><br /></td></tr>
+<tr class="separator:ab474dd2122faab7e9875513639a1f956"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a24c7a35f206fd07a03f912a0f430c4ae"><td class="memItemLeft" align="right" valign="top">constexpr static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#a24c7a35f206fd07a03f912a0f430c4ae">isIntegral</a> = <a class="el" href="classcen_1_1point__traits.html">point_traits</a>&lt;T&gt;::isIntegral</td></tr>
-<tr class="memdesc:a24c7a35f206fd07a03f912a0f430c4ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the point is based on an integral type.  <a href="classcen_1_1basic__point.html#a24c7a35f206fd07a03f912a0f430c4ae">More...</a><br /></td></tr>
-<tr class="separator:a24c7a35f206fd07a03f912a0f430c4ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99ac24319da114936a5016b1ef031778"><td class="memItemLeft" align="right" valign="top">constexpr static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#a99ac24319da114936a5016b1ef031778">isFloating</a> = <a class="el" href="classcen_1_1point__traits.html">point_traits</a>&lt;T&gt;::isFloating</td></tr>
-<tr class="memdesc:a99ac24319da114936a5016b1ef031778"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the point is based on a floating-point type.  <a href="classcen_1_1basic__point.html#a99ac24319da114936a5016b1ef031778">More...</a><br /></td></tr>
-<tr class="separator:a99ac24319da114936a5016b1ef031778"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7b02a15666a45a545361dbb642523a8"><td class="memItemLeft" align="right" valign="top">constexpr static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#af7b02a15666a45a545361dbb642523a8">isIntegral</a> = <a class="el" href="classcen_1_1point__traits.html">point_traits</a>&lt;T&gt;::isIntegral</td></tr>
+<tr class="memdesc:af7b02a15666a45a545361dbb642523a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the point is based on an integral type.  <a href="classcen_1_1basic__point.html#af7b02a15666a45a545361dbb642523a8">More...</a><br /></td></tr>
+<tr class="separator:af7b02a15666a45a545361dbb642523a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a045344e9f47cf0bd2b645533324b74d3"><td class="memItemLeft" align="right" valign="top">constexpr static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#a045344e9f47cf0bd2b645533324b74d3">isFloating</a> = <a class="el" href="classcen_1_1point__traits.html">point_traits</a>&lt;T&gt;::isFloating</td></tr>
+<tr class="memdesc:a045344e9f47cf0bd2b645533324b74d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the point is based on a floating-point type.  <a href="classcen_1_1basic__point.html#a045344e9f47cf0bd2b645533324b74d3">More...</a><br /></td></tr>
+<tr class="separator:a045344e9f47cf0bd2b645533324b74d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Construction</h2></td></tr>
+<tr class="memitem:a12ce115480e8b337cb2f2ddb9d266d7a"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#a12ce115480e8b337cb2f2ddb9d266d7a">basic_point</a> () noexcept=default</td></tr>
+<tr class="memdesc:a12ce115480e8b337cb2f2ddb9d266d7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a zero-initialized point.  <a href="classcen_1_1basic__point.html#a12ce115480e8b337cb2f2ddb9d266d7a">More...</a><br /></td></tr>
+<tr class="separator:a12ce115480e8b337cb2f2ddb9d266d7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12d749ace57d2f10399b314abe0cb843"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#a12d749ace57d2f10399b314abe0cb843">basic_point</a> (const <a class="el" href="classcen_1_1basic__point.html#a029c9beaca63bd7d8e36316bb0a263dd">value_type</a> <a class="el" href="classcen_1_1basic__point.html#a3b3f66f880b85aad8e8743a50e9bf191">x</a>, const <a class="el" href="classcen_1_1basic__point.html#a029c9beaca63bd7d8e36316bb0a263dd">value_type</a> <a class="el" href="classcen_1_1basic__point.html#a00063f9c26336298b019e5793a85af64">y</a>) noexcept</td></tr>
+<tr class="memdesc:a12d749ace57d2f10399b314abe0cb843"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a point with the specified coordinates.  <a href="classcen_1_1basic__point.html#a12d749ace57d2f10399b314abe0cb843">More...</a><br /></td></tr>
+<tr class="separator:a12d749ace57d2f10399b314abe0cb843"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Setters</h2></td></tr>
+<tr class="memitem:adb9dce7fe6d57879f659a4d1134e7978"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#adb9dce7fe6d57879f659a4d1134e7978">set_x</a> (const <a class="el" href="classcen_1_1basic__point.html#a029c9beaca63bd7d8e36316bb0a263dd">value_type</a> <a class="el" href="classcen_1_1basic__point.html#a3b3f66f880b85aad8e8743a50e9bf191">x</a>) noexcept</td></tr>
+<tr class="memdesc:adb9dce7fe6d57879f659a4d1134e7978"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the x-coordinate of the point.  <a href="classcen_1_1basic__point.html#adb9dce7fe6d57879f659a4d1134e7978">More...</a><br /></td></tr>
+<tr class="separator:adb9dce7fe6d57879f659a4d1134e7978"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bfea77f1dad01ada2085e03055b3967"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#a0bfea77f1dad01ada2085e03055b3967">set_y</a> (const <a class="el" href="classcen_1_1basic__point.html#a029c9beaca63bd7d8e36316bb0a263dd">value_type</a> <a class="el" href="classcen_1_1basic__point.html#a00063f9c26336298b019e5793a85af64">y</a>) noexcept</td></tr>
+<tr class="memdesc:a0bfea77f1dad01ada2085e03055b3967"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the y-coordinate of the point.  <a href="classcen_1_1basic__point.html#a0bfea77f1dad01ada2085e03055b3967">More...</a><br /></td></tr>
+<tr class="separator:a0bfea77f1dad01ada2085e03055b3967"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Getters</h2></td></tr>
+<tr class="memitem:a3b3f66f880b85aad8e8743a50e9bf191"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#a3b3f66f880b85aad8e8743a50e9bf191">x</a> () const noexcept -&gt; <a class="el" href="classcen_1_1basic__point.html#a029c9beaca63bd7d8e36316bb0a263dd">value_type</a></td></tr>
+<tr class="memdesc:a3b3f66f880b85aad8e8743a50e9bf191"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the x-coordinate of the point.  <a href="classcen_1_1basic__point.html#a3b3f66f880b85aad8e8743a50e9bf191">More...</a><br /></td></tr>
+<tr class="separator:a3b3f66f880b85aad8e8743a50e9bf191"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00063f9c26336298b019e5793a85af64"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#a00063f9c26336298b019e5793a85af64">y</a> () const noexcept -&gt; <a class="el" href="classcen_1_1basic__point.html#a029c9beaca63bd7d8e36316bb0a263dd">value_type</a></td></tr>
+<tr class="memdesc:a00063f9c26336298b019e5793a85af64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the y-coordinate of the point.  <a href="classcen_1_1basic__point.html#a00063f9c26336298b019e5793a85af64">More...</a><br /></td></tr>
+<tr class="separator:a00063f9c26336298b019e5793a85af64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1d6afa7d71f9de1bd8990533e729848"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#aa1d6afa7d71f9de1bd8990533e729848">get</a> () noexcept -&gt; <a class="el" href="classcen_1_1basic__point.html#a3af4ec5f6e0fb87fca30b107164295c9">point_type</a> &amp;</td></tr>
+<tr class="memdesc:aa1d6afa7d71f9de1bd8990533e729848"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the internal point representation.  <a href="classcen_1_1basic__point.html#aa1d6afa7d71f9de1bd8990533e729848">More...</a><br /></td></tr>
+<tr class="separator:aa1d6afa7d71f9de1bd8990533e729848"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fce8ef2ea12db88983f9efdcca8c052"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#a7fce8ef2ea12db88983f9efdcca8c052">get</a> () const noexcept -&gt; const <a class="el" href="classcen_1_1basic__point.html#a3af4ec5f6e0fb87fca30b107164295c9">point_type</a> &amp;</td></tr>
+<tr class="memdesc:a7fce8ef2ea12db88983f9efdcca8c052"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the internal point representation.  <a href="classcen_1_1basic__point.html#a7fce8ef2ea12db88983f9efdcca8c052">More...</a><br /></td></tr>
+<tr class="separator:a7fce8ef2ea12db88983f9efdcca8c052"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1726d9222c73b798d7ed2ce46194a57c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#a1726d9222c73b798d7ed2ce46194a57c">data</a> () noexcept -&gt; <a class="el" href="classcen_1_1basic__point.html#a3af4ec5f6e0fb87fca30b107164295c9">point_type</a> *</td></tr>
+<tr class="memdesc:a1726d9222c73b798d7ed2ce46194a57c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the internal point representation.  <a href="classcen_1_1basic__point.html#a1726d9222c73b798d7ed2ce46194a57c">More...</a><br /></td></tr>
+<tr class="separator:a1726d9222c73b798d7ed2ce46194a57c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe628c28d7d7acdec7b25fa71b74b8f4"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#afe628c28d7d7acdec7b25fa71b74b8f4">data</a> () const noexcept -&gt; const <a class="el" href="classcen_1_1basic__point.html#a3af4ec5f6e0fb87fca30b107164295c9">point_type</a> *</td></tr>
+<tr class="memdesc:afe628c28d7d7acdec7b25fa71b74b8f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the internal point representation.  <a href="classcen_1_1basic__point.html#afe628c28d7d7acdec7b25fa71b74b8f4">More...</a><br /></td></tr>
+<tr class="separator:afe628c28d7d7acdec7b25fa71b74b8f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Conversions</h2></td></tr>
+<tr class="memitem:a543564b3c82affc9a8e4cd00026bdadf"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#a543564b3c82affc9a8e4cd00026bdadf">operator point_type</a> () const noexcept</td></tr>
+<tr class="memdesc:a543564b3c82affc9a8e4cd00026bdadf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts to the internal representation.  <a href="classcen_1_1basic__point.html#a543564b3c82affc9a8e4cd00026bdadf">More...</a><br /></td></tr>
+<tr class="separator:a543564b3c82affc9a8e4cd00026bdadf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47616e82cd38c376916af87f66e34fd4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#a47616e82cd38c376916af87f66e34fd4">operator point_type *</a> () noexcept</td></tr>
+<tr class="memdesc:a47616e82cd38c376916af87f66e34fd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the internal point representation.  <a href="classcen_1_1basic__point.html#a47616e82cd38c376916af87f66e34fd4">More...</a><br /></td></tr>
+<tr class="separator:a47616e82cd38c376916af87f66e34fd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eb498b2dbb83091ae5ce99ad96e7f84"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html#a4eb498b2dbb83091ae5ce99ad96e7f84">operator const point_type *</a> () const noexcept</td></tr>
+<tr class="memdesc:a4eb498b2dbb83091ae5ce99ad96e7f84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the internal point representation.  <a href="classcen_1_1basic__point.html#a4eb498b2dbb83091ae5ce99ad96e7f84">More...</a><br /></td></tr>
+<tr class="separator:a4eb498b2dbb83091ae5ce99ad96e7f84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename T&gt;<br />
-class cen::basic_point&lt; T &gt;</h3>
-
-<p>Represents a two-dimensional point. </p>
+<div class="textblock"><p>Represents a two-dimensional point. </p>
 <p>This class is designed as a wrapper for <code>SDL_Point</code> and <code>SDL_FPoint</code>. The representation is specified by the type parameter.</p>
 <dl class="section note"><dt>Note</dt><dd>This point class will only use <code>int</code> or <code>float</code> as the actual internal representation.</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
@@ -182,20 +191,22 @@ class cen::basic_point&lt; T &gt;</h3>
   </dd>
 </dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="group__geometry.html#ga482cd24468a5a74647742e69379566c7" title="Alias for an int-based point.">ipoint</a></code> </dd>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="group__math.html#ga482cd24468a5a74647742e69379566c7" title="Alias for an int-based point.">ipoint</a></code> </dd>
 <dd>
-<code><a class="el" href="group__geometry.html#gac8dd351748b0f07b280e685ae4097d40" title="Alias for a float-based point.">fpoint</a></code> </dd></dl>
+<code><a class="el" href="group__math.html#gac8dd351748b0f07b280e685ae4097d40" title="Alias for a float-based point.">fpoint</a></code> </dd>
+<dd>
+<code><a class="el" href="group__math.html#ga0ea9dbc4b64f2d8d6c83919a080b805b" title="Creates a point instance with automatically deduced precision.">point()</a></code> </dd>
+<dd>
+<code><a class="el" href="group__math.html#ga5cba142ae2503f97ea86063aefb6a816" title="Returns the distance between two points.">distance()</a></code> </dd></dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="ae057e24111cf79575a281f118cf911cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae057e24111cf79575a281f118cf911cb">&#9670;&nbsp;</a></span>point_type</h2>
+<a id="a3af4ec5f6e0fb87fca30b107164295c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3af4ec5f6e0fb87fca30b107164295c9">&#9670;&nbsp;</a></span>point_type</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::<a class="el" href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">point_type</a> =  typename <a class="el" href="classcen_1_1point__traits.html">point_traits</a>&lt;T&gt;::<a class="el" href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">point_type</a></td>
+          <td class="memname">using <a class="el" href="classcen_1_1basic__point.html#a3af4ec5f6e0fb87fca30b107164295c9">cen::basic_point::point_type</a> =  typename <a class="el" href="classcen_1_1point__traits.html">point_traits</a>&lt;T&gt;::<a class="el" href="classcen_1_1basic__point.html#a3af4ec5f6e0fb87fca30b107164295c9">point_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -205,16 +216,14 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="adc21c54b6267e1ce2fdd124a922e250e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc21c54b6267e1ce2fdd124a922e250e">&#9670;&nbsp;</a></span>value_type</h2>
+<a id="a029c9beaca63bd7d8e36316bb0a263dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a029c9beaca63bd7d8e36316bb0a263dd">&#9670;&nbsp;</a></span>value_type</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::<a class="el" href="classcen_1_1basic__point.html#adc21c54b6267e1ce2fdd124a922e250e">value_type</a> =  typename <a class="el" href="classcen_1_1point__traits.html">point_traits</a>&lt;T&gt;::<a class="el" href="classcen_1_1basic__point.html#adc21c54b6267e1ce2fdd124a922e250e">value_type</a></td>
+          <td class="memname">using <a class="el" href="classcen_1_1basic__point.html#a029c9beaca63bd7d8e36316bb0a263dd">cen::basic_point::value_type</a> =  typename <a class="el" href="classcen_1_1point__traits.html">point_traits</a>&lt;T&gt;::<a class="el" href="classcen_1_1basic__point.html#a029c9beaca63bd7d8e36316bb0a263dd">value_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -225,19 +234,17 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="afc70c77e6b99c69593d9c58091aae094"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc70c77e6b99c69593d9c58091aae094">&#9670;&nbsp;</a></span>basic_point() <span class="overload">[1/2]</span></h2>
+<a id="a12ce115480e8b337cb2f2ddb9d266d7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12ce115480e8b337cb2f2ddb9d266d7a">&#9670;&nbsp;</a></span>basic_point() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr <a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::<a class="el" href="classcen_1_1basic__point.html">basic_point</a> </td>
+          <td class="memname">constexpr cen::basic_point::basic_point </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -255,27 +262,25 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="ad24cdf27419a909a2705f2d822325d68"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad24cdf27419a909a2705f2d822325d68">&#9670;&nbsp;</a></span>basic_point() <span class="overload">[2/2]</span></h2>
+<a id="a12d749ace57d2f10399b314abe0cb843"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12d749ace57d2f10399b314abe0cb843">&#9670;&nbsp;</a></span>basic_point() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr <a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::<a class="el" href="classcen_1_1basic__point.html">basic_point</a> </td>
+          <td class="memname">constexpr cen::basic_point::basic_point </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1basic__point.html#adc21c54b6267e1ce2fdd124a922e250e">value_type</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__point.html#a029c9beaca63bd7d8e36316bb0a263dd">value_type</a>&#160;</td>
           <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1basic__point.html#adc21c54b6267e1ce2fdd124a922e250e">value_type</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__point.html#a029c9beaca63bd7d8e36316bb0a263dd">value_type</a>&#160;</td>
           <td class="paramname"><em>y</em>&#160;</td>
         </tr>
         <tr>
@@ -304,22 +309,20 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5f74984e2402af869d4ba4785ac9fb0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f74984e2402af869d4ba4785ac9fb0e">&#9670;&nbsp;</a></span>data() <span class="overload">[1/2]</span></h2>
+<a id="afe628c28d7d7acdec7b25fa71b74b8f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe628c28d7d7acdec7b25fa71b74b8f4">&#9670;&nbsp;</a></span>data() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::data </td>
+          <td class="memname">auto cen::basic_point::data </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; const <a class="el" href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">point_type</a>*
+          <td> const -&gt; const <a class="el" href="classcen_1_1basic__point.html#a3af4ec5f6e0fb87fca30b107164295c9">point_type</a>*
   </td>
         </tr>
       </table>
@@ -337,22 +340,20 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="ab98350d485dc9d8df9002fee7d9b39e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab98350d485dc9d8df9002fee7d9b39e2">&#9670;&nbsp;</a></span>data() <span class="overload">[2/2]</span></h2>
+<a id="a1726d9222c73b798d7ed2ce46194a57c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1726d9222c73b798d7ed2ce46194a57c">&#9670;&nbsp;</a></span>data() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::data </td>
+          <td class="memname">auto cen::basic_point::data </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">point_type</a>*
+          <td> -&gt; <a class="el" href="classcen_1_1basic__point.html#a3af4ec5f6e0fb87fca30b107164295c9">point_type</a>*
   </td>
         </tr>
       </table>
@@ -370,22 +371,20 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a44e113899b52e696f919aa2413446817"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44e113899b52e696f919aa2413446817">&#9670;&nbsp;</a></span>get() <span class="overload">[1/2]</span></h2>
+<a id="a7fce8ef2ea12db88983f9efdcca8c052"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fce8ef2ea12db88983f9efdcca8c052">&#9670;&nbsp;</a></span>get() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr auto <a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::get </td>
+          <td class="memname">constexpr auto cen::basic_point::get </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; const <a class="el" href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">point_type</a>&amp;
+          <td> const -&gt; const <a class="el" href="classcen_1_1basic__point.html#a3af4ec5f6e0fb87fca30b107164295c9">point_type</a>&amp;
   </td>
         </tr>
       </table>
@@ -402,22 +401,20 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="acfe3176a65578ec0bbfb19fe5d077b20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acfe3176a65578ec0bbfb19fe5d077b20">&#9670;&nbsp;</a></span>get() <span class="overload">[2/2]</span></h2>
+<a id="aa1d6afa7d71f9de1bd8990533e729848"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1d6afa7d71f9de1bd8990533e729848">&#9670;&nbsp;</a></span>get() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr auto <a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::get </td>
+          <td class="memname">constexpr auto cen::basic_point::get </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">point_type</a>&amp;
+          <td> -&gt; <a class="el" href="classcen_1_1basic__point.html#a3af4ec5f6e0fb87fca30b107164295c9">point_type</a>&amp;
   </td>
         </tr>
       </table>
@@ -434,19 +431,17 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="ac5cbceae5a53e23faeb4a186403d76be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5cbceae5a53e23faeb4a186403d76be">&#9670;&nbsp;</a></span>operator const point_type *()</h2>
+<a id="a4eb498b2dbb83091ae5ce99ad96e7f84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4eb498b2dbb83091ae5ce99ad96e7f84">&#9670;&nbsp;</a></span>operator const point_type *()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::operator const <a class="el" href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">point_type</a> * </td>
+          <td class="memname">cen::basic_point::operator const <a class="el" href="classcen_1_1basic__point.html#a3af4ec5f6e0fb87fca30b107164295c9">point_type</a> * </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -459,26 +454,24 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a pointer to the internal point. </p>
-<dl class="section note"><dt>Note</dt><dd>You shouldn't store the returned pointer. However, this conversion is safe since <code>reinterpret_cast</code> isn't used.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the internal point instance.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+<p>Returns a pointer to the internal point representation. </p>
+<dl class="section note"><dt>Note</dt><dd>Don't cache the returned pointer.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the point representation.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
 
 </div>
 </div>
-<a id="af8b2c5692d4d47e2dd0e8b9ddb45703e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8b2c5692d4d47e2dd0e8b9ddb45703e">&#9670;&nbsp;</a></span>operator point_type()</h2>
+<a id="a543564b3c82affc9a8e4cd00026bdadf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a543564b3c82affc9a8e4cd00026bdadf">&#9670;&nbsp;</a></span>operator point_type()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr <a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::operator <a class="el" href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">point_type</a> </td>
+          <td class="memname">constexpr cen::basic_point::operator <a class="el" href="classcen_1_1basic__point.html#a3af4ec5f6e0fb87fca30b107164295c9">point_type</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -493,24 +486,22 @@ template&lt;typename T &gt; </div>
 
 <p>Converts to the internal representation. </p>
 <dl class="section return"><dt>Returns</dt><dd>a copy of the internal point.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="group__geometry.html#ga007bad66334f4042f3fcbb7ad46acbc8">cen::cast</a></code></dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="group__core.html#ga10fbba7e12ccd2e8cee2d661d629a1da" title="Casts a value to a value of another type.">cen::cast</a></code></dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="a2df0ec5864e348b840da761499e5a8c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2df0ec5864e348b840da761499e5a8c2">&#9670;&nbsp;</a></span>operator point_type *()</h2>
+<a id="a47616e82cd38c376916af87f66e34fd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47616e82cd38c376916af87f66e34fd4">&#9670;&nbsp;</a></span>operator point_type *()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::operator <a class="el" href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">point_type</a> * </td>
+          <td class="memname">cen::basic_point::operator <a class="el" href="classcen_1_1basic__point.html#a3af4ec5f6e0fb87fca30b107164295c9">point_type</a> * </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -523,20 +514,18 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a pointer to the internal point. </p>
-<dl class="section note"><dt>Note</dt><dd>You shouldn't store the returned pointer. However, this conversion is safe since <code>reinterpret_cast</code> isn't used.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the internal point instance.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+<p>Returns a pointer to the internal point representation. </p>
+<dl class="section note"><dt>Note</dt><dd>Don't cache the returned pointer.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the point representation.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
 
 </div>
 </div>
-<a id="a2662928096822b6792887cbbff00bfa5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2662928096822b6792887cbbff00bfa5">&#9670;&nbsp;</a></span>serialize()</h2>
+<a id="ab474dd2122faab7e9875513639a1f956"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab474dd2122faab7e9875513639a1f956">&#9670;&nbsp;</a></span>serialize()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <div class="memtemplate">
 template&lt;typename Archive &gt; </div>
 <table class="mlabels">
@@ -544,7 +533,7 @@ template&lt;typename Archive &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::serialize </td>
+          <td class="memname">void cen::basic_point::serialize </td>
           <td>(</td>
           <td class="paramtype">Archive &amp;&#160;</td>
           <td class="paramname"><em>archive</em></td><td>)</td>
@@ -576,21 +565,19 @@ template&lt;typename Archive &gt; </div>
 
 </div>
 </div>
-<a id="a6cedc4e1f77ba8cec3fd05816a4555f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6cedc4e1f77ba8cec3fd05816a4555f5">&#9670;&nbsp;</a></span>set_x()</h2>
+<a id="adb9dce7fe6d57879f659a4d1134e7978"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb9dce7fe6d57879f659a4d1134e7978">&#9670;&nbsp;</a></span>set_x()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr void <a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::set_x </td>
+          <td class="memname">constexpr void cen::basic_point::set_x </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1basic__point.html#adc21c54b6267e1ce2fdd124a922e250e">value_type</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__point.html#a029c9beaca63bd7d8e36316bb0a263dd">value_type</a>&#160;</td>
           <td class="paramname"><em>x</em></td><td>)</td>
           <td></td>
         </tr>
@@ -613,21 +600,19 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="ad448db7dbb580318ef9ebf45224ee110"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad448db7dbb580318ef9ebf45224ee110">&#9670;&nbsp;</a></span>set_y()</h2>
+<a id="a0bfea77f1dad01ada2085e03055b3967"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bfea77f1dad01ada2085e03055b3967">&#9670;&nbsp;</a></span>set_y()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr void <a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::set_y </td>
+          <td class="memname">constexpr void cen::basic_point::set_y </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1basic__point.html#adc21c54b6267e1ce2fdd124a922e250e">value_type</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__point.html#a029c9beaca63bd7d8e36316bb0a263dd">value_type</a>&#160;</td>
           <td class="paramname"><em>y</em></td><td>)</td>
           <td></td>
         </tr>
@@ -650,22 +635,20 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="ab595cf6e827268b70bee89f786886890"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab595cf6e827268b70bee89f786886890">&#9670;&nbsp;</a></span>x()</h2>
+<a id="a3b3f66f880b85aad8e8743a50e9bf191"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b3f66f880b85aad8e8743a50e9bf191">&#9670;&nbsp;</a></span>x()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr auto <a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::x </td>
+          <td class="memname">constexpr auto cen::basic_point::x </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="classcen_1_1basic__point.html#adc21c54b6267e1ce2fdd124a922e250e">value_type</a>
+          <td> const -&gt; <a class="el" href="classcen_1_1basic__point.html#a029c9beaca63bd7d8e36316bb0a263dd">value_type</a>
   </td>
         </tr>
       </table>
@@ -682,22 +665,20 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a19090bd294a1481b3552f7abef913820"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19090bd294a1481b3552f7abef913820">&#9670;&nbsp;</a></span>y()</h2>
+<a id="a00063f9c26336298b019e5793a85af64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00063f9c26336298b019e5793a85af64">&#9670;&nbsp;</a></span>y()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr auto <a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::y </td>
+          <td class="memname">constexpr auto cen::basic_point::y </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="classcen_1_1basic__point.html#adc21c54b6267e1ce2fdd124a922e250e">value_type</a>
+          <td> const -&gt; <a class="el" href="classcen_1_1basic__point.html#a029c9beaca63bd7d8e36316bb0a263dd">value_type</a>
   </td>
         </tr>
       </table>
@@ -715,19 +696,17 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a99ac24319da114936a5016b1ef031778"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99ac24319da114936a5016b1ef031778">&#9670;&nbsp;</a></span>isFloating</h2>
+<a id="a045344e9f47cf0bd2b645533324b74d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a045344e9f47cf0bd2b645533324b74d3">&#9670;&nbsp;</a></span>isFloating</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr static bool <a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::isFloating = <a class="el" href="classcen_1_1point__traits.html">point_traits</a>&lt;T&gt;::isFloating</td>
+          <td class="memname">constexpr static bool cen::basic_point::isFloating = <a class="el" href="classcen_1_1point__traits.html">point_traits</a>&lt;T&gt;::isFloating</td>
         </tr>
       </table>
   </td>
@@ -742,19 +721,17 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a24c7a35f206fd07a03f912a0f430c4ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24c7a35f206fd07a03f912a0f430c4ae">&#9670;&nbsp;</a></span>isIntegral</h2>
+<a id="af7b02a15666a45a545361dbb642523a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7b02a15666a45a545361dbb642523a8">&#9670;&nbsp;</a></span>isIntegral</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr static bool <a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::isIntegral = <a class="el" href="classcen_1_1point__traits.html">point_traits</a>&lt;T&gt;::isIntegral</td>
+          <td class="memname">constexpr static bool cen::basic_point::isIntegral = <a class="el" href="classcen_1_1point__traits.html">point_traits</a>&lt;T&gt;::isIntegral</td>
         </tr>
       </table>
   </td>
@@ -770,7 +747,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/centurion/<a class="el" href="point_8hpp_source.html">point.hpp</a></li>
+<li>src/centurion/math/<a class="el" href="point_8hpp_source.html">point.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

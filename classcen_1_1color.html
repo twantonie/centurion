@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -94,7 +94,7 @@ $(function() {
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classcen_1_1color-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">cen::color Class Reference<span class="mlabels"><span class="mlabel">final</span></span><div class="ingroups"><a class="el" href="group__graphics.html">Graphics</a></div></div>  </div>
+<div class="title">cen::color Class Reference<span class="mlabels"><span class="mlabel">final</span></span><div class="ingroups"><a class="el" href="group__video.html">Video</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -105,10 +105,26 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a4b4683c36f6a81bbbee0f2b932676c99"><td class="memTemplParams" colspan="2">template&lt;typename Archive &gt; </td></tr>
+<tr class="memitem:a4b4683c36f6a81bbbee0f2b932676c99"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#a4b4683c36f6a81bbbee0f2b932676c99">serialize</a> (Archive &amp;archive)</td></tr>
+<tr class="memdesc:a4b4683c36f6a81bbbee0f2b932676c99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serializes the color.  <a href="classcen_1_1color.html#a4b4683c36f6a81bbbee0f2b932676c99">More...</a><br /></td></tr>
+<tr class="separator:a4b4683c36f6a81bbbee0f2b932676c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7345d87d41f6efd646be6e53392863c8"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#a7345d87d41f6efd646be6e53392863c8">with_alpha</a> (const <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a> <a class="el" href="classcen_1_1color.html#a75259be5cc0aa4bf06270c93fcfe5260">alpha</a>) const noexcept -&gt; <a class="el" href="classcen_1_1color.html">color</a></td></tr>
+<tr class="memdesc:a7345d87d41f6efd646be6e53392863c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of the color with the specified alpha value.  <a href="classcen_1_1color.html#a7345d87d41f6efd646be6e53392863c8">More...</a><br /></td></tr>
+<tr class="separator:a7345d87d41f6efd646be6e53392863c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a116165dfe8ace648ee5f0aca32bcf5ba"><td class="memItemLeft" align="right" valign="top">constexpr static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#a116165dfe8ace648ee5f0aca32bcf5ba">max</a> () noexcept -&gt; <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a></td></tr>
+<tr class="memdesc:a116165dfe8ace648ee5f0aca32bcf5ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the maximum possible value of a color component.  <a href="classcen_1_1color.html#a116165dfe8ace648ee5f0aca32bcf5ba">More...</a><br /></td></tr>
+<tr class="separator:a116165dfe8ace648ee5f0aca32bcf5ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Construction</h2></td></tr>
 <tr class="memitem:a4a237f41c5c7a70f127698b7882029b7"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#a4a237f41c5c7a70f127698b7882029b7">color</a> () noexcept=default</td></tr>
 <tr class="memdesc:a4a237f41c5c7a70f127698b7882029b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a color. The created color will be equal to #000000FF.  <a href="classcen_1_1color.html#a4a237f41c5c7a70f127698b7882029b7">More...</a><br /></td></tr>
 <tr class="separator:a4a237f41c5c7a70f127698b7882029b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaeb654a44906f4e964a60e0263acd4ab"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#aaeb654a44906f4e964a60e0263acd4ab">color</a> (const <a class="el" href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">u8</a> <a class="el" href="classcen_1_1color.html#a5178f50823d5511787d9f42de251299c">red</a>, const <a class="el" href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">u8</a> <a class="el" href="classcen_1_1color.html#aa832ab02fc6d92501cb3050d2b134370">green</a>, const <a class="el" href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">u8</a> <a class="el" href="classcen_1_1color.html#a50b4e69de99c10cd8c299570f2b30ed3">blue</a>, const <a class="el" href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">u8</a> <a class="el" href="classcen_1_1color.html#a75259be5cc0aa4bf06270c93fcfe5260">alpha</a>=<a class="el" href="classcen_1_1color.html#a116165dfe8ace648ee5f0aca32bcf5ba">max</a>()) noexcept</td></tr>
+<tr class="memitem:aaeb654a44906f4e964a60e0263acd4ab"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#aaeb654a44906f4e964a60e0263acd4ab">color</a> (const <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a> <a class="el" href="classcen_1_1color.html#a5178f50823d5511787d9f42de251299c">red</a>, const <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a> <a class="el" href="classcen_1_1color.html#aa832ab02fc6d92501cb3050d2b134370">green</a>, const <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a> <a class="el" href="classcen_1_1color.html#a50b4e69de99c10cd8c299570f2b30ed3">blue</a>, const <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a> <a class="el" href="classcen_1_1color.html#a75259be5cc0aa4bf06270c93fcfe5260">alpha</a>=<a class="el" href="classcen_1_1color.html#a116165dfe8ace648ee5f0aca32bcf5ba">max</a>()) noexcept</td></tr>
 <tr class="memdesc:aaeb654a44906f4e964a60e0263acd4ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a color.  <a href="classcen_1_1color.html#aaeb654a44906f4e964a60e0263acd4ab">More...</a><br /></td></tr>
 <tr class="separator:aaeb654a44906f4e964a60e0263acd4ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93c0945df727c87b4337c78523d04ca6"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#a93c0945df727c87b4337c78523d04ca6">color</a> (const SDL_Color &amp;<a class="el" href="classcen_1_1color.html">color</a>) noexcept</td></tr>
@@ -117,36 +133,54 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a67b39159f8ff8988fcab7d7a32e39642"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#a67b39159f8ff8988fcab7d7a32e39642">color</a> (const SDL_MessageBoxColor &amp;<a class="el" href="classcen_1_1color.html">color</a>) noexcept</td></tr>
 <tr class="memdesc:a67b39159f8ff8988fcab7d7a32e39642"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a color that is a copy of the supplied SDL_MessageBoxColor.  <a href="classcen_1_1color.html#a67b39159f8ff8988fcab7d7a32e39642">More...</a><br /></td></tr>
 <tr class="separator:a67b39159f8ff8988fcab7d7a32e39642"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24765375a834c452659a64622cfad429"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#a24765375a834c452659a64622cfad429">set_red</a> (const <a class="el" href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">u8</a> <a class="el" href="classcen_1_1color.html#a5178f50823d5511787d9f42de251299c">red</a>) noexcept</td></tr>
+<tr class="memitem:a66336ff07300d79d336fe2c04e684df5"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#a66336ff07300d79d336fe2c04e684df5">from_hsv</a> (const double hue, const double saturation, const double value) -&gt; <a class="el" href="classcen_1_1color.html">color</a></td></tr>
+<tr class="memdesc:a66336ff07300d79d336fe2c04e684df5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a color from HSV-encoded values.  <a href="classcen_1_1color.html#a66336ff07300d79d336fe2c04e684df5">More...</a><br /></td></tr>
+<tr class="separator:a66336ff07300d79d336fe2c04e684df5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c56573ca7f6a9f25cad2ae2cf070f79"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#a1c56573ca7f6a9f25cad2ae2cf070f79">from_hsl</a> (const double hue, const double saturation, const double lightness) -&gt; <a class="el" href="classcen_1_1color.html">color</a></td></tr>
+<tr class="memdesc:a1c56573ca7f6a9f25cad2ae2cf070f79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a color from HSL-encoded values.  <a href="classcen_1_1color.html#a1c56573ca7f6a9f25cad2ae2cf070f79">More...</a><br /></td></tr>
+<tr class="separator:a1c56573ca7f6a9f25cad2ae2cf070f79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Setters</h2></td></tr>
+<tr class="memitem:a24765375a834c452659a64622cfad429"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#a24765375a834c452659a64622cfad429">set_red</a> (const <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a> <a class="el" href="classcen_1_1color.html#a5178f50823d5511787d9f42de251299c">red</a>) noexcept</td></tr>
 <tr class="memdesc:a24765375a834c452659a64622cfad429"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value of the red component.  <a href="classcen_1_1color.html#a24765375a834c452659a64622cfad429">More...</a><br /></td></tr>
 <tr class="separator:a24765375a834c452659a64622cfad429"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f50fc776129d4b32eb8b699f4347adf"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#a5f50fc776129d4b32eb8b699f4347adf">set_green</a> (const <a class="el" href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">u8</a> <a class="el" href="classcen_1_1color.html#aa832ab02fc6d92501cb3050d2b134370">green</a>) noexcept</td></tr>
+<tr class="memitem:a5f50fc776129d4b32eb8b699f4347adf"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#a5f50fc776129d4b32eb8b699f4347adf">set_green</a> (const <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a> <a class="el" href="classcen_1_1color.html#aa832ab02fc6d92501cb3050d2b134370">green</a>) noexcept</td></tr>
 <tr class="memdesc:a5f50fc776129d4b32eb8b699f4347adf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value of the green component.  <a href="classcen_1_1color.html#a5f50fc776129d4b32eb8b699f4347adf">More...</a><br /></td></tr>
 <tr class="separator:a5f50fc776129d4b32eb8b699f4347adf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac51df49b84e5893db49240920f30d01a"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#ac51df49b84e5893db49240920f30d01a">set_blue</a> (const <a class="el" href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">u8</a> <a class="el" href="classcen_1_1color.html#a50b4e69de99c10cd8c299570f2b30ed3">blue</a>) noexcept</td></tr>
+<tr class="memitem:ac51df49b84e5893db49240920f30d01a"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#ac51df49b84e5893db49240920f30d01a">set_blue</a> (const <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a> <a class="el" href="classcen_1_1color.html#a50b4e69de99c10cd8c299570f2b30ed3">blue</a>) noexcept</td></tr>
 <tr class="memdesc:ac51df49b84e5893db49240920f30d01a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value of the blue component.  <a href="classcen_1_1color.html#ac51df49b84e5893db49240920f30d01a">More...</a><br /></td></tr>
 <tr class="separator:ac51df49b84e5893db49240920f30d01a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e5e5c4a486eee0e28f05eee7eca457d"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#a2e5e5c4a486eee0e28f05eee7eca457d">set_alpha</a> (const <a class="el" href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">u8</a> <a class="el" href="classcen_1_1color.html#a75259be5cc0aa4bf06270c93fcfe5260">alpha</a>) noexcept</td></tr>
+<tr class="memitem:a2e5e5c4a486eee0e28f05eee7eca457d"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#a2e5e5c4a486eee0e28f05eee7eca457d">set_alpha</a> (const <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a> <a class="el" href="classcen_1_1color.html#a75259be5cc0aa4bf06270c93fcfe5260">alpha</a>) noexcept</td></tr>
 <tr class="memdesc:a2e5e5c4a486eee0e28f05eee7eca457d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value of the alpha component.  <a href="classcen_1_1color.html#a2e5e5c4a486eee0e28f05eee7eca457d">More...</a><br /></td></tr>
 <tr class="separator:a2e5e5c4a486eee0e28f05eee7eca457d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7345d87d41f6efd646be6e53392863c8"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#a7345d87d41f6efd646be6e53392863c8">with_alpha</a> (const <a class="el" href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">u8</a> <a class="el" href="classcen_1_1color.html#a75259be5cc0aa4bf06270c93fcfe5260">alpha</a>) const noexcept -&gt; <a class="el" href="classcen_1_1color.html">color</a></td></tr>
-<tr class="memdesc:a7345d87d41f6efd646be6e53392863c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of the color with the specified alpha value.  <a href="classcen_1_1color.html#a7345d87d41f6efd646be6e53392863c8">More...</a><br /></td></tr>
-<tr class="separator:a7345d87d41f6efd646be6e53392863c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5178f50823d5511787d9f42de251299c"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#a5178f50823d5511787d9f42de251299c">red</a> () const noexcept -&gt; <a class="el" href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">u8</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Getters</h2></td></tr>
+<tr class="memitem:a5178f50823d5511787d9f42de251299c"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#a5178f50823d5511787d9f42de251299c">red</a> () const noexcept -&gt; <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a></td></tr>
 <tr class="memdesc:a5178f50823d5511787d9f42de251299c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of the red component.  <a href="classcen_1_1color.html#a5178f50823d5511787d9f42de251299c">More...</a><br /></td></tr>
 <tr class="separator:a5178f50823d5511787d9f42de251299c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa832ab02fc6d92501cb3050d2b134370"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#aa832ab02fc6d92501cb3050d2b134370">green</a> () const noexcept -&gt; <a class="el" href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">u8</a></td></tr>
+<tr class="memitem:aa832ab02fc6d92501cb3050d2b134370"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#aa832ab02fc6d92501cb3050d2b134370">green</a> () const noexcept -&gt; <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a></td></tr>
 <tr class="memdesc:aa832ab02fc6d92501cb3050d2b134370"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of the green component.  <a href="classcen_1_1color.html#aa832ab02fc6d92501cb3050d2b134370">More...</a><br /></td></tr>
 <tr class="separator:aa832ab02fc6d92501cb3050d2b134370"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50b4e69de99c10cd8c299570f2b30ed3"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#a50b4e69de99c10cd8c299570f2b30ed3">blue</a> () const noexcept -&gt; <a class="el" href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">u8</a></td></tr>
+<tr class="memitem:a50b4e69de99c10cd8c299570f2b30ed3"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#a50b4e69de99c10cd8c299570f2b30ed3">blue</a> () const noexcept -&gt; <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a></td></tr>
 <tr class="memdesc:a50b4e69de99c10cd8c299570f2b30ed3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of the blue component.  <a href="classcen_1_1color.html#a50b4e69de99c10cd8c299570f2b30ed3">More...</a><br /></td></tr>
 <tr class="separator:a50b4e69de99c10cd8c299570f2b30ed3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75259be5cc0aa4bf06270c93fcfe5260"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#a75259be5cc0aa4bf06270c93fcfe5260">alpha</a> () const noexcept -&gt; <a class="el" href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">u8</a></td></tr>
+<tr class="memitem:a75259be5cc0aa4bf06270c93fcfe5260"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#a75259be5cc0aa4bf06270c93fcfe5260">alpha</a> () const noexcept -&gt; <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a></td></tr>
 <tr class="memdesc:a75259be5cc0aa4bf06270c93fcfe5260"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of the alpha component.  <a href="classcen_1_1color.html#a75259be5cc0aa4bf06270c93fcfe5260">More...</a><br /></td></tr>
 <tr class="separator:a75259be5cc0aa4bf06270c93fcfe5260"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad44bc91787b4b153c05f2e56988ab370"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#ad44bc91787b4b153c05f2e56988ab370">data</a> () noexcept -&gt; SDL_Color *</td></tr>
+<tr class="memdesc:ad44bc91787b4b153c05f2e56988ab370"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the internal SDL color.  <a href="classcen_1_1color.html#ad44bc91787b4b153c05f2e56988ab370">More...</a><br /></td></tr>
+<tr class="separator:ad44bc91787b4b153c05f2e56988ab370"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a7888775629285bad41ad2715c196f1"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#a5a7888775629285bad41ad2715c196f1">data</a> () const noexcept -&gt; const SDL_Color *</td></tr>
+<tr class="memdesc:a5a7888775629285bad41ad2715c196f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the internal SDL color.  <a href="classcen_1_1color.html#a5a7888775629285bad41ad2715c196f1">More...</a><br /></td></tr>
+<tr class="separator:a5a7888775629285bad41ad2715c196f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a791f432c479fc71f48384840ac1adc14"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#a791f432c479fc71f48384840ac1adc14">get</a> () const noexcept -&gt; const SDL_Color &amp;</td></tr>
 <tr class="memdesc:a791f432c479fc71f48384840ac1adc14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the internal color instance.  <a href="classcen_1_1color.html#a791f432c479fc71f48384840ac1adc14">More...</a><br /></td></tr>
 <tr class="separator:a791f432c479fc71f48384840ac1adc14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Conversions</h2></td></tr>
 <tr class="memitem:a16deb80a8bcc7636f537cc1fef1b3f90"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#a16deb80a8bcc7636f537cc1fef1b3f90">operator SDL_Color</a> () const noexcept</td></tr>
 <tr class="memdesc:a16deb80a8bcc7636f537cc1fef1b3f90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the the color into an <code>SDL_Color</code>.  <a href="classcen_1_1color.html#a16deb80a8bcc7636f537cc1fef1b3f90">More...</a><br /></td></tr>
 <tr class="separator:a16deb80a8bcc7636f537cc1fef1b3f90"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -159,27 +193,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a618b1e8b9626b3ac0cb65945d327bb38"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#a618b1e8b9626b3ac0cb65945d327bb38">operator const SDL_Color *</a> () const noexcept</td></tr>
 <tr class="memdesc:a618b1e8b9626b3ac0cb65945d327bb38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the color to <code>const SDL_Color*</code>.  <a href="classcen_1_1color.html#a618b1e8b9626b3ac0cb65945d327bb38">More...</a><br /></td></tr>
 <tr class="separator:a618b1e8b9626b3ac0cb65945d327bb38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b4683c36f6a81bbbee0f2b932676c99"><td class="memTemplParams" colspan="2">template&lt;typename Archive &gt; </td></tr>
-<tr class="memitem:a4b4683c36f6a81bbbee0f2b932676c99"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#a4b4683c36f6a81bbbee0f2b932676c99">serialize</a> (Archive &amp;archive)</td></tr>
-<tr class="memdesc:a4b4683c36f6a81bbbee0f2b932676c99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serializes the color.  <a href="classcen_1_1color.html#a4b4683c36f6a81bbbee0f2b932676c99">More...</a><br /></td></tr>
-<tr class="separator:a4b4683c36f6a81bbbee0f2b932676c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a66336ff07300d79d336fe2c04e684df5"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#a66336ff07300d79d336fe2c04e684df5">from_hsv</a> (const double hue, const double saturation, const double value) -&gt; <a class="el" href="classcen_1_1color.html">color</a></td></tr>
-<tr class="memdesc:a66336ff07300d79d336fe2c04e684df5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a color from HSV-encoded values.  <a href="classcen_1_1color.html#a66336ff07300d79d336fe2c04e684df5">More...</a><br /></td></tr>
-<tr class="separator:a66336ff07300d79d336fe2c04e684df5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c56573ca7f6a9f25cad2ae2cf070f79"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#a1c56573ca7f6a9f25cad2ae2cf070f79">from_hsl</a> (const double hue, const double saturation, const double lightness) -&gt; <a class="el" href="classcen_1_1color.html">color</a></td></tr>
-<tr class="memdesc:a1c56573ca7f6a9f25cad2ae2cf070f79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a color from HSL-encoded values.  <a href="classcen_1_1color.html#a1c56573ca7f6a9f25cad2ae2cf070f79">More...</a><br /></td></tr>
-<tr class="separator:a1c56573ca7f6a9f25cad2ae2cf070f79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a116165dfe8ace648ee5f0aca32bcf5ba"><td class="memItemLeft" align="right" valign="top">constexpr static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#a116165dfe8ace648ee5f0aca32bcf5ba">max</a> () noexcept -&gt; <a class="el" href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">u8</a></td></tr>
-<tr class="memdesc:a116165dfe8ace648ee5f0aca32bcf5ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the maximum possible value of a color component.  <a href="classcen_1_1color.html#a116165dfe8ace648ee5f0aca32bcf5ba">More...</a><br /></td></tr>
-<tr class="separator:a116165dfe8ace648ee5f0aca32bcf5ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An 8-bit accuracy RGBA color. </p>
-<p>This class is designed to interact with the SDL colors, <code>SDL_Color</code> and <code>SDL_MessageBoxColor</code>.</p>
-<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="colors_8hpp.html">colors.hpp</a></code></dd></dl>
+<p>This class is designed to interact with the SDL colors, i.e. <code>SDL_Color</code> and <code>SDL_MessageBoxColor</code>. For convenience, there are approximately 140 color constants provided in the <code><a class="el" href="namespacecen_1_1colors.html" title="Contains pre-defined color constants.">cen::colors</a></code> namespace,</p>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4a237f41c5c7a70f127698b7882029b7"></a>
@@ -222,25 +239,25 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">constexpr cen::color::color </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">u8</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>&#160;</td>
           <td class="paramname"><em>red</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">u8</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>&#160;</td>
           <td class="paramname"><em>green</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">u8</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>&#160;</td>
           <td class="paramname"><em>blue</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">u8</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>&#160;</td>
           <td class="paramname"><em>alpha</em> = <code><a class="el" href="classcen_1_1color.html#a116165dfe8ace648ee5f0aca32bcf5ba">max</a>()</code>&#160;</td>
         </tr>
         <tr>
@@ -355,7 +372,7 @@ Static Public Member Functions</h2></td></tr>
           <td class="memname">constexpr auto cen::color::alpha </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">u8</a>
+          <td> const -&gt; <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>
   </td>
         </tr>
       </table>
@@ -385,7 +402,7 @@ Static Public Member Functions</h2></td></tr>
           <td class="memname">constexpr auto cen::color::blue </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">u8</a>
+          <td> const -&gt; <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>
   </td>
         </tr>
       </table>
@@ -399,6 +416,68 @@ Static Public Member Functions</h2></td></tr>
 <p>Returns the value of the blue component. </p>
 <dl class="section return"><dt>Returns</dt><dd>the value of the blue component, in the range [0, 255].</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a5a7888775629285bad41ad2715c196f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a7888775629285bad41ad2715c196f1">&#9670;&nbsp;</a></span>data() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::color::data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; const SDL_Color*
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the internal SDL color. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Do not cache the returned pointer!</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the internal color instance.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ad44bc91787b4b153c05f2e56988ab370"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad44bc91787b4b153c05f2e56988ab370">&#9670;&nbsp;</a></span>data() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::color::data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; SDL_Color*
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the internal SDL color. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Do not cache the returned pointer!</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the internal color instance.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
 
 </div>
 </div>
@@ -565,7 +644,7 @@ Static Public Member Functions</h2></td></tr>
           <td class="memname">constexpr auto cen::color::green </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">u8</a>
+          <td> const -&gt; <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>
   </td>
         </tr>
       </table>
@@ -595,7 +674,7 @@ Static Public Member Functions</h2></td></tr>
           <td class="memname">constexpr static auto cen::color::max </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">u8</a>
+          <td> -&gt; <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>
   </td>
         </tr>
       </table>
@@ -744,7 +823,7 @@ Static Public Member Functions</h2></td></tr>
           <td class="memname">constexpr auto cen::color::red </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">u8</a>
+          <td> const -&gt; <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>
   </td>
         </tr>
       </table>
@@ -817,7 +896,7 @@ template&lt;typename Archive &gt; </div>
         <tr>
           <td class="memname">constexpr void cen::color::set_alpha </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">u8</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>&#160;</td>
           <td class="paramname"><em>alpha</em></td><td>)</td>
           <td></td>
         </tr>
@@ -852,7 +931,7 @@ template&lt;typename Archive &gt; </div>
         <tr>
           <td class="memname">constexpr void cen::color::set_blue </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">u8</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>&#160;</td>
           <td class="paramname"><em>blue</em></td><td>)</td>
           <td></td>
         </tr>
@@ -887,7 +966,7 @@ template&lt;typename Archive &gt; </div>
         <tr>
           <td class="memname">constexpr void cen::color::set_green </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">u8</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>&#160;</td>
           <td class="paramname"><em>green</em></td><td>)</td>
           <td></td>
         </tr>
@@ -922,7 +1001,7 @@ template&lt;typename Archive &gt; </div>
         <tr>
           <td class="memname">constexpr void cen::color::set_red </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">u8</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>&#160;</td>
           <td class="paramname"><em>red</em></td><td>)</td>
           <td></td>
         </tr>
@@ -957,7 +1036,7 @@ template&lt;typename Archive &gt; </div>
         <tr>
           <td class="memname">constexpr auto cen::color::with_alpha </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">u8</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>&#160;</td>
           <td class="paramname"><em>alpha</em></td><td>)</td>
           <td> const -&gt; <a class="el" href="classcen_1_1color.html">color</a>
   </td>
@@ -983,7 +1062,7 @@ template&lt;typename Archive &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/centurion/<a class="el" href="color_8hpp_source.html">color.hpp</a></li>
+<li>src/centurion/video/<a class="el" href="color_8hpp_source.html">color.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

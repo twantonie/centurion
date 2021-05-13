@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -119,11 +119,35 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="group__input.html#gga9c137800a1b54878fbb82774be1ced7ea6dd0fe47b8d752eeaebd7cbe0cc5f018">device_type::indirect_relative</a> = SDL_TOUCH_DEVICE_INDIRECT_RELATIVE
 <br />
  }</td></tr>
-<tr class="memdesc:ga9c137800a1b54878fbb82774be1ced7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mirrors the <code>SDL_TouchDeviceType</code> enum.  <a href="group__input.html#ga9c137800a1b54878fbb82774be1ced7e">More...</a><br /></td></tr>
+<tr class="memdesc:ga9c137800a1b54878fbb82774be1ced7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides values that represent different touch device types.  <a href="group__input.html#ga9c137800a1b54878fbb82774be1ced7e">More...</a><br /></td></tr>
 <tr class="separator:ga9c137800a1b54878fbb82774be1ced7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:gacb524125602e468cc8c7150bbb8e087b"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#gacb524125602e468cc8c7150bbb8e087b">device_count</a> () noexcept -&gt; int</td></tr>
+<tr class="memdesc:gacb524125602e468cc8c7150bbb8e087b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of registered touch devices.  <a href="group__input.html#gacb524125602e468cc8c7150bbb8e087b">More...</a><br /></td></tr>
+<tr class="separator:gacb524125602e468cc8c7150bbb8e087b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac819c0bf80354bd0e96b63a59ecb5c14"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#gac819c0bf80354bd0e96b63a59ecb5c14">get_device</a> (const int index) noexcept -&gt; std::optional&lt; SDL_TouchID &gt;</td></tr>
+<tr class="memdesc:gac819c0bf80354bd0e96b63a59ecb5c14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the touch device ID associated with the specified index.  <a href="group__input.html#gac819c0bf80354bd0e96b63a59ecb5c14">More...</a><br /></td></tr>
+<tr class="separator:gac819c0bf80354bd0e96b63a59ecb5c14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga06fa3cfb094e7ab536aea3babaf00387"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga06fa3cfb094e7ab536aea3babaf00387">type_of</a> (const SDL_TouchID id) noexcept -&gt; <a class="el" href="group__input.html#ga9c137800a1b54878fbb82774be1ced7e">device_type</a></td></tr>
+<tr class="memdesc:ga06fa3cfb094e7ab536aea3babaf00387"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the type of a touch device.  <a href="group__input.html#ga06fa3cfb094e7ab536aea3babaf00387">More...</a><br /></td></tr>
+<tr class="separator:ga06fa3cfb094e7ab536aea3babaf00387"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga04fecf49c8246d76ca2e5243876ff389"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga04fecf49c8246d76ca2e5243876ff389">finger_count</a> (const SDL_TouchID id) noexcept -&gt; int</td></tr>
+<tr class="memdesc:ga04fecf49c8246d76ca2e5243876ff389"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of active fingers for a given touch device.  <a href="group__input.html#ga04fecf49c8246d76ca2e5243876ff389">More...</a><br /></td></tr>
+<tr class="separator:ga04fecf49c8246d76ca2e5243876ff389"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5ffd08335223a218d3b9888c9798e1dc"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga5ffd08335223a218d3b9888c9798e1dc">get_finger</a> (const SDL_TouchID id, const int index) noexcept -&gt; std::optional&lt; SDL_Finger &gt;</td></tr>
+<tr class="memdesc:ga5ffd08335223a218d3b9888c9798e1dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the finger associated with the specified touch ID and index.  <a href="group__input.html#ga5ffd08335223a218d3b9888c9798e1dc">More...</a><br /></td></tr>
+<tr class="separator:ga5ffd08335223a218d3b9888c9798e1dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga54ee7d1f136539f570fda4a4ceeabc37"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga54ee7d1f136539f570fda4a4ceeabc37">touch_mouse_id</a> () noexcept -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a></td></tr>
+<tr class="memdesc:ga54ee7d1f136539f570fda4a4ceeabc37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the device ID used for mouse events simulated with touch input.  <a href="group__input.html#ga54ee7d1f136539f570fda4a4ceeabc37">More...</a><br /></td></tr>
+<tr class="separator:ga54ee7d1f136539f570fda4a4ceeabc37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacb3f8622a3c2f126d48681137e05f8e3"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#gacb3f8622a3c2f126d48681137e05f8e3">mouse_touch_id</a> () noexcept -&gt; SDL_TouchID</td></tr>
+<tr class="memdesc:gacb3f8622a3c2f126d48681137e05f8e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the touch ID used by touch events simulated with mouse input.  <a href="group__input.html#gacb3f8622a3c2f126d48681137e05f8e3">More...</a><br /></td></tr>
+<tr class="separator:gacb3f8622a3c2f126d48681137e05f8e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Touch device comparison operators</h2></td></tr>
 <tr class="memitem:gac44ce46776a388440048df6c3abc2ea6"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#gac44ce46776a388440048df6c3abc2ea6">operator==</a> (const <a class="el" href="group__input.html#ga9c137800a1b54878fbb82774be1ced7e">device_type</a> lhs, const SDL_TouchDeviceType rhs) noexcept -&gt; bool</td></tr>
 <tr class="memdesc:gac44ce46776a388440048df6c3abc2ea6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two touch device types are the same.  <a href="group__input.html#gac44ce46776a388440048df6c3abc2ea6">More...</a><br /></td></tr>
 <tr class="separator:gac44ce46776a388440048df6c3abc2ea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,27 +160,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ga7d462c0784990c16e76b0b4e418cb513"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga7d462c0784990c16e76b0b4e418cb513">operator!=</a> (const SDL_TouchDeviceType lhs, const <a class="el" href="group__input.html#ga9c137800a1b54878fbb82774be1ced7e">device_type</a> rhs) noexcept -&gt; bool</td></tr>
 <tr class="memdesc:ga7d462c0784990c16e76b0b4e418cb513"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two touch device types aren't the same.  <a href="group__input.html#ga7d462c0784990c16e76b0b4e418cb513">More...</a><br /></td></tr>
 <tr class="separator:ga7d462c0784990c16e76b0b4e418cb513"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad35a986fc6bb7fa594832b058b362b07"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#gad35a986fc6bb7fa594832b058b362b07">num_devices</a> () noexcept -&gt; int</td></tr>
-<tr class="memdesc:gad35a986fc6bb7fa594832b058b362b07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of registered touch devices.  <a href="group__input.html#gad35a986fc6bb7fa594832b058b362b07">More...</a><br /></td></tr>
-<tr class="separator:gad35a986fc6bb7fa594832b058b362b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac819c0bf80354bd0e96b63a59ecb5c14"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#gac819c0bf80354bd0e96b63a59ecb5c14">get_device</a> (const int index) noexcept -&gt; std::optional&lt; SDL_TouchID &gt;</td></tr>
-<tr class="memdesc:gac819c0bf80354bd0e96b63a59ecb5c14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the touch device ID associated with the specified index.  <a href="group__input.html#gac819c0bf80354bd0e96b63a59ecb5c14">More...</a><br /></td></tr>
-<tr class="separator:gac819c0bf80354bd0e96b63a59ecb5c14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga06fa3cfb094e7ab536aea3babaf00387"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga06fa3cfb094e7ab536aea3babaf00387">type_of</a> (const SDL_TouchID id) noexcept -&gt; <a class="el" href="group__input.html#ga9c137800a1b54878fbb82774be1ced7e">device_type</a></td></tr>
-<tr class="memdesc:ga06fa3cfb094e7ab536aea3babaf00387"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the type of a touch device.  <a href="group__input.html#ga06fa3cfb094e7ab536aea3babaf00387">More...</a><br /></td></tr>
-<tr class="separator:ga06fa3cfb094e7ab536aea3babaf00387"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga908e4e8307cf4acd5468829d82c01173"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga908e4e8307cf4acd5468829d82c01173">num_fingers</a> (const SDL_TouchID id) noexcept -&gt; int</td></tr>
-<tr class="memdesc:ga908e4e8307cf4acd5468829d82c01173"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of active fingers for a given touch device.  <a href="group__input.html#ga908e4e8307cf4acd5468829d82c01173">More...</a><br /></td></tr>
-<tr class="separator:ga908e4e8307cf4acd5468829d82c01173"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5ffd08335223a218d3b9888c9798e1dc"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga5ffd08335223a218d3b9888c9798e1dc">get_finger</a> (const SDL_TouchID id, const int index) noexcept -&gt; std::optional&lt; SDL_Finger &gt;</td></tr>
-<tr class="memdesc:ga5ffd08335223a218d3b9888c9798e1dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the finger associated with the specified touch ID and index.  <a href="group__input.html#ga5ffd08335223a218d3b9888c9798e1dc">More...</a><br /></td></tr>
-<tr class="separator:ga5ffd08335223a218d3b9888c9798e1dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga54ee7d1f136539f570fda4a4ceeabc37"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga54ee7d1f136539f570fda4a4ceeabc37">touch_mouse_id</a> () noexcept -&gt; <a class="el" href="namespacecen.html#ad1dcf848a9ee33237a96cde6b5a1d466">u32</a></td></tr>
-<tr class="memdesc:ga54ee7d1f136539f570fda4a4ceeabc37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the device ID used for mouse events simulated with touch input.  <a href="group__input.html#ga54ee7d1f136539f570fda4a4ceeabc37">More...</a><br /></td></tr>
-<tr class="separator:ga54ee7d1f136539f570fda4a4ceeabc37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacb3f8622a3c2f126d48681137e05f8e3"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#gacb3f8622a3c2f126d48681137e05f8e3">mouse_touch_id</a> () noexcept -&gt; SDL_TouchID</td></tr>
-<tr class="memdesc:gacb3f8622a3c2f126d48681137e05f8e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <code>SDL_TouchID</code> used by touch events simulated with mouse input.  <a href="group__input.html#gacb3f8622a3c2f126d48681137e05f8e3">More...</a><br /></td></tr>
-<tr class="separator:gacb3f8622a3c2f126d48681137e05f8e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Provides the touch API components and methods. </p>

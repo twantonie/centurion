@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/mouse_button.hpp File Reference</title>
+        <title>Centurion: src/centurion/input/mouse_button.hpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_7cbddb6c5dd5dfebc4ed1b9c679e311f.html">input</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -97,7 +97,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;SDL.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="centurion__cfg_8hpp_source.html">centurion_cfg.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="integers_8hpp_source.html">../core/integers.hpp</a>&quot;</code><br />
 </div>
 <p><a href="mouse__button_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -109,20 +109,20 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:ga5e05a492888c037b7f14bbbd43d87101"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga5e05a492888c037b7f14bbbd43d87101">cen::mouse_button</a> { <br />
-&#160;&#160;<a class="el" href="group__input.html#gga5e05a492888c037b7f14bbbd43d87101a811882fecd5c7618d7099ebbd39ea254">cen::mouse_button::left</a> = SDL_BUTTON_LEFT, 
+<tr class="memitem:ga2783619b1566fca313d4a8e7835c91a0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga2783619b1566fca313d4a8e7835c91a0">cen::mouse_button</a> : u8 { <br />
+&#160;&#160;<a class="el" href="group__input.html#gga2783619b1566fca313d4a8e7835c91a0a811882fecd5c7618d7099ebbd39ea254">cen::mouse_button::left</a> = SDL_BUTTON_LEFT, 
 <br />
-&#160;&#160;<a class="el" href="group__input.html#gga5e05a492888c037b7f14bbbd43d87101a4a548addbfb239bbd12f5afe11a4b6dc">cen::mouse_button::middle</a> = SDL_BUTTON_MIDDLE, 
+&#160;&#160;<a class="el" href="group__input.html#gga2783619b1566fca313d4a8e7835c91a0a4a548addbfb239bbd12f5afe11a4b6dc">cen::mouse_button::middle</a> = SDL_BUTTON_MIDDLE, 
 <br />
-&#160;&#160;<a class="el" href="group__input.html#gga5e05a492888c037b7f14bbbd43d87101a7c4f29407893c334a6cb7a87bf045c0d">cen::mouse_button::right</a> = SDL_BUTTON_RIGHT, 
+&#160;&#160;<a class="el" href="group__input.html#gga2783619b1566fca313d4a8e7835c91a0a7c4f29407893c334a6cb7a87bf045c0d">cen::mouse_button::right</a> = SDL_BUTTON_RIGHT, 
 <br />
-&#160;&#160;<a class="el" href="group__input.html#gga5e05a492888c037b7f14bbbd43d87101a6dbf9ac2da09ee1d3debf5a51873ec6d">cen::mouse_button::x1</a> = SDL_BUTTON_X1, 
+&#160;&#160;<a class="el" href="group__input.html#gga2783619b1566fca313d4a8e7835c91a0a6dbf9ac2da09ee1d3debf5a51873ec6d">cen::mouse_button::x1</a> = SDL_BUTTON_X1, 
 <br />
-&#160;&#160;<a class="el" href="group__input.html#gga5e05a492888c037b7f14bbbd43d87101a8e683187a00e5d462a4aeee69e9d3d9c">cen::mouse_button::x2</a> = SDL_BUTTON_X2
+&#160;&#160;<a class="el" href="group__input.html#gga2783619b1566fca313d4a8e7835c91a0a8e683187a00e5d462a4aeee69e9d3d9c">cen::mouse_button::x2</a> = SDL_BUTTON_X2
 <br />
  }</td></tr>
-<tr class="memdesc:ga5e05a492888c037b7f14bbbd43d87101"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides values that represent various mouse buttons.  <a href="group__input.html#ga5e05a492888c037b7f14bbbd43d87101">More...</a><br /></td></tr>
-<tr class="separator:ga5e05a492888c037b7f14bbbd43d87101"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:ga2783619b1566fca313d4a8e7835c91a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides values that represent various mouse buttons.  <a href="group__input.html#ga2783619b1566fca313d4a8e7835c91a0">More...</a><br /></td></tr>
+<tr class="separator:ga2783619b1566fca313d4a8e7835c91a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

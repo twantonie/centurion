@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/counter.hpp File Reference</title>
+        <title>Centurion: src/centurion/system/counter.hpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_c6d2c5988ce62fe45ec82cf89dcf887c.html">system</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -97,8 +97,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;SDL.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="centurion__cfg_8hpp_source.html">centurion_cfg.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="time_8hpp_source.html">time.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="time_8hpp_source.html">../core/time.hpp</a>&quot;</code><br />
 </div>
 <p><a href="counter_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -113,19 +112,19 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gaba8f837a6510b36be1e93957d51cce2b"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gaba8f837a6510b36be1e93957d51cce2b">cen::counter::high_res_freq</a> () noexcept -&gt; u64</td></tr>
-<tr class="memdesc:gaba8f837a6510b36be1e93957d51cce2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the frequency of the system high-performance counter.  <a href="group__system.html#gaba8f837a6510b36be1e93957d51cce2b">More...</a><br /></td></tr>
-<tr class="separator:gaba8f837a6510b36be1e93957d51cce2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8a3954964160a527a3c11befc42c60c0"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga8a3954964160a527a3c11befc42c60c0">cen::counter::now</a> () noexcept -&gt; u64</td></tr>
-<tr class="memdesc:ga8a3954964160a527a3c11befc42c60c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current raw value of the system high-performance counter.  <a href="group__system.html#ga8a3954964160a527a3c11befc42c60c0">More...</a><br /></td></tr>
-<tr class="separator:ga8a3954964160a527a3c11befc42c60c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5693467f08efe3cf7cfbd5ac3d3f41b7"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ga5693467f08efe3cf7cfbd5ac3d3f41b7"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__system.html#ga5693467f08efe3cf7cfbd5ac3d3f41b7">cen::counter::now_sec</a> () noexcept -&gt; seconds&lt; T &gt;</td></tr>
-<tr class="memdesc:ga5693467f08efe3cf7cfbd5ac3d3f41b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of the system high-performance counter in seconds.  <a href="group__system.html#ga5693467f08efe3cf7cfbd5ac3d3f41b7">More...</a><br /></td></tr>
-<tr class="separator:ga5693467f08efe3cf7cfbd5ac3d3f41b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3655871149cd17d65c211ee95d7bd3a6"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga3655871149cd17d65c211ee95d7bd3a6">cen::counter::ticks</a> () -&gt; milliseconds&lt; u32 &gt;</td></tr>
-<tr class="memdesc:ga3655871149cd17d65c211ee95d7bd3a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the amount of milliseconds since the library was initialized.  <a href="group__system.html#ga3655871149cd17d65c211ee95d7bd3a6">More...</a><br /></td></tr>
-<tr class="separator:ga3655871149cd17d65c211ee95d7bd3a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86a526aed5b7ca4c5ecb38a7dcd5d45d"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1counter.html#a86a526aed5b7ca4c5ecb38a7dcd5d45d">cen::counter::frequency</a> () noexcept -&gt; u64</td></tr>
+<tr class="memdesc:a86a526aed5b7ca4c5ecb38a7dcd5d45d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the frequency of the system high-performance counter.  <a href="namespacecen_1_1counter.html#a86a526aed5b7ca4c5ecb38a7dcd5d45d">More...</a><br /></td></tr>
+<tr class="separator:a86a526aed5b7ca4c5ecb38a7dcd5d45d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a3954964160a527a3c11befc42c60c0"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1counter.html#a8a3954964160a527a3c11befc42c60c0">cen::counter::now</a> () noexcept -&gt; u64</td></tr>
+<tr class="memdesc:a8a3954964160a527a3c11befc42c60c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current raw value of the system high-performance counter.  <a href="namespacecen_1_1counter.html#a8a3954964160a527a3c11befc42c60c0">More...</a><br /></td></tr>
+<tr class="separator:a8a3954964160a527a3c11befc42c60c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0635e1cfd7b3bbed55e54f2245d42dba"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a0635e1cfd7b3bbed55e54f2245d42dba"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecen_1_1counter.html#a0635e1cfd7b3bbed55e54f2245d42dba">cen::counter::now_in_seconds</a> () noexcept(noexcept(seconds&lt; T &gt;{})) -&gt; seconds&lt; T &gt;</td></tr>
+<tr class="memdesc:a0635e1cfd7b3bbed55e54f2245d42dba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of the system high-performance counter in seconds.  <a href="namespacecen_1_1counter.html#a0635e1cfd7b3bbed55e54f2245d42dba">More...</a><br /></td></tr>
+<tr class="separator:a0635e1cfd7b3bbed55e54f2245d42dba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa378627cdab42895b4580deac4347d6"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1counter.html#aaa378627cdab42895b4580deac4347d6">cen::counter::ticks</a> () noexcept(noexcept(milliseconds&lt; u32 &gt;{u32{}})) -&gt; milliseconds&lt; u32 &gt;</td></tr>
+<tr class="memdesc:aaa378627cdab42895b4580deac4347d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the amount of milliseconds since the library was initialized.  <a href="namespacecen_1_1counter.html#aaa378627cdab42895b4580deac4347d6">More...</a><br /></td></tr>
+<tr class="separator:aaa378627cdab42895b4580deac4347d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

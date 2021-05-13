@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/area.hpp File Reference</title>
+        <title>Centurion: src/centurion/math/area.hpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_ca1ecbfc90640cd3cee1cdeee7bdd308.html">math</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -101,15 +101,17 @@ $(function() {
 <div class="textblock"><code>#include &lt;ostream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;type_traits&gt;</code><br />
-<code>#include &quot;<a class="el" href="cast_8hpp_source.html">cast.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="centurion__cfg_8hpp_source.html">centurion_cfg.hpp</a>&quot;</code><br />
-<code>#include &quot;detail/to_string.hpp&quot;</code><br />
+<code>#include &quot;<a class="el" href="cast_8hpp_source.html">../core/cast.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="to__string_8hpp_source.html">../detail/to_string.hpp</a>&quot;</code><br />
 </div>
 <p><a href="area_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcen_1_1basic__area.html">cen::basic_area&lt; T &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcen_1_1basic__area.html">cen::basic_area</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simply represents an area with a width and height.  <a href="structcen_1_1basic__area.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcen_1_1basic__area.html">cen::basic_area</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simply represents an area with a width and height.  <a href="structcen_1_1basic__area.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -121,51 +123,64 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:gac34681d6cc8018e07938793d4c420369"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry.html#gac34681d6cc8018e07938793d4c420369">cen::iarea</a> = basic_area&lt; int &gt;</td></tr>
-<tr class="memdesc:gac34681d6cc8018e07938793d4c420369"><td class="mdescLeft">&#160;</td><td class="mdescRight">An alias for <code>int</code> areas.  <a href="group__geometry.html#gac34681d6cc8018e07938793d4c420369">More...</a><br /></td></tr>
+<tr class="memitem:gac34681d6cc8018e07938793d4c420369"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">cen::iarea</a> = basic_area&lt; int &gt;</td></tr>
+<tr class="memdesc:gac34681d6cc8018e07938793d4c420369"><td class="mdescLeft">&#160;</td><td class="mdescRight">An alias for <code>int</code> areas.  <a href="group__math.html#gac34681d6cc8018e07938793d4c420369">More...</a><br /></td></tr>
 <tr class="separator:gac34681d6cc8018e07938793d4c420369"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafd6913012154925effd164a24d0bdaf1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry.html#gafd6913012154925effd164a24d0bdaf1">cen::farea</a> = basic_area&lt; float &gt;</td></tr>
-<tr class="memdesc:gafd6913012154925effd164a24d0bdaf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">An alias for <code>float</code> areas.  <a href="group__geometry.html#gafd6913012154925effd164a24d0bdaf1">More...</a><br /></td></tr>
+<tr class="memitem:gafd6913012154925effd164a24d0bdaf1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__math.html#gafd6913012154925effd164a24d0bdaf1">cen::farea</a> = basic_area&lt; float &gt;</td></tr>
+<tr class="memdesc:gafd6913012154925effd164a24d0bdaf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">An alias for <code>float</code> areas.  <a href="group__math.html#gafd6913012154925effd164a24d0bdaf1">More...</a><br /></td></tr>
 <tr class="separator:gafd6913012154925effd164a24d0bdaf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga70c6ce95890d23f416b83159e28021f1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry.html#ga70c6ce95890d23f416b83159e28021f1">cen::darea</a> = basic_area&lt; double &gt;</td></tr>
-<tr class="memdesc:ga70c6ce95890d23f416b83159e28021f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">An alias for <code>double</code> areas.  <a href="group__geometry.html#ga70c6ce95890d23f416b83159e28021f1">More...</a><br /></td></tr>
+<tr class="memitem:ga70c6ce95890d23f416b83159e28021f1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__math.html#ga70c6ce95890d23f416b83159e28021f1">cen::darea</a> = basic_area&lt; double &gt;</td></tr>
+<tr class="memdesc:ga70c6ce95890d23f416b83159e28021f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">An alias for <code>double</code> areas.  <a href="group__math.html#ga70c6ce95890d23f416b83159e28021f1">More...</a><br /></td></tr>
 <tr class="separator:ga70c6ce95890d23f416b83159e28021f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gaa1ca72a4702a44993ab412d2d46af50d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:gaa1ca72a4702a44993ab412d2d46af50d"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__geometry.html#gaa1ca72a4702a44993ab412d2d46af50d">cen::area_of</a> (const basic_area&lt; T &gt; &amp;area) noexcept -&gt; T</td></tr>
-<tr class="memdesc:gaa1ca72a4702a44993ab412d2d46af50d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size (width x height) of an area.  <a href="group__geometry.html#gaa1ca72a4702a44993ab412d2d46af50d">More...</a><br /></td></tr>
-<tr class="separator:gaa1ca72a4702a44993ab412d2d46af50d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4dc7023ea033836d3683150fb13e2f38"><td class="memTemplParams" colspan="2">template&lt;typename Archive , typename T &gt; </td></tr>
-<tr class="memitem:ga4dc7023ea033836d3683150fb13e2f38"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__geometry.html#ga4dc7023ea033836d3683150fb13e2f38">cen::serialize</a> (Archive &amp;archive, basic_area&lt; T &gt; &amp;area)</td></tr>
-<tr class="memdesc:ga4dc7023ea033836d3683150fb13e2f38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serializes an area instance.  <a href="group__geometry.html#ga4dc7023ea033836d3683150fb13e2f38">More...</a><br /></td></tr>
+<tr class="memitem:ga4dc7023ea033836d3683150fb13e2f38"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__math.html#ga4dc7023ea033836d3683150fb13e2f38">cen::serialize</a> (Archive &amp;archive, basic_area&lt; T &gt; &amp;area)</td></tr>
+<tr class="memdesc:ga4dc7023ea033836d3683150fb13e2f38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serializes an area instance.  <a href="group__math.html#ga4dc7023ea033836d3683150fb13e2f38">More...</a><br /></td></tr>
 <tr class="separator:ga4dc7023ea033836d3683150fb13e2f38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga007bad66334f4042f3fcbb7ad46acbc8"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
-<tr class="memitem:ga007bad66334f4042f3fcbb7ad46acbc8"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__geometry.html#ga007bad66334f4042f3fcbb7ad46acbc8">cen::cast</a> (const iarea &amp;from) noexcept -&gt; darea</td></tr>
-<tr class="separator:ga007bad66334f4042f3fcbb7ad46acbc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaed8d1563c81df056194c1a12b7a250be"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
-<tr class="memitem:gaed8d1563c81df056194c1a12b7a250be"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__geometry.html#gaed8d1563c81df056194c1a12b7a250be">cen::cast</a> (const farea &amp;from) noexcept -&gt; darea</td></tr>
-<tr class="separator:gaed8d1563c81df056194c1a12b7a250be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3e3eaffc16baef3ecbb935736805a4d0"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
-<tr class="memitem:ga3e3eaffc16baef3ecbb935736805a4d0"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__geometry.html#ga3e3eaffc16baef3ecbb935736805a4d0">cen::cast</a> (const darea &amp;from) noexcept -&gt; farea</td></tr>
-<tr class="separator:ga3e3eaffc16baef3ecbb935736805a4d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaec6248e19dd64af37449d012f4e7726b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:gaec6248e19dd64af37449d012f4e7726b"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__geometry.html#gaec6248e19dd64af37449d012f4e7726b">cen::operator==</a> (const basic_area&lt; T &gt; &amp;lhs, const basic_area&lt; T &gt; &amp;rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:gaec6248e19dd64af37449d012f4e7726b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two areas are considered to be equal.  <a href="group__geometry.html#gaec6248e19dd64af37449d012f4e7726b">More...</a><br /></td></tr>
-<tr class="separator:gaec6248e19dd64af37449d012f4e7726b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga364a81620a5b7c2be324bdc87275a69b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ga364a81620a5b7c2be324bdc87275a69b"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__geometry.html#ga364a81620a5b7c2be324bdc87275a69b">cen::operator!=</a> (const basic_area&lt; T &gt; &amp;lhs, const basic_area&lt; T &gt; &amp;rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga364a81620a5b7c2be324bdc87275a69b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two areas aren't considered to be equal.  <a href="group__geometry.html#ga364a81620a5b7c2be324bdc87275a69b">More...</a><br /></td></tr>
-<tr class="separator:ga364a81620a5b7c2be324bdc87275a69b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga64981f5a93c56e6c97441ef1d94f71f0"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ga64981f5a93c56e6c97441ef1d94f71f0"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__geometry.html#ga64981f5a93c56e6c97441ef1d94f71f0">cen::to_string</a> (const basic_area&lt; T &gt; &amp;area) -&gt; std::string</td></tr>
-<tr class="memdesc:ga64981f5a93c56e6c97441ef1d94f71f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a textual representation of an area.  <a href="group__geometry.html#ga64981f5a93c56e6c97441ef1d94f71f0">More...</a><br /></td></tr>
+<tr class="memitem:ga64981f5a93c56e6c97441ef1d94f71f0"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__math.html#ga64981f5a93c56e6c97441ef1d94f71f0">cen::to_string</a> (const basic_area&lt; T &gt; &amp;area) -&gt; std::string</td></tr>
+<tr class="memdesc:ga64981f5a93c56e6c97441ef1d94f71f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a textual representation of an area.  <a href="group__math.html#ga64981f5a93c56e6c97441ef1d94f71f0">More...</a><br /></td></tr>
 <tr class="separator:ga64981f5a93c56e6c97441ef1d94f71f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac9cd32bffecd914f46e71225927155c8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:gac9cd32bffecd914f46e71225927155c8"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__geometry.html#gac9cd32bffecd914f46e71225927155c8">cen::operator&lt;&lt;</a> (std::ostream &amp;stream, const basic_area&lt; T &gt; &amp;area) -&gt; std::ostream &amp;</td></tr>
-<tr class="memdesc:gac9cd32bffecd914f46e71225927155c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a textual representation of an area using a stream.  <a href="group__geometry.html#gac9cd32bffecd914f46e71225927155c8">More...</a><br /></td></tr>
+<tr class="memitem:gac9cd32bffecd914f46e71225927155c8"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__math.html#gac9cd32bffecd914f46e71225927155c8">cen::operator&lt;&lt;</a> (std::ostream &amp;stream, const basic_area&lt; T &gt; &amp;area) -&gt; std::ostream &amp;</td></tr>
+<tr class="memdesc:gac9cd32bffecd914f46e71225927155c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a textual representation of an area using a stream.  <a href="group__math.html#gac9cd32bffecd914f46e71225927155c8">More...</a><br /></td></tr>
 <tr class="separator:gac9cd32bffecd914f46e71225927155c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Area-related functions</h2></td></tr>
+<tr class="memitem:gab9400bf98cfc56a03b6ed1cb66548058"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:gab9400bf98cfc56a03b6ed1cb66548058"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__math.html#gab9400bf98cfc56a03b6ed1cb66548058">cen::area</a> (const T width, const T height) noexcept -&gt; basic_area&lt; T &gt;</td></tr>
+<tr class="memdesc:gab9400bf98cfc56a03b6ed1cb66548058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an area instance with automatically deduced precision.  <a href="group__math.html#gab9400bf98cfc56a03b6ed1cb66548058">More...</a><br /></td></tr>
+<tr class="separator:gab9400bf98cfc56a03b6ed1cb66548058"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga70540d3864faad4cf5a714e8e7e870d9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga70540d3864faad4cf5a714e8e7e870d9"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__math.html#ga70540d3864faad4cf5a714e8e7e870d9">cen::area_of</a> (const basic_area&lt; T &gt; area) noexcept -&gt; T</td></tr>
+<tr class="memdesc:ga70540d3864faad4cf5a714e8e7e870d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size (width x height) of an area.  <a href="group__math.html#ga70540d3864faad4cf5a714e8e7e870d9">More...</a><br /></td></tr>
+<tr class="separator:ga70540d3864faad4cf5a714e8e7e870d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Area cast specializations</h2></td></tr>
+<tr class="memitem:ga007bad66334f4042f3fcbb7ad46acbc8"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:ga007bad66334f4042f3fcbb7ad46acbc8"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__math.html#ga007bad66334f4042f3fcbb7ad46acbc8">cen::cast</a> (const iarea &amp;from) noexcept -&gt; darea</td></tr>
+<tr class="separator:ga007bad66334f4042f3fcbb7ad46acbc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaed8d1563c81df056194c1a12b7a250be"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:gaed8d1563c81df056194c1a12b7a250be"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__math.html#gaed8d1563c81df056194c1a12b7a250be">cen::cast</a> (const farea &amp;from) noexcept -&gt; darea</td></tr>
+<tr class="separator:gaed8d1563c81df056194c1a12b7a250be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3e3eaffc16baef3ecbb935736805a4d0"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:ga3e3eaffc16baef3ecbb935736805a4d0"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__math.html#ga3e3eaffc16baef3ecbb935736805a4d0">cen::cast</a> (const darea &amp;from) noexcept -&gt; farea</td></tr>
+<tr class="separator:ga3e3eaffc16baef3ecbb935736805a4d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Area comparison operators</h2></td></tr>
+<tr class="memitem:gaec6248e19dd64af37449d012f4e7726b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:gaec6248e19dd64af37449d012f4e7726b"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__math.html#gaec6248e19dd64af37449d012f4e7726b">cen::operator==</a> (const basic_area&lt; T &gt; &amp;lhs, const basic_area&lt; T &gt; &amp;rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:gaec6248e19dd64af37449d012f4e7726b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two areas are considered to be equal.  <a href="group__math.html#gaec6248e19dd64af37449d012f4e7726b">More...</a><br /></td></tr>
+<tr class="separator:gaec6248e19dd64af37449d012f4e7726b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga364a81620a5b7c2be324bdc87275a69b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga364a81620a5b7c2be324bdc87275a69b"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__math.html#ga364a81620a5b7c2be324bdc87275a69b">cen::operator!=</a> (const basic_area&lt; T &gt; &amp;lhs, const basic_area&lt; T &gt; &amp;rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga364a81620a5b7c2be324bdc87275a69b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two areas aren't considered to be equal.  <a href="group__math.html#ga364a81620a5b7c2be324bdc87275a69b">More...</a><br /></td></tr>
+<tr class="separator:ga364a81620a5b7c2be324bdc87275a69b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/texture.hpp File Reference</title>
+        <title>Centurion: src/centurion/video/texture.hpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_b630b0fc10333b78f2ff60d8d1210ae7.html">video</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -104,20 +104,19 @@ $(function() {
 <code>#include &lt;cstddef&gt;</code><br />
 <code>#include &lt;ostream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
-<code>#include &lt;type_traits&gt;</code><br />
-<code>#include &quot;<a class="el" href="area_8hpp_source.html">area.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="czstring_8hpp_source.html">../core/czstring.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="exception_8hpp_source.html">../core/exception.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="not__null_8hpp_source.html">../core/not_null.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="owner_8hpp_source.html">../core/owner.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="result_8hpp_source.html">../core/result.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="address__of_8hpp_source.html">../detail/address_of.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="owner__handle__api_8hpp_source.html">../detail/owner_handle_api.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="to__string_8hpp_source.html">../detail/to_string.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="area_8hpp_source.html">../math/area.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="point_8hpp_source.html">../math/point.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="blend__mode_8hpp_source.html">blend_mode.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="centurion__cfg_8hpp_source.html">centurion_cfg.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="color_8hpp_source.html">color.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="czstring_8hpp_source.html">czstring.hpp</a>&quot;</code><br />
-<code>#include &quot;detail/address_of.hpp&quot;</code><br />
-<code>#include &quot;detail/owner_handle_api.hpp&quot;</code><br />
-<code>#include &quot;detail/to_string.hpp&quot;</code><br />
-<code>#include &quot;<a class="el" href="exception_8hpp_source.html">exception.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="not__null_8hpp_source.html">not_null.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="owner_8hpp_source.html">owner.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="pixel__format_8hpp_source.html">pixel_format.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="point_8hpp_source.html">point.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="scale__mode_8hpp_source.html">scale_mode.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="surface_8hpp_source.html">surface.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="texture__access_8hpp_source.html">texture_access.hpp</a>&quot;</code><br />
@@ -127,10 +126,10 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html">cen::basic_texture</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an hardware-accelerated image.  <a href="classcen_1_1basic__texture.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an hardware-accelerated image, intended to be rendered using the <code><a class="el" href="classcen_1_1basic__renderer.html" title="Provides 2D-rendering that is potentially hardware-accelerated.">basic_renderer</a></code> class.  <a href="classcen_1_1basic__texture.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html">cen::basic_texture</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an hardware-accelerated image.  <a href="classcen_1_1basic__texture.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an hardware-accelerated image, intended to be rendered using the <code><a class="el" href="classcen_1_1basic__renderer.html" title="Provides 2D-rendering that is potentially hardware-accelerated.">basic_renderer</a></code> class.  <a href="classcen_1_1basic__texture.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -141,20 +140,20 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ga16cde7704049080f7b56b91e38b3aadd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#ga16cde7704049080f7b56b91e38b3aadd">cen::texture</a> = basic_texture&lt; std::true_type &gt;</td></tr>
-<tr class="separator:ga16cde7704049080f7b56b91e38b3aadd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga51034233eaf2388ecd0c846381ae1ddb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#ga51034233eaf2388ecd0c846381ae1ddb">cen::texture_handle</a> = basic_texture&lt; std::false_type &gt;</td></tr>
-<tr class="separator:ga51034233eaf2388ecd0c846381ae1ddb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab199243ff6286f54d79df8a207b07678"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#gab199243ff6286f54d79df8a207b07678">cen::texture</a> = basic_texture&lt; detail::owning_type &gt;</td></tr>
+<tr class="separator:gab199243ff6286f54d79df8a207b07678"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1dc7d0762fc2f26bed3af79d6fec3a4a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga1dc7d0762fc2f26bed3af79d6fec3a4a">cen::texture_handle</a> = basic_texture&lt; detail::handle_type &gt;</td></tr>
+<tr class="separator:ga1dc7d0762fc2f26bed3af79d6fec3a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:gae80d76b141d804bd213f0f430b45ed6f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:gae80d76b141d804bd213f0f430b45ed6f"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__graphics.html#gae80d76b141d804bd213f0f430b45ed6f">cen::to_string</a> (const basic_texture&lt; T &gt; &amp;texture) -&gt; std::string</td></tr>
-<tr class="memdesc:gae80d76b141d804bd213f0f430b45ed6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a textual representation of a texture.  <a href="group__graphics.html#gae80d76b141d804bd213f0f430b45ed6f">More...</a><br /></td></tr>
+<tr class="memitem:gae80d76b141d804bd213f0f430b45ed6f"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__video.html#gae80d76b141d804bd213f0f430b45ed6f">cen::to_string</a> (const basic_texture&lt; T &gt; &amp;texture) -&gt; std::string</td></tr>
+<tr class="memdesc:gae80d76b141d804bd213f0f430b45ed6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a textual representation of a texture.  <a href="group__video.html#gae80d76b141d804bd213f0f430b45ed6f">More...</a><br /></td></tr>
 <tr class="separator:gae80d76b141d804bd213f0f430b45ed6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga13381f8174cd753b066eb69d3137a801"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ga13381f8174cd753b066eb69d3137a801"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__graphics.html#ga13381f8174cd753b066eb69d3137a801">cen::operator&lt;&lt;</a> (std::ostream &amp;stream, const basic_texture&lt; T &gt; &amp;texture) -&gt; std::ostream &amp;</td></tr>
-<tr class="memdesc:ga13381f8174cd753b066eb69d3137a801"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a textual representation of a texture.  <a href="group__graphics.html#ga13381f8174cd753b066eb69d3137a801">More...</a><br /></td></tr>
+<tr class="memitem:ga13381f8174cd753b066eb69d3137a801"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__video.html#ga13381f8174cd753b066eb69d3137a801">cen::operator&lt;&lt;</a> (std::ostream &amp;stream, const basic_texture&lt; T &gt; &amp;texture) -&gt; std::ostream &amp;</td></tr>
+<tr class="memdesc:ga13381f8174cd753b066eb69d3137a801"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a textual representation of a texture.  <a href="group__video.html#ga13381f8174cd753b066eb69d3137a801">More...</a><br /></td></tr>
 <tr class="separator:ga13381f8174cd753b066eb69d3137a801"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

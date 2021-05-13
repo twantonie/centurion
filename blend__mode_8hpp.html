@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/blend_mode.hpp File Reference</title>
+        <title>Centurion: src/centurion/video/blend_mode.hpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,20 +85,18 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_b630b0fc10333b78f2ff60d8d1210ae7.html">video</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
 <div class="title">blend_mode.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;SDL.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="centurion__cfg_8hpp_source.html">centurion_cfg.hpp</a>&quot;</code><br />
 </div>
 <p><a href="blend__mode_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -110,34 +108,36 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:ga98236ba30ab70fd25e54bf8c5c70dd8f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#ga98236ba30ab70fd25e54bf8c5c70dd8f">cen::blend_mode</a> { <br />
-&#160;&#160;<a class="el" href="group__graphics.html#gga98236ba30ab70fd25e54bf8c5c70dd8fa334c4a4c42fdb79d7ebc3e73b517e6f8">cen::blend_mode::none</a> = SDL_BLENDMODE_NONE, 
+<tr class="memitem:ga98236ba30ab70fd25e54bf8c5c70dd8f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga98236ba30ab70fd25e54bf8c5c70dd8f">cen::blend_mode</a> { <br />
+&#160;&#160;<a class="el" href="group__video.html#gga98236ba30ab70fd25e54bf8c5c70dd8fa334c4a4c42fdb79d7ebc3e73b517e6f8">cen::blend_mode::none</a> = SDL_BLENDMODE_NONE, 
 <br />
-&#160;&#160;<a class="el" href="group__graphics.html#gga98236ba30ab70fd25e54bf8c5c70dd8fac195f144a8d768f2bb87f155ed2117a4">cen::blend_mode::blend</a> = SDL_BLENDMODE_BLEND, 
+&#160;&#160;<a class="el" href="group__video.html#gga98236ba30ab70fd25e54bf8c5c70dd8fac195f144a8d768f2bb87f155ed2117a4">cen::blend_mode::blend</a> = SDL_BLENDMODE_BLEND, 
 <br />
-&#160;&#160;<a class="el" href="group__graphics.html#gga98236ba30ab70fd25e54bf8c5c70dd8fa34ec78fcc91ffb1e54cd85e4a0924332">cen::blend_mode::add</a> = SDL_BLENDMODE_ADD, 
+&#160;&#160;<a class="el" href="group__video.html#gga98236ba30ab70fd25e54bf8c5c70dd8fa34ec78fcc91ffb1e54cd85e4a0924332">cen::blend_mode::add</a> = SDL_BLENDMODE_ADD, 
 <br />
-&#160;&#160;<a class="el" href="group__graphics.html#gga98236ba30ab70fd25e54bf8c5c70dd8faad148a3ca8bd0ef3b48c52454c493ec5">cen::blend_mode::mod</a> = SDL_BLENDMODE_MOD, 
+&#160;&#160;<a class="el" href="group__video.html#gga98236ba30ab70fd25e54bf8c5c70dd8faad148a3ca8bd0ef3b48c52454c493ec5">cen::blend_mode::mod</a> = SDL_BLENDMODE_MOD, 
 <br />
-&#160;&#160;<a class="el" href="group__graphics.html#gga98236ba30ab70fd25e54bf8c5c70dd8fafedb2d84cafe20862cb4399751a8a7e3">cen::blend_mode::invalid</a> = SDL_BLENDMODE_INVALID
+&#160;&#160;<a class="el" href="group__video.html#gga98236ba30ab70fd25e54bf8c5c70dd8fa353942263d1bedfbe06b7bfa78226253">cen::blend_mode::mul</a> = SDL_BLENDMODE_MUL, 
+<br />
+&#160;&#160;<a class="el" href="group__video.html#gga98236ba30ab70fd25e54bf8c5c70dd8fafedb2d84cafe20862cb4399751a8a7e3">cen::blend_mode::invalid</a> = SDL_BLENDMODE_INVALID
 <br />
  }</td></tr>
-<tr class="memdesc:ga98236ba30ab70fd25e54bf8c5c70dd8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mirrors the <code>SDL_BlendMode</code> enum.  <a href="group__graphics.html#ga98236ba30ab70fd25e54bf8c5c70dd8f">More...</a><br /></td></tr>
+<tr class="memdesc:ga98236ba30ab70fd25e54bf8c5c70dd8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides values that represent various rendering blend modes.  <a href="group__video.html#ga98236ba30ab70fd25e54bf8c5c70dd8f">More...</a><br /></td></tr>
 <tr class="separator:ga98236ba30ab70fd25e54bf8c5c70dd8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:ga29888ca1211f2918a80169111d6809f5"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#ga29888ca1211f2918a80169111d6809f5">cen::operator==</a> (const blend_mode lhs, const SDL_BlendMode rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga29888ca1211f2918a80169111d6809f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two blend mode values are the same;.  <a href="group__graphics.html#ga29888ca1211f2918a80169111d6809f5">More...</a><br /></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Blend mode comparison operators</h2></td></tr>
+<tr class="memitem:ga29888ca1211f2918a80169111d6809f5"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga29888ca1211f2918a80169111d6809f5">cen::operator==</a> (const blend_mode lhs, const SDL_BlendMode rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga29888ca1211f2918a80169111d6809f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two blend mode values are the same;.  <a href="group__video.html#ga29888ca1211f2918a80169111d6809f5">More...</a><br /></td></tr>
 <tr class="separator:ga29888ca1211f2918a80169111d6809f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaec8a6c41ac2ff67f0ad0fa85ea6d1196"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#gaec8a6c41ac2ff67f0ad0fa85ea6d1196">cen::operator==</a> (const SDL_BlendMode lhs, const blend_mode rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:gaec8a6c41ac2ff67f0ad0fa85ea6d1196"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two blend mode values are the same;.  <a href="group__graphics.html#gaec8a6c41ac2ff67f0ad0fa85ea6d1196">More...</a><br /></td></tr>
+<tr class="memitem:gaec8a6c41ac2ff67f0ad0fa85ea6d1196"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#gaec8a6c41ac2ff67f0ad0fa85ea6d1196">cen::operator==</a> (const SDL_BlendMode lhs, const blend_mode rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:gaec8a6c41ac2ff67f0ad0fa85ea6d1196"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two blend mode values are the same;.  <a href="group__video.html#gaec8a6c41ac2ff67f0ad0fa85ea6d1196">More...</a><br /></td></tr>
 <tr class="separator:gaec8a6c41ac2ff67f0ad0fa85ea6d1196"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6e23365396ad1b385a5d9a0a383e4c3c"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#ga6e23365396ad1b385a5d9a0a383e4c3c">cen::operator!=</a> (const blend_mode lhs, const SDL_BlendMode rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga6e23365396ad1b385a5d9a0a383e4c3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two blend mode values aren't the same;.  <a href="group__graphics.html#ga6e23365396ad1b385a5d9a0a383e4c3c">More...</a><br /></td></tr>
+<tr class="memitem:ga6e23365396ad1b385a5d9a0a383e4c3c"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga6e23365396ad1b385a5d9a0a383e4c3c">cen::operator!=</a> (const blend_mode lhs, const SDL_BlendMode rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga6e23365396ad1b385a5d9a0a383e4c3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two blend mode values aren't the same;.  <a href="group__video.html#ga6e23365396ad1b385a5d9a0a383e4c3c">More...</a><br /></td></tr>
 <tr class="separator:ga6e23365396ad1b385a5d9a0a383e4c3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga75ce222e46dabce8a51b9524d5cddd95"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#ga75ce222e46dabce8a51b9524d5cddd95">cen::operator!=</a> (const SDL_BlendMode lhs, const blend_mode rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga75ce222e46dabce8a51b9524d5cddd95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two blend mode values aren't the same;.  <a href="group__graphics.html#ga75ce222e46dabce8a51b9524d5cddd95">More...</a><br /></td></tr>
+<tr class="memitem:ga75ce222e46dabce8a51b9524d5cddd95"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga75ce222e46dabce8a51b9524d5cddd95">cen::operator!=</a> (const SDL_BlendMode lhs, const blend_mode rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga75ce222e46dabce8a51b9524d5cddd95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two blend mode values aren't the same;.  <a href="group__video.html#ga75ce222e46dabce8a51b9524d5cddd95">More...</a><br /></td></tr>
 <tr class="separator:ga75ce222e46dabce8a51b9524d5cddd95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -101,11 +101,11 @@ $(function() {
 <p>The templated base class of all Centurion events.  
  <a href="classcen_1_1common__event.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="event_8hpp_source.html">event.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="common__event_8hpp_source.html">common_event.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a41c18eb380cd8704232e52515f6e423e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1common__event.html#a41c18eb380cd8704232e52515f6e423e">common_event</a> (const <a class="el" href="group__event.html#gaa2429849e0f3a3f8dc5dabd278b110b2">event_type</a> <a class="el" href="classcen_1_1common__event.html#af4ab9edc735cef5e66b6d394e49fb585">type</a>) noexcept</td></tr>
+<tr class="memitem:a41c18eb380cd8704232e52515f6e423e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1common__event.html#a41c18eb380cd8704232e52515f6e423e">common_event</a> (const <a class="el" href="group__event.html#gaa96233ec6356fc786c810d6aaf5e939b">event_type</a> <a class="el" href="classcen_1_1common__event.html#af4ab9edc735cef5e66b6d394e49fb585">type</a>) noexcept</td></tr>
 <tr class="memdesc:a41c18eb380cd8704232e52515f6e423e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <code><a class="el" href="classcen_1_1common__event.html" title="The templated base class of all Centurion events.">common_event</a></code> and zero-initializes the internal event except for the timestamp and the supplied type.  <a href="classcen_1_1common__event.html#a41c18eb380cd8704232e52515f6e423e">More...</a><br /></td></tr>
 <tr class="separator:a41c18eb380cd8704232e52515f6e423e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af031fe515562adc2430697da1dbd0c76"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1common__event.html#af031fe515562adc2430697da1dbd0c76">common_event</a> (const T &amp;<a class="el" href="classcen_1_1event.html">event</a>)</td></tr>
@@ -114,16 +114,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5e1d0efe4bbe3a97a47cbf2fb164dc3c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1common__event.html#a5e1d0efe4bbe3a97a47cbf2fb164dc3c">common_event</a> (T &amp;&amp;<a class="el" href="classcen_1_1event.html">event</a>)</td></tr>
 <tr class="memdesc:a5e1d0efe4bbe3a97a47cbf2fb164dc3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classcen_1_1common__event.html" title="The templated base class of all Centurion events.">common_event</a> and moves the contents of the supplied event.  <a href="classcen_1_1common__event.html#a5e1d0efe4bbe3a97a47cbf2fb164dc3c">More...</a><br /></td></tr>
 <tr class="separator:a5e1d0efe4bbe3a97a47cbf2fb164dc3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c81096fa55e2fa2393a82afde369b58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1common__event.html#a5c81096fa55e2fa2393a82afde369b58">set_time</a> (const <a class="el" href="namespacecen.html#ad1dcf848a9ee33237a96cde6b5a1d466">u32</a> timestamp) noexcept</td></tr>
+<tr class="memitem:a5c81096fa55e2fa2393a82afde369b58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1common__event.html#a5c81096fa55e2fa2393a82afde369b58">set_time</a> (const <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a> timestamp) noexcept</td></tr>
 <tr class="memdesc:a5c81096fa55e2fa2393a82afde369b58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the timestamp that is associated with the creation of the event.  <a href="classcen_1_1common__event.html#a5c81096fa55e2fa2393a82afde369b58">More...</a><br /></td></tr>
 <tr class="separator:a5c81096fa55e2fa2393a82afde369b58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a498385974ede4a1af8a947aae2254ae1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1common__event.html#a498385974ede4a1af8a947aae2254ae1">set_type</a> (const <a class="el" href="group__event.html#gaa2429849e0f3a3f8dc5dabd278b110b2">event_type</a> <a class="el" href="classcen_1_1common__event.html#af4ab9edc735cef5e66b6d394e49fb585">type</a>) noexcept</td></tr>
+<tr class="memitem:a498385974ede4a1af8a947aae2254ae1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1common__event.html#a498385974ede4a1af8a947aae2254ae1">set_type</a> (const <a class="el" href="group__event.html#gaa96233ec6356fc786c810d6aaf5e939b">event_type</a> <a class="el" href="classcen_1_1common__event.html#af4ab9edc735cef5e66b6d394e49fb585">type</a>) noexcept</td></tr>
 <tr class="memdesc:a498385974ede4a1af8a947aae2254ae1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the event type value associated with the event.  <a href="classcen_1_1common__event.html#a498385974ede4a1af8a947aae2254ae1">More...</a><br /></td></tr>
 <tr class="separator:a498385974ede4a1af8a947aae2254ae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8164f2268f3b1904a30526bfbef68295"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1common__event.html#a8164f2268f3b1904a30526bfbef68295">time</a> () const noexcept -&gt; <a class="el" href="namespacecen.html#ad1dcf848a9ee33237a96cde6b5a1d466">u32</a></td></tr>
+<tr class="memitem:a8164f2268f3b1904a30526bfbef68295"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1common__event.html#a8164f2268f3b1904a30526bfbef68295">time</a> () const noexcept -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a></td></tr>
 <tr class="memdesc:a8164f2268f3b1904a30526bfbef68295"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the timestamp associated with the creation of the event.  <a href="classcen_1_1common__event.html#a8164f2268f3b1904a30526bfbef68295">More...</a><br /></td></tr>
 <tr class="separator:a8164f2268f3b1904a30526bfbef68295"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4ab9edc735cef5e66b6d394e49fb585"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1common__event.html#af4ab9edc735cef5e66b6d394e49fb585">type</a> () const noexcept -&gt; <a class="el" href="group__event.html#gaa2429849e0f3a3f8dc5dabd278b110b2">event_type</a></td></tr>
+<tr class="memitem:af4ab9edc735cef5e66b6d394e49fb585"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1common__event.html#af4ab9edc735cef5e66b6d394e49fb585">type</a> () const noexcept -&gt; <a class="el" href="group__event.html#gaa96233ec6356fc786c810d6aaf5e939b">event_type</a></td></tr>
 <tr class="memdesc:af4ab9edc735cef5e66b6d394e49fb585"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the event type value associated with the event.  <a href="classcen_1_1common__event.html#af4ab9edc735cef5e66b6d394e49fb585">More...</a><br /></td></tr>
 <tr class="separator:af4ab9edc735cef5e66b6d394e49fb585"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80737e77b9c06c9cc14abab408d16c0f"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1common__event.html#a80737e77b9c06c9cc14abab408d16c0f">get</a> () const noexcept -&gt; const T &amp;</td></tr>
@@ -163,7 +163,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classcen_1_1common__event.html">cen::common_event</a>&lt; T &gt;::<a class="el" href="classcen_1_1common__event.html">common_event</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__event.html#gaa2429849e0f3a3f8dc5dabd278b110b2">event_type</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__event.html#gaa96233ec6356fc786c810d6aaf5e939b">event_type</a>&#160;</td>
           <td class="paramname"><em>type</em></td><td>)</td>
           <td></td>
         </tr>
@@ -307,7 +307,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classcen_1_1common__event.html">cen::common_event</a>&lt; T &gt;::set_time </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#ad1dcf848a9ee33237a96cde6b5a1d466">u32</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>&#160;</td>
           <td class="paramname"><em>timestamp</em></td><td>)</td>
           <td></td>
         </tr>
@@ -344,7 +344,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classcen_1_1common__event.html">cen::common_event</a>&lt; T &gt;::set_type </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__event.html#gaa2429849e0f3a3f8dc5dabd278b110b2">event_type</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__event.html#gaa96233ec6356fc786c810d6aaf5e939b">event_type</a>&#160;</td>
           <td class="paramname"><em>type</em></td><td>)</td>
           <td></td>
         </tr>
@@ -382,7 +382,7 @@ template&lt;typename T &gt; </div>
           <td class="memname">auto <a class="el" href="classcen_1_1common__event.html">cen::common_event</a>&lt; T &gt;::time </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="namespacecen.html#ad1dcf848a9ee33237a96cde6b5a1d466">u32</a>
+          <td> const -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>
   </td>
         </tr>
       </table>
@@ -414,7 +414,7 @@ template&lt;typename T &gt; </div>
           <td class="memname">auto <a class="el" href="classcen_1_1common__event.html">cen::common_event</a>&lt; T &gt;::type </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__event.html#gaa2429849e0f3a3f8dc5dabd278b110b2">event_type</a>
+          <td> const -&gt; <a class="el" href="group__event.html#gaa96233ec6356fc786c810d6aaf5e939b">event_type</a>
   </td>
         </tr>
       </table>
@@ -427,7 +427,6 @@ template&lt;typename T &gt; </div>
 
 <p>Returns the event type value associated with the event. </p>
 <dl class="section return"><dt>Returns</dt><dd>the event type value associated with the event.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd>EventType</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
@@ -458,7 +457,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/centurion/<a class="el" href="event_8hpp_source.html">event.hpp</a></li>
+<li>src/centurion/events/<a class="el" href="common__event_8hpp_source.html">common_event.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/key_code.hpp File Reference</title>
+        <title>Centurion: src/centurion/input/key_code.hpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_7cbddb6c5dd5dfebc4ed1b9c679e311f.html">input</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -102,9 +102,9 @@ $(function() {
 <code>#include &lt;cassert&gt;</code><br />
 <code>#include &lt;ostream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
-<code>#include &quot;<a class="el" href="centurion__cfg_8hpp_source.html">centurion_cfg.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="czstring_8hpp_source.html">czstring.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="not__null_8hpp_source.html">not_null.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="czstring_8hpp_source.html">../core/czstring.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="macros_8hpp_source.html">../core/macros.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="not__null_8hpp_source.html">../core/not_null.hpp</a>&quot;</code><br />
 </div>
 <p><a href="key__code_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -131,12 +131,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ga3a337dc6b4940222b199c44c7561144f"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga3a337dc6b4940222b199c44c7561144f">cen::operator&lt;&lt;</a> (std::ostream &amp;stream, const key_code &amp;keyCode) -&gt; std::ostream &amp;</td></tr>
 <tr class="memdesc:ga3a337dc6b4940222b199c44c7561144f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a key code using a stream.  <a href="group__input.html#ga3a337dc6b4940222b199c44c7561144f">More...</a><br /></td></tr>
 <tr class="separator:ga3a337dc6b4940222b199c44c7561144f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad74096bd599a084409b9f46e6b84d8e5"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#gad74096bd599a084409b9f46e6b84d8e5">cen::operator==</a> (const key_code &amp;lhs, const key_code &amp;rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:gad74096bd599a084409b9f46e6b84d8e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two key codes are the same.  <a href="group__input.html#gad74096bd599a084409b9f46e6b84d8e5">More...</a><br /></td></tr>
-<tr class="separator:gad74096bd599a084409b9f46e6b84d8e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga690136a297467a66a8e5ffd62cd45872"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga690136a297467a66a8e5ffd62cd45872">cen::operator!=</a> (const key_code &amp;lhs, const key_code &amp;rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga690136a297467a66a8e5ffd62cd45872"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two key codes aren't the same.  <a href="group__input.html#ga690136a297467a66a8e5ffd62cd45872">More...</a><br /></td></tr>
-<tr class="separator:ga690136a297467a66a8e5ffd62cd45872"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -341,6 +335,15 @@ Variables</h2></td></tr>
 <tr class="memitem:ae981533c9089c2dc25611dbbe95740d5"><td class="memItemLeft" align="right" valign="top">constexpr key_code&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1keycodes.html#ae981533c9089c2dc25611dbbe95740d5">cen::keycodes::right_gui</a> {SDLK_RGUI}</td></tr>
 <tr class="memdesc:ae981533c9089c2dc25611dbbe95740d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the right "GUI" key.  <a href="namespacecen_1_1keycodes.html#ae981533c9089c2dc25611dbbe95740d5">More...</a><br /></td></tr>
 <tr class="separator:ae981533c9089c2dc25611dbbe95740d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Key code comparison operators</h2></td></tr>
+<tr class="memitem:gad74096bd599a084409b9f46e6b84d8e5"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#gad74096bd599a084409b9f46e6b84d8e5">cen::operator==</a> (const key_code &amp;lhs, const key_code &amp;rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:gad74096bd599a084409b9f46e6b84d8e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two key codes are the same.  <a href="group__input.html#gad74096bd599a084409b9f46e6b84d8e5">More...</a><br /></td></tr>
+<tr class="separator:gad74096bd599a084409b9f46e6b84d8e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga690136a297467a66a8e5ffd62cd45872"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga690136a297467a66a8e5ffd62cd45872">cen::operator!=</a> (const key_code &amp;lhs, const key_code &amp;rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga690136a297467a66a8e5ffd62cd45872"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two key codes aren't the same.  <a href="group__input.html#ga690136a297467a66a8e5ffd62cd45872">More...</a><br /></td></tr>
+<tr class="separator:ga690136a297467a66a8e5ffd62cd45872"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

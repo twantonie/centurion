@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/key_modifier.hpp File Reference</title>
+        <title>Centurion: src/centurion/input/key_modifier.hpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_7cbddb6c5dd5dfebc4ed1b9c679e311f.html">input</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -97,7 +97,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;SDL.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="centurion__cfg_8hpp_source.html">centurion_cfg.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="integers_8hpp_source.html">../core/integers.hpp</a>&quot;</code><br />
 </div>
 <p><a href="key__modifier_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -109,34 +109,34 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:gab42688bc97e687065efcf871350628f6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#gab42688bc97e687065efcf871350628f6">cen::key_modifier</a> { <br />
-&#160;&#160;<a class="el" href="group__input.html#ggab42688bc97e687065efcf871350628f6a334c4a4c42fdb79d7ebc3e73b517e6f8">cen::key_modifier::none</a> = KMOD_NONE, 
+<tr class="memitem:ga2101a411ac6025302800a78f9c54fce4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">cen::key_modifier</a> : u16 { <br />
+&#160;&#160;<a class="el" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4a334c4a4c42fdb79d7ebc3e73b517e6f8">cen::key_modifier::none</a> = KMOD_NONE, 
 <br />
-&#160;&#160;<a class="el" href="group__input.html#ggab42688bc97e687065efcf871350628f6a50628fab62b5a54a5f0a7e7c7b4f157b">cen::key_modifier::left_shift</a> = KMOD_LSHIFT, 
+&#160;&#160;<a class="el" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4a50628fab62b5a54a5f0a7e7c7b4f157b">cen::key_modifier::left_shift</a> = KMOD_LSHIFT, 
 <br />
-&#160;&#160;<a class="el" href="group__input.html#ggab42688bc97e687065efcf871350628f6a4ee719aaa47e6583842088cf8e6ee8d0">cen::key_modifier::right_shift</a> = KMOD_RSHIFT, 
+&#160;&#160;<a class="el" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4a4ee719aaa47e6583842088cf8e6ee8d0">cen::key_modifier::right_shift</a> = KMOD_RSHIFT, 
 <br />
-&#160;&#160;<a class="el" href="group__input.html#ggab42688bc97e687065efcf871350628f6af2595c2df0b9abdfb40b99ea5768fe79">cen::key_modifier::left_ctrl</a> = KMOD_LCTRL, 
+&#160;&#160;<a class="el" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4af2595c2df0b9abdfb40b99ea5768fe79">cen::key_modifier::left_ctrl</a> = KMOD_LCTRL, 
 <br />
-&#160;&#160;<a class="el" href="group__input.html#ggab42688bc97e687065efcf871350628f6ad8ba68a18acc80520a732a66d87304f4">cen::key_modifier::right_ctrl</a> = KMOD_RCTRL, 
+&#160;&#160;<a class="el" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4ad8ba68a18acc80520a732a66d87304f4">cen::key_modifier::right_ctrl</a> = KMOD_RCTRL, 
 <br />
-&#160;&#160;<a class="el" href="group__input.html#ggab42688bc97e687065efcf871350628f6a217c34bd52ebbf6dbb13f7f6d7e7f53f">cen::key_modifier::left_alt</a> = KMOD_LALT, 
+&#160;&#160;<a class="el" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4a217c34bd52ebbf6dbb13f7f6d7e7f53f">cen::key_modifier::left_alt</a> = KMOD_LALT, 
 <br />
-&#160;&#160;<a class="el" href="group__input.html#ggab42688bc97e687065efcf871350628f6ac868ec4aff5290f22227b0da117cbcc1">cen::key_modifier::right_alt</a> = KMOD_RALT, 
+&#160;&#160;<a class="el" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4ac868ec4aff5290f22227b0da117cbcc1">cen::key_modifier::right_alt</a> = KMOD_RALT, 
 <br />
-&#160;&#160;<a class="el" href="group__input.html#ggab42688bc97e687065efcf871350628f6a96f3b2ed5b03176b305763c422906860">cen::key_modifier::left_gui</a> = KMOD_LGUI, 
+&#160;&#160;<a class="el" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4a96f3b2ed5b03176b305763c422906860">cen::key_modifier::left_gui</a> = KMOD_LGUI, 
 <br />
-&#160;&#160;<a class="el" href="group__input.html#ggab42688bc97e687065efcf871350628f6acafb1d32288f2cff5693f1f9cf486c58">cen::key_modifier::right_gui</a> = KMOD_RGUI, 
+&#160;&#160;<a class="el" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4acafb1d32288f2cff5693f1f9cf486c58">cen::key_modifier::right_gui</a> = KMOD_RGUI, 
 <br />
-&#160;&#160;<a class="el" href="group__input.html#ggab42688bc97e687065efcf871350628f6a0fc3cfbc27e91ea60a787de13dae3e3c">cen::key_modifier::num</a> = KMOD_NUM, 
+&#160;&#160;<a class="el" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4a0fc3cfbc27e91ea60a787de13dae3e3c">cen::key_modifier::num</a> = KMOD_NUM, 
 <br />
-&#160;&#160;<a class="el" href="group__input.html#ggab42688bc97e687065efcf871350628f6a69cd8955be4678b934e2c90a68c9df7b">cen::key_modifier::caps</a> = KMOD_CAPS, 
+&#160;&#160;<a class="el" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4a69cd8955be4678b934e2c90a68c9df7b">cen::key_modifier::caps</a> = KMOD_CAPS, 
 <br />
-&#160;&#160;<a class="el" href="group__input.html#ggab42688bc97e687065efcf871350628f6a15d61712450a686a7f365adf4fef581f">cen::key_modifier::mode</a> = KMOD_MODE
+&#160;&#160;<a class="el" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4a15d61712450a686a7f365adf4fef581f">cen::key_modifier::mode</a> = KMOD_MODE
 <br />
  }</td></tr>
-<tr class="memdesc:gab42688bc97e687065efcf871350628f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mirrors the values of the <code>SDL_Keymod</code> enum.  <a href="group__input.html#gab42688bc97e687065efcf871350628f6">More...</a><br /></td></tr>
-<tr class="separator:gab42688bc97e687065efcf871350628f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:ga2101a411ac6025302800a78f9c54fce4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides values that represent different key modifiers.  <a href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">More...</a><br /></td></tr>
+<tr class="separator:ga2101a411ac6025302800a78f9c54fce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/scan_code.hpp File Reference</title>
+        <title>Centurion: src/centurion/input/scan_code.hpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_7cbddb6c5dd5dfebc4ed1b9c679e311f.html">input</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -102,9 +102,9 @@ $(function() {
 <code>#include &lt;cassert&gt;</code><br />
 <code>#include &lt;ostream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
-<code>#include &quot;<a class="el" href="centurion__cfg_8hpp_source.html">centurion_cfg.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="czstring_8hpp_source.html">czstring.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="not__null_8hpp_source.html">not_null.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="czstring_8hpp_source.html">../core/czstring.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="macros_8hpp_source.html">../core/macros.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="not__null_8hpp_source.html">../core/not_null.hpp</a>&quot;</code><br />
 </div>
 <p><a href="scan__code_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -131,12 +131,6 @@ Functions</h2></td></tr>
 <tr class="memitem:gaf834015847774839398baf0e4a8c99a7"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#gaf834015847774839398baf0e4a8c99a7">cen::operator&lt;&lt;</a> (std::ostream &amp;stream, const scan_code &amp;scanCode) -&gt; std::ostream &amp;</td></tr>
 <tr class="memdesc:gaf834015847774839398baf0e4a8c99a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a scan code using a stream.  <a href="group__input.html#gaf834015847774839398baf0e4a8c99a7">More...</a><br /></td></tr>
 <tr class="separator:gaf834015847774839398baf0e4a8c99a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4598e86b7cc180bf03fb6a9405316651"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga4598e86b7cc180bf03fb6a9405316651">cen::operator==</a> (const scan_code &amp;lhs, const scan_code &amp;rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga4598e86b7cc180bf03fb6a9405316651"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two scan codes are the same.  <a href="group__input.html#ga4598e86b7cc180bf03fb6a9405316651">More...</a><br /></td></tr>
-<tr class="separator:ga4598e86b7cc180bf03fb6a9405316651"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga932e4c706fd7be4894f0ef109099c9fd"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga932e4c706fd7be4894f0ef109099c9fd">cen::operator!=</a> (const scan_code &amp;lhs, const scan_code &amp;rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga932e4c706fd7be4894f0ef109099c9fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two scan codes aren't the same.  <a href="group__input.html#ga932e4c706fd7be4894f0ef109099c9fd">More...</a><br /></td></tr>
-<tr class="separator:ga932e4c706fd7be4894f0ef109099c9fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -341,6 +335,15 @@ Variables</h2></td></tr>
 <tr class="memitem:afe45efac0a1f488a9684e9e428a7bcab"><td class="memItemLeft" align="right" valign="top">constexpr scan_code&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1scancodes.html#afe45efac0a1f488a9684e9e428a7bcab">cen::scancodes::right_gui</a> {SDL_SCANCODE_RGUI}</td></tr>
 <tr class="memdesc:afe45efac0a1f488a9684e9e428a7bcab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the right "GUI" key.  <a href="namespacecen_1_1scancodes.html#afe45efac0a1f488a9684e9e428a7bcab">More...</a><br /></td></tr>
 <tr class="separator:afe45efac0a1f488a9684e9e428a7bcab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Scan code comparison operators</h2></td></tr>
+<tr class="memitem:ga4598e86b7cc180bf03fb6a9405316651"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga4598e86b7cc180bf03fb6a9405316651">cen::operator==</a> (const scan_code &amp;lhs, const scan_code &amp;rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga4598e86b7cc180bf03fb6a9405316651"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two scan codes are the same.  <a href="group__input.html#ga4598e86b7cc180bf03fb6a9405316651">More...</a><br /></td></tr>
+<tr class="separator:ga4598e86b7cc180bf03fb6a9405316651"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga932e4c706fd7be4894f0ef109099c9fd"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga932e4c706fd7be4894f0ef109099c9fd">cen::operator!=</a> (const scan_code &amp;lhs, const scan_code &amp;rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga932e4c706fd7be4894f0ef109099c9fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two scan codes aren't the same.  <a href="group__input.html#ga932e4c706fd7be4894f0ef109099c9fd">More...</a><br /></td></tr>
+<tr class="separator:ga932e4c706fd7be4894f0ef109099c9fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

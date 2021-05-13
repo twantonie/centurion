@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/clipboard.hpp Source File</title>
+        <title>Centurion: src/centurion/system/clipboard.hpp Source File</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_c6d2c5988ce62fe45ec82cf89dcf887c.html">system</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -101,56 +101,50 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;cassert&gt;</span>  <span class="comment">// assert</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span>   <span class="comment">// string</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="centurion__cfg_8hpp.html">centurion_cfg.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="czstring_8hpp.html">czstring.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="not__null_8hpp.html">not_null.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="sdl__string_8hpp.html">sdl_string.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../core/czstring.hpp&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../core/not_null.hpp&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../core/result.hpp&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../core/sdl_string.hpp&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#ifdef CENTURION_USE_PRAGMA_ONCE</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif  // CENTURION_USE_PRAGMA_ONCE</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecen_1_1clipboard.html">cen::clipboard</a> {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="namespacecen_1_1clipboard.html#ae9981e5ba925b620ef4d4df63b6149de">   39</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1clipboard.html#ae9981e5ba925b620ef4d4df63b6149de">has_text</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordflow">return</span> SDL_HasClipboardText();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="namespacecen_1_1clipboard.html#a2f672f94adfa3bd1039cbbcba949b59e">   54</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1clipboard.html#a2f672f94adfa3bd1039cbbcba949b59e">get_text</a>() -&gt; std::string</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keyword">const</span> <a class="code" href="classcen_1_1sdl__string.html">sdl_string</a> text{SDL_GetClipboardText()};</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordflow">return</span> text.<a class="code" href="classcen_1_1sdl__string.html#a9bfb6d532fa925f7c814dccb093690c4">copy</a>();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="namespacecen_1_1clipboard.html#ab8dc560e9a8a2f26966c302262607dd4">   71</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1clipboard.html#ab8dc560e9a8a2f26966c302262607dd4">set_text</a>(<span class="keyword">const</span> <a class="code" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null&lt;czstring&gt;</a> text) noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  assert(text);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordflow">return</span> SDL_SetClipboardText(text) == 0;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="namespacecen_1_1clipboard.html#a0694765e1fb9e85163e7d6ee3cdd65ff">   86</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1clipboard.html#ab8dc560e9a8a2f26966c302262607dd4">set_text</a>(<span class="keyword">const</span> std::string&amp; text) noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="namespacecen_1_1clipboard.html#ab8dc560e9a8a2f26966c302262607dd4">set_text</a>(text.c_str());</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}  <span class="comment">// namespace cen::clipboard</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#endif  // CENTURION_CLIPBOARD_HEADER</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecen_1_1clipboard.html">cen::clipboard</a> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="namespacecen_1_1clipboard.html#ae9981e5ba925b620ef4d4df63b6149de">   34</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1clipboard.html#ae9981e5ba925b620ef4d4df63b6149de">has_text</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordflow">return</span> SDL_HasClipboardText();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="namespacecen_1_1clipboard.html#a2f672f94adfa3bd1039cbbcba949b59e">   48</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1clipboard.html#a2f672f94adfa3bd1039cbbcba949b59e">get_text</a>() -&gt; std::string</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">const</span> <a class="code" href="classcen_1_1sdl__string.html">sdl_string</a> text{SDL_GetClipboardText()};</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordflow">return</span> text.<a class="code" href="classcen_1_1sdl__string.html#a9bfb6d532fa925f7c814dccb093690c4">copy</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="namespacecen_1_1clipboard.html#ab8dc560e9a8a2f26966c302262607dd4">   65</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1clipboard.html#ab8dc560e9a8a2f26966c302262607dd4">set_text</a>(<span class="keyword">const</span> <a class="code" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null&lt;czstring&gt;</a> text) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <a class="code" href="group__core.html#gga5a2bed2933e3748ad2a77961417a102bae44e4612f62d2fb8f8738bab118a9850">assert</a>(text);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordflow">return</span> SDL_SetClipboardText(text) == 0;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="namespacecen_1_1clipboard.html#ad3b88fa68cbf70e49fffa92585596a5d">   80</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1clipboard.html#ab8dc560e9a8a2f26966c302262607dd4">set_text</a>(<span class="keyword">const</span> std::string&amp; text) noexcept -&gt; <a class="code" href="classcen_1_1result.html">result</a></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="namespacecen_1_1clipboard.html#ab8dc560e9a8a2f26966c302262607dd4">set_text</a>(text.c_str());</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}  <span class="comment">// namespace cen::clipboard</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif  // CENTURION_CLIPBOARD_HEADER</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacecen_1_1clipboard_html"><div class="ttname"><a href="namespacecen_1_1clipboard.html">cen::clipboard</a></div><div class="ttdoc">Provides functions related to managing the clipboard.</div></div>
-<div class="ttc" id="aclasscen_1_1sdl__string_html"><div class="ttname"><a href="classcen_1_1sdl__string.html">cen::sdl_string</a></div><div class="ttdoc">Represents a string obtained from SDL, usually a char* that has to be freed using SDL_free.</div><div class="ttdef"><b>Definition:</b> sdl_string.hpp:30</div></div>
-<div class="ttc" id="anot__null_8hpp_html"><div class="ttname"><a href="not__null_8hpp.html">not_null.hpp</a></div></div>
-<div class="ttc" id="aclasscen_1_1sdl__string_html_a9bfb6d532fa925f7c814dccb093690c4"><div class="ttname"><a href="classcen_1_1sdl__string.html#a9bfb6d532fa925f7c814dccb093690c4">cen::sdl_string::copy</a></div><div class="ttdeci">auto copy() const -&gt; std::string</div><div class="ttdoc">Returns a copy of the internal string.</div><div class="ttdef"><b>Definition:</b> sdl_string.hpp:65</div></div>
-<div class="ttc" id="asdl__string_8hpp_html"><div class="ttname"><a href="sdl__string_8hpp.html">sdl_string.hpp</a></div></div>
-<div class="ttc" id="acenturion__cfg_8hpp_html"><div class="ttname"><a href="centurion__cfg_8hpp.html">centurion_cfg.hpp</a></div></div>
-<div class="ttc" id="aczstring_8hpp_html"><div class="ttname"><a href="czstring_8hpp.html">czstring.hpp</a></div></div>
-<div class="ttc" id="anamespacecen_1_1clipboard_html_ab8dc560e9a8a2f26966c302262607dd4"><div class="ttname"><a href="namespacecen_1_1clipboard.html#ab8dc560e9a8a2f26966c302262607dd4">cen::clipboard::set_text</a></div><div class="ttdeci">auto set_text(const not_null&lt; czstring &gt; text) noexcept -&gt; bool</div><div class="ttdoc">Sets the current clipboard text.</div><div class="ttdef"><b>Definition:</b> clipboard.hpp:71</div></div>
-<div class="ttc" id="anamespacecen_html_a9f195a3e65e79c88a96dd7b767dc0657"><div class="ttname"><a href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">cen::not_null</a></div><div class="ttdeci">T not_null</div><div class="ttdoc">Tag used to indicate that a pointer cannot be null.</div><div class="ttdef"><b>Definition:</b> not_null.hpp:26</div></div>
-<div class="ttc" id="anamespacecen_1_1clipboard_html_a2f672f94adfa3bd1039cbbcba949b59e"><div class="ttname"><a href="namespacecen_1_1clipboard.html#a2f672f94adfa3bd1039cbbcba949b59e">cen::clipboard::get_text</a></div><div class="ttdeci">auto get_text() -&gt; std::string</div><div class="ttdoc">Returns the current text in the clipboard.</div><div class="ttdef"><b>Definition:</b> clipboard.hpp:54</div></div>
-<div class="ttc" id="anamespacecen_1_1clipboard_html_ae9981e5ba925b620ef4d4df63b6149de"><div class="ttname"><a href="namespacecen_1_1clipboard.html#ae9981e5ba925b620ef4d4df63b6149de">cen::clipboard::has_text</a></div><div class="ttdeci">auto has_text() noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not there is a clipboard exists and that it contains non-empty text.</div><div class="ttdef"><b>Definition:</b> clipboard.hpp:39</div></div>
+<div class="ttc" id="agroup__core_html_ga9f195a3e65e79c88a96dd7b767dc0657"><div class="ttname"><a href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">cen::not_null</a></div><div class="ttdeci">T not_null</div><div class="ttdoc">Tag used to indicate that a pointer cannot be null.</div><div class="ttdef"><b>Definition:</b> not_null.hpp:20</div></div>
+<div class="ttc" id="aclasscen_1_1result_html"><div class="ttname"><a href="classcen_1_1result.html">cen::result</a></div><div class="ttdoc">A simple indicator for the result of different operations.</div><div class="ttdef"><b>Definition:</b> result.hpp:49</div></div>
+<div class="ttc" id="aclasscen_1_1sdl__string_html"><div class="ttname"><a href="classcen_1_1sdl__string.html">cen::sdl_string</a></div><div class="ttdoc">Represents a string obtained from SDL, usually a char* that has to be freed using SDL_free.</div><div class="ttdef"><b>Definition:</b> sdl_string.hpp:26</div></div>
+<div class="ttc" id="aclasscen_1_1sdl__string_html_a9bfb6d532fa925f7c814dccb093690c4"><div class="ttname"><a href="classcen_1_1sdl__string.html#a9bfb6d532fa925f7c814dccb093690c4">cen::sdl_string::copy</a></div><div class="ttdeci">auto copy() const -&gt; std::string</div><div class="ttdoc">Returns a copy of the internal string.</div><div class="ttdef"><b>Definition:</b> sdl_string.hpp:61</div></div>
+<div class="ttc" id="anamespacecen_1_1clipboard_html_ab8dc560e9a8a2f26966c302262607dd4"><div class="ttname"><a href="namespacecen_1_1clipboard.html#ab8dc560e9a8a2f26966c302262607dd4">cen::clipboard::set_text</a></div><div class="ttdeci">auto set_text(const not_null&lt; czstring &gt; text) noexcept -&gt; bool</div><div class="ttdoc">Sets the current clipboard text.</div><div class="ttdef"><b>Definition:</b> clipboard.hpp:65</div></div>
+<div class="ttc" id="anamespacecen_1_1clipboard_html_a2f672f94adfa3bd1039cbbcba949b59e"><div class="ttname"><a href="namespacecen_1_1clipboard.html#a2f672f94adfa3bd1039cbbcba949b59e">cen::clipboard::get_text</a></div><div class="ttdeci">auto get_text() -&gt; std::string</div><div class="ttdoc">Returns the current text in the clipboard.</div><div class="ttdef"><b>Definition:</b> clipboard.hpp:48</div></div>
+<div class="ttc" id="anamespacecen_1_1clipboard_html_ae9981e5ba925b620ef4d4df63b6149de"><div class="ttname"><a href="namespacecen_1_1clipboard.html#ae9981e5ba925b620ef4d4df63b6149de">cen::clipboard::has_text</a></div><div class="ttdeci">auto has_text() noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not there is a clipboard exists and that it contains non-empty text.</div><div class="ttdef"><b>Definition:</b> clipboard.hpp:34</div></div>
+<div class="ttc" id="agroup__core_html_gga5a2bed2933e3748ad2a77961417a102bae44e4612f62d2fb8f8738bab118a9850"><div class="ttname"><a href="group__core.html#gga5a2bed2933e3748ad2a77961417a102bae44e4612f62d2fb8f8738bab118a9850">cen::log_category::assert</a></div><div class="ttdeci">@ assert</div></div>
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
 </div>

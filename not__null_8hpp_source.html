@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/not_null.hpp Source File</title>
+        <title>Centurion: src/centurion/core/not_null.hpp Source File</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_033c555e8ea57d729336171de4fce59a.html">core</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -96,28 +96,20 @@ $(function() {
 <a href="not__null_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CENTURION_NOT_NULL_HEADER</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CENTURION_NOT_NULL_HEADER</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;SDL.h&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="sfinae_8hpp.html">sfinae.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;type_traits&gt;</span>  <span class="comment">// enable_if_t, is_pointer_v</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecen.html">cen</a> {</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="centurion__cfg_8hpp.html">centurion_cfg.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifdef CENTURION_USE_PRAGMA_ONCE</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#endif  // CENTURION_USE_PRAGMA_ONCE</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecen.html">cen</a> {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> = std::enable_if_t&lt;std::is_po<span class="keywordtype">int</span>er_v&lt;T&gt;&gt;&gt;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">   26</a></span>&#160;<span class="keyword">using</span> <a class="code" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null</a> = T;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}  <span class="comment">// namespace cen</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif  // CENTURION_NOT_NULL_HEADER</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, enable_if_po<span class="keywordtype">int</span>er_v&lt;T&gt; = 0&gt;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">   20</a></span>&#160;<span class="keyword">using</span> <a class="code" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a> = T;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}  <span class="comment">// namespace cen</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif  // CENTURION_NOT_NULL_HEADER</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="anamespacecen_html"><div class="ttname"><a href="namespacecen.html">cen</a></div><div class="ttdoc">The top-level namespace that all components of the library reside in.</div><div class="ttdef"><b>Definition:</b> area.hpp:16</div></div>
-<div class="ttc" id="acenturion__cfg_8hpp_html"><div class="ttname"><a href="centurion__cfg_8hpp.html">centurion_cfg.hpp</a></div></div>
-<div class="ttc" id="anamespacecen_html_a9f195a3e65e79c88a96dd7b767dc0657"><div class="ttname"><a href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">cen::not_null</a></div><div class="ttdeci">T not_null</div><div class="ttdoc">Tag used to indicate that a pointer cannot be null.</div><div class="ttdef"><b>Definition:</b> not_null.hpp:26</div></div>
+<div class="ttc" id="agroup__core_html_ga9f195a3e65e79c88a96dd7b767dc0657"><div class="ttname"><a href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">cen::not_null</a></div><div class="ttdeci">T not_null</div><div class="ttdoc">Tag used to indicate that a pointer cannot be null.</div><div class="ttdef"><b>Definition:</b> not_null.hpp:20</div></div>
+<div class="ttc" id="anamespacecen_html"><div class="ttname"><a href="namespacecen.html">cen</a></div><div class="ttdoc">The top-level namespace that all components of the library reside in.</div><div class="ttdef"><b>Definition:</b> channels.hpp:12</div></div>
+<div class="ttc" id="asfinae_8hpp_html"><div class="ttname"><a href="sfinae_8hpp.html">sfinae.hpp</a></div></div>
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
 </div>

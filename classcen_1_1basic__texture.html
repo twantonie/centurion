@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -91,64 +91,74 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classcen_1_1basic__texture-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">cen::basic_texture Class Reference<div class="ingroups"><a class="el" href="group__graphics.html">Graphics</a></div></div>  </div>
+<div class="title">cen::basic_texture Class Reference<div class="ingroups"><a class="el" href="group__video.html">Video</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Represents an hardware-accelerated image.  
+<p>Represents an hardware-accelerated image, intended to be rendered using the <code><a class="el" href="classcen_1_1basic__renderer.html" title="Provides 2D-rendering that is potentially hardware-accelerated.">basic_renderer</a></code> class.  
  <a href="classcen_1_1basic__texture.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="texture_8hpp_source.html">texture.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a5d541fbcdb0fe0b98c95cf438e2eaa9c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#a5d541fbcdb0fe0b98c95cf438e2eaa9c">basic_texture</a> (SDL_Texture *src) noexcept(!detail::is_owning&lt; B &gt;())</td></tr>
-<tr class="memdesc:a5d541fbcdb0fe0b98c95cf438e2eaa9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an texture from a pre-existing SDL texture.  <a href="classcen_1_1basic__texture.html#a5d541fbcdb0fe0b98c95cf438e2eaa9c">More...</a><br /></td></tr>
-<tr class="separator:a5d541fbcdb0fe0b98c95cf438e2eaa9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5767ddeb97454f464ddaf0148a81d149"><td class="memTemplParams" colspan="2">template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </td></tr>
-<tr class="memitem:a5767ddeb97454f464ddaf0148a81d149"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#a5767ddeb97454f464ddaf0148a81d149">basic_texture</a> (<a class="el" href="group__graphics.html#ga16cde7704049080f7b56b91e38b3aadd">texture</a> &amp;<a class="el" href="namespacecen.html#a922c9ffa0c4b1b0dcaf50b7c6033a809">owner</a>) noexcept</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Construction</h2></td></tr>
+<tr class="memitem:a814ace84dc8b5d6b5258b81be9922958"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#a814ace84dc8b5d6b5258b81be9922958">basic_texture</a> (<a class="el" href="group__core.html#ga00614d944c81543b03c7f2cb202fdc50">maybe_owner</a>&lt; SDL_Texture * &gt; source) noexcept(!detail::is_owning&lt; T &gt;())</td></tr>
+<tr class="memdesc:a814ace84dc8b5d6b5258b81be9922958"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an texture from a pre-existing SDL texture.  <a href="classcen_1_1basic__texture.html#a814ace84dc8b5d6b5258b81be9922958">More...</a><br /></td></tr>
+<tr class="separator:a814ace84dc8b5d6b5258b81be9922958"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5767ddeb97454f464ddaf0148a81d149"><td class="memTemplParams" colspan="2">template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a5767ddeb97454f464ddaf0148a81d149"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#a5767ddeb97454f464ddaf0148a81d149">basic_texture</a> (<a class="el" href="group__video.html#gab199243ff6286f54d79df8a207b07678">texture</a> &amp;<a class="el" href="group__core.html#ga922c9ffa0c4b1b0dcaf50b7c6033a809">owner</a>) noexcept</td></tr>
 <tr class="memdesc:a5767ddeb97454f464ddaf0148a81d149"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a handle to texture instance.  <a href="classcen_1_1basic__texture.html#a5767ddeb97454f464ddaf0148a81d149">More...</a><br /></td></tr>
 <tr class="separator:a5767ddeb97454f464ddaf0148a81d149"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa69f3c78e47f8d532ea689a52f5799ae"><td class="memTemplParams" colspan="2">template&lt;typename Renderer , typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </td></tr>
-<tr class="memitem:aa69f3c78e47f8d532ea689a52f5799ae"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#aa69f3c78e47f8d532ea689a52f5799ae">basic_texture</a> (const Renderer &amp;<a class="el" href="group__graphics.html#gad2d8e020a073e6f7e05af85abbbe0476">renderer</a>, const <a class="el" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; path)</td></tr>
+<tr class="memitem:aa69f3c78e47f8d532ea689a52f5799ae"><td class="memTemplParams" colspan="2">template&lt;typename Renderer , typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </td></tr>
+<tr class="memitem:aa69f3c78e47f8d532ea689a52f5799ae"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#aa69f3c78e47f8d532ea689a52f5799ae">basic_texture</a> (const Renderer &amp;<a class="el" href="group__video.html#gad2d8e020a073e6f7e05af85abbbe0476">renderer</a>, const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; path)</td></tr>
 <tr class="memdesc:aa69f3c78e47f8d532ea689a52f5799ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a texture based the image at the specified path.  <a href="classcen_1_1basic__texture.html#aa69f3c78e47f8d532ea689a52f5799ae">More...</a><br /></td></tr>
 <tr class="separator:aa69f3c78e47f8d532ea689a52f5799ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28a26ad36a1f7765926660841185fa2d"><td class="memTemplParams" colspan="2">template&lt;typename Renderer , typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </td></tr>
-<tr class="memitem:a28a26ad36a1f7765926660841185fa2d"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#a28a26ad36a1f7765926660841185fa2d">basic_texture</a> (const Renderer &amp;<a class="el" href="group__graphics.html#gad2d8e020a073e6f7e05af85abbbe0476">renderer</a>, const std::string &amp;path)</td></tr>
+<tr class="memitem:a28a26ad36a1f7765926660841185fa2d"><td class="memTemplParams" colspan="2">template&lt;typename Renderer , typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a28a26ad36a1f7765926660841185fa2d"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#a28a26ad36a1f7765926660841185fa2d">basic_texture</a> (const Renderer &amp;<a class="el" href="group__video.html#gad2d8e020a073e6f7e05af85abbbe0476">renderer</a>, const std::string &amp;path)</td></tr>
 <tr class="memdesc:a28a26ad36a1f7765926660841185fa2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a texture based the image at the specified path.  <a href="classcen_1_1basic__texture.html#a28a26ad36a1f7765926660841185fa2d">More...</a><br /></td></tr>
 <tr class="separator:a28a26ad36a1f7765926660841185fa2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0eeeede32f3986c99803004906140c48"><td class="memTemplParams" colspan="2">template&lt;typename Renderer , typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </td></tr>
-<tr class="memitem:a0eeeede32f3986c99803004906140c48"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#a0eeeede32f3986c99803004906140c48">basic_texture</a> (const Renderer &amp;<a class="el" href="group__graphics.html#gad2d8e020a073e6f7e05af85abbbe0476">renderer</a>, const <a class="el" href="group__graphics.html#ga8b71461a73c8e75c41923ffa705d67b6">surface</a> &amp;<a class="el" href="group__graphics.html#ga8b71461a73c8e75c41923ffa705d67b6">surface</a>)</td></tr>
+<tr class="memitem:a0eeeede32f3986c99803004906140c48"><td class="memTemplParams" colspan="2">template&lt;typename Renderer , typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a0eeeede32f3986c99803004906140c48"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#a0eeeede32f3986c99803004906140c48">basic_texture</a> (const Renderer &amp;<a class="el" href="group__video.html#gad2d8e020a073e6f7e05af85abbbe0476">renderer</a>, const <a class="el" href="group__video.html#ga8b71461a73c8e75c41923ffa705d67b6">surface</a> &amp;<a class="el" href="group__video.html#ga8b71461a73c8e75c41923ffa705d67b6">surface</a>)</td></tr>
 <tr class="memdesc:a0eeeede32f3986c99803004906140c48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an texture that is a copy of the supplied surface.  <a href="classcen_1_1basic__texture.html#a0eeeede32f3986c99803004906140c48">More...</a><br /></td></tr>
 <tr class="separator:a0eeeede32f3986c99803004906140c48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3776cd08c522cfd51e88b1c59517ff66"><td class="memTemplParams" colspan="2">template&lt;typename Renderer , typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </td></tr>
-<tr class="memitem:a3776cd08c522cfd51e88b1c59517ff66"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#a3776cd08c522cfd51e88b1c59517ff66">basic_texture</a> (const Renderer &amp;<a class="el" href="group__graphics.html#gad2d8e020a073e6f7e05af85abbbe0476">renderer</a>, const <a class="el" href="group__graphics.html#ga2b2a5cc747e0869488d872b28d939dae">pixel_format</a> <a class="el" href="classcen_1_1basic__texture.html#a8685d63dca531c9bab0f340af25405d0">format</a>, const <a class="el" href="group__graphics.html#ga74927e90e8a09a52d7377e0687620654">texture_access</a> <a class="el" href="classcen_1_1basic__texture.html#af673bb4fd55b928c25094660a62737cc">access</a>, const <a class="el" href="group__geometry.html#gac34681d6cc8018e07938793d4c420369">iarea</a> &amp;<a class="el" href="classcen_1_1basic__texture.html#ab95cbdd1fef5f92af1de82108a37b005">size</a>)</td></tr>
-<tr class="memdesc:a3776cd08c522cfd51e88b1c59517ff66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an texture with the specified characteristics.  <a href="classcen_1_1basic__texture.html#a3776cd08c522cfd51e88b1c59517ff66">More...</a><br /></td></tr>
-<tr class="separator:a3776cd08c522cfd51e88b1c59517ff66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa0c8b8da1e2f03a9fa31c1a4c794d1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#afa0c8b8da1e2f03a9fa31c1a4c794d1a">set_pixel</a> (const <a class="el" href="group__geometry.html#ga482cd24468a5a74647742e69379566c7">ipoint</a> &amp;pixel, const <a class="el" href="classcen_1_1color.html">color</a> &amp;<a class="el" href="classcen_1_1color.html">color</a>)</td></tr>
-<tr class="memdesc:afa0c8b8da1e2f03a9fa31c1a4c794d1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the color of the pixel at the specified coordinate.  <a href="classcen_1_1basic__texture.html#afa0c8b8da1e2f03a9fa31c1a4c794d1a">More...</a><br /></td></tr>
-<tr class="separator:afa0c8b8da1e2f03a9fa31c1a4c794d1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a998a7f18bf3833ec154f279f4576816e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#a998a7f18bf3833ec154f279f4576816e">set_alpha</a> (const <a class="el" href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">u8</a> <a class="el" href="classcen_1_1basic__texture.html#a73bbcc97a89dcfd7ba90e86b501f8e10">alpha</a>) noexcept</td></tr>
+<tr class="memitem:a114fba48f7531cc2e3bdc74f9cd37ced"><td class="memTemplParams" colspan="2">template&lt;typename Renderer , typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a114fba48f7531cc2e3bdc74f9cd37ced"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#a114fba48f7531cc2e3bdc74f9cd37ced">basic_texture</a> (const Renderer &amp;<a class="el" href="group__video.html#gad2d8e020a073e6f7e05af85abbbe0476">renderer</a>, const <a class="el" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a> <a class="el" href="classcen_1_1basic__texture.html#a8685d63dca531c9bab0f340af25405d0">format</a>, const <a class="el" href="group__video.html#ga6952adc5f093252560469686271182aa">texture_access</a> <a class="el" href="classcen_1_1basic__texture.html#af673bb4fd55b928c25094660a62737cc">access</a>, const <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a> <a class="el" href="classcen_1_1basic__texture.html#ab95cbdd1fef5f92af1de82108a37b005">size</a>)</td></tr>
+<tr class="memdesc:a114fba48f7531cc2e3bdc74f9cd37ced"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an texture with the specified characteristics.  <a href="classcen_1_1basic__texture.html#a114fba48f7531cc2e3bdc74f9cd37ced">More...</a><br /></td></tr>
+<tr class="separator:a114fba48f7531cc2e3bdc74f9cd37ced"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74a3610b78cba551f1bf994d28d816b2"><td class="memTemplParams" colspan="2">template&lt;typename Renderer , typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a74a3610b78cba551f1bf994d28d816b2"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#a74a3610b78cba551f1bf994d28d816b2">streaming</a> (const Renderer &amp;<a class="el" href="group__video.html#gad2d8e020a073e6f7e05af85abbbe0476">renderer</a>, const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; path, const <a class="el" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a> <a class="el" href="classcen_1_1basic__texture.html#a8685d63dca531c9bab0f340af25405d0">format</a>) -&gt; <a class="el" href="classcen_1_1basic__texture.html">basic_texture</a></td></tr>
+<tr class="memdesc:a74a3610b78cba551f1bf994d28d816b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and returns a texture with streaming access.  <a href="classcen_1_1basic__texture.html#a74a3610b78cba551f1bf994d28d816b2">More...</a><br /></td></tr>
+<tr class="separator:a74a3610b78cba551f1bf994d28d816b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bb500ce0f2f20f36f68d8fe2f04055f"><td class="memTemplParams" colspan="2">template&lt;typename Renderer , typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a3bb500ce0f2f20f36f68d8fe2f04055f"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#a3bb500ce0f2f20f36f68d8fe2f04055f">streaming</a> (const Renderer &amp;<a class="el" href="group__video.html#gad2d8e020a073e6f7e05af85abbbe0476">renderer</a>, const std::string &amp;path, const <a class="el" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a> <a class="el" href="classcen_1_1basic__texture.html#a8685d63dca531c9bab0f340af25405d0">format</a>) -&gt; <a class="el" href="classcen_1_1basic__texture.html">basic_texture</a></td></tr>
+<tr class="separator:a3bb500ce0f2f20f36f68d8fe2f04055f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Setters</h2></td></tr>
+<tr class="memitem:ab61dd58ef33d3e09d55586d4cee19448"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#ab61dd58ef33d3e09d55586d4cee19448">set_pixel</a> (const <a class="el" href="group__math.html#ga482cd24468a5a74647742e69379566c7">ipoint</a> pixel, const <a class="el" href="classcen_1_1color.html">color</a> &amp;<a class="el" href="classcen_1_1color.html">color</a>)</td></tr>
+<tr class="memdesc:ab61dd58ef33d3e09d55586d4cee19448"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the color of the pixel at the specified coordinate.  <a href="classcen_1_1basic__texture.html#ab61dd58ef33d3e09d55586d4cee19448">More...</a><br /></td></tr>
+<tr class="separator:ab61dd58ef33d3e09d55586d4cee19448"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a998a7f18bf3833ec154f279f4576816e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#a998a7f18bf3833ec154f279f4576816e">set_alpha</a> (const <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a> <a class="el" href="classcen_1_1basic__texture.html#a73bbcc97a89dcfd7ba90e86b501f8e10">alpha</a>) noexcept</td></tr>
 <tr class="memdesc:a998a7f18bf3833ec154f279f4576816e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the alpha value of the texture.  <a href="classcen_1_1basic__texture.html#a998a7f18bf3833ec154f279f4576816e">More...</a><br /></td></tr>
 <tr class="separator:a998a7f18bf3833ec154f279f4576816e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2252e54a370a456b83f49584dc3e8ce3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#a2252e54a370a456b83f49584dc3e8ce3">set_blend_mode</a> (const <a class="el" href="group__graphics.html#ga98236ba30ab70fd25e54bf8c5c70dd8f">blend_mode</a> mode) noexcept</td></tr>
+<tr class="memitem:a2252e54a370a456b83f49584dc3e8ce3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#a2252e54a370a456b83f49584dc3e8ce3">set_blend_mode</a> (const <a class="el" href="group__video.html#ga98236ba30ab70fd25e54bf8c5c70dd8f">blend_mode</a> mode) noexcept</td></tr>
 <tr class="memdesc:a2252e54a370a456b83f49584dc3e8ce3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the blend mode that will be used by the texture.  <a href="classcen_1_1basic__texture.html#a2252e54a370a456b83f49584dc3e8ce3">More...</a><br /></td></tr>
 <tr class="separator:a2252e54a370a456b83f49584dc3e8ce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a6a7b2d4ced3bd25396cfa831bc573b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#a0a6a7b2d4ced3bd25396cfa831bc573b">set_color_mod</a> (const <a class="el" href="classcen_1_1color.html">color</a> &amp;<a class="el" href="classcen_1_1color.html">color</a>) noexcept</td></tr>
 <tr class="memdesc:a0a6a7b2d4ced3bd25396cfa831bc573b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the color modulation of the texture.  <a href="classcen_1_1basic__texture.html#a0a6a7b2d4ced3bd25396cfa831bc573b">More...</a><br /></td></tr>
 <tr class="separator:a0a6a7b2d4ced3bd25396cfa831bc573b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cdff34a723eb56272faee04f68cb0f5"><td class="memTemplParams" colspan="2">template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </td></tr>
-<tr class="memitem:a5cdff34a723eb56272faee04f68cb0f5"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#a5cdff34a723eb56272faee04f68cb0f5">release</a> () noexcept -&gt; <a class="el" href="namespacecen.html#a922c9ffa0c4b1b0dcaf50b7c6033a809">owner</a>&lt; SDL_Texture * &gt;</td></tr>
-<tr class="memdesc:a5cdff34a723eb56272faee04f68cb0f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases ownership of the associated SDL texture and returns a pointer to it.  <a href="classcen_1_1basic__texture.html#a5cdff34a723eb56272faee04f68cb0f5">More...</a><br /></td></tr>
-<tr class="separator:a5cdff34a723eb56272faee04f68cb0f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8685d63dca531c9bab0f340af25405d0"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#a8685d63dca531c9bab0f340af25405d0">format</a> () const noexcept -&gt; <a class="el" href="group__graphics.html#ga2b2a5cc747e0869488d872b28d939dae">pixel_format</a></td></tr>
+<tr class="memitem:abc82ca2f0e6674b826b5a83f131f947e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#abc82ca2f0e6674b826b5a83f131f947e">set_scale_mode</a> (const <a class="el" href="group__video.html#ga3a02f19841b0a2ba88e7d65af2f2d78b">scale_mode</a> mode) noexcept</td></tr>
+<tr class="memdesc:abc82ca2f0e6674b826b5a83f131f947e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the scale mode that will be used by the texture.  <a href="classcen_1_1basic__texture.html#abc82ca2f0e6674b826b5a83f131f947e">More...</a><br /></td></tr>
+<tr class="separator:abc82ca2f0e6674b826b5a83f131f947e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Getters</h2></td></tr>
+<tr class="memitem:a8685d63dca531c9bab0f340af25405d0"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#a8685d63dca531c9bab0f340af25405d0">format</a> () const noexcept -&gt; <a class="el" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a></td></tr>
 <tr class="memdesc:a8685d63dca531c9bab0f340af25405d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the pixel format that is used by the texture.  <a href="classcen_1_1basic__texture.html#a8685d63dca531c9bab0f340af25405d0">More...</a><br /></td></tr>
 <tr class="separator:a8685d63dca531c9bab0f340af25405d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af673bb4fd55b928c25094660a62737cc"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#af673bb4fd55b928c25094660a62737cc">access</a> () const noexcept -&gt; <a class="el" href="group__graphics.html#ga74927e90e8a09a52d7377e0687620654">texture_access</a></td></tr>
+<tr class="memitem:af673bb4fd55b928c25094660a62737cc"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#af673bb4fd55b928c25094660a62737cc">access</a> () const noexcept -&gt; <a class="el" href="group__video.html#ga6952adc5f093252560469686271182aa">texture_access</a></td></tr>
 <tr class="memdesc:af673bb4fd55b928c25094660a62737cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the texture access of the texture.  <a href="classcen_1_1basic__texture.html#af673bb4fd55b928c25094660a62737cc">More...</a><br /></td></tr>
 <tr class="separator:af673bb4fd55b928c25094660a62737cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e2e061afae6e19b5a8b3949b6344028"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#a0e2e061afae6e19b5a8b3949b6344028">width</a> () const noexcept -&gt; int</td></tr>
@@ -157,7 +167,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4d099cb42b11d8e71817b295d1ae6f07"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#a4d099cb42b11d8e71817b295d1ae6f07">height</a> () const noexcept -&gt; int</td></tr>
 <tr class="memdesc:a4d099cb42b11d8e71817b295d1ae6f07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the height of the texture.  <a href="classcen_1_1basic__texture.html#a4d099cb42b11d8e71817b295d1ae6f07">More...</a><br /></td></tr>
 <tr class="separator:a4d099cb42b11d8e71817b295d1ae6f07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab95cbdd1fef5f92af1de82108a37b005"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#ab95cbdd1fef5f92af1de82108a37b005">size</a> () const noexcept -&gt; <a class="el" href="group__geometry.html#gac34681d6cc8018e07938793d4c420369">iarea</a></td></tr>
+<tr class="memitem:ab95cbdd1fef5f92af1de82108a37b005"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#ab95cbdd1fef5f92af1de82108a37b005">size</a> () const noexcept -&gt; <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a></td></tr>
 <tr class="memdesc:ab95cbdd1fef5f92af1de82108a37b005"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the texture.  <a href="classcen_1_1basic__texture.html#ab95cbdd1fef5f92af1de82108a37b005">More...</a><br /></td></tr>
 <tr class="separator:ab95cbdd1fef5f92af1de82108a37b005"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a213187cb0752986157ea6f45a4a458e1"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#a213187cb0752986157ea6f45a4a458e1">is_target</a> () const noexcept -&gt; bool</td></tr>
@@ -169,50 +179,48 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1694053f67bdd80db650cdccb67e8d85"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#a1694053f67bdd80db650cdccb67e8d85">is_streaming</a> () const noexcept -&gt; bool</td></tr>
 <tr class="memdesc:a1694053f67bdd80db650cdccb67e8d85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the texture has streaming texture access.  <a href="classcen_1_1basic__texture.html#a1694053f67bdd80db650cdccb67e8d85">More...</a><br /></td></tr>
 <tr class="separator:a1694053f67bdd80db650cdccb67e8d85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73bbcc97a89dcfd7ba90e86b501f8e10"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#a73bbcc97a89dcfd7ba90e86b501f8e10">alpha</a> () const noexcept -&gt; <a class="el" href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">u8</a></td></tr>
+<tr class="memitem:a73bbcc97a89dcfd7ba90e86b501f8e10"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#a73bbcc97a89dcfd7ba90e86b501f8e10">alpha</a> () const noexcept -&gt; <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a></td></tr>
 <tr class="memdesc:a73bbcc97a89dcfd7ba90e86b501f8e10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the alpha value of the texture.  <a href="classcen_1_1basic__texture.html#a73bbcc97a89dcfd7ba90e86b501f8e10">More...</a><br /></td></tr>
 <tr class="separator:a73bbcc97a89dcfd7ba90e86b501f8e10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38d437a4bd3232132c8a9e9558d67fed"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#a38d437a4bd3232132c8a9e9558d67fed">get_blend_mode</a> () const noexcept -&gt; <a class="el" href="group__graphics.html#ga98236ba30ab70fd25e54bf8c5c70dd8f">blend_mode</a></td></tr>
+<tr class="memitem:a38d437a4bd3232132c8a9e9558d67fed"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#a38d437a4bd3232132c8a9e9558d67fed">get_blend_mode</a> () const noexcept -&gt; <a class="el" href="group__video.html#ga98236ba30ab70fd25e54bf8c5c70dd8f">blend_mode</a></td></tr>
 <tr class="memdesc:a38d437a4bd3232132c8a9e9558d67fed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the blend mode of the texture.  <a href="classcen_1_1basic__texture.html#a38d437a4bd3232132c8a9e9558d67fed">More...</a><br /></td></tr>
 <tr class="separator:a38d437a4bd3232132c8a9e9558d67fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf305622d006c698b06a443d554fabd8"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#adf305622d006c698b06a443d554fabd8">color_mod</a> () const noexcept -&gt; <a class="el" href="classcen_1_1color.html">color</a></td></tr>
 <tr class="memdesc:adf305622d006c698b06a443d554fabd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the color modulation of the texture.  <a href="classcen_1_1basic__texture.html#adf305622d006c698b06a443d554fabd8">More...</a><br /></td></tr>
 <tr class="separator:adf305622d006c698b06a443d554fabd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6dac1407dde1191131a137d69bf8912d"><td class="memTemplParams" colspan="2">template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </td></tr>
-<tr class="memitem:a6dac1407dde1191131a137d69bf8912d"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#a6dac1407dde1191131a137d69bf8912d">operator bool</a> () const noexcept</td></tr>
-<tr class="memdesc:a6dac1407dde1191131a137d69bf8912d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not a texture handle holds a non-null pointer.  <a href="classcen_1_1basic__texture.html#a6dac1407dde1191131a137d69bf8912d">More...</a><br /></td></tr>
-<tr class="separator:a6dac1407dde1191131a137d69bf8912d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad137273a02104882fb6facd9655dc522"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#ad137273a02104882fb6facd9655dc522">get_scale_mode</a> () const noexcept -&gt; <a class="el" href="group__video.html#ga3a02f19841b0a2ba88e7d65af2f2d78b">scale_mode</a></td></tr>
+<tr class="memdesc:ad137273a02104882fb6facd9655dc522"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the scale mode that is used by the texture.  <a href="classcen_1_1basic__texture.html#ad137273a02104882fb6facd9655dc522">More...</a><br /></td></tr>
+<tr class="separator:ad137273a02104882fb6facd9655dc522"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cdff34a723eb56272faee04f68cb0f5"><td class="memTemplParams" colspan="2">template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a5cdff34a723eb56272faee04f68cb0f5"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#a5cdff34a723eb56272faee04f68cb0f5">release</a> () noexcept -&gt; <a class="el" href="group__core.html#ga922c9ffa0c4b1b0dcaf50b7c6033a809">owner</a>&lt; SDL_Texture * &gt;</td></tr>
+<tr class="memdesc:a5cdff34a723eb56272faee04f68cb0f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases ownership of the associated SDL texture and returns a pointer to it.  <a href="classcen_1_1basic__texture.html#a5cdff34a723eb56272faee04f68cb0f5">More...</a><br /></td></tr>
+<tr class="separator:a5cdff34a723eb56272faee04f68cb0f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6d73cbcd4bf2735549b191250c0579c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#ab6d73cbcd4bf2735549b191250c0579c">get</a> () const noexcept -&gt; SDL_Texture *</td></tr>
 <tr class="memdesc:ab6d73cbcd4bf2735549b191250c0579c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the associated <code>SDL_Texture</code>.  <a href="classcen_1_1basic__texture.html#ab6d73cbcd4bf2735549b191250c0579c">More...</a><br /></td></tr>
 <tr class="separator:ab6d73cbcd4bf2735549b191250c0579c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Conversions</h2></td></tr>
+<tr class="memitem:a6dac1407dde1191131a137d69bf8912d"><td class="memTemplParams" colspan="2">template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a6dac1407dde1191131a137d69bf8912d"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#a6dac1407dde1191131a137d69bf8912d">operator bool</a> () const noexcept</td></tr>
+<tr class="memdesc:a6dac1407dde1191131a137d69bf8912d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not a texture handle holds a non-null pointer.  <a href="classcen_1_1basic__texture.html#a6dac1407dde1191131a137d69bf8912d">More...</a><br /></td></tr>
+<tr class="separator:a6dac1407dde1191131a137d69bf8912d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab44bbcda1918c8c1cb129ac23080ab8d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#ab44bbcda1918c8c1cb129ac23080ab8d">operator SDL_Texture *</a> () noexcept</td></tr>
 <tr class="memdesc:ab44bbcda1918c8c1cb129ac23080ab8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts to <code>SDL_Texture*</code>.  <a href="classcen_1_1basic__texture.html#ab44bbcda1918c8c1cb129ac23080ab8d">More...</a><br /></td></tr>
 <tr class="separator:ab44bbcda1918c8c1cb129ac23080ab8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac19f3ceb043226d8120e04fedab1b333"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#ac19f3ceb043226d8120e04fedab1b333">operator const SDL_Texture *</a> () const noexcept</td></tr>
 <tr class="memdesc:ac19f3ceb043226d8120e04fedab1b333"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts to <code>const SDL_Texture*</code>.  <a href="classcen_1_1basic__texture.html#ac19f3ceb043226d8120e04fedab1b333">More...</a><br /></td></tr>
 <tr class="separator:ac19f3ceb043226d8120e04fedab1b333"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a74a3610b78cba551f1bf994d28d816b2"><td class="memTemplParams" colspan="2">template&lt;typename Renderer , typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </td></tr>
-<tr class="memitem:a74a3610b78cba551f1bf994d28d816b2"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#a74a3610b78cba551f1bf994d28d816b2">streaming</a> (const Renderer &amp;<a class="el" href="group__graphics.html#gad2d8e020a073e6f7e05af85abbbe0476">renderer</a>, const <a class="el" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; path, const <a class="el" href="group__graphics.html#ga2b2a5cc747e0869488d872b28d939dae">pixel_format</a> <a class="el" href="classcen_1_1basic__texture.html#a8685d63dca531c9bab0f340af25405d0">format</a>) -&gt; <a class="el" href="classcen_1_1basic__texture.html">basic_texture</a></td></tr>
-<tr class="memdesc:a74a3610b78cba551f1bf994d28d816b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and returns a texture with streaming access.  <a href="classcen_1_1basic__texture.html#a74a3610b78cba551f1bf994d28d816b2">More...</a><br /></td></tr>
-<tr class="separator:a74a3610b78cba551f1bf994d28d816b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bb500ce0f2f20f36f68d8fe2f04055f"><td class="memTemplParams" colspan="2">template&lt;typename Renderer , typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </td></tr>
-<tr class="memitem:a3bb500ce0f2f20f36f68d8fe2f04055f"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__texture.html#a3bb500ce0f2f20f36f68d8fe2f04055f">streaming</a> (const Renderer &amp;<a class="el" href="group__graphics.html#gad2d8e020a073e6f7e05af85abbbe0476">renderer</a>, const std::string &amp;path, const <a class="el" href="group__graphics.html#ga2b2a5cc747e0869488d872b28d939dae">pixel_format</a> <a class="el" href="classcen_1_1basic__texture.html#a8685d63dca531c9bab0f340af25405d0">format</a>) -&gt; <a class="el" href="classcen_1_1basic__texture.html">basic_texture</a></td></tr>
-<tr class="separator:a3bb500ce0f2f20f36f68d8fe2f04055f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Represents an hardware-accelerated image. </p>
+<div class="textblock"><p>Represents an hardware-accelerated image, intended to be rendered using the <code><a class="el" href="classcen_1_1basic__renderer.html" title="Provides 2D-rendering that is potentially hardware-accelerated.">basic_renderer</a></code> class. </p>
 <dl class="section since"><dt>Since</dt><dd>3.0.0</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><code>SDL_Texture</code> </dd>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="group__video.html#gab199243ff6286f54d79df8a207b07678">texture</a></code> </dd>
 <dd>
-<code><a class="el" href="group__graphics.html#ga16cde7704049080f7b56b91e38b3aadd">texture</a></code> </dd>
-<dd>
-<code><a class="el" href="group__graphics.html#ga51034233eaf2388ecd0c846381ae1ddb">texture_handle</a></code> </dd></dl>
+<code><a class="el" href="group__video.html#ga1dc7d0762fc2f26bed3af79d6fec3a4a">texture_handle</a></code> </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a5d541fbcdb0fe0b98c95cf438e2eaa9c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d541fbcdb0fe0b98c95cf438e2eaa9c">&#9670;&nbsp;</a></span>basic_texture() <span class="overload">[1/6]</span></h2>
+<a id="a814ace84dc8b5d6b5258b81be9922958"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a814ace84dc8b5d6b5258b81be9922958">&#9670;&nbsp;</a></span>basic_texture() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -223,8 +231,8 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">cen::basic_texture::basic_texture </td>
           <td>(</td>
-          <td class="paramtype">SDL_Texture *&#160;</td>
-          <td class="paramname"><em>src</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="group__core.html#ga00614d944c81543b03c7f2cb202fdc50">maybe_owner</a>&lt; SDL_Texture * &gt;&#160;</td>
+          <td class="paramname"><em>source</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -238,13 +246,13 @@ Static Public Member Functions</h2></td></tr>
 <p>Creates an texture from a pre-existing SDL texture. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">src</td><td>a pointer to the associated SDL texture.</td></tr>
+    <tr><td class="paramname">source</td><td>a pointer to the associated SDL texture.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">exception</td><td>if the supplied pointer is null <em>and</em> the texture is owning.</td></tr>
+    <tr><td class="paramname"><a class="el" href="classcen_1_1cen__error.html" title="The base of all exceptions explicitly thrown by the library.">cen_error</a></td><td>if the supplied pointer is null <em>and</em> the texture is owning.</td></tr>
   </table>
   </dd>
 </dl>
@@ -258,7 +266,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
+template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -266,7 +274,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
         <tr>
           <td class="memname">cen::basic_texture::basic_texture </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="group__graphics.html#ga16cde7704049080f7b56b91e38b3aadd">texture</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__video.html#gab199243ff6286f54d79df8a207b07678">texture</a> &amp;&#160;</td>
           <td class="paramname"><em>owner</em></td><td>)</td>
           <td></td>
         </tr>
@@ -295,7 +303,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Renderer , typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
+template&lt;typename Renderer , typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -309,7 +317,7 @@ template&lt;typename Renderer , typename BB  = B, detail::is_owner&lt; BB &gt;  
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
           <td class="paramname"><em>path</em>&#160;</td>
         </tr>
         <tr>
@@ -355,7 +363,7 @@ template&lt;typename Renderer , typename BB  = B, detail::is_owner&lt; BB &gt;  
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Renderer , typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
+template&lt;typename Renderer , typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -415,7 +423,7 @@ template&lt;typename Renderer , typename BB  = B, detail::is_owner&lt; BB &gt;  
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Renderer , typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
+template&lt;typename Renderer , typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -429,7 +437,7 @@ template&lt;typename Renderer , typename BB  = B, detail::is_owner&lt; BB &gt;  
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="group__graphics.html#ga8b71461a73c8e75c41923ffa705d67b6">surface</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__video.html#ga8b71461a73c8e75c41923ffa705d67b6">surface</a> &amp;&#160;</td>
           <td class="paramname"><em>surface</em>&#160;</td>
         </tr>
         <tr>
@@ -469,13 +477,13 @@ template&lt;typename Renderer , typename BB  = B, detail::is_owner&lt; BB &gt;  
 
 </div>
 </div>
-<a id="a3776cd08c522cfd51e88b1c59517ff66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3776cd08c522cfd51e88b1c59517ff66">&#9670;&nbsp;</a></span>basic_texture() <span class="overload">[6/6]</span></h2>
+<a id="a114fba48f7531cc2e3bdc74f9cd37ced"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a114fba48f7531cc2e3bdc74f9cd37ced">&#9670;&nbsp;</a></span>basic_texture() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Renderer , typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
+template&lt;typename Renderer , typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -489,19 +497,19 @@ template&lt;typename Renderer , typename BB  = B, detail::is_owner&lt; BB &gt;  
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="group__graphics.html#ga2b2a5cc747e0869488d872b28d939dae">pixel_format</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a>&#160;</td>
           <td class="paramname"><em>format</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="group__graphics.html#ga74927e90e8a09a52d7377e0687620654">texture_access</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__video.html#ga6952adc5f093252560469686271182aa">texture_access</a>&#160;</td>
           <td class="paramname"><em>access</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="group__geometry.html#gac34681d6cc8018e07938793d4c420369">iarea</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>&#160;</td>
           <td class="paramname"><em>size</em>&#160;</td>
         </tr>
         <tr>
@@ -557,7 +565,7 @@ template&lt;typename Renderer , typename BB  = B, detail::is_owner&lt; BB &gt;  
           <td class="memname">auto cen::basic_texture::access </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__graphics.html#ga74927e90e8a09a52d7377e0687620654">texture_access</a>
+          <td> const -&gt; <a class="el" href="group__video.html#ga6952adc5f093252560469686271182aa">texture_access</a>
   </td>
         </tr>
       </table>
@@ -587,7 +595,7 @@ template&lt;typename Renderer , typename BB  = B, detail::is_owner&lt; BB &gt;  
           <td class="memname">auto cen::basic_texture::alpha </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">u8</a>
+          <td> const -&gt; <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>
   </td>
         </tr>
       </table>
@@ -647,7 +655,7 @@ template&lt;typename Renderer , typename BB  = B, detail::is_owner&lt; BB &gt;  
           <td class="memname">auto cen::basic_texture::format </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__graphics.html#ga2b2a5cc747e0869488d872b28d939dae">pixel_format</a>
+          <td> const -&gt; <a class="el" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a>
   </td>
         </tr>
       </table>
@@ -707,7 +715,7 @@ template&lt;typename Renderer , typename BB  = B, detail::is_owner&lt; BB &gt;  
           <td class="memname">auto cen::basic_texture::get_blend_mode </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__graphics.html#ga98236ba30ab70fd25e54bf8c5c70dd8f">blend_mode</a>
+          <td> const -&gt; <a class="el" href="group__video.html#ga98236ba30ab70fd25e54bf8c5c70dd8f">blend_mode</a>
   </td>
         </tr>
       </table>
@@ -721,6 +729,36 @@ template&lt;typename Renderer , typename BB  = B, detail::is_owner&lt; BB &gt;  
 <p>Returns the blend mode of the texture. </p>
 <dl class="section return"><dt>Returns</dt><dd>the blend mode of the texture.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ad137273a02104882fb6facd9655dc522"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad137273a02104882fb6facd9655dc522">&#9670;&nbsp;</a></span>get_scale_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::basic_texture::get_scale_mode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__video.html#ga3a02f19841b0a2ba88e7d65af2f2d78b">scale_mode</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the scale mode that is used by the texture. </p>
+<dl class="section return"><dt>Returns</dt><dd>the scale mode that is used by the texture.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
 </div>
@@ -850,7 +888,7 @@ template&lt;typename Renderer , typename BB  = B, detail::is_owner&lt; BB &gt;  
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
+template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -870,12 +908,6 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 </div><div class="memdoc">
 
 <p>Indicates whether or not a texture handle holds a non-null pointer. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">BB</td><td>dummy parameter for SFINAE.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the handle holds a non-null pointer; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
@@ -945,7 +977,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
+template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -954,7 +986,7 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
           <td class="memname">auto cen::basic_texture::release </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="namespacecen.html#a922c9ffa0c4b1b0dcaf50b7c6033a809">owner</a>&lt;SDL_Texture*&gt;
+          <td> -&gt; <a class="el" href="group__core.html#ga922c9ffa0c4b1b0dcaf50b7c6033a809">owner</a>&lt;SDL_Texture*&gt;
   </td>
         </tr>
       </table>
@@ -984,7 +1016,7 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
         <tr>
           <td class="memname">void cen::basic_texture::set_alpha </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">u8</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>&#160;</td>
           <td class="paramname"><em>alpha</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1019,7 +1051,7 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
         <tr>
           <td class="memname">void cen::basic_texture::set_blend_mode </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__graphics.html#ga98236ba30ab70fd25e54bf8c5c70dd8f">blend_mode</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__video.html#ga98236ba30ab70fd25e54bf8c5c70dd8f">blend_mode</a>&#160;</td>
           <td class="paramname"><em>mode</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1078,8 +1110,8 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
 
 </div>
 </div>
-<a id="afa0c8b8da1e2f03a9fa31c1a4c794d1a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa0c8b8da1e2f03a9fa31c1a4c794d1a">&#9670;&nbsp;</a></span>set_pixel()</h2>
+<a id="ab61dd58ef33d3e09d55586d4cee19448"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab61dd58ef33d3e09d55586d4cee19448">&#9670;&nbsp;</a></span>set_pixel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1090,7 +1122,7 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
         <tr>
           <td class="memname">void cen::basic_texture::set_pixel </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__geometry.html#ga482cd24468a5a74647742e69379566c7">ipoint</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__math.html#ga482cd24468a5a74647742e69379566c7">ipoint</a>&#160;</td>
           <td class="paramname"><em>pixel</em>, </td>
         </tr>
         <tr>
@@ -1113,11 +1145,46 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
 </div><div class="memdoc">
 
 <p>Sets the color of the pixel at the specified coordinate. </p>
-<p>This method has no effect if the texture access isn't <code>Streaming</code> or if the coordinate is out-of-bounds.</p>
+<p>This method has no effect if the texture access isn't <code>streaming</code> or if the coordinate is out-of-bounds.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pixel</td><td>the pixel that will be changed. </td></tr>
     <tr><td class="paramname">color</td><td>the new color of the pixel.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="abc82ca2f0e6674b826b5a83f131f947e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc82ca2f0e6674b826b5a83f131f947e">&#9670;&nbsp;</a></span>set_scale_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::basic_texture::set_scale_mode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__video.html#ga3a02f19841b0a2ba88e7d65af2f2d78b">scale_mode</a>&#160;</td>
+          <td class="paramname"><em>mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the scale mode that will be used by the texture. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>the scale mode that will be used.</td></tr>
   </table>
   </dd>
 </dl>
@@ -1138,7 +1205,7 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
           <td class="memname">auto cen::basic_texture::size </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__geometry.html#gac34681d6cc8018e07938793d4c420369">iarea</a>
+          <td> const -&gt; <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>
   </td>
         </tr>
       </table>
@@ -1161,7 +1228,7 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Renderer , typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
+template&lt;typename Renderer , typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1175,13 +1242,13 @@ template&lt;typename Renderer , typename BB  = B, detail::is_owner&lt; BB &gt;  
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
           <td class="paramname"><em>path</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="group__graphics.html#ga2b2a5cc747e0869488d872b28d939dae">pixel_format</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a>&#160;</td>
           <td class="paramname"><em>format</em>&#160;</td>
         </tr>
         <tr>
@@ -1216,7 +1283,7 @@ template&lt;typename Renderer , typename BB  = B, detail::is_owner&lt; BB &gt;  
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">exception</td><td>if something goes wrong.</td></tr>
+    <tr><td class="paramname"><a class="el" href="classcen_1_1cen__error.html" title="The base of all exceptions explicitly thrown by the library.">cen_error</a></td><td>if something goes wrong.</td></tr>
   </table>
   </dd>
 </dl>
@@ -1231,7 +1298,7 @@ template&lt;typename Renderer , typename BB  = B, detail::is_owner&lt; BB &gt;  
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Renderer , typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
+template&lt;typename Renderer , typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1251,7 +1318,7 @@ template&lt;typename Renderer , typename BB  = B, detail::is_owner&lt; BB &gt;  
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="group__graphics.html#ga2b2a5cc747e0869488d872b28d939dae">pixel_format</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a>&#160;</td>
           <td class="paramname"><em>format</em>&#160;</td>
         </tr>
         <tr>
@@ -1303,7 +1370,7 @@ template&lt;typename Renderer , typename BB  = B, detail::is_owner&lt; BB &gt;  
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/centurion/<a class="el" href="texture_8hpp_source.html">texture.hpp</a></li>
+<li>src/centurion/video/<a class="el" href="texture_8hpp_source.html">texture.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

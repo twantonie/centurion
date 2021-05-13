@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/sound_effect.hpp File Reference</title>
+        <title>Centurion: src/centurion/audio/sound_effect.hpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,13 +85,14 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_47d1d3dbc20fb05997f1d3f86930816d.html">audio</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">sound_effect.hpp File Reference</div>  </div>
@@ -103,22 +104,27 @@ $(function() {
 <code>#include &lt;optional&gt;</code><br />
 <code>#include &lt;ostream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
-<code>#include &quot;<a class="el" href="centurion__cfg_8hpp_source.html">centurion_cfg.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="czstring_8hpp_source.html">czstring.hpp</a>&quot;</code><br />
-<code>#include &quot;detail/address_of.hpp&quot;</code><br />
-<code>#include &quot;detail/clamp.hpp&quot;</code><br />
-<code>#include &quot;detail/max.hpp&quot;</code><br />
-<code>#include &quot;detail/to_string.hpp&quot;</code><br />
-<code>#include &quot;<a class="el" href="exception_8hpp_source.html">exception.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="not__null_8hpp_source.html">not_null.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="time_8hpp_source.html">time.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="czstring_8hpp_source.html">../core/czstring.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="exception_8hpp_source.html">../core/exception.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="not__null_8hpp_source.html">../core/not_null.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="owner_8hpp_source.html">../core/owner.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="result_8hpp_source.html">../core/result.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="time_8hpp_source.html">../core/time.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="address__of_8hpp_source.html">../detail/address_of.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="clamp_8hpp_source.html">../detail/clamp.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="max_8hpp_source.html">../detail/max.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="owner__handle__api_8hpp_source.html">../detail/owner_handle_api.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="to__string_8hpp_source.html">../detail/to_string.hpp</a>&quot;</code><br />
 </div>
 <p><a href="sound__effect_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1sound__effect.html">cen::sound_effect</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a sound effect.  <a href="classcen_1_1sound__effect.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__sound__effect.html">cen::basic_sound_effect</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a sound effect.  <a href="classcen_1_1basic__sound__effect.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__sound__effect.html">cen::basic_sound_effect</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a sound effect.  <a href="classcen_1_1basic__sound__effect.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -127,8 +133,20 @@ Namespaces</h2></td></tr>
 <tr class="memdesc:namespacecen"><td class="mdescLeft">&#160;</td><td class="mdescRight">The top-level namespace that all components of the library reside in. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ga58704391a83548938aa57dbaafa5b51d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#ga58704391a83548938aa57dbaafa5b51d">cen::sound_effect</a> = basic_sound_effect&lt; detail::owning_type &gt;</td></tr>
+<tr class="memdesc:ga58704391a83548938aa57dbaafa5b51d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an owning sound effect.  <a href="group__audio.html#ga58704391a83548938aa57dbaafa5b51d">More...</a><br /></td></tr>
+<tr class="separator:ga58704391a83548938aa57dbaafa5b51d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad7f587461ff6d13a784c0f4ef2df25c5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#gad7f587461ff6d13a784c0f4ef2df25c5">cen::sound_effect_handle</a> = basic_sound_effect&lt; detail::handle_type &gt;</td></tr>
+<tr class="memdesc:gad7f587461ff6d13a784c0f4ef2df25c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a non-owning sound effect.  <a href="group__audio.html#gad7f587461ff6d13a784c0f4ef2df25c5">More...</a><br /></td></tr>
+<tr class="separator:gad7f587461ff6d13a784c0f4ef2df25c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ga4343edd2e0c221d09ee44e2a0653e0e2"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#ga4343edd2e0c221d09ee44e2a0653e0e2">cen::get_sound</a> (const int channel) noexcept -&gt; sound_effect_handle</td></tr>
+<tr class="memdesc:ga4343edd2e0c221d09ee44e2a0653e0e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a handle to the sound effect currently associated with the specified channel.  <a href="group__audio.html#ga4343edd2e0c221d09ee44e2a0653e0e2">More...</a><br /></td></tr>
+<tr class="separator:ga4343edd2e0c221d09ee44e2a0653e0e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad1fe385ddf4f31f50d24833301f1042e"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__audio.html#gad1fe385ddf4f31f50d24833301f1042e">cen::to_string</a> (const sound_effect &amp;sound) -&gt; std::string</td></tr>
 <tr class="memdesc:gad1fe385ddf4f31f50d24833301f1042e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a textual representation of a sound effect.  <a href="group__audio.html#gad1fe385ddf4f31f50d24833301f1042e">More...</a><br /></td></tr>
 <tr class="separator:gad1fe385ddf4f31f50d24833301f1042e"><td class="memSeparator" colspan="2">&#160;</td></tr>

@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/vector3.hpp File Reference</title>
+        <title>Centurion: src/centurion/math/vector3.hpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_ca1ecbfc90640cd3cee1cdeee7bdd308.html">math</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -99,8 +99,7 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &lt;ostream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
-<code>#include &quot;<a class="el" href="centurion__cfg_8hpp_source.html">centurion_cfg.hpp</a>&quot;</code><br />
-<code>#include &quot;detail/to_string.hpp&quot;</code><br />
+<code>#include &quot;<a class="el" href="to__string_8hpp_source.html">../detail/to_string.hpp</a>&quot;</code><br />
 </div>
 <p><a href="vector3_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -118,26 +117,29 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a0fae1723074bb25fdc9d0c16b22c4b93"><td class="memTemplParams" colspan="2">template&lt;typename Archive , typename T &gt; </td></tr>
-<tr class="memitem:a0fae1723074bb25fdc9d0c16b22c4b93"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecen.html#a0fae1723074bb25fdc9d0c16b22c4b93">cen::serialize</a> (Archive &amp;archive, vector3&lt; T &gt; &amp;vector)</td></tr>
-<tr class="memdesc:a0fae1723074bb25fdc9d0c16b22c4b93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serializes a 3D-vector.  <a href="namespacecen.html#a0fae1723074bb25fdc9d0c16b22c4b93">More...</a><br /></td></tr>
-<tr class="separator:a0fae1723074bb25fdc9d0c16b22c4b93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13ff3a07b34d1f994de03c4f6e3900ce"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a13ff3a07b34d1f994de03c4f6e3900ce"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecen.html#a13ff3a07b34d1f994de03c4f6e3900ce">cen::to_string</a> (const vector3&lt; T &gt; &amp;vector) -&gt; std::string</td></tr>
-<tr class="memdesc:a13ff3a07b34d1f994de03c4f6e3900ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string that represents a vector.  <a href="namespacecen.html#a13ff3a07b34d1f994de03c4f6e3900ce">More...</a><br /></td></tr>
-<tr class="separator:a13ff3a07b34d1f994de03c4f6e3900ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99e65ceec0e4af8ac9041d6aa9e50447"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a99e65ceec0e4af8ac9041d6aa9e50447"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecen.html#a99e65ceec0e4af8ac9041d6aa9e50447">cen::operator&lt;&lt;</a> (std::ostream &amp;stream, const vector3&lt; T &gt; &amp;vector) -&gt; std::ostream &amp;</td></tr>
-<tr class="memdesc:a99e65ceec0e4af8ac9041d6aa9e50447"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a textual representation of a vector.  <a href="namespacecen.html#a99e65ceec0e4af8ac9041d6aa9e50447">More...</a><br /></td></tr>
-<tr class="separator:a99e65ceec0e4af8ac9041d6aa9e50447"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19b296c846447d8c1d46bdac7e46e91c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a19b296c846447d8c1d46bdac7e46e91c"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecen.html#a19b296c846447d8c1d46bdac7e46e91c">cen::operator==</a> (const vector3&lt; T &gt; &amp;lhs, const vector3&lt; T &gt; &amp;rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:a19b296c846447d8c1d46bdac7e46e91c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two 3D vectors are equal.  <a href="namespacecen.html#a19b296c846447d8c1d46bdac7e46e91c">More...</a><br /></td></tr>
-<tr class="separator:a19b296c846447d8c1d46bdac7e46e91c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32380e1a876904629de2fa505697297f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a32380e1a876904629de2fa505697297f"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecen.html#a32380e1a876904629de2fa505697297f">cen::operator!=</a> (const vector3&lt; T &gt; &amp;lhs, const vector3&lt; T &gt; &amp;rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:a32380e1a876904629de2fa505697297f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two 3D vectors aren't equal.  <a href="namespacecen.html#a32380e1a876904629de2fa505697297f">More...</a><br /></td></tr>
-<tr class="separator:a32380e1a876904629de2fa505697297f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0fae1723074bb25fdc9d0c16b22c4b93"><td class="memTemplParams" colspan="2">template&lt;typename Archive , typename T &gt; </td></tr>
+<tr class="memitem:ga0fae1723074bb25fdc9d0c16b22c4b93"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__math.html#ga0fae1723074bb25fdc9d0c16b22c4b93">cen::serialize</a> (Archive &amp;archive, vector3&lt; T &gt; &amp;vector)</td></tr>
+<tr class="memdesc:ga0fae1723074bb25fdc9d0c16b22c4b93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serializes a 3D-vector.  <a href="group__math.html#ga0fae1723074bb25fdc9d0c16b22c4b93">More...</a><br /></td></tr>
+<tr class="separator:ga0fae1723074bb25fdc9d0c16b22c4b93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga13ff3a07b34d1f994de03c4f6e3900ce"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga13ff3a07b34d1f994de03c4f6e3900ce"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__math.html#ga13ff3a07b34d1f994de03c4f6e3900ce">cen::to_string</a> (const vector3&lt; T &gt; &amp;vector) -&gt; std::string</td></tr>
+<tr class="memdesc:ga13ff3a07b34d1f994de03c4f6e3900ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string that represents a vector.  <a href="group__math.html#ga13ff3a07b34d1f994de03c4f6e3900ce">More...</a><br /></td></tr>
+<tr class="separator:ga13ff3a07b34d1f994de03c4f6e3900ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga99e65ceec0e4af8ac9041d6aa9e50447"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga99e65ceec0e4af8ac9041d6aa9e50447"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__math.html#ga99e65ceec0e4af8ac9041d6aa9e50447">cen::operator&lt;&lt;</a> (std::ostream &amp;stream, const vector3&lt; T &gt; &amp;vector) -&gt; std::ostream &amp;</td></tr>
+<tr class="memdesc:ga99e65ceec0e4af8ac9041d6aa9e50447"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a textual representation of a vector.  <a href="group__math.html#ga99e65ceec0e4af8ac9041d6aa9e50447">More...</a><br /></td></tr>
+<tr class="separator:ga99e65ceec0e4af8ac9041d6aa9e50447"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Vector3 comparison operators</h2></td></tr>
+<tr class="memitem:ga19b296c846447d8c1d46bdac7e46e91c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga19b296c846447d8c1d46bdac7e46e91c"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__math.html#ga19b296c846447d8c1d46bdac7e46e91c">cen::operator==</a> (const vector3&lt; T &gt; &amp;lhs, const vector3&lt; T &gt; &amp;rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga19b296c846447d8c1d46bdac7e46e91c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two 3D vectors are equal.  <a href="group__math.html#ga19b296c846447d8c1d46bdac7e46e91c">More...</a><br /></td></tr>
+<tr class="separator:ga19b296c846447d8c1d46bdac7e46e91c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga32380e1a876904629de2fa505697297f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga32380e1a876904629de2fa505697297f"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__math.html#ga32380e1a876904629de2fa505697297f">cen::operator!=</a> (const vector3&lt; T &gt; &amp;lhs, const vector3&lt; T &gt; &amp;rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga32380e1a876904629de2fa505697297f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two 3D vectors aren't equal.  <a href="group__math.html#ga32380e1a876904629de2fa505697297f">More...</a><br /></td></tr>
+<tr class="separator:ga32380e1a876904629de2fa505697297f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

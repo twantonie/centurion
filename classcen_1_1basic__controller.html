@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -100,7 +100,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Represents a game controller, e.g. an xbox-controller.  
+<p>Represents a game controller, e.g. Xbox or Playstation controllers.  
  <a href="classcen_1_1basic__controller.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="controller_8hpp_source.html">controller.hpp</a>&gt;</code></p>
@@ -126,97 +126,12 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:adbdbfcc5d753865bc41c3c8273cac94e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#adbdbfcc5d753865bc41c3c8273cac94e">basic_controller</a> (SDL_GameController *<a class="el" href="group__input.html#gaf9e877696febb889dfde2343a21764a7">controller</a>) noexcept(!detail::is_owning&lt; B &gt;())</td></tr>
-<tr class="memdesc:adbdbfcc5d753865bc41c3c8273cac94e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a game controller from an existing SDL game controller.  <a href="classcen_1_1basic__controller.html#adbdbfcc5d753865bc41c3c8273cac94e">More...</a><br /></td></tr>
-<tr class="separator:adbdbfcc5d753865bc41c3c8273cac94e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa91a2d62261fa5acdf099747d0552461"><td class="memTemplParams" colspan="2">template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </td></tr>
-<tr class="memitem:aa91a2d62261fa5acdf099747d0552461"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#aa91a2d62261fa5acdf099747d0552461">basic_controller</a> (const <a class="el" href="group__input.html#gaf9e877696febb889dfde2343a21764a7">controller</a> &amp;<a class="el" href="namespacecen.html#a922c9ffa0c4b1b0dcaf50b7c6033a809">owner</a>) noexcept</td></tr>
-<tr class="memdesc:aa91a2d62261fa5acdf099747d0552461"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a handle to an existing controller instance.  <a href="classcen_1_1basic__controller.html#aa91a2d62261fa5acdf099747d0552461">More...</a><br /></td></tr>
-<tr class="separator:aa91a2d62261fa5acdf099747d0552461"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0df2fc568da5bb0a7b775dd1f0f823d2"><td class="memTemplParams" colspan="2">template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </td></tr>
-<tr class="memitem:a0df2fc568da5bb0a7b775dd1f0f823d2"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a0df2fc568da5bb0a7b775dd1f0f823d2">basic_controller</a> (const int <a class="el" href="classcen_1_1basic__controller.html#ad444ea027d56fd981f7ca90af27b52b8">index</a>=0)</td></tr>
-<tr class="memdesc:a0df2fc568da5bb0a7b775dd1f0f823d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to create a game controller.  <a href="classcen_1_1basic__controller.html#a0df2fc568da5bb0a7b775dd1f0f823d2">More...</a><br /></td></tr>
-<tr class="separator:a0df2fc568da5bb0a7b775dd1f0f823d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d880ef79485e3f0f0e6bc00d5c04f19"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a1d880ef79485e3f0f0e6bc00d5c04f19">rumble</a> (const <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a> lo, const <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a> hi, const <a class="el" href="namespacecen.html#aeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="namespacecen.html#ad1dcf848a9ee33237a96cde6b5a1d466">u32</a> &gt; duration) -&gt; bool</td></tr>
-<tr class="memdesc:a1d880ef79485e3f0f0e6bc00d5c04f19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts a rumble effect.  <a href="classcen_1_1basic__controller.html#a1d880ef79485e3f0f0e6bc00d5c04f19">More...</a><br /></td></tr>
-<tr class="separator:a1d880ef79485e3f0f0e6bc00d5c04f19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c5ba9df1fbc2791aecf70727e8476fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a7c5ba9df1fbc2791aecf70727e8476fd">stop_rumble</a> () noexcept</td></tr>
-<tr class="memdesc:a7c5ba9df1fbc2791aecf70727e8476fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops any currently active rumble effect.  <a href="classcen_1_1basic__controller.html#a7c5ba9df1fbc2791aecf70727e8476fd">More...</a><br /></td></tr>
-<tr class="separator:a7c5ba9df1fbc2791aecf70727e8476fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a900615108d1d3d19b47d4b167ec6aa"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a3a900615108d1d3d19b47d4b167ec6aa">product</a> () const noexcept -&gt; std::optional&lt; <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a> &gt;</td></tr>
-<tr class="memdesc:a3a900615108d1d3d19b47d4b167ec6aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the USB product ID of the controller.  <a href="classcen_1_1basic__controller.html#a3a900615108d1d3d19b47d4b167ec6aa">More...</a><br /></td></tr>
-<tr class="separator:a3a900615108d1d3d19b47d4b167ec6aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9030e4cbcfc41a8f42a3028839dd163"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#af9030e4cbcfc41a8f42a3028839dd163">vendor</a> () const noexcept -&gt; std::optional&lt; <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a> &gt;</td></tr>
-<tr class="memdesc:af9030e4cbcfc41a8f42a3028839dd163"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the USB vendor ID of the controller.  <a href="classcen_1_1basic__controller.html#af9030e4cbcfc41a8f42a3028839dd163">More...</a><br /></td></tr>
-<tr class="separator:af9030e4cbcfc41a8f42a3028839dd163"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0254cf6c1c160c03505cd4fafec19f33"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a0254cf6c1c160c03505cd4fafec19f33">product_version</a> () const noexcept -&gt; std::optional&lt; <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a> &gt;</td></tr>
-<tr class="memdesc:a0254cf6c1c160c03505cd4fafec19f33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the product version of the controller.  <a href="classcen_1_1basic__controller.html#a0254cf6c1c160c03505cd4fafec19f33">More...</a><br /></td></tr>
-<tr class="separator:a0254cf6c1c160c03505cd4fafec19f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad444ea027d56fd981f7ca90af27b52b8"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#ad444ea027d56fd981f7ca90af27b52b8">index</a> () const noexcept -&gt; std::optional&lt; <a class="el" href="classcen_1_1basic__controller.html#a753b138e78077582f65f8e421f49baf9">player_index</a> &gt;</td></tr>
-<tr class="memdesc:ad444ea027d56fd981f7ca90af27b52b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the player index associated with the controller.  <a href="classcen_1_1basic__controller.html#ad444ea027d56fd981f7ca90af27b52b8">More...</a><br /></td></tr>
-<tr class="separator:ad444ea027d56fd981f7ca90af27b52b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8c8687007f081a624c696e40a191833"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#aa8c8687007f081a624c696e40a191833">is_connected</a> () const noexcept -&gt; bool</td></tr>
-<tr class="memdesc:aa8c8687007f081a624c696e40a191833"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the game controller is currently connected.  <a href="classcen_1_1basic__controller.html#aa8c8687007f081a624c696e40a191833">More...</a><br /></td></tr>
-<tr class="separator:aa8c8687007f081a624c696e40a191833"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef3bb4538f615f26eadaa0f823bb66ab"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#aef3bb4538f615f26eadaa0f823bb66ab">name</a> () const noexcept -&gt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a></td></tr>
-<tr class="memdesc:aef3bb4538f615f26eadaa0f823bb66ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name associated with the game controller.  <a href="classcen_1_1basic__controller.html#aef3bb4538f615f26eadaa0f823bb66ab">More...</a><br /></td></tr>
-<tr class="separator:aef3bb4538f615f26eadaa0f823bb66ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87fdbe4b88af6cf42bd2bbe13d1b01f1"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a87fdbe4b88af6cf42bd2bbe13d1b01f1">get_binding</a> (const <a class="el" href="group__input.html#ga1e58560c3414740db4b3f78929e9ddc3">controller_axis</a> axis) const -&gt; std::optional&lt; SDL_GameControllerButtonBind &gt;</td></tr>
-<tr class="memdesc:a87fdbe4b88af6cf42bd2bbe13d1b01f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bindings for a controller axis.  <a href="classcen_1_1basic__controller.html#a87fdbe4b88af6cf42bd2bbe13d1b01f1">More...</a><br /></td></tr>
-<tr class="separator:a87fdbe4b88af6cf42bd2bbe13d1b01f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65c44e925b80040c0470bcb2579c43ea"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a65c44e925b80040c0470bcb2579c43ea">get_binding</a> (const <a class="el" href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">controller_button</a> button) noexcept -&gt; std::optional&lt; SDL_GameControllerButtonBind &gt;</td></tr>
-<tr class="memdesc:a65c44e925b80040c0470bcb2579c43ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bindings for a controller button.  <a href="classcen_1_1basic__controller.html#a65c44e925b80040c0470bcb2579c43ea">More...</a><br /></td></tr>
-<tr class="separator:a65c44e925b80040c0470bcb2579c43ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8740c91ce917f16fd8954e6964352a3"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#aa8740c91ce917f16fd8954e6964352a3">get_state</a> (const <a class="el" href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">controller_button</a> button) const noexcept -&gt; <a class="el" href="group__input.html#ga21851ef682ba58611f9c67b3893c4bf2">button_state</a></td></tr>
-<tr class="memdesc:aa8740c91ce917f16fd8954e6964352a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the state of the specified game controller button.  <a href="classcen_1_1basic__controller.html#aa8740c91ce917f16fd8954e6964352a3">More...</a><br /></td></tr>
-<tr class="separator:aa8740c91ce917f16fd8954e6964352a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aecf718650cf316bdbd329de5526ecf9c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#aecf718650cf316bdbd329de5526ecf9c">is_pressed</a> (const <a class="el" href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">controller_button</a> button) const noexcept -&gt; bool</td></tr>
-<tr class="memdesc:aecf718650cf316bdbd329de5526ecf9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates if the specified button is pressed.  <a href="classcen_1_1basic__controller.html#aecf718650cf316bdbd329de5526ecf9c">More...</a><br /></td></tr>
-<tr class="separator:aecf718650cf316bdbd329de5526ecf9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af79619a211965cb8508ca777bcedbb2b"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#af79619a211965cb8508ca777bcedbb2b">is_released</a> (const <a class="el" href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">controller_button</a> button) const noexcept -&gt; bool</td></tr>
-<tr class="memdesc:af79619a211965cb8508ca777bcedbb2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates if the specified button is released.  <a href="classcen_1_1basic__controller.html#af79619a211965cb8508ca777bcedbb2b">More...</a><br /></td></tr>
-<tr class="separator:af79619a211965cb8508ca777bcedbb2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50221768ad255565972eb4485907e329"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a50221768ad255565972eb4485907e329">get_axis</a> (const <a class="el" href="group__input.html#ga1e58560c3414740db4b3f78929e9ddc3">controller_axis</a> axis) const noexcept -&gt; <a class="el" href="namespacecen.html#a42a54ea1f9c6ddee9f2431fc572f5a54">i16</a></td></tr>
-<tr class="memdesc:a50221768ad255565972eb4485907e329"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of the specified axis.  <a href="classcen_1_1basic__controller.html#a50221768ad255565972eb4485907e329">More...</a><br /></td></tr>
-<tr class="separator:a50221768ad255565972eb4485907e329"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a312069202049b5a997de21e7bb9fcc57"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a312069202049b5a997de21e7bb9fcc57">get_joystick</a> () noexcept -&gt; <a class="el" href="group__input.html#ga7e139596c259b800eaffbec7765cbcc7">joystick_handle</a></td></tr>
-<tr class="memdesc:a312069202049b5a997de21e7bb9fcc57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a handle to the associated joystick.  <a href="classcen_1_1basic__controller.html#a312069202049b5a997de21e7bb9fcc57">More...</a><br /></td></tr>
-<tr class="separator:a312069202049b5a997de21e7bb9fcc57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ecdc87d890a844aab8432b63593e706"><td class="memTemplParams" colspan="2">template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </td></tr>
-<tr class="memitem:a3ecdc87d890a844aab8432b63593e706"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a3ecdc87d890a844aab8432b63593e706">operator bool</a> () const noexcept</td></tr>
-<tr class="memdesc:a3ecdc87d890a844aab8432b63593e706"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the handle contains a non-null pointer.  <a href="classcen_1_1basic__controller.html#a3ecdc87d890a844aab8432b63593e706">More...</a><br /></td></tr>
-<tr class="separator:a3ecdc87d890a844aab8432b63593e706"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58736996c9d88a7bcd78971a77d26064"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a58736996c9d88a7bcd78971a77d26064">get</a> () const noexcept -&gt; SDL_GameController *</td></tr>
-<tr class="memdesc:a58736996c9d88a7bcd78971a77d26064"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the associated SDL game controller.  <a href="classcen_1_1basic__controller.html#a58736996c9d88a7bcd78971a77d26064">More...</a><br /></td></tr>
-<tr class="separator:a58736996c9d88a7bcd78971a77d26064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac484295c602ee6d0a9ea79cd643a4f22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#ac484295c602ee6d0a9ea79cd643a4f22">set_player_index</a> (const <a class="el" href="classcen_1_1basic__controller.html#a753b138e78077582f65f8e421f49baf9">player_index</a> <a class="el" href="classcen_1_1basic__controller.html#ad444ea027d56fd981f7ca90af27b52b8">index</a>) noexcept</td></tr>
+<tr class="memdesc:ac484295c602ee6d0a9ea79cd643a4f22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the player index associated with the controller.  <a href="classcen_1_1basic__controller.html#ac484295c602ee6d0a9ea79cd643a4f22">More...</a><br /></td></tr>
+<tr class="separator:ac484295c602ee6d0a9ea79cd643a4f22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a04e25f29ae10d491f951fabfcf57fc1a"><td class="memTemplParams" colspan="2">template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </td></tr>
-<tr class="memitem:a04e25f29ae10d491f951fabfcf57fc1a"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a04e25f29ae10d491f951fabfcf57fc1a">from_joystick</a> (const SDL_JoystickID id) -&gt; <a class="el" href="classcen_1_1basic__controller.html">basic_controller</a></td></tr>
-<tr class="memdesc:a04e25f29ae10d491f951fabfcf57fc1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a game controller from an existing joystick ID.  <a href="classcen_1_1basic__controller.html#a04e25f29ae10d491f951fabfcf57fc1a">More...</a><br /></td></tr>
-<tr class="separator:a04e25f29ae10d491f951fabfcf57fc1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33c803416b2d42dbf28087b3e3d5390e"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a33c803416b2d42dbf28087b3e3d5390e">count</a> () noexcept -&gt; int</td></tr>
-<tr class="memdesc:a33c803416b2d42dbf28087b3e3d5390e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the amount of available game controllers on the system.  <a href="classcen_1_1basic__controller.html#a33c803416b2d42dbf28087b3e3d5390e">More...</a><br /></td></tr>
-<tr class="separator:a33c803416b2d42dbf28087b3e3d5390e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47f599d40772eba80e9224dd76bd0797"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a47f599d40772eba80e9224dd76bd0797">get_axis</a> (const <a class="el" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; str) noexcept -&gt; <a class="el" href="group__input.html#ga1e58560c3414740db4b3f78929e9ddc3">controller_axis</a></td></tr>
-<tr class="memdesc:a47f599d40772eba80e9224dd76bd0797"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the axis associated with the specified string.  <a href="classcen_1_1basic__controller.html#a47f599d40772eba80e9224dd76bd0797">More...</a><br /></td></tr>
-<tr class="separator:a47f599d40772eba80e9224dd76bd0797"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a615a7c273ba6353b436684d95db40162"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a615a7c273ba6353b436684d95db40162">get_axis</a> (const std::string &amp;str) noexcept -&gt; <a class="el" href="group__input.html#ga1e58560c3414740db4b3f78929e9ddc3">controller_axis</a></td></tr>
-<tr class="memdesc:a615a7c273ba6353b436684d95db40162"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the axis associated with the specified string.  <a href="classcen_1_1basic__controller.html#a615a7c273ba6353b436684d95db40162">More...</a><br /></td></tr>
-<tr class="separator:a615a7c273ba6353b436684d95db40162"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6bae43b4d3b41ebf6f19e3ba07ba111b"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a6bae43b4d3b41ebf6f19e3ba07ba111b">get_button</a> (const <a class="el" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; str) noexcept -&gt; <a class="el" href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">controller_button</a></td></tr>
-<tr class="memdesc:a6bae43b4d3b41ebf6f19e3ba07ba111b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the button associated with the specified string.  <a href="classcen_1_1basic__controller.html#a6bae43b4d3b41ebf6f19e3ba07ba111b">More...</a><br /></td></tr>
-<tr class="separator:a6bae43b4d3b41ebf6f19e3ba07ba111b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2845563003107acc3c9ac23b8d71016f"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a2845563003107acc3c9ac23b8d71016f">get_button</a> (const std::string &amp;str) noexcept -&gt; <a class="el" href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">controller_button</a></td></tr>
-<tr class="memdesc:a2845563003107acc3c9ac23b8d71016f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the button associated with the specified string.  <a href="classcen_1_1basic__controller.html#a2845563003107acc3c9ac23b8d71016f">More...</a><br /></td></tr>
-<tr class="separator:a2845563003107acc3c9ac23b8d71016f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed149278396ed22b3599a870d6f9ae93"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#aed149278396ed22b3599a870d6f9ae93">stringify</a> (const <a class="el" href="group__input.html#ga1e58560c3414740db4b3f78929e9ddc3">controller_axis</a> axis) noexcept -&gt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a></td></tr>
-<tr class="memdesc:aed149278396ed22b3599a870d6f9ae93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string representation of a controller axis.  <a href="classcen_1_1basic__controller.html#aed149278396ed22b3599a870d6f9ae93">More...</a><br /></td></tr>
-<tr class="separator:aed149278396ed22b3599a870d6f9ae93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed402f79457ac83abfcf77c90192fd35"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#aed402f79457ac83abfcf77c90192fd35">stringify</a> (const <a class="el" href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">controller_button</a> button) noexcept -&gt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a></td></tr>
-<tr class="memdesc:aed402f79457ac83abfcf77c90192fd35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string representation of a controller button.  <a href="classcen_1_1basic__controller.html#aed402f79457ac83abfcf77c90192fd35">More...</a><br /></td></tr>
-<tr class="separator:aed402f79457ac83abfcf77c90192fd35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28edfce715d37ab3b580215ef85ef36f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a28edfce715d37ab3b580215ef85ef36f">update</a> ()</td></tr>
 <tr class="memdesc:a28edfce715d37ab3b580215ef85ef36f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the state of all open game controllers.  <a href="classcen_1_1basic__controller.html#a28edfce715d37ab3b580215ef85ef36f">More...</a><br /></td></tr>
 <tr class="separator:a28edfce715d37ab3b580215ef85ef36f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -231,17 +146,172 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a50a3fe0e7b5f709ec1c99505271f10c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Construction</h2></td></tr>
+<tr class="memitem:acaea0b8626705868318fa1fdf5199e53"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#acaea0b8626705868318fa1fdf5199e53">basic_controller</a> (<a class="el" href="group__core.html#ga00614d944c81543b03c7f2cb202fdc50">maybe_owner</a>&lt; SDL_GameController * &gt; <a class="el" href="group__input.html#gaf9e877696febb889dfde2343a21764a7">controller</a>) noexcept(!detail::is_owning&lt; T &gt;())</td></tr>
+<tr class="memdesc:acaea0b8626705868318fa1fdf5199e53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a game controller from an existing SDL game controller.  <a href="classcen_1_1basic__controller.html#acaea0b8626705868318fa1fdf5199e53">More...</a><br /></td></tr>
+<tr class="separator:acaea0b8626705868318fa1fdf5199e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa91a2d62261fa5acdf099747d0552461"><td class="memTemplParams" colspan="2">template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </td></tr>
+<tr class="memitem:aa91a2d62261fa5acdf099747d0552461"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#aa91a2d62261fa5acdf099747d0552461">basic_controller</a> (const <a class="el" href="group__input.html#gaf9e877696febb889dfde2343a21764a7">controller</a> &amp;<a class="el" href="group__core.html#ga922c9ffa0c4b1b0dcaf50b7c6033a809">owner</a>) noexcept</td></tr>
+<tr class="memdesc:aa91a2d62261fa5acdf099747d0552461"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a handle to an existing controller instance.  <a href="classcen_1_1basic__controller.html#aa91a2d62261fa5acdf099747d0552461">More...</a><br /></td></tr>
+<tr class="separator:aa91a2d62261fa5acdf099747d0552461"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0df2fc568da5bb0a7b775dd1f0f823d2"><td class="memTemplParams" colspan="2">template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a0df2fc568da5bb0a7b775dd1f0f823d2"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a0df2fc568da5bb0a7b775dd1f0f823d2">basic_controller</a> (const int <a class="el" href="classcen_1_1basic__controller.html#ad444ea027d56fd981f7ca90af27b52b8">index</a>=0)</td></tr>
+<tr class="memdesc:a0df2fc568da5bb0a7b775dd1f0f823d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to create a game controller.  <a href="classcen_1_1basic__controller.html#a0df2fc568da5bb0a7b775dd1f0f823d2">More...</a><br /></td></tr>
+<tr class="separator:a0df2fc568da5bb0a7b775dd1f0f823d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04e25f29ae10d491f951fabfcf57fc1a"><td class="memTemplParams" colspan="2">template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a04e25f29ae10d491f951fabfcf57fc1a"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a04e25f29ae10d491f951fabfcf57fc1a">from_joystick</a> (const SDL_JoystickID id) -&gt; <a class="el" href="classcen_1_1basic__controller.html">basic_controller</a></td></tr>
+<tr class="memdesc:a04e25f29ae10d491f951fabfcf57fc1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a game controller from an existing joystick ID.  <a href="classcen_1_1basic__controller.html#a04e25f29ae10d491f951fabfcf57fc1a">More...</a><br /></td></tr>
+<tr class="separator:a04e25f29ae10d491f951fabfcf57fc1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41021177781366483b875521d373aed8"><td class="memTemplParams" colspan="2">template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a41021177781366483b875521d373aed8"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a41021177781366483b875521d373aed8">from_index</a> (const <a class="el" href="classcen_1_1basic__controller.html#a753b138e78077582f65f8e421f49baf9">player_index</a> <a class="el" href="classcen_1_1basic__controller.html#ad444ea027d56fd981f7ca90af27b52b8">index</a>) -&gt; <a class="el" href="classcen_1_1basic__controller.html">basic_controller</a></td></tr>
+<tr class="memdesc:a41021177781366483b875521d373aed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a controller based on a player index.  <a href="classcen_1_1basic__controller.html#a41021177781366483b875521d373aed8">More...</a><br /></td></tr>
+<tr class="separator:a41021177781366483b875521d373aed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Button and axis functions</h2></td></tr>
+<tr class="memitem:a87fdbe4b88af6cf42bd2bbe13d1b01f1"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a87fdbe4b88af6cf42bd2bbe13d1b01f1">get_binding</a> (const <a class="el" href="group__input.html#ga1e58560c3414740db4b3f78929e9ddc3">controller_axis</a> axis) const -&gt; std::optional&lt; SDL_GameControllerButtonBind &gt;</td></tr>
+<tr class="memdesc:a87fdbe4b88af6cf42bd2bbe13d1b01f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bindings for a controller axis.  <a href="classcen_1_1basic__controller.html#a87fdbe4b88af6cf42bd2bbe13d1b01f1">More...</a><br /></td></tr>
+<tr class="separator:a87fdbe4b88af6cf42bd2bbe13d1b01f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65c44e925b80040c0470bcb2579c43ea"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a65c44e925b80040c0470bcb2579c43ea">get_binding</a> (const <a class="el" href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">controller_button</a> button) noexcept -&gt; std::optional&lt; SDL_GameControllerButtonBind &gt;</td></tr>
+<tr class="memdesc:a65c44e925b80040c0470bcb2579c43ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bindings for a controller button.  <a href="classcen_1_1basic__controller.html#a65c44e925b80040c0470bcb2579c43ea">More...</a><br /></td></tr>
+<tr class="separator:a65c44e925b80040c0470bcb2579c43ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8740c91ce917f16fd8954e6964352a3"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#aa8740c91ce917f16fd8954e6964352a3">get_state</a> (const <a class="el" href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">controller_button</a> button) const noexcept -&gt; <a class="el" href="group__input.html#ga5dd9bd35570eae0280744201b0d862cf">button_state</a></td></tr>
+<tr class="memdesc:aa8740c91ce917f16fd8954e6964352a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the state of the specified game controller button.  <a href="classcen_1_1basic__controller.html#aa8740c91ce917f16fd8954e6964352a3">More...</a><br /></td></tr>
+<tr class="separator:aa8740c91ce917f16fd8954e6964352a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecf718650cf316bdbd329de5526ecf9c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#aecf718650cf316bdbd329de5526ecf9c">is_pressed</a> (const <a class="el" href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">controller_button</a> button) const noexcept -&gt; bool</td></tr>
+<tr class="memdesc:aecf718650cf316bdbd329de5526ecf9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates if the specified button is pressed.  <a href="classcen_1_1basic__controller.html#aecf718650cf316bdbd329de5526ecf9c">More...</a><br /></td></tr>
+<tr class="separator:aecf718650cf316bdbd329de5526ecf9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af79619a211965cb8508ca777bcedbb2b"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#af79619a211965cb8508ca777bcedbb2b">is_released</a> (const <a class="el" href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">controller_button</a> button) const noexcept -&gt; bool</td></tr>
+<tr class="memdesc:af79619a211965cb8508ca777bcedbb2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates if the specified button is released.  <a href="classcen_1_1basic__controller.html#af79619a211965cb8508ca777bcedbb2b">More...</a><br /></td></tr>
+<tr class="separator:af79619a211965cb8508ca777bcedbb2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50221768ad255565972eb4485907e329"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a50221768ad255565972eb4485907e329">get_axis</a> (const <a class="el" href="group__input.html#ga1e58560c3414740db4b3f78929e9ddc3">controller_axis</a> axis) const noexcept -&gt; <a class="el" href="group__core.html#ga995971102059bcb96d27921ffb7c4916">i16</a></td></tr>
+<tr class="memdesc:a50221768ad255565972eb4485907e329"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of the specified axis.  <a href="classcen_1_1basic__controller.html#a50221768ad255565972eb4485907e329">More...</a><br /></td></tr>
+<tr class="separator:a50221768ad255565972eb4485907e329"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6037324c13e4ce913de48cc998ec70eb"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a6037324c13e4ce913de48cc998ec70eb">has_axis</a> (const <a class="el" href="group__input.html#ga1e58560c3414740db4b3f78929e9ddc3">controller_axis</a> axis) const noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a6037324c13e4ce913de48cc998ec70eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the controller has the specified axis.  <a href="classcen_1_1basic__controller.html#a6037324c13e4ce913de48cc998ec70eb">More...</a><br /></td></tr>
+<tr class="separator:a6037324c13e4ce913de48cc998ec70eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85f6e2ce3f9787e0e1b0856d44df84bb"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a85f6e2ce3f9787e0e1b0856d44df84bb">has_button</a> (const <a class="el" href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">controller_button</a> button) const noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a85f6e2ce3f9787e0e1b0856d44df84bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the controller has the specified button.  <a href="classcen_1_1basic__controller.html#a85f6e2ce3f9787e0e1b0856d44df84bb">More...</a><br /></td></tr>
+<tr class="separator:a85f6e2ce3f9787e0e1b0856d44df84bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bae43b4d3b41ebf6f19e3ba07ba111b"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a6bae43b4d3b41ebf6f19e3ba07ba111b">get_button</a> (const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; str) noexcept -&gt; <a class="el" href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">controller_button</a></td></tr>
+<tr class="memdesc:a6bae43b4d3b41ebf6f19e3ba07ba111b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the button associated with the specified string.  <a href="classcen_1_1basic__controller.html#a6bae43b4d3b41ebf6f19e3ba07ba111b">More...</a><br /></td></tr>
+<tr class="separator:a6bae43b4d3b41ebf6f19e3ba07ba111b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2845563003107acc3c9ac23b8d71016f"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a2845563003107acc3c9ac23b8d71016f">get_button</a> (const std::string &amp;str) noexcept -&gt; <a class="el" href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">controller_button</a></td></tr>
+<tr class="memdesc:a2845563003107acc3c9ac23b8d71016f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the button associated with the specified string.  <a href="classcen_1_1basic__controller.html#a2845563003107acc3c9ac23b8d71016f">More...</a><br /></td></tr>
+<tr class="separator:a2845563003107acc3c9ac23b8d71016f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed149278396ed22b3599a870d6f9ae93"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#aed149278396ed22b3599a870d6f9ae93">stringify</a> (const <a class="el" href="group__input.html#ga1e58560c3414740db4b3f78929e9ddc3">controller_axis</a> axis) noexcept -&gt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a></td></tr>
+<tr class="memdesc:aed149278396ed22b3599a870d6f9ae93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string representation of a controller axis.  <a href="classcen_1_1basic__controller.html#aed149278396ed22b3599a870d6f9ae93">More...</a><br /></td></tr>
+<tr class="separator:aed149278396ed22b3599a870d6f9ae93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed402f79457ac83abfcf77c90192fd35"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#aed402f79457ac83abfcf77c90192fd35">stringify</a> (const <a class="el" href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">controller_button</a> button) noexcept -&gt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a></td></tr>
+<tr class="memdesc:aed402f79457ac83abfcf77c90192fd35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string representation of a controller button.  <a href="classcen_1_1basic__controller.html#aed402f79457ac83abfcf77c90192fd35">More...</a><br /></td></tr>
+<tr class="separator:aed402f79457ac83abfcf77c90192fd35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47f599d40772eba80e9224dd76bd0797"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a47f599d40772eba80e9224dd76bd0797">get_axis</a> (const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; str) noexcept -&gt; <a class="el" href="group__input.html#ga1e58560c3414740db4b3f78929e9ddc3">controller_axis</a></td></tr>
+<tr class="memdesc:a47f599d40772eba80e9224dd76bd0797"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the axis associated with the specified string.  <a href="classcen_1_1basic__controller.html#a47f599d40772eba80e9224dd76bd0797">More...</a><br /></td></tr>
+<tr class="separator:a47f599d40772eba80e9224dd76bd0797"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a615a7c273ba6353b436684d95db40162"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a615a7c273ba6353b436684d95db40162">get_axis</a> (const std::string &amp;str) noexcept -&gt; <a class="el" href="group__input.html#ga1e58560c3414740db4b3f78929e9ddc3">controller_axis</a></td></tr>
+<tr class="memdesc:a615a7c273ba6353b436684d95db40162"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the axis associated with the specified string.  <a href="classcen_1_1basic__controller.html#a615a7c273ba6353b436684d95db40162">More...</a><br /></td></tr>
+<tr class="separator:a615a7c273ba6353b436684d95db40162"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Rumble functions</h2></td></tr>
+<tr class="memitem:a5b4cff603cee5d045f270dc1cfc442b1"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a5b4cff603cee5d045f270dc1cfc442b1">rumble</a> (const <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a> lo, const <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a> hi, const <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a> &gt; duration) noexcept(noexcept(duration.count())) -&gt; <a class="el" href="classcen_1_1result.html">result</a></td></tr>
+<tr class="memdesc:a5b4cff603cee5d045f270dc1cfc442b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts a rumble effect.  <a href="classcen_1_1basic__controller.html#a5b4cff603cee5d045f270dc1cfc442b1">More...</a><br /></td></tr>
+<tr class="separator:a5b4cff603cee5d045f270dc1cfc442b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6307a480b8f0debcdde05530a7d4497f"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a6307a480b8f0debcdde05530a7d4497f">rumble_triggers</a> (const <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a> lo, const <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a> hi, const <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a> &gt; duration) noexcept(noexcept(duration.count())) -&gt; <a class="el" href="classcen_1_1result.html">result</a></td></tr>
+<tr class="memdesc:a6307a480b8f0debcdde05530a7d4497f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts a rumble effect in the controller's triggers.  <a href="classcen_1_1basic__controller.html#a6307a480b8f0debcdde05530a7d4497f">More...</a><br /></td></tr>
+<tr class="separator:a6307a480b8f0debcdde05530a7d4497f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c5ba9df1fbc2791aecf70727e8476fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a7c5ba9df1fbc2791aecf70727e8476fd">stop_rumble</a> () noexcept</td></tr>
+<tr class="memdesc:a7c5ba9df1fbc2791aecf70727e8476fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops any currently active rumble effect.  <a href="classcen_1_1basic__controller.html#a7c5ba9df1fbc2791aecf70727e8476fd">More...</a><br /></td></tr>
+<tr class="separator:a7c5ba9df1fbc2791aecf70727e8476fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Queries</h2></td></tr>
+<tr class="memitem:a3a900615108d1d3d19b47d4b167ec6aa"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a3a900615108d1d3d19b47d4b167ec6aa">product</a> () const noexcept -&gt; std::optional&lt; <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a> &gt;</td></tr>
+<tr class="memdesc:a3a900615108d1d3d19b47d4b167ec6aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the USB product ID of the controller.  <a href="classcen_1_1basic__controller.html#a3a900615108d1d3d19b47d4b167ec6aa">More...</a><br /></td></tr>
+<tr class="separator:a3a900615108d1d3d19b47d4b167ec6aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9030e4cbcfc41a8f42a3028839dd163"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#af9030e4cbcfc41a8f42a3028839dd163">vendor</a> () const noexcept -&gt; std::optional&lt; <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a> &gt;</td></tr>
+<tr class="memdesc:af9030e4cbcfc41a8f42a3028839dd163"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the USB vendor ID of the controller.  <a href="classcen_1_1basic__controller.html#af9030e4cbcfc41a8f42a3028839dd163">More...</a><br /></td></tr>
+<tr class="separator:af9030e4cbcfc41a8f42a3028839dd163"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0254cf6c1c160c03505cd4fafec19f33"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a0254cf6c1c160c03505cd4fafec19f33">product_version</a> () const noexcept -&gt; std::optional&lt; <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a> &gt;</td></tr>
+<tr class="memdesc:a0254cf6c1c160c03505cd4fafec19f33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the product version of the controller.  <a href="classcen_1_1basic__controller.html#a0254cf6c1c160c03505cd4fafec19f33">More...</a><br /></td></tr>
+<tr class="separator:a0254cf6c1c160c03505cd4fafec19f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e223794e559fa768b2ff892a2bc7b43"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a6e223794e559fa768b2ff892a2bc7b43">serial</a> () const noexcept -&gt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a></td></tr>
+<tr class="memdesc:a6e223794e559fa768b2ff892a2bc7b43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the serial number associated with the controller.  <a href="classcen_1_1basic__controller.html#a6e223794e559fa768b2ff892a2bc7b43">More...</a><br /></td></tr>
+<tr class="separator:a6e223794e559fa768b2ff892a2bc7b43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad444ea027d56fd981f7ca90af27b52b8"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#ad444ea027d56fd981f7ca90af27b52b8">index</a> () const noexcept -&gt; std::optional&lt; <a class="el" href="classcen_1_1basic__controller.html#a753b138e78077582f65f8e421f49baf9">player_index</a> &gt;</td></tr>
+<tr class="memdesc:ad444ea027d56fd981f7ca90af27b52b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the player index associated with the controller.  <a href="classcen_1_1basic__controller.html#ad444ea027d56fd981f7ca90af27b52b8">More...</a><br /></td></tr>
+<tr class="separator:ad444ea027d56fd981f7ca90af27b52b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8c8687007f081a624c696e40a191833"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#aa8c8687007f081a624c696e40a191833">is_connected</a> () const noexcept -&gt; bool</td></tr>
+<tr class="memdesc:aa8c8687007f081a624c696e40a191833"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the game controller is currently connected.  <a href="classcen_1_1basic__controller.html#aa8c8687007f081a624c696e40a191833">More...</a><br /></td></tr>
+<tr class="separator:aa8c8687007f081a624c696e40a191833"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef3bb4538f615f26eadaa0f823bb66ab"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#aef3bb4538f615f26eadaa0f823bb66ab">name</a> () const noexcept -&gt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a></td></tr>
+<tr class="memdesc:aef3bb4538f615f26eadaa0f823bb66ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name associated with the game controller.  <a href="classcen_1_1basic__controller.html#aef3bb4538f615f26eadaa0f823bb66ab">More...</a><br /></td></tr>
+<tr class="separator:aef3bb4538f615f26eadaa0f823bb66ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4ab6e30d1571a15a78f1e4089c4dc12"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#aa4ab6e30d1571a15a78f1e4089c4dc12">type</a> () const noexcept -&gt; <a class="el" href="group__input.html#gafe17aeb9f1085c0ab6485aae5aafc9f6">controller_type</a></td></tr>
+<tr class="memdesc:aa4ab6e30d1571a15a78f1e4089c4dc12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the type of the controller.  <a href="classcen_1_1basic__controller.html#aa4ab6e30d1571a15a78f1e4089c4dc12">More...</a><br /></td></tr>
+<tr class="separator:aa4ab6e30d1571a15a78f1e4089c4dc12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a312069202049b5a997de21e7bb9fcc57"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a312069202049b5a997de21e7bb9fcc57">get_joystick</a> () noexcept -&gt; <a class="el" href="group__input.html#ga7e139596c259b800eaffbec7765cbcc7">joystick_handle</a></td></tr>
+<tr class="memdesc:a312069202049b5a997de21e7bb9fcc57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a handle to the associated joystick.  <a href="classcen_1_1basic__controller.html#a312069202049b5a997de21e7bb9fcc57">More...</a><br /></td></tr>
+<tr class="separator:a312069202049b5a997de21e7bb9fcc57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58736996c9d88a7bcd78971a77d26064"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a58736996c9d88a7bcd78971a77d26064">get</a> () const noexcept -&gt; SDL_GameController *</td></tr>
+<tr class="memdesc:a58736996c9d88a7bcd78971a77d26064"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the associated SDL game controller.  <a href="classcen_1_1basic__controller.html#a58736996c9d88a7bcd78971a77d26064">More...</a><br /></td></tr>
+<tr class="separator:a58736996c9d88a7bcd78971a77d26064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af75060d87a9f5465bafbe3d2c33e0542"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#af75060d87a9f5465bafbe3d2c33e0542">type</a> (const <a class="el" href="classcen_1_1basic__controller.html#aed3107ff802ae58b80cfbb89fc624120">joystick_index</a> <a class="el" href="classcen_1_1basic__controller.html#ad444ea027d56fd981f7ca90af27b52b8">index</a>) noexcept -&gt; <a class="el" href="group__input.html#gafe17aeb9f1085c0ab6485aae5aafc9f6">controller_type</a></td></tr>
+<tr class="memdesc:af75060d87a9f5465bafbe3d2c33e0542"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the type of the controller associated with the specified joystick index.  <a href="classcen_1_1basic__controller.html#af75060d87a9f5465bafbe3d2c33e0542">More...</a><br /></td></tr>
+<tr class="separator:af75060d87a9f5465bafbe3d2c33e0542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33c803416b2d42dbf28087b3e3d5390e"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a33c803416b2d42dbf28087b3e3d5390e">count</a> () noexcept -&gt; int</td></tr>
+<tr class="memdesc:a33c803416b2d42dbf28087b3e3d5390e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the amount of available game controllers on the system.  <a href="classcen_1_1basic__controller.html#a33c803416b2d42dbf28087b3e3d5390e">More...</a><br /></td></tr>
+<tr class="separator:a33c803416b2d42dbf28087b3e3d5390e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Touchpad functions</h2></td></tr>
+<tr class="memitem:a9a471739e2d77863962e092caec79ff3"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a9a471739e2d77863962e092caec79ff3">touchpad_count</a> () const noexcept -&gt; int</td></tr>
+<tr class="memdesc:a9a471739e2d77863962e092caec79ff3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the amount of touchpads on the controller.  <a href="classcen_1_1basic__controller.html#a9a471739e2d77863962e092caec79ff3">More...</a><br /></td></tr>
+<tr class="separator:a9a471739e2d77863962e092caec79ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20db562cfa4c39659a9468e7c2f03b3f"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a20db562cfa4c39659a9468e7c2f03b3f">touchpad_finger_capacity</a> (const int touchpad) const noexcept -&gt; int</td></tr>
+<tr class="memdesc:a20db562cfa4c39659a9468e7c2f03b3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the amount of supported simultaneous fingers for a touchpad.  <a href="classcen_1_1basic__controller.html#a20db562cfa4c39659a9468e7c2f03b3f">More...</a><br /></td></tr>
+<tr class="separator:a20db562cfa4c39659a9468e7c2f03b3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a920d07ba599c96d4fa672d1af617e0d3"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a920d07ba599c96d4fa672d1af617e0d3">touchpad_finger_state</a> (const int touchpad, const int finger) const noexcept -&gt; std::optional&lt; <a class="el" href="structcen_1_1touch_1_1finger__state.html">touch::finger_state</a> &gt;</td></tr>
+<tr class="memdesc:a920d07ba599c96d4fa672d1af617e0d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the state of a finger on a touchpad.  <a href="classcen_1_1basic__controller.html#a920d07ba599c96d4fa672d1af617e0d3">More...</a><br /></td></tr>
+<tr class="separator:a920d07ba599c96d4fa672d1af617e0d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Sensor functions</h2></td></tr>
+<tr class="memitem:ae9b149fa322c571363c346779f579a35"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#ae9b149fa322c571363c346779f579a35">set_sensor_enabled</a> (const <a class="el" href="group__input.html#ga1ce8d8b900d2910ff3605c9cef4b2c3a">sensor_type</a> <a class="el" href="classcen_1_1basic__controller.html#aa4ab6e30d1571a15a78f1e4089c4dc12">type</a>, const bool enabled) noexcept -&gt; <a class="el" href="classcen_1_1result.html">result</a></td></tr>
+<tr class="memdesc:ae9b149fa322c571363c346779f579a35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether or not data reporting is enabled for a sensor.  <a href="classcen_1_1basic__controller.html#ae9b149fa322c571363c346779f579a35">More...</a><br /></td></tr>
+<tr class="separator:ae9b149fa322c571363c346779f579a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb22f33fb6a30a6b1e406a160f7a011a"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#adb22f33fb6a30a6b1e406a160f7a011a">has_sensor</a> (const <a class="el" href="group__input.html#ga1ce8d8b900d2910ff3605c9cef4b2c3a">sensor_type</a> <a class="el" href="classcen_1_1basic__controller.html#aa4ab6e30d1571a15a78f1e4089c4dc12">type</a>) const noexcept -&gt; bool</td></tr>
+<tr class="memdesc:adb22f33fb6a30a6b1e406a160f7a011a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the controller has a sensor.  <a href="classcen_1_1basic__controller.html#adb22f33fb6a30a6b1e406a160f7a011a">More...</a><br /></td></tr>
+<tr class="separator:adb22f33fb6a30a6b1e406a160f7a011a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d128e02e3738436b745233df43ccc9d"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a0d128e02e3738436b745233df43ccc9d">is_sensor_enabled</a> (const <a class="el" href="group__input.html#ga1ce8d8b900d2910ff3605c9cef4b2c3a">sensor_type</a> <a class="el" href="classcen_1_1basic__controller.html#aa4ab6e30d1571a15a78f1e4089c4dc12">type</a>) const noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a0d128e02e3738436b745233df43ccc9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not data reporting is enabled for a sensor.  <a href="classcen_1_1basic__controller.html#a0d128e02e3738436b745233df43ccc9d">More...</a><br /></td></tr>
+<tr class="separator:a0d128e02e3738436b745233df43ccc9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42ecf0b3a0f3ca4200c3cc774868cef1"><td class="memTemplParams" colspan="2">template&lt;std::size_t size&gt; </td></tr>
+<tr class="memitem:a42ecf0b3a0f3ca4200c3cc774868cef1"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a42ecf0b3a0f3ca4200c3cc774868cef1">get_sensor_data</a> (const <a class="el" href="group__input.html#ga1ce8d8b900d2910ff3605c9cef4b2c3a">sensor_type</a> <a class="el" href="classcen_1_1basic__controller.html#aa4ab6e30d1571a15a78f1e4089c4dc12">type</a>) const noexcept -&gt; std::optional&lt; std::array&lt; float, size &gt;&gt;</td></tr>
+<tr class="memdesc:a42ecf0b3a0f3ca4200c3cc774868cef1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the state of the specified sensor.  <a href="classcen_1_1basic__controller.html#a42ecf0b3a0f3ca4200c3cc774868cef1">More...</a><br /></td></tr>
+<tr class="separator:a42ecf0b3a0f3ca4200c3cc774868cef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+LED functions</h2></td></tr>
+<tr class="memitem:ab11cae28afcd983422adc296fc6fe50f"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#ab11cae28afcd983422adc296fc6fe50f">set_led</a> (const <a class="el" href="classcen_1_1color.html">color</a> &amp;<a class="el" href="classcen_1_1color.html">color</a>) noexcept -&gt; <a class="el" href="classcen_1_1result.html">result</a></td></tr>
+<tr class="memdesc:ab11cae28afcd983422adc296fc6fe50f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the color of the associated LED light.  <a href="classcen_1_1basic__controller.html#ab11cae28afcd983422adc296fc6fe50f">More...</a><br /></td></tr>
+<tr class="separator:ab11cae28afcd983422adc296fc6fe50f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a6554753a7c224ac33d7fd831bc6031"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a8a6554753a7c224ac33d7fd831bc6031">has_led</a> () const noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a8a6554753a7c224ac33d7fd831bc6031"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the controller features a LED light.  <a href="classcen_1_1basic__controller.html#a8a6554753a7c224ac33d7fd831bc6031">More...</a><br /></td></tr>
+<tr class="separator:a8a6554753a7c224ac33d7fd831bc6031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 Mapping functions</h2></td></tr>
 <tr class="memitem:a2141d6f01846d15b4c5c14c6e0ce5405"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a2141d6f01846d15b4c5c14c6e0ce5405">mapping</a> () const noexcept -&gt; <a class="el" href="classcen_1_1sdl__string.html">sdl_string</a></td></tr>
 <tr class="memdesc:a2141d6f01846d15b4c5c14c6e0ce5405"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the mapping associated with the controller.  <a href="classcen_1_1basic__controller.html#a2141d6f01846d15b4c5c14c6e0ce5405">More...</a><br /></td></tr>
 <tr class="separator:a2141d6f01846d15b4c5c14c6e0ce5405"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a722690d25aec48bfdca6c018e0ae70f4"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a722690d25aec48bfdca6c018e0ae70f4">add_mapping</a> (const <a class="el" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; <a class="el" href="classcen_1_1basic__controller.html#a2141d6f01846d15b4c5c14c6e0ce5405">mapping</a>) noexcept -&gt; <a class="el" href="classcen_1_1basic__controller.html#abe417bbdffc8ad5e023989a33ecb98eb">mapping_result</a></td></tr>
+<tr class="memitem:a722690d25aec48bfdca6c018e0ae70f4"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a722690d25aec48bfdca6c018e0ae70f4">add_mapping</a> (const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; <a class="el" href="classcen_1_1basic__controller.html#a2141d6f01846d15b4c5c14c6e0ce5405">mapping</a>) noexcept -&gt; <a class="el" href="classcen_1_1basic__controller.html#abe417bbdffc8ad5e023989a33ecb98eb">mapping_result</a></td></tr>
 <tr class="memdesc:a722690d25aec48bfdca6c018e0ae70f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a game controller mapping.  <a href="classcen_1_1basic__controller.html#a722690d25aec48bfdca6c018e0ae70f4">More...</a><br /></td></tr>
 <tr class="separator:a722690d25aec48bfdca6c018e0ae70f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c9483cb534df72418fbe6db58fe8bd2"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a2c9483cb534df72418fbe6db58fe8bd2">add_mapping</a> (const std::string &amp;<a class="el" href="classcen_1_1basic__controller.html#a2141d6f01846d15b4c5c14c6e0ce5405">mapping</a>) noexcept -&gt; <a class="el" href="classcen_1_1basic__controller.html#abe417bbdffc8ad5e023989a33ecb98eb">mapping_result</a></td></tr>
 <tr class="memdesc:a2c9483cb534df72418fbe6db58fe8bd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a game controller mapping.  <a href="classcen_1_1basic__controller.html#a2c9483cb534df72418fbe6db58fe8bd2">More...</a><br /></td></tr>
 <tr class="separator:a2c9483cb534df72418fbe6db58fe8bd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa42a1ff7277a75b452d8992f52f233cb"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#aa42a1ff7277a75b452d8992f52f233cb">load_mappings</a> (const <a class="el" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; <a class="el" href="classcen_1_1file.html">file</a>) noexcept -&gt; std::optional&lt; int &gt;</td></tr>
+<tr class="memitem:aa42a1ff7277a75b452d8992f52f233cb"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#aa42a1ff7277a75b452d8992f52f233cb">load_mappings</a> (const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; <a class="el" href="classcen_1_1file.html">file</a>) noexcept -&gt; std::optional&lt; int &gt;</td></tr>
 <tr class="memdesc:aa42a1ff7277a75b452d8992f52f233cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a set of game controller mappings from a file.  <a href="classcen_1_1basic__controller.html#aa42a1ff7277a75b452d8992f52f233cb">More...</a><br /></td></tr>
 <tr class="separator:aa42a1ff7277a75b452d8992f52f233cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58619c107874b7080fa315053db347ae"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a58619c107874b7080fa315053db347ae">load_mappings</a> (const std::string &amp;<a class="el" href="classcen_1_1file.html">file</a>) noexcept -&gt; std::optional&lt; int &gt;</td></tr>
@@ -256,22 +326,25 @@ Mapping functions</h2></td></tr>
 <tr class="memitem:af72388b94eaae915ca2a9b7b5763ac6f"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#af72388b94eaae915ca2a9b7b5763ac6f">mapping_by_index</a> (const <a class="el" href="classcen_1_1basic__controller.html#a8e5b342890c603175cfeb6b11c826d49">mapping_index</a> <a class="el" href="classcen_1_1basic__controller.html#ad444ea027d56fd981f7ca90af27b52b8">index</a>) noexcept -&gt; <a class="el" href="classcen_1_1sdl__string.html">sdl_string</a></td></tr>
 <tr class="memdesc:af72388b94eaae915ca2a9b7b5763ac6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the mapping at a specific index.  <a href="classcen_1_1basic__controller.html#af72388b94eaae915ca2a9b7b5763ac6f">More...</a><br /></td></tr>
 <tr class="separator:af72388b94eaae915ca2a9b7b5763ac6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea3086cbbd1b7204f2dfcfd078502d99"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#aea3086cbbd1b7204f2dfcfd078502d99">num_mappings</a> () noexcept -&gt; int</td></tr>
-<tr class="memdesc:aea3086cbbd1b7204f2dfcfd078502d99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of installed mappings.  <a href="classcen_1_1basic__controller.html#aea3086cbbd1b7204f2dfcfd078502d99">More...</a><br /></td></tr>
-<tr class="separator:aea3086cbbd1b7204f2dfcfd078502d99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a930594bb6dd8025922891294fdc1c0bf"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a930594bb6dd8025922891294fdc1c0bf">mapping_count</a> () noexcept -&gt; int</td></tr>
+<tr class="memdesc:a930594bb6dd8025922891294fdc1c0bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of installed mappings.  <a href="classcen_1_1basic__controller.html#a930594bb6dd8025922891294fdc1c0bf">More...</a><br /></td></tr>
+<tr class="separator:a930594bb6dd8025922891294fdc1c0bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Conversions</h2></td></tr>
+<tr class="memitem:a3ecdc87d890a844aab8432b63593e706"><td class="memTemplParams" colspan="2">template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a3ecdc87d890a844aab8432b63593e706"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a3ecdc87d890a844aab8432b63593e706">operator bool</a> () const noexcept</td></tr>
+<tr class="memdesc:a3ecdc87d890a844aab8432b63593e706"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the handle contains a non-null pointer.  <a href="classcen_1_1basic__controller.html#a3ecdc87d890a844aab8432b63593e706">More...</a><br /></td></tr>
+<tr class="separator:a3ecdc87d890a844aab8432b63593e706"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Represents a game controller, e.g. an xbox-controller. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">B</td><td><code>std::true_type</code> for owning controllers; <code>std::false_type</code> for non-owning controllers.</td></tr>
-  </table>
-  </dd>
-</dl>
+<div class="textblock"><p>Represents a game controller, e.g. Xbox or Playstation controllers. </p>
+<p>You may need to load appropriate game controller mappings before you can begin using the game controller API with certain controllers. This can be accomplished using the <code><a class="el" href="structcen_1_1hint_1_1controller_1_1config__file.html">cen::hint::controller::config_file</a></code> hint, or the <code><a class="el" href="classcen_1_1basic__controller.html#aa42a1ff7277a75b452d8992f52f233cb" title="Loads a set of game controller mappings from a file.">load_mappings()</a></code> and <code><a class="el" href="classcen_1_1basic__controller.html#a722690d25aec48bfdca6c018e0ae70f4" title="Adds a game controller mapping.">add_mapping()</a></code> functions.</p>
+<p>For a community managed database file of game controller mappings, see <code><a href="https://github.com/gabomdq/SDL_GameControllerDB">https://github.com/gabomdq/SDL_GameControllerDB</a></code> (if the link doesn’t work for some reason, you should be able to find a copy in the Centurion test resources folder).</p>
 <dl class="section since"><dt>Since</dt><dd>5.0.0</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__input.html#gaf9e877696febb889dfde2343a21764a7" title="Represents an owning game controller.">controller</a> </dd>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="group__input.html#gaf9e877696febb889dfde2343a21764a7" title="Represents an owning game controller.">controller</a></code> </dd>
 <dd>
-<a class="el" href="group__input.html#ga1476814bb2dcf0ff6e37af4dbe5736bd" title="Represents a non-owning game controller.">controller_handle</a> </dd></dl>
+<code><a class="el" href="group__input.html#ga1476814bb2dcf0ff6e37af4dbe5736bd" title="Represents a non-owning game controller.">controller_handle</a></code> </dd></dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="aed3107ff802ae58b80cfbb89fc624120"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aed3107ff802ae58b80cfbb89fc624120">&#9670;&nbsp;</a></span>joystick_index</h2>
@@ -350,8 +423,8 @@ Mapping functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="adbdbfcc5d753865bc41c3c8273cac94e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adbdbfcc5d753865bc41c3c8273cac94e">&#9670;&nbsp;</a></span>basic_controller() <span class="overload">[1/3]</span></h2>
+<a id="acaea0b8626705868318fa1fdf5199e53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaea0b8626705868318fa1fdf5199e53">&#9670;&nbsp;</a></span>basic_controller() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -362,7 +435,7 @@ Mapping functions</h2></td></tr>
         <tr>
           <td class="memname">cen::basic_controller::basic_controller </td>
           <td>(</td>
-          <td class="paramtype">SDL_GameController *&#160;</td>
+          <td class="paramtype"><a class="el" href="group__core.html#ga00614d944c81543b03c7f2cb202fdc50">maybe_owner</a>&lt; SDL_GameController * &gt;&#160;</td>
           <td class="paramname"><em>controller</em></td><td>)</td>
           <td></td>
         </tr>
@@ -392,7 +465,7 @@ Mapping functions</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
+template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -429,7 +502,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
+template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -482,7 +555,7 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
         <tr>
           <td class="memname">static auto cen::basic_controller::add_mapping </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
           <td class="paramname"><em>mapping</em></td><td>)</td>
           <td> -&gt; <a class="el" href="classcen_1_1basic__controller.html#abe417bbdffc8ad5e023989a33ecb98eb">mapping_result</a>
   </td>
@@ -574,13 +647,58 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
 
 </div>
 </div>
+<a id="a41021177781366483b875521d373aed8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41021177781366483b875521d373aed8">&#9670;&nbsp;</a></span>from_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto cen::basic_controller::from_index </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__controller.html#a753b138e78077582f65f8e421f49baf9">player_index</a>&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1basic__controller.html">basic_controller</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a controller based on a player index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the player index of the game controller.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a game controller associated with the specified player index.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classcen_1_1sdl__error.html" title="Represents an error related to the core SDL2 library.">sdl_error</a></td><td>if the game controller cannot be created.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
 <a id="a04e25f29ae10d491f951fabfcf57fc1a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a04e25f29ae10d491f951fabfcf57fc1a">&#9670;&nbsp;</a></span>from_joystick()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
+template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -665,7 +783,7 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="group__input.html#ga1e58560c3414740db4b3f78929e9ddc3">controller_axis</a>&#160;</td>
           <td class="paramname"><em>axis</em></td><td>)</td>
-          <td> const -&gt; <a class="el" href="namespacecen.html#a42a54ea1f9c6ddee9f2431fc572f5a54">i16</a>
+          <td> const -&gt; <a class="el" href="group__core.html#ga995971102059bcb96d27921ffb7c4916">i16</a>
   </td>
         </tr>
       </table>
@@ -700,7 +818,7 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
         <tr>
           <td class="memname">static auto cen::basic_controller::get_axis </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
           <td class="paramname"><em>str</em></td><td>)</td>
           <td> -&gt; <a class="el" href="group__input.html#ga1e58560c3414740db4b3f78929e9ddc3">controller_axis</a>
   </td>
@@ -850,7 +968,7 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
         <tr>
           <td class="memname">static auto cen::basic_controller::get_button </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
           <td class="paramname"><em>str</em></td><td>)</td>
           <td> -&gt; <a class="el" href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">controller_button</a>
   </td>
@@ -942,6 +1060,51 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
 
 </div>
 </div>
+<a id="a42ecf0b3a0f3ca4200c3cc774868cef1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42ecf0b3a0f3ca4200c3cc774868cef1">&#9670;&nbsp;</a></span>get_sensor_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;std::size_t size&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::basic_controller::get_sensor_data </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__input.html#ga1ce8d8b900d2910ff3605c9cef4b2c3a">sensor_type</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td> const -&gt; std::optional&lt;std::array&lt;float, size&gt;&gt;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the state of the specified sensor. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">size</td><td>the amount of data elements.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>the type of the sensor that will be queried.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the sensor data; <code>std::nullopt</code> if something went wrong.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
 <a id="aa8740c91ce917f16fd8954e6964352a3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa8740c91ce917f16fd8954e6964352a3">&#9670;&nbsp;</a></span>get_state()</h2>
 
@@ -956,7 +1119,7 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">controller_button</a>&#160;</td>
           <td class="paramname"><em>button</em></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__input.html#ga21851ef682ba58611f9c67b3893c4bf2">button_state</a>
+          <td> const -&gt; <a class="el" href="group__input.html#ga5dd9bd35570eae0280744201b0d862cf">button_state</a>
   </td>
         </tr>
       </table>
@@ -976,6 +1139,141 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the current button state of the specified button.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a6037324c13e4ce913de48cc998ec70eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6037324c13e4ce913de48cc998ec70eb">&#9670;&nbsp;</a></span>has_axis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::basic_controller::has_axis </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__input.html#ga1e58560c3414740db4b3f78929e9ddc3">controller_axis</a>&#160;</td>
+          <td class="paramname"><em>axis</em></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the controller has the specified axis. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the controller has the specified axis; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a85f6e2ce3f9787e0e1b0856d44df84bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85f6e2ce3f9787e0e1b0856d44df84bb">&#9670;&nbsp;</a></span>has_button()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::basic_controller::has_button </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">controller_button</a>&#160;</td>
+          <td class="paramname"><em>button</em></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the controller has the specified button. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button</td><td>the button that will be checked.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the controller features the specified button; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a8a6554753a7c224ac33d7fd831bc6031"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a6554753a7c224ac33d7fd831bc6031">&#9670;&nbsp;</a></span>has_led()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::basic_controller::has_led </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the controller features a LED light. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the controller features a LED light; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="adb22f33fb6a30a6b1e406a160f7a011a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb22f33fb6a30a6b1e406a160f7a011a">&#9670;&nbsp;</a></span>has_sensor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::basic_controller::has_sensor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__input.html#ga1ce8d8b900d2910ff3605c9cef4b2c3a">sensor_type</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the controller has a sensor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>the type of the sensor to look for.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the controller has the specified sensor; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
 
 </div>
 </div>
@@ -1144,6 +1442,43 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
 
 </div>
 </div>
+<a id="a0d128e02e3738436b745233df43ccc9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d128e02e3738436b745233df43ccc9d">&#9670;&nbsp;</a></span>is_sensor_enabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::basic_controller::is_sensor_enabled </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__input.html#ga1ce8d8b900d2910ff3605c9cef4b2c3a">sensor_type</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not data reporting is enabled for a sensor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>the type of the sensor that will be queried.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if data reporting is enabled for the sensor; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
 <a id="abb86a5f16f79a718a343472d11080291"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abb86a5f16f79a718a343472d11080291">&#9670;&nbsp;</a></span>is_supported()</h2>
 
@@ -1193,7 +1528,7 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
         <tr>
           <td class="memname">static auto cen::basic_controller::load_mappings </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
           <td class="paramname"><em>file</em></td><td>)</td>
           <td> -&gt; std::optional&lt;int&gt;
   </td>
@@ -1402,8 +1737,8 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
 
 </div>
 </div>
-<a id="aef3bb4538f615f26eadaa0f823bb66ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef3bb4538f615f26eadaa0f823bb66ab">&#9670;&nbsp;</a></span>name()</h2>
+<a id="a930594bb6dd8025922891294fdc1c0bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a930594bb6dd8025922891294fdc1c0bf">&#9670;&nbsp;</a></span>mapping_count()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1412,38 +1747,7 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::basic_controller::name </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the name associated with the game controller. </p>
-<dl class="section note"><dt>Note</dt><dd>This function might return a null pointer if there is no name associated with the game controller.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>the name of the game controller, might be null.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="aea3086cbbd1b7204f2dfcfd078502d99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea3086cbbd1b7204f2dfcfd078502d99">&#9670;&nbsp;</a></span>num_mappings()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto cen::basic_controller::num_mappings </td>
+          <td class="memname">static auto cen::basic_controller::mapping_count </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> -&gt; int
@@ -1463,13 +1767,44 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
 
 </div>
 </div>
+<a id="aef3bb4538f615f26eadaa0f823bb66ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef3bb4538f615f26eadaa0f823bb66ab">&#9670;&nbsp;</a></span>name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::basic_controller::name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the name associated with the game controller. </p>
+<dl class="section note"><dt>Note</dt><dd>This function might return a null pointer if there is no name associated with the game controller.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the name of the game controller, might be null.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
 <a id="a3ecdc87d890a844aab8432b63593e706"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3ecdc87d890a844aab8432b63593e706">&#9670;&nbsp;</a></span>operator bool()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
+template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1507,7 +1842,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
           <td class="memname">auto cen::basic_controller::product </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; std::optional&lt;<a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a>&gt;
+          <td> const -&gt; std::optional&lt;<a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&gt;
   </td>
         </tr>
       </table>
@@ -1537,7 +1872,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
           <td class="memname">auto cen::basic_controller::product_version </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; std::optional&lt;<a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a>&gt;
+          <td> const -&gt; std::optional&lt;<a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&gt;
   </td>
         </tr>
       </table>
@@ -1554,8 +1889,8 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 
 </div>
 </div>
-<a id="a1d880ef79485e3f0f0e6bc00d5c04f19"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d880ef79485e3f0f0e6bc00d5c04f19">&#9670;&nbsp;</a></span>rumble()</h2>
+<a id="a5b4cff603cee5d045f270dc1cfc442b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b4cff603cee5d045f270dc1cfc442b1">&#9670;&nbsp;</a></span>rumble()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1566,31 +1901,31 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
         <tr>
           <td class="memname">auto cen::basic_controller::rumble </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&#160;</td>
           <td class="paramname"><em>lo</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&#160;</td>
           <td class="paramname"><em>hi</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#aeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="namespacecen.html#ad1dcf848a9ee33237a96cde6b5a1d466">u32</a> &gt;&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a> &gt;&#160;</td>
           <td class="paramname"><em>duration</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td> -&gt; bool
+          <td></td><td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
   </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1606,7 +1941,166 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> on success; <code>false</code> otherwise.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the rumble is successful; <code>failure</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a6307a480b8f0debcdde05530a7d4497f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6307a480b8f0debcdde05530a7d4497f">&#9670;&nbsp;</a></span>rumble_triggers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::basic_controller::rumble_triggers </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&#160;</td>
+          <td class="paramname"><em>lo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&#160;</td>
+          <td class="paramname"><em>hi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a> &gt;&#160;</td>
+          <td class="paramname"><em>duration</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Starts a rumble effect in the controller's triggers. </p>
+<p>Calls to this function cancels any previously active rumble effect. Furthermore, supplying 0 as intensities will stop the rumble effect.</p>
+<dl class="section note"><dt>Note</dt><dd>This function has no effect if rumbling isn't supported by the controller.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lo</td><td>the intensity of the low frequency motor. </td></tr>
+    <tr><td class="paramname">hi</td><td>the intensity of the high frequency motor. </td></tr>
+    <tr><td class="paramname">duration</td><td>the duration of the rumble effect.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the rumble is successful; <code>failure</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a6e223794e559fa768b2ff892a2bc7b43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e223794e559fa768b2ff892a2bc7b43">&#9670;&nbsp;</a></span>serial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::basic_controller::serial </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the serial number associated with the controller. </p>
+<dl class="section return"><dt>Returns</dt><dd>the serial number associated with the controller; a null pointer if no serial number is available.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="ab11cae28afcd983422adc296fc6fe50f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab11cae28afcd983422adc296fc6fe50f">&#9670;&nbsp;</a></span>set_led()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::basic_controller::set_led </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1color.html">color</a> &amp;&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the color of the associated LED light. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>the new color of the controller's LED.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the color of the LED was set; <code>failure</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="ac484295c602ee6d0a9ea79cd643a4f22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac484295c602ee6d0a9ea79cd643a4f22">&#9670;&nbsp;</a></span>set_player_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::basic_controller::set_player_index </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__controller.html#a753b138e78077582f65f8e421f49baf9">player_index</a>&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the player index associated with the controller. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the player index that will be used.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
@@ -1644,6 +2138,54 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
   </dd>
 </dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ae9b149fa322c571363c346779f579a35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9b149fa322c571363c346779f579a35">&#9670;&nbsp;</a></span>set_sensor_enabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::basic_controller::set_sensor_enabled </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__input.html#ga1ce8d8b900d2910ff3605c9cef4b2c3a">sensor_type</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>enabled</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets whether or not data reporting is enabled for a sensor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>the type of the sensor that will be changed. </td></tr>
+    <tr><td class="paramname">enabled</td><td><code>true</code> if data reporting should be enabled; <code>false</code> otherwise.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the sensor was successfully enabled or disabled; <code>failure</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
 
 </div>
 </div>
@@ -1689,7 +2231,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="group__input.html#ga1e58560c3414740db4b3f78929e9ddc3">controller_axis</a>&#160;</td>
           <td class="paramname"><em>axis</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a>
+          <td> -&gt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a>
   </td>
         </tr>
       </table>
@@ -1726,7 +2268,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">controller_button</a>&#160;</td>
           <td class="paramname"><em>button</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a>
+          <td> -&gt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a>
   </td>
         </tr>
       </table>
@@ -1745,6 +2287,188 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a string that represents the button, might be null.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a9a471739e2d77863962e092caec79ff3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a471739e2d77863962e092caec79ff3">&#9670;&nbsp;</a></span>touchpad_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::basic_controller::touchpad_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; int
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the amount of touchpads on the controller. </p>
+<dl class="section return"><dt>Returns</dt><dd>the amount of touchpads on the controller.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a20db562cfa4c39659a9468e7c2f03b3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20db562cfa4c39659a9468e7c2f03b3f">&#9670;&nbsp;</a></span>touchpad_finger_capacity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::basic_controller::touchpad_finger_capacity </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>touchpad</em></td><td>)</td>
+          <td> const -&gt; int
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the amount of supported simultaneous fingers for a touchpad. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">touchpad</td><td>the index associated with the touchpad that will be queried.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the maximum amount of supported simultaneous fingers for the specified touchpad.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a920d07ba599c96d4fa672d1af617e0d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a920d07ba599c96d4fa672d1af617e0d3">&#9670;&nbsp;</a></span>touchpad_finger_state()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::basic_controller::touchpad_finger_state </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>touchpad</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>finger</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const -&gt; std::optional&lt;<a class="el" href="structcen_1_1touch_1_1finger__state.html">touch::finger_state</a>&gt;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the state of a finger on a touchpad. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">touchpad</td><td>the touchpad to query. </td></tr>
+    <tr><td class="paramname">finger</td><td>the index of the finger that will be queried.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the current state of a touchpad finger; <code>std::nullopt</code> if something goes wrong.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="aa4ab6e30d1571a15a78f1e4089c4dc12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4ab6e30d1571a15a78f1e4089c4dc12">&#9670;&nbsp;</a></span>type() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::basic_controller::type </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__input.html#gafe17aeb9f1085c0ab6485aae5aafc9f6">controller_type</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the type of the controller. </p>
+<dl class="section return"><dt>Returns</dt><dd>the type of the controller.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="af75060d87a9f5465bafbe3d2c33e0542"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af75060d87a9f5465bafbe3d2c33e0542">&#9670;&nbsp;</a></span>type() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto cen::basic_controller::type </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__controller.html#aed3107ff802ae58b80cfbb89fc624120">joystick_index</a>&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__input.html#gafe17aeb9f1085c0ab6485aae5aafc9f6">controller_type</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the type of the controller associated with the specified joystick index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the joystick index of the desired game controller.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the type of the game controller associated with the index.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
@@ -1791,7 +2515,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
           <td class="memname">auto cen::basic_controller::vendor </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; std::optional&lt;<a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a>&gt;
+          <td> const -&gt; std::optional&lt;<a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&gt;
   </td>
         </tr>
       </table>
@@ -1809,7 +2533,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/centurion/<a class="el" href="controller_8hpp_source.html">controller.hpp</a></li>
+<li>src/centurion/input/<a class="el" href="controller_8hpp_source.html">controller.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

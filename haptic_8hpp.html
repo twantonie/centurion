@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/haptic.hpp File Reference</title>
+        <title>Centurion: src/centurion/input/haptic.hpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_7cbddb6c5dd5dfebc4ed1b9c679e311f.html">input</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -106,17 +106,18 @@ $(function() {
 <code>#include &lt;ostream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;type_traits&gt;</code><br />
-<code>#include &quot;<a class="el" href="centurion__cfg_8hpp_source.html">centurion_cfg.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="czstring_8hpp_source.html">czstring.hpp</a>&quot;</code><br />
-<code>#include &quot;detail/address_of.hpp&quot;</code><br />
-<code>#include &quot;detail/clamp.hpp&quot;</code><br />
-<code>#include &quot;detail/max.hpp&quot;</code><br />
-<code>#include &quot;detail/owner_handle_api.hpp&quot;</code><br />
-<code>#include &quot;<a class="el" href="exception_8hpp_source.html">exception.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="integers_8hpp_source.html">integers.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="czstring_8hpp_source.html">../core/czstring.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="exception_8hpp_source.html">../core/exception.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="integers_8hpp_source.html">../core/integers.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="owner_8hpp_source.html">../core/owner.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="result_8hpp_source.html">../core/result.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="time_8hpp_source.html">../core/time.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="address__of_8hpp_source.html">../detail/address_of.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="clamp_8hpp_source.html">../detail/clamp.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="max_8hpp_source.html">../detail/max.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="owner__handle__api_8hpp_source.html">../detail/owner_handle_api.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="vector3_8hpp_source.html">../math/vector3.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="joystick_8hpp_source.html">joystick.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="time_8hpp_source.html">time.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="vector3_8hpp_source.html">vector3.hpp</a>&quot;</code><br />
 </div>
 <p><a href="haptic_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -161,10 +162,10 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ga57c448dc202d7094593f9954be538cf4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga57c448dc202d7094593f9954be538cf4">cen::haptic</a> = basic_haptic&lt; std::true_type &gt;</td></tr>
+<tr class="memitem:ga57c448dc202d7094593f9954be538cf4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga57c448dc202d7094593f9954be538cf4">cen::haptic</a> = basic_haptic&lt; detail::owning_type &gt;</td></tr>
 <tr class="memdesc:ga57c448dc202d7094593f9954be538cf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an owning haptic device.  <a href="group__input.html#ga57c448dc202d7094593f9954be538cf4">More...</a><br /></td></tr>
 <tr class="separator:ga57c448dc202d7094593f9954be538cf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga54a655a5e60e889dd0e0d8df765d4d1f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga54a655a5e60e889dd0e0d8df765d4d1f">cen::haptic_handle</a> = basic_haptic&lt; std::false_type &gt;</td></tr>
+<tr class="memitem:ga54a655a5e60e889dd0e0d8df765d4d1f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga54a655a5e60e889dd0e0d8df765d4d1f">cen::haptic_handle</a> = basic_haptic&lt; detail::handle_type &gt;</td></tr>
 <tr class="memdesc:ga54a655a5e60e889dd0e0d8df765d4d1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a non-owning haptic device.  <a href="group__input.html#ga54a655a5e60e889dd0e0d8df765d4d1f">More...</a><br /></td></tr>
 <tr class="separator:ga54a655a5e60e889dd0e0d8df765d4d1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -219,14 +220,14 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gae2814a3f602ceb5581681e2b191ae747"><td class="memTemplParams" colspan="2">template&lt;typename B &gt; </td></tr>
-<tr class="memitem:gae2814a3f602ceb5581681e2b191ae747"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__input.html#gae2814a3f602ceb5581681e2b191ae747">cen::to_string</a> (const basic_haptic&lt; B &gt; &amp;haptic) -&gt; std::string</td></tr>
-<tr class="memdesc:gae2814a3f602ceb5581681e2b191ae747"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a textual representation of a haptic device.  <a href="group__input.html#gae2814a3f602ceb5581681e2b191ae747">More...</a><br /></td></tr>
-<tr class="separator:gae2814a3f602ceb5581681e2b191ae747"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga66b612b3b6cf6394b03715ab70a7784b"><td class="memTemplParams" colspan="2">template&lt;typename B &gt; </td></tr>
-<tr class="memitem:ga66b612b3b6cf6394b03715ab70a7784b"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__input.html#ga66b612b3b6cf6394b03715ab70a7784b">cen::operator&lt;&lt;</a> (std::ostream &amp;stream, const basic_haptic&lt; B &gt; &amp;haptic) -&gt; std::ostream &amp;</td></tr>
-<tr class="memdesc:ga66b612b3b6cf6394b03715ab70a7784b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a textual representation of a haptic device using a stream.  <a href="group__input.html#ga66b612b3b6cf6394b03715ab70a7784b">More...</a><br /></td></tr>
-<tr class="separator:ga66b612b3b6cf6394b03715ab70a7784b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1368a81322e18cf8d70a16abb6649d9e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga1368a81322e18cf8d70a16abb6649d9e"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__input.html#ga1368a81322e18cf8d70a16abb6649d9e">cen::to_string</a> (const basic_haptic&lt; T &gt; &amp;haptic) -&gt; std::string</td></tr>
+<tr class="memdesc:ga1368a81322e18cf8d70a16abb6649d9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a textual representation of a haptic device.  <a href="group__input.html#ga1368a81322e18cf8d70a16abb6649d9e">More...</a><br /></td></tr>
+<tr class="separator:ga1368a81322e18cf8d70a16abb6649d9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad66c417c9f0c9ea90e235f7eba79924e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:gad66c417c9f0c9ea90e235f7eba79924e"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__input.html#gad66c417c9f0c9ea90e235f7eba79924e">cen::operator&lt;&lt;</a> (std::ostream &amp;stream, const basic_haptic&lt; T &gt; &amp;haptic) -&gt; std::ostream &amp;</td></tr>
+<tr class="memdesc:gad66c417c9f0c9ea90e235f7eba79924e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a textual representation of a haptic device using a stream.  <a href="group__input.html#gad66c417c9f0c9ea90e235f7eba79924e">More...</a><br /></td></tr>
+<tr class="separator:gad66c417c9f0c9ea90e235f7eba79924e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>

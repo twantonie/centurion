@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/screen.hpp Source File</title>
+        <title>Centurion: src/centurion/video/screen.hpp Source File</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_b630b0fc10333b78f2ff60d8d1210ae7.html">video</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -100,236 +100,266 @@ $(function() {
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;optional&gt;</span>  <span class="comment">// optional</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="area_8hpp.html">area.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="centurion__cfg_8hpp.html">centurion_cfg.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="czstring_8hpp.html">czstring.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../core/czstring.hpp&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../math/area.hpp&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../math/rect.hpp&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pixel__format_8hpp.html">pixel_format.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="rect_8hpp.html">rect.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#ifdef CENTURION_USE_PRAGMA_ONCE</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif  // CENTURION_USE_PRAGMA_ONCE</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecen.html">cen</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecen_1_1screen.html">cen::screen</a> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structcen_1_1dpi__info.html">   25</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structcen_1_1dpi__info.html">dpi_info</a> final</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structcen_1_1dpi__info.html#a2c0a135d274c19c6452f161e67ec51b6">   27</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="structcen_1_1dpi__info.html#a2c0a135d274c19c6452f161e67ec51b6">diagonal</a>{};    </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structcen_1_1dpi__info.html#aa86c20919b6a0529c8a78730c837bd6b">   28</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="structcen_1_1dpi__info.html#aa86c20919b6a0529c8a78730c837bd6b">horizontal</a>{};  </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structcen_1_1dpi__info.html#ae06c2d167f322d2d656ba91ee4b01440">   29</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="structcen_1_1dpi__info.html#ae06c2d167f322d2d656ba91ee4b01440">vertical</a>{};    </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="structcen_1_1screen_1_1dpi__info.html">   42</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structcen_1_1screen_1_1dpi__info.html">dpi_info</a> final</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="structcen_1_1screen_1_1dpi__info.html#ab018a31573e9fc5ac83221cb67b4f971">   44</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="structcen_1_1screen_1_1dpi__info.html#ab018a31573e9fc5ac83221cb67b4f971">diagonal</a>{};    </div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="structcen_1_1screen_1_1dpi__info.html#afefb23dd82352a65be66b599e2bde94b">   45</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="structcen_1_1screen_1_1dpi__info.html#afefb23dd82352a65be66b599e2bde94b">horizontal</a>{};  </div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="structcen_1_1screen_1_1dpi__info.html#a0fafdfee75bb0f5fa406b51d59859307">   46</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="structcen_1_1screen_1_1dpi__info.html#a0fafdfee75bb0f5fa406b51d59859307">vertical</a>{};    </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;};</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="namespacecen_1_1screen.html#a68276042dfa7ef0d9d1cca9299d40893">   60</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="namespacecen_1_1screen.html#a68276042dfa7ef0d9d1cca9299d40893">orientation</a></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <a class="code" href="namespacecen_1_1screen.html#a68276042dfa7ef0d9d1cca9299d40893aad921d60486366258809553a3db49a4a">unknown</a> = SDL_ORIENTATION_UNKNOWN,</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <a class="code" href="namespacecen_1_1screen.html#a68276042dfa7ef0d9d1cca9299d40893a992763c3260eacff8cdc4c8bba147554">landscape</a> = SDL_ORIENTATION_LANDSCAPE,</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <a class="code" href="namespacecen_1_1screen.html#a68276042dfa7ef0d9d1cca9299d40893aff102c247c34723ae6593dd5f51a2048">landscape_flipped</a> = SDL_ORIENTATION_LANDSCAPE_FLIPPED,</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <a class="code" href="namespacecen_1_1screen.html#a68276042dfa7ef0d9d1cca9299d40893aad9b8a7b14ee53434eba710fb4086cb4">portrait</a> = SDL_ORIENTATION_PORTRAIT,</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <a class="code" href="namespacecen_1_1screen.html#a68276042dfa7ef0d9d1cca9299d40893aaf1789cfe9f79a7deaf0fee72ccd3d7e">portrait_flipped</a> = SDL_ORIENTATION_PORTRAIT_FLIPPED</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;};</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="namespacecen_1_1screen.html#ae807248766bc5d4d1be8aca673b928db">   82</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1screen.html#ae807248766bc5d4d1be8aca673b928db">dpi</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> displayIndex = 0)</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    -&gt; std::optional&lt;dpi_info&gt;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <a class="code" href="structcen_1_1screen_1_1dpi__info.html">dpi_info</a> info{};</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> res = SDL_GetDisplayDPI(displayIndex,</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                                     &amp;info.diagonal,</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                                     &amp;info.horizontal,</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                                     &amp;info.vertical);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keywordflow">if</span> (res == 0)</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">return</span> info;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  }</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  {</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">return</span> std::nullopt;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  }</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="namespacecen_1_1screen.html#a1e1c88e0672d85b1c45ff0fdff32e80f">  111</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1screen.html#a1e1c88e0672d85b1c45ff0fdff32e80f">vertical_dpi</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> displayIndex = 0)</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    -&gt; std::optional&lt;float&gt;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;{</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keywordtype">float</span> vertical{};</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> res = SDL_GetDisplayDPI(displayIndex, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>, &amp;vertical);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keywordflow">if</span> (res == 0)</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  {</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">return</span> vertical;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  }</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  {</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">return</span> std::nullopt;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  }</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
-<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="namespacecen_1_1screen.html#a5909b18d82cde14e2479ec318de509db">  137</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1screen.html#a5909b18d82cde14e2479ec318de509db">diagonal_dpi</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> displayIndex = 0)</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    -&gt; std::optional&lt;float&gt;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;{</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  <span class="keywordtype">float</span> diagonal{};</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> res = SDL_GetDisplayDPI(displayIndex, &amp;diagonal, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keywordflow">if</span> (res == 0)</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  {</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">return</span> diagonal;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  }</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  {</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordflow">return</span> std::nullopt;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  }</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;}</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
-<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="namespacecen_1_1screen.html#a37350a15e28cb06ecaf25eb3245b6a60">  163</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1screen.html#a37350a15e28cb06ecaf25eb3245b6a60">horizontal_dpi</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> displayIndex = 0)</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    -&gt; std::optional&lt;float&gt;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;{</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keywordtype">float</span> horizontal{};</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  <span class="keywordflow">if</span> (!SDL_GetDisplayDPI(displayIndex, <span class="keyword">nullptr</span>, &amp;horizontal, <span class="keyword">nullptr</span>))</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  {</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordflow">return</span> horizontal;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  }</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  {</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordflow">return</span> std::nullopt;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  }</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;}</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
-<div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="namespacecen_1_1screen.html#a3b04a5b68180d7b1e3bbf52fda2634b4">  190</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1screen.html#a3b04a5b68180d7b1e3bbf52fda2634b4">bounds</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> displayIndex = 0)</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    -&gt; std::optional&lt;irect&gt;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;{</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  <a class="code" href="classcen_1_1basic__rect.html">irect</a> result{};</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <span class="keywordflow">if</span> (SDL_GetDisplayBounds(displayIndex, &amp;result.get()) == 0)</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  {</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  }</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  {</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordflow">return</span> std::nullopt;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  }</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;}</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
-<div class="line"><a name="l00217"></a><span class="lineno"><a class="line" href="namespacecen_1_1screen.html#aa8d6f5b307c49ddee53fb3b87397b6c4">  217</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1screen.html#aa8d6f5b307c49ddee53fb3b87397b6c4">usable_bounds</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> displayIndex = 0)</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    -&gt; std::optional&lt;irect&gt;</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;{</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  <a class="code" href="classcen_1_1basic__rect.html">irect</a> result{};</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  <span class="keywordflow">if</span> (SDL_GetDisplayUsableBounds(displayIndex, &amp;result.get()) == 0)</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  {</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  }</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  {</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordflow">return</span> std::nullopt;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  }</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;}</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
-<div class="line"><a name="l00241"></a><span class="lineno"><a class="line" href="namespacecen_1_1screen.html#a6bf7bde66b990de6ae66741950e24a78">  241</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1screen.html#a6bf7bde66b990de6ae66741950e24a78">get_orientation</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> displayIndex = 0)</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    -&gt; <a class="code" href="namespacecen_1_1screen.html#a68276042dfa7ef0d9d1cca9299d40893">orientation</a></div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;{</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> result = SDL_GetDisplayOrientation(displayIndex);</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="namespacecen_1_1screen.html#a68276042dfa7ef0d9d1cca9299d40893">orientation</a><span class="keyword">&gt;</span>(result);</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;}</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
-<div class="line"><a name="l00255"></a><span class="lineno"><a class="line" href="namespacecen_1_1screen.html#a159052259e55698ab0777b9cad40ddd2">  255</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1screen.html#a159052259e55698ab0777b9cad40ddd2">amount</a>() noexcept -&gt; <span class="keywordtype">int</span></div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;{</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  <span class="keywordflow">return</span> SDL_GetNumVideoDisplays();</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;}</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
-<div class="line"><a name="l00270"></a><span class="lineno"><a class="line" href="namespacecen_1_1screen.html#a225035234aee8c2950b2e8e22315a160">  270</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1screen.html#a225035234aee8c2950b2e8e22315a160">name</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> displayIndex = 0) noexcept -&gt; <a class="code" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a></div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;{</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  <span class="keywordflow">return</span> SDL_GetDisplayName(displayIndex);</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;}</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
-<div class="line"><a name="l00284"></a><span class="lineno"><a class="line" href="namespacecen_1_1screen.html#aac8383faa548b9c759ade7c8f44dd3a6">  284</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="namespacecen_1_1screen.html#aac8383faa548b9c759ade7c8f44dd3a6">set_screen_saver_enabled</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> enabled) noexcept</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;{</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  <span class="keywordflow">if</span> (enabled)</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  {</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    SDL_EnableScreenSaver();</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  }</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  {</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    SDL_DisableScreenSaver();</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;  }</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;}</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
-<div class="line"><a name="l00305"></a><span class="lineno"><a class="line" href="namespacecen_1_1screen.html#a52dd4828958d04edc552bb6788cc6a4e">  305</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1screen.html#a52dd4828958d04edc552bb6788cc6a4e">screen_saver_enabled</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;{</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  <span class="keywordflow">return</span> SDL_IsScreenSaverEnabled();</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;}</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
-<div class="line"><a name="l00317"></a><span class="lineno"><a class="line" href="namespacecen_1_1screen.html#afcbfce77cb585029ddeb510d3ba6badc">  317</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1screen.html#afcbfce77cb585029ddeb510d3ba6badc">width</a>() noexcept -&gt; <span class="keywordtype">int</span></div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;{</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;  SDL_DisplayMode <a class="code" href="group__input.html#ggab42688bc97e687065efcf871350628f6a15d61712450a686a7f365adf4fef581f">mode</a>;</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  SDL_GetDesktopDisplayMode(0, &amp;<a class="code" href="group__input.html#ggab42688bc97e687065efcf871350628f6a15d61712450a686a7f365adf4fef581f">mode</a>);</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="group__input.html#ggab42688bc97e687065efcf871350628f6a15d61712450a686a7f365adf4fef581f">mode</a>.w;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;}</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
-<div class="line"><a name="l00331"></a><span class="lineno"><a class="line" href="namespacecen_1_1screen.html#afb93d64c5543556efa31875a7d3a44fb">  331</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1screen.html#afb93d64c5543556efa31875a7d3a44fb">height</a>() noexcept -&gt; <span class="keywordtype">int</span></div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;{</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;  SDL_DisplayMode <a class="code" href="group__input.html#ggab42688bc97e687065efcf871350628f6a15d61712450a686a7f365adf4fef581f">mode</a>;</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;  SDL_GetDesktopDisplayMode(0, &amp;<a class="code" href="group__input.html#ggab42688bc97e687065efcf871350628f6a15d61712450a686a7f365adf4fef581f">mode</a>);</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="group__input.html#ggab42688bc97e687065efcf871350628f6a15d61712450a686a7f365adf4fef581f">mode</a>.h;</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;}</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160; </div>
-<div class="line"><a name="l00345"></a><span class="lineno"><a class="line" href="namespacecen_1_1screen.html#a33c2ee898454a11983d7a873629ed4be">  345</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1screen.html#a33c2ee898454a11983d7a873629ed4be">size</a>() noexcept -&gt; <a class="code" href="structcen_1_1basic__area.html">iarea</a></div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;{</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;  SDL_DisplayMode <a class="code" href="group__input.html#ggab42688bc97e687065efcf871350628f6a15d61712450a686a7f365adf4fef581f">mode</a>;</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;  SDL_GetDesktopDisplayMode(0, &amp;<a class="code" href="group__input.html#ggab42688bc97e687065efcf871350628f6a15d61712450a686a7f365adf4fef581f">mode</a>);</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;  <span class="keywordflow">return</span> {<a class="code" href="group__input.html#ggab42688bc97e687065efcf871350628f6a15d61712450a686a7f365adf4fef581f">mode</a>.w, <a class="code" href="group__input.html#ggab42688bc97e687065efcf871350628f6a15d61712450a686a7f365adf4fef581f">mode</a>.h};</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;}</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
-<div class="line"><a name="l00359"></a><span class="lineno"><a class="line" href="namespacecen_1_1screen.html#a209f8646779fd21e92a2abccc090e8b1">  359</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1screen.html#a209f8646779fd21e92a2abccc090e8b1">refresh_rate</a>() noexcept -&gt; <span class="keywordtype">int</span></div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;{</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;  SDL_DisplayMode <a class="code" href="group__input.html#ggab42688bc97e687065efcf871350628f6a15d61712450a686a7f365adf4fef581f">mode</a>;</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;  SDL_GetDesktopDisplayMode(0, &amp;<a class="code" href="group__input.html#ggab42688bc97e687065efcf871350628f6a15d61712450a686a7f365adf4fef581f">mode</a>);</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="group__input.html#ggab42688bc97e687065efcf871350628f6a15d61712450a686a7f365adf4fef581f">mode</a>.refresh_rate;</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;}</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160; </div>
-<div class="line"><a name="l00377"></a><span class="lineno"><a class="line" href="namespacecen_1_1screen.html#ad47eefde4852e31576bd913999963625">  377</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1screen.html#ad47eefde4852e31576bd913999963625">get_pixel_format</a>() noexcept -&gt; <a class="code" href="group__graphics.html#ga2b2a5cc747e0869488d872b28d939dae">pixel_format</a></div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;{</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;  SDL_DisplayMode <a class="code" href="group__input.html#ggab42688bc97e687065efcf871350628f6a15d61712450a686a7f365adf4fef581f">mode</a>;</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;  SDL_GetDesktopDisplayMode(0, &amp;<a class="code" href="group__input.html#ggab42688bc97e687065efcf871350628f6a15d61712450a686a7f365adf4fef581f">mode</a>);</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="group__graphics.html#ga2b2a5cc747e0869488d872b28d939dae">pixel_format</a><span class="keyword">&gt;</span>(<a class="code" href="group__input.html#ggab42688bc97e687065efcf871350628f6a15d61712450a686a7f365adf4fef581f">mode</a>.format);</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="group__video.html#ga522ad9ba5315e9ce7570fe4a9456537a">   41</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="group__video.html#ga522ad9ba5315e9ce7570fe4a9456537a">screen_orientation</a> : int</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <a class="code" href="group__video.html#gga522ad9ba5315e9ce7570fe4a9456537aaad921d60486366258809553a3db49a4a">unknown</a> = SDL_ORIENTATION_UNKNOWN,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <a class="code" href="group__video.html#gga522ad9ba5315e9ce7570fe4a9456537aa992763c3260eacff8cdc4c8bba147554">landscape</a> = SDL_ORIENTATION_LANDSCAPE,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <a class="code" href="group__video.html#gga522ad9ba5315e9ce7570fe4a9456537aaff102c247c34723ae6593dd5f51a2048">landscape_flipped</a> = SDL_ORIENTATION_LANDSCAPE_FLIPPED,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="group__video.html#gga522ad9ba5315e9ce7570fe4a9456537aaad9b8a7b14ee53434eba710fb4086cb4">portrait</a> = SDL_ORIENTATION_PORTRAIT,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <a class="code" href="group__video.html#gga522ad9ba5315e9ce7570fe4a9456537aaaf1789cfe9f79a7deaf0fee72ccd3d7e">portrait_flipped</a> = SDL_ORIENTATION_PORTRAIT_FLIPPED</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="group__video.html#ga06052c299b8ba7731ccc5a214ff75eed">   59</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="group__video.html#ga06052c299b8ba7731ccc5a214ff75eed">set_screen_saver_enabled</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> enabled) noexcept</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordflow">if</span> (enabled)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    SDL_EnableScreenSaver();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    SDL_DisableScreenSaver();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="group__video.html#ga3d1363a838c157064a0a2ce6c1135c17">   80</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__video.html#ga3d1363a838c157064a0a2ce6c1135c17">is_screen_saver_enabled</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordflow">return</span> SDL_IsScreenSaverEnabled();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}  <span class="comment">// namespace cen</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecen_1_1screen.html">cen::screen</a> {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76">  108</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76">count</a>() noexcept -&gt; <span class="keywordtype">int</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;{</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordflow">return</span> SDL_GetNumVideoDisplays();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="namespacecen_1_1screen.html#ab133b4e8b3b0eee8c74306c9bc3b8a69">  123</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1screen.html#ab133b4e8b3b0eee8c74306c9bc3b8a69">name</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> index = 0) noexcept -&gt; <a class="code" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;{</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="keywordflow">return</span> SDL_GetDisplayName(index);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="namespacecen_1_1screen.html#a15c9623bbc9f459152623391acbddb68">  138</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1screen.html#a15c9623bbc9f459152623391acbddb68">get_orientation</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> index = 0) noexcept</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    -&gt; <a class="code" href="group__video.html#ga522ad9ba5315e9ce7570fe4a9456537a">screen_orientation</a></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;{</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="group__video.html#ga522ad9ba5315e9ce7570fe4a9456537a">screen_orientation</a><span class="keyword">&gt;</span>(SDL_GetDisplayOrientation(index));</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;}</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="namespacecen_1_1screen.html#a47081ee7e5039b6173bf4b7fea612355">  157</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1screen.html#a47081ee7e5039b6173bf4b7fea612355">display_mode</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> index = 0) noexcept</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    -&gt; std::optional&lt;SDL_DisplayMode&gt;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;{</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  SDL_DisplayMode <a class="code" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4a15d61712450a686a7f365adf4fef581f">mode</a>{};</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <span class="keywordflow">if</span> (SDL_GetDesktopDisplayMode(index, &amp;<a class="code" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4a15d61712450a686a7f365adf4fef581f">mode</a>) == 0)</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4a15d61712450a686a7f365adf4fef581f">mode</a>;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  }</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  {</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  }</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;}</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno"><a class="line" href="namespacecen_1_1screen.html#af7b850a3c8072e199e803a3749937126">  181</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1screen.html#af7b850a3c8072e199e803a3749937126">refresh_rate</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> index = 0) noexcept -&gt; std::optional&lt;<span class="keywordtype">int</span>&gt;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;{</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> <a class="code" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4a15d61712450a686a7f365adf4fef581f">mode</a> = <a class="code" href="namespacecen_1_1screen.html#a47081ee7e5039b6173bf4b7fea612355">display_mode</a>(index))</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4a15d61712450a686a7f365adf4fef581f">mode</a>-&gt;refresh_rate;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  {</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;}</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="namespacecen_1_1screen.html#a388facc4d335b83f431eaf012919e1a7">  207</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1screen.html#a388facc4d335b83f431eaf012919e1a7">get_pixel_format</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> index = 0) noexcept</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    -&gt; std::optional&lt;<a class="code" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a>&gt;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;{</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> <a class="code" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4a15d61712450a686a7f365adf4fef581f">mode</a> = <a class="code" href="namespacecen_1_1screen.html#a47081ee7e5039b6173bf4b7fea612355">display_mode</a>(index))</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  {</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a><span class="keyword">&gt;</span>(<a class="code" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4a15d61712450a686a7f365adf4fef581f">mode</a>-&gt;format);</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  }</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  {</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  }</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;}</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
+<div class="line"><a name="l00230"></a><span class="lineno"><a class="line" href="namespacecen_1_1screen.html#a51418b5e332ae0740b0c7a6d4e6f91ff">  230</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1screen.html#a51418b5e332ae0740b0c7a6d4e6f91ff">width</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> index = 0) noexcept -&gt; std::optional&lt;<span class="keywordtype">int</span>&gt;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;{</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> <a class="code" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4a15d61712450a686a7f365adf4fef581f">mode</a> = <a class="code" href="namespacecen_1_1screen.html#a47081ee7e5039b6173bf4b7fea612355">display_mode</a>(index))</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  {</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespacecen_1_1screen.html#a47081ee7e5039b6173bf4b7fea612355">display_mode</a>(index)-&gt;w;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  }</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  {</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  }</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;}</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
+<div class="line"><a name="l00252"></a><span class="lineno"><a class="line" href="namespacecen_1_1screen.html#ae5098cd098c4b2d13c14f7adc47013eb">  252</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1screen.html#ae5098cd098c4b2d13c14f7adc47013eb">height</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> index = 0) noexcept -&gt; std::optional&lt;<span class="keywordtype">int</span>&gt;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;{</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> <a class="code" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4a15d61712450a686a7f365adf4fef581f">mode</a> = <a class="code" href="namespacecen_1_1screen.html#a47081ee7e5039b6173bf4b7fea612355">display_mode</a>(index))</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;  {</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespacecen_1_1screen.html#a47081ee7e5039b6173bf4b7fea612355">display_mode</a>(index)-&gt;h;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  }</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  {</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  }</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;}</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
+<div class="line"><a name="l00274"></a><span class="lineno"><a class="line" href="namespacecen_1_1screen.html#ace3e8973f91462485a5708227d1f19ef">  274</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1screen.html#ace3e8973f91462485a5708227d1f19ef">size</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> index = 0) noexcept -&gt; std::optional&lt;<a class="code" href="structcen_1_1basic__area.html">iarea</a>&gt;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;{</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> <a class="code" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4a15d61712450a686a7f365adf4fef581f">mode</a> = <a class="code" href="namespacecen_1_1screen.html#a47081ee7e5039b6173bf4b7fea612355">display_mode</a>(index))</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  {</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structcen_1_1basic__area.html">iarea</a>{<a class="code" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4a15d61712450a686a7f365adf4fef581f">mode</a>-&gt;w, <a class="code" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4a15d61712450a686a7f365adf4fef581f">mode</a>-&gt;h};</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  }</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  {</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  }</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;}</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160; </div>
+<div class="line"><a name="l00299"></a><span class="lineno"><a class="line" href="namespacecen_1_1screen.html#abfb5c9e3f2d1f64c09ab10a58b5052d8">  299</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1screen.html#abfb5c9e3f2d1f64c09ab10a58b5052d8">dpi</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> index = 0) noexcept -&gt; std::optional&lt;<a class="code" href="structcen_1_1dpi__info.html">dpi_info</a>&gt;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;{</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  <a class="code" href="structcen_1_1dpi__info.html">dpi_info</a> info;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  <span class="keywordflow">if</span> (SDL_GetDisplayDPI(index, &amp;info.diagonal, &amp;info.horizontal, &amp;info.vertical) == 0)</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  {</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keywordflow">return</span> info;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  }</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  {</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  }</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;}</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160; </div>
+<div class="line"><a name="l00323"></a><span class="lineno"><a class="line" href="namespacecen_1_1screen.html#a53292357d526bbdc2c82f10f154722f1">  323</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1screen.html#a53292357d526bbdc2c82f10f154722f1">vertical_dpi</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> index = 0) noexcept</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    -&gt; std::optional&lt;<span class="keywordtype">float</span>&gt;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;{</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;  <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> info = <a class="code" href="namespacecen_1_1screen.html#abfb5c9e3f2d1f64c09ab10a58b5052d8">dpi</a>(index))</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;  {</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="keywordflow">return</span> info-&gt;vertical;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;  }</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;  {</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;  }</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;}</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160; </div>
+<div class="line"><a name="l00347"></a><span class="lineno"><a class="line" href="namespacecen_1_1screen.html#acc13ac78fed12fd4f2680f30bd525239">  347</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1screen.html#acc13ac78fed12fd4f2680f30bd525239">diagonal_dpi</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> index = 0) noexcept</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    -&gt; std::optional&lt;<span class="keywordtype">float</span>&gt;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;{</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;  <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> info = <a class="code" href="namespacecen_1_1screen.html#abfb5c9e3f2d1f64c09ab10a58b5052d8">dpi</a>(index))</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;  {</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keywordflow">return</span> info-&gt;diagonal;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;  }</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;  {</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;  }</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;}</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160; </div>
+<div class="line"><a name="l00371"></a><span class="lineno"><a class="line" href="namespacecen_1_1screen.html#ab98d95c12e70ee77cd835149c9368d69">  371</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1screen.html#ab98d95c12e70ee77cd835149c9368d69">horizontal_dpi</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> index = 0) noexcept</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    -&gt; std::optional&lt;<span class="keywordtype">float</span>&gt;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;{</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;  <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> info = <a class="code" href="namespacecen_1_1screen.html#abfb5c9e3f2d1f64c09ab10a58b5052d8">dpi</a>(index))</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;  {</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="keywordflow">return</span> info-&gt;horizontal;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;  }</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;  {</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;  }</div>
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;}</div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160; </div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;}  <span class="comment">// namespace cen::screen</span></div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160; </div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160; </div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;<span class="preprocessor">#endif  // CENTURION_SCREEN_HEADER</span></div>
+<div class="line"><a name="l00396"></a><span class="lineno"><a class="line" href="namespacecen_1_1screen.html#ac6a89a9d863744805f4632fd21027a2c">  396</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1screen.html#ac6a89a9d863744805f4632fd21027a2c">bounds</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> index = 0) noexcept -&gt; std::optional&lt;<a class="code" href="classcen_1_1basic__rect.html">irect</a>&gt;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;{</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;  <a class="code" href="classcen_1_1basic__rect.html">irect</a> <a class="code" href="classcen_1_1result.html">result</a>;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;  <span class="keywordflow">if</span> (SDL_GetDisplayBounds(index, <a class="code" href="classcen_1_1result.html">result</a>.data()) == 0)</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;  {</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classcen_1_1result.html">result</a>;</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;  }</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;  {</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;  }</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;}</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160; </div>
+<div class="line"><a name="l00422"></a><span class="lineno"><a class="line" href="namespacecen_1_1screen.html#a49dd3b4f11b36b17a3275eca78ca420c">  422</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1screen.html#a49dd3b4f11b36b17a3275eca78ca420c">usable_bounds</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> index = 0) noexcept</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    -&gt; std::optional&lt;<a class="code" href="classcen_1_1basic__rect.html">irect</a>&gt;</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;{</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;  <a class="code" href="classcen_1_1basic__rect.html">irect</a> <a class="code" href="classcen_1_1result.html">result</a>;</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;  <span class="keywordflow">if</span> (SDL_GetDisplayUsableBounds(index, <a class="code" href="classcen_1_1result.html">result</a>.data()) == 0)</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;  {</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classcen_1_1result.html">result</a>;</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;  }</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;  {</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;  }</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;}</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160; </div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160; </div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;}  <span class="comment">// namespace cen::screen</span></div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160; </div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160; </div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;<span class="preprocessor">#endif  // CENTURION_SCREEN_HEADER</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="anamespacecen_1_1screen_html_aa8d6f5b307c49ddee53fb3b87397b6c4"><div class="ttname"><a href="namespacecen_1_1screen.html#aa8d6f5b307c49ddee53fb3b87397b6c4">cen::screen::usable_bounds</a></div><div class="ttdeci">auto usable_bounds(const int displayIndex=0) -&gt; std::optional&lt; irect &gt;</div><div class="ttdoc">Returns the usable bounds of a display.</div><div class="ttdef"><b>Definition:</b> screen.hpp:217</div></div>
-<div class="ttc" id="anamespacecen_1_1screen_html_a6bf7bde66b990de6ae66741950e24a78"><div class="ttname"><a href="namespacecen_1_1screen.html#a6bf7bde66b990de6ae66741950e24a78">cen::screen::get_orientation</a></div><div class="ttdeci">auto get_orientation(const int displayIndex=0) -&gt; orientation</div><div class="ttdoc">Returns the orientation of the specified display.</div><div class="ttdef"><b>Definition:</b> screen.hpp:241</div></div>
-<div class="ttc" id="agroup__input_html_ggab42688bc97e687065efcf871350628f6a15d61712450a686a7f365adf4fef581f"><div class="ttname"><a href="group__input.html#ggab42688bc97e687065efcf871350628f6a15d61712450a686a7f365adf4fef581f">cen::key_modifier::mode</a></div><div class="ttdeci">@ mode</div></div>
-<div class="ttc" id="astructcen_1_1screen_1_1dpi__info_html_ab018a31573e9fc5ac83221cb67b4f971"><div class="ttname"><a href="structcen_1_1screen_1_1dpi__info.html#ab018a31573e9fc5ac83221cb67b4f971">cen::screen::dpi_info::diagonal</a></div><div class="ttdeci">float diagonal</div><div class="ttdoc">The diagonal DPI value.</div><div class="ttdef"><b>Definition:</b> screen.hpp:44</div></div>
-<div class="ttc" id="anamespacecen_1_1screen_html_a37350a15e28cb06ecaf25eb3245b6a60"><div class="ttname"><a href="namespacecen_1_1screen.html#a37350a15e28cb06ecaf25eb3245b6a60">cen::screen::horizontal_dpi</a></div><div class="ttdeci">auto horizontal_dpi(const int displayIndex=0) -&gt; std::optional&lt; float &gt;</div><div class="ttdoc">Returns horizontal DPI information about a display.</div><div class="ttdef"><b>Definition:</b> screen.hpp:163</div></div>
-<div class="ttc" id="anamespacecen_1_1screen_html_a68276042dfa7ef0d9d1cca9299d40893a992763c3260eacff8cdc4c8bba147554"><div class="ttname"><a href="namespacecen_1_1screen.html#a68276042dfa7ef0d9d1cca9299d40893a992763c3260eacff8cdc4c8bba147554">cen::screen::orientation::landscape</a></div><div class="ttdeci">@ landscape</div></div>
-<div class="ttc" id="arect_8hpp_html"><div class="ttname"><a href="rect_8hpp.html">rect.hpp</a></div></div>
-<div class="ttc" id="anamespacecen_1_1screen_html_ad47eefde4852e31576bd913999963625"><div class="ttname"><a href="namespacecen_1_1screen.html#ad47eefde4852e31576bd913999963625">cen::screen::get_pixel_format</a></div><div class="ttdeci">auto get_pixel_format() noexcept -&gt; pixel_format</div><div class="ttdoc">Returns the pixel format of the desktop display mode.</div><div class="ttdef"><b>Definition:</b> screen.hpp:377</div></div>
-<div class="ttc" id="anamespacecen_1_1screen_html_a68276042dfa7ef0d9d1cca9299d40893aff102c247c34723ae6593dd5f51a2048"><div class="ttname"><a href="namespacecen_1_1screen.html#a68276042dfa7ef0d9d1cca9299d40893aff102c247c34723ae6593dd5f51a2048">cen::screen::orientation::landscape_flipped</a></div><div class="ttdeci">@ landscape_flipped</div></div>
-<div class="ttc" id="agroup__graphics_html_ga2b2a5cc747e0869488d872b28d939dae"><div class="ttname"><a href="group__graphics.html#ga2b2a5cc747e0869488d872b28d939dae">cen::pixel_format</a></div><div class="ttdeci">pixel_format</div><div class="ttdoc">Mirrors the values of the SDL_PixelFormatEnum.</div><div class="ttdef"><b>Definition:</b> pixel_format.hpp:36</div></div>
-<div class="ttc" id="astructcen_1_1screen_1_1dpi__info_html_a0fafdfee75bb0f5fa406b51d59859307"><div class="ttname"><a href="structcen_1_1screen_1_1dpi__info.html#a0fafdfee75bb0f5fa406b51d59859307">cen::screen::dpi_info::vertical</a></div><div class="ttdeci">float vertical</div><div class="ttdoc">The vertical DPI value.</div><div class="ttdef"><b>Definition:</b> screen.hpp:46</div></div>
-<div class="ttc" id="anamespacecen_1_1screen_html_a209f8646779fd21e92a2abccc090e8b1"><div class="ttname"><a href="namespacecen_1_1screen.html#a209f8646779fd21e92a2abccc090e8b1">cen::screen::refresh_rate</a></div><div class="ttdeci">auto refresh_rate() noexcept -&gt; int</div><div class="ttdoc">Returns the refresh rate of the screen.</div><div class="ttdef"><b>Definition:</b> screen.hpp:359</div></div>
-<div class="ttc" id="anamespacecen_1_1screen_html_a225035234aee8c2950b2e8e22315a160"><div class="ttname"><a href="namespacecen_1_1screen.html#a225035234aee8c2950b2e8e22315a160">cen::screen::name</a></div><div class="ttdeci">auto name(const int displayIndex=0) noexcept -&gt; czstring</div><div class="ttdoc">Returns the name of a display.</div><div class="ttdef"><b>Definition:</b> screen.hpp:270</div></div>
-<div class="ttc" id="anamespacecen_1_1screen_html_a68276042dfa7ef0d9d1cca9299d40893"><div class="ttname"><a href="namespacecen_1_1screen.html#a68276042dfa7ef0d9d1cca9299d40893">cen::screen::orientation</a></div><div class="ttdeci">orientation</div><div class="ttdoc">Represents different screen orientations.</div><div class="ttdef"><b>Definition:</b> screen.hpp:60</div></div>
-<div class="ttc" id="aclasscen_1_1basic__rect_html"><div class="ttname"><a href="classcen_1_1basic__rect.html">cen::basic_rect</a></div><div class="ttdoc">A simple rectangle implementation.</div><div class="ttdef"><b>Definition:</b> rect.hpp:108</div></div>
-<div class="ttc" id="anamespacecen_1_1screen_html_afb93d64c5543556efa31875a7d3a44fb"><div class="ttname"><a href="namespacecen_1_1screen.html#afb93d64c5543556efa31875a7d3a44fb">cen::screen::height</a></div><div class="ttdeci">auto height() noexcept -&gt; int</div><div class="ttdoc">Returns the height of the screen.</div><div class="ttdef"><b>Definition:</b> screen.hpp:331</div></div>
-<div class="ttc" id="astructcen_1_1basic__area_html"><div class="ttname"><a href="structcen_1_1basic__area.html">cen::basic_area</a></div><div class="ttdoc">Simply represents an area with a width and height.</div><div class="ttdef"><b>Definition:</b> area.hpp:40</div></div>
-<div class="ttc" id="anamespacecen_1_1screen_html_a68276042dfa7ef0d9d1cca9299d40893aad9b8a7b14ee53434eba710fb4086cb4"><div class="ttname"><a href="namespacecen_1_1screen.html#a68276042dfa7ef0d9d1cca9299d40893aad9b8a7b14ee53434eba710fb4086cb4">cen::screen::orientation::portrait</a></div><div class="ttdeci">@ portrait</div></div>
-<div class="ttc" id="acenturion__cfg_8hpp_html"><div class="ttname"><a href="centurion__cfg_8hpp.html">centurion_cfg.hpp</a></div></div>
-<div class="ttc" id="anamespacecen_1_1screen_html_a52dd4828958d04edc552bb6788cc6a4e"><div class="ttname"><a href="namespacecen_1_1screen.html#a52dd4828958d04edc552bb6788cc6a4e">cen::screen::screen_saver_enabled</a></div><div class="ttdeci">auto screen_saver_enabled() noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not screen savers are enabled.</div><div class="ttdef"><b>Definition:</b> screen.hpp:305</div></div>
-<div class="ttc" id="astructcen_1_1screen_1_1dpi__info_html_afefb23dd82352a65be66b599e2bde94b"><div class="ttname"><a href="structcen_1_1screen_1_1dpi__info.html#afefb23dd82352a65be66b599e2bde94b">cen::screen::dpi_info::horizontal</a></div><div class="ttdeci">float horizontal</div><div class="ttdoc">The horizontal DPI value.</div><div class="ttdef"><b>Definition:</b> screen.hpp:45</div></div>
-<div class="ttc" id="aczstring_8hpp_html"><div class="ttname"><a href="czstring_8hpp.html">czstring.hpp</a></div></div>
-<div class="ttc" id="anamespacecen_1_1screen_html_afcbfce77cb585029ddeb510d3ba6badc"><div class="ttname"><a href="namespacecen_1_1screen.html#afcbfce77cb585029ddeb510d3ba6badc">cen::screen::width</a></div><div class="ttdeci">auto width() noexcept -&gt; int</div><div class="ttdoc">Returns the width of the screen.</div><div class="ttdef"><b>Definition:</b> screen.hpp:317</div></div>
-<div class="ttc" id="anamespacecen_1_1screen_html_a33c2ee898454a11983d7a873629ed4be"><div class="ttname"><a href="namespacecen_1_1screen.html#a33c2ee898454a11983d7a873629ed4be">cen::screen::size</a></div><div class="ttdeci">auto size() noexcept -&gt; iarea</div><div class="ttdoc">Returns the size of the screen.</div><div class="ttdef"><b>Definition:</b> screen.hpp:345</div></div>
+<div class="ttc" id="anamespacecen_1_1screen_html_ab98d95c12e70ee77cd835149c9368d69"><div class="ttname"><a href="namespacecen_1_1screen.html#ab98d95c12e70ee77cd835149c9368d69">cen::screen::horizontal_dpi</a></div><div class="ttdeci">auto horizontal_dpi(const int index=0) noexcept -&gt; std::optional&lt; float &gt;</div><div class="ttdoc">Returns horizontal DPI information about a display.</div><div class="ttdef"><b>Definition:</b> screen.hpp:371</div></div>
+<div class="ttc" id="anamespacecen_1_1screen_html_a49dd3b4f11b36b17a3275eca78ca420c"><div class="ttname"><a href="namespacecen_1_1screen.html#a49dd3b4f11b36b17a3275eca78ca420c">cen::screen::usable_bounds</a></div><div class="ttdeci">auto usable_bounds(const int index=0) noexcept -&gt; std::optional&lt; irect &gt;</div><div class="ttdoc">Returns the usable bounds of a display.</div><div class="ttdef"><b>Definition:</b> screen.hpp:422</div></div>
+<div class="ttc" id="anamespacecen_1_1screen_html_ac6a89a9d863744805f4632fd21027a2c"><div class="ttname"><a href="namespacecen_1_1screen.html#ac6a89a9d863744805f4632fd21027a2c">cen::screen::bounds</a></div><div class="ttdeci">auto bounds(const int index=0) noexcept -&gt; std::optional&lt; irect &gt;</div><div class="ttdoc">Returns the bounds of a display.</div><div class="ttdef"><b>Definition:</b> screen.hpp:396</div></div>
+<div class="ttc" id="agroup__video_html_gga522ad9ba5315e9ce7570fe4a9456537aaad921d60486366258809553a3db49a4a"><div class="ttname"><a href="group__video.html#gga522ad9ba5315e9ce7570fe4a9456537aaad921d60486366258809553a3db49a4a">cen::screen_orientation::unknown</a></div><div class="ttdeci">@ unknown</div></div>
+<div class="ttc" id="agroup__input_html_gga2101a411ac6025302800a78f9c54fce4a15d61712450a686a7f365adf4fef581f"><div class="ttname"><a href="group__input.html#gga2101a411ac6025302800a78f9c54fce4a15d61712450a686a7f365adf4fef581f">cen::key_modifier::mode</a></div><div class="ttdeci">@ mode</div></div>
+<div class="ttc" id="astructcen_1_1dpi__info_html_aa86c20919b6a0529c8a78730c837bd6b"><div class="ttname"><a href="structcen_1_1dpi__info.html#aa86c20919b6a0529c8a78730c837bd6b">cen::dpi_info::horizontal</a></div><div class="ttdeci">float horizontal</div><div class="ttdoc">The horizontal DPI value.</div><div class="ttdef"><b>Definition:</b> screen.hpp:28</div></div>
+<div class="ttc" id="anamespacecen_1_1screen_html_acc13ac78fed12fd4f2680f30bd525239"><div class="ttname"><a href="namespacecen_1_1screen.html#acc13ac78fed12fd4f2680f30bd525239">cen::screen::diagonal_dpi</a></div><div class="ttdeci">auto diagonal_dpi(const int index=0) noexcept -&gt; std::optional&lt; float &gt;</div><div class="ttdoc">Returns diagonal DPI information about a display.</div><div class="ttdef"><b>Definition:</b> screen.hpp:347</div></div>
+<div class="ttc" id="agroup__video_html_gga522ad9ba5315e9ce7570fe4a9456537aaad9b8a7b14ee53434eba710fb4086cb4"><div class="ttname"><a href="group__video.html#gga522ad9ba5315e9ce7570fe4a9456537aaad9b8a7b14ee53434eba710fb4086cb4">cen::screen_orientation::portrait</a></div><div class="ttdeci">@ portrait</div></div>
+<div class="ttc" id="anamespacecen_1_1screen_html_a388facc4d335b83f431eaf012919e1a7"><div class="ttname"><a href="namespacecen_1_1screen.html#a388facc4d335b83f431eaf012919e1a7">cen::screen::get_pixel_format</a></div><div class="ttdeci">auto get_pixel_format(const int index=0) noexcept -&gt; std::optional&lt; pixel_format &gt;</div><div class="ttdoc">Returns the pixel format of the desktop display mode.</div><div class="ttdef"><b>Definition:</b> screen.hpp:207</div></div>
+<div class="ttc" id="astructcen_1_1dpi__info_html"><div class="ttname"><a href="structcen_1_1dpi__info.html">cen::dpi_info</a></div><div class="ttdoc">Provides diagonal, horizontal and vertical DPI values.</div><div class="ttdef"><b>Definition:</b> screen.hpp:25</div></div>
+<div class="ttc" id="anamespacecen_1_1screen_html_a0949b8c22f4f1066f751221fbdd61f76"><div class="ttname"><a href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76">cen::screen::count</a></div><div class="ttdeci">auto count() noexcept -&gt; int</div><div class="ttdoc">Returns the amount of available displays.</div><div class="ttdef"><b>Definition:</b> screen.hpp:108</div></div>
+<div class="ttc" id="aclasscen_1_1result_html"><div class="ttname"><a href="classcen_1_1result.html">cen::result</a></div><div class="ttdoc">A simple indicator for the result of different operations.</div><div class="ttdef"><b>Definition:</b> result.hpp:49</div></div>
+<div class="ttc" id="anamespacecen_1_1screen_html_a51418b5e332ae0740b0c7a6d4e6f91ff"><div class="ttname"><a href="namespacecen_1_1screen.html#a51418b5e332ae0740b0c7a6d4e6f91ff">cen::screen::width</a></div><div class="ttdeci">auto width(const int index=0) noexcept -&gt; std::optional&lt; int &gt;</div><div class="ttdoc">Returns the width of the screen.</div><div class="ttdef"><b>Definition:</b> screen.hpp:230</div></div>
+<div class="ttc" id="anamespacecen_1_1screen_html_a15c9623bbc9f459152623391acbddb68"><div class="ttname"><a href="namespacecen_1_1screen.html#a15c9623bbc9f459152623391acbddb68">cen::screen::get_orientation</a></div><div class="ttdeci">auto get_orientation(const int index=0) noexcept -&gt; screen_orientation</div><div class="ttdoc">Returns the orientation of the specified display.</div><div class="ttdef"><b>Definition:</b> screen.hpp:138</div></div>
+<div class="ttc" id="agroup__video_html_gga522ad9ba5315e9ce7570fe4a9456537aaff102c247c34723ae6593dd5f51a2048"><div class="ttname"><a href="group__video.html#gga522ad9ba5315e9ce7570fe4a9456537aaff102c247c34723ae6593dd5f51a2048">cen::screen_orientation::landscape_flipped</a></div><div class="ttdeci">@ landscape_flipped</div></div>
+<div class="ttc" id="anamespacecen_1_1screen_html_ae5098cd098c4b2d13c14f7adc47013eb"><div class="ttname"><a href="namespacecen_1_1screen.html#ae5098cd098c4b2d13c14f7adc47013eb">cen::screen::height</a></div><div class="ttdeci">auto height(const int index=0) noexcept -&gt; std::optional&lt; int &gt;</div><div class="ttdoc">Returns the height of the screen.</div><div class="ttdef"><b>Definition:</b> screen.hpp:252</div></div>
+<div class="ttc" id="astructcen_1_1dpi__info_html_a2c0a135d274c19c6452f161e67ec51b6"><div class="ttname"><a href="structcen_1_1dpi__info.html#a2c0a135d274c19c6452f161e67ec51b6">cen::dpi_info::diagonal</a></div><div class="ttdeci">float diagonal</div><div class="ttdoc">The diagonal DPI value.</div><div class="ttdef"><b>Definition:</b> screen.hpp:27</div></div>
+<div class="ttc" id="agroup__video_html_ga522ad9ba5315e9ce7570fe4a9456537a"><div class="ttname"><a href="group__video.html#ga522ad9ba5315e9ce7570fe4a9456537a">cen::screen_orientation</a></div><div class="ttdeci">screen_orientation</div><div class="ttdoc">Represents different screen orientations.</div><div class="ttdef"><b>Definition:</b> screen.hpp:41</div></div>
+<div class="ttc" id="anamespacecen_1_1screen_html_a47081ee7e5039b6173bf4b7fea612355"><div class="ttname"><a href="namespacecen_1_1screen.html#a47081ee7e5039b6173bf4b7fea612355">cen::screen::display_mode</a></div><div class="ttdeci">auto display_mode(const int index=0) noexcept -&gt; std::optional&lt; SDL_DisplayMode &gt;</div><div class="ttdoc">Returns the desktop display mode.</div><div class="ttdef"><b>Definition:</b> screen.hpp:157</div></div>
+<div class="ttc" id="anamespacecen_1_1screen_html_ab133b4e8b3b0eee8c74306c9bc3b8a69"><div class="ttname"><a href="namespacecen_1_1screen.html#ab133b4e8b3b0eee8c74306c9bc3b8a69">cen::screen::name</a></div><div class="ttdeci">auto name(const int index=0) noexcept -&gt; czstring</div><div class="ttdoc">Returns the name of a display.</div><div class="ttdef"><b>Definition:</b> screen.hpp:123</div></div>
+<div class="ttc" id="aclasscen_1_1basic__rect_html"><div class="ttname"><a href="classcen_1_1basic__rect.html">cen::basic_rect</a></div><div class="ttdoc">A simple rectangle implementation, based on either SDL_Rect or SDL_FRect.</div><div class="ttdef"><b>Definition:</b> rect.hpp:53</div></div>
+<div class="ttc" id="anamespacecen_1_1screen_html_a53292357d526bbdc2c82f10f154722f1"><div class="ttname"><a href="namespacecen_1_1screen.html#a53292357d526bbdc2c82f10f154722f1">cen::screen::vertical_dpi</a></div><div class="ttdeci">auto vertical_dpi(const int index=0) noexcept -&gt; std::optional&lt; float &gt;</div><div class="ttdoc">Returns vertical DPI information about a display.</div><div class="ttdef"><b>Definition:</b> screen.hpp:323</div></div>
+<div class="ttc" id="anamespacecen_html"><div class="ttname"><a href="namespacecen.html">cen</a></div><div class="ttdoc">The top-level namespace that all components of the library reside in.</div><div class="ttdef"><b>Definition:</b> channels.hpp:12</div></div>
+<div class="ttc" id="agroup__core_html_ga24997ff418228ddb51ae13e2805288a4"><div class="ttname"><a href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">cen::czstring</a></div><div class="ttdeci">const char * czstring</div><div class="ttdoc">Alias for a const C-style null-terminated string.</div><div class="ttdef"><b>Definition:</b> czstring.hpp:16</div></div>
+<div class="ttc" id="astructcen_1_1basic__area_html"><div class="ttname"><a href="structcen_1_1basic__area.html">cen::basic_area</a></div><div class="ttdoc">Simply represents an area with a width and height.</div><div class="ttdef"><b>Definition:</b> area.hpp:17</div></div>
+<div class="ttc" id="agroup__video_html_gga522ad9ba5315e9ce7570fe4a9456537aaaf1789cfe9f79a7deaf0fee72ccd3d7e"><div class="ttname"><a href="group__video.html#gga522ad9ba5315e9ce7570fe4a9456537aaaf1789cfe9f79a7deaf0fee72ccd3d7e">cen::screen_orientation::portrait_flipped</a></div><div class="ttdeci">@ portrait_flipped</div></div>
+<div class="ttc" id="agroup__video_html_ga06052c299b8ba7731ccc5a214ff75eed"><div class="ttname"><a href="group__video.html#ga06052c299b8ba7731ccc5a214ff75eed">cen::set_screen_saver_enabled</a></div><div class="ttdeci">void set_screen_saver_enabled(const bool enabled) noexcept</div><div class="ttdoc">Sets whether or not screen savers are enabled.</div><div class="ttdef"><b>Definition:</b> screen.hpp:59</div></div>
 <div class="ttc" id="apixel__format_8hpp_html"><div class="ttname"><a href="pixel__format_8hpp.html">pixel_format.hpp</a></div></div>
-<div class="ttc" id="anamespacecen_1_1screen_html"><div class="ttname"><a href="namespacecen_1_1screen.html">cen::screen</a></div><div class="ttdoc">Contains functions that provide information about the screen.</div></div>
-<div class="ttc" id="aarea_8hpp_html"><div class="ttname"><a href="area_8hpp.html">area.hpp</a></div></div>
-<div class="ttc" id="anamespacecen_html_a24997ff418228ddb51ae13e2805288a4"><div class="ttname"><a href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">cen::czstring</a></div><div class="ttdeci">const char * czstring</div><div class="ttdoc">Alias for a const C-style null-terminated string.</div><div class="ttdef"><b>Definition:</b> czstring.hpp:18</div></div>
-<div class="ttc" id="anamespacecen_1_1screen_html_a3b04a5b68180d7b1e3bbf52fda2634b4"><div class="ttname"><a href="namespacecen_1_1screen.html#a3b04a5b68180d7b1e3bbf52fda2634b4">cen::screen::bounds</a></div><div class="ttdeci">auto bounds(const int displayIndex=0) -&gt; std::optional&lt; irect &gt;</div><div class="ttdoc">Returns the bounds of a display.</div><div class="ttdef"><b>Definition:</b> screen.hpp:190</div></div>
-<div class="ttc" id="anamespacecen_1_1screen_html_a68276042dfa7ef0d9d1cca9299d40893aad921d60486366258809553a3db49a4a"><div class="ttname"><a href="namespacecen_1_1screen.html#a68276042dfa7ef0d9d1cca9299d40893aad921d60486366258809553a3db49a4a">cen::screen::orientation::unknown</a></div><div class="ttdeci">@ unknown</div></div>
-<div class="ttc" id="anamespacecen_1_1screen_html_a68276042dfa7ef0d9d1cca9299d40893aaf1789cfe9f79a7deaf0fee72ccd3d7e"><div class="ttname"><a href="namespacecen_1_1screen.html#a68276042dfa7ef0d9d1cca9299d40893aaf1789cfe9f79a7deaf0fee72ccd3d7e">cen::screen::orientation::portrait_flipped</a></div><div class="ttdeci">@ portrait_flipped</div></div>
-<div class="ttc" id="anamespacecen_1_1screen_html_ae807248766bc5d4d1be8aca673b928db"><div class="ttname"><a href="namespacecen_1_1screen.html#ae807248766bc5d4d1be8aca673b928db">cen::screen::dpi</a></div><div class="ttdeci">auto dpi(const int displayIndex=0) -&gt; std::optional&lt; dpi_info &gt;</div><div class="ttdoc">Returns DPI information about a display.</div><div class="ttdef"><b>Definition:</b> screen.hpp:82</div></div>
-<div class="ttc" id="anamespacecen_1_1screen_html_a159052259e55698ab0777b9cad40ddd2"><div class="ttname"><a href="namespacecen_1_1screen.html#a159052259e55698ab0777b9cad40ddd2">cen::screen::amount</a></div><div class="ttdeci">auto amount() noexcept -&gt; int</div><div class="ttdoc">Returns the amount of available displays.</div><div class="ttdef"><b>Definition:</b> screen.hpp:255</div></div>
-<div class="ttc" id="anamespacecen_1_1screen_html_a1e1c88e0672d85b1c45ff0fdff32e80f"><div class="ttname"><a href="namespacecen_1_1screen.html#a1e1c88e0672d85b1c45ff0fdff32e80f">cen::screen::vertical_dpi</a></div><div class="ttdeci">auto vertical_dpi(const int displayIndex=0) -&gt; std::optional&lt; float &gt;</div><div class="ttdoc">Returns vertical DPI information about a display.</div><div class="ttdef"><b>Definition:</b> screen.hpp:111</div></div>
-<div class="ttc" id="astructcen_1_1screen_1_1dpi__info_html"><div class="ttname"><a href="structcen_1_1screen_1_1dpi__info.html">cen::screen::dpi_info</a></div><div class="ttdoc">Simple POD-type for storing diagonal, horizontal and vertical DPI values.</div><div class="ttdef"><b>Definition:</b> screen.hpp:42</div></div>
-<div class="ttc" id="anamespacecen_1_1screen_html_a5909b18d82cde14e2479ec318de509db"><div class="ttname"><a href="namespacecen_1_1screen.html#a5909b18d82cde14e2479ec318de509db">cen::screen::diagonal_dpi</a></div><div class="ttdeci">auto diagonal_dpi(const int displayIndex=0) -&gt; std::optional&lt; float &gt;</div><div class="ttdoc">Returns diagonal DPI information about a display.</div><div class="ttdef"><b>Definition:</b> screen.hpp:137</div></div>
-<div class="ttc" id="anamespacecen_1_1screen_html_aac8383faa548b9c759ade7c8f44dd3a6"><div class="ttname"><a href="namespacecen_1_1screen.html#aac8383faa548b9c759ade7c8f44dd3a6">cen::screen::set_screen_saver_enabled</a></div><div class="ttdeci">void set_screen_saver_enabled(const bool enabled) noexcept</div><div class="ttdoc">Sets whether or not screen savers are enabled.</div><div class="ttdef"><b>Definition:</b> screen.hpp:284</div></div>
+<div class="ttc" id="anamespacecen_1_1screen_html"><div class="ttname"><a href="namespacecen_1_1screen.html">cen::screen</a></div><div class="ttdoc">Contains functions that provide information about screen(s).</div></div>
+<div class="ttc" id="agroup__video_html_ga3d1363a838c157064a0a2ce6c1135c17"><div class="ttname"><a href="group__video.html#ga3d1363a838c157064a0a2ce6c1135c17">cen::is_screen_saver_enabled</a></div><div class="ttdeci">auto is_screen_saver_enabled() noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not screen savers are enabled.</div><div class="ttdef"><b>Definition:</b> screen.hpp:80</div></div>
+<div class="ttc" id="anamespacecen_1_1screen_html_af7b850a3c8072e199e803a3749937126"><div class="ttname"><a href="namespacecen_1_1screen.html#af7b850a3c8072e199e803a3749937126">cen::screen::refresh_rate</a></div><div class="ttdeci">auto refresh_rate(const int index=0) noexcept -&gt; std::optional&lt; int &gt;</div><div class="ttdoc">Returns the refresh rate of the screen.</div><div class="ttdef"><b>Definition:</b> screen.hpp:181</div></div>
+<div class="ttc" id="agroup__video_html_ga453f61f77c1356db822463d49e1c6aa6"><div class="ttname"><a href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">cen::pixel_format</a></div><div class="ttdeci">pixel_format</div><div class="ttdoc">Represents different pixel formats.</div><div class="ttdef"><b>Definition:</b> pixel_format.hpp:29</div></div>
+<div class="ttc" id="anamespacecen_1_1screen_html_ace3e8973f91462485a5708227d1f19ef"><div class="ttname"><a href="namespacecen_1_1screen.html#ace3e8973f91462485a5708227d1f19ef">cen::screen::size</a></div><div class="ttdeci">auto size(const int index=0) noexcept -&gt; std::optional&lt; iarea &gt;</div><div class="ttdoc">Returns the size of the screen.</div><div class="ttdef"><b>Definition:</b> screen.hpp:274</div></div>
+<div class="ttc" id="anamespacecen_1_1screen_html_abfb5c9e3f2d1f64c09ab10a58b5052d8"><div class="ttname"><a href="namespacecen_1_1screen.html#abfb5c9e3f2d1f64c09ab10a58b5052d8">cen::screen::dpi</a></div><div class="ttdeci">auto dpi(const int index=0) noexcept -&gt; std::optional&lt; dpi_info &gt;</div><div class="ttdoc">Returns DPI information about a display.</div><div class="ttdef"><b>Definition:</b> screen.hpp:299</div></div>
+<div class="ttc" id="agroup__video_html_gga522ad9ba5315e9ce7570fe4a9456537aa992763c3260eacff8cdc4c8bba147554"><div class="ttname"><a href="group__video.html#gga522ad9ba5315e9ce7570fe4a9456537aa992763c3260eacff8cdc4c8bba147554">cen::screen_orientation::landscape</a></div><div class="ttdeci">@ landscape</div></div>
+<div class="ttc" id="astructcen_1_1dpi__info_html_ae06c2d167f322d2d656ba91ee4b01440"><div class="ttname"><a href="structcen_1_1dpi__info.html#ae06c2d167f322d2d656ba91ee4b01440">cen::dpi_info::vertical</a></div><div class="ttdeci">float vertical</div><div class="ttdoc">The vertical DPI value.</div><div class="ttdef"><b>Definition:</b> screen.hpp:29</div></div>
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
 </div>

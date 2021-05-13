@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/not_null.hpp File Reference</title>
+        <title>Centurion: src/centurion/core/not_null.hpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_033c555e8ea57d729336171de4fce59a.html">core</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -96,9 +96,7 @@ $(function() {
 <div class="title">not_null.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;SDL.h&gt;</code><br />
-<code>#include &lt;type_traits&gt;</code><br />
-<code>#include &quot;<a class="el" href="centurion__cfg_8hpp_source.html">centurion_cfg.hpp</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="sfinae_8hpp_source.html">sfinae.hpp</a>&quot;</code><br />
 </div>
 <p><a href="not__null_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -110,10 +108,10 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a9f195a3e65e79c88a96dd7b767dc0657"><td class="memTemplParams" colspan="2">template&lt;typename T , typename  = std::enable_if_t&lt;std::is_pointer_v&lt;T&gt;&gt;&gt; </td></tr>
-<tr class="memitem:a9f195a3e65e79c88a96dd7b767dc0657"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">cen::not_null</a> = T</td></tr>
-<tr class="memdesc:a9f195a3e65e79c88a96dd7b767dc0657"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tag used to indicate that a pointer cannot be null.  <a href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">More...</a><br /></td></tr>
-<tr class="separator:a9f195a3e65e79c88a96dd7b767dc0657"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9f195a3e65e79c88a96dd7b767dc0657"><td class="memTemplParams" colspan="2">template&lt;typename T , enable_if_pointer_v&lt; T &gt;  = 0&gt; </td></tr>
+<tr class="memitem:ga9f195a3e65e79c88a96dd7b767dc0657"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">cen::not_null</a> = T</td></tr>
+<tr class="memdesc:ga9f195a3e65e79c88a96dd7b767dc0657"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tag used to indicate that a pointer cannot be null.  <a href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">More...</a><br /></td></tr>
+<tr class="separator:ga9f195a3e65e79c88a96dd7b767dc0657"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

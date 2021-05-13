@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/scale_mode.hpp File Reference</title>
+        <title>Centurion: src/centurion/video/scale_mode.hpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,18 +85,19 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_b630b0fc10333b78f2ff60d8d1210ae7.html">video</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">scale_mode.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;SDL.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="centurion__cfg_8hpp_source.html">centurion_cfg.hpp</a>&quot;</code><br />
 </div>
 <p><a href="scale__mode_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -105,6 +106,34 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacecen"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen.html">cen</a></td></tr>
 <tr class="memdesc:namespacecen"><td class="mdescLeft">&#160;</td><td class="mdescRight">The top-level namespace that all components of the library reside in. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ga3a02f19841b0a2ba88e7d65af2f2d78b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga3a02f19841b0a2ba88e7d65af2f2d78b">cen::scale_mode</a> { <br />
+&#160;&#160;<a class="el" href="group__video.html#gga3a02f19841b0a2ba88e7d65af2f2d78bad879c351426770bc0b13c3628db1e636">cen::scale_mode::nearest</a> = SDL_ScaleModeNearest, 
+<br />
+&#160;&#160;<a class="el" href="group__video.html#gga3a02f19841b0a2ba88e7d65af2f2d78ba9a932b3cb396238423eb2f33ec17d6aa">cen::scale_mode::linear</a> = SDL_ScaleModeLinear, 
+<br />
+&#160;&#160;<a class="el" href="group__video.html#gga3a02f19841b0a2ba88e7d65af2f2d78badb82206b1d49042d1a710e9c88c21d36">cen::scale_mode::best</a> = SDL_ScaleModeBest
+<br />
+ }</td></tr>
+<tr class="memdesc:ga3a02f19841b0a2ba88e7d65af2f2d78b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents different texture scale modes.  <a href="group__video.html#ga3a02f19841b0a2ba88e7d65af2f2d78b">More...</a><br /></td></tr>
+<tr class="separator:ga3a02f19841b0a2ba88e7d65af2f2d78b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga1327e040b28a4ced32304a8ab0914983"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga1327e040b28a4ced32304a8ab0914983">cen::operator==</a> (const scale_mode lhs, const SDL_ScaleMode rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga1327e040b28a4ced32304a8ab0914983"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two scale mode values are the same.  <a href="group__video.html#ga1327e040b28a4ced32304a8ab0914983">More...</a><br /></td></tr>
+<tr class="separator:ga1327e040b28a4ced32304a8ab0914983"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga752a6d93030438c2d168262ed1b6285f"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga752a6d93030438c2d168262ed1b6285f">cen::operator==</a> (const SDL_ScaleMode lhs, const scale_mode rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga752a6d93030438c2d168262ed1b6285f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two scale mode values are the same.  <a href="group__video.html#ga752a6d93030438c2d168262ed1b6285f">More...</a><br /></td></tr>
+<tr class="separator:ga752a6d93030438c2d168262ed1b6285f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2362a1a5456d395cc6aa91cba1a1d7b9"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga2362a1a5456d395cc6aa91cba1a1d7b9">cen::operator!=</a> (const scale_mode lhs, const SDL_ScaleMode rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga2362a1a5456d395cc6aa91cba1a1d7b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two scale mode values aren't the same.  <a href="group__video.html#ga2362a1a5456d395cc6aa91cba1a1d7b9">More...</a><br /></td></tr>
+<tr class="separator:ga2362a1a5456d395cc6aa91cba1a1d7b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8c0403f322ae52c792ff6789c7c17ce7"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga8c0403f322ae52c792ff6789c7c17ce7">cen::operator!=</a> (const SDL_ScaleMode lhs, const scale_mode rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga8c0403f322ae52c792ff6789c7c17ce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two scale mode values aren't the same.  <a href="group__video.html#ga8c0403f322ae52c792ff6789c7c17ce7">More...</a><br /></td></tr>
+<tr class="separator:ga8c0403f322ae52c792ff6789c7c17ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -91,11 +91,10 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
 <a href="classcen_1_1basic__window-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">cen::basic_window Class Reference<div class="ingroups"><a class="el" href="group__graphics.html">Graphics</a></div></div>  </div>
+<div class="title">cen::basic_window Class Reference<div class="ingroups"><a class="el" href="group__video.html">Video</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -104,36 +103,87 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="window_8hpp_source.html">window.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a2d626b60e84d235b1e66859f5c215cef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a2d626b60e84d235b1e66859f5c215cef">basic_window</a> (SDL_Window *<a class="el" href="group__graphics.html#gaf061afd66d5eb42fc564662e1d864828">window</a>) noexcept(isHandle)</td></tr>
-<tr class="memdesc:a2d626b60e84d235b1e66859f5c215cef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a window from a pointer to an SDL window.  <a href="classcen_1_1basic__window.html#a2d626b60e84d235b1e66859f5c215cef">More...</a><br /></td></tr>
-<tr class="separator:a2d626b60e84d235b1e66859f5c215cef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7e0616ffcf6a09b5e6511a72a51c0ac"><td class="memTemplParams" colspan="2">template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </td></tr>
-<tr class="memitem:ad7e0616ffcf6a09b5e6511a72a51c0ac"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#ad7e0616ffcf6a09b5e6511a72a51c0ac">basic_window</a> (const <a class="el" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; <a class="el" href="classcen_1_1basic__window.html#a2ddb08ac47b2126d4ecd6f50576425d9">title</a>, const <a class="el" href="group__geometry.html#gac34681d6cc8018e07938793d4c420369">iarea</a> &amp;<a class="el" href="classcen_1_1basic__window.html#a5b5337ffd45f5b1914aafac45a2e68b1">size</a>=<a class="el" href="classcen_1_1basic__window.html#a5626c2f5c87e3ef6b3db074294d2197e">default_size</a>())</td></tr>
-<tr class="memdesc:ad7e0616ffcf6a09b5e6511a72a51c0ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an owning window with the specified title and size.  <a href="classcen_1_1basic__window.html#ad7e0616ffcf6a09b5e6511a72a51c0ac">More...</a><br /></td></tr>
-<tr class="separator:ad7e0616ffcf6a09b5e6511a72a51c0ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a739d00e90636549ee64fa3a00a5eb94a"><td class="memTemplParams" colspan="2">template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </td></tr>
-<tr class="memitem:a739d00e90636549ee64fa3a00a5eb94a"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a739d00e90636549ee64fa3a00a5eb94a">basic_window</a> (const std::string &amp;<a class="el" href="classcen_1_1basic__window.html#a2ddb08ac47b2126d4ecd6f50576425d9">title</a>, const <a class="el" href="group__geometry.html#gac34681d6cc8018e07938793d4c420369">iarea</a> &amp;<a class="el" href="classcen_1_1basic__window.html#a5b5337ffd45f5b1914aafac45a2e68b1">size</a>=<a class="el" href="classcen_1_1basic__window.html#a5626c2f5c87e3ef6b3db074294d2197e">default_size</a>())</td></tr>
-<tr class="memdesc:a739d00e90636549ee64fa3a00a5eb94a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an owning window with the specified title and size.  <a href="classcen_1_1basic__window.html#a739d00e90636549ee64fa3a00a5eb94a">More...</a><br /></td></tr>
-<tr class="separator:a739d00e90636549ee64fa3a00a5eb94a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb73883f0f4ef94cdd8d71ca09a1f69a"><td class="memTemplParams" colspan="2">template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a0bd8de44951446c808450f0719634fb3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a0bd8de44951446c808450f0719634fb3">window_flags</a> : u32 { <br />
+&#160;&#160;<a class="el" href="classcen_1_1basic__window.html#a0bd8de44951446c808450f0719634fb3ace813377b1c2adb427a8ba244bb67cc9">fullscreen</a> = SDL_WINDOW_FULLSCREEN, 
+<br />
+&#160;&#160;<a class="el" href="classcen_1_1basic__window.html#a0bd8de44951446c808450f0719634fb3ac392910ef7aef950a97e73f672fd484f">opengl</a> = SDL_WINDOW_OPENGL, 
+<br />
+&#160;&#160;<a class="el" href="classcen_1_1basic__window.html#a0bd8de44951446c808450f0719634fb3a5223d15b58e1dcbe4c822f1b853d9e08">shown</a> = SDL_WINDOW_SHOWN, 
+<br />
+&#160;&#160;<a class="el" href="classcen_1_1basic__window.html#a0bd8de44951446c808450f0719634fb3a446802687e59dca59b658e43c8fd231a">hidden</a> = SDL_WINDOW_HIDDEN, 
+<br />
+&#160;&#160;<a class="el" href="classcen_1_1basic__window.html#a0bd8de44951446c808450f0719634fb3a304822ba138ee23010e82bd4ab42b6e0">borderless</a> = SDL_WINDOW_BORDERLESS, 
+<br />
+&#160;&#160;<a class="el" href="classcen_1_1basic__window.html#a0bd8de44951446c808450f0719634fb3a1fbc10c8a4dfba416446ff5f5e68405e">resizable</a> = SDL_WINDOW_RESIZABLE, 
+<br />
+&#160;&#160;<a class="el" href="classcen_1_1basic__window.html#a0bd8de44951446c808450f0719634fb3afe7f889abc91c8082956913b68c648e3">minimized</a> = SDL_WINDOW_MINIMIZED, 
+<br />
+&#160;&#160;<a class="el" href="classcen_1_1basic__window.html#a0bd8de44951446c808450f0719634fb3a17505c17ee2df0bc9575b692d44458b9">maximized</a> = SDL_WINDOW_MAXIMIZED, 
+<br />
+&#160;&#160;<a class="el" href="classcen_1_1basic__window.html#a0bd8de44951446c808450f0719634fb3ae2040e238387b694867e45da0af54a1f">input_grabbed</a> = SDL_WINDOW_INPUT_GRABBED, 
+<br />
+&#160;&#160;<a class="el" href="classcen_1_1basic__window.html#a0bd8de44951446c808450f0719634fb3aeff8122f6bd6a81d1a3b3e858f4ce0eb">input_focus</a> = SDL_WINDOW_INPUT_FOCUS, 
+<br />
+&#160;&#160;<a class="el" href="classcen_1_1basic__window.html#a0bd8de44951446c808450f0719634fb3a5972142c9a72949b7c030b2f6aa88ac3">mouse_focus</a> = SDL_WINDOW_MOUSE_FOCUS, 
+<br />
+&#160;&#160;<a class="el" href="classcen_1_1basic__window.html#a0bd8de44951446c808450f0719634fb3ac0181c9a9ab23a26afe19e538620eae8">fullscreen_desktop</a> = SDL_WINDOW_FULLSCREEN_DESKTOP, 
+<br />
+&#160;&#160;<a class="el" href="classcen_1_1basic__window.html#a0bd8de44951446c808450f0719634fb3a1ea88940c000910aa90b9dc8cf559dab">foreign</a> = SDL_WINDOW_FOREIGN, 
+<br />
+&#160;&#160;<a class="el" href="classcen_1_1basic__window.html#a0bd8de44951446c808450f0719634fb3a17814ca6a36228957e39cb31b927fdf9">high_dpi</a> = SDL_WINDOW_ALLOW_HIGHDPI, 
+<br />
+&#160;&#160;<a class="el" href="classcen_1_1basic__window.html#a0bd8de44951446c808450f0719634fb3a8fe5e92a6bc0b09c318e71a98cf5b55e">mouse_capture</a> = SDL_WINDOW_MOUSE_CAPTURE, 
+<br />
+&#160;&#160;<a class="el" href="classcen_1_1basic__window.html#a0bd8de44951446c808450f0719634fb3ae41e20101d1c08b83feae9b21f9bcf70">always_on_top</a> = SDL_WINDOW_ALWAYS_ON_TOP, 
+<br />
+&#160;&#160;<a class="el" href="classcen_1_1basic__window.html#a0bd8de44951446c808450f0719634fb3a7f32035f7ead67d2031f9738a6bff7b0">skip_taskbar</a> = SDL_WINDOW_SKIP_TASKBAR, 
+<br />
+&#160;&#160;<a class="el" href="classcen_1_1basic__window.html#a0bd8de44951446c808450f0719634fb3a664f30da899bf55c0ba8998273728e3b">utility</a> = SDL_WINDOW_UTILITY, 
+<br />
+&#160;&#160;<a class="el" href="classcen_1_1basic__window.html#a0bd8de44951446c808450f0719634fb3a083d1d756edaaa31aa05be596446d51e">tooltip</a> = SDL_WINDOW_TOOLTIP, 
+<br />
+&#160;&#160;<a class="el" href="classcen_1_1basic__window.html#a0bd8de44951446c808450f0719634fb3a46288408a9e46bee40a94b9dde327f2b">popup_menu</a> = SDL_WINDOW_POPUP_MENU, 
+<br />
+&#160;&#160;<a class="el" href="classcen_1_1basic__window.html#a0bd8de44951446c808450f0719634fb3a7dac3a878d21870e13825bde5c7f35dd">vulkan</a> = SDL_WINDOW_VULKAN, 
+<br />
+&#160;&#160;<a class="el" href="classcen_1_1basic__window.html#a0bd8de44951446c808450f0719634fb3acea1abdb3c2820be52d50ac21eef78a5">metal</a> = SDL_WINDOW_METAL
+<br />
+ }</td></tr>
+<tr class="memdesc:a0bd8de44951446c808450f0719634fb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents different window features and options.  <a href="classcen_1_1basic__window.html#a0bd8de44951446c808450f0719634fb3">More...</a><br /></td></tr>
+<tr class="separator:a0bd8de44951446c808450f0719634fb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Construction</h2></td></tr>
+<tr class="memitem:ae5761f8a4a6710daa9962fa13c57fc25"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#ae5761f8a4a6710daa9962fa13c57fc25">basic_window</a> (<a class="el" href="group__core.html#ga00614d944c81543b03c7f2cb202fdc50">maybe_owner</a>&lt; SDL_Window * &gt; <a class="el" href="group__video.html#gaf061afd66d5eb42fc564662e1d864828">window</a>) noexcept(!detail::is_owning&lt; T &gt;())</td></tr>
+<tr class="memdesc:ae5761f8a4a6710daa9962fa13c57fc25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a window from a pointer to an SDL window.  <a href="classcen_1_1basic__window.html#ae5761f8a4a6710daa9962fa13c57fc25">More...</a><br /></td></tr>
+<tr class="separator:ae5761f8a4a6710daa9962fa13c57fc25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acff54d7a19b93bb9c49da169b411e770"><td class="memTemplParams" colspan="2">template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </td></tr>
+<tr class="memitem:acff54d7a19b93bb9c49da169b411e770"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#acff54d7a19b93bb9c49da169b411e770">basic_window</a> (const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; <a class="el" href="classcen_1_1basic__window.html#a2ddb08ac47b2126d4ecd6f50576425d9">title</a>, const <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a> <a class="el" href="classcen_1_1basic__window.html#a5b5337ffd45f5b1914aafac45a2e68b1">size</a>=<a class="el" href="classcen_1_1basic__window.html#a81ae1aafcd0fa736ca2238e83123d51e">default_size</a>(), const <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a> <a class="el" href="classcen_1_1basic__window.html#a88826d51c3cd49d98509c3d5701fc132">flags</a>=<a class="el" href="classcen_1_1basic__window.html#a9785bbfd025bba6eb289f64f051cd19a">default_flags</a>())</td></tr>
+<tr class="memdesc:acff54d7a19b93bb9c49da169b411e770"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an owning window with the specified title and size.  <a href="classcen_1_1basic__window.html#acff54d7a19b93bb9c49da169b411e770">More...</a><br /></td></tr>
+<tr class="separator:acff54d7a19b93bb9c49da169b411e770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af91caea7a38ef938f711eb2e2ffd4090"><td class="memTemplParams" colspan="2">template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </td></tr>
+<tr class="memitem:af91caea7a38ef938f711eb2e2ffd4090"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#af91caea7a38ef938f711eb2e2ffd4090">basic_window</a> (const std::string &amp;<a class="el" href="classcen_1_1basic__window.html#a2ddb08ac47b2126d4ecd6f50576425d9">title</a>, const <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a> <a class="el" href="classcen_1_1basic__window.html#a5b5337ffd45f5b1914aafac45a2e68b1">size</a>=<a class="el" href="classcen_1_1basic__window.html#a81ae1aafcd0fa736ca2238e83123d51e">default_size</a>(), const <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a> <a class="el" href="classcen_1_1basic__window.html#a88826d51c3cd49d98509c3d5701fc132">flags</a>=<a class="el" href="classcen_1_1basic__window.html#a9785bbfd025bba6eb289f64f051cd19a">default_flags</a>())</td></tr>
+<tr class="memdesc:af91caea7a38ef938f711eb2e2ffd4090"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an owning window with the specified title and size.  <a href="classcen_1_1basic__window.html#af91caea7a38ef938f711eb2e2ffd4090">More...</a><br /></td></tr>
+<tr class="separator:af91caea7a38ef938f711eb2e2ffd4090"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb73883f0f4ef94cdd8d71ca09a1f69a"><td class="memTemplParams" colspan="2">template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </td></tr>
 <tr class="memitem:aeb73883f0f4ef94cdd8d71ca09a1f69a"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#aeb73883f0f4ef94cdd8d71ca09a1f69a">basic_window</a> ()</td></tr>
 <tr class="memdesc:aeb73883f0f4ef94cdd8d71ca09a1f69a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a window.  <a href="classcen_1_1basic__window.html#aeb73883f0f4ef94cdd8d71ca09a1f69a">More...</a><br /></td></tr>
 <tr class="separator:aeb73883f0f4ef94cdd8d71ca09a1f69a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12d737f4d11047d062ab2806a47c1f31"><td class="memTemplParams" colspan="2">template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </td></tr>
-<tr class="memitem:a12d737f4d11047d062ab2806a47c1f31"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a12d737f4d11047d062ab2806a47c1f31">basic_window</a> (const <a class="el" href="group__graphics.html#gaf061afd66d5eb42fc564662e1d864828">window</a> &amp;<a class="el" href="namespacecen.html#a922c9ffa0c4b1b0dcaf50b7c6033a809">owner</a>) noexcept</td></tr>
+<tr class="memitem:a12d737f4d11047d062ab2806a47c1f31"><td class="memTemplParams" colspan="2">template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a12d737f4d11047d062ab2806a47c1f31"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a12d737f4d11047d062ab2806a47c1f31">basic_window</a> (const <a class="el" href="group__video.html#gaf061afd66d5eb42fc564662e1d864828">window</a> &amp;<a class="el" href="group__core.html#ga922c9ffa0c4b1b0dcaf50b7c6033a809">owner</a>) noexcept</td></tr>
 <tr class="memdesc:a12d737f4d11047d062ab2806a47c1f31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a window handle based on an owning window.  <a href="classcen_1_1basic__window.html#a12d737f4d11047d062ab2806a47c1f31">More...</a><br /></td></tr>
 <tr class="separator:a12d737f4d11047d062ab2806a47c1f31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Mutators</h2></td></tr>
 <tr class="memitem:af0492448c7593ba2beec99d0024159ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#af0492448c7593ba2beec99d0024159ab">show</a> () noexcept</td></tr>
 <tr class="memdesc:af0492448c7593ba2beec99d0024159ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes the window visible.  <a href="classcen_1_1basic__window.html#af0492448c7593ba2beec99d0024159ab">More...</a><br /></td></tr>
 <tr class="separator:af0492448c7593ba2beec99d0024159ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab72486264b20297aef55d01312fe7e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#aab72486264b20297aef55d01312fe7e9">hide</a> () noexcept</td></tr>
 <tr class="memdesc:aab72486264b20297aef55d01312fe7e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes the window invisible.  <a href="classcen_1_1basic__window.html#aab72486264b20297aef55d01312fe7e9">More...</a><br /></td></tr>
 <tr class="separator:aab72486264b20297aef55d01312fe7e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5aa7f10123fd31f42eb0a9f89e6053ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a5aa7f10123fd31f42eb0a9f89e6053ad">center</a> () noexcept</td></tr>
-<tr class="memdesc:a5aa7f10123fd31f42eb0a9f89e6053ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Centers the window position relative to the screen.  <a href="classcen_1_1basic__window.html#a5aa7f10123fd31f42eb0a9f89e6053ad">More...</a><br /></td></tr>
-<tr class="separator:a5aa7f10123fd31f42eb0a9f89e6053ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6da2f1c3f824c2a3815287b675eef508"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a6da2f1c3f824c2a3815287b675eef508">raise</a> () noexcept</td></tr>
 <tr class="memdesc:a6da2f1c3f824c2a3815287b675eef508"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raises this window above other windows and requests focus.  <a href="classcen_1_1basic__window.html#a6da2f1c3f824c2a3815287b675eef508">More...</a><br /></td></tr>
 <tr class="separator:a6da2f1c3f824c2a3815287b675eef508"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -146,72 +196,139 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a91a444b83142807b3f14a72497907f5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a91a444b83142807b3f14a72497907f5d">restore</a> () noexcept</td></tr>
 <tr class="memdesc:a91a444b83142807b3f14a72497907f5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restores the position and size of the window if it's minimized or maximized.  <a href="classcen_1_1basic__window.html#a91a444b83142807b3f14a72497907f5d">More...</a><br /></td></tr>
 <tr class="separator:a91a444b83142807b3f14a72497907f5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45f2ecd48f02e021ddc248740c2db2d1"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a45f2ecd48f02e021ddc248740c2db2d1">update_surface</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:a45f2ecd48f02e021ddc248740c2db2d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the window surface.  <a href="classcen_1_1basic__window.html#a45f2ecd48f02e021ddc248740c2db2d1">More...</a><br /></td></tr>
-<tr class="separator:a45f2ecd48f02e021ddc248740c2db2d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47ceb799259e0b0fe7cd78f00becfd2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a47ceb799259e0b0fe7cd78f00becfd2d">set_fullscreen</a> (const bool fullscreen) noexcept</td></tr>
-<tr class="memdesc:a47ceb799259e0b0fe7cd78f00becfd2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether or not the window is in fullscreen mode.  <a href="classcen_1_1basic__window.html#a47ceb799259e0b0fe7cd78f00becfd2d">More...</a><br /></td></tr>
-<tr class="separator:a47ceb799259e0b0fe7cd78f00becfd2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6220e66946e9535356e511bbf96120ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a6220e66946e9535356e511bbf96120ea">set_fullscreen_desktop</a> (const bool fullscreen) noexcept</td></tr>
-<tr class="memdesc:a6220e66946e9535356e511bbf96120ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether or not the window is in fullscreen desktop mode.  <a href="classcen_1_1basic__window.html#a6220e66946e9535356e511bbf96120ea">More...</a><br /></td></tr>
-<tr class="separator:a6220e66946e9535356e511bbf96120ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ef352d07ea1247a3727cca9dbd6861a"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a0ef352d07ea1247a3727cca9dbd6861a">update_surface</a> () noexcept -&gt; <a class="el" href="classcen_1_1result.html">result</a></td></tr>
+<tr class="memdesc:a0ef352d07ea1247a3727cca9dbd6861a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the window surface.  <a href="classcen_1_1basic__window.html#a0ef352d07ea1247a3727cca9dbd6861a">More...</a><br /></td></tr>
+<tr class="separator:a0ef352d07ea1247a3727cca9dbd6861a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Setters</h2></td></tr>
+<tr class="memitem:aad7f491f9fcf0df80e2e1677c890365f"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#aad7f491f9fcf0df80e2e1677c890365f">set_fullscreen</a> (const bool enabled) noexcept -&gt; <a class="el" href="classcen_1_1result.html">result</a></td></tr>
+<tr class="memdesc:aad7f491f9fcf0df80e2e1677c890365f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether or not the window is in fullscreen mode.  <a href="classcen_1_1basic__window.html#aad7f491f9fcf0df80e2e1677c890365f">More...</a><br /></td></tr>
+<tr class="separator:aad7f491f9fcf0df80e2e1677c890365f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae496bc50fe99e62e9b41eb495e3a92f6"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#ae496bc50fe99e62e9b41eb495e3a92f6">set_fullscreen_desktop</a> (const bool enabled) noexcept -&gt; <a class="el" href="classcen_1_1result.html">result</a></td></tr>
+<tr class="memdesc:ae496bc50fe99e62e9b41eb495e3a92f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether or not the window is in fullscreen desktop mode.  <a href="classcen_1_1basic__window.html#ae496bc50fe99e62e9b41eb495e3a92f6">More...</a><br /></td></tr>
+<tr class="separator:ae496bc50fe99e62e9b41eb495e3a92f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ed135ae4072ac63d363693485c07f78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a7ed135ae4072ac63d363693485c07f78">set_decorated</a> (const bool decorated) noexcept</td></tr>
 <tr class="memdesc:a7ed135ae4072ac63d363693485c07f78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether or not the window is decorated.  <a href="classcen_1_1basic__window.html#a7ed135ae4072ac63d363693485c07f78">More...</a><br /></td></tr>
 <tr class="separator:a7ed135ae4072ac63d363693485c07f78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae492540172a481af1536b28f673ea310"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#ae492540172a481af1536b28f673ea310">set_resizable</a> (const bool resizable) noexcept</td></tr>
+<tr class="memitem:ae492540172a481af1536b28f673ea310"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#ae492540172a481af1536b28f673ea310">set_resizable</a> (const bool <a class="el" href="classcen_1_1basic__window.html#a0bd8de44951446c808450f0719634fb3a1fbc10c8a4dfba416446ff5f5e68405e">resizable</a>) noexcept</td></tr>
 <tr class="memdesc:ae492540172a481af1536b28f673ea310"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether or not the window should be resizable.  <a href="classcen_1_1basic__window.html#ae492540172a481af1536b28f673ea310">More...</a><br /></td></tr>
 <tr class="separator:ae492540172a481af1536b28f673ea310"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd6602c6d425706ea753a052930abd91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#abd6602c6d425706ea753a052930abd91">set_icon</a> (const <a class="el" href="group__video.html#ga8b71461a73c8e75c41923ffa705d67b6">surface</a> &amp;icon) noexcept</td></tr>
+<tr class="memdesc:abd6602c6d425706ea753a052930abd91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the icon that will be used by the window.  <a href="classcen_1_1basic__window.html#abd6602c6d425706ea753a052930abd91">More...</a><br /></td></tr>
+<tr class="separator:abd6602c6d425706ea753a052930abd91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5ec418e667c1c9c17975f9cb54ea79b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#ac5ec418e667c1c9c17975f9cb54ea79b">set_title</a> (const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; <a class="el" href="classcen_1_1basic__window.html#a2ddb08ac47b2126d4ecd6f50576425d9">title</a>) noexcept</td></tr>
+<tr class="memdesc:ac5ec418e667c1c9c17975f9cb54ea79b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the title of the window.  <a href="classcen_1_1basic__window.html#ac5ec418e667c1c9c17975f9cb54ea79b">More...</a><br /></td></tr>
+<tr class="separator:ac5ec418e667c1c9c17975f9cb54ea79b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4289b952f2b34fa58e38eea77fed08b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a4289b952f2b34fa58e38eea77fed08b0">set_title</a> (const std::string &amp;<a class="el" href="classcen_1_1basic__window.html#a2ddb08ac47b2126d4ecd6f50576425d9">title</a>) noexcept</td></tr>
+<tr class="memdesc:a4289b952f2b34fa58e38eea77fed08b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the title of the window.  <a href="classcen_1_1basic__window.html#a4289b952f2b34fa58e38eea77fed08b0">More...</a><br /></td></tr>
+<tr class="separator:a4289b952f2b34fa58e38eea77fed08b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55bbe085f457c001d3dd2042b9f95956"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a55bbe085f457c001d3dd2042b9f95956">set_opacity</a> (const float <a class="el" href="classcen_1_1basic__window.html#a5ca7f496fdce85ac1463aa7140c0d6b5">opacity</a>) noexcept -&gt; <a class="el" href="classcen_1_1result.html">result</a></td></tr>
+<tr class="memdesc:a55bbe085f457c001d3dd2042b9f95956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the opacity of the window.  <a href="classcen_1_1basic__window.html#a55bbe085f457c001d3dd2042b9f95956">More...</a><br /></td></tr>
+<tr class="separator:a55bbe085f457c001d3dd2042b9f95956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a746fddb7ff9231d214c9b27e009a5696"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a746fddb7ff9231d214c9b27e009a5696">set_grab_mouse</a> (const bool grabMouse) noexcept</td></tr>
+<tr class="memdesc:a746fddb7ff9231d214c9b27e009a5696"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether or not the mouse should be confined within the window.  <a href="classcen_1_1basic__window.html#a746fddb7ff9231d214c9b27e009a5696">More...</a><br /></td></tr>
+<tr class="separator:a746fddb7ff9231d214c9b27e009a5696"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77127b1f6ba1d98858501ff0d7a7cfc7"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a77127b1f6ba1d98858501ff0d7a7cfc7">set_brightness</a> (const float <a class="el" href="classcen_1_1basic__window.html#af775d0d18a13ecba2c56da49199b2fd4">brightness</a>) noexcept -&gt; <a class="el" href="classcen_1_1result.html">result</a></td></tr>
+<tr class="memdesc:a77127b1f6ba1d98858501ff0d7a7cfc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the overall brightness of the window.  <a href="classcen_1_1basic__window.html#a77127b1f6ba1d98858501ff0d7a7cfc7">More...</a><br /></td></tr>
+<tr class="separator:a77127b1f6ba1d98858501ff0d7a7cfc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09fff203f9528bbe78afbff76308b62a"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a09fff203f9528bbe78afbff76308b62a">set_capturing_mouse</a> (const bool capturingMouse) noexcept -&gt; <a class="el" href="classcen_1_1result.html">result</a></td></tr>
+<tr class="memdesc:a09fff203f9528bbe78afbff76308b62a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether or not the mouse should be captured.  <a href="classcen_1_1basic__window.html#a09fff203f9528bbe78afbff76308b62a">More...</a><br /></td></tr>
+<tr class="separator:a09fff203f9528bbe78afbff76308b62a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Position functions</h2></td></tr>
+<tr class="memitem:a5aa7f10123fd31f42eb0a9f89e6053ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a5aa7f10123fd31f42eb0a9f89e6053ad">center</a> () noexcept</td></tr>
+<tr class="memdesc:a5aa7f10123fd31f42eb0a9f89e6053ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Centers the window position relative to the screen.  <a href="classcen_1_1basic__window.html#a5aa7f10123fd31f42eb0a9f89e6053ad">More...</a><br /></td></tr>
+<tr class="separator:a5aa7f10123fd31f42eb0a9f89e6053ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfa76e1f01de411ec734ac51e275070e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#abfa76e1f01de411ec734ac51e275070e">set_x</a> (const int <a class="el" href="classcen_1_1basic__window.html#a44e8698297056da1927501aab66173a7">x</a>) noexcept</td></tr>
+<tr class="memdesc:abfa76e1f01de411ec734ac51e275070e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the x-coordinate of the window.  <a href="classcen_1_1basic__window.html#abfa76e1f01de411ec734ac51e275070e">More...</a><br /></td></tr>
+<tr class="separator:abfa76e1f01de411ec734ac51e275070e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf0a35016e12a730205e3d3c06ea6394"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#acf0a35016e12a730205e3d3c06ea6394">set_y</a> (const int <a class="el" href="classcen_1_1basic__window.html#a028b7a44d74f4c6f07a4b96de39ddbde">y</a>) noexcept</td></tr>
+<tr class="memdesc:acf0a35016e12a730205e3d3c06ea6394"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the y-coordinate of the window.  <a href="classcen_1_1basic__window.html#acf0a35016e12a730205e3d3c06ea6394">More...</a><br /></td></tr>
+<tr class="separator:acf0a35016e12a730205e3d3c06ea6394"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ead7bc9ab165d5c05a09416cc347efb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a1ead7bc9ab165d5c05a09416cc347efb">set_position</a> (const <a class="el" href="group__math.html#ga482cd24468a5a74647742e69379566c7">ipoint</a> <a class="el" href="classcen_1_1basic__window.html#ad130e5d62415a13fbeb9a9d7bfa2946c">position</a>) noexcept</td></tr>
+<tr class="memdesc:a1ead7bc9ab165d5c05a09416cc347efb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the position of the window.  <a href="classcen_1_1basic__window.html#a1ead7bc9ab165d5c05a09416cc347efb">More...</a><br /></td></tr>
+<tr class="separator:a1ead7bc9ab165d5c05a09416cc347efb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44e8698297056da1927501aab66173a7"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a44e8698297056da1927501aab66173a7">x</a> () const noexcept -&gt; int</td></tr>
+<tr class="memdesc:a44e8698297056da1927501aab66173a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the x-coordinate of the window position.  <a href="classcen_1_1basic__window.html#a44e8698297056da1927501aab66173a7">More...</a><br /></td></tr>
+<tr class="separator:a44e8698297056da1927501aab66173a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a028b7a44d74f4c6f07a4b96de39ddbde"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a028b7a44d74f4c6f07a4b96de39ddbde">y</a> () const noexcept -&gt; int</td></tr>
+<tr class="memdesc:a028b7a44d74f4c6f07a4b96de39ddbde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the y-coordinate of the window position.  <a href="classcen_1_1basic__window.html#a028b7a44d74f4c6f07a4b96de39ddbde">More...</a><br /></td></tr>
+<tr class="separator:a028b7a44d74f4c6f07a4b96de39ddbde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad130e5d62415a13fbeb9a9d7bfa2946c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#ad130e5d62415a13fbeb9a9d7bfa2946c">position</a> () const noexcept -&gt; <a class="el" href="group__math.html#ga482cd24468a5a74647742e69379566c7">ipoint</a></td></tr>
+<tr class="memdesc:ad130e5d62415a13fbeb9a9d7bfa2946c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current position of the window.  <a href="classcen_1_1basic__window.html#ad130e5d62415a13fbeb9a9d7bfa2946c">More...</a><br /></td></tr>
+<tr class="separator:ad130e5d62415a13fbeb9a9d7bfa2946c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Size functions</h2></td></tr>
 <tr class="memitem:a3c53fbb8a40a61ba6ab776073945fc62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a3c53fbb8a40a61ba6ab776073945fc62">set_width</a> (const int <a class="el" href="classcen_1_1basic__window.html#a7e44d2d1ac6574a0c520bbc69aab3ed7">width</a>) noexcept</td></tr>
 <tr class="memdesc:a3c53fbb8a40a61ba6ab776073945fc62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the width of the window.  <a href="classcen_1_1basic__window.html#a3c53fbb8a40a61ba6ab776073945fc62">More...</a><br /></td></tr>
 <tr class="separator:a3c53fbb8a40a61ba6ab776073945fc62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd8a1e54492b0573546d5fd0d085e9a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#acd8a1e54492b0573546d5fd0d085e9a5">set_height</a> (const int <a class="el" href="classcen_1_1basic__window.html#a347f56179aedc2ed302a263b6c997686">height</a>) noexcept</td></tr>
 <tr class="memdesc:acd8a1e54492b0573546d5fd0d085e9a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the height of the window.  <a href="classcen_1_1basic__window.html#acd8a1e54492b0573546d5fd0d085e9a5">More...</a><br /></td></tr>
 <tr class="separator:acd8a1e54492b0573546d5fd0d085e9a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6de13ca7fabece8c60affcc23cad240"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#ad6de13ca7fabece8c60affcc23cad240">set_size</a> (const <a class="el" href="group__geometry.html#gac34681d6cc8018e07938793d4c420369">iarea</a> &amp;<a class="el" href="classcen_1_1basic__window.html#a5b5337ffd45f5b1914aafac45a2e68b1">size</a>) noexcept</td></tr>
-<tr class="memdesc:ad6de13ca7fabece8c60affcc23cad240"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the size of the window.  <a href="classcen_1_1basic__window.html#ad6de13ca7fabece8c60affcc23cad240">More...</a><br /></td></tr>
-<tr class="separator:ad6de13ca7fabece8c60affcc23cad240"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd6602c6d425706ea753a052930abd91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#abd6602c6d425706ea753a052930abd91">set_icon</a> (const <a class="el" href="group__graphics.html#ga8b71461a73c8e75c41923ffa705d67b6">surface</a> &amp;icon) noexcept</td></tr>
-<tr class="memdesc:abd6602c6d425706ea753a052930abd91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the icon that will be used by the window.  <a href="classcen_1_1basic__window.html#abd6602c6d425706ea753a052930abd91">More...</a><br /></td></tr>
-<tr class="separator:abd6602c6d425706ea753a052930abd91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5ec418e667c1c9c17975f9cb54ea79b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#ac5ec418e667c1c9c17975f9cb54ea79b">set_title</a> (const <a class="el" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; <a class="el" href="classcen_1_1basic__window.html#a2ddb08ac47b2126d4ecd6f50576425d9">title</a>) noexcept</td></tr>
-<tr class="memdesc:ac5ec418e667c1c9c17975f9cb54ea79b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the title of the window.  <a href="classcen_1_1basic__window.html#ac5ec418e667c1c9c17975f9cb54ea79b">More...</a><br /></td></tr>
-<tr class="separator:ac5ec418e667c1c9c17975f9cb54ea79b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4289b952f2b34fa58e38eea77fed08b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a4289b952f2b34fa58e38eea77fed08b0">set_title</a> (const std::string &amp;<a class="el" href="classcen_1_1basic__window.html#a2ddb08ac47b2126d4ecd6f50576425d9">title</a>) noexcept</td></tr>
-<tr class="memdesc:a4289b952f2b34fa58e38eea77fed08b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the title of the window.  <a href="classcen_1_1basic__window.html#a4289b952f2b34fa58e38eea77fed08b0">More...</a><br /></td></tr>
-<tr class="separator:a4289b952f2b34fa58e38eea77fed08b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea2bfe23dad7d7ff734e884c737a2011"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#aea2bfe23dad7d7ff734e884c737a2011">set_opacity</a> (const float <a class="el" href="classcen_1_1basic__window.html#a5ca7f496fdce85ac1463aa7140c0d6b5">opacity</a>) noexcept</td></tr>
-<tr class="memdesc:aea2bfe23dad7d7ff734e884c737a2011"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the opacity of the window.  <a href="classcen_1_1basic__window.html#aea2bfe23dad7d7ff734e884c737a2011">More...</a><br /></td></tr>
-<tr class="separator:aea2bfe23dad7d7ff734e884c737a2011"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67ec2063cf681ab07acd912baa32b1f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a67ec2063cf681ab07acd912baa32b1f9">set_min_size</a> (const <a class="el" href="group__geometry.html#gac34681d6cc8018e07938793d4c420369">iarea</a> &amp;<a class="el" href="classcen_1_1basic__window.html#a5b5337ffd45f5b1914aafac45a2e68b1">size</a>) noexcept</td></tr>
-<tr class="memdesc:a67ec2063cf681ab07acd912baa32b1f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the minimum size of the window.  <a href="classcen_1_1basic__window.html#a67ec2063cf681ab07acd912baa32b1f9">More...</a><br /></td></tr>
-<tr class="separator:a67ec2063cf681ab07acd912baa32b1f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92c4da59bd785c6c28291b10d342bc6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a92c4da59bd785c6c28291b10d342bc6b">set_max_size</a> (const <a class="el" href="group__geometry.html#gac34681d6cc8018e07938793d4c420369">iarea</a> &amp;<a class="el" href="classcen_1_1basic__window.html#a5b5337ffd45f5b1914aafac45a2e68b1">size</a>) noexcept</td></tr>
-<tr class="memdesc:a92c4da59bd785c6c28291b10d342bc6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the maximum size of the window.  <a href="classcen_1_1basic__window.html#a92c4da59bd785c6c28291b10d342bc6b">More...</a><br /></td></tr>
-<tr class="separator:a92c4da59bd785c6c28291b10d342bc6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e24ec5d56564bcbf10ead63ed737475"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a5e24ec5d56564bcbf10ead63ed737475">set_position</a> (const <a class="el" href="group__geometry.html#ga482cd24468a5a74647742e69379566c7">ipoint</a> &amp;<a class="el" href="classcen_1_1basic__window.html#ad130e5d62415a13fbeb9a9d7bfa2946c">position</a>) noexcept</td></tr>
-<tr class="memdesc:a5e24ec5d56564bcbf10ead63ed737475"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the position of the window.  <a href="classcen_1_1basic__window.html#a5e24ec5d56564bcbf10ead63ed737475">More...</a><br /></td></tr>
-<tr class="separator:a5e24ec5d56564bcbf10ead63ed737475"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a746fddb7ff9231d214c9b27e009a5696"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a746fddb7ff9231d214c9b27e009a5696">set_grab_mouse</a> (const bool grabMouse) noexcept</td></tr>
-<tr class="memdesc:a746fddb7ff9231d214c9b27e009a5696"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether or not the mouse should be confined within the window.  <a href="classcen_1_1basic__window.html#a746fddb7ff9231d214c9b27e009a5696">More...</a><br /></td></tr>
-<tr class="separator:a746fddb7ff9231d214c9b27e009a5696"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d411c388bddd20ae0a1a604fc397eab"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a0d411c388bddd20ae0a1a604fc397eab">set_brightness</a> (const float <a class="el" href="classcen_1_1basic__window.html#af775d0d18a13ecba2c56da49199b2fd4">brightness</a>) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:a0d411c388bddd20ae0a1a604fc397eab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the overall brightness of the window.  <a href="classcen_1_1basic__window.html#a0d411c388bddd20ae0a1a604fc397eab">More...</a><br /></td></tr>
-<tr class="separator:a0d411c388bddd20ae0a1a604fc397eab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a542539ac554ca54c87d1daf8935f0f64"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a542539ac554ca54c87d1daf8935f0f64">grabbing_mouse</a> () const noexcept -&gt; bool</td></tr>
-<tr class="memdesc:a542539ac554ca54c87d1daf8935f0f64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the window is currently grabbing the mouse input.  <a href="classcen_1_1basic__window.html#a542539ac554ca54c87d1daf8935f0f64">More...</a><br /></td></tr>
-<tr class="separator:a542539ac554ca54c87d1daf8935f0f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4a0e6810a844228f17c90107db530c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#ab4a0e6810a844228f17c90107db530c7">set_size</a> (const <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a> <a class="el" href="classcen_1_1basic__window.html#a5b5337ffd45f5b1914aafac45a2e68b1">size</a>) noexcept</td></tr>
+<tr class="memdesc:ab4a0e6810a844228f17c90107db530c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the size of the window.  <a href="classcen_1_1basic__window.html#ab4a0e6810a844228f17c90107db530c7">More...</a><br /></td></tr>
+<tr class="separator:ab4a0e6810a844228f17c90107db530c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b72a59342941c8d9109160019ce20b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a3b72a59342941c8d9109160019ce20b4">set_min_size</a> (const <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a> <a class="el" href="classcen_1_1basic__window.html#a5b5337ffd45f5b1914aafac45a2e68b1">size</a>) noexcept</td></tr>
+<tr class="memdesc:a3b72a59342941c8d9109160019ce20b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the minimum size of the window.  <a href="classcen_1_1basic__window.html#a3b72a59342941c8d9109160019ce20b4">More...</a><br /></td></tr>
+<tr class="separator:a3b72a59342941c8d9109160019ce20b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a055f658167153951156abf04229f43fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a055f658167153951156abf04229f43fe">set_max_size</a> (const <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a> <a class="el" href="classcen_1_1basic__window.html#a5b5337ffd45f5b1914aafac45a2e68b1">size</a>) noexcept</td></tr>
+<tr class="memdesc:a055f658167153951156abf04229f43fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the maximum size of the window.  <a href="classcen_1_1basic__window.html#a055f658167153951156abf04229f43fe">More...</a><br /></td></tr>
+<tr class="separator:a055f658167153951156abf04229f43fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e44d2d1ac6574a0c520bbc69aab3ed7"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a7e44d2d1ac6574a0c520bbc69aab3ed7">width</a> () const noexcept -&gt; int</td></tr>
+<tr class="memdesc:a7e44d2d1ac6574a0c520bbc69aab3ed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current width of the window.  <a href="classcen_1_1basic__window.html#a7e44d2d1ac6574a0c520bbc69aab3ed7">More...</a><br /></td></tr>
+<tr class="separator:a7e44d2d1ac6574a0c520bbc69aab3ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a347f56179aedc2ed302a263b6c997686"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a347f56179aedc2ed302a263b6c997686">height</a> () const noexcept -&gt; int</td></tr>
+<tr class="memdesc:a347f56179aedc2ed302a263b6c997686"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current height of the window.  <a href="classcen_1_1basic__window.html#a347f56179aedc2ed302a263b6c997686">More...</a><br /></td></tr>
+<tr class="separator:a347f56179aedc2ed302a263b6c997686"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b5337ffd45f5b1914aafac45a2e68b1"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a5b5337ffd45f5b1914aafac45a2e68b1">size</a> () const noexcept -&gt; <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a></td></tr>
+<tr class="memdesc:a5b5337ffd45f5b1914aafac45a2e68b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current size of the window.  <a href="classcen_1_1basic__window.html#a5b5337ffd45f5b1914aafac45a2e68b1">More...</a><br /></td></tr>
+<tr class="separator:a5b5337ffd45f5b1914aafac45a2e68b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab81b688fe957b255cf80079dcb307bb7"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#ab81b688fe957b255cf80079dcb307bb7">min_size</a> () const noexcept -&gt; <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a></td></tr>
+<tr class="memdesc:ab81b688fe957b255cf80079dcb307bb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the minimum size of the window.  <a href="classcen_1_1basic__window.html#ab81b688fe957b255cf80079dcb307bb7">More...</a><br /></td></tr>
+<tr class="separator:ab81b688fe957b255cf80079dcb307bb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92b39c2d91963557d97cffd6b4aa5df0"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a92b39c2d91963557d97cffd6b4aa5df0">max_size</a> () const noexcept -&gt; <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a></td></tr>
+<tr class="memdesc:a92b39c2d91963557d97cffd6b4aa5df0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the maximum size of the window.  <a href="classcen_1_1basic__window.html#a92b39c2d91963557d97cffd6b4aa5df0">More...</a><br /></td></tr>
+<tr class="separator:a92b39c2d91963557d97cffd6b4aa5df0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81ae1aafcd0fa736ca2238e83123d51e"><td class="memTemplParams" colspan="2">template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a81ae1aafcd0fa736ca2238e83123d51e"><td class="memTemplItemLeft" align="right" valign="top">constexpr static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a81ae1aafcd0fa736ca2238e83123d51e">default_size</a> () noexcept -&gt; <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a></td></tr>
+<tr class="memdesc:a81ae1aafcd0fa736ca2238e83123d51e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default size of a window.  <a href="classcen_1_1basic__window.html#a81ae1aafcd0fa736ca2238e83123d51e">More...</a><br /></td></tr>
+<tr class="separator:a81ae1aafcd0fa736ca2238e83123d51e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Flag queries</h2></td></tr>
+<tr class="memitem:a88826d51c3cd49d98509c3d5701fc132"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a88826d51c3cd49d98509c3d5701fc132">flags</a> () const noexcept -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a></td></tr>
+<tr class="memdesc:a88826d51c3cd49d98509c3d5701fc132"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mask that represents the flags associated with the window.  <a href="classcen_1_1basic__window.html#a88826d51c3cd49d98509c3d5701fc132">More...</a><br /></td></tr>
+<tr class="separator:a88826d51c3cd49d98509c3d5701fc132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6e0c25b3d678298f53fe499f5ab2189"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#af6e0c25b3d678298f53fe499f5ab2189">check_flag</a> (const SDL_WindowFlags flag) const noexcept -&gt; bool</td></tr>
+<tr class="memdesc:af6e0c25b3d678298f53fe499f5ab2189"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not a flag is set.  <a href="classcen_1_1basic__window.html#af6e0c25b3d678298f53fe499f5ab2189">More...</a><br /></td></tr>
+<tr class="separator:af6e0c25b3d678298f53fe499f5ab2189"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd8bafbfb2be8ce152388f05ecd8313f"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#abd8bafbfb2be8ce152388f05ecd8313f">check_flag</a> (const <a class="el" href="classcen_1_1basic__window.html#a0bd8de44951446c808450f0719634fb3">window_flags</a> flag) const noexcept -&gt; bool</td></tr>
+<tr class="memdesc:abd8bafbfb2be8ce152388f05ecd8313f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not a flag is set.  <a href="classcen_1_1basic__window.html#abd8bafbfb2be8ce152388f05ecd8313f">More...</a><br /></td></tr>
+<tr class="separator:abd8bafbfb2be8ce152388f05ecd8313f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad54ea364656b21146a9803a870c30fcd"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#ad54ea364656b21146a9803a870c30fcd">has_grabbed_input</a> () const noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ad54ea364656b21146a9803a870c30fcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the window has grabbed the input focus.  <a href="classcen_1_1basic__window.html#ad54ea364656b21146a9803a870c30fcd">More...</a><br /></td></tr>
+<tr class="separator:ad54ea364656b21146a9803a870c30fcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c1a26c7c2ecab461b13cc94625e365f"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a6c1a26c7c2ecab461b13cc94625e365f">has_input_focus</a> () const noexcept -&gt; bool</td></tr>
 <tr class="memdesc:a6c1a26c7c2ecab461b13cc94625e365f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the window has input focus.  <a href="classcen_1_1basic__window.html#a6c1a26c7c2ecab461b13cc94625e365f">More...</a><br /></td></tr>
 <tr class="separator:a6c1a26c7c2ecab461b13cc94625e365f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a921eceb8b38a14426f9bbacbc16baa"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a3a921eceb8b38a14426f9bbacbc16baa">has_mouse_focus</a> () const noexcept -&gt; bool</td></tr>
 <tr class="memdesc:a3a921eceb8b38a14426f9bbacbc16baa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the window has mouse focus.  <a href="classcen_1_1basic__window.html#a3a921eceb8b38a14426f9bbacbc16baa">More...</a><br /></td></tr>
 <tr class="separator:a3a921eceb8b38a14426f9bbacbc16baa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f50390f92e130b38d3bbbe60583f5a1"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a5f50390f92e130b38d3bbbe60583f5a1">is_borderless</a> () const noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a5f50390f92e130b38d3bbbe60583f5a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the window is borderless.  <a href="classcen_1_1basic__window.html#a5f50390f92e130b38d3bbbe60583f5a1">More...</a><br /></td></tr>
+<tr class="separator:a5f50390f92e130b38d3bbbe60583f5a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade7b06758b60f7fdbe3c505e109b6718"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#ade7b06758b60f7fdbe3c505e109b6718">is_decorated</a> () const noexcept -&gt; bool</td></tr>
 <tr class="memdesc:ade7b06758b60f7fdbe3c505e109b6718"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the window is decorated.  <a href="classcen_1_1basic__window.html#ade7b06758b60f7fdbe3c505e109b6718">More...</a><br /></td></tr>
 <tr class="separator:ade7b06758b60f7fdbe3c505e109b6718"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70d6f9b9061ce90428bbd0978c398df7"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a70d6f9b9061ce90428bbd0978c398df7">is_resizable</a> () const noexcept -&gt; bool</td></tr>
 <tr class="memdesc:a70d6f9b9061ce90428bbd0978c398df7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the window is resizable.  <a href="classcen_1_1basic__window.html#a70d6f9b9061ce90428bbd0978c398df7">More...</a><br /></td></tr>
 <tr class="separator:a70d6f9b9061ce90428bbd0978c398df7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ad0b235d3a22c5801abbf635f90029e"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a4ad0b235d3a22c5801abbf635f90029e">is_high_dpi</a> () const noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a4ad0b235d3a22c5801abbf635f90029e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or the window supports high-DPI mode.  <a href="classcen_1_1basic__window.html#a4ad0b235d3a22c5801abbf635f90029e">More...</a><br /></td></tr>
+<tr class="separator:a4ad0b235d3a22c5801abbf635f90029e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e7d27bc3b4c03f4e91ea1bde607478e"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a5e7d27bc3b4c03f4e91ea1bde607478e">is_fullscreen</a> () const noexcept -&gt; bool</td></tr>
 <tr class="memdesc:a5e7d27bc3b4c03f4e91ea1bde607478e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the window is in fullscreen mode.  <a href="classcen_1_1basic__window.html#a5e7d27bc3b4c03f4e91ea1bde607478e">More...</a><br /></td></tr>
 <tr class="separator:a5e7d27bc3b4c03f4e91ea1bde607478e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -221,12 +338,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2e3897da1429c133cd78c5bff6870e92"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a2e3897da1429c133cd78c5bff6870e92">is_visible</a> () const noexcept -&gt; bool</td></tr>
 <tr class="memdesc:a2e3897da1429c133cd78c5bff6870e92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the window is visible.  <a href="classcen_1_1basic__window.html#a2e3897da1429c133cd78c5bff6870e92">More...</a><br /></td></tr>
 <tr class="separator:a2e3897da1429c133cd78c5bff6870e92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b8b7eb5b951537454bb1730db4a381d"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a7b8b7eb5b951537454bb1730db4a381d">is_hidden</a> () const noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a7b8b7eb5b951537454bb1730db4a381d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the window is hidden.  <a href="classcen_1_1basic__window.html#a7b8b7eb5b951537454bb1730db4a381d">More...</a><br /></td></tr>
+<tr class="separator:a7b8b7eb5b951537454bb1730db4a381d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e4fe8dad667c817aafcba61b5a016ea"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a1e4fe8dad667c817aafcba61b5a016ea">is_opengl</a> () const noexcept -&gt; bool</td></tr>
 <tr class="memdesc:a1e4fe8dad667c817aafcba61b5a016ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the window is usable with an OpenGL-context.  <a href="classcen_1_1basic__window.html#a1e4fe8dad667c817aafcba61b5a016ea">More...</a><br /></td></tr>
 <tr class="separator:a1e4fe8dad667c817aafcba61b5a016ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14dbfb3798749ab98c12dc5520d1388d"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a14dbfb3798749ab98c12dc5520d1388d">is_vulkan</a> () const noexcept -&gt; bool</td></tr>
 <tr class="memdesc:a14dbfb3798749ab98c12dc5520d1388d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the window is usable as a Vulkan surface.  <a href="classcen_1_1basic__window.html#a14dbfb3798749ab98c12dc5520d1388d">More...</a><br /></td></tr>
 <tr class="separator:a14dbfb3798749ab98c12dc5520d1388d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59e4bd36dd97cbd1dc525d8b7de8e987"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a59e4bd36dd97cbd1dc525d8b7de8e987">is_metal</a> () const noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a59e4bd36dd97cbd1dc525d8b7de8e987"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the window can be used as a Metal view.  <a href="classcen_1_1basic__window.html#a59e4bd36dd97cbd1dc525d8b7de8e987">More...</a><br /></td></tr>
+<tr class="separator:a59e4bd36dd97cbd1dc525d8b7de8e987"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abae57de84f3ccebe99d5861edd46d5e6"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#abae57de84f3ccebe99d5861edd46d5e6">is_foreign</a> () const noexcept -&gt; bool</td></tr>
 <tr class="memdesc:abae57de84f3ccebe99d5861edd46d5e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the window wasn't created by SDL.  <a href="classcen_1_1basic__window.html#abae57de84f3ccebe99d5861edd46d5e6">More...</a><br /></td></tr>
 <tr class="separator:abae57de84f3ccebe99d5861edd46d5e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -239,99 +362,136 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aaae7ca6894d36f7af42d23de2a6125a7"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#aaae7ca6894d36f7af42d23de2a6125a7">is_maximized</a> () const noexcept -&gt; bool</td></tr>
 <tr class="memdesc:aaae7ca6894d36f7af42d23de2a6125a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the window is maximized.  <a href="classcen_1_1basic__window.html#aaae7ca6894d36f7af42d23de2a6125a7">More...</a><br /></td></tr>
 <tr class="separator:aaae7ca6894d36f7af42d23de2a6125a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97faa545a6e0ec03f96c67efc809c540"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a97faa545a6e0ec03f96c67efc809c540">always_on_top</a> () const noexcept -&gt; bool</td></tr>
-<tr class="memdesc:a97faa545a6e0ec03f96c67efc809c540"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the window is set to be always on top of other windows.  <a href="classcen_1_1basic__window.html#a97faa545a6e0ec03f96c67efc809c540">More...</a><br /></td></tr>
-<tr class="separator:a97faa545a6e0ec03f96c67efc809c540"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a6fcff33897b98ae8ee1ecfa64ac257"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a6a6fcff33897b98ae8ee1ecfa64ac257">is_always_on_top</a> () const noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a6a6fcff33897b98ae8ee1ecfa64ac257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the window is set to be always on top of other windows.  <a href="classcen_1_1basic__window.html#a6a6fcff33897b98ae8ee1ecfa64ac257">More...</a><br /></td></tr>
+<tr class="separator:a6a6fcff33897b98ae8ee1ecfa64ac257"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3fb3c5440dd8404132476c3267e0ae0"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#ad3fb3c5440dd8404132476c3267e0ae0">is_utility</a> () const noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ad3fb3c5440dd8404132476c3267e0ae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the window is a "utility" window.  <a href="classcen_1_1basic__window.html#ad3fb3c5440dd8404132476c3267e0ae0">More...</a><br /></td></tr>
+<tr class="separator:ad3fb3c5440dd8404132476c3267e0ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf3e6189a4adb2833436989c81bcb259"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#acf3e6189a4adb2833436989c81bcb259">is_tooltip</a> () const noexcept -&gt; bool</td></tr>
+<tr class="memdesc:acf3e6189a4adb2833436989c81bcb259"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the window is a tooltip.  <a href="classcen_1_1basic__window.html#acf3e6189a4adb2833436989c81bcb259">More...</a><br /></td></tr>
+<tr class="separator:acf3e6189a4adb2833436989c81bcb259"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6af52d1be33ec6374b1f78ce20a2356e"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a6af52d1be33ec6374b1f78ce20a2356e">is_popup_menu</a> () const noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a6af52d1be33ec6374b1f78ce20a2356e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the window is a popup menu.  <a href="classcen_1_1basic__window.html#a6af52d1be33ec6374b1f78ce20a2356e">More...</a><br /></td></tr>
+<tr class="separator:a6af52d1be33ec6374b1f78ce20a2356e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9686e6cd4d7ae466552238f3a6b38373"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a9686e6cd4d7ae466552238f3a6b38373">is_excluded_from_taskbar</a> () const noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a9686e6cd4d7ae466552238f3a6b38373"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the window is excluded from the taskbar.  <a href="classcen_1_1basic__window.html#a9686e6cd4d7ae466552238f3a6b38373">More...</a><br /></td></tr>
+<tr class="separator:a9686e6cd4d7ae466552238f3a6b38373"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9785bbfd025bba6eb289f64f051cd19a"><td class="memTemplParams" colspan="2">template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a9785bbfd025bba6eb289f64f051cd19a"><td class="memTemplItemLeft" align="right" valign="top">constexpr static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a9785bbfd025bba6eb289f64f051cd19a">default_flags</a> () noexcept -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a></td></tr>
+<tr class="separator:a9785bbfd025bba6eb289f64f051cd19a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Getters</h2></td></tr>
+<tr class="memitem:aa8d2e60dc727525b745bc1c1aad67eb4"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#aa8d2e60dc727525b745bc1c1aad67eb4">id</a> () const noexcept -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a></td></tr>
+<tr class="memdesc:aa8d2e60dc727525b745bc1c1aad67eb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a numerical ID of the window.  <a href="classcen_1_1basic__window.html#aa8d2e60dc727525b745bc1c1aad67eb4">More...</a><br /></td></tr>
+<tr class="separator:aa8d2e60dc727525b745bc1c1aad67eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadfcce1a290b63e84c165c15089b0bbc"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#aadfcce1a290b63e84c165c15089b0bbc">display_index</a> () const noexcept -&gt; std::optional&lt; int &gt;</td></tr>
+<tr class="memdesc:aadfcce1a290b63e84c165c15089b0bbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the display index associated with the window.  <a href="classcen_1_1basic__window.html#aadfcce1a290b63e84c165c15089b0bbc">More...</a><br /></td></tr>
+<tr class="separator:aadfcce1a290b63e84c165c15089b0bbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ddb08ac47b2126d4ecd6f50576425d9"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a2ddb08ac47b2126d4ecd6f50576425d9">title</a> () const -&gt; std::string</td></tr>
+<tr class="memdesc:a2ddb08ac47b2126d4ecd6f50576425d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the title of the window.  <a href="classcen_1_1basic__window.html#a2ddb08ac47b2126d4ecd6f50576425d9">More...</a><br /></td></tr>
+<tr class="separator:a2ddb08ac47b2126d4ecd6f50576425d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af775d0d18a13ecba2c56da49199b2fd4"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#af775d0d18a13ecba2c56da49199b2fd4">brightness</a> () const noexcept -&gt; float</td></tr>
 <tr class="memdesc:af775d0d18a13ecba2c56da49199b2fd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current brightness value of the window.  <a href="classcen_1_1basic__window.html#af775d0d18a13ecba2c56da49199b2fd4">More...</a><br /></td></tr>
 <tr class="separator:af775d0d18a13ecba2c56da49199b2fd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ca7f496fdce85ac1463aa7140c0d6b5"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a5ca7f496fdce85ac1463aa7140c0d6b5">opacity</a> () const noexcept -&gt; float</td></tr>
 <tr class="memdesc:a5ca7f496fdce85ac1463aa7140c0d6b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the opacity of the window.  <a href="classcen_1_1basic__window.html#a5ca7f496fdce85ac1463aa7140c0d6b5">More...</a><br /></td></tr>
 <tr class="separator:a5ca7f496fdce85ac1463aa7140c0d6b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44e8698297056da1927501aab66173a7"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a44e8698297056da1927501aab66173a7">x</a> () const noexcept -&gt; int</td></tr>
-<tr class="memdesc:a44e8698297056da1927501aab66173a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the x-coordinate of the window position.  <a href="classcen_1_1basic__window.html#a44e8698297056da1927501aab66173a7">More...</a><br /></td></tr>
-<tr class="separator:a44e8698297056da1927501aab66173a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a028b7a44d74f4c6f07a4b96de39ddbde"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a028b7a44d74f4c6f07a4b96de39ddbde">y</a> () const noexcept -&gt; int</td></tr>
-<tr class="memdesc:a028b7a44d74f4c6f07a4b96de39ddbde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the y-coordinate of the window position.  <a href="classcen_1_1basic__window.html#a028b7a44d74f4c6f07a4b96de39ddbde">More...</a><br /></td></tr>
-<tr class="separator:a028b7a44d74f4c6f07a4b96de39ddbde"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8d2e60dc727525b745bc1c1aad67eb4"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#aa8d2e60dc727525b745bc1c1aad67eb4">id</a> () const noexcept -&gt; <a class="el" href="namespacecen.html#ad1dcf848a9ee33237a96cde6b5a1d466">u32</a></td></tr>
-<tr class="memdesc:aa8d2e60dc727525b745bc1c1aad67eb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a numerical ID of the window.  <a href="classcen_1_1basic__window.html#aa8d2e60dc727525b745bc1c1aad67eb4">More...</a><br /></td></tr>
-<tr class="separator:aa8d2e60dc727525b745bc1c1aad67eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aadfcce1a290b63e84c165c15089b0bbc"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#aadfcce1a290b63e84c165c15089b0bbc">display_index</a> () const noexcept -&gt; std::optional&lt; int &gt;</td></tr>
-<tr class="memdesc:aadfcce1a290b63e84c165c15089b0bbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the display index associated with the window.  <a href="classcen_1_1basic__window.html#aadfcce1a290b63e84c165c15089b0bbc">More...</a><br /></td></tr>
-<tr class="separator:aadfcce1a290b63e84c165c15089b0bbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad130e5d62415a13fbeb9a9d7bfa2946c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#ad130e5d62415a13fbeb9a9d7bfa2946c">position</a> () const noexcept -&gt; <a class="el" href="group__geometry.html#ga482cd24468a5a74647742e69379566c7">ipoint</a></td></tr>
-<tr class="memdesc:ad130e5d62415a13fbeb9a9d7bfa2946c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current position of the window.  <a href="classcen_1_1basic__window.html#ad130e5d62415a13fbeb9a9d7bfa2946c">More...</a><br /></td></tr>
-<tr class="separator:ad130e5d62415a13fbeb9a9d7bfa2946c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab81b688fe957b255cf80079dcb307bb7"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#ab81b688fe957b255cf80079dcb307bb7">min_size</a> () const noexcept -&gt; <a class="el" href="group__geometry.html#gac34681d6cc8018e07938793d4c420369">iarea</a></td></tr>
-<tr class="memdesc:ab81b688fe957b255cf80079dcb307bb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the minimum size of the window.  <a href="classcen_1_1basic__window.html#ab81b688fe957b255cf80079dcb307bb7">More...</a><br /></td></tr>
-<tr class="separator:ab81b688fe957b255cf80079dcb307bb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92b39c2d91963557d97cffd6b4aa5df0"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a92b39c2d91963557d97cffd6b4aa5df0">max_size</a> () const noexcept -&gt; <a class="el" href="group__geometry.html#gac34681d6cc8018e07938793d4c420369">iarea</a></td></tr>
-<tr class="memdesc:a92b39c2d91963557d97cffd6b4aa5df0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the maximum size of the window.  <a href="classcen_1_1basic__window.html#a92b39c2d91963557d97cffd6b4aa5df0">More...</a><br /></td></tr>
-<tr class="separator:a92b39c2d91963557d97cffd6b4aa5df0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e44d2d1ac6574a0c520bbc69aab3ed7"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a7e44d2d1ac6574a0c520bbc69aab3ed7">width</a> () const noexcept -&gt; int</td></tr>
-<tr class="memdesc:a7e44d2d1ac6574a0c520bbc69aab3ed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current width of the window.  <a href="classcen_1_1basic__window.html#a7e44d2d1ac6574a0c520bbc69aab3ed7">More...</a><br /></td></tr>
-<tr class="separator:a7e44d2d1ac6574a0c520bbc69aab3ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a347f56179aedc2ed302a263b6c997686"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a347f56179aedc2ed302a263b6c997686">height</a> () const noexcept -&gt; int</td></tr>
-<tr class="memdesc:a347f56179aedc2ed302a263b6c997686"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current height of the window.  <a href="classcen_1_1basic__window.html#a347f56179aedc2ed302a263b6c997686">More...</a><br /></td></tr>
-<tr class="separator:a347f56179aedc2ed302a263b6c997686"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b5337ffd45f5b1914aafac45a2e68b1"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a5b5337ffd45f5b1914aafac45a2e68b1">size</a> () const noexcept -&gt; <a class="el" href="group__geometry.html#gac34681d6cc8018e07938793d4c420369">iarea</a></td></tr>
-<tr class="memdesc:a5b5337ffd45f5b1914aafac45a2e68b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current size of the window.  <a href="classcen_1_1basic__window.html#a5b5337ffd45f5b1914aafac45a2e68b1">More...</a><br /></td></tr>
-<tr class="separator:a5b5337ffd45f5b1914aafac45a2e68b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6e0c25b3d678298f53fe499f5ab2189"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#af6e0c25b3d678298f53fe499f5ab2189">check_flag</a> (const SDL_WindowFlags flag) const noexcept -&gt; bool</td></tr>
-<tr class="memdesc:af6e0c25b3d678298f53fe499f5ab2189"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not a flag is set.  <a href="classcen_1_1basic__window.html#af6e0c25b3d678298f53fe499f5ab2189">More...</a><br /></td></tr>
-<tr class="separator:af6e0c25b3d678298f53fe499f5ab2189"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88826d51c3cd49d98509c3d5701fc132"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a88826d51c3cd49d98509c3d5701fc132">flags</a> () const noexcept -&gt; <a class="el" href="namespacecen.html#ad1dcf848a9ee33237a96cde6b5a1d466">u32</a></td></tr>
-<tr class="memdesc:a88826d51c3cd49d98509c3d5701fc132"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mask that represents the flags associated with the window.  <a href="classcen_1_1basic__window.html#a88826d51c3cd49d98509c3d5701fc132">More...</a><br /></td></tr>
-<tr class="separator:a88826d51c3cd49d98509c3d5701fc132"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a9d7f55a113266d6464d4ed56910d9f"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a6a9d7f55a113266d6464d4ed56910d9f">get_pixel_format</a> () const noexcept -&gt; <a class="el" href="group__graphics.html#ga2b2a5cc747e0869488d872b28d939dae">pixel_format</a></td></tr>
+<tr class="memitem:a6a9d7f55a113266d6464d4ed56910d9f"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a6a9d7f55a113266d6464d4ed56910d9f">get_pixel_format</a> () const noexcept -&gt; <a class="el" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a></td></tr>
 <tr class="memdesc:a6a9d7f55a113266d6464d4ed56910d9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the pixel format of the window.  <a href="classcen_1_1basic__window.html#a6a9d7f55a113266d6464d4ed56910d9f">More...</a><br /></td></tr>
 <tr class="separator:a6a9d7f55a113266d6464d4ed56910d9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af740d22d3ab7ee85f4f508dc23b8daf7"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#af740d22d3ab7ee85f4f508dc23b8daf7">get_surface</a> () noexcept -&gt; <a class="el" href="group__graphics.html#ga3910502561159e34c9a2b83c007e71be">surface_handle</a></td></tr>
+<tr class="memitem:af740d22d3ab7ee85f4f508dc23b8daf7"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#af740d22d3ab7ee85f4f508dc23b8daf7">get_surface</a> () noexcept -&gt; <a class="el" href="group__video.html#ga3910502561159e34c9a2b83c007e71be">surface_handle</a></td></tr>
 <tr class="memdesc:af740d22d3ab7ee85f4f508dc23b8daf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a handle to the window framebuffer surface.  <a href="classcen_1_1basic__window.html#af740d22d3ab7ee85f4f508dc23b8daf7">More...</a><br /></td></tr>
 <tr class="separator:af740d22d3ab7ee85f4f508dc23b8daf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ddb08ac47b2126d4ecd6f50576425d9"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a2ddb08ac47b2126d4ecd6f50576425d9">title</a> () const -&gt; std::string</td></tr>
-<tr class="memdesc:a2ddb08ac47b2126d4ecd6f50576425d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the title of the window.  <a href="classcen_1_1basic__window.html#a2ddb08ac47b2126d4ecd6f50576425d9">More...</a><br /></td></tr>
-<tr class="separator:a2ddb08ac47b2126d4ecd6f50576425d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a542539ac554ca54c87d1daf8935f0f64"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a542539ac554ca54c87d1daf8935f0f64">grabbing_mouse</a> () const noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a542539ac554ca54c87d1daf8935f0f64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the window is currently grabbing the mouse input.  <a href="classcen_1_1basic__window.html#a542539ac554ca54c87d1daf8935f0f64">More...</a><br /></td></tr>
+<tr class="separator:a542539ac554ca54c87d1daf8935f0f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23ad43ce231018e31e966e3227836e81"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a23ad43ce231018e31e966e3227836e81">is_screen_keyboard_shown</a> () const noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a23ad43ce231018e31e966e3227836e81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the screen keyboard is shown for the window.  <a href="classcen_1_1basic__window.html#a23ad43ce231018e31e966e3227836e81">More...</a><br /></td></tr>
+<tr class="separator:a23ad43ce231018e31e966e3227836e81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac18c34aeb7e4d1a304073218c0d081eb"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#ac18c34aeb7e4d1a304073218c0d081eb">get</a> () const noexcept -&gt; SDL_Window *</td></tr>
+<tr class="memdesc:ac18c34aeb7e4d1a304073218c0d081eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the associated SDL window.  <a href="classcen_1_1basic__window.html#ac18c34aeb7e4d1a304073218c0d081eb">More...</a><br /></td></tr>
+<tr class="separator:ac18c34aeb7e4d1a304073218c0d081eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Conversions</h2></td></tr>
 <tr class="memitem:a3a51b0a48e33b68a302c59a8483ef5ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a3a51b0a48e33b68a302c59a8483ef5ad">operator SDL_Window *</a> () noexcept</td></tr>
 <tr class="memdesc:a3a51b0a48e33b68a302c59a8483ef5ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts to <code>SDL_Window*</code>.  <a href="classcen_1_1basic__window.html#a3a51b0a48e33b68a302c59a8483ef5ad">More...</a><br /></td></tr>
 <tr class="separator:a3a51b0a48e33b68a302c59a8483ef5ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c46228f737dd61741525cfe904e71cb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a2c46228f737dd61741525cfe904e71cb">operator const SDL_Window *</a> () const noexcept</td></tr>
 <tr class="memdesc:a2c46228f737dd61741525cfe904e71cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts to <code>const SDL_Window*</code>.  <a href="classcen_1_1basic__window.html#a2c46228f737dd61741525cfe904e71cb">More...</a><br /></td></tr>
 <tr class="separator:a2c46228f737dd61741525cfe904e71cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84b741e0514d15e5ce2afde8d451f5ff"><td class="memTemplParams" colspan="2">template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </td></tr>
+<tr class="memitem:a84b741e0514d15e5ce2afde8d451f5ff"><td class="memTemplParams" colspan="2">template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </td></tr>
 <tr class="memitem:a84b741e0514d15e5ce2afde8d451f5ff"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a84b741e0514d15e5ce2afde8d451f5ff">operator bool</a> () const noexcept</td></tr>
 <tr class="memdesc:a84b741e0514d15e5ce2afde8d451f5ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the handle holds a non-null pointer.  <a href="classcen_1_1basic__window.html#a84b741e0514d15e5ce2afde8d451f5ff">More...</a><br /></td></tr>
 <tr class="separator:a84b741e0514d15e5ce2afde8d451f5ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac18c34aeb7e4d1a304073218c0d081eb"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#ac18c34aeb7e4d1a304073218c0d081eb">get</a> () const noexcept -&gt; SDL_Window *</td></tr>
-<tr class="memdesc:ac18c34aeb7e4d1a304073218c0d081eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the associated SDL window.  <a href="classcen_1_1basic__window.html#ac18c34aeb7e4d1a304073218c0d081eb">More...</a><br /></td></tr>
-<tr class="separator:ac18c34aeb7e4d1a304073218c0d081eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a2637bd49b6a6d6c178780cdf684539dd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a2637bd49b6a6d6c178780cdf684539dd">set_capturing_mouse</a> (const bool capturingMouse) noexcept</td></tr>
-<tr class="memdesc:a2637bd49b6a6d6c178780cdf684539dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether or not the mouse should be captured.  <a href="classcen_1_1basic__window.html#a2637bd49b6a6d6c178780cdf684539dd">More...</a><br /></td></tr>
-<tr class="separator:a2637bd49b6a6d6c178780cdf684539dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5626c2f5c87e3ef6b3db074294d2197e"><td class="memTemplParams" colspan="2">template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </td></tr>
-<tr class="memitem:a5626c2f5c87e3ef6b3db074294d2197e"><td class="memTemplItemLeft" align="right" valign="top">constexpr static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__window.html#a5626c2f5c87e3ef6b3db074294d2197e">default_size</a> () -&gt; <a class="el" href="group__geometry.html#gac34681d6cc8018e07938793d4c420369">iarea</a></td></tr>
-<tr class="memdesc:a5626c2f5c87e3ef6b3db074294d2197e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default size of a window.  <a href="classcen_1_1basic__window.html#a5626c2f5c87e3ef6b3db074294d2197e">More...</a><br /></td></tr>
-<tr class="separator:a5626c2f5c87e3ef6b3db074294d2197e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents an operating system window. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">B</td><td><code>std::true_type</code> for owning windows; <code>std::false_type</code> for non-owning windows.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="group__graphics.html#gaf061afd66d5eb42fc564662e1d864828" title="Represents an owning window.">window</a></code> </dd>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="group__video.html#gaf061afd66d5eb42fc564662e1d864828" title="Represents an owning window.">window</a></code> </dd>
 <dd>
-<code><a class="el" href="group__graphics.html#gac16d78286764452f4beb682fb3b0289f" title="Represents a non-owning window.">window_handle</a></code> </dd></dl>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a2d626b60e84d235b1e66859f5c215cef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d626b60e84d235b1e66859f5c215cef">&#9670;&nbsp;</a></span>basic_window() <span class="overload">[1/5]</span></h2>
+<code><a class="el" href="group__video.html#gac16d78286764452f4beb682fb3b0289f" title="Represents a non-owning window.">window_handle</a></code> </dd>
+<dd>
+<code><a class="el" href="group__video.html#ga0429917df2fbc52a55313fa03285e6d3" title="Returns a handle to the window associated with the specified ID.">get_window()</a></code> </dd>
+<dd>
+<code><a class="el" href="group__video.html#gae3e08c5348c6a51773c3096a6fd40d3e" title="Returns a handle to the currently grabbed window.">get_grabbed_window()</a></code> </dd>
+<dd>
+<code><a class="el" href="group__video.html#ga4beeb2bb167a3eb223e9b29470b37706" title="Returns a handle to the window that has mouse focus.">mouse_focus_window()</a></code> </dd>
+<dd>
+<code><a class="el" href="group__video.html#ga792d5524a1cf4f5954bffc346cfba949" title="Returns a handle to the window that has keyboard focus.">keyboard_focus_window()</a></code> </dd>
+<dd>
+<code><a class="el" href="group__video.html#ga82f18a68e25eb040ed6ee5f6a8f022f8" title="Returns a handle to the renderer associated with a window.">get_renderer()</a></code> </dd>
+<dd>
+<code><a class="el" href="group__video.html#ga48b3a90cfba05493c695d79084809e53" title="Creates a window and an associated renderer.">make_window_and_renderer()</a></code> </dd></dl>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a0bd8de44951446c808450f0719634fb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bd8de44951446c808450f0719634fb3">&#9670;&nbsp;</a></span>window_flags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classcen_1_1basic__window.html#a0bd8de44951446c808450f0719634fb3">cen::basic_window::window_flags</a> : <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Represents different window features and options. </p>
+<p>Values of this enum are intended to be used to create flag bitmasks, that can be used when creating windows and to obtain information from created windows.</p>
+<dl class="section see"><dt>See also</dt><dd><code>SDL_WindowFlags</code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a0bd8de44951446c808450f0719634fb3ace813377b1c2adb427a8ba244bb67cc9"></a>fullscreen&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0bd8de44951446c808450f0719634fb3ac392910ef7aef950a97e73f672fd484f"></a>opengl&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0bd8de44951446c808450f0719634fb3a5223d15b58e1dcbe4c822f1b853d9e08"></a>shown&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0bd8de44951446c808450f0719634fb3a446802687e59dca59b658e43c8fd231a"></a>hidden&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0bd8de44951446c808450f0719634fb3a304822ba138ee23010e82bd4ab42b6e0"></a>borderless&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0bd8de44951446c808450f0719634fb3a1fbc10c8a4dfba416446ff5f5e68405e"></a>resizable&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0bd8de44951446c808450f0719634fb3afe7f889abc91c8082956913b68c648e3"></a>minimized&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0bd8de44951446c808450f0719634fb3a17505c17ee2df0bc9575b692d44458b9"></a>maximized&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0bd8de44951446c808450f0719634fb3ae2040e238387b694867e45da0af54a1f"></a>input_grabbed&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0bd8de44951446c808450f0719634fb3aeff8122f6bd6a81d1a3b3e858f4ce0eb"></a>input_focus&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0bd8de44951446c808450f0719634fb3a5972142c9a72949b7c030b2f6aa88ac3"></a>mouse_focus&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0bd8de44951446c808450f0719634fb3ac0181c9a9ab23a26afe19e538620eae8"></a>fullscreen_desktop&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0bd8de44951446c808450f0719634fb3a1ea88940c000910aa90b9dc8cf559dab"></a>foreign&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0bd8de44951446c808450f0719634fb3a17814ca6a36228957e39cb31b927fdf9"></a>high_dpi&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0bd8de44951446c808450f0719634fb3a8fe5e92a6bc0b09c318e71a98cf5b55e"></a>mouse_capture&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0bd8de44951446c808450f0719634fb3ae41e20101d1c08b83feae9b21f9bcf70"></a>always_on_top&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0bd8de44951446c808450f0719634fb3a7f32035f7ead67d2031f9738a6bff7b0"></a>skip_taskbar&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0bd8de44951446c808450f0719634fb3a664f30da899bf55c0ba8998273728e3b"></a>utility&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0bd8de44951446c808450f0719634fb3a083d1d756edaaa31aa05be596446d51e"></a>tooltip&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0bd8de44951446c808450f0719634fb3a46288408a9e46bee40a94b9dde327f2b"></a>popup_menu&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0bd8de44951446c808450f0719634fb3a7dac3a878d21870e13825bde5c7f35dd"></a>vulkan&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0bd8de44951446c808450f0719634fb3acea1abdb3c2820be52d50ac21eef78a5"></a>metal&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ae5761f8a4a6710daa9962fa13c57fc25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5761f8a4a6710daa9962fa13c57fc25">&#9670;&nbsp;</a></span>basic_window() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -342,7 +502,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">cen::basic_window::basic_window </td>
           <td>(</td>
-          <td class="paramtype">SDL_Window *&#160;</td>
+          <td class="paramtype"><a class="el" href="group__core.html#ga00614d944c81543b03c7f2cb202fdc50">maybe_owner</a>&lt; SDL_Window * &gt;&#160;</td>
           <td class="paramname"><em>window</em></td><td>)</td>
           <td></td>
         </tr>
@@ -366,13 +526,13 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad7e0616ffcf6a09b5e6511a72a51c0ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7e0616ffcf6a09b5e6511a72a51c0ac">&#9670;&nbsp;</a></span>basic_window() <span class="overload">[2/5]</span></h2>
+<a id="acff54d7a19b93bb9c49da169b411e770"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acff54d7a19b93bb9c49da169b411e770">&#9670;&nbsp;</a></span>basic_window() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
+template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -380,14 +540,20 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
         <tr>
           <td class="memname">cen::basic_window::basic_window </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
           <td class="paramname"><em>title</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="group__geometry.html#gac34681d6cc8018e07938793d4c420369">iarea</a> &amp;&#160;</td>
-          <td class="paramname"><em>size</em> = <code><a class="el" href="classcen_1_1basic__window.html#a5626c2f5c87e3ef6b3db074294d2197e">default_size</a>()</code>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>&#160;</td>
+          <td class="paramname"><em>size</em> = <code><a class="el" href="classcen_1_1basic__window.html#a81ae1aafcd0fa736ca2238e83123d51e">default_size</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>&#160;</td>
+          <td class="paramname"><em>flags</em> = <code><a class="el" href="classcen_1_1basic__window.html#a9785bbfd025bba6eb289f64f051cd19a">default_flags</a>()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -407,28 +573,32 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">title</td><td>the title of the window, can't be null. </td></tr>
-    <tr><td class="paramname">size</td><td>the size of the window, components must be greater than zero.</td></tr>
+    <tr><td class="paramname">size</td><td>the size of the window, components must be greater than zero. </td></tr>
+    <tr><td class="paramname">flags</td><td>the window flags.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">exception</td><td>if the supplied width or height aren't greater than zero. </td></tr>
+    <tr><td class="paramname"><a class="el" href="classcen_1_1cen__error.html" title="The base of all exceptions explicitly thrown by the library.">cen_error</a></td><td>if the supplied width or height aren't greater than zero. </td></tr>
     <tr><td class="paramname"><a class="el" href="classcen_1_1sdl__error.html" title="Represents an error related to the core SDL2 library.">sdl_error</a></td><td>if the window cannot be created.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1basic__window.html#a81ae1aafcd0fa736ca2238e83123d51e" title="Returns the default size of a window.">default_size()</a></code> </dd>
+<dd>
+<code><a class="el" href="classcen_1_1basic__window.html#a9785bbfd025bba6eb289f64f051cd19a">default_flags()</a></code></dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="a739d00e90636549ee64fa3a00a5eb94a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a739d00e90636549ee64fa3a00a5eb94a">&#9670;&nbsp;</a></span>basic_window() <span class="overload">[3/5]</span></h2>
+<a id="af91caea7a38ef938f711eb2e2ffd4090"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af91caea7a38ef938f711eb2e2ffd4090">&#9670;&nbsp;</a></span>basic_window() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
+template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -442,8 +612,14 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="group__geometry.html#gac34681d6cc8018e07938793d4c420369">iarea</a> &amp;&#160;</td>
-          <td class="paramname"><em>size</em> = <code><a class="el" href="classcen_1_1basic__window.html#a5626c2f5c87e3ef6b3db074294d2197e">default_size</a>()</code>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>&#160;</td>
+          <td class="paramname"><em>size</em> = <code><a class="el" href="classcen_1_1basic__window.html#a81ae1aafcd0fa736ca2238e83123d51e">default_size</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>&#160;</td>
+          <td class="paramname"><em>flags</em> = <code><a class="el" href="classcen_1_1basic__window.html#a9785bbfd025bba6eb289f64f051cd19a">default_flags</a>()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -463,17 +639,21 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">title</td><td>the title of the window. </td></tr>
-    <tr><td class="paramname">size</td><td>the size of the window, components must be greater than zero.</td></tr>
+    <tr><td class="paramname">size</td><td>the size of the window, components must be greater than zero. </td></tr>
+    <tr><td class="paramname">flags</td><td>the window flags, see <code>window_flags</code>.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">exception</td><td>if the supplied width or height aren't greater than zero. </td></tr>
+    <tr><td class="paramname"><a class="el" href="classcen_1_1cen__error.html" title="The base of all exceptions explicitly thrown by the library.">cen_error</a></td><td>if the supplied width or height aren't greater than zero. </td></tr>
     <tr><td class="paramname"><a class="el" href="classcen_1_1sdl__error.html" title="Represents an error related to the core SDL2 library.">sdl_error</a></td><td>if the window cannot be created.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1basic__window.html#a81ae1aafcd0fa736ca2238e83123d51e" title="Returns the default size of a window.">default_size()</a></code> </dd>
+<dd>
+<code><a class="el" href="classcen_1_1basic__window.html#a9785bbfd025bba6eb289f64f051cd19a">default_flags()</a></code></dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
 
 </div>
@@ -484,7 +664,7 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
+template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -504,7 +684,7 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
 </div><div class="memdoc">
 
 <p>Creates a window. </p>
-<p>The window will use the size obtained from <code><a class="el" href="classcen_1_1basic__window.html#a5626c2f5c87e3ef6b3db074294d2197e" title="Returns the default size of a window.">default_size()</a></code> as its initial size.</p>
+<p>The window will use the size obtained from <code><a class="el" href="classcen_1_1basic__window.html#a81ae1aafcd0fa736ca2238e83123d51e" title="Returns the default size of a window.">default_size()</a></code> as its initial size.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname"><a class="el" href="classcen_1_1sdl__error.html" title="Represents an error related to the core SDL2 library.">sdl_error</a></td><td>if the window cannot be created.</td></tr>
@@ -521,7 +701,7 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
+template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -529,7 +709,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
         <tr>
           <td class="memname">cen::basic_window::basic_window </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__graphics.html#gaf061afd66d5eb42fc564662e1d864828">window</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__video.html#gaf061afd66d5eb42fc564662e1d864828">window</a> &amp;&#160;</td>
           <td class="paramname"><em>owner</em></td><td>)</td>
           <td></td>
         </tr>
@@ -553,36 +733,6 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a97faa545a6e0ec03f96c67efc809c540"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a97faa545a6e0ec03f96c67efc809c540">&#9670;&nbsp;</a></span>always_on_top()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::basic_window::always_on_top </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the window is set to be always on top of other windows. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window is always on top of other windows; false otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
 <a id="af775d0d18a13ecba2c56da49199b2fd4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af775d0d18a13ecba2c56da49199b2fd4">&#9670;&nbsp;</a></span>brightness()</h2>
 
@@ -644,7 +794,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 </div>
 </div>
 <a id="af6e0c25b3d678298f53fe499f5ab2189"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6e0c25b3d678298f53fe499f5ab2189">&#9670;&nbsp;</a></span>check_flag()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af6e0c25b3d678298f53fe499f5ab2189">&#9670;&nbsp;</a></span>check_flag() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -669,7 +819,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 </div><div class="memdoc">
 
 <p>Indicates whether or not a flag is set. </p>
-<p>Some of the use cases of this method can be replaced by more explicit methods, e.g. <code><a class="el" href="classcen_1_1basic__window.html#a5e7d27bc3b4c03f4e91ea1bde607478e" title="Indicates whether or not the window is in fullscreen mode.">is_fullscreen()</a></code> instead of <code>check_flag(SDL_WINDOW_FULLSCREEN)</code>.</p>
+<p>Some of the use cases of this function can be replaced by more explicit functions, e.g. <code><a class="el" href="classcen_1_1basic__window.html#a5e7d27bc3b4c03f4e91ea1bde607478e" title="Indicates whether or not the window is in fullscreen mode.">is_fullscreen()</a></code> instead of <code>check_flag(SDL_WINDOW_FULLSCREEN)</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">flag</td><td>the flag that will be tested.</td></tr>
@@ -681,13 +831,79 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 
 </div>
 </div>
-<a id="a5626c2f5c87e3ef6b3db074294d2197e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5626c2f5c87e3ef6b3db074294d2197e">&#9670;&nbsp;</a></span>default_size()</h2>
+<a id="abd8bafbfb2be8ce152388f05ecd8313f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd8bafbfb2be8ce152388f05ecd8313f">&#9670;&nbsp;</a></span>check_flag() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::basic_window::check_flag </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__window.html#a0bd8de44951446c808450f0719634fb3">window_flags</a>&#160;</td>
+          <td class="paramname"><em>flag</em></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not a flag is set. </p>
+<p>Some of the use cases of this function can be replaced by more explicit functions, e.g. <code><a class="el" href="classcen_1_1basic__window.html#a5e7d27bc3b4c03f4e91ea1bde607478e" title="Indicates whether or not the window is in fullscreen mode.">is_fullscreen()</a></code> instead of <code>check_flag(cen::window::fullscreen)</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flag</td><td>the flag that will be tested.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the flag is set; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a9785bbfd025bba6eb289f64f051cd19a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9785bbfd025bba6eb289f64f051cd19a">&#9670;&nbsp;</a></span>default_flags()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
+template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr static auto cen::basic_window::default_flags </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a81ae1aafcd0fa736ca2238e83123d51e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81ae1aafcd0fa736ca2238e83123d51e">&#9670;&nbsp;</a></span>default_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -696,13 +912,13 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
           <td class="memname">constexpr static auto cen::basic_window::default_size </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__geometry.html#gac34681d6cc8018e07938793d4c420369">iarea</a>
+          <td> -&gt; <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>
   </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -757,7 +973,7 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
           <td class="memname">auto cen::basic_window::flags </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="namespacecen.html#ad1dcf848a9ee33237a96cde6b5a1d466">u32</a>
+          <td> const -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>
   </td>
         </tr>
       </table>
@@ -820,7 +1036,7 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
           <td class="memname">auto cen::basic_window::get_pixel_format </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__graphics.html#ga2b2a5cc747e0869488d872b28d939dae">pixel_format</a>
+          <td> const -&gt; <a class="el" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a>
   </td>
         </tr>
       </table>
@@ -850,7 +1066,7 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
           <td class="memname">auto cen::basic_window::get_surface </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__graphics.html#ga3910502561159e34c9a2b83c007e71be">surface_handle</a>
+          <td> -&gt; <a class="el" href="group__video.html#ga3910502561159e34c9a2b83c007e71be">surface_handle</a>
   </td>
         </tr>
       </table>
@@ -895,6 +1111,36 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
 <p>Indicates whether or not the window is currently grabbing the mouse input. </p>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window is grabbing the mouse; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ad54ea364656b21146a9803a870c30fcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad54ea364656b21146a9803a870c30fcd">&#9670;&nbsp;</a></span>has_grabbed_input()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::basic_window::has_grabbed_input </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the window has grabbed the input focus. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window has grabbed input focus; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
 
 </div>
 </div>
@@ -1030,7 +1276,7 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
           <td class="memname">auto cen::basic_window::id </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="namespacecen.html#ad1dcf848a9ee33237a96cde6b5a1d466">u32</a>
+          <td> const -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>
   </td>
         </tr>
       </table>
@@ -1044,6 +1290,68 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
 <p>Returns a numerical ID of the window. </p>
 <dl class="section return"><dt>Returns</dt><dd>a numerical ID of the window.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a6a6fcff33897b98ae8ee1ecfa64ac257"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a6fcff33897b98ae8ee1ecfa64ac257">&#9670;&nbsp;</a></span>is_always_on_top()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::basic_window::is_always_on_top </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the window is set to be always on top of other windows. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window is always on top of other windows; false otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a5f50390f92e130b38d3bbbe60583f5a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f50390f92e130b38d3bbbe60583f5a1">&#9670;&nbsp;</a></span>is_borderless()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::basic_window::is_borderless </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the window is borderless. </p>
+<dl class="section note"><dt>Note</dt><dd>This check is the opposite of <code><a class="el" href="classcen_1_1basic__window.html#ade7b06758b60f7fdbe3c505e109b6718" title="Indicates whether or not the window is decorated.">is_decorated()</a></code>.</dd></dl>
+<p>Windows are not borderless by default.</p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window is borderless; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
 
 </div>
 </div>
@@ -1102,9 +1410,40 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
 </div><div class="memdoc">
 
 <p>Indicates whether or not the window is decorated. </p>
+<dl class="section note"><dt>Note</dt><dd>This check is the opposite of <code><a class="el" href="classcen_1_1basic__window.html#a5f50390f92e130b38d3bbbe60583f5a1" title="Indicates whether or not the window is borderless.">is_borderless()</a></code>.</dd></dl>
 <p>Windows are decorated by default.</p>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window is decorated; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a9686e6cd4d7ae466552238f3a6b38373"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9686e6cd4d7ae466552238f3a6b38373">&#9670;&nbsp;</a></span>is_excluded_from_taskbar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::basic_window::is_excluded_from_taskbar </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the window is excluded from the taskbar. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window is excluded from the taskbar; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
 
 </div>
 </div>
@@ -1198,6 +1537,66 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
 
 </div>
 </div>
+<a id="a7b8b7eb5b951537454bb1730db4a381d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b8b7eb5b951537454bb1730db4a381d">&#9670;&nbsp;</a></span>is_hidden()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::basic_window::is_hidden </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the window is hidden. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window isn't visible; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a4ad0b235d3a22c5801abbf635f90029e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ad0b235d3a22c5801abbf635f90029e">&#9670;&nbsp;</a></span>is_high_dpi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::basic_window::is_high_dpi </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or the window supports high-DPI mode. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window supports high-DPI mode; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
 <a id="aaae7ca6894d36f7af42d23de2a6125a7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaae7ca6894d36f7af42d23de2a6125a7">&#9670;&nbsp;</a></span>is_maximized()</h2>
 
@@ -1225,6 +1624,36 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
 <p>Indicates whether or not the window is maximized. </p>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window is maximized; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a59e4bd36dd97cbd1dc525d8b7de8e987"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59e4bd36dd97cbd1dc525d8b7de8e987">&#9670;&nbsp;</a></span>is_metal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::basic_window::is_metal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the window can be used as a Metal view. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window can be used as a Metal view; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
 
 </div>
 </div>
@@ -1288,6 +1717,36 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
 
 </div>
 </div>
+<a id="a6af52d1be33ec6374b1f78ce20a2356e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6af52d1be33ec6374b1f78ce20a2356e">&#9670;&nbsp;</a></span>is_popup_menu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::basic_window::is_popup_menu </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the window is a popup menu. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window is a popup menu; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
 <a id="a70d6f9b9061ce90428bbd0978c398df7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a70d6f9b9061ce90428bbd0978c398df7">&#9670;&nbsp;</a></span>is_resizable()</h2>
 
@@ -1316,6 +1775,96 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
 <p>By default, this property is set to false.</p>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window is resizable; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a23ad43ce231018e31e966e3227836e81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23ad43ce231018e31e966e3227836e81">&#9670;&nbsp;</a></span>is_screen_keyboard_shown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::basic_window::is_screen_keyboard_shown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the screen keyboard is shown for the window. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the screen keyboard is shown for the window; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="acf3e6189a4adb2833436989c81bcb259"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf3e6189a4adb2833436989c81bcb259">&#9670;&nbsp;</a></span>is_tooltip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::basic_window::is_tooltip </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the window is a tooltip. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window is a tooltip; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ad3fb3c5440dd8404132476c3267e0ae0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3fb3c5440dd8404132476c3267e0ae0">&#9670;&nbsp;</a></span>is_utility()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::basic_window::is_utility </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the window is a "utility" window. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if window is a "utility" window; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
 
 </div>
 </div>
@@ -1392,7 +1941,7 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
           <td class="memname">auto cen::basic_window::max_size </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__geometry.html#gac34681d6cc8018e07938793d4c420369">iarea</a>
+          <td> const -&gt; <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>
   </td>
         </tr>
       </table>
@@ -1450,7 +1999,7 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
           <td class="memname">auto cen::basic_window::min_size </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__geometry.html#gac34681d6cc8018e07938793d4c420369">iarea</a>
+          <td> const -&gt; <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>
   </td>
         </tr>
       </table>
@@ -1531,7 +2080,7 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
+template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1629,7 +2178,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
           <td class="memname">auto cen::basic_window::position </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__geometry.html#ga482cd24468a5a74647742e69379566c7">ipoint</a>
+          <td> const -&gt; <a class="el" href="group__math.html#ga482cd24468a5a74647742e69379566c7">ipoint</a>
   </td>
         </tr>
       </table>
@@ -1703,8 +2252,8 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 
 </div>
 </div>
-<a id="a0d411c388bddd20ae0a1a604fc397eab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d411c388bddd20ae0a1a604fc397eab">&#9670;&nbsp;</a></span>set_brightness()</h2>
+<a id="a77127b1f6ba1d98858501ff0d7a7cfc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77127b1f6ba1d98858501ff0d7a7cfc7">&#9670;&nbsp;</a></span>set_brightness()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1717,7 +2266,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
           <td>(</td>
           <td class="paramtype">const float&#160;</td>
           <td class="paramname"><em>brightness</em></td><td>)</td>
-          <td> -&gt; bool
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
   </td>
         </tr>
       </table>
@@ -1736,13 +2285,13 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the brightness was successfully set; <code>false</code> otherwise.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the brightness was successfully set; <code>failure</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="a2637bd49b6a6d6c178780cdf684539dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2637bd49b6a6d6c178780cdf684539dd">&#9670;&nbsp;</a></span>set_capturing_mouse()</h2>
+<a id="a09fff203f9528bbe78afbff76308b62a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09fff203f9528bbe78afbff76308b62a">&#9670;&nbsp;</a></span>set_capturing_mouse()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1751,11 +2300,12 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void cen::basic_window::set_capturing_mouse </td>
+          <td class="memname">static auto cen::basic_window::set_capturing_mouse </td>
           <td>(</td>
           <td class="paramtype">const bool&#160;</td>
           <td class="paramname"><em>capturingMouse</em></td><td>)</td>
-          <td></td>
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+  </td>
         </tr>
       </table>
   </td>
@@ -1773,6 +2323,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> on the mouse capture was successfully changed; <code>failure</code> otherwise.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><code>SDL_CaptureMouse</code></dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
@@ -1814,8 +2365,8 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 
 </div>
 </div>
-<a id="a47ceb799259e0b0fe7cd78f00becfd2d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47ceb799259e0b0fe7cd78f00becfd2d">&#9670;&nbsp;</a></span>set_fullscreen()</h2>
+<a id="aad7f491f9fcf0df80e2e1677c890365f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad7f491f9fcf0df80e2e1677c890365f">&#9670;&nbsp;</a></span>set_fullscreen()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1824,11 +2375,12 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void cen::basic_window::set_fullscreen </td>
+          <td class="memname">auto cen::basic_window::set_fullscreen </td>
           <td>(</td>
           <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>fullscreen</em></td><td>)</td>
-          <td></td>
+          <td class="paramname"><em>enabled</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+  </td>
         </tr>
       </table>
   </td>
@@ -1841,16 +2393,17 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 <p>Sets whether or not the window is in fullscreen mode. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fullscreen</td><td><code>true</code> if the window should enable fullscreen mode; <code>false</code> for windowed mode.</td></tr>
+    <tr><td class="paramname">enabled</td><td><code>true</code> if the window should be fullscreen; <code>false</code> for windowed mode.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the display mode was changed; <code>failure</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="a6220e66946e9535356e511bbf96120ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6220e66946e9535356e511bbf96120ea">&#9670;&nbsp;</a></span>set_fullscreen_desktop()</h2>
+<a id="ae496bc50fe99e62e9b41eb495e3a92f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae496bc50fe99e62e9b41eb495e3a92f6">&#9670;&nbsp;</a></span>set_fullscreen_desktop()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1859,11 +2412,12 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void cen::basic_window::set_fullscreen_desktop </td>
+          <td class="memname">auto cen::basic_window::set_fullscreen_desktop </td>
           <td>(</td>
           <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>fullscreen</em></td><td>)</td>
-          <td></td>
+          <td class="paramname"><em>enabled</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+  </td>
         </tr>
       </table>
   </td>
@@ -1877,10 +2431,11 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 <p>This mode is useful when you want to "fake" fullscreen mode.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fullscreen</td><td><code>true</code> if the window should enable fullscreen desktop mode; <code>false</code> for windowed mode.</td></tr>
+    <tr><td class="paramname">enabled</td><td><code>true</code> if the window should be fullscreen desktop; <code>false</code> for windowed mode.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the display mode was changed; <code>failure</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
@@ -1969,7 +2524,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
         <tr>
           <td class="memname">void cen::basic_window::set_icon </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__graphics.html#ga8b71461a73c8e75c41923ffa705d67b6">surface</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__video.html#ga8b71461a73c8e75c41923ffa705d67b6">surface</a> &amp;&#160;</td>
           <td class="paramname"><em>icon</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1992,8 +2547,8 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 
 </div>
 </div>
-<a id="a92c4da59bd785c6c28291b10d342bc6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92c4da59bd785c6c28291b10d342bc6b">&#9670;&nbsp;</a></span>set_max_size()</h2>
+<a id="a055f658167153951156abf04229f43fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a055f658167153951156abf04229f43fe">&#9670;&nbsp;</a></span>set_max_size()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2004,7 +2559,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
         <tr>
           <td class="memname">void cen::basic_window::set_max_size </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__geometry.html#gac34681d6cc8018e07938793d4c420369">iarea</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>&#160;</td>
           <td class="paramname"><em>size</em></td><td>)</td>
           <td></td>
         </tr>
@@ -2017,10 +2572,10 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 </div><div class="memdoc">
 
 <p>Sets the maximum size of the window. </p>
-<p>This method has no effect if any of the components aren't greater than zero.</p>
+<dl class="section pre"><dt>Precondition</dt><dd>The supplied width and height must be greater than zero.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">size</td><td>the maximum size of the window, components must be greater than zero.</td></tr>
+    <tr><td class="paramname">size</td><td>the maximum size of the window.</td></tr>
   </table>
   </dd>
 </dl>
@@ -2028,8 +2583,8 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 
 </div>
 </div>
-<a id="a67ec2063cf681ab07acd912baa32b1f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67ec2063cf681ab07acd912baa32b1f9">&#9670;&nbsp;</a></span>set_min_size()</h2>
+<a id="a3b72a59342941c8d9109160019ce20b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b72a59342941c8d9109160019ce20b4">&#9670;&nbsp;</a></span>set_min_size()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2040,7 +2595,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
         <tr>
           <td class="memname">void cen::basic_window::set_min_size </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__geometry.html#gac34681d6cc8018e07938793d4c420369">iarea</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>&#160;</td>
           <td class="paramname"><em>size</em></td><td>)</td>
           <td></td>
         </tr>
@@ -2053,10 +2608,10 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 </div><div class="memdoc">
 
 <p>Sets the minimum size of the window. </p>
-<p>This method has no effect if any of the components aren't greater than zero.</p>
+<dl class="section pre"><dt>Precondition</dt><dd>The supplied width and height must be greater than zero.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">size</td><td>the minimum size of the window, components must be greater than zero.</td></tr>
+    <tr><td class="paramname">size</td><td>the minimum size of the window.</td></tr>
   </table>
   </dd>
 </dl>
@@ -2064,8 +2619,8 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 
 </div>
 </div>
-<a id="aea2bfe23dad7d7ff734e884c737a2011"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea2bfe23dad7d7ff734e884c737a2011">&#9670;&nbsp;</a></span>set_opacity()</h2>
+<a id="a55bbe085f457c001d3dd2042b9f95956"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55bbe085f457c001d3dd2042b9f95956">&#9670;&nbsp;</a></span>set_opacity()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2074,11 +2629,12 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void cen::basic_window::set_opacity </td>
+          <td class="memname">auto cen::basic_window::set_opacity </td>
           <td>(</td>
           <td class="paramtype">const float&#160;</td>
           <td class="paramname"><em>opacity</em></td><td>)</td>
-          <td></td>
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+  </td>
         </tr>
       </table>
   </td>
@@ -2096,12 +2652,13 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the opacity was successfully set; <code>failure</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="a5e24ec5d56564bcbf10ead63ed737475"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e24ec5d56564bcbf10ead63ed737475">&#9670;&nbsp;</a></span>set_position()</h2>
+<a id="a1ead7bc9ab165d5c05a09416cc347efb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ead7bc9ab165d5c05a09416cc347efb">&#9670;&nbsp;</a></span>set_position()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2112,7 +2669,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
         <tr>
           <td class="memname">void cen::basic_window::set_position </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__geometry.html#ga482cd24468a5a74647742e69379566c7">ipoint</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__math.html#ga482cd24468a5a74647742e69379566c7">ipoint</a>&#160;</td>
           <td class="paramname"><em>position</em></td><td>)</td>
           <td></td>
         </tr>
@@ -2171,8 +2728,8 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 
 </div>
 </div>
-<a id="ad6de13ca7fabece8c60affcc23cad240"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6de13ca7fabece8c60affcc23cad240">&#9670;&nbsp;</a></span>set_size()</h2>
+<a id="ab4a0e6810a844228f17c90107db530c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4a0e6810a844228f17c90107db530c7">&#9670;&nbsp;</a></span>set_size()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2183,7 +2740,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
         <tr>
           <td class="memname">void cen::basic_window::set_size </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__geometry.html#gac34681d6cc8018e07938793d4c420369">iarea</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>&#160;</td>
           <td class="paramname"><em>size</em></td><td>)</td>
           <td></td>
         </tr>
@@ -2196,10 +2753,10 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 </div><div class="memdoc">
 
 <p>Sets the size of the window. </p>
-<p>The supplied dimensions are capped to be at least 1.</p>
+<dl class="section pre"><dt>Precondition</dt><dd>The supplied width and height must be greater than zero.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">size</td><td>the new size of the window, components must be greater than zero.</td></tr>
+    <tr><td class="paramname">size</td><td>the new size of the window.</td></tr>
   </table>
   </dd>
 </dl>
@@ -2219,7 +2776,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
         <tr>
           <td class="memname">void cen::basic_window::set_title </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
           <td class="paramname"><em>title</em></td><td>)</td>
           <td></td>
         </tr>
@@ -2313,6 +2870,76 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 
 </div>
 </div>
+<a id="abfa76e1f01de411ec734ac51e275070e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfa76e1f01de411ec734ac51e275070e">&#9670;&nbsp;</a></span>set_x()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::basic_window::set_x </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the x-coordinate of the window. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>the new x-coordinate of the window.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="acf0a35016e12a730205e3d3c06ea6394"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf0a35016e12a730205e3d3c06ea6394">&#9670;&nbsp;</a></span>set_y()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::basic_window::set_y </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>y</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the y-coordinate of the window. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">y</td><td>the new y-coordinate of the window.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
 <a id="af0492448c7593ba2beec99d0024159ab"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af0492448c7593ba2beec99d0024159ab">&#9670;&nbsp;</a></span>show()</h2>
 
@@ -2354,7 +2981,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
           <td class="memname">auto cen::basic_window::size </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__geometry.html#gac34681d6cc8018e07938793d4c420369">iarea</a>
+          <td> const -&gt; <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>
   </td>
         </tr>
       </table>
@@ -2402,8 +3029,8 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 
 </div>
 </div>
-<a id="a45f2ecd48f02e021ddc248740c2db2d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45f2ecd48f02e021ddc248740c2db2d1">&#9670;&nbsp;</a></span>update_surface()</h2>
+<a id="a0ef352d07ea1247a3727cca9dbd6861a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ef352d07ea1247a3727cca9dbd6861a">&#9670;&nbsp;</a></span>update_surface()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2415,7 +3042,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
           <td class="memname">auto cen::basic_window::update_surface </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> -&gt; bool
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
   </td>
         </tr>
       </table>
@@ -2427,7 +3054,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 </div><div class="memdoc">
 
 <p>Updates the window surface. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window surface was successfully updated; <code>false</code> otherwise.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the surface was successfully updated; <code>failure</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
@@ -2523,7 +3150,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/centurion/<a class="el" href="window_8hpp_source.html">window.hpp</a></li>
+<li>src/centurion/video/<a class="el" href="window_8hpp_source.html">window.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

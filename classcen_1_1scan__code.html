@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -91,7 +91,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classcen_1_1scan__code-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">cen::scan_code Class Reference<span class="mlabels"><span class="mlabel">final</span></span><div class="ingroups"><a class="el" href="group__input.html">Input</a></div></div>  </div>
@@ -105,6 +104,13 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a87c7ce4b65106c389e2ff2c7ef28a62f"><td class="memTemplParams" colspan="2">template&lt;typename Archive &gt; </td></tr>
+<tr class="memitem:a87c7ce4b65106c389e2ff2c7ef28a62f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1scan__code.html#a87c7ce4b65106c389e2ff2c7ef28a62f">serialize</a> (Archive &amp;archive)</td></tr>
+<tr class="memdesc:a87c7ce4b65106c389e2ff2c7ef28a62f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serializes the scan code.  <a href="classcen_1_1scan__code.html#a87c7ce4b65106c389e2ff2c7ef28a62f">More...</a><br /></td></tr>
+<tr class="separator:a87c7ce4b65106c389e2ff2c7ef28a62f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Construction</h2></td></tr>
 <tr class="memitem:a964acea70166bd5e32acae32dea74939"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1scan__code.html#a964acea70166bd5e32acae32dea74939">scan_code</a> () noexcept=default</td></tr>
 <tr class="memdesc:a964acea70166bd5e32acae32dea74939"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <code><a class="el" href="classcen_1_1scan__code.html" title="Represents a scan code.">scan_code</a></code> instance with the <code>SDL_SCANCODE_UNKNOWN</code> scan code.  <a href="classcen_1_1scan__code.html#a964acea70166bd5e32acae32dea74939">More...</a><br /></td></tr>
 <tr class="separator:a964acea70166bd5e32acae32dea74939"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,12 +124,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a225734a4eb7c1acf8f2bbcad197a1ddb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1scan__code.html#a225734a4eb7c1acf8f2bbcad197a1ddb">scan_code</a> (const SDL_Keycode key) noexcept</td></tr>
 <tr class="memdesc:a225734a4eb7c1acf8f2bbcad197a1ddb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <code><a class="el" href="classcen_1_1scan__code.html" title="Represents a scan code.">scan_code</a></code> instance based on a key code.  <a href="classcen_1_1scan__code.html#a225734a4eb7c1acf8f2bbcad197a1ddb">More...</a><br /></td></tr>
 <tr class="separator:a225734a4eb7c1acf8f2bbcad197a1ddb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affaeaa01e497a17a7dcc9de6a6aac317"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1scan__code.html#affaeaa01e497a17a7dcc9de6a6aac317">scan_code</a> (const <a class="el" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; <a class="el" href="classcen_1_1scan__code.html#a02a64861e3216258615b98acf2984e89">name</a>) noexcept</td></tr>
+<tr class="memitem:affaeaa01e497a17a7dcc9de6a6aac317"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1scan__code.html#affaeaa01e497a17a7dcc9de6a6aac317">scan_code</a> (const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; <a class="el" href="classcen_1_1scan__code.html#a02a64861e3216258615b98acf2984e89">name</a>) noexcept</td></tr>
 <tr class="memdesc:affaeaa01e497a17a7dcc9de6a6aac317"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <code><a class="el" href="classcen_1_1scan__code.html" title="Represents a scan code.">scan_code</a></code> instance based on the specified name.  <a href="classcen_1_1scan__code.html#affaeaa01e497a17a7dcc9de6a6aac317">More...</a><br /></td></tr>
 <tr class="separator:affaeaa01e497a17a7dcc9de6a6aac317"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe36b76c06458a42d2b6ff5d5c183924"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1scan__code.html#abe36b76c06458a42d2b6ff5d5c183924">scan_code</a> (const std::string &amp;<a class="el" href="classcen_1_1scan__code.html#a02a64861e3216258615b98acf2984e89">name</a>) noexcept</td></tr>
 <tr class="memdesc:abe36b76c06458a42d2b6ff5d5c183924"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <code><a class="el" href="classcen_1_1scan__code.html" title="Represents a scan code.">scan_code</a></code> instance based on the specified name.  <a href="classcen_1_1scan__code.html#abe36b76c06458a42d2b6ff5d5c183924">More...</a><br /></td></tr>
 <tr class="separator:abe36b76c06458a42d2b6ff5d5c183924"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Assignment operators</h2></td></tr>
 <tr class="memitem:a369fd6603cf25998be47715e2bd9e2a0"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1scan__code.html#a369fd6603cf25998be47715e2bd9e2a0">operator=</a> (const <a class="el" href="classcen_1_1scan__code.html">scan_code</a> &amp;) noexcept -&gt; <a class="el" href="classcen_1_1scan__code.html">scan_code</a> &amp;=default</td></tr>
 <tr class="separator:a369fd6603cf25998be47715e2bd9e2a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a572a6b2a300608c1c11688b6edbf33b3"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1scan__code.html#a572a6b2a300608c1c11688b6edbf33b3">operator=</a> (<a class="el" href="classcen_1_1scan__code.html">scan_code</a> &amp;&amp;) noexcept -&gt; <a class="el" href="classcen_1_1scan__code.html">scan_code</a> &amp;=default</td></tr>
@@ -134,12 +143,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adcd1d518397f677faef3528d62544af8"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1scan__code.html#adcd1d518397f677faef3528d62544af8">operator=</a> (const SDL_Keycode keycode) noexcept -&gt; <a class="el" href="classcen_1_1scan__code.html">scan_code</a> &amp;</td></tr>
 <tr class="memdesc:adcd1d518397f677faef3528d62544af8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the scan code used to be the converted version of the supplied key code.  <a href="classcen_1_1scan__code.html#adcd1d518397f677faef3528d62544af8">More...</a><br /></td></tr>
 <tr class="separator:adcd1d518397f677faef3528d62544af8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16c4d497dc02adc9969a48fd841242ae"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1scan__code.html#a16c4d497dc02adc9969a48fd841242ae">operator=</a> (const <a class="el" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; <a class="el" href="classcen_1_1scan__code.html#a02a64861e3216258615b98acf2984e89">name</a>) noexcept -&gt; <a class="el" href="classcen_1_1scan__code.html">scan_code</a> &amp;</td></tr>
+<tr class="memitem:a16c4d497dc02adc9969a48fd841242ae"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1scan__code.html#a16c4d497dc02adc9969a48fd841242ae">operator=</a> (const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; <a class="el" href="classcen_1_1scan__code.html#a02a64861e3216258615b98acf2984e89">name</a>) noexcept -&gt; <a class="el" href="classcen_1_1scan__code.html">scan_code</a> &amp;</td></tr>
 <tr class="memdesc:a16c4d497dc02adc9969a48fd841242ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the scan code used to be the one associated with the specified name.  <a href="classcen_1_1scan__code.html#a16c4d497dc02adc9969a48fd841242ae">More...</a><br /></td></tr>
 <tr class="separator:a16c4d497dc02adc9969a48fd841242ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fd38273ed544859ab89ea2a6e19ce56"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1scan__code.html#a4fd38273ed544859ab89ea2a6e19ce56">operator=</a> (const std::string &amp;<a class="el" href="classcen_1_1scan__code.html#a02a64861e3216258615b98acf2984e89">name</a>) noexcept -&gt; <a class="el" href="classcen_1_1scan__code.html">scan_code</a> &amp;</td></tr>
 <tr class="memdesc:a4fd38273ed544859ab89ea2a6e19ce56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the scan code used to be the one associated with the specified name.  <a href="classcen_1_1scan__code.html#a4fd38273ed544859ab89ea2a6e19ce56">More...</a><br /></td></tr>
 <tr class="separator:a4fd38273ed544859ab89ea2a6e19ce56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Queries</h2></td></tr>
 <tr class="memitem:af530d0597d8a0957f028ce23be08d747"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1scan__code.html#af530d0597d8a0957f028ce23be08d747">unknown</a> () const noexcept -&gt; bool</td></tr>
 <tr class="memdesc:af530d0597d8a0957f028ce23be08d747"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the stored scan code is <code>SDL_SCANCODE_UNKNOWN</code>.  <a href="classcen_1_1scan__code.html#af530d0597d8a0957f028ce23be08d747">More...</a><br /></td></tr>
 <tr class="separator:af530d0597d8a0957f028ce23be08d747"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,22 +164,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a090be44050062ffcb2b0751acb8f1af4"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1scan__code.html#a090be44050062ffcb2b0751acb8f1af4">get</a> () const noexcept -&gt; SDL_Scancode</td></tr>
 <tr class="memdesc:a090be44050062ffcb2b0751acb8f1af4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the internal scan code.  <a href="classcen_1_1scan__code.html#a090be44050062ffcb2b0751acb8f1af4">More...</a><br /></td></tr>
 <tr class="separator:a090be44050062ffcb2b0751acb8f1af4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e8a60c74de2a8789c582b307fd8c3c8"><td class="memItemLeft" align="right" valign="top">constexpr static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1scan__code.html#a5e8a60c74de2a8789c582b307fd8c3c8">count</a> () noexcept -&gt; int</td></tr>
+<tr class="memdesc:a5e8a60c74de2a8789c582b307fd8c3c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total amount of scan codes.  <a href="classcen_1_1scan__code.html#a5e8a60c74de2a8789c582b307fd8c3c8">More...</a><br /></td></tr>
+<tr class="separator:a5e8a60c74de2a8789c582b307fd8c3c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Conversions</h2></td></tr>
 <tr class="memitem:a9f8b1f4474c216a744c8fefebc75b878"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1scan__code.html#a9f8b1f4474c216a744c8fefebc75b878">operator SDL_Scancode</a> () const noexcept</td></tr>
 <tr class="memdesc:a9f8b1f4474c216a744c8fefebc75b878"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts to <code>SDL_Scancode</code>.  <a href="classcen_1_1scan__code.html#a9f8b1f4474c216a744c8fefebc75b878">More...</a><br /></td></tr>
 <tr class="separator:a9f8b1f4474c216a744c8fefebc75b878"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a276513e44c09627c3ab8973657404732"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1scan__code.html#a276513e44c09627c3ab8973657404732">operator SDL_KeyCode</a> () const noexcept</td></tr>
 <tr class="memdesc:a276513e44c09627c3ab8973657404732"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts to <code>SDL_KeyCode</code>.  <a href="classcen_1_1scan__code.html#a276513e44c09627c3ab8973657404732">More...</a><br /></td></tr>
 <tr class="separator:a276513e44c09627c3ab8973657404732"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87c7ce4b65106c389e2ff2c7ef28a62f"><td class="memTemplParams" colspan="2">template&lt;typename Archive &gt; </td></tr>
-<tr class="memitem:a87c7ce4b65106c389e2ff2c7ef28a62f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1scan__code.html#a87c7ce4b65106c389e2ff2c7ef28a62f">serialize</a> (Archive &amp;archive)</td></tr>
-<tr class="memdesc:a87c7ce4b65106c389e2ff2c7ef28a62f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serializes the scan code.  <a href="classcen_1_1scan__code.html#a87c7ce4b65106c389e2ff2c7ef28a62f">More...</a><br /></td></tr>
-<tr class="separator:a87c7ce4b65106c389e2ff2c7ef28a62f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a5e8a60c74de2a8789c582b307fd8c3c8"><td class="memItemLeft" align="right" valign="top">constexpr static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1scan__code.html#a5e8a60c74de2a8789c582b307fd8c3c8">count</a> () noexcept -&gt; int</td></tr>
-<tr class="memdesc:a5e8a60c74de2a8789c582b307fd8c3c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total amount of scan codes.  <a href="classcen_1_1scan__code.html#a5e8a60c74de2a8789c582b307fd8c3c8">More...</a><br /></td></tr>
-<tr class="separator:a5e8a60c74de2a8789c582b307fd8c3c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a scan code. </p>
@@ -342,7 +350,7 @@ pressed the Q key as it would be on a US QWERTY keyboard" regardless of whether 
         <tr>
           <td class="memname">cen::scan_code::scan_code </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
           <td class="paramname"><em>name</em></td><td>)</td>
           <td></td>
         </tr>
@@ -565,7 +573,7 @@ pressed the Q key as it would be on a US QWERTY keyboard" regardless of whether 
         <tr>
           <td class="memname">auto cen::scan_code::operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
           <td class="paramname"><em>name</em></td><td>)</td>
           <td> -&gt; <a class="el" href="classcen_1_1scan__code.html">scan_code</a>&amp;
   </td>
@@ -861,7 +869,7 @@ template&lt;typename Archive &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/centurion/<a class="el" href="scan__code_8hpp_source.html">scan_code.hpp</a></li>
+<li>src/centurion/input/<a class="el" href="scan__code_8hpp_source.html">scan_code.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

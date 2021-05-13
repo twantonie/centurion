@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -101,7 +101,7 @@ $(function() {
 <p>Used to initialize and de-initialize the library.  
  <a href="classcen_1_1library.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="centurion_8hpp_source.html">centurion.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="library_8hpp_source.html">library.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -122,7 +122,17 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Used to initialize and de-initialize the library. </p>
-<dl class="section note"><dt>Note</dt><dd>The signature of the main-method must be <code>ìnt(int, char**)</code> when using the Centurion library!</dd></dl>
+<p>The following is how you should use this class. </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;centurion.hpp&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv)</div>
+<div class="line">{</div>
+<div class="line">  <a class="code" href="classcen_1_1library.html">cen::library</a> centurion;</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// ...</span></div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>The signature of the main-method must be <code>ìnt(int, char**)</code> when using the Centurion library!</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af153a8bef2e010a997fcec6489aa7eae"></a>
@@ -315,9 +325,10 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/centurion/<a class="el" href="centurion_8hpp_source.html">centurion.hpp</a></li>
+<li>src/centurion/core/<a class="el" href="library_8hpp_source.html">library.hpp</a></li>
 </ul>
 </div><!-- contents -->
+<div class="ttc" id="aclasscen_1_1library_html"><div class="ttname"><a href="classcen_1_1library.html">cen::library</a></div><div class="ttdoc">Used to initialize and de-initialize the library.</div><div class="ttdef"><b>Definition:</b> library.hpp:144</div></div>
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
 </div>

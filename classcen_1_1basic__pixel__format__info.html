@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -91,10 +91,9 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classcen_1_1basic__pixel__format__info-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">cen::basic_pixel_format_info Class Reference<div class="ingroups"><a class="el" href="group__graphics.html">Graphics</a></div></div>  </div>
+<div class="title">cen::basic_pixel_format_info Class Reference<div class="ingroups"><a class="el" href="group__video.html">Video</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -103,68 +102,71 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="pixel__format_8hpp_source.html">pixel_format.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a526f1cb0164ceb39521a728f38be4c8b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__pixel__format__info.html#a526f1cb0164ceb39521a728f38be4c8b">basic_pixel_format_info</a> (SDL_PixelFormat *ptr) noexcept(!B::value)</td></tr>
-<tr class="memdesc:a526f1cb0164ceb39521a728f38be4c8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a pixel format info instance based on an existing pointer.  <a href="classcen_1_1basic__pixel__format__info.html#a526f1cb0164ceb39521a728f38be4c8b">More...</a><br /></td></tr>
-<tr class="separator:a526f1cb0164ceb39521a728f38be4c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefa161e398adb2532ffb8c4398692489"><td class="memTemplParams" colspan="2">template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </td></tr>
-<tr class="memitem:aefa161e398adb2532ffb8c4398692489"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__pixel__format__info.html#aefa161e398adb2532ffb8c4398692489">basic_pixel_format_info</a> (const <a class="el" href="group__graphics.html#ga2b2a5cc747e0869488d872b28d939dae">pixel_format</a> <a class="el" href="classcen_1_1basic__pixel__format__info.html#ab755708d8b3ed5541e2e780d104f92ff">format</a>)</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Construction</h2></td></tr>
+<tr class="memitem:ab5c3a7d7f7b7a255833a0cec2d7a9d29"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__pixel__format__info.html#ab5c3a7d7f7b7a255833a0cec2d7a9d29">basic_pixel_format_info</a> (<a class="el" href="group__core.html#ga00614d944c81543b03c7f2cb202fdc50">maybe_owner</a>&lt; SDL_PixelFormat * &gt; <a class="el" href="classcen_1_1basic__pixel__format__info.html#ab755708d8b3ed5541e2e780d104f92ff">format</a>) noexcept(!detail::is_owning&lt; B &gt;())</td></tr>
+<tr class="memdesc:ab5c3a7d7f7b7a255833a0cec2d7a9d29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a pixel format info instance based on an existing pointer.  <a href="classcen_1_1basic__pixel__format__info.html#ab5c3a7d7f7b7a255833a0cec2d7a9d29">More...</a><br /></td></tr>
+<tr class="separator:ab5c3a7d7f7b7a255833a0cec2d7a9d29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefa161e398adb2532ffb8c4398692489"><td class="memTemplParams" colspan="2">template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = 0&gt; </td></tr>
+<tr class="memitem:aefa161e398adb2532ffb8c4398692489"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__pixel__format__info.html#aefa161e398adb2532ffb8c4398692489">basic_pixel_format_info</a> (const <a class="el" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a> <a class="el" href="classcen_1_1basic__pixel__format__info.html#ab755708d8b3ed5541e2e780d104f92ff">format</a>)</td></tr>
 <tr class="memdesc:aefa161e398adb2532ffb8c4398692489"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an owning instance based on a pixel format.  <a href="classcen_1_1basic__pixel__format__info.html#aefa161e398adb2532ffb8c4398692489">More...</a><br /></td></tr>
 <tr class="separator:aefa161e398adb2532ffb8c4398692489"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed7d3ebe719a85b29d8416db103d3f7e"><td class="memTemplParams" colspan="2">template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </td></tr>
-<tr class="memitem:aed7d3ebe719a85b29d8416db103d3f7e"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__pixel__format__info.html#aed7d3ebe719a85b29d8416db103d3f7e">basic_pixel_format_info</a> (const <a class="el" href="group__graphics.html#ga40d730f61d4da6d5d831a14ca6a5017d">pixel_format_info</a> &amp;info) noexcept</td></tr>
+<tr class="memitem:aed7d3ebe719a85b29d8416db103d3f7e"><td class="memTemplParams" colspan="2">template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = 0&gt; </td></tr>
+<tr class="memitem:aed7d3ebe719a85b29d8416db103d3f7e"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__pixel__format__info.html#aed7d3ebe719a85b29d8416db103d3f7e">basic_pixel_format_info</a> (const <a class="el" href="group__video.html#ga40d730f61d4da6d5d831a14ca6a5017d">pixel_format_info</a> &amp;info) noexcept</td></tr>
 <tr class="memdesc:aed7d3ebe719a85b29d8416db103d3f7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a handle based on an owning pixel format info instance.  <a href="classcen_1_1basic__pixel__format__info.html#aed7d3ebe719a85b29d8416db103d3f7e">More...</a><br /></td></tr>
 <tr class="separator:aed7d3ebe719a85b29d8416db103d3f7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a783c57929912352b1d90a903e1d3adfb"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__pixel__format__info.html#a783c57929912352b1d90a903e1d3adfb">pixel_to_rgb</a> (const <a class="el" href="namespacecen.html#ad1dcf848a9ee33237a96cde6b5a1d466">u32</a> pixel) const noexcept -&gt; <a class="el" href="classcen_1_1color.html">color</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Pixel/RGB/RGBA conversions</h2></td></tr>
+<tr class="memitem:a783c57929912352b1d90a903e1d3adfb"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__pixel__format__info.html#a783c57929912352b1d90a903e1d3adfb">pixel_to_rgb</a> (const <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a> pixel) const noexcept -&gt; <a class="el" href="classcen_1_1color.html">color</a></td></tr>
 <tr class="memdesc:a783c57929912352b1d90a903e1d3adfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a color that corresponds to a masked pixel value.  <a href="classcen_1_1basic__pixel__format__info.html#a783c57929912352b1d90a903e1d3adfb">More...</a><br /></td></tr>
 <tr class="separator:a783c57929912352b1d90a903e1d3adfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf3fb04a6feebea2fb50dd5a6a6cb4b1"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__pixel__format__info.html#abf3fb04a6feebea2fb50dd5a6a6cb4b1">pixel_to_rgba</a> (const <a class="el" href="namespacecen.html#ad1dcf848a9ee33237a96cde6b5a1d466">u32</a> pixel) const noexcept -&gt; <a class="el" href="classcen_1_1color.html">color</a></td></tr>
+<tr class="memitem:abf3fb04a6feebea2fb50dd5a6a6cb4b1"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__pixel__format__info.html#abf3fb04a6feebea2fb50dd5a6a6cb4b1">pixel_to_rgba</a> (const <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a> pixel) const noexcept -&gt; <a class="el" href="classcen_1_1color.html">color</a></td></tr>
 <tr class="memdesc:abf3fb04a6feebea2fb50dd5a6a6cb4b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a color that corresponds to a masked pixel value.  <a href="classcen_1_1basic__pixel__format__info.html#abf3fb04a6feebea2fb50dd5a6a6cb4b1">More...</a><br /></td></tr>
 <tr class="separator:abf3fb04a6feebea2fb50dd5a6a6cb4b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63294f8dcada13efa4a0c7fc86150b2b"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__pixel__format__info.html#a63294f8dcada13efa4a0c7fc86150b2b">rgb_to_pixel</a> (const <a class="el" href="classcen_1_1color.html">color</a> &amp;<a class="el" href="classcen_1_1color.html">color</a>) const noexcept -&gt; <a class="el" href="namespacecen.html#ad1dcf848a9ee33237a96cde6b5a1d466">u32</a></td></tr>
+<tr class="memitem:a63294f8dcada13efa4a0c7fc86150b2b"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__pixel__format__info.html#a63294f8dcada13efa4a0c7fc86150b2b">rgb_to_pixel</a> (const <a class="el" href="classcen_1_1color.html">color</a> &amp;<a class="el" href="classcen_1_1color.html">color</a>) const noexcept -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a></td></tr>
 <tr class="memdesc:a63294f8dcada13efa4a0c7fc86150b2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pixel color value based on the RGB values of a color.  <a href="classcen_1_1basic__pixel__format__info.html#a63294f8dcada13efa4a0c7fc86150b2b">More...</a><br /></td></tr>
 <tr class="separator:a63294f8dcada13efa4a0c7fc86150b2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01bb1b26bb8cfe2cfcd6fc5c71149dcb"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__pixel__format__info.html#a01bb1b26bb8cfe2cfcd6fc5c71149dcb">rgba_to_pixel</a> (const <a class="el" href="classcen_1_1color.html">color</a> &amp;<a class="el" href="classcen_1_1color.html">color</a>) const noexcept -&gt; <a class="el" href="namespacecen.html#ad1dcf848a9ee33237a96cde6b5a1d466">u32</a></td></tr>
+<tr class="memitem:a01bb1b26bb8cfe2cfcd6fc5c71149dcb"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__pixel__format__info.html#a01bb1b26bb8cfe2cfcd6fc5c71149dcb">rgba_to_pixel</a> (const <a class="el" href="classcen_1_1color.html">color</a> &amp;<a class="el" href="classcen_1_1color.html">color</a>) const noexcept -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a></td></tr>
 <tr class="memdesc:a01bb1b26bb8cfe2cfcd6fc5c71149dcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pixel color value based on the RGBA values of a color.  <a href="classcen_1_1basic__pixel__format__info.html#a01bb1b26bb8cfe2cfcd6fc5c71149dcb">More...</a><br /></td></tr>
 <tr class="separator:a01bb1b26bb8cfe2cfcd6fc5c71149dcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab755708d8b3ed5541e2e780d104f92ff"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__pixel__format__info.html#ab755708d8b3ed5541e2e780d104f92ff">format</a> () const noexcept -&gt; <a class="el" href="group__graphics.html#ga2b2a5cc747e0869488d872b28d939dae">pixel_format</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Queries</h2></td></tr>
+<tr class="memitem:ab755708d8b3ed5541e2e780d104f92ff"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__pixel__format__info.html#ab755708d8b3ed5541e2e780d104f92ff">format</a> () const noexcept -&gt; <a class="el" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a></td></tr>
 <tr class="memdesc:ab755708d8b3ed5541e2e780d104f92ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the associated pixel format.  <a href="classcen_1_1basic__pixel__format__info.html#ab755708d8b3ed5541e2e780d104f92ff">More...</a><br /></td></tr>
 <tr class="separator:ab755708d8b3ed5541e2e780d104f92ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81bca219717233e8383d2b9b975afb47"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__pixel__format__info.html#a81bca219717233e8383d2b9b975afb47">name</a> () const noexcept -&gt; <a class="el" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;</td></tr>
+<tr class="memitem:a81bca219717233e8383d2b9b975afb47"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__pixel__format__info.html#a81bca219717233e8383d2b9b975afb47">name</a> () const noexcept -&gt; <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;</td></tr>
 <tr class="memdesc:a81bca219717233e8383d2b9b975afb47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a human-readable name associated with the format.  <a href="classcen_1_1basic__pixel__format__info.html#a81bca219717233e8383d2b9b975afb47">More...</a><br /></td></tr>
 <tr class="separator:a81bca219717233e8383d2b9b975afb47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0f1df4763ba69849c023e2277b2ecf2"><td class="memTemplParams" colspan="2">template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </td></tr>
-<tr class="memitem:ac0f1df4763ba69849c023e2277b2ecf2"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__pixel__format__info.html#ac0f1df4763ba69849c023e2277b2ecf2">operator bool</a> () const noexcept</td></tr>
-<tr class="memdesc:ac0f1df4763ba69849c023e2277b2ecf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not a handle holds a non-null pointer.  <a href="classcen_1_1basic__pixel__format__info.html#ac0f1df4763ba69849c023e2277b2ecf2">More...</a><br /></td></tr>
-<tr class="separator:ac0f1df4763ba69849c023e2277b2ecf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12d629a2aa062f872bc836e66bfab64e"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__pixel__format__info.html#a12d629a2aa062f872bc836e66bfab64e">get</a> () const noexcept -&gt; SDL_PixelFormat *</td></tr>
 <tr class="memdesc:a12d629a2aa062f872bc836e66bfab64e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the associated pixel format instance.  <a href="classcen_1_1basic__pixel__format__info.html#a12d629a2aa062f872bc836e66bfab64e">More...</a><br /></td></tr>
 <tr class="separator:a12d629a2aa062f872bc836e66bfab64e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Conversions</h2></td></tr>
+<tr class="memitem:ac0f1df4763ba69849c023e2277b2ecf2"><td class="memTemplParams" colspan="2">template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = 0&gt; </td></tr>
+<tr class="memitem:ac0f1df4763ba69849c023e2277b2ecf2"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__pixel__format__info.html#ac0f1df4763ba69849c023e2277b2ecf2">operator bool</a> () const noexcept</td></tr>
+<tr class="memdesc:ac0f1df4763ba69849c023e2277b2ecf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not a handle holds a non-null pointer.  <a href="classcen_1_1basic__pixel__format__info.html#ac0f1df4763ba69849c023e2277b2ecf2">More...</a><br /></td></tr>
+<tr class="separator:ac0f1df4763ba69849c023e2277b2ecf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Provides information about a pixel format. </p>
 <p>See <code>pixel_format_info</code> and <code>pixel_format_info_handle</code> for owning and non-owning versions of this class.</p>
 <dl class="section note"><dt>Note</dt><dd>This class is part of the centurion owner/handle framework.</dd></dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">B</td><td><code>std::true_type</code> for owning semantics; <code>std::false_type</code> otherwise.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__graphics.html#ga2b2a5cc747e0869488d872b28d939dae" title="Mirrors the values of the SDL_PixelFormatEnum.">pixel_format</a> </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6" title="Represents different pixel formats.">pixel_format</a> </dd>
 <dd>
-<a class="el" href="group__graphics.html#ga40d730f61d4da6d5d831a14ca6a5017d" title="Represents an owning pixel format info instance.">pixel_format_info</a> </dd>
+<a class="el" href="group__video.html#ga40d730f61d4da6d5d831a14ca6a5017d" title="Represents an owning pixel format info instance.">pixel_format_info</a> </dd>
 <dd>
-<a class="el" href="group__graphics.html#ga586e518042ab187767897265d8162693" title="Represents a non-owning pixel format info instance.">pixel_format_info_handle</a> </dd>
+<a class="el" href="group__video.html#ga586e518042ab187767897265d8162693" title="Represents a non-owning pixel format info instance.">pixel_format_info_handle</a> </dd>
 <dd>
 SDL_PixelFormat </dd>
 <dd>
 SDL_PixelFormatEnum</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a526f1cb0164ceb39521a728f38be4c8b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a526f1cb0164ceb39521a728f38be4c8b">&#9670;&nbsp;</a></span>basic_pixel_format_info() <span class="overload">[1/3]</span></h2>
+<a id="ab5c3a7d7f7b7a255833a0cec2d7a9d29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5c3a7d7f7b7a255833a0cec2d7a9d29">&#9670;&nbsp;</a></span>basic_pixel_format_info() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -175,8 +177,8 @@ SDL_PixelFormatEnum</dd></dl>
         <tr>
           <td class="memname">cen::basic_pixel_format_info::basic_pixel_format_info </td>
           <td>(</td>
-          <td class="paramtype">SDL_PixelFormat *&#160;</td>
-          <td class="paramname"><em>ptr</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="group__core.html#ga00614d944c81543b03c7f2cb202fdc50">maybe_owner</a>&lt; SDL_PixelFormat * &gt;&#160;</td>
+          <td class="paramname"><em>format</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -191,13 +193,13 @@ SDL_PixelFormatEnum</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Ownership of the supplied pointer might be claimed, depending on the ownership semantics of the class.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ptr</td><td>a pointer to the associated pixel format.</td></tr>
+    <tr><td class="paramname">format</td><td>a pointer to the associated pixel format.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">exception</td><td>if the supplied pointer is null <em>and</em> the class has owning semantics.</td></tr>
+    <tr><td class="paramname"><a class="el" href="classcen_1_1cen__error.html" title="The base of all exceptions explicitly thrown by the library.">cen_error</a></td><td>if the supplied pointer is null <em>and</em> the class has owning semantics.</td></tr>
   </table>
   </dd>
 </dl>
@@ -211,7 +213,7 @@ SDL_PixelFormatEnum</dd></dl>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
+template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -219,7 +221,7 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
         <tr>
           <td class="memname">cen::basic_pixel_format_info::basic_pixel_format_info </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__graphics.html#ga2b2a5cc747e0869488d872b28d939dae">pixel_format</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a>&#160;</td>
           <td class="paramname"><em>format</em></td><td>)</td>
           <td></td>
         </tr>
@@ -260,7 +262,7 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
+template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -268,7 +270,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
         <tr>
           <td class="memname">cen::basic_pixel_format_info::basic_pixel_format_info </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__graphics.html#ga40d730f61d4da6d5d831a14ca6a5017d">pixel_format_info</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__video.html#ga40d730f61d4da6d5d831a14ca6a5017d">pixel_format_info</a> &amp;&#160;</td>
           <td class="paramname"><em>info</em></td><td>)</td>
           <td></td>
         </tr>
@@ -281,12 +283,6 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 </div><div class="memdoc">
 
 <p>Creates a handle based on an owning pixel format info instance. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">BB</td><td>dummy parameter for SFINAE.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">info</td><td>the associated pixel format info instance.</td></tr>
@@ -311,7 +307,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
           <td class="memname">auto cen::basic_pixel_format_info::format </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__graphics.html#ga2b2a5cc747e0869488d872b28d939dae">pixel_format</a>
+          <td> const -&gt; <a class="el" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a>
   </td>
         </tr>
       </table>
@@ -372,7 +368,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
           <td class="memname">auto cen::basic_pixel_format_info::name </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt;<a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a>&gt;
+          <td> const -&gt; <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt;<a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a>&gt;
   </td>
         </tr>
       </table>
@@ -396,7 +392,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
+template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -416,12 +412,6 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 </div><div class="memdoc">
 
 <p>Indicates whether or not a handle holds a non-null pointer. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">BB</td><td>dummy template parameter for SFINAE.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the handle holds a non-null pointer; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
 
@@ -439,7 +429,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
         <tr>
           <td class="memname">auto cen::basic_pixel_format_info::pixel_to_rgb </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#ad1dcf848a9ee33237a96cde6b5a1d466">u32</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>&#160;</td>
           <td class="paramname"><em>pixel</em></td><td>)</td>
           <td> const -&gt; <a class="el" href="classcen_1_1color.html">color</a>
   </td>
@@ -476,7 +466,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
         <tr>
           <td class="memname">auto cen::basic_pixel_format_info::pixel_to_rgba </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#ad1dcf848a9ee33237a96cde6b5a1d466">u32</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>&#160;</td>
           <td class="paramname"><em>pixel</em></td><td>)</td>
           <td> const -&gt; <a class="el" href="classcen_1_1color.html">color</a>
   </td>
@@ -515,7 +505,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classcen_1_1color.html">color</a> &amp;&#160;</td>
           <td class="paramname"><em>color</em></td><td>)</td>
-          <td> const -&gt; <a class="el" href="namespacecen.html#ad1dcf848a9ee33237a96cde6b5a1d466">u32</a>
+          <td> const -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>
   </td>
         </tr>
       </table>
@@ -553,7 +543,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classcen_1_1color.html">color</a> &amp;&#160;</td>
           <td class="paramname"><em>color</em></td><td>)</td>
-          <td> const -&gt; <a class="el" href="namespacecen.html#ad1dcf848a9ee33237a96cde6b5a1d466">u32</a>
+          <td> const -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>
   </td>
         </tr>
       </table>
@@ -577,7 +567,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/centurion/<a class="el" href="pixel__format_8hpp_source.html">pixel_format.hpp</a></li>
+<li>src/centurion/video/<a class="el" href="pixel__format_8hpp_source.html">pixel_format.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

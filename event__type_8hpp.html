@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/event_type.hpp File Reference</title>
+        <title>Centurion: src/centurion/events/event_type.hpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_0968529af8a21aa3b3e687e0fd579327.html">events</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -98,7 +98,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;SDL.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="centurion__cfg_8hpp_source.html">centurion_cfg.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="integers_8hpp_source.html">../core/integers.hpp</a>&quot;</code><br />
 </div>
 <p><a href="event__type_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -110,106 +110,106 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:gaa2429849e0f3a3f8dc5dabd278b110b2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__event.html#gaa2429849e0f3a3f8dc5dabd278b110b2">cen::event_type</a> { <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2adbd73c2b545209688ed794c0d5413d5a">cen::event_type::quit</a> = SDL_QUIT, 
+<tr class="memitem:gaa96233ec6356fc786c810d6aaf5e939b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__event.html#gaa96233ec6356fc786c810d6aaf5e939b">cen::event_type</a> : u32 { <br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939badbd73c2b545209688ed794c0d5413d5a">cen::event_type::quit</a> = SDL_QUIT, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a594a951506371c6c4b5c6714fde56210">cen::event_type::app_terminating</a> = SDL_APP_TERMINATING, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba594a951506371c6c4b5c6714fde56210">cen::event_type::app_terminating</a> = SDL_APP_TERMINATING, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a424176dd81e2ab7097f6c71b325aa2f7">cen::event_type::app_low_memory</a> = SDL_APP_LOWMEMORY, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba424176dd81e2ab7097f6c71b325aa2f7">cen::event_type::app_low_memory</a> = SDL_APP_LOWMEMORY, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2ad78a45502c925119ffd217e539b93d75">cen::event_type::app_will_enter_background</a> = SDL_APP_WILLENTERBACKGROUND, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939bad78a45502c925119ffd217e539b93d75">cen::event_type::app_will_enter_background</a> = SDL_APP_WILLENTERBACKGROUND, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a37fc114d1d7e7ca54140b0f543a9380c">cen::event_type::app_did_enter_background</a> = SDL_APP_DIDENTERBACKGROUND, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba37fc114d1d7e7ca54140b0f543a9380c">cen::event_type::app_did_enter_background</a> = SDL_APP_DIDENTERBACKGROUND, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a4fb8cea91e58a3c3d8e584a6e8c5fffb">cen::event_type::app_did_enter_foreground</a> = SDL_APP_DIDENTERFOREGROUND, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba4fb8cea91e58a3c3d8e584a6e8c5fffb">cen::event_type::app_did_enter_foreground</a> = SDL_APP_DIDENTERFOREGROUND, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2aebf78b512222fe4dcd14e7d5060a15b0">cen::event_type::display</a> = SDL_DISPLAYEVENT, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939baebf78b512222fe4dcd14e7d5060a15b0">cen::event_type::display</a> = SDL_DISPLAYEVENT, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a05b8c74cbd96fbf2de4c1a352702fbf4">cen::event_type::window</a> = SDL_WINDOWEVENT, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba05b8c74cbd96fbf2de4c1a352702fbf4">cen::event_type::window</a> = SDL_WINDOWEVENT, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a54b53072540eeeb8f8e9343e71f28176">cen::event_type::system</a> = SDL_SYSWMEVENT, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba54b53072540eeeb8f8e9343e71f28176">cen::event_type::system</a> = SDL_SYSWMEVENT, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a88aee4617a01e1e5da7f11f3b5fb7ac0">cen::event_type::key_down</a> = SDL_KEYDOWN, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba88aee4617a01e1e5da7f11f3b5fb7ac0">cen::event_type::key_down</a> = SDL_KEYDOWN, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a2d19def4e5861d6d2e62450fcc84cb97">cen::event_type::key_up</a> = SDL_KEYUP, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba2d19def4e5861d6d2e62450fcc84cb97">cen::event_type::key_up</a> = SDL_KEYUP, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2ab0f31b1e427c96840a50a543c3e37af9">cen::event_type::text_editing</a> = SDL_TEXTEDITING, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939bab0f31b1e427c96840a50a543c3e37af9">cen::event_type::text_editing</a> = SDL_TEXTEDITING, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2ae1ba83437c55caa1b29b1d3228f2591a">cen::event_type::text_input</a> = SDL_TEXTINPUT, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939bae1ba83437c55caa1b29b1d3228f2591a">cen::event_type::text_input</a> = SDL_TEXTINPUT, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a587c13d591880465ffc356f94463852c">cen::event_type::keymap_changed</a> = SDL_KEYMAPCHANGED, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba587c13d591880465ffc356f94463852c">cen::event_type::keymap_changed</a> = SDL_KEYMAPCHANGED, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a903f7a99c62619729849164b06f649e5">cen::event_type::mouse_motion</a> = SDL_MOUSEMOTION, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba903f7a99c62619729849164b06f649e5">cen::event_type::mouse_motion</a> = SDL_MOUSEMOTION, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a3d1967c26f79d9e652ecded5f4a4a4e9">cen::event_type::mouse_button_down</a> = SDL_MOUSEBUTTONDOWN, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba3d1967c26f79d9e652ecded5f4a4a4e9">cen::event_type::mouse_button_down</a> = SDL_MOUSEBUTTONDOWN, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a054816ad6699e4aa626272b9c12cb75e">cen::event_type::mouse_button_up</a> = SDL_MOUSEBUTTONUP, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba054816ad6699e4aa626272b9c12cb75e">cen::event_type::mouse_button_up</a> = SDL_MOUSEBUTTONUP, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a8405b4133b61983c995a62136337b4ec">cen::event_type::mouse_wheel</a> = SDL_MOUSEWHEEL, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba8405b4133b61983c995a62136337b4ec">cen::event_type::mouse_wheel</a> = SDL_MOUSEWHEEL, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a32d6ecc4ef026e6308210718441a3fc9">cen::event_type::joystick_axis_motion</a> = SDL_JOYAXISMOTION, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba32d6ecc4ef026e6308210718441a3fc9">cen::event_type::joystick_axis_motion</a> = SDL_JOYAXISMOTION, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a17269873a20a99f4663243a615ef50e8">cen::event_type::joystick_ball_motion</a> = SDL_JOYBALLMOTION, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba17269873a20a99f4663243a615ef50e8">cen::event_type::joystick_ball_motion</a> = SDL_JOYBALLMOTION, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2af2c25380e3e12793c5729249146a18b6">cen::event_type::joystick_hat_motion</a> = SDL_JOYHATMOTION, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939baf2c25380e3e12793c5729249146a18b6">cen::event_type::joystick_hat_motion</a> = SDL_JOYHATMOTION, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a40c3f0d12ff6af33fc1757998212ed86">cen::event_type::joystick_button_down</a> = SDL_JOYBUTTONDOWN, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba40c3f0d12ff6af33fc1757998212ed86">cen::event_type::joystick_button_down</a> = SDL_JOYBUTTONDOWN, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2acb08d5d164250984595194e54d5d6719">cen::event_type::joystick_button_up</a> = SDL_JOYBUTTONUP, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939bacb08d5d164250984595194e54d5d6719">cen::event_type::joystick_button_up</a> = SDL_JOYBUTTONUP, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a2db9343c8b2623c435315e596a24866e">cen::event_type::joystick_device_added</a> = SDL_JOYDEVICEADDED, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba2db9343c8b2623c435315e596a24866e">cen::event_type::joystick_device_added</a> = SDL_JOYDEVICEADDED, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2ac6b6fc87c82334a194bc911f1f5f09e6">cen::event_type::joystick_device_removed</a> = SDL_JOYDEVICEREMOVED, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939bac6b6fc87c82334a194bc911f1f5f09e6">cen::event_type::joystick_device_removed</a> = SDL_JOYDEVICEREMOVED, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a1aafb53ad025d38ab2adfdf81c127065">cen::event_type::controller_axis_motion</a> = SDL_CONTROLLERAXISMOTION, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba1aafb53ad025d38ab2adfdf81c127065">cen::event_type::controller_axis_motion</a> = SDL_CONTROLLERAXISMOTION, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a118ace45fad8d04e924ccaf0abf132e2">cen::event_type::controller_button_down</a> = SDL_CONTROLLERBUTTONDOWN, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba118ace45fad8d04e924ccaf0abf132e2">cen::event_type::controller_button_down</a> = SDL_CONTROLLERBUTTONDOWN, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2af963da24bb9aabd00b0fdf8d1262b267">cen::event_type::controller_button_up</a> = SDL_CONTROLLERBUTTONUP, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939baf963da24bb9aabd00b0fdf8d1262b267">cen::event_type::controller_button_up</a> = SDL_CONTROLLERBUTTONUP, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2acc50f109dd585ce50d7a4040fb52c468">cen::event_type::controller_device_added</a> = SDL_CONTROLLERDEVICEADDED, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939bacc50f109dd585ce50d7a4040fb52c468">cen::event_type::controller_device_added</a> = SDL_CONTROLLERDEVICEADDED, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a9a13ae35bfe2cfe12ada4119bc4964a7">cen::event_type::controller_device_removed</a> = SDL_CONTROLLERDEVICEREMOVED, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba9a13ae35bfe2cfe12ada4119bc4964a7">cen::event_type::controller_device_removed</a> = SDL_CONTROLLERDEVICEREMOVED, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2ac0285b503aea149987b2a28ae7af96ca">cen::event_type::controller_device_remapped</a> = SDL_CONTROLLERDEVICEREMAPPED, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939bac0285b503aea149987b2a28ae7af96ca">cen::event_type::controller_device_remapped</a> = SDL_CONTROLLERDEVICEREMAPPED, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a36acdbf9714963b10ba93cfc39791787">cen::event_type::touch_down</a> = SDL_FINGERDOWN, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba36acdbf9714963b10ba93cfc39791787">cen::event_type::touch_down</a> = SDL_FINGERDOWN, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a703aaa492c24c09fc36119dbf99d3cfd">cen::event_type::touch_up</a> = SDL_FINGERUP, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba703aaa492c24c09fc36119dbf99d3cfd">cen::event_type::touch_up</a> = SDL_FINGERUP, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2ae4b1aba507135dba49c194e27bb258d8">cen::event_type::touch_motion</a> = SDL_FINGERMOTION, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939bae4b1aba507135dba49c194e27bb258d8">cen::event_type::touch_motion</a> = SDL_FINGERMOTION, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a9d8c8709900c57ce9699a28c6ed9d674">cen::event_type::dollar_gesture</a> = SDL_DOLLARGESTURE, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba9d8c8709900c57ce9699a28c6ed9d674">cen::event_type::dollar_gesture</a> = SDL_DOLLARGESTURE, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a1f2ef26f9f79c5c10d67122245bdc346">cen::event_type::dollar_record</a> = SDL_DOLLARRECORD, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba1f2ef26f9f79c5c10d67122245bdc346">cen::event_type::dollar_record</a> = SDL_DOLLARRECORD, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a3e84b5a634062d5e9a02a0bcd59837dd">cen::event_type::multi_gesture</a> = SDL_MULTIGESTURE, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba3e84b5a634062d5e9a02a0bcd59837dd">cen::event_type::multi_gesture</a> = SDL_MULTIGESTURE, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a53619367dcd7a4f802c8e02cdb73c124">cen::event_type::clipboard_update</a> = SDL_CLIPBOARDUPDATE, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba53619367dcd7a4f802c8e02cdb73c124">cen::event_type::clipboard_update</a> = SDL_CLIPBOARDUPDATE, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a15e418ea049939b287455391ad76be31">cen::event_type::drop_file</a> = SDL_DROPFILE, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba15e418ea049939b287455391ad76be31">cen::event_type::drop_file</a> = SDL_DROPFILE, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a27dd818ec803f32b7917fb77be780c0c">cen::event_type::drop_text</a> = SDL_DROPTEXT, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba27dd818ec803f32b7917fb77be780c0c">cen::event_type::drop_text</a> = SDL_DROPTEXT, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a6d9544fc7e5433f0d04d58d15b0c25e1">cen::event_type::drop_begin</a> = SDL_DROPBEGIN, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba6d9544fc7e5433f0d04d58d15b0c25e1">cen::event_type::drop_begin</a> = SDL_DROPBEGIN, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a58603ae401ec2339fc500e58c0618d6b">cen::event_type::drop_complete</a> = SDL_DROPCOMPLETE, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba58603ae401ec2339fc500e58c0618d6b">cen::event_type::drop_complete</a> = SDL_DROPCOMPLETE, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a1849894c975bbbb8093f95207d703f13">cen::event_type::audio_device_added</a> = SDL_AUDIODEVICEADDED, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba1849894c975bbbb8093f95207d703f13">cen::event_type::audio_device_added</a> = SDL_AUDIODEVICEADDED, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2acb952a764ade94f5bb614c88a04557f5">cen::event_type::audio_device_removed</a> = SDL_AUDIODEVICEREMOVED, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939bacb952a764ade94f5bb614c88a04557f5">cen::event_type::audio_device_removed</a> = SDL_AUDIODEVICEREMOVED, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a3647f10e65fea4ec3bdb7a9e3183ca7a">cen::event_type::sensor_update</a> = SDL_SENSORUPDATE, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba3647f10e65fea4ec3bdb7a9e3183ca7a">cen::event_type::sensor_update</a> = SDL_SENSORUPDATE, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a773fc3926c4d7427202274e4a5176558">cen::event_type::render_targets_reset</a> = SDL_RENDER_TARGETS_RESET, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba773fc3926c4d7427202274e4a5176558">cen::event_type::render_targets_reset</a> = SDL_RENDER_TARGETS_RESET, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a322405e926da977d24724a14e6ce3261">cen::event_type::render_device_reset</a> = SDL_RENDER_DEVICE_RESET, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba322405e926da977d24724a14e6ce3261">cen::event_type::render_device_reset</a> = SDL_RENDER_DEVICE_RESET, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2aee11cbb19052e40b07aac0ca060c23ee">cen::event_type::user</a> = SDL_USEREVENT
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939baee11cbb19052e40b07aac0ca060c23ee">cen::event_type::user</a> = SDL_USEREVENT
 <br />
  }</td></tr>
-<tr class="memdesc:gaa2429849e0f3a3f8dc5dabd278b110b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mirrors the <code>SDL_EventType</code> enum.  <a href="group__event.html#gaa2429849e0f3a3f8dc5dabd278b110b2">More...</a><br /></td></tr>
-<tr class="separator:gaa2429849e0f3a3f8dc5dabd278b110b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:gaa96233ec6356fc786c810d6aaf5e939b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the different event types.  <a href="group__event.html#gaa96233ec6356fc786c810d6aaf5e939b">More...</a><br /></td></tr>
+<tr class="separator:gaa96233ec6356fc786c810d6aaf5e939b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>

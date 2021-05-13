@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -105,7 +105,7 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa70446c80fbcde645dab29c6d020ddde"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#aa70446c80fbcde645dab29c6d020ddde">type</a> () const noexcept -&gt; <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a></td></tr>
+<tr class="memitem:aa70446c80fbcde645dab29c6d020ddde"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#aa70446c80fbcde645dab29c6d020ddde">type</a> () const noexcept -&gt; <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a></td></tr>
 <tr class="memdesc:aa70446c80fbcde645dab29c6d020ddde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the type associated with the haptic effect.  <a href="classcen_1_1haptic__effect.html#aa70446c80fbcde645dab29c6d020ddde">More...</a><br /></td></tr>
 <tr class="separator:aa70446c80fbcde645dab29c6d020ddde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfe2dd6771df0dedb4bfff6ba790b0cb"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#acfe2dd6771df0dedb4bfff6ba790b0cb">get</a> () noexcept -&gt; SDL_HapticEffect &amp;</td></tr>
@@ -114,88 +114,96 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac3c8958295e1c7e121c61eedae5d3a0b"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#ac3c8958295e1c7e121c61eedae5d3a0b">get</a> () const noexcept -&gt; const SDL_HapticEffect &amp;</td></tr>
 <tr class="memdesc:ac3c8958295e1c7e121c61eedae5d3a0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the internal effect representation.  <a href="classcen_1_1haptic__effect.html#ac3c8958295e1c7e121c61eedae5d3a0b">More...</a><br /></td></tr>
 <tr class="separator:ac3c8958295e1c7e121c61eedae5d3a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Direction functions</div></td></tr>
-<tr class="memitem:ae2f85ddb76b16a353820f176312f6866"><td class="memTemplParams" colspan="2">template&lt;typename D  = Derived, has_direction&lt; D &gt;  = true&gt; </td></tr>
-<tr class="memitem:ae2f85ddb76b16a353820f176312f6866"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#ae2f85ddb76b16a353820f176312f6866">set_direction</a> (const <a class="el" href="classcen_1_1haptic__direction.html">haptic_direction</a> &amp;<a class="el" href="classcen_1_1haptic__effect.html#a2ebd027ce981f4fba829220aa60e19bc">direction</a>) noexcept</td></tr>
-<tr class="memdesc:ae2f85ddb76b16a353820f176312f6866"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the haptic direction associated with the effect.  <a href="classcen_1_1haptic__effect.html#ae2f85ddb76b16a353820f176312f6866">More...</a><br /></td></tr>
-<tr class="separator:ae2f85ddb76b16a353820f176312f6866"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ebd027ce981f4fba829220aa60e19bc"><td class="memTemplParams" colspan="2">template&lt;typename D  = Derived, has_direction&lt; D &gt;  = true&gt; </td></tr>
-<tr class="memitem:a2ebd027ce981f4fba829220aa60e19bc"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#a2ebd027ce981f4fba829220aa60e19bc">direction</a> () const noexcept -&gt; <a class="el" href="classcen_1_1haptic__direction.html">haptic_direction</a></td></tr>
-<tr class="memdesc:a2ebd027ce981f4fba829220aa60e19bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the haptic direction associated with the effect.  <a href="classcen_1_1haptic__effect.html#a2ebd027ce981f4fba829220aa60e19bc">More...</a><br /></td></tr>
-<tr class="separator:a2ebd027ce981f4fba829220aa60e19bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Replay functions</div></td></tr>
-<tr class="memitem:a8f9cd09080dd4aa66e40ae609e7178a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#a8f9cd09080dd4aa66e40ae609e7178a5">set_repeat_forever</a> () noexcept</td></tr>
-<tr class="memdesc:a8f9cd09080dd4aa66e40ae609e7178a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the effect to be repeated indefinitely when run.  <a href="classcen_1_1haptic__effect.html#a8f9cd09080dd4aa66e40ae609e7178a5">More...</a><br /></td></tr>
-<tr class="separator:a8f9cd09080dd4aa66e40ae609e7178a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab16649ea79bcd5f2b1a0897744d42be6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#ab16649ea79bcd5f2b1a0897744d42be6">set_duration</a> (const <a class="el" href="namespacecen.html#aeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="namespacecen.html#ad1dcf848a9ee33237a96cde6b5a1d466">u32</a> &gt; ms)</td></tr>
-<tr class="memdesc:ab16649ea79bcd5f2b1a0897744d42be6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the duration of the effect.  <a href="classcen_1_1haptic__effect.html#ab16649ea79bcd5f2b1a0897744d42be6">More...</a><br /></td></tr>
-<tr class="separator:ab16649ea79bcd5f2b1a0897744d42be6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba2a4c3a6acf39685b3f9f7906a17805"><td class="memTemplParams" colspan="2">template&lt;typename D  = Derived, has_delay&lt; D &gt;  = true&gt; </td></tr>
-<tr class="memitem:aba2a4c3a6acf39685b3f9f7906a17805"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#aba2a4c3a6acf39685b3f9f7906a17805">set_delay</a> (const <a class="el" href="namespacecen.html#aeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a> &gt; ms)</td></tr>
-<tr class="memdesc:aba2a4c3a6acf39685b3f9f7906a17805"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the delay before before the effect is started.  <a href="classcen_1_1haptic__effect.html#aba2a4c3a6acf39685b3f9f7906a17805">More...</a><br /></td></tr>
-<tr class="separator:aba2a4c3a6acf39685b3f9f7906a17805"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fdfaee70d4709735b575849b2d015bc"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#a3fdfaee70d4709735b575849b2d015bc">duration</a> () const -&gt; <a class="el" href="namespacecen.html#aeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="namespacecen.html#ad1dcf848a9ee33237a96cde6b5a1d466">u32</a> &gt;</td></tr>
-<tr class="memdesc:a3fdfaee70d4709735b575849b2d015bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the duration of the effect.  <a href="classcen_1_1haptic__effect.html#a3fdfaee70d4709735b575849b2d015bc">More...</a><br /></td></tr>
-<tr class="separator:a3fdfaee70d4709735b575849b2d015bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1166fb8ab82929570e1000846cbbbc99"><td class="memTemplParams" colspan="2">template&lt;typename D  = Derived, has_delay&lt; D &gt;  = true&gt; </td></tr>
-<tr class="memitem:a1166fb8ab82929570e1000846cbbbc99"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#a1166fb8ab82929570e1000846cbbbc99">delay</a> () const -&gt; <a class="el" href="namespacecen.html#aeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a> &gt;</td></tr>
-<tr class="memdesc:a1166fb8ab82929570e1000846cbbbc99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the delay before before the effect is started.  <a href="classcen_1_1haptic__effect.html#a1166fb8ab82929570e1000846cbbbc99">More...</a><br /></td></tr>
-<tr class="separator:a1166fb8ab82929570e1000846cbbbc99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Trigger functions</div></td></tr>
-<tr class="memitem:adb642bbfbaf6f2061f38c0767535658f"><td class="memTemplParams" colspan="2">template&lt;typename D  = Derived, has_trigger&lt; D &gt;  = true&gt; </td></tr>
-<tr class="memitem:adb642bbfbaf6f2061f38c0767535658f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#adb642bbfbaf6f2061f38c0767535658f">set_button</a> (const <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a> <a class="el" href="classcen_1_1haptic__effect.html#ae83edb4cea7777a12a9f25e3b9e6dec4">button</a>) noexcept</td></tr>
-<tr class="memdesc:adb642bbfbaf6f2061f38c0767535658f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the button that triggers the effect.  <a href="classcen_1_1haptic__effect.html#adb642bbfbaf6f2061f38c0767535658f">More...</a><br /></td></tr>
-<tr class="separator:adb642bbfbaf6f2061f38c0767535658f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a0ddaf7fa5d5d2db814f225e2cc45db"><td class="memTemplParams" colspan="2">template&lt;typename D  = Derived, has_trigger&lt; D &gt;  = true&gt; </td></tr>
-<tr class="memitem:a4a0ddaf7fa5d5d2db814f225e2cc45db"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#a4a0ddaf7fa5d5d2db814f225e2cc45db">set_interval</a> (const <a class="el" href="namespacecen.html#aeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a> &gt; ms)</td></tr>
-<tr class="memdesc:a4a0ddaf7fa5d5d2db814f225e2cc45db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the minimum interval in between activations of the effect.  <a href="classcen_1_1haptic__effect.html#a4a0ddaf7fa5d5d2db814f225e2cc45db">More...</a><br /></td></tr>
-<tr class="separator:a4a0ddaf7fa5d5d2db814f225e2cc45db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae83edb4cea7777a12a9f25e3b9e6dec4"><td class="memTemplParams" colspan="2">template&lt;typename D  = Derived, has_trigger&lt; D &gt;  = true&gt; </td></tr>
-<tr class="memitem:ae83edb4cea7777a12a9f25e3b9e6dec4"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#ae83edb4cea7777a12a9f25e3b9e6dec4">button</a> () const noexcept -&gt; <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a></td></tr>
-<tr class="memdesc:ae83edb4cea7777a12a9f25e3b9e6dec4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the button that triggers the effect.  <a href="classcen_1_1haptic__effect.html#ae83edb4cea7777a12a9f25e3b9e6dec4">More...</a><br /></td></tr>
-<tr class="separator:ae83edb4cea7777a12a9f25e3b9e6dec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61063978e99d3bbdcae41ce01e99e822"><td class="memTemplParams" colspan="2">template&lt;typename D  = Derived, has_trigger&lt; D &gt;  = true&gt; </td></tr>
-<tr class="memitem:a61063978e99d3bbdcae41ce01e99e822"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#a61063978e99d3bbdcae41ce01e99e822">interval</a> () const -&gt; <a class="el" href="namespacecen.html#aeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a> &gt;</td></tr>
-<tr class="memdesc:a61063978e99d3bbdcae41ce01e99e822"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the minimum interval in between activations of the effect.  <a href="classcen_1_1haptic__effect.html#a61063978e99d3bbdcae41ce01e99e822">More...</a><br /></td></tr>
-<tr class="separator:a61063978e99d3bbdcae41ce01e99e822"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Envelope functions</div></td></tr>
-<tr class="memitem:a5a07b28e3e2a130d14ee97dbdf3de789"><td class="memTemplParams" colspan="2">template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </td></tr>
-<tr class="memitem:a5a07b28e3e2a130d14ee97dbdf3de789"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#a5a07b28e3e2a130d14ee97dbdf3de789">set_attack_level</a> (const <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a> level) noexcept</td></tr>
-<tr class="memdesc:a5a07b28e3e2a130d14ee97dbdf3de789"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the level at the <em>start</em> of the attack.  <a href="classcen_1_1haptic__effect.html#a5a07b28e3e2a130d14ee97dbdf3de789">More...</a><br /></td></tr>
-<tr class="separator:a5a07b28e3e2a130d14ee97dbdf3de789"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45fca530628a9bea282c2cce2e0a2b0f"><td class="memTemplParams" colspan="2">template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </td></tr>
-<tr class="memitem:a45fca530628a9bea282c2cce2e0a2b0f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#a45fca530628a9bea282c2cce2e0a2b0f">set_fade_level</a> (const <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a> level) noexcept</td></tr>
-<tr class="memdesc:a45fca530628a9bea282c2cce2e0a2b0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the level at the <em>end</em> of the fade out.  <a href="classcen_1_1haptic__effect.html#a45fca530628a9bea282c2cce2e0a2b0f">More...</a><br /></td></tr>
-<tr class="separator:a45fca530628a9bea282c2cce2e0a2b0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab709a8a8848b9d8a9cc1dac0b2b7e3cf"><td class="memTemplParams" colspan="2">template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </td></tr>
-<tr class="memitem:ab709a8a8848b9d8a9cc1dac0b2b7e3cf"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#ab709a8a8848b9d8a9cc1dac0b2b7e3cf">set_attack_duration</a> (const <a class="el" href="namespacecen.html#aeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a> &gt; ms)</td></tr>
-<tr class="memdesc:ab709a8a8848b9d8a9cc1dac0b2b7e3cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the duration of the attack.  <a href="classcen_1_1haptic__effect.html#ab709a8a8848b9d8a9cc1dac0b2b7e3cf">More...</a><br /></td></tr>
-<tr class="separator:ab709a8a8848b9d8a9cc1dac0b2b7e3cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ba23b8e667f34159eda6fd834a06a8e"><td class="memTemplParams" colspan="2">template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </td></tr>
-<tr class="memitem:a9ba23b8e667f34159eda6fd834a06a8e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#a9ba23b8e667f34159eda6fd834a06a8e">set_fade_duration</a> (const <a class="el" href="namespacecen.html#aeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a> &gt; ms)</td></tr>
-<tr class="memdesc:a9ba23b8e667f34159eda6fd834a06a8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the duration of the fade out.  <a href="classcen_1_1haptic__effect.html#a9ba23b8e667f34159eda6fd834a06a8e">More...</a><br /></td></tr>
-<tr class="separator:a9ba23b8e667f34159eda6fd834a06a8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3569cc73eedace0be95f3e3a5f279d96"><td class="memTemplParams" colspan="2">template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </td></tr>
-<tr class="memitem:a3569cc73eedace0be95f3e3a5f279d96"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#a3569cc73eedace0be95f3e3a5f279d96">attack_level</a> () const noexcept -&gt; <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a></td></tr>
-<tr class="memdesc:a3569cc73eedace0be95f3e3a5f279d96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the level at the <em>start</em> of the attack.  <a href="classcen_1_1haptic__effect.html#a3569cc73eedace0be95f3e3a5f279d96">More...</a><br /></td></tr>
-<tr class="separator:a3569cc73eedace0be95f3e3a5f279d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa521a3b99899b62273dd16d084a6e5ec"><td class="memTemplParams" colspan="2">template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </td></tr>
-<tr class="memitem:aa521a3b99899b62273dd16d084a6e5ec"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#aa521a3b99899b62273dd16d084a6e5ec">fade_level</a> () const noexcept -&gt; <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a></td></tr>
-<tr class="memdesc:aa521a3b99899b62273dd16d084a6e5ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the level at the <em>end</em> of the fade.  <a href="classcen_1_1haptic__effect.html#aa521a3b99899b62273dd16d084a6e5ec">More...</a><br /></td></tr>
-<tr class="separator:aa521a3b99899b62273dd16d084a6e5ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58dfcdac6c59f4ceaa42243f2e16aa98"><td class="memTemplParams" colspan="2">template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </td></tr>
-<tr class="memitem:a58dfcdac6c59f4ceaa42243f2e16aa98"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#a58dfcdac6c59f4ceaa42243f2e16aa98">attack_duration</a> () const -&gt; <a class="el" href="namespacecen.html#aeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a> &gt;</td></tr>
-<tr class="memdesc:a58dfcdac6c59f4ceaa42243f2e16aa98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the duration of the attack.  <a href="classcen_1_1haptic__effect.html#a58dfcdac6c59f4ceaa42243f2e16aa98">More...</a><br /></td></tr>
-<tr class="separator:a58dfcdac6c59f4ceaa42243f2e16aa98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac07ec7efc935912728db2a5dea735000"><td class="memTemplParams" colspan="2">template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </td></tr>
-<tr class="memitem:ac07ec7efc935912728db2a5dea735000"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#ac07ec7efc935912728db2a5dea735000">fade_duration</a> () const -&gt; <a class="el" href="namespacecen.html#aeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a> &gt;</td></tr>
-<tr class="memdesc:ac07ec7efc935912728db2a5dea735000"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the duration of the fade out.  <a href="classcen_1_1haptic__effect.html#ac07ec7efc935912728db2a5dea735000">More...</a><br /></td></tr>
-<tr class="separator:ac07ec7efc935912728db2a5dea735000"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a841d1c4a7af1c248914067c4925258e6"><td class="memItemLeft" align="right" valign="top">SDL_HapticEffect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#a841d1c4a7af1c248914067c4925258e6">m_effect</a> {}</td></tr>
 <tr class="separator:a841d1c4a7af1c248914067c4925258e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Direction functions</h2></td></tr>
+<tr class="memitem:ae2f85ddb76b16a353820f176312f6866"><td class="memTemplParams" colspan="2">template&lt;typename D  = Derived, has_direction&lt; D &gt;  = 0&gt; </td></tr>
+<tr class="memitem:ae2f85ddb76b16a353820f176312f6866"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#ae2f85ddb76b16a353820f176312f6866">set_direction</a> (const <a class="el" href="classcen_1_1haptic__direction.html">haptic_direction</a> &amp;<a class="el" href="classcen_1_1haptic__effect.html#a2ebd027ce981f4fba829220aa60e19bc">direction</a>) noexcept</td></tr>
+<tr class="memdesc:ae2f85ddb76b16a353820f176312f6866"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the haptic direction associated with the effect.  <a href="classcen_1_1haptic__effect.html#ae2f85ddb76b16a353820f176312f6866">More...</a><br /></td></tr>
+<tr class="separator:ae2f85ddb76b16a353820f176312f6866"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ebd027ce981f4fba829220aa60e19bc"><td class="memTemplParams" colspan="2">template&lt;typename D  = Derived, has_direction&lt; D &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a2ebd027ce981f4fba829220aa60e19bc"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#a2ebd027ce981f4fba829220aa60e19bc">direction</a> () const noexcept -&gt; <a class="el" href="classcen_1_1haptic__direction.html">haptic_direction</a></td></tr>
+<tr class="memdesc:a2ebd027ce981f4fba829220aa60e19bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the haptic direction associated with the effect.  <a href="classcen_1_1haptic__effect.html#a2ebd027ce981f4fba829220aa60e19bc">More...</a><br /></td></tr>
+<tr class="separator:a2ebd027ce981f4fba829220aa60e19bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Replay functions</h2></td></tr>
+<tr class="memitem:a8f9cd09080dd4aa66e40ae609e7178a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#a8f9cd09080dd4aa66e40ae609e7178a5">set_repeat_forever</a> () noexcept</td></tr>
+<tr class="memdesc:a8f9cd09080dd4aa66e40ae609e7178a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the effect to be repeated indefinitely when run.  <a href="classcen_1_1haptic__effect.html#a8f9cd09080dd4aa66e40ae609e7178a5">More...</a><br /></td></tr>
+<tr class="separator:a8f9cd09080dd4aa66e40ae609e7178a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7e8776ca4fa3b7cd1452c24850617e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#ad7e8776ca4fa3b7cd1452c24850617e8">set_duration</a> (const <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a> &gt; <a class="el" href="classcen_1_1haptic__effect.html#a3fdfaee70d4709735b575849b2d015bc">duration</a>) noexcept(noexcept(duration.count()))</td></tr>
+<tr class="memdesc:ad7e8776ca4fa3b7cd1452c24850617e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the duration of the effect.  <a href="classcen_1_1haptic__effect.html#ad7e8776ca4fa3b7cd1452c24850617e8">More...</a><br /></td></tr>
+<tr class="separator:ad7e8776ca4fa3b7cd1452c24850617e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fa1097a9432664ba8d8f70a314bc13d"><td class="memTemplParams" colspan="2">template&lt;typename D  = Derived, has_delay&lt; D &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a0fa1097a9432664ba8d8f70a314bc13d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#a0fa1097a9432664ba8d8f70a314bc13d">set_delay</a> (const <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a> &gt; <a class="el" href="classcen_1_1haptic__effect.html#a1166fb8ab82929570e1000846cbbbc99">delay</a>) noexcept(noexcept(delay.count()))</td></tr>
+<tr class="memdesc:a0fa1097a9432664ba8d8f70a314bc13d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the delay before before the effect is started.  <a href="classcen_1_1haptic__effect.html#a0fa1097a9432664ba8d8f70a314bc13d">More...</a><br /></td></tr>
+<tr class="separator:a0fa1097a9432664ba8d8f70a314bc13d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fdfaee70d4709735b575849b2d015bc"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#a3fdfaee70d4709735b575849b2d015bc">duration</a> () const -&gt; <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a> &gt;</td></tr>
+<tr class="memdesc:a3fdfaee70d4709735b575849b2d015bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the duration of the effect.  <a href="classcen_1_1haptic__effect.html#a3fdfaee70d4709735b575849b2d015bc">More...</a><br /></td></tr>
+<tr class="separator:a3fdfaee70d4709735b575849b2d015bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1166fb8ab82929570e1000846cbbbc99"><td class="memTemplParams" colspan="2">template&lt;typename D  = Derived, has_delay&lt; D &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a1166fb8ab82929570e1000846cbbbc99"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#a1166fb8ab82929570e1000846cbbbc99">delay</a> () const -&gt; <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a> &gt;</td></tr>
+<tr class="memdesc:a1166fb8ab82929570e1000846cbbbc99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the delay before before the effect is started.  <a href="classcen_1_1haptic__effect.html#a1166fb8ab82929570e1000846cbbbc99">More...</a><br /></td></tr>
+<tr class="separator:a1166fb8ab82929570e1000846cbbbc99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Trigger functions</h2></td></tr>
+<tr class="memitem:adb642bbfbaf6f2061f38c0767535658f"><td class="memTemplParams" colspan="2">template&lt;typename D  = Derived, has_trigger&lt; D &gt;  = 0&gt; </td></tr>
+<tr class="memitem:adb642bbfbaf6f2061f38c0767535658f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#adb642bbfbaf6f2061f38c0767535658f">set_button</a> (const <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a> <a class="el" href="classcen_1_1haptic__effect.html#ae83edb4cea7777a12a9f25e3b9e6dec4">button</a>) noexcept</td></tr>
+<tr class="memdesc:adb642bbfbaf6f2061f38c0767535658f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the button that triggers the effect.  <a href="classcen_1_1haptic__effect.html#adb642bbfbaf6f2061f38c0767535658f">More...</a><br /></td></tr>
+<tr class="separator:adb642bbfbaf6f2061f38c0767535658f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a046589e1a480c0acc63ea4e2e3b35f70"><td class="memTemplParams" colspan="2">template&lt;typename D  = Derived, has_trigger&lt; D &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a046589e1a480c0acc63ea4e2e3b35f70"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#a046589e1a480c0acc63ea4e2e3b35f70">set_interval</a> (const <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a> &gt; <a class="el" href="classcen_1_1haptic__effect.html#a61063978e99d3bbdcae41ce01e99e822">interval</a>) noexcept(noexcept(interval.count()))</td></tr>
+<tr class="memdesc:a046589e1a480c0acc63ea4e2e3b35f70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the minimum interval in between activations of the effect.  <a href="classcen_1_1haptic__effect.html#a046589e1a480c0acc63ea4e2e3b35f70">More...</a><br /></td></tr>
+<tr class="separator:a046589e1a480c0acc63ea4e2e3b35f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae83edb4cea7777a12a9f25e3b9e6dec4"><td class="memTemplParams" colspan="2">template&lt;typename D  = Derived, has_trigger&lt; D &gt;  = 0&gt; </td></tr>
+<tr class="memitem:ae83edb4cea7777a12a9f25e3b9e6dec4"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#ae83edb4cea7777a12a9f25e3b9e6dec4">button</a> () const noexcept -&gt; <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a></td></tr>
+<tr class="memdesc:ae83edb4cea7777a12a9f25e3b9e6dec4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the button that triggers the effect.  <a href="classcen_1_1haptic__effect.html#ae83edb4cea7777a12a9f25e3b9e6dec4">More...</a><br /></td></tr>
+<tr class="separator:ae83edb4cea7777a12a9f25e3b9e6dec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61063978e99d3bbdcae41ce01e99e822"><td class="memTemplParams" colspan="2">template&lt;typename D  = Derived, has_trigger&lt; D &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a61063978e99d3bbdcae41ce01e99e822"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#a61063978e99d3bbdcae41ce01e99e822">interval</a> () const -&gt; <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a> &gt;</td></tr>
+<tr class="memdesc:a61063978e99d3bbdcae41ce01e99e822"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the minimum interval in between activations of the effect.  <a href="classcen_1_1haptic__effect.html#a61063978e99d3bbdcae41ce01e99e822">More...</a><br /></td></tr>
+<tr class="separator:a61063978e99d3bbdcae41ce01e99e822"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Envelope functions</h2></td></tr>
+<tr class="memitem:a5a07b28e3e2a130d14ee97dbdf3de789"><td class="memTemplParams" colspan="2">template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a5a07b28e3e2a130d14ee97dbdf3de789"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#a5a07b28e3e2a130d14ee97dbdf3de789">set_attack_level</a> (const <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a> level) noexcept</td></tr>
+<tr class="memdesc:a5a07b28e3e2a130d14ee97dbdf3de789"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the level at the <em>start</em> of the attack.  <a href="classcen_1_1haptic__effect.html#a5a07b28e3e2a130d14ee97dbdf3de789">More...</a><br /></td></tr>
+<tr class="separator:a5a07b28e3e2a130d14ee97dbdf3de789"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45fca530628a9bea282c2cce2e0a2b0f"><td class="memTemplParams" colspan="2">template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a45fca530628a9bea282c2cce2e0a2b0f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#a45fca530628a9bea282c2cce2e0a2b0f">set_fade_level</a> (const <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a> level) noexcept</td></tr>
+<tr class="memdesc:a45fca530628a9bea282c2cce2e0a2b0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the level at the <em>end</em> of the fade out.  <a href="classcen_1_1haptic__effect.html#a45fca530628a9bea282c2cce2e0a2b0f">More...</a><br /></td></tr>
+<tr class="separator:a45fca530628a9bea282c2cce2e0a2b0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65858d1e74140c91154ddda4d0245a24"><td class="memTemplParams" colspan="2">template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a65858d1e74140c91154ddda4d0245a24"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#a65858d1e74140c91154ddda4d0245a24">set_attack_duration</a> (const <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a> &gt; <a class="el" href="classcen_1_1haptic__effect.html#a3fdfaee70d4709735b575849b2d015bc">duration</a>) noexcept(noexcept(duration.count()))</td></tr>
+<tr class="memdesc:a65858d1e74140c91154ddda4d0245a24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the duration of the attack.  <a href="classcen_1_1haptic__effect.html#a65858d1e74140c91154ddda4d0245a24">More...</a><br /></td></tr>
+<tr class="separator:a65858d1e74140c91154ddda4d0245a24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bd61b9cf409c2b87f0359ac0d415663"><td class="memTemplParams" colspan="2">template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a7bd61b9cf409c2b87f0359ac0d415663"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#a7bd61b9cf409c2b87f0359ac0d415663">set_fade_duration</a> (const <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a> &gt; <a class="el" href="classcen_1_1haptic__effect.html#a3fdfaee70d4709735b575849b2d015bc">duration</a>) noexcept(noexcept(duration.count()))</td></tr>
+<tr class="memdesc:a7bd61b9cf409c2b87f0359ac0d415663"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the duration of the fade out.  <a href="classcen_1_1haptic__effect.html#a7bd61b9cf409c2b87f0359ac0d415663">More...</a><br /></td></tr>
+<tr class="separator:a7bd61b9cf409c2b87f0359ac0d415663"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3569cc73eedace0be95f3e3a5f279d96"><td class="memTemplParams" colspan="2">template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a3569cc73eedace0be95f3e3a5f279d96"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#a3569cc73eedace0be95f3e3a5f279d96">attack_level</a> () const noexcept -&gt; <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a></td></tr>
+<tr class="memdesc:a3569cc73eedace0be95f3e3a5f279d96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the level at the <em>start</em> of the attack.  <a href="classcen_1_1haptic__effect.html#a3569cc73eedace0be95f3e3a5f279d96">More...</a><br /></td></tr>
+<tr class="separator:a3569cc73eedace0be95f3e3a5f279d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa521a3b99899b62273dd16d084a6e5ec"><td class="memTemplParams" colspan="2">template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = 0&gt; </td></tr>
+<tr class="memitem:aa521a3b99899b62273dd16d084a6e5ec"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#aa521a3b99899b62273dd16d084a6e5ec">fade_level</a> () const noexcept -&gt; <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a></td></tr>
+<tr class="memdesc:aa521a3b99899b62273dd16d084a6e5ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the level at the <em>end</em> of the fade.  <a href="classcen_1_1haptic__effect.html#aa521a3b99899b62273dd16d084a6e5ec">More...</a><br /></td></tr>
+<tr class="separator:aa521a3b99899b62273dd16d084a6e5ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58dfcdac6c59f4ceaa42243f2e16aa98"><td class="memTemplParams" colspan="2">template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a58dfcdac6c59f4ceaa42243f2e16aa98"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#a58dfcdac6c59f4ceaa42243f2e16aa98">attack_duration</a> () const -&gt; <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a> &gt;</td></tr>
+<tr class="memdesc:a58dfcdac6c59f4ceaa42243f2e16aa98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the duration of the attack.  <a href="classcen_1_1haptic__effect.html#a58dfcdac6c59f4ceaa42243f2e16aa98">More...</a><br /></td></tr>
+<tr class="separator:a58dfcdac6c59f4ceaa42243f2e16aa98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac07ec7efc935912728db2a5dea735000"><td class="memTemplParams" colspan="2">template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = 0&gt; </td></tr>
+<tr class="memitem:ac07ec7efc935912728db2a5dea735000"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1haptic__effect.html#ac07ec7efc935912728db2a5dea735000">fade_duration</a> () const -&gt; <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a> &gt;</td></tr>
+<tr class="memdesc:ac07ec7efc935912728db2a5dea735000"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the duration of the fade out.  <a href="classcen_1_1haptic__effect.html#ac07ec7efc935912728db2a5dea735000">More...</a><br /></td></tr>
+<tr class="separator:ac07ec7efc935912728db2a5dea735000"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename Derived&gt;<br />
@@ -220,7 +228,7 @@ class cen::haptic_effect&lt; Derived &gt;</h3>
  [------------------][-----------------------]
  delay               duration</pre><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">Derived</td><td>the type of the subclass for CRTP.</td></tr>
+    <tr><td class="paramname">Derived</td><td>the type of the subclass, for CRTP.</td></tr>
   </table>
   </dd>
 </dl>
@@ -234,7 +242,7 @@ class cen::haptic_effect&lt; Derived &gt;</h3>
 <div class="memtemplate">
 template&lt;typename Derived &gt; </div>
 <div class="memtemplate">
-template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </div>
+template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -243,7 +251,7 @@ template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </div>
           <td class="memname">auto <a class="el" href="classcen_1_1haptic__effect.html">cen::haptic_effect</a>&lt; Derived &gt;::attack_duration </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="namespacecen.html#aeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt;<a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a>&gt;
+          <td> const -&gt; <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt;<a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&gt;
   </td>
         </tr>
       </table>
@@ -256,12 +264,6 @@ template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </div>
 
 <p>Returns the duration of the attack. </p>
 <dl class="section note"><dt>Note</dt><dd>This function is not available for all haptic effects.</dd></dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">D</td><td>dummy parameter for SFINAE.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="section return"><dt>Returns</dt><dd>the duration of the attack.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
 
@@ -275,7 +277,7 @@ template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </div>
 <div class="memtemplate">
 template&lt;typename Derived &gt; </div>
 <div class="memtemplate">
-template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </div>
+template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -284,7 +286,7 @@ template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </div>
           <td class="memname">auto <a class="el" href="classcen_1_1haptic__effect.html">cen::haptic_effect</a>&lt; Derived &gt;::attack_level </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a>
+          <td> const -&gt; <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>
   </td>
         </tr>
       </table>
@@ -297,12 +299,6 @@ template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </div>
 
 <p>Returns the level at the <em>start</em> of the attack. </p>
 <dl class="section note"><dt>Note</dt><dd>This function is not available for all haptic effects.</dd></dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">D</td><td>dummy parameter for SFINAE.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="section return"><dt>Returns</dt><dd>the the level at the <em>start</em> of the attack.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
 
@@ -316,7 +312,7 @@ template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </div>
 <div class="memtemplate">
 template&lt;typename Derived &gt; </div>
 <div class="memtemplate">
-template&lt;typename D  = Derived, has_trigger&lt; D &gt;  = true&gt; </div>
+template&lt;typename D  = Derived, has_trigger&lt; D &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -325,7 +321,7 @@ template&lt;typename D  = Derived, has_trigger&lt; D &gt;  = true&gt; </div>
           <td class="memname">auto <a class="el" href="classcen_1_1haptic__effect.html">cen::haptic_effect</a>&lt; Derived &gt;::button </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a>
+          <td> const -&gt; <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>
   </td>
         </tr>
       </table>
@@ -338,12 +334,6 @@ template&lt;typename D  = Derived, has_trigger&lt; D &gt;  = true&gt; </div>
 
 <p>Returns the button that triggers the effect. </p>
 <dl class="section note"><dt>Note</dt><dd>This function is not available for all haptic effects.</dd></dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">D</td><td>dummy parameter for SFINAE.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="section return"><dt>Returns</dt><dd>the button that triggers the effect.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
 
@@ -357,7 +347,7 @@ template&lt;typename D  = Derived, has_trigger&lt; D &gt;  = true&gt; </div>
 <div class="memtemplate">
 template&lt;typename Derived &gt; </div>
 <div class="memtemplate">
-template&lt;typename D  = Derived, has_delay&lt; D &gt;  = true&gt; </div>
+template&lt;typename D  = Derived, has_delay&lt; D &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -366,7 +356,7 @@ template&lt;typename D  = Derived, has_delay&lt; D &gt;  = true&gt; </div>
           <td class="memname">auto <a class="el" href="classcen_1_1haptic__effect.html">cen::haptic_effect</a>&lt; Derived &gt;::delay </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="namespacecen.html#aeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt;<a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a>&gt;
+          <td> const -&gt; <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt;<a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&gt;
   </td>
         </tr>
       </table>
@@ -379,12 +369,6 @@ template&lt;typename D  = Derived, has_delay&lt; D &gt;  = true&gt; </div>
 
 <p>Returns the delay before before the effect is started. </p>
 <dl class="section note"><dt>Note</dt><dd>This function is not available for all haptic effects.</dd></dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">D</td><td>dummy parameter for SFINAE.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="section return"><dt>Returns</dt><dd>the delay before before the effect is started.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
 
@@ -398,7 +382,7 @@ template&lt;typename D  = Derived, has_delay&lt; D &gt;  = true&gt; </div>
 <div class="memtemplate">
 template&lt;typename Derived &gt; </div>
 <div class="memtemplate">
-template&lt;typename D  = Derived, has_direction&lt; D &gt;  = true&gt; </div>
+template&lt;typename D  = Derived, has_direction&lt; D &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -419,12 +403,6 @@ template&lt;typename D  = Derived, has_direction&lt; D &gt;  = true&gt; </div>
 </div><div class="memdoc">
 
 <p>Returns the haptic direction associated with the effect. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">D</td><td>dummy parameter for SFINAE.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="section return"><dt>Returns</dt><dd>the current direction associated with the effect.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
 
@@ -445,7 +423,7 @@ template&lt;typename Derived &gt; </div>
           <td class="memname">auto <a class="el" href="classcen_1_1haptic__effect.html">cen::haptic_effect</a>&lt; Derived &gt;::duration </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="namespacecen.html#aeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt;<a class="el" href="namespacecen.html#ad1dcf848a9ee33237a96cde6b5a1d466">u32</a>&gt;
+          <td> const -&gt; <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt;<a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>&gt;
   </td>
         </tr>
       </table>
@@ -470,7 +448,7 @@ template&lt;typename Derived &gt; </div>
 <div class="memtemplate">
 template&lt;typename Derived &gt; </div>
 <div class="memtemplate">
-template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </div>
+template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -479,7 +457,7 @@ template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </div>
           <td class="memname">auto <a class="el" href="classcen_1_1haptic__effect.html">cen::haptic_effect</a>&lt; Derived &gt;::fade_duration </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="namespacecen.html#aeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt;<a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a>&gt;
+          <td> const -&gt; <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt;<a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&gt;
   </td>
         </tr>
       </table>
@@ -492,12 +470,6 @@ template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </div>
 
 <p>Returns the duration of the fade out. </p>
 <dl class="section note"><dt>Note</dt><dd>This function is not available for all haptic effects.</dd></dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">D</td><td>dummy parameter for SFINAE.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="section return"><dt>Returns</dt><dd>the duration of the fade out.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
 
@@ -511,7 +483,7 @@ template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </div>
 <div class="memtemplate">
 template&lt;typename Derived &gt; </div>
 <div class="memtemplate">
-template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </div>
+template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -520,7 +492,7 @@ template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </div>
           <td class="memname">auto <a class="el" href="classcen_1_1haptic__effect.html">cen::haptic_effect</a>&lt; Derived &gt;::fade_level </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a>
+          <td> const -&gt; <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>
   </td>
         </tr>
       </table>
@@ -533,12 +505,6 @@ template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </div>
 
 <p>Returns the level at the <em>end</em> of the fade. </p>
 <dl class="section note"><dt>Note</dt><dd>This function is not available for all haptic effects.</dd></dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">D</td><td>dummy parameter for SFINAE.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="section return"><dt>Returns</dt><dd>the level at the <em>end</em> of the fade.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
 
@@ -616,7 +582,7 @@ template&lt;typename Derived &gt; </div>
 <div class="memtemplate">
 template&lt;typename Derived &gt; </div>
 <div class="memtemplate">
-template&lt;typename D  = Derived, has_trigger&lt; D &gt;  = true&gt; </div>
+template&lt;typename D  = Derived, has_trigger&lt; D &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -625,7 +591,7 @@ template&lt;typename D  = Derived, has_trigger&lt; D &gt;  = true&gt; </div>
           <td class="memname">auto <a class="el" href="classcen_1_1haptic__effect.html">cen::haptic_effect</a>&lt; Derived &gt;::interval </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="namespacecen.html#aeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt;<a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a>&gt;
+          <td> const -&gt; <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt;<a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&gt;
   </td>
         </tr>
       </table>
@@ -638,26 +604,20 @@ template&lt;typename D  = Derived, has_trigger&lt; D &gt;  = true&gt; </div>
 
 <p>Returns the minimum interval in between activations of the effect. </p>
 <dl class="section note"><dt>Note</dt><dd>This function is not available for all haptic effects.</dd></dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">D</td><td>dummy parameter for SFINAE.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="section return"><dt>Returns</dt><dd>the minimum interval in between activations of the effect.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
 
 </div>
 </div>
-<a id="ab709a8a8848b9d8a9cc1dac0b2b7e3cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab709a8a8848b9d8a9cc1dac0b2b7e3cf">&#9670;&nbsp;</a></span>set_attack_duration()</h2>
+<a id="a65858d1e74140c91154ddda4d0245a24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65858d1e74140c91154ddda4d0245a24">&#9670;&nbsp;</a></span>set_attack_duration()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename Derived &gt; </div>
 <div class="memtemplate">
-template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </div>
+template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -665,29 +625,23 @@ template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classcen_1_1haptic__effect.html">cen::haptic_effect</a>&lt; Derived &gt;::set_attack_duration </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#aeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a> &gt;&#160;</td>
-          <td class="paramname"><em>ms</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a> &gt;&#160;</td>
+          <td class="paramname"><em>duration</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Sets the duration of the attack. </p>
 <dl class="section note"><dt>Note</dt><dd>This function is not available for all haptic effects.</dd></dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">D</td><td>dummy parameter for SFINAE.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ms</td><td>the duration of the attack.</td></tr>
+    <tr><td class="paramname">duration</td><td>the duration of the attack.</td></tr>
   </table>
   </dd>
 </dl>
@@ -703,7 +657,7 @@ template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </div>
 <div class="memtemplate">
 template&lt;typename Derived &gt; </div>
 <div class="memtemplate">
-template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </div>
+template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -711,7 +665,7 @@ template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classcen_1_1haptic__effect.html">cen::haptic_effect</a>&lt; Derived &gt;::set_attack_level </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&#160;</td>
           <td class="paramname"><em>level</em></td><td>)</td>
           <td></td>
         </tr>
@@ -725,12 +679,6 @@ template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </div>
 
 <p>Sets the level at the <em>start</em> of the attack. </p>
 <dl class="section note"><dt>Note</dt><dd>This function is not available for all haptic effects.</dd></dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">D</td><td>dummy parameter for SFINAE.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">level</td><td>the level at the start of the attack.</td></tr>
@@ -749,7 +697,7 @@ template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </div>
 <div class="memtemplate">
 template&lt;typename Derived &gt; </div>
 <div class="memtemplate">
-template&lt;typename D  = Derived, has_trigger&lt; D &gt;  = true&gt; </div>
+template&lt;typename D  = Derived, has_trigger&lt; D &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -757,7 +705,7 @@ template&lt;typename D  = Derived, has_trigger&lt; D &gt;  = true&gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classcen_1_1haptic__effect.html">cen::haptic_effect</a>&lt; Derived &gt;::set_button </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&#160;</td>
           <td class="paramname"><em>button</em></td><td>)</td>
           <td></td>
         </tr>
@@ -771,12 +719,6 @@ template&lt;typename D  = Derived, has_trigger&lt; D &gt;  = true&gt; </div>
 
 <p>Sets the button that triggers the effect. </p>
 <dl class="section note"><dt>Note</dt><dd>This function is not available for all haptic effects.</dd></dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">D</td><td>dummy parameter for SFINAE.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">button</td><td>the button that triggers the effect.</td></tr>
@@ -787,15 +729,15 @@ template&lt;typename D  = Derived, has_trigger&lt; D &gt;  = true&gt; </div>
 
 </div>
 </div>
-<a id="aba2a4c3a6acf39685b3f9f7906a17805"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba2a4c3a6acf39685b3f9f7906a17805">&#9670;&nbsp;</a></span>set_delay()</h2>
+<a id="a0fa1097a9432664ba8d8f70a314bc13d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fa1097a9432664ba8d8f70a314bc13d">&#9670;&nbsp;</a></span>set_delay()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename Derived &gt; </div>
 <div class="memtemplate">
-template&lt;typename D  = Derived, has_delay&lt; D &gt;  = true&gt; </div>
+template&lt;typename D  = Derived, has_delay&lt; D &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -803,29 +745,23 @@ template&lt;typename D  = Derived, has_delay&lt; D &gt;  = true&gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classcen_1_1haptic__effect.html">cen::haptic_effect</a>&lt; Derived &gt;::set_delay </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#aeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a> &gt;&#160;</td>
-          <td class="paramname"><em>ms</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a> &gt;&#160;</td>
+          <td class="paramname"><em>delay</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Sets the delay before before the effect is started. </p>
 <dl class="section note"><dt>Note</dt><dd>This function is not available for all haptic effects.</dd></dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">D</td><td>dummy parameter for SFINAE.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ms</td><td>the delay before before the effect is started.</td></tr>
+    <tr><td class="paramname">delay</td><td>the delay before before the effect is started.</td></tr>
   </table>
   </dd>
 </dl>
@@ -841,7 +777,7 @@ template&lt;typename D  = Derived, has_delay&lt; D &gt;  = true&gt; </div>
 <div class="memtemplate">
 template&lt;typename Derived &gt; </div>
 <div class="memtemplate">
-template&lt;typename D  = Derived, has_direction&lt; D &gt;  = true&gt; </div>
+template&lt;typename D  = Derived, has_direction&lt; D &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -863,12 +799,6 @@ template&lt;typename D  = Derived, has_direction&lt; D &gt;  = true&gt; </div>
 
 <p>Sets the haptic direction associated with the effect. </p>
 <dl class="section note"><dt>Note</dt><dd>This function is not available for all haptic effects.</dd></dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">D</td><td>dummy parameter for SFINAE.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">direction</td><td>the new direction of the effect.</td></tr>
@@ -879,8 +809,8 @@ template&lt;typename D  = Derived, has_direction&lt; D &gt;  = true&gt; </div>
 
 </div>
 </div>
-<a id="ab16649ea79bcd5f2b1a0897744d42be6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab16649ea79bcd5f2b1a0897744d42be6">&#9670;&nbsp;</a></span>set_duration()</h2>
+<a id="ad7e8776ca4fa3b7cd1452c24850617e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7e8776ca4fa3b7cd1452c24850617e8">&#9670;&nbsp;</a></span>set_duration()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -893,14 +823,14 @@ template&lt;typename Derived &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classcen_1_1haptic__effect.html">cen::haptic_effect</a>&lt; Derived &gt;::set_duration </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#aeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="namespacecen.html#ad1dcf848a9ee33237a96cde6b5a1d466">u32</a> &gt;&#160;</td>
-          <td class="paramname"><em>ms</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a> &gt;&#160;</td>
+          <td class="paramname"><em>duration</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -908,7 +838,7 @@ template&lt;typename Derived &gt; </div>
 <p>Sets the duration of the effect. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ms</td><td>the duration of the effect.</td></tr>
+    <tr><td class="paramname">duration</td><td>the duration of the effect.</td></tr>
   </table>
   </dd>
 </dl>
@@ -916,15 +846,15 @@ template&lt;typename Derived &gt; </div>
 
 </div>
 </div>
-<a id="a9ba23b8e667f34159eda6fd834a06a8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ba23b8e667f34159eda6fd834a06a8e">&#9670;&nbsp;</a></span>set_fade_duration()</h2>
+<a id="a7bd61b9cf409c2b87f0359ac0d415663"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bd61b9cf409c2b87f0359ac0d415663">&#9670;&nbsp;</a></span>set_fade_duration()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename Derived &gt; </div>
 <div class="memtemplate">
-template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </div>
+template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -932,29 +862,23 @@ template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classcen_1_1haptic__effect.html">cen::haptic_effect</a>&lt; Derived &gt;::set_fade_duration </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#aeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a> &gt;&#160;</td>
-          <td class="paramname"><em>ms</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a> &gt;&#160;</td>
+          <td class="paramname"><em>duration</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Sets the duration of the fade out. </p>
 <dl class="section note"><dt>Note</dt><dd>This function is not available for all haptic effects.</dd></dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">D</td><td>dummy parameter for SFINAE.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ms</td><td>the duration of the fade out.</td></tr>
+    <tr><td class="paramname">duration</td><td>the duration of the fade out.</td></tr>
   </table>
   </dd>
 </dl>
@@ -970,7 +894,7 @@ template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </div>
 <div class="memtemplate">
 template&lt;typename Derived &gt; </div>
 <div class="memtemplate">
-template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </div>
+template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -978,7 +902,7 @@ template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classcen_1_1haptic__effect.html">cen::haptic_effect</a>&lt; Derived &gt;::set_fade_level </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&#160;</td>
           <td class="paramname"><em>level</em></td><td>)</td>
           <td></td>
         </tr>
@@ -992,12 +916,6 @@ template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </div>
 
 <p>Sets the level at the <em>end</em> of the fade out. </p>
 <dl class="section note"><dt>Note</dt><dd>This function is not available for all haptic effects.</dd></dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">D</td><td>dummy parameter for SFINAE.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">level</td><td>the level at the <em>end</em> of the fade out.</td></tr>
@@ -1008,15 +926,15 @@ template&lt;typename D  = Derived, has_envelope&lt; D &gt;  = true&gt; </div>
 
 </div>
 </div>
-<a id="a4a0ddaf7fa5d5d2db814f225e2cc45db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a0ddaf7fa5d5d2db814f225e2cc45db">&#9670;&nbsp;</a></span>set_interval()</h2>
+<a id="a046589e1a480c0acc63ea4e2e3b35f70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a046589e1a480c0acc63ea4e2e3b35f70">&#9670;&nbsp;</a></span>set_interval()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename Derived &gt; </div>
 <div class="memtemplate">
-template&lt;typename D  = Derived, has_trigger&lt; D &gt;  = true&gt; </div>
+template&lt;typename D  = Derived, has_trigger&lt; D &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1024,29 +942,23 @@ template&lt;typename D  = Derived, has_trigger&lt; D &gt;  = true&gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classcen_1_1haptic__effect.html">cen::haptic_effect</a>&lt; Derived &gt;::set_interval </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#aeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a> &gt;&#160;</td>
-          <td class="paramname"><em>ms</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a> &gt;&#160;</td>
+          <td class="paramname"><em>interval</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Sets the minimum interval in between activations of the effect. </p>
 <dl class="section note"><dt>Note</dt><dd>This function is not available for all haptic effects.</dd></dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">D</td><td>dummy parameter for SFINAE.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ms</td><td>the minimum interval in between activations of the effect.</td></tr>
+    <tr><td class="paramname">interval</td><td>the minimum interval in between activations of the effect.</td></tr>
   </table>
   </dd>
 </dl>
@@ -1100,7 +1012,7 @@ template&lt;typename Derived &gt; </div>
           <td class="memname">auto <a class="el" href="classcen_1_1haptic__effect.html">cen::haptic_effect</a>&lt; Derived &gt;::type </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a>
+          <td> const -&gt; <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>
   </td>
         </tr>
       </table>
@@ -1143,7 +1055,7 @@ template&lt;typename Derived &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/centurion/<a class="el" href="haptic_8hpp_source.html">haptic.hpp</a></li>
+<li>src/centurion/input/<a class="el" href="haptic_8hpp_source.html">haptic.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/shared_object.hpp Source File</title>
+        <title>Centurion: src/centurion/system/shared_object.hpp Source File</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_c6d2c5988ce62fe45ec82cf89dcf887c.html">system</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -102,82 +102,72 @@ $(function() {
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span>   <span class="comment">// unique_ptr</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span>   <span class="comment">// string</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="centurion__cfg_8hpp.html">centurion_cfg.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="czstring_8hpp.html">czstring.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="exception_8hpp.html">exception.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="not__null_8hpp.html">not_null.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#ifdef CENTURION_USE_PRAGMA_ONCE</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif  // CENTURION_USE_PRAGMA_ONCE</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../core/czstring.hpp&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../core/exception.hpp&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../core/not_null.hpp&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecen.html">cen</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecen.html">cen</a> {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classcen_1_1shared__object.html">   34</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcen_1_1shared__object.html">shared_object</a> final</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classcen_1_1shared__object.html#a8f83b89315e422a3e74a497360e7e9fc">   46</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classcen_1_1shared__object.html#a8f83b89315e422a3e74a497360e7e9fc">shared_object</a>(<span class="keyword">const</span> <a class="code" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null&lt;czstring&gt;</a> <span class="keywordtype">object</span>)</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      : m_object{SDL_LoadObject(<span class="keywordtype">object</span>)}</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">if</span> (!m_object)</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1sdl__error.html">sdl_error</a>{};</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classcen_1_1shared__object.html#a73e0d263af5dfc4699ac56a3c2f66d15">   64</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classcen_1_1shared__object.html#a73e0d263af5dfc4699ac56a3c2f66d15">shared_object</a>(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">object</span>)</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      : <a class="code" href="classcen_1_1shared__object.html">shared_object</a>{<span class="keywordtype">object</span>.c_str()}</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  {}</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classcen_1_1shared__object.html#a579eab50fc7aedb1d8ba91191689bbc7">   83</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1shared__object.html#a579eab50fc7aedb1d8ba91191689bbc7">load_function</a>(<span class="keyword">const</span> <a class="code" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null&lt;czstring&gt;</a> <a class="code" href="group__system.html#ga820110f667747768162eb7e19b42e374">name</a>) <span class="keyword">const</span> noexcept</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      -&gt; T*</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    assert(<a class="code" href="group__system.html#ga820110f667747768162eb7e19b42e374">name</a>);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span>T*<span class="keyword">&gt;</span>(SDL_LoadFunction(m_object.get(), <a class="code" href="group__system.html#ga820110f667747768162eb7e19b42e374">name</a>));</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classcen_1_1shared__object.html#a083c901a929a4f1bf37cf92b8d9d81f7">  105</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1shared__object.html#a083c901a929a4f1bf37cf92b8d9d81f7">load_function</a>(<span class="keyword">const</span> std::string&amp; <a class="code" href="group__system.html#ga820110f667747768162eb7e19b42e374">name</a>) <span class="keyword">const</span> noexcept -&gt; T*</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  {</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">return</span> load_function&lt;T&gt;(<a class="code" href="group__system.html#ga820110f667747768162eb7e19b42e374">name</a>.c_str());</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  }</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keyword">struct </span>deleter final</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  {</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">void</span> operator()(<span class="keywordtype">void</span>* <span class="keywordtype">object</span>) noexcept</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    {</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      SDL_UnloadObject(<span class="keywordtype">object</span>);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  };</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  std::unique_ptr&lt;void, deleter&gt; m_object;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">#ifdef CENTURION_MOCK_FRIENDLY_MODE</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <a class="code" href="classcen_1_1shared__object.html#a8f83b89315e422a3e74a497360e7e9fc">shared_object</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">#endif  // CENTURION_MOCK_FRIENDLY_MODE</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;};</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}  <span class="comment">// namespace cen</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">#endif  // CENTURION_SHARED_OBJECT_HEADER</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classcen_1_1shared__object.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcen_1_1shared__object.html">shared_object</a> final</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classcen_1_1shared__object.html#a8f83b89315e422a3e74a497360e7e9fc">   39</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classcen_1_1shared__object.html#a8f83b89315e422a3e74a497360e7e9fc">shared_object</a>(<span class="keyword">const</span> <a class="code" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null&lt;czstring&gt;</a> <span class="keywordtype">object</span>)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      : m_object{SDL_LoadObject(<span class="keywordtype">object</span>)}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">if</span> (!m_object)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1sdl__error.html">sdl_error</a>{};</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classcen_1_1shared__object.html#a73e0d263af5dfc4699ac56a3c2f66d15">   57</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classcen_1_1shared__object.html#a73e0d263af5dfc4699ac56a3c2f66d15">shared_object</a>(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">object</span>) : <a class="code" href="classcen_1_1shared__object.html">shared_object</a>{<span class="keywordtype">object</span>.c_str()}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  {}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classcen_1_1shared__object.html#a579eab50fc7aedb1d8ba91191689bbc7">   74</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1shared__object.html#a579eab50fc7aedb1d8ba91191689bbc7">load_function</a>(<span class="keyword">const</span> <a class="code" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null&lt;czstring&gt;</a> <a class="code" href="namespacecen_1_1screen.html#ab133b4e8b3b0eee8c74306c9bc3b8a69">name</a>) <span class="keyword">const</span> noexcept -&gt; T*</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="group__core.html#gga5a2bed2933e3748ad2a77961417a102bae44e4612f62d2fb8f8738bab118a9850">assert</a>(<a class="code" href="namespacecen_1_1screen.html#ab133b4e8b3b0eee8c74306c9bc3b8a69">name</a>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span>T*<span class="keyword">&gt;</span>(SDL_LoadFunction(m_object.get(), <a class="code" href="namespacecen_1_1screen.html#ab133b4e8b3b0eee8c74306c9bc3b8a69">name</a>));</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classcen_1_1shared__object.html#a083c901a929a4f1bf37cf92b8d9d81f7">   94</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1shared__object.html#a083c901a929a4f1bf37cf92b8d9d81f7">load_function</a>(<span class="keyword">const</span> std::string&amp; <a class="code" href="namespacecen_1_1screen.html#ab133b4e8b3b0eee8c74306c9bc3b8a69">name</a>) <span class="keyword">const</span> noexcept -&gt; T*</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">return</span> load_function&lt;T&gt;(<a class="code" href="namespacecen_1_1screen.html#ab133b4e8b3b0eee8c74306c9bc3b8a69">name</a>.c_str());</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keyword">struct </span>deleter final</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">void</span> operator()(<span class="keywordtype">void</span>* <span class="keywordtype">object</span>) noexcept</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      SDL_UnloadObject(<span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  };</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  std::unique_ptr&lt;void, deleter&gt; m_object;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#ifdef CENTURION_MOCK_FRIENDLY_MODE</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <a class="code" href="classcen_1_1shared__object.html#a8f83b89315e422a3e74a497360e7e9fc">shared_object</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor">#endif  // CENTURION_MOCK_FRIENDLY_MODE</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;};</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}  <span class="comment">// namespace cen</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">#endif  // CENTURION_SHARED_OBJECT_HEADER</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclasscen_1_1shared__object_html_a8f83b89315e422a3e74a497360e7e9fc"><div class="ttname"><a href="classcen_1_1shared__object.html#a8f83b89315e422a3e74a497360e7e9fc">cen::shared_object::shared_object</a></div><div class="ttdeci">shared_object(const not_null&lt; czstring &gt; object)</div><div class="ttdoc">Loads a shared object.</div><div class="ttdef"><b>Definition:</b> shared_object.hpp:46</div></div>
-<div class="ttc" id="aclasscen_1_1shared__object_html_a083c901a929a4f1bf37cf92b8d9d81f7"><div class="ttname"><a href="classcen_1_1shared__object.html#a083c901a929a4f1bf37cf92b8d9d81f7">cen::shared_object::load_function</a></div><div class="ttdeci">auto load_function(const std::string &amp;name) const noexcept -&gt; T *</div><div class="ttdoc">Attempts to load a function from the shared object.</div><div class="ttdef"><b>Definition:</b> shared_object.hpp:105</div></div>
-<div class="ttc" id="anot__null_8hpp_html"><div class="ttname"><a href="not__null_8hpp.html">not_null.hpp</a></div></div>
-<div class="ttc" id="agroup__system_html_ga820110f667747768162eb7e19b42e374"><div class="ttname"><a href="group__system.html#ga820110f667747768162eb7e19b42e374">cen::platform::name</a></div><div class="ttdeci">auto name() -&gt; std::optional&lt; std::string &gt;</div><div class="ttdoc">Returns the name of the current platform.</div><div class="ttdef"><b>Definition:</b> platform.hpp:201</div></div>
-<div class="ttc" id="anamespacecen_html"><div class="ttname"><a href="namespacecen.html">cen</a></div><div class="ttdoc">The top-level namespace that all components of the library reside in.</div><div class="ttdef"><b>Definition:</b> area.hpp:16</div></div>
-<div class="ttc" id="aclasscen_1_1shared__object_html"><div class="ttname"><a href="classcen_1_1shared__object.html">cen::shared_object</a></div><div class="ttdoc">Represents a shared object, such as dynamic libraries (e.g. .so and .dll files).</div><div class="ttdef"><b>Definition:</b> shared_object.hpp:34</div></div>
-<div class="ttc" id="acenturion__cfg_8hpp_html"><div class="ttname"><a href="centurion__cfg_8hpp.html">centurion_cfg.hpp</a></div></div>
-<div class="ttc" id="aczstring_8hpp_html"><div class="ttname"><a href="czstring_8hpp.html">czstring.hpp</a></div></div>
-<div class="ttc" id="anamespacecen_html_a9f195a3e65e79c88a96dd7b767dc0657"><div class="ttname"><a href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">cen::not_null</a></div><div class="ttdeci">T not_null</div><div class="ttdoc">Tag used to indicate that a pointer cannot be null.</div><div class="ttdef"><b>Definition:</b> not_null.hpp:26</div></div>
-<div class="ttc" id="aexception_8hpp_html"><div class="ttname"><a href="exception_8hpp.html">exception.hpp</a></div></div>
-<div class="ttc" id="aclasscen_1_1shared__object_html_a73e0d263af5dfc4699ac56a3c2f66d15"><div class="ttname"><a href="classcen_1_1shared__object.html#a73e0d263af5dfc4699ac56a3c2f66d15">cen::shared_object::shared_object</a></div><div class="ttdeci">shared_object(const std::string &amp;object)</div><div class="ttdoc">Loads a shared object.</div><div class="ttdef"><b>Definition:</b> shared_object.hpp:64</div></div>
-<div class="ttc" id="aclasscen_1_1shared__object_html_a579eab50fc7aedb1d8ba91191689bbc7"><div class="ttname"><a href="classcen_1_1shared__object.html#a579eab50fc7aedb1d8ba91191689bbc7">cen::shared_object::load_function</a></div><div class="ttdeci">auto load_function(const not_null&lt; czstring &gt; name) const noexcept -&gt; T *</div><div class="ttdoc">Attempts to load a function from the shared object.</div><div class="ttdef"><b>Definition:</b> shared_object.hpp:83</div></div>
-<div class="ttc" id="aclasscen_1_1sdl__error_html"><div class="ttname"><a href="classcen_1_1sdl__error.html">cen::sdl_error</a></div><div class="ttdoc">Represents an error related to the core SDL2 library.</div><div class="ttdef"><b>Definition:</b> exception.hpp:66</div></div>
+<div class="ttc" id="aclasscen_1_1shared__object_html_a8f83b89315e422a3e74a497360e7e9fc"><div class="ttname"><a href="classcen_1_1shared__object.html#a8f83b89315e422a3e74a497360e7e9fc">cen::shared_object::shared_object</a></div><div class="ttdeci">shared_object(const not_null&lt; czstring &gt; object)</div><div class="ttdoc">Loads a shared object.</div><div class="ttdef"><b>Definition:</b> shared_object.hpp:39</div></div>
+<div class="ttc" id="agroup__core_html_ga9f195a3e65e79c88a96dd7b767dc0657"><div class="ttname"><a href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">cen::not_null</a></div><div class="ttdeci">T not_null</div><div class="ttdoc">Tag used to indicate that a pointer cannot be null.</div><div class="ttdef"><b>Definition:</b> not_null.hpp:20</div></div>
+<div class="ttc" id="aclasscen_1_1shared__object_html_a083c901a929a4f1bf37cf92b8d9d81f7"><div class="ttname"><a href="classcen_1_1shared__object.html#a083c901a929a4f1bf37cf92b8d9d81f7">cen::shared_object::load_function</a></div><div class="ttdeci">auto load_function(const std::string &amp;name) const noexcept -&gt; T *</div><div class="ttdoc">Attempts to load a function from the shared object.</div><div class="ttdef"><b>Definition:</b> shared_object.hpp:94</div></div>
+<div class="ttc" id="anamespacecen_1_1screen_html_ab133b4e8b3b0eee8c74306c9bc3b8a69"><div class="ttname"><a href="namespacecen_1_1screen.html#ab133b4e8b3b0eee8c74306c9bc3b8a69">cen::screen::name</a></div><div class="ttdeci">auto name(const int index=0) noexcept -&gt; czstring</div><div class="ttdoc">Returns the name of a display.</div><div class="ttdef"><b>Definition:</b> screen.hpp:123</div></div>
+<div class="ttc" id="anamespacecen_html"><div class="ttname"><a href="namespacecen.html">cen</a></div><div class="ttdoc">The top-level namespace that all components of the library reside in.</div><div class="ttdef"><b>Definition:</b> channels.hpp:12</div></div>
+<div class="ttc" id="aclasscen_1_1shared__object_html"><div class="ttname"><a href="classcen_1_1shared__object.html">cen::shared_object</a></div><div class="ttdoc">Represents a shared object, such as dynamic libraries (e.g. .so and .dll files).</div><div class="ttdef"><b>Definition:</b> shared_object.hpp:27</div></div>
+<div class="ttc" id="aclasscen_1_1shared__object_html_a73e0d263af5dfc4699ac56a3c2f66d15"><div class="ttname"><a href="classcen_1_1shared__object.html#a73e0d263af5dfc4699ac56a3c2f66d15">cen::shared_object::shared_object</a></div><div class="ttdeci">shared_object(const std::string &amp;object)</div><div class="ttdoc">Loads a shared object.</div><div class="ttdef"><b>Definition:</b> shared_object.hpp:57</div></div>
+<div class="ttc" id="agroup__core_html_gga5a2bed2933e3748ad2a77961417a102bae44e4612f62d2fb8f8738bab118a9850"><div class="ttname"><a href="group__core.html#gga5a2bed2933e3748ad2a77961417a102bae44e4612f62d2fb8f8738bab118a9850">cen::log_category::assert</a></div><div class="ttdeci">@ assert</div></div>
+<div class="ttc" id="aclasscen_1_1shared__object_html_a579eab50fc7aedb1d8ba91191689bbc7"><div class="ttname"><a href="classcen_1_1shared__object.html#a579eab50fc7aedb1d8ba91191689bbc7">cen::shared_object::load_function</a></div><div class="ttdeci">auto load_function(const not_null&lt; czstring &gt; name) const noexcept -&gt; T *</div><div class="ttdoc">Attempts to load a function from the shared object.</div><div class="ttdef"><b>Definition:</b> shared_object.hpp:74</div></div>
+<div class="ttc" id="aclasscen_1_1sdl__error_html"><div class="ttname"><a href="classcen_1_1sdl__error.html">cen::sdl_error</a></div><div class="ttdoc">Represents an error related to the core SDL2 library.</div><div class="ttdef"><b>Definition:</b> exception.hpp:54</div></div>
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
 </div>

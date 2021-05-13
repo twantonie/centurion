@@ -1,11 +1,8 @@
 var searchData=
 [
-  ['seconds_3045',['seconds',['../namespacecen.html#a826ec294a3b6962454d669b9c277537b',1,'cen']]],
-  ['sensor_3046',['sensor',['../group__input.html#ga5c5f53b987a626b92f9f27a1010e6aac',1,'cen']]],
-  ['sensor_5fhandle_3047',['sensor_handle',['../group__input.html#gabb61c1346fc03b6a0ca1bd0476c0d317',1,'cen']]],
-  ['sensor_5fid_3048',['sensor_id',['../group__input.html#gaaea522cb383852e269dcd89a74248835',1,'cen']]],
-  ['signature_5ftype_3049',['signature_type',['../classcen_1_1event__sink.html#a4f86e5841f4c14061fb962fef132aa7f',1,'cen::event_sink']]],
-  ['size_5ftype_3050',['size_type',['../classcen_1_1event__dispatcher.html#a56e5734a3f6f82917f40fc0175f63e57',1,'cen::event_dispatcher::size_type()'],['../classcen_1_1file.html#a0d4c9ea359b29caf8503973edc48b94f',1,'cen::file::size_type()'],['../classcen_1_1unicode__string.html#a9f6ad6f66f44f024758097536a77223d',1,'cen::unicode_string::size_type()']]],
-  ['surface_3051',['surface',['../group__graphics.html#ga8b71461a73c8e75c41923ffa705d67b6',1,'cen']]],
-  ['surface_5fhandle_3052',['surface_handle',['../group__graphics.html#ga3910502561159e34c9a2b83c007e71be',1,'cen']]]
+  ['pixel_5fformat_5finfo_3549',['pixel_format_info',['../group__video.html#ga40d730f61d4da6d5d831a14ca6a5017d',1,'cen']]],
+  ['pixel_5fformat_5finfo_5fhandle_3550',['pixel_format_info_handle',['../group__video.html#ga586e518042ab187767897265d8162693',1,'cen']]],
+  ['player_5findex_3551',['player_index',['../classcen_1_1basic__controller.html#a753b138e78077582f65f8e421f49baf9',1,'cen::basic_controller']]],
+  ['point_5ftype_3552',['point_type',['../classcen_1_1point__traits.html#ad6c60a4ce30e239c564dcbb0b51e6f0a',1,'cen::point_traits::point_type()'],['../classcen_1_1basic__point.html#a3af4ec5f6e0fb87fca30b107164295c9',1,'cen::basic_point::point_type()'],['../classcen_1_1rect__traits.html#ae7732d6f767728a469848887c33b801a',1,'cen::rect_traits::point_type()'],['../classcen_1_1basic__rect.html#ae2d33c986de7e903b655ba6214c819e1',1,'cen::basic_rect::point_type()']]],
+  ['pointer_3553',['pointer',['../classcen_1_1unicode__string.html#a7d529471de893e1fdd4633eb72b72442',1,'cen::unicode_string']]]
 ];

@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/point.hpp File Reference</title>
+        <title>Centurion: src/centurion/math/point.hpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_ca1ecbfc90640cd3cee1cdeee7bdd308.html">math</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -103,18 +103,21 @@ $(function() {
 <code>#include &lt;ostream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;type_traits&gt;</code><br />
-<code>#include &quot;<a class="el" href="cast_8hpp_source.html">cast.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="centurion__cfg_8hpp_source.html">centurion_cfg.hpp</a>&quot;</code><br />
-<code>#include &quot;detail/to_string.hpp&quot;</code><br />
+<code>#include &quot;<a class="el" href="cast_8hpp_source.html">../core/cast.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="sfinae_8hpp_source.html">../core/sfinae.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="to__string_8hpp_source.html">../detail/to_string.hpp</a>&quot;</code><br />
 </div>
 <p><a href="point_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1point__traits.html">cen::point_traits&lt; T, typename &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1point__traits.html">cen::point_traits&lt; T, &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides traits used by the <code><a class="el" href="classcen_1_1basic__point.html" title="Represents a two-dimensional point.">basic_point</a></code> class.  <a href="classcen_1_1point__traits.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html">cen::basic_point&lt; T &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a two-dimensional point.  <a href="classcen_1_1basic__point.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a two-dimensional point.  <a href="classcen_1_1basic__point.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -126,59 +129,72 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ga482cd24468a5a74647742e69379566c7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry.html#ga482cd24468a5a74647742e69379566c7">cen::ipoint</a> = basic_point&lt; int &gt;</td></tr>
-<tr class="memdesc:ga482cd24468a5a74647742e69379566c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for an <code>int</code>-based point.  <a href="group__geometry.html#ga482cd24468a5a74647742e69379566c7">More...</a><br /></td></tr>
+<tr class="memitem:ga482cd24468a5a74647742e69379566c7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__math.html#ga482cd24468a5a74647742e69379566c7">cen::ipoint</a> = basic_point&lt; int &gt;</td></tr>
+<tr class="memdesc:ga482cd24468a5a74647742e69379566c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for an <code>int</code>-based point.  <a href="group__math.html#ga482cd24468a5a74647742e69379566c7">More...</a><br /></td></tr>
 <tr class="separator:ga482cd24468a5a74647742e69379566c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac8dd351748b0f07b280e685ae4097d40"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry.html#gac8dd351748b0f07b280e685ae4097d40">cen::fpoint</a> = basic_point&lt; float &gt;</td></tr>
-<tr class="memdesc:gac8dd351748b0f07b280e685ae4097d40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for a <code>float</code>-based point.  <a href="group__geometry.html#gac8dd351748b0f07b280e685ae4097d40">More...</a><br /></td></tr>
+<tr class="memitem:gac8dd351748b0f07b280e685ae4097d40"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__math.html#gac8dd351748b0f07b280e685ae4097d40">cen::fpoint</a> = basic_point&lt; float &gt;</td></tr>
+<tr class="memdesc:gac8dd351748b0f07b280e685ae4097d40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for a <code>float</code>-based point.  <a href="group__math.html#gac8dd351748b0f07b280e685ae4097d40">More...</a><br /></td></tr>
 <tr class="separator:gac8dd351748b0f07b280e685ae4097d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ga51fedaa4917ce641c272c01cf9e12162"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__math.html#ga51fedaa4917ce641c272c01cf9e12162">cen::to_string</a> (const ipoint point) -&gt; std::string</td></tr>
+<tr class="separator:ga51fedaa4917ce641c272c01cf9e12162"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaceb4e9024951f04119fc07a01442ee58"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__math.html#gaceb4e9024951f04119fc07a01442ee58">cen::to_string</a> (const fpoint point) -&gt; std::string</td></tr>
+<tr class="separator:gaceb4e9024951f04119fc07a01442ee58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa8a608a3b905f74ffd7579127748a215"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:gaa8a608a3b905f74ffd7579127748a215"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__math.html#gaa8a608a3b905f74ffd7579127748a215">cen::operator&lt;&lt;</a> (std::ostream &amp;stream, const basic_point&lt; T &gt; &amp;point) -&gt; std::ostream &amp;</td></tr>
+<tr class="separator:gaa8a608a3b905f74ffd7579127748a215"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Point-related functions</h2></td></tr>
+<tr class="memitem:ga0ea9dbc4b64f2d8d6c83919a080b805b"><td class="memTemplParams" colspan="2">template&lt;typename T , enable_if_number_t&lt; T &gt;  = 0&gt; </td></tr>
+<tr class="memitem:ga0ea9dbc4b64f2d8d6c83919a080b805b"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__math.html#ga0ea9dbc4b64f2d8d6c83919a080b805b">cen::point</a> (const T x, const T y) noexcept -&gt; basic_point&lt; typename point_traits&lt; T &gt;::value_type &gt;</td></tr>
+<tr class="memdesc:ga0ea9dbc4b64f2d8d6c83919a080b805b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a point instance with automatically deduced precision.  <a href="group__math.html#ga0ea9dbc4b64f2d8d6c83919a080b805b">More...</a><br /></td></tr>
+<tr class="separator:ga0ea9dbc4b64f2d8d6c83919a080b805b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5cba142ae2503f97ea86063aefb6a816"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga5cba142ae2503f97ea86063aefb6a816"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__math.html#ga5cba142ae2503f97ea86063aefb6a816">cen::distance</a> (const basic_point&lt; T &gt; from, const basic_point&lt; T &gt; to) noexcept -&gt; typename point_traits&lt; T &gt;::value_type</td></tr>
+<tr class="memdesc:ga5cba142ae2503f97ea86063aefb6a816"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the distance between two points.  <a href="group__math.html#ga5cba142ae2503f97ea86063aefb6a816">More...</a><br /></td></tr>
+<tr class="separator:ga5cba142ae2503f97ea86063aefb6a816"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Point cast specializations</h2></td></tr>
 <tr class="memitem:gad7254204d9633adbea8a09ea5a6b4a0b"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
-<tr class="memitem:gad7254204d9633adbea8a09ea5a6b4a0b"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__geometry.html#gad7254204d9633adbea8a09ea5a6b4a0b">cen::cast</a> (const fpoint &amp;from) noexcept -&gt; ipoint</td></tr>
-<tr class="memdesc:gad7254204d9633adbea8a09ea5a6b4a0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an <code>fpoint</code> instance to the corresponding <code>ipoint</code>.  <a href="group__geometry.html#gad7254204d9633adbea8a09ea5a6b4a0b">More...</a><br /></td></tr>
+<tr class="memitem:gad7254204d9633adbea8a09ea5a6b4a0b"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__math.html#gad7254204d9633adbea8a09ea5a6b4a0b">cen::cast</a> (const fpoint &amp;from) noexcept -&gt; ipoint</td></tr>
+<tr class="memdesc:gad7254204d9633adbea8a09ea5a6b4a0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an <code>fpoint</code> instance to the corresponding <code>ipoint</code>.  <a href="group__math.html#gad7254204d9633adbea8a09ea5a6b4a0b">More...</a><br /></td></tr>
 <tr class="separator:gad7254204d9633adbea8a09ea5a6b4a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2450354b2ab59e5064b0735913dbbe47"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
-<tr class="memitem:ga2450354b2ab59e5064b0735913dbbe47"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__geometry.html#ga2450354b2ab59e5064b0735913dbbe47">cen::cast</a> (const ipoint &amp;from) noexcept -&gt; fpoint</td></tr>
-<tr class="memdesc:ga2450354b2ab59e5064b0735913dbbe47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an <code>ipoint</code> instance to the corresponding <code>fpoint</code>.  <a href="group__geometry.html#ga2450354b2ab59e5064b0735913dbbe47">More...</a><br /></td></tr>
+<tr class="memitem:ga2450354b2ab59e5064b0735913dbbe47"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__math.html#ga2450354b2ab59e5064b0735913dbbe47">cen::cast</a> (const ipoint &amp;from) noexcept -&gt; fpoint</td></tr>
+<tr class="memdesc:ga2450354b2ab59e5064b0735913dbbe47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an <code>ipoint</code> instance to the corresponding <code>fpoint</code>.  <a href="group__math.html#ga2450354b2ab59e5064b0735913dbbe47">More...</a><br /></td></tr>
 <tr class="separator:ga2450354b2ab59e5064b0735913dbbe47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0247781d084af2a59fee1084a29e1575"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
-<tr class="memitem:ga0247781d084af2a59fee1084a29e1575"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__geometry.html#ga0247781d084af2a59fee1084a29e1575">cen::cast</a> (const SDL_FPoint &amp;from) noexcept -&gt; SDL_Point</td></tr>
-<tr class="memdesc:ga0247781d084af2a59fee1084a29e1575"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an <code>SDL_FPoint</code> instance to the corresponding <code>SDL_Point</code>.  <a href="group__geometry.html#ga0247781d084af2a59fee1084a29e1575">More...</a><br /></td></tr>
+<tr class="memitem:ga0247781d084af2a59fee1084a29e1575"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__math.html#ga0247781d084af2a59fee1084a29e1575">cen::cast</a> (const SDL_FPoint &amp;from) noexcept -&gt; SDL_Point</td></tr>
+<tr class="memdesc:ga0247781d084af2a59fee1084a29e1575"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an <code>SDL_FPoint</code> instance to the corresponding <code>SDL_Point</code>.  <a href="group__math.html#ga0247781d084af2a59fee1084a29e1575">More...</a><br /></td></tr>
 <tr class="separator:ga0247781d084af2a59fee1084a29e1575"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacacddc96563e238352ca5b0e604a7001"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
-<tr class="memitem:gacacddc96563e238352ca5b0e604a7001"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__geometry.html#gacacddc96563e238352ca5b0e604a7001">cen::cast</a> (const SDL_Point &amp;from) noexcept -&gt; SDL_FPoint</td></tr>
-<tr class="memdesc:gacacddc96563e238352ca5b0e604a7001"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an <code>SDL_Point</code> instance to the corresponding <code>SDL_FPoint</code>.  <a href="group__geometry.html#gacacddc96563e238352ca5b0e604a7001">More...</a><br /></td></tr>
+<tr class="memitem:gacacddc96563e238352ca5b0e604a7001"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__math.html#gacacddc96563e238352ca5b0e604a7001">cen::cast</a> (const SDL_Point &amp;from) noexcept -&gt; SDL_FPoint</td></tr>
+<tr class="memdesc:gacacddc96563e238352ca5b0e604a7001"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an <code>SDL_Point</code> instance to the corresponding <code>SDL_FPoint</code>.  <a href="group__math.html#gacacddc96563e238352ca5b0e604a7001">More...</a><br /></td></tr>
 <tr class="separator:gacacddc96563e238352ca5b0e604a7001"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac91aef5e0074bb529510d4e18373961c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:gac91aef5e0074bb529510d4e18373961c"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__geometry.html#gac91aef5e0074bb529510d4e18373961c">cen::distance</a> (const basic_point&lt; T &gt; &amp;from, const basic_point&lt; T &gt; &amp;to) noexcept -&gt; typename point_traits&lt; T &gt;::value_type</td></tr>
-<tr class="memdesc:gac91aef5e0074bb529510d4e18373961c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the distance between two points.  <a href="group__geometry.html#gac91aef5e0074bb529510d4e18373961c">More...</a><br /></td></tr>
-<tr class="separator:gac91aef5e0074bb529510d4e18373961c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac9b7cab6d99959888d786ae33aa21a19"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry.html#gac9b7cab6d99959888d786ae33aa21a19">cen::operator+</a> (const fpoint &amp;lhs, const fpoint &amp;rhs) noexcept -&gt; fpoint</td></tr>
-<tr class="separator:gac9b7cab6d99959888d786ae33aa21a19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1dea844ce64f8413fc20a83925a3d6d0"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry.html#ga1dea844ce64f8413fc20a83925a3d6d0">cen::operator-</a> (const fpoint &amp;lhs, const fpoint &amp;rhs) noexcept -&gt; fpoint</td></tr>
-<tr class="separator:ga1dea844ce64f8413fc20a83925a3d6d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7420bbe3c79076133fd4b3fc20b8deca"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry.html#ga7420bbe3c79076133fd4b3fc20b8deca">cen::operator+</a> (const ipoint &amp;lhs, const ipoint &amp;rhs) noexcept -&gt; ipoint</td></tr>
-<tr class="separator:ga7420bbe3c79076133fd4b3fc20b8deca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaaa6e1d70fbca23bb7c8fac9587d5f866"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry.html#gaaa6e1d70fbca23bb7c8fac9587d5f866">cen::operator-</a> (const ipoint &amp;lhs, const ipoint &amp;rhs) noexcept -&gt; ipoint</td></tr>
-<tr class="separator:gaaa6e1d70fbca23bb7c8fac9587d5f866"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1e489b597c91b453f7d550d645753135"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry.html#ga1e489b597c91b453f7d550d645753135">cen::operator==</a> (const ipoint &amp;lhs, const ipoint &amp;rhs) noexcept -&gt; bool</td></tr>
-<tr class="separator:ga1e489b597c91b453f7d550d645753135"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaebd4e988af17d9888be500601abb8fa1"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry.html#gaebd4e988af17d9888be500601abb8fa1">cen::operator==</a> (const fpoint &amp;lhs, const fpoint &amp;rhs) noexcept -&gt; bool</td></tr>
-<tr class="separator:gaebd4e988af17d9888be500601abb8fa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga86b8df42eab89307d11f866aed7db1e0"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry.html#ga86b8df42eab89307d11f866aed7db1e0">cen::operator!=</a> (const ipoint &amp;lhs, const ipoint &amp;rhs) noexcept -&gt; bool</td></tr>
-<tr class="separator:ga86b8df42eab89307d11f866aed7db1e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3e5a1406b749f11d16930fb77e71a406"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry.html#ga3e5a1406b749f11d16930fb77e71a406">cen::operator!=</a> (const fpoint &amp;lhs, const fpoint &amp;rhs) noexcept -&gt; bool</td></tr>
-<tr class="separator:ga3e5a1406b749f11d16930fb77e71a406"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae2f41e6d9df712273555d246dacc900f"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry.html#gae2f41e6d9df712273555d246dacc900f">cen::to_string</a> (const ipoint &amp;point) -&gt; std::string</td></tr>
-<tr class="separator:gae2f41e6d9df712273555d246dacc900f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6e1b6da03920ac4021c93248b985a831"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry.html#ga6e1b6da03920ac4021c93248b985a831">cen::to_string</a> (const fpoint &amp;point) -&gt; std::string</td></tr>
-<tr class="separator:ga6e1b6da03920ac4021c93248b985a831"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga56c3840959c8691bdb8581f7cdb2ddaa"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry.html#ga56c3840959c8691bdb8581f7cdb2ddaa">cen::operator&lt;&lt;</a> (std::ostream &amp;stream, const ipoint &amp;point) -&gt; std::ostream &amp;</td></tr>
-<tr class="separator:ga56c3840959c8691bdb8581f7cdb2ddaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga986fb4df664513ac6398defe7309c4de"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry.html#ga986fb4df664513ac6398defe7309c4de">cen::operator&lt;&lt;</a> (std::ostream &amp;stream, const fpoint &amp;point) -&gt; std::ostream &amp;</td></tr>
-<tr class="separator:ga986fb4df664513ac6398defe7309c4de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Point addition and subtraction operators</h2></td></tr>
+<tr class="memitem:gaedaa52a876a5f11d57abc95f6d279ae0"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:gaedaa52a876a5f11d57abc95f6d279ae0"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__math.html#gaedaa52a876a5f11d57abc95f6d279ae0">cen::operator+</a> (const basic_point&lt; T &gt; &amp;lhs, const basic_point&lt; T &gt; &amp;rhs) noexcept -&gt; basic_point&lt; T &gt;</td></tr>
+<tr class="separator:gaedaa52a876a5f11d57abc95f6d279ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gada25be1cd7ccea87f4a12422cf91dee6"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:gada25be1cd7ccea87f4a12422cf91dee6"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__math.html#gada25be1cd7ccea87f4a12422cf91dee6">cen::operator-</a> (const basic_point&lt; T &gt; &amp;lhs, const basic_point&lt; T &gt; &amp;rhs) noexcept -&gt; basic_point&lt; T &gt;</td></tr>
+<tr class="separator:gada25be1cd7ccea87f4a12422cf91dee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Point comparison operators</h2></td></tr>
+<tr class="memitem:gae90789d61c9c0cbbf568718375e950ae"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__math.html#gae90789d61c9c0cbbf568718375e950ae">cen::operator==</a> (const ipoint lhs, const ipoint rhs) noexcept -&gt; bool</td></tr>
+<tr class="separator:gae90789d61c9c0cbbf568718375e950ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga96f3e6af4f3f98e463888b8c79f01b10"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__math.html#ga96f3e6af4f3f98e463888b8c79f01b10">cen::operator==</a> (const fpoint lhs, const fpoint rhs) noexcept -&gt; bool</td></tr>
+<tr class="separator:ga96f3e6af4f3f98e463888b8c79f01b10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3613da71b881117e575be82b2878919f"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__math.html#ga3613da71b881117e575be82b2878919f">cen::operator!=</a> (const ipoint lhs, const ipoint rhs) noexcept -&gt; bool</td></tr>
+<tr class="separator:ga3613da71b881117e575be82b2878919f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga87cf4ff1f9b4e40cee067bd7016c7cef"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__math.html#ga87cf4ff1f9b4e40cee067bd7016c7cef">cen::operator!=</a> (const fpoint lhs, const fpoint rhs) noexcept -&gt; bool</td></tr>
+<tr class="separator:ga87cf4ff1f9b4e40cee067bd7016c7cef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

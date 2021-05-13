@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -100,7 +100,7 @@ $(function() {
 <p>Provides information about events related to touch events triggered by multiple fingers.  
  <a href="classcen_1_1multi__gesture__event.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="event_8hpp_source.html">event.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="multi__gesture__event_8hpp_source.html">multi_gesture_event.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for cen::multi_gesture_event:</div>
 <div class="dyncontent">
@@ -117,7 +117,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a147648e629c467e4a9b0fe80ac983f6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a multi-gesture event.  <a href="classcen_1_1multi__gesture__event.html#a147648e629c467e4a9b0fe80ac983f6d">More...</a><br /></td></tr>
 <tr class="separator:a147648e629c467e4a9b0fe80ac983f6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabfc2449d34ba10420002acf9fc70392"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1multi__gesture__event.html#aabfc2449d34ba10420002acf9fc70392">multi_gesture_event</a> (const SDL_MultiGestureEvent &amp;<a class="el" href="classcen_1_1event.html">event</a>) noexcept</td></tr>
-<tr class="memdesc:aabfc2449d34ba10420002acf9fc70392"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <code>MultiGestureEvent</code> that is based on the supplied SDL event.  <a href="classcen_1_1multi__gesture__event.html#aabfc2449d34ba10420002acf9fc70392">More...</a><br /></td></tr>
+<tr class="memdesc:aabfc2449d34ba10420002acf9fc70392"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an event that is based on the supplied SDL event.  <a href="classcen_1_1multi__gesture__event.html#aabfc2449d34ba10420002acf9fc70392">More...</a><br /></td></tr>
 <tr class="separator:aabfc2449d34ba10420002acf9fc70392"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89616bb0bff68caf77ebdfb8e2ac84d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1multi__gesture__event.html#a89616bb0bff68caf77ebdfb8e2ac84d7">set_touch_id</a> (const SDL_TouchID id) noexcept</td></tr>
 <tr class="memdesc:a89616bb0bff68caf77ebdfb8e2ac84d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the touch device ID associated with the event.  <a href="classcen_1_1multi__gesture__event.html#a89616bb0bff68caf77ebdfb8e2ac84d7">More...</a><br /></td></tr>
@@ -134,7 +134,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a923c25460d5aa13c444584dbd6e3ab99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1multi__gesture__event.html#a923c25460d5aa13c444584dbd6e3ab99">set_center_y</a> (const float centerY) noexcept</td></tr>
 <tr class="memdesc:a923c25460d5aa13c444584dbd6e3ab99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the y-coordinate of the normalized center of the gesture associated with the event.  <a href="classcen_1_1multi__gesture__event.html#a923c25460d5aa13c444584dbd6e3ab99">More...</a><br /></td></tr>
 <tr class="separator:a923c25460d5aa13c444584dbd6e3ab99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdd1e26eedef27082a0685723c4a92fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1multi__gesture__event.html#acdd1e26eedef27082a0685723c4a92fa">set_fingers</a> (const <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a> nFingers) noexcept</td></tr>
+<tr class="memitem:acdd1e26eedef27082a0685723c4a92fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1multi__gesture__event.html#acdd1e26eedef27082a0685723c4a92fa">set_fingers</a> (const <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a> nFingers) noexcept</td></tr>
 <tr class="memdesc:acdd1e26eedef27082a0685723c4a92fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the number of fingers that was used in the gesture associated with the event.  <a href="classcen_1_1multi__gesture__event.html#acdd1e26eedef27082a0685723c4a92fa">More...</a><br /></td></tr>
 <tr class="separator:acdd1e26eedef27082a0685723c4a92fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03f169f45f9f506aeac0eef846e02119"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1multi__gesture__event.html#a03f169f45f9f506aeac0eef846e02119">touch_id</a> () const noexcept -&gt; SDL_TouchID</td></tr>
@@ -156,7 +156,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2cb4a733bc2329bc9f11cab7ae15af33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the amount of fingers used in the gesture associated with the event.  <a href="classcen_1_1multi__gesture__event.html#a2cb4a733bc2329bc9f11cab7ae15af33">More...</a><br /></td></tr>
 <tr class="separator:a2cb4a733bc2329bc9f11cab7ae15af33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classcen_1_1common__event"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcen_1_1common__event')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classcen_1_1common__event.html">cen::common_event&lt; SDL_MultiGestureEvent &gt;</a></td></tr>
-<tr class="memitem:a41c18eb380cd8704232e52515f6e423e inherit pub_methods_classcen_1_1common__event"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1common__event.html#a41c18eb380cd8704232e52515f6e423e">common_event</a> (const <a class="el" href="group__event.html#gaa2429849e0f3a3f8dc5dabd278b110b2">event_type</a> <a class="el" href="classcen_1_1common__event.html#af4ab9edc735cef5e66b6d394e49fb585">type</a>) noexcept</td></tr>
+<tr class="memitem:a41c18eb380cd8704232e52515f6e423e inherit pub_methods_classcen_1_1common__event"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1common__event.html#a41c18eb380cd8704232e52515f6e423e">common_event</a> (const <a class="el" href="group__event.html#gaa96233ec6356fc786c810d6aaf5e939b">event_type</a> <a class="el" href="classcen_1_1common__event.html#af4ab9edc735cef5e66b6d394e49fb585">type</a>) noexcept</td></tr>
 <tr class="memdesc:a41c18eb380cd8704232e52515f6e423e inherit pub_methods_classcen_1_1common__event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <code>common_event</code> and zero-initializes the internal event except for the timestamp and the supplied type.  <a href="classcen_1_1common__event.html#a41c18eb380cd8704232e52515f6e423e">More...</a><br /></td></tr>
 <tr class="separator:a41c18eb380cd8704232e52515f6e423e inherit pub_methods_classcen_1_1common__event"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af031fe515562adc2430697da1dbd0c76 inherit pub_methods_classcen_1_1common__event"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1common__event.html#af031fe515562adc2430697da1dbd0c76">common_event</a> (const SDL_MultiGestureEvent &amp;<a class="el" href="classcen_1_1event.html">event</a>)</td></tr>
@@ -165,16 +165,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5e1d0efe4bbe3a97a47cbf2fb164dc3c inherit pub_methods_classcen_1_1common__event"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1common__event.html#a5e1d0efe4bbe3a97a47cbf2fb164dc3c">common_event</a> (SDL_MultiGestureEvent &amp;&amp;<a class="el" href="classcen_1_1event.html">event</a>)</td></tr>
 <tr class="memdesc:a5e1d0efe4bbe3a97a47cbf2fb164dc3c inherit pub_methods_classcen_1_1common__event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a common_event and moves the contents of the supplied event.  <a href="classcen_1_1common__event.html#a5e1d0efe4bbe3a97a47cbf2fb164dc3c">More...</a><br /></td></tr>
 <tr class="separator:a5e1d0efe4bbe3a97a47cbf2fb164dc3c inherit pub_methods_classcen_1_1common__event"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c81096fa55e2fa2393a82afde369b58 inherit pub_methods_classcen_1_1common__event"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1common__event.html#a5c81096fa55e2fa2393a82afde369b58">set_time</a> (const <a class="el" href="namespacecen.html#ad1dcf848a9ee33237a96cde6b5a1d466">u32</a> timestamp) noexcept</td></tr>
+<tr class="memitem:a5c81096fa55e2fa2393a82afde369b58 inherit pub_methods_classcen_1_1common__event"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1common__event.html#a5c81096fa55e2fa2393a82afde369b58">set_time</a> (const <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a> timestamp) noexcept</td></tr>
 <tr class="memdesc:a5c81096fa55e2fa2393a82afde369b58 inherit pub_methods_classcen_1_1common__event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the timestamp that is associated with the creation of the event.  <a href="classcen_1_1common__event.html#a5c81096fa55e2fa2393a82afde369b58">More...</a><br /></td></tr>
 <tr class="separator:a5c81096fa55e2fa2393a82afde369b58 inherit pub_methods_classcen_1_1common__event"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a498385974ede4a1af8a947aae2254ae1 inherit pub_methods_classcen_1_1common__event"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1common__event.html#a498385974ede4a1af8a947aae2254ae1">set_type</a> (const <a class="el" href="group__event.html#gaa2429849e0f3a3f8dc5dabd278b110b2">event_type</a> <a class="el" href="classcen_1_1common__event.html#af4ab9edc735cef5e66b6d394e49fb585">type</a>) noexcept</td></tr>
+<tr class="memitem:a498385974ede4a1af8a947aae2254ae1 inherit pub_methods_classcen_1_1common__event"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1common__event.html#a498385974ede4a1af8a947aae2254ae1">set_type</a> (const <a class="el" href="group__event.html#gaa96233ec6356fc786c810d6aaf5e939b">event_type</a> <a class="el" href="classcen_1_1common__event.html#af4ab9edc735cef5e66b6d394e49fb585">type</a>) noexcept</td></tr>
 <tr class="memdesc:a498385974ede4a1af8a947aae2254ae1 inherit pub_methods_classcen_1_1common__event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the event type value associated with the event.  <a href="classcen_1_1common__event.html#a498385974ede4a1af8a947aae2254ae1">More...</a><br /></td></tr>
 <tr class="separator:a498385974ede4a1af8a947aae2254ae1 inherit pub_methods_classcen_1_1common__event"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8164f2268f3b1904a30526bfbef68295 inherit pub_methods_classcen_1_1common__event"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1common__event.html#a8164f2268f3b1904a30526bfbef68295">time</a> () const noexcept -&gt; <a class="el" href="namespacecen.html#ad1dcf848a9ee33237a96cde6b5a1d466">u32</a></td></tr>
+<tr class="memitem:a8164f2268f3b1904a30526bfbef68295 inherit pub_methods_classcen_1_1common__event"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1common__event.html#a8164f2268f3b1904a30526bfbef68295">time</a> () const noexcept -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a></td></tr>
 <tr class="memdesc:a8164f2268f3b1904a30526bfbef68295 inherit pub_methods_classcen_1_1common__event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the timestamp associated with the creation of the event.  <a href="classcen_1_1common__event.html#a8164f2268f3b1904a30526bfbef68295">More...</a><br /></td></tr>
 <tr class="separator:a8164f2268f3b1904a30526bfbef68295 inherit pub_methods_classcen_1_1common__event"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4ab9edc735cef5e66b6d394e49fb585 inherit pub_methods_classcen_1_1common__event"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1common__event.html#af4ab9edc735cef5e66b6d394e49fb585">type</a> () const noexcept -&gt; <a class="el" href="group__event.html#gaa2429849e0f3a3f8dc5dabd278b110b2">event_type</a></td></tr>
+<tr class="memitem:af4ab9edc735cef5e66b6d394e49fb585 inherit pub_methods_classcen_1_1common__event"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1common__event.html#af4ab9edc735cef5e66b6d394e49fb585">type</a> () const noexcept -&gt; <a class="el" href="group__event.html#gaa96233ec6356fc786c810d6aaf5e939b">event_type</a></td></tr>
 <tr class="memdesc:af4ab9edc735cef5e66b6d394e49fb585 inherit pub_methods_classcen_1_1common__event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the event type value associated with the event.  <a href="classcen_1_1common__event.html#af4ab9edc735cef5e66b6d394e49fb585">More...</a><br /></td></tr>
 <tr class="separator:af4ab9edc735cef5e66b6d394e49fb585 inherit pub_methods_classcen_1_1common__event"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80737e77b9c06c9cc14abab408d16c0f inherit pub_methods_classcen_1_1common__event"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1common__event.html#a80737e77b9c06c9cc14abab408d16c0f">get</a> () const noexcept -&gt; const SDL_MultiGestureEvent &amp;</td></tr>
@@ -244,7 +244,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Creates a <code>MultiGestureEvent</code> that is based on the supplied SDL event. </p>
+<p>Creates an event that is based on the supplied SDL event. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">event</td><td>the SDL event that will be copied.</td></tr>
@@ -558,7 +558,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void cen::multi_gesture_event::set_fingers </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&#160;</td>
           <td class="paramname"><em>nFingers</em></td><td>)</td>
           <td></td>
         </tr>
@@ -647,7 +647,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/centurion/<a class="el" href="event_8hpp_source.html">event.hpp</a></li>
+<li>src/centurion/events/<a class="el" href="multi__gesture__event_8hpp_source.html">multi_gesture_event.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

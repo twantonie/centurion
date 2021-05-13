@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/file.hpp File Reference</title>
+        <title>Centurion: src/centurion/filesystem/file.hpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_7bec340a5f0d742a2bf28bb9c2af6d5e.html">filesystem</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -98,15 +98,16 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;SDL.h&gt;</code><br />
+<code>#include &lt;SDL_image.h&gt;</code><br />
 <code>#include &lt;cassert&gt;</code><br />
 <code>#include &lt;cstddef&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;optional&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
-<code>#include &quot;<a class="el" href="centurion__cfg_8hpp_source.html">centurion_cfg.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="czstring_8hpp_source.html">czstring.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="integers_8hpp_source.html">integers.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="not__null_8hpp_source.html">not_null.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="czstring_8hpp_source.html">../core/czstring.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="integers_8hpp_source.html">../core/integers.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="not__null_8hpp_source.html">../core/not_null.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="result_8hpp_source.html">../core/result.hpp</a>&quot;</code><br />
 </div>
 <p><a href="file_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -162,22 +163,22 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:gaae298b1de9f3dcb8fc5ebea8cd214805"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides values that represent various file seek modes.  <a href="group__system.html#gaae298b1de9f3dcb8fc5ebea8cd214805">More...</a><br /></td></tr>
 <tr class="separator:gaae298b1de9f3dcb8fc5ebea8cd214805"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga261d88fee3dd59c80a696f7b7745edb7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga261d88fee3dd59c80a696f7b7745edb7">cen::file_type</a> : unsigned { <br />
-&#160;&#160;<a class="el" href="group__system.html#gga261d88fee3dd59c80a696f7b7745edb7aad921d60486366258809553a3db49a4a">cen::file_type::unknown</a> = SDL_RWOPS_UNKNOWN, 
+<tr class="memitem:ga84c372ffd7f9172b977f0c74c17c6045"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga84c372ffd7f9172b977f0c74c17c6045">cen::file_type</a> : uint { <br />
+&#160;&#160;<a class="el" href="group__system.html#gga84c372ffd7f9172b977f0c74c17c6045aad921d60486366258809553a3db49a4a">cen::file_type::unknown</a> = SDL_RWOPS_UNKNOWN, 
 <br />
-&#160;&#160;<a class="el" href="group__system.html#gga261d88fee3dd59c80a696f7b7745edb7a9c4f88f706dedde3bc0ebb66e34963e5">cen::file_type::win32</a> = SDL_RWOPS_WINFILE, 
+&#160;&#160;<a class="el" href="group__system.html#gga84c372ffd7f9172b977f0c74c17c6045a9c4f88f706dedde3bc0ebb66e34963e5">cen::file_type::win32</a> = SDL_RWOPS_WINFILE, 
 <br />
-&#160;&#160;<a class="el" href="group__system.html#gga261d88fee3dd59c80a696f7b7745edb7a4435f0f89633053c96204ebf23d6ea4e">cen::file_type::stdio</a> = SDL_RWOPS_STDFILE, 
+&#160;&#160;<a class="el" href="group__system.html#gga84c372ffd7f9172b977f0c74c17c6045a4435f0f89633053c96204ebf23d6ea4e">cen::file_type::stdio</a> = SDL_RWOPS_STDFILE, 
 <br />
-&#160;&#160;<a class="el" href="group__system.html#gga261d88fee3dd59c80a696f7b7745edb7a9e50b36bb2497496c6398461a2082fcc">cen::file_type::jni</a> = SDL_RWOPS_JNIFILE, 
+&#160;&#160;<a class="el" href="group__system.html#gga84c372ffd7f9172b977f0c74c17c6045a9e50b36bb2497496c6398461a2082fcc">cen::file_type::jni</a> = SDL_RWOPS_JNIFILE, 
 <br />
-&#160;&#160;<a class="el" href="group__system.html#gga261d88fee3dd59c80a696f7b7745edb7acd69b4957f06cd818d7bf3d61980e291">cen::file_type::memory</a> = SDL_RWOPS_MEMORY, 
+&#160;&#160;<a class="el" href="group__system.html#gga84c372ffd7f9172b977f0c74c17c6045acd69b4957f06cd818d7bf3d61980e291">cen::file_type::memory</a> = SDL_RWOPS_MEMORY, 
 <br />
-&#160;&#160;<a class="el" href="group__system.html#gga261d88fee3dd59c80a696f7b7745edb7a23acd64ac223417ddee57c6327b49557">cen::file_type::memory_ro</a> = SDL_RWOPS_MEMORY_RO
+&#160;&#160;<a class="el" href="group__system.html#gga84c372ffd7f9172b977f0c74c17c6045a23acd64ac223417ddee57c6327b49557">cen::file_type::memory_ro</a> = SDL_RWOPS_MEMORY_RO
 <br />
  }</td></tr>
-<tr class="memdesc:ga261d88fee3dd59c80a696f7b7745edb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides values that represent different file types.  <a href="group__system.html#ga261d88fee3dd59c80a696f7b7745edb7">More...</a><br /></td></tr>
-<tr class="separator:ga261d88fee3dd59c80a696f7b7745edb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:ga84c372ffd7f9172b977f0c74c17c6045"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides values that represent different file types.  <a href="group__system.html#ga84c372ffd7f9172b977f0c74c17c6045">More...</a><br /></td></tr>
+<tr class="separator:ga84c372ffd7f9172b977f0c74c17c6045"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

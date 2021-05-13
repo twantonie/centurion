@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/renderer.hpp File Reference</title>
+        <title>Centurion: src/centurion/video/renderer.hpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_b630b0fc10333b78f2ff60d8d1210ae7.html">video</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -100,6 +100,7 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &lt;SDL.h&gt;</code><br />
 <code>#include &lt;cassert&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
 <code>#include &lt;cstddef&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;optional&gt;</code><br />
@@ -108,19 +109,20 @@ $(function() {
 <code>#include &lt;type_traits&gt;</code><br />
 <code>#include &lt;unordered_map&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
+<code>#include &quot;<a class="el" href="czstring_8hpp_source.html">../core/czstring.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="integers_8hpp_source.html">../core/integers.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="not__null_8hpp_source.html">../core/not_null.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="owner_8hpp_source.html">../core/owner.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="result_8hpp_source.html">../core/result.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="address__of_8hpp_source.html">../detail/address_of.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="convert__bool_8hpp_source.html">../detail/convert_bool.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="owner__handle__api_8hpp_source.html">../detail/owner_handle_api.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="rect_8hpp_source.html">../math/rect.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="blend__mode_8hpp_source.html">blend_mode.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="centurion__cfg_8hpp_source.html">centurion_cfg.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="color_8hpp_source.html">color.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="colors_8hpp_source.html">colors.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="czstring_8hpp_source.html">czstring.hpp</a>&quot;</code><br />
-<code>#include &quot;detail/address_of.hpp&quot;</code><br />
-<code>#include &quot;detail/convert_bool.hpp&quot;</code><br />
-<code>#include &quot;detail/owner_handle_api.hpp&quot;</code><br />
 <code>#include &quot;<a class="el" href="font_8hpp_source.html">font.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="font__cache_8hpp_source.html">font_cache.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="integers_8hpp_source.html">integers.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="not__null_8hpp_source.html">not_null.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="rect_8hpp_source.html">rect.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="surface_8hpp_source.html">surface.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="texture_8hpp_source.html">texture.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="unicode__string_8hpp_source.html">unicode_string.hpp</a>&quot;</code><br />
@@ -130,10 +132,10 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__renderer.html">cen::basic_renderer</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides hardware-accelerated 2D-rendering.  <a href="classcen_1_1basic__renderer.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides 2D-rendering that is potentially hardware-accelerated.  <a href="classcen_1_1basic__renderer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__renderer.html">cen::basic_renderer</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides hardware-accelerated 2D-rendering.  <a href="classcen_1_1basic__renderer.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides 2D-rendering that is potentially hardware-accelerated.  <a href="classcen_1_1basic__renderer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -144,21 +146,21 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:gad2d8e020a073e6f7e05af85abbbe0476"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#gad2d8e020a073e6f7e05af85abbbe0476">cen::renderer</a> = basic_renderer&lt; std::true_type &gt;</td></tr>
-<tr class="memdesc:gad2d8e020a073e6f7e05af85abbbe0476"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an owning renderer.  <a href="group__graphics.html#gad2d8e020a073e6f7e05af85abbbe0476">More...</a><br /></td></tr>
+<tr class="memitem:gad2d8e020a073e6f7e05af85abbbe0476"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#gad2d8e020a073e6f7e05af85abbbe0476">cen::renderer</a> = basic_renderer&lt; detail::owning_type &gt;</td></tr>
+<tr class="memdesc:gad2d8e020a073e6f7e05af85abbbe0476"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an owning renderer.  <a href="group__video.html#gad2d8e020a073e6f7e05af85abbbe0476">More...</a><br /></td></tr>
 <tr class="separator:gad2d8e020a073e6f7e05af85abbbe0476"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2e18e31088132ca955408ce8d7151e10"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#ga2e18e31088132ca955408ce8d7151e10">cen::renderer_handle</a> = basic_renderer&lt; std::false_type &gt;</td></tr>
-<tr class="memdesc:ga2e18e31088132ca955408ce8d7151e10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a non-owning renderer.  <a href="group__graphics.html#ga2e18e31088132ca955408ce8d7151e10">More...</a><br /></td></tr>
+<tr class="memitem:ga2e18e31088132ca955408ce8d7151e10"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga2e18e31088132ca955408ce8d7151e10">cen::renderer_handle</a> = basic_renderer&lt; detail::handle_type &gt;</td></tr>
+<tr class="memdesc:ga2e18e31088132ca955408ce8d7151e10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a non-owning renderer.  <a href="group__video.html#ga2e18e31088132ca955408ce8d7151e10">More...</a><br /></td></tr>
 <tr class="separator:ga2e18e31088132ca955408ce8d7151e10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga2bc34b971950db03d629309225fc264b"><td class="memTemplParams" colspan="2">template&lt;typename B &gt; </td></tr>
-<tr class="memitem:ga2bc34b971950db03d629309225fc264b"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__graphics.html#ga2bc34b971950db03d629309225fc264b">cen::to_string</a> (const basic_renderer&lt; B &gt; &amp;renderer) -&gt; std::string</td></tr>
-<tr class="separator:ga2bc34b971950db03d629309225fc264b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf3a82806bbe029ededad6d236ed86fb8"><td class="memTemplParams" colspan="2">template&lt;typename B &gt; </td></tr>
-<tr class="memitem:gaf3a82806bbe029ededad6d236ed86fb8"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__graphics.html#gaf3a82806bbe029ededad6d236ed86fb8">cen::operator&lt;&lt;</a> (std::ostream &amp;stream, const basic_renderer&lt; B &gt; &amp;renderer) -&gt; std::ostream &amp;</td></tr>
-<tr class="separator:gaf3a82806bbe029ededad6d236ed86fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6bb908811faf7245650da4ca9614c95e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga6bb908811faf7245650da4ca9614c95e"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__video.html#ga6bb908811faf7245650da4ca9614c95e">cen::to_string</a> (const basic_renderer&lt; T &gt; &amp;renderer) -&gt; std::string</td></tr>
+<tr class="separator:ga6bb908811faf7245650da4ca9614c95e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga615fc10c0fbbee9fe2cd90ccdc6eefe0"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga615fc10c0fbbee9fe2cd90ccdc6eefe0"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__video.html#ga615fc10c0fbbee9fe2cd90ccdc6eefe0">cen::operator&lt;&lt;</a> (std::ostream &amp;stream, const basic_renderer&lt; T &gt; &amp;renderer) -&gt; std::ostream &amp;</td></tr>
+<tr class="separator:ga615fc10c0fbbee9fe2cd90ccdc6eefe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

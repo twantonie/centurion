@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/sensor.hpp File Reference</title>
+        <title>Centurion: src/centurion/input/sensor.hpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_7cbddb6c5dd5dfebc4ed1b9c679e311f.html">input</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -105,13 +105,13 @@ $(function() {
 <code>#include &lt;optional&gt;</code><br />
 <code>#include &lt;ostream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
-<code>#include &lt;type_traits&gt;</code><br />
-<code>#include &quot;<a class="el" href="centurion__cfg_8hpp_source.html">centurion_cfg.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="czstring_8hpp_source.html">czstring.hpp</a>&quot;</code><br />
-<code>#include &quot;detail/address_of.hpp&quot;</code><br />
-<code>#include &quot;detail/owner_handle_api.hpp&quot;</code><br />
-<code>#include &quot;detail/to_string.hpp&quot;</code><br />
-<code>#include &quot;<a class="el" href="exception_8hpp_source.html">exception.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="czstring_8hpp_source.html">../core/czstring.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="exception_8hpp_source.html">../core/exception.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="integers_8hpp_source.html">../core/integers.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="owner_8hpp_source.html">../core/owner.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="address__of_8hpp_source.html">../detail/address_of.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="owner__handle__api_8hpp_source.html">../detail/owner_handle_api.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="to__string_8hpp_source.html">../detail/to_string.hpp</a>&quot;</code><br />
 </div>
 <p><a href="sensor_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -135,10 +135,10 @@ Typedefs</h2></td></tr>
 <tr class="memitem:gaaea522cb383852e269dcd89a74248835"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#gaaea522cb383852e269dcd89a74248835">cen::sensor_id</a> = SDL_SensorID</td></tr>
 <tr class="memdesc:gaaea522cb383852e269dcd89a74248835"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used for unique sensor instance identifiers.  <a href="group__input.html#gaaea522cb383852e269dcd89a74248835">More...</a><br /></td></tr>
 <tr class="separator:gaaea522cb383852e269dcd89a74248835"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5c5f53b987a626b92f9f27a1010e6aac"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga5c5f53b987a626b92f9f27a1010e6aac">cen::sensor</a> = basic_sensor&lt; std::true_type &gt;</td></tr>
+<tr class="memitem:ga5c5f53b987a626b92f9f27a1010e6aac"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga5c5f53b987a626b92f9f27a1010e6aac">cen::sensor</a> = basic_sensor&lt; detail::owning_type &gt;</td></tr>
 <tr class="memdesc:ga5c5f53b987a626b92f9f27a1010e6aac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an owning sensor device.  <a href="group__input.html#ga5c5f53b987a626b92f9f27a1010e6aac">More...</a><br /></td></tr>
 <tr class="separator:ga5c5f53b987a626b92f9f27a1010e6aac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabb61c1346fc03b6a0ca1bd0476c0d317"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#gabb61c1346fc03b6a0ca1bd0476c0d317">cen::sensor_handle</a> = basic_sensor&lt; std::false_type &gt;</td></tr>
+<tr class="memitem:gabb61c1346fc03b6a0ca1bd0476c0d317"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#gabb61c1346fc03b6a0ca1bd0476c0d317">cen::sensor_handle</a> = basic_sensor&lt; detail::handle_type &gt;</td></tr>
 <tr class="memdesc:gabb61c1346fc03b6a0ca1bd0476c0d317"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a non-owning sensor device.  <a href="group__input.html#gabb61c1346fc03b6a0ca1bd0476c0d317">More...</a><br /></td></tr>
 <tr class="separator:gabb61c1346fc03b6a0ca1bd0476c0d317"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -159,17 +159,20 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gae45bef1cb457bf970246e0a707b29544"><td class="memTemplParams" colspan="2">template&lt;typename B &gt; </td></tr>
-<tr class="memitem:gae45bef1cb457bf970246e0a707b29544"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__input.html#gae45bef1cb457bf970246e0a707b29544">cen::to_string</a> (const basic_sensor&lt; B &gt; &amp;sensor) -&gt; std::string</td></tr>
-<tr class="memdesc:gae45bef1cb457bf970246e0a707b29544"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a textual representation of a sensor instance.  <a href="group__input.html#gae45bef1cb457bf970246e0a707b29544">More...</a><br /></td></tr>
-<tr class="separator:gae45bef1cb457bf970246e0a707b29544"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9abfb2332fc59a80ade85ecd0b1ae587"><td class="memTemplParams" colspan="2">template&lt;typename B &gt; </td></tr>
-<tr class="memitem:ga9abfb2332fc59a80ade85ecd0b1ae587"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__input.html#ga9abfb2332fc59a80ade85ecd0b1ae587">cen::operator&lt;&lt;</a> (std::ostream &amp;stream, const basic_sensor&lt; B &gt; &amp;sensor) -&gt; std::ostream &amp;</td></tr>
-<tr class="memdesc:ga9abfb2332fc59a80ade85ecd0b1ae587"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a textual representation of a sensor instance using a stream.  <a href="group__input.html#ga9abfb2332fc59a80ade85ecd0b1ae587">More...</a><br /></td></tr>
-<tr class="separator:ga9abfb2332fc59a80ade85ecd0b1ae587"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1cc95ae132f67ce638b96ae95a88a3d1"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga1cc95ae132f67ce638b96ae95a88a3d1"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__input.html#ga1cc95ae132f67ce638b96ae95a88a3d1">cen::to_string</a> (const basic_sensor&lt; T &gt; &amp;sensor) -&gt; std::string</td></tr>
+<tr class="memdesc:ga1cc95ae132f67ce638b96ae95a88a3d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a textual representation of a sensor instance.  <a href="group__input.html#ga1cc95ae132f67ce638b96ae95a88a3d1">More...</a><br /></td></tr>
+<tr class="separator:ga1cc95ae132f67ce638b96ae95a88a3d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga08e6a12f96d5171eb5808a246973210d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga08e6a12f96d5171eb5808a246973210d"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__input.html#ga08e6a12f96d5171eb5808a246973210d">cen::operator&lt;&lt;</a> (std::ostream &amp;stream, const basic_sensor&lt; T &gt; &amp;sensor) -&gt; std::ostream &amp;</td></tr>
+<tr class="memdesc:ga08e6a12f96d5171eb5808a246973210d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a textual representation of a sensor instance using a stream.  <a href="group__input.html#ga08e6a12f96d5171eb5808a246973210d">More...</a><br /></td></tr>
+<tr class="separator:ga08e6a12f96d5171eb5808a246973210d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6bab1933889c49f853af586bb3ae905c"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga6bab1933889c49f853af586bb3ae905c">cen::standard_gravity</a> () noexcept -&gt; float</td></tr>
 <tr class="memdesc:ga6bab1933889c49f853af586bb3ae905c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the standard gravity value.  <a href="group__input.html#ga6bab1933889c49f853af586bb3ae905c">More...</a><br /></td></tr>
 <tr class="separator:ga6bab1933889c49f853af586bb3ae905c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Sensor type comparison operators</h2></td></tr>
 <tr class="memitem:ga3ebd85de43837c0706a9a6066e75ed56"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga3ebd85de43837c0706a9a6066e75ed56">cen::operator==</a> (const sensor_type lhs, const SDL_SensorType rhs) noexcept -&gt; bool</td></tr>
 <tr class="memdesc:ga3ebd85de43837c0706a9a6066e75ed56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two sensor types values are equal.  <a href="group__input.html#ga3ebd85de43837c0706a9a6066e75ed56">More...</a><br /></td></tr>
 <tr class="separator:ga3ebd85de43837c0706a9a6066e75ed56"><td class="memSeparator" colspan="2">&#160;</td></tr>

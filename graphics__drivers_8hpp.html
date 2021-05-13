@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/graphics_drivers.hpp File Reference</title>
+        <title>Centurion: src/centurion/video/graphics_drivers.hpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_b630b0fc10333b78f2ff60d8d1210ae7.html">video</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -98,7 +98,6 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &lt;SDL.h&gt;</code><br />
 <code>#include &lt;optional&gt;</code><br />
-<code>#include &quot;<a class="el" href="centurion__cfg_8hpp_source.html">centurion_cfg.hpp</a>&quot;</code><br />
 </div>
 <p><a href="graphics__drivers_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -110,14 +109,14 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gab826b7584c005ea0c2657723f01912c4"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#gab826b7584c005ea0c2657723f01912c4">cen::num_render_drivers</a> () noexcept -&gt; int</td></tr>
-<tr class="memdesc:gab826b7584c005ea0c2657723f01912c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of available rendering drivers.  <a href="group__graphics.html#gab826b7584c005ea0c2657723f01912c4">More...</a><br /></td></tr>
-<tr class="separator:gab826b7584c005ea0c2657723f01912c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9ac26c9db59222a4d930b5d0c50771ff"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#ga9ac26c9db59222a4d930b5d0c50771ff">cen::num_video_drivers</a> () noexcept -&gt; int</td></tr>
-<tr class="memdesc:ga9ac26c9db59222a4d930b5d0c50771ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of available video drivers compiled into SDL.  <a href="group__graphics.html#ga9ac26c9db59222a4d930b5d0c50771ff">More...</a><br /></td></tr>
-<tr class="separator:ga9ac26c9db59222a4d930b5d0c50771ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga04f7d45a46958019399eacc281cec4ca"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#ga04f7d45a46958019399eacc281cec4ca">cen::get_render_driver_info</a> (const int index) noexcept -&gt; std::optional&lt; SDL_RendererInfo &gt;</td></tr>
-<tr class="memdesc:ga04f7d45a46958019399eacc281cec4ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the information associated with a rendering driver.  <a href="group__graphics.html#ga04f7d45a46958019399eacc281cec4ca">More...</a><br /></td></tr>
+<tr class="memitem:ga0039a648fc274ab80c66edad84dce0b7"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga0039a648fc274ab80c66edad84dce0b7">cen::render_driver_count</a> () noexcept -&gt; int</td></tr>
+<tr class="memdesc:ga0039a648fc274ab80c66edad84dce0b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of available rendering drivers.  <a href="group__video.html#ga0039a648fc274ab80c66edad84dce0b7">More...</a><br /></td></tr>
+<tr class="separator:ga0039a648fc274ab80c66edad84dce0b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6cd40c2531924c61c77ce6b5f785f26c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga6cd40c2531924c61c77ce6b5f785f26c">cen::video_driver_count</a> () noexcept -&gt; int</td></tr>
+<tr class="memdesc:ga6cd40c2531924c61c77ce6b5f785f26c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of available video drivers compiled into SDL.  <a href="group__video.html#ga6cd40c2531924c61c77ce6b5f785f26c">More...</a><br /></td></tr>
+<tr class="separator:ga6cd40c2531924c61c77ce6b5f785f26c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga04f7d45a46958019399eacc281cec4ca"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga04f7d45a46958019399eacc281cec4ca">cen::get_render_driver_info</a> (const int index) noexcept -&gt; std::optional&lt; SDL_RendererInfo &gt;</td></tr>
+<tr class="memdesc:ga04f7d45a46958019399eacc281cec4ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the information associated with a rendering driver.  <a href="group__video.html#ga04f7d45a46958019399eacc281cec4ca">More...</a><br /></td></tr>
 <tr class="separator:ga04f7d45a46958019399eacc281cec4ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

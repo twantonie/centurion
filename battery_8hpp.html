@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/battery.hpp File Reference</title>
+        <title>Centurion: src/centurion/system/battery.hpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_c6d2c5988ce62fe45ec82cf89dcf887c.html">system</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -100,76 +100,78 @@ $(function() {
 <div class="textblock"><code>#include &lt;SDL.h&gt;</code><br />
 <code>#include &lt;chrono&gt;</code><br />
 <code>#include &lt;optional&gt;</code><br />
-<code>#include &quot;<a class="el" href="centurion__cfg_8hpp_source.html">centurion_cfg.hpp</a>&quot;</code><br />
-<code>#include &quot;detail/any_eq.hpp&quot;</code><br />
-<code>#include &quot;<a class="el" href="time_8hpp_source.html">time.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="time_8hpp_source.html">../core/time.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="any__eq_8hpp_source.html">../detail/any_eq.hpp</a>&quot;</code><br />
 </div>
 <p><a href="battery_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:namespacecen_1_1battery"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1battery.html">cen::battery</a></td></tr>
-<tr class="memdesc:namespacecen_1_1battery"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains utilities related to the battery of the system. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacecen"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen.html">cen</a></td></tr>
 <tr class="memdesc:namespacecen"><td class="mdescLeft">&#160;</td><td class="mdescRight">The top-level namespace that all components of the library reside in. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacecen_1_1battery"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1battery.html">cen::battery</a></td></tr>
+<tr class="memdesc:namespacecen_1_1battery"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains utilities related to the battery of the system. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:ga6775ab09ad46da2ff8e26e8734c4d0bd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga6775ab09ad46da2ff8e26e8734c4d0bd">cen::battery::power_state</a> { <br />
-&#160;&#160;<a class="el" href="group__system.html#gga6775ab09ad46da2ff8e26e8734c4d0bdaad921d60486366258809553a3db49a4a">cen::battery::power_state::unknown</a> = SDL_POWERSTATE_UNKNOWN, 
+<tr class="memitem:ga4dda00faf11166cb0201cba7f35bb1af"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga4dda00faf11166cb0201cba7f35bb1af">cen::power_state</a> { <br />
+&#160;&#160;<a class="el" href="group__system.html#gga4dda00faf11166cb0201cba7f35bb1afaad921d60486366258809553a3db49a4a">cen::power_state::unknown</a> = SDL_POWERSTATE_UNKNOWN, 
 <br />
-&#160;&#160;<a class="el" href="group__system.html#gga6775ab09ad46da2ff8e26e8734c4d0bdae0c6b97d642863feb21ed192e6945fa9">cen::battery::power_state::on_battery</a>, 
+&#160;&#160;<a class="el" href="group__system.html#gga4dda00faf11166cb0201cba7f35bb1afae0c6b97d642863feb21ed192e6945fa9">cen::power_state::on_battery</a> = SDL_POWERSTATE_ON_BATTERY, 
 <br />
-&#160;&#160;<a class="el" href="group__system.html#gga6775ab09ad46da2ff8e26e8734c4d0bda1009b81e098d9d62e1ac074bbf1a7f71">cen::battery::power_state::no_battery</a> = SDL_POWERSTATE_NO_BATTERY, 
+&#160;&#160;<a class="el" href="group__system.html#gga4dda00faf11166cb0201cba7f35bb1afa1009b81e098d9d62e1ac074bbf1a7f71">cen::power_state::no_battery</a> = SDL_POWERSTATE_NO_BATTERY, 
 <br />
-&#160;&#160;<a class="el" href="group__system.html#gga6775ab09ad46da2ff8e26e8734c4d0bda05a0c26d8e746429c786c8e53378b9c9">cen::battery::power_state::charging</a> = SDL_POWERSTATE_CHARGING, 
+&#160;&#160;<a class="el" href="group__system.html#gga4dda00faf11166cb0201cba7f35bb1afa05a0c26d8e746429c786c8e53378b9c9">cen::power_state::charging</a> = SDL_POWERSTATE_CHARGING, 
 <br />
-&#160;&#160;<a class="el" href="group__system.html#gga6775ab09ad46da2ff8e26e8734c4d0bda48aee20d947736a18c6e9d09b526f75a">cen::battery::power_state::charged</a> = SDL_POWERSTATE_CHARGED
+&#160;&#160;<a class="el" href="group__system.html#gga4dda00faf11166cb0201cba7f35bb1afa48aee20d947736a18c6e9d09b526f75a">cen::power_state::charged</a> = SDL_POWERSTATE_CHARGED
 <br />
  }</td></tr>
-<tr class="memdesc:ga6775ab09ad46da2ff8e26e8734c4d0bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mirrors the values of the <code>SDL_PowerState</code> enum.  <a href="group__system.html#ga6775ab09ad46da2ff8e26e8734c4d0bd">More...</a><br /></td></tr>
-<tr class="separator:ga6775ab09ad46da2ff8e26e8734c4d0bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:ga4dda00faf11166cb0201cba7f35bb1af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides values that represent different battery power states.  <a href="group__system.html#ga4dda00faf11166cb0201cba7f35bb1af">More...</a><br /></td></tr>
+<tr class="separator:ga4dda00faf11166cb0201cba7f35bb1af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gac7b98bb966c7172036d8901e6f7fe68d"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gac7b98bb966c7172036d8901e6f7fe68d">cen::battery::seconds_left</a> () -&gt; std::optional&lt; seconds&lt; int &gt;&gt;</td></tr>
-<tr class="memdesc:gac7b98bb966c7172036d8901e6f7fe68d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the seconds of battery life that is remaining.  <a href="group__system.html#gac7b98bb966c7172036d8901e6f7fe68d">More...</a><br /></td></tr>
-<tr class="separator:gac7b98bb966c7172036d8901e6f7fe68d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa09886ca03dbb2f6306324459812ac52"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gaa09886ca03dbb2f6306324459812ac52">cen::battery::minutes_left</a> () -&gt; std::optional&lt; minutes&lt; int &gt;&gt;</td></tr>
-<tr class="memdesc:gaa09886ca03dbb2f6306324459812ac52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the amount of minutes of battery life that is remaining.  <a href="group__system.html#gaa09886ca03dbb2f6306324459812ac52">More...</a><br /></td></tr>
-<tr class="separator:gaa09886ca03dbb2f6306324459812ac52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad923b189924d4471260c87d83559bd30"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gad923b189924d4471260c87d83559bd30">cen::battery::percentage</a> () noexcept -&gt; std::optional&lt; int &gt;</td></tr>
-<tr class="memdesc:gad923b189924d4471260c87d83559bd30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the percentage of battery life that is currently left.  <a href="group__system.html#gad923b189924d4471260c87d83559bd30">More...</a><br /></td></tr>
-<tr class="separator:gad923b189924d4471260c87d83559bd30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf8300293e48dcaec2e412bd58b33d153"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gaf8300293e48dcaec2e412bd58b33d153">cen::battery::state</a> () noexcept -&gt; power_state</td></tr>
-<tr class="memdesc:gaf8300293e48dcaec2e412bd58b33d153"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current power state.  <a href="group__system.html#gaf8300293e48dcaec2e412bd58b33d153">More...</a><br /></td></tr>
-<tr class="separator:gaf8300293e48dcaec2e412bd58b33d153"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0080173146eba8655792695d333c1170"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga0080173146eba8655792695d333c1170">cen::battery::exists</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga0080173146eba8655792695d333c1170"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the system is running on a battery.  <a href="group__system.html#ga0080173146eba8655792695d333c1170">More...</a><br /></td></tr>
-<tr class="separator:ga0080173146eba8655792695d333c1170"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1addb9148cb6e8ca78d998d5226b4a84"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga1addb9148cb6e8ca78d998d5226b4a84">cen::battery::is_charging</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga1addb9148cb6e8ca78d998d5226b4a84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicate whether or not the battery is being charged.  <a href="group__system.html#ga1addb9148cb6e8ca78d998d5226b4a84">More...</a><br /></td></tr>
-<tr class="separator:ga1addb9148cb6e8ca78d998d5226b4a84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga128edfb3b768b77cce3d859851c51876"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga128edfb3b768b77cce3d859851c51876">cen::battery::is_charged</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga128edfb3b768b77cce3d859851c51876"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicate whether or not the battery is charged.  <a href="group__system.html#ga128edfb3b768b77cce3d859851c51876">More...</a><br /></td></tr>
-<tr class="separator:ga128edfb3b768b77cce3d859851c51876"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3445ed5750e0e407b5a300d333b3203f"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga3445ed5750e0e407b5a300d333b3203f">cen::battery::is_available</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga3445ed5750e0e407b5a300d333b3203f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicate whether or not a battery is available.  <a href="group__system.html#ga3445ed5750e0e407b5a300d333b3203f">More...</a><br /></td></tr>
-<tr class="separator:ga3445ed5750e0e407b5a300d333b3203f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga08897953b136de23c48041b044348d30"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga08897953b136de23c48041b044348d30">cen::battery::operator==</a> (const power_state lhs, const SDL_PowerState rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga08897953b136de23c48041b044348d30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two power states values are the same.  <a href="group__system.html#ga08897953b136de23c48041b044348d30">More...</a><br /></td></tr>
-<tr class="separator:ga08897953b136de23c48041b044348d30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab4419355af4435401b5e089e496cc87f"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gab4419355af4435401b5e089e496cc87f">cen::battery::operator==</a> (const SDL_PowerState lhs, const power_state rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:gab4419355af4435401b5e089e496cc87f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two power states values are the same.  <a href="group__system.html#gab4419355af4435401b5e089e496cc87f">More...</a><br /></td></tr>
-<tr class="separator:gab4419355af4435401b5e089e496cc87f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab9b7fbfae80526cdc46d29bc96a5bfe2"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gab9b7fbfae80526cdc46d29bc96a5bfe2">cen::battery::operator!=</a> (const power_state lhs, const SDL_PowerState rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:gab9b7fbfae80526cdc46d29bc96a5bfe2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two power states values aren't the same.  <a href="group__system.html#gab9b7fbfae80526cdc46d29bc96a5bfe2">More...</a><br /></td></tr>
-<tr class="separator:gab9b7fbfae80526cdc46d29bc96a5bfe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa2ce1b2cc3877ac719d3c46921eb61b6"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gaa2ce1b2cc3877ac719d3c46921eb61b6">cen::battery::operator!=</a> (const SDL_PowerState lhs, const power_state rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:gaa2ce1b2cc3877ac719d3c46921eb61b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two power states values aren't the same.  <a href="group__system.html#gaa2ce1b2cc3877ac719d3c46921eb61b6">More...</a><br /></td></tr>
-<tr class="separator:gaa2ce1b2cc3877ac719d3c46921eb61b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7b98bb966c7172036d8901e6f7fe68d"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1battery.html#ac7b98bb966c7172036d8901e6f7fe68d">cen::battery::seconds_left</a> () -&gt; std::optional&lt; seconds&lt; int &gt;&gt;</td></tr>
+<tr class="memdesc:ac7b98bb966c7172036d8901e6f7fe68d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the seconds of battery life that is remaining.  <a href="namespacecen_1_1battery.html#ac7b98bb966c7172036d8901e6f7fe68d">More...</a><br /></td></tr>
+<tr class="separator:ac7b98bb966c7172036d8901e6f7fe68d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa09886ca03dbb2f6306324459812ac52"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1battery.html#aa09886ca03dbb2f6306324459812ac52">cen::battery::minutes_left</a> () -&gt; std::optional&lt; minutes&lt; int &gt;&gt;</td></tr>
+<tr class="memdesc:aa09886ca03dbb2f6306324459812ac52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the amount of minutes of battery life that is remaining.  <a href="namespacecen_1_1battery.html#aa09886ca03dbb2f6306324459812ac52">More...</a><br /></td></tr>
+<tr class="separator:aa09886ca03dbb2f6306324459812ac52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad923b189924d4471260c87d83559bd30"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1battery.html#ad923b189924d4471260c87d83559bd30">cen::battery::percentage</a> () noexcept -&gt; std::optional&lt; int &gt;</td></tr>
+<tr class="memdesc:ad923b189924d4471260c87d83559bd30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the percentage of battery life that is currently left.  <a href="namespacecen_1_1battery.html#ad923b189924d4471260c87d83559bd30">More...</a><br /></td></tr>
+<tr class="separator:ad923b189924d4471260c87d83559bd30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8300293e48dcaec2e412bd58b33d153"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1battery.html#af8300293e48dcaec2e412bd58b33d153">cen::battery::state</a> () noexcept -&gt; power_state</td></tr>
+<tr class="memdesc:af8300293e48dcaec2e412bd58b33d153"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current power state.  <a href="namespacecen_1_1battery.html#af8300293e48dcaec2e412bd58b33d153">More...</a><br /></td></tr>
+<tr class="separator:af8300293e48dcaec2e412bd58b33d153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0080173146eba8655792695d333c1170"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1battery.html#a0080173146eba8655792695d333c1170">cen::battery::exists</a> () noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a0080173146eba8655792695d333c1170"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the system is running on a battery.  <a href="namespacecen_1_1battery.html#a0080173146eba8655792695d333c1170">More...</a><br /></td></tr>
+<tr class="separator:a0080173146eba8655792695d333c1170"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1addb9148cb6e8ca78d998d5226b4a84"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1battery.html#a1addb9148cb6e8ca78d998d5226b4a84">cen::battery::is_charging</a> () noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a1addb9148cb6e8ca78d998d5226b4a84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicate whether or not the battery is being charged.  <a href="namespacecen_1_1battery.html#a1addb9148cb6e8ca78d998d5226b4a84">More...</a><br /></td></tr>
+<tr class="separator:a1addb9148cb6e8ca78d998d5226b4a84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a128edfb3b768b77cce3d859851c51876"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1battery.html#a128edfb3b768b77cce3d859851c51876">cen::battery::is_charged</a> () noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a128edfb3b768b77cce3d859851c51876"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicate whether or not the battery is charged.  <a href="namespacecen_1_1battery.html#a128edfb3b768b77cce3d859851c51876">More...</a><br /></td></tr>
+<tr class="separator:a128edfb3b768b77cce3d859851c51876"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3445ed5750e0e407b5a300d333b3203f"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1battery.html#a3445ed5750e0e407b5a300d333b3203f">cen::battery::is_available</a> () noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a3445ed5750e0e407b5a300d333b3203f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicate whether or not a battery is available.  <a href="namespacecen_1_1battery.html#a3445ed5750e0e407b5a300d333b3203f">More...</a><br /></td></tr>
+<tr class="separator:a3445ed5750e0e407b5a300d333b3203f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Power state comparison operators</h2></td></tr>
+<tr class="memitem:ga72fa7f7fd28005e715968bf0c24ab92e"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga72fa7f7fd28005e715968bf0c24ab92e">cen::operator==</a> (const power_state lhs, const SDL_PowerState rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga72fa7f7fd28005e715968bf0c24ab92e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two power states values are the same.  <a href="group__system.html#ga72fa7f7fd28005e715968bf0c24ab92e">More...</a><br /></td></tr>
+<tr class="separator:ga72fa7f7fd28005e715968bf0c24ab92e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga318c846cb90bf3dc514537da8552ff39"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga318c846cb90bf3dc514537da8552ff39">cen::operator==</a> (const SDL_PowerState lhs, const power_state rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga318c846cb90bf3dc514537da8552ff39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two power states values are the same.  <a href="group__system.html#ga318c846cb90bf3dc514537da8552ff39">More...</a><br /></td></tr>
+<tr class="separator:ga318c846cb90bf3dc514537da8552ff39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae902bb2700376a54b9579caac64648c8"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gae902bb2700376a54b9579caac64648c8">cen::operator!=</a> (const power_state lhs, const SDL_PowerState rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:gae902bb2700376a54b9579caac64648c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two power states values aren't the same.  <a href="group__system.html#gae902bb2700376a54b9579caac64648c8">More...</a><br /></td></tr>
+<tr class="separator:gae902bb2700376a54b9579caac64648c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaea8658689e80c452cff29708cd4089e"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gaaea8658689e80c452cff29708cd4089e">cen::operator!=</a> (const SDL_PowerState lhs, const power_state rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:gaaea8658689e80c452cff29708cd4089e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two power states values aren't the same.  <a href="group__system.html#gaaea8658689e80c452cff29708cd4089e">More...</a><br /></td></tr>
+<tr class="separator:gaaea8658689e80c452cff29708cd4089e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

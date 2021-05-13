@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/log.hpp File Reference</title>
+        <title>Centurion: src/centurion/core/log.hpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_033c555e8ea57d729336171de4fce59a.html">core</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -102,184 +102,185 @@ $(function() {
 <code>#include &lt;cassert&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
-<code>#include &quot;<a class="el" href="centurion__cfg_8hpp_source.html">centurion_cfg.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="czstring_8hpp_source.html">czstring.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="macros_8hpp_source.html">macros.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="not__null_8hpp_source.html">not_null.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="to__underlying_8hpp_source.html">to_underlying.hpp</a>&quot;</code><br />
 </div>
 <p><a href="log_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:namespacecen_1_1log"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1log.html">cen::log</a></td></tr>
-<tr class="memdesc:namespacecen_1_1log"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains easy-to-use logging facilities. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacecen"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen.html">cen</a></td></tr>
 <tr class="memdesc:namespacecen"><td class="mdescLeft">&#160;</td><td class="mdescRight">The top-level namespace that all components of the library reside in. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacecen_1_1log"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1log.html">cen::log</a></td></tr>
+<tr class="memdesc:namespacecen_1_1log"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains easy-to-use logging facilities. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ga5f87c352e07b5b378fc4637ee8d6386a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__misc.html#ga5f87c352e07b5b378fc4637ee8d6386a">CENTURION_LOG_INFO</a>(fmt, ...)&#160;&#160;&#160;<a class="el" href="namespacecen_1_1log.html#a4f2f95be9e559876c17805a5c7c0ce9b">cen::log::info</a>(fmt, __VA_ARGS__)</td></tr>
-<tr class="memdesc:ga5f87c352e07b5b378fc4637ee8d6386a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A debug-only macro that expands to <code><a class="el" href="namespacecen_1_1log.html#a4f2f95be9e559876c17805a5c7c0ce9b" title="Logs a message with priority::info and the specified category.">cen::log::info</a></code>.  <a href="group__misc.html#ga5f87c352e07b5b378fc4637ee8d6386a">More...</a><br /></td></tr>
+<tr class="memitem:ga5f87c352e07b5b378fc4637ee8d6386a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga5f87c352e07b5b378fc4637ee8d6386a">CENTURION_LOG_INFO</a>(fmt, ...)&#160;&#160;&#160;<a class="el" href="group__core.html#gade61dd59932e5273e2442b8691a4fe14">cen::log::info</a>(fmt, __VA_ARGS__)</td></tr>
+<tr class="memdesc:ga5f87c352e07b5b378fc4637ee8d6386a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A debug-only macro that expands to <code><a class="el" href="group__core.html#gade61dd59932e5273e2442b8691a4fe14" title="Logs a message with priority::info and the specified category.">cen::log::info</a></code>.  <a href="group__core.html#ga5f87c352e07b5b378fc4637ee8d6386a">More...</a><br /></td></tr>
 <tr class="separator:ga5f87c352e07b5b378fc4637ee8d6386a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2df696db24d44a5f95727ebdb2c23834"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__misc.html#ga2df696db24d44a5f95727ebdb2c23834">CENTURION_LOG_WARN</a>(fmt, ...)&#160;&#160;&#160;<a class="el" href="namespacecen_1_1log.html#a640962d1adae3b273639b88f1697d718">cen::log::warn</a>(fmt, __VA_ARGS__)</td></tr>
-<tr class="memdesc:ga2df696db24d44a5f95727ebdb2c23834"><td class="mdescLeft">&#160;</td><td class="mdescRight">A debug-only macro that expands to <code><a class="el" href="namespacecen_1_1log.html#a640962d1adae3b273639b88f1697d718" title="Logs a message with priority::warn and the specified category.">cen::log::warn</a></code>.  <a href="group__misc.html#ga2df696db24d44a5f95727ebdb2c23834">More...</a><br /></td></tr>
+<tr class="memitem:ga2df696db24d44a5f95727ebdb2c23834"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga2df696db24d44a5f95727ebdb2c23834">CENTURION_LOG_WARN</a>(fmt, ...)&#160;&#160;&#160;<a class="el" href="group__core.html#ga65e665db41c65b67e9eca0c10aba0d54">cen::log::warn</a>(fmt, __VA_ARGS__)</td></tr>
+<tr class="memdesc:ga2df696db24d44a5f95727ebdb2c23834"><td class="mdescLeft">&#160;</td><td class="mdescRight">A debug-only macro that expands to <code><a class="el" href="group__core.html#ga65e665db41c65b67e9eca0c10aba0d54" title="Logs a message with priority::warn and the specified category.">cen::log::warn</a></code>.  <a href="group__core.html#ga2df696db24d44a5f95727ebdb2c23834">More...</a><br /></td></tr>
 <tr class="separator:ga2df696db24d44a5f95727ebdb2c23834"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4e3d19b659d5345f278aac93311a56fa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__misc.html#ga4e3d19b659d5345f278aac93311a56fa">CENTURION_LOG_VERBOSE</a>(fmt, ...)&#160;&#160;&#160;<a class="el" href="namespacecen_1_1log.html#a5f6a11bb5776c79ad6f5fc3ebf0a87da">cen::log::verbose</a>(fmt, __VA_ARGS__)</td></tr>
-<tr class="memdesc:ga4e3d19b659d5345f278aac93311a56fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">A debug-only macro that expands to <code><a class="el" href="namespacecen_1_1log.html#a5f6a11bb5776c79ad6f5fc3ebf0a87da" title="Logs a message with priority::verbose and the specified category.">cen::log::verbose</a></code>.  <a href="group__misc.html#ga4e3d19b659d5345f278aac93311a56fa">More...</a><br /></td></tr>
+<tr class="memitem:ga4e3d19b659d5345f278aac93311a56fa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga4e3d19b659d5345f278aac93311a56fa">CENTURION_LOG_VERBOSE</a>(fmt, ...)&#160;&#160;&#160;<a class="el" href="group__core.html#gaf6c0ead6e900adb312e4f9670b25ad2b">cen::log::verbose</a>(fmt, __VA_ARGS__)</td></tr>
+<tr class="memdesc:ga4e3d19b659d5345f278aac93311a56fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">A debug-only macro that expands to <code><a class="el" href="group__core.html#gaf6c0ead6e900adb312e4f9670b25ad2b" title="Logs a message with priority::verbose and the specified category.">cen::log::verbose</a></code>.  <a href="group__core.html#ga4e3d19b659d5345f278aac93311a56fa">More...</a><br /></td></tr>
 <tr class="separator:ga4e3d19b659d5345f278aac93311a56fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga71955e2201cee9494ba7425eace7c29c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__misc.html#ga71955e2201cee9494ba7425eace7c29c">CENTURION_LOG_DEBUG</a>(fmt, ...)&#160;&#160;&#160;<a class="el" href="namespacecen_1_1log.html#ad7c5e63533246197722e78f9af2309c5">cen::log::debug</a>(fmt, __VA_ARGS__)</td></tr>
-<tr class="memdesc:ga71955e2201cee9494ba7425eace7c29c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A debug-only macro that expands to <code><a class="el" href="namespacecen_1_1log.html#ad7c5e63533246197722e78f9af2309c5" title="Logs a message with priority::debug and the specified category.">cen::log::debug</a></code>.  <a href="group__misc.html#ga71955e2201cee9494ba7425eace7c29c">More...</a><br /></td></tr>
+<tr class="memitem:ga71955e2201cee9494ba7425eace7c29c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga71955e2201cee9494ba7425eace7c29c">CENTURION_LOG_DEBUG</a>(fmt, ...)&#160;&#160;&#160;<a class="el" href="group__core.html#gadfb0045da7506b622ebf058fa740a352">cen::log::debug</a>(fmt, __VA_ARGS__)</td></tr>
+<tr class="memdesc:ga71955e2201cee9494ba7425eace7c29c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A debug-only macro that expands to <code><a class="el" href="group__core.html#gadfb0045da7506b622ebf058fa740a352" title="Logs a message with priority::debug and the specified category.">cen::log::debug</a></code>.  <a href="group__core.html#ga71955e2201cee9494ba7425eace7c29c">More...</a><br /></td></tr>
 <tr class="separator:ga71955e2201cee9494ba7425eace7c29c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaaf9463acf118a57b29e678638c010147"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__misc.html#gaaf9463acf118a57b29e678638c010147">CENTURION_LOG_CRITICAL</a>(fmt, ...)&#160;&#160;&#160;<a class="el" href="namespacecen_1_1log.html#afa0eb019eb5203f224bd16e6c133da64">cen::log::critical</a>(fmt, __VA_ARGS__)</td></tr>
-<tr class="memdesc:gaaf9463acf118a57b29e678638c010147"><td class="mdescLeft">&#160;</td><td class="mdescRight">A debug-only macro that expands to <code><a class="el" href="namespacecen_1_1log.html#afa0eb019eb5203f224bd16e6c133da64" title="Logs a message with priority::critical and the specified category.">cen::log::critical</a></code>.  <a href="group__misc.html#gaaf9463acf118a57b29e678638c010147">More...</a><br /></td></tr>
+<tr class="memitem:gaaf9463acf118a57b29e678638c010147"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#gaaf9463acf118a57b29e678638c010147">CENTURION_LOG_CRITICAL</a>(fmt, ...)&#160;&#160;&#160;<a class="el" href="group__core.html#ga39c273922d2cbceaf98af455ce6d612f">cen::log::critical</a>(fmt, __VA_ARGS__)</td></tr>
+<tr class="memdesc:gaaf9463acf118a57b29e678638c010147"><td class="mdescLeft">&#160;</td><td class="mdescRight">A debug-only macro that expands to <code><a class="el" href="group__core.html#ga39c273922d2cbceaf98af455ce6d612f" title="Logs a message with priority::critical and the specified category.">cen::log::critical</a></code>.  <a href="group__core.html#gaaf9463acf118a57b29e678638c010147">More...</a><br /></td></tr>
 <tr class="separator:gaaf9463acf118a57b29e678638c010147"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6f0c2c40d23b43618b5d84c9a1b93689"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__misc.html#ga6f0c2c40d23b43618b5d84c9a1b93689">CENTURION_LOG_ERROR</a>(fmt, ...)&#160;&#160;&#160;<a class="el" href="namespacecen_1_1log.html#acbf7cd4bfc4b547df61eeab684ba50c2">cen::log::error</a>(fmt, __VA_ARGS__)</td></tr>
-<tr class="memdesc:ga6f0c2c40d23b43618b5d84c9a1b93689"><td class="mdescLeft">&#160;</td><td class="mdescRight">A debug-only macro that expands to <code><a class="el" href="namespacecen_1_1log.html#acbf7cd4bfc4b547df61eeab684ba50c2" title="Logs a message with priority::error and the specified category.">cen::log::error</a></code>.  <a href="group__misc.html#ga6f0c2c40d23b43618b5d84c9a1b93689">More...</a><br /></td></tr>
+<tr class="memitem:ga6f0c2c40d23b43618b5d84c9a1b93689"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga6f0c2c40d23b43618b5d84c9a1b93689">CENTURION_LOG_ERROR</a>(fmt, ...)&#160;&#160;&#160;<a class="el" href="group__core.html#gac18f2b4a4c1d6fb4f50e09c7677a2671">cen::log::error</a>(fmt, __VA_ARGS__)</td></tr>
+<tr class="memdesc:ga6f0c2c40d23b43618b5d84c9a1b93689"><td class="mdescLeft">&#160;</td><td class="mdescRight">A debug-only macro that expands to <code><a class="el" href="group__core.html#gac18f2b4a4c1d6fb4f50e09c7677a2671" title="Logs a message with priority::error and the specified category.">cen::log::error</a></code>.  <a href="group__core.html#ga6f0c2c40d23b43618b5d84c9a1b93689">More...</a><br /></td></tr>
 <tr class="separator:ga6f0c2c40d23b43618b5d84c9a1b93689"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:ac501138914acaf9fc6555b67628d6b9d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1log.html#ac501138914acaf9fc6555b67628d6b9d">cen::log::priority</a> { <br />
-&#160;&#160;<a class="el" href="namespacecen_1_1log.html#ac501138914acaf9fc6555b67628d6b9dacaf9b6b99962bf5c2264824231d7a40c">cen::log::priority::info</a> = SDL_LOG_PRIORITY_INFO, 
+<tr class="memitem:ga910862a214870faa7b625862de858c52"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga910862a214870faa7b625862de858c52">cen::log_priority</a> : int { <br />
+&#160;&#160;<a class="el" href="group__core.html#gga910862a214870faa7b625862de858c52acaf9b6b99962bf5c2264824231d7a40c">cen::log_priority::info</a> = SDL_LOG_PRIORITY_INFO, 
 <br />
-&#160;&#160;<a class="el" href="namespacecen_1_1log.html#ac501138914acaf9fc6555b67628d6b9da1ea4c3ab05ee0c6d4de30740443769cb">cen::log::priority::warn</a> = SDL_LOG_PRIORITY_WARN, 
+&#160;&#160;<a class="el" href="group__core.html#gga910862a214870faa7b625862de858c52a1ea4c3ab05ee0c6d4de30740443769cb">cen::log_priority::warn</a> = SDL_LOG_PRIORITY_WARN, 
 <br />
-&#160;&#160;<a class="el" href="namespacecen_1_1log.html#ac501138914acaf9fc6555b67628d6b9da2c7aea4237e25b4f8ee3b0bf77d6fed0">cen::log::priority::verbose</a> = SDL_LOG_PRIORITY_VERBOSE, 
+&#160;&#160;<a class="el" href="group__core.html#gga910862a214870faa7b625862de858c52a2c7aea4237e25b4f8ee3b0bf77d6fed0">cen::log_priority::verbose</a> = SDL_LOG_PRIORITY_VERBOSE, 
 <br />
-&#160;&#160;<a class="el" href="namespacecen_1_1log.html#ac501138914acaf9fc6555b67628d6b9daad42f6697b035b7580e4fef93be20b4d">cen::log::priority::debug</a> = SDL_LOG_PRIORITY_DEBUG, 
+&#160;&#160;<a class="el" href="group__core.html#gga910862a214870faa7b625862de858c52aad42f6697b035b7580e4fef93be20b4d">cen::log_priority::debug</a> = SDL_LOG_PRIORITY_DEBUG, 
 <br />
-&#160;&#160;<a class="el" href="namespacecen_1_1log.html#ac501138914acaf9fc6555b67628d6b9da7e85bcb66fb9a809d5ab4f62a8b8bea8">cen::log::priority::critical</a> = SDL_LOG_PRIORITY_CRITICAL, 
+&#160;&#160;<a class="el" href="group__core.html#gga910862a214870faa7b625862de858c52a7e85bcb66fb9a809d5ab4f62a8b8bea8">cen::log_priority::critical</a> = SDL_LOG_PRIORITY_CRITICAL, 
 <br />
-&#160;&#160;<a class="el" href="namespacecen_1_1log.html#ac501138914acaf9fc6555b67628d6b9dacb5e100e5a9a3e7f6d1fd97512215282">cen::log::priority::error</a> = SDL_LOG_PRIORITY_ERROR
-<br />
- }</td></tr>
-<tr class="memdesc:ac501138914acaf9fc6555b67628d6b9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mirrors the <code>SDL_LogPriority</code> enum.  <a href="namespacecen_1_1log.html#ac501138914acaf9fc6555b67628d6b9d">More...</a><br /></td></tr>
-<tr class="separator:ac501138914acaf9fc6555b67628d6b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a532c798004d58c59f9564bdf28920eee"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1log.html#a532c798004d58c59f9564bdf28920eee">cen::log::category</a> { <br />
-&#160;&#160;<a class="el" href="namespacecen_1_1log.html#a532c798004d58c59f9564bdf28920eeead2a57dc1d883fd21fb9951699df71cc7">cen::log::category::app</a> = SDL_LOG_CATEGORY_APPLICATION, 
-<br />
-&#160;&#160;<a class="el" href="namespacecen_1_1log.html#a532c798004d58c59f9564bdf28920eeeacb5e100e5a9a3e7f6d1fd97512215282">cen::log::category::error</a> = SDL_LOG_CATEGORY_ERROR, 
-<br />
-&#160;&#160;<a class="el" href="namespacecen_1_1log.html#a532c798004d58c59f9564bdf28920eeeae44e4612f62d2fb8f8738bab118a9850">cen::log::category::assert</a> = SDL_LOG_CATEGORY_ASSERT, 
-<br />
-&#160;&#160;<a class="el" href="namespacecen_1_1log.html#a532c798004d58c59f9564bdf28920eeea54b53072540eeeb8f8e9343e71f28176">cen::log::category::system</a> = SDL_LOG_CATEGORY_SYSTEM, 
-<br />
-&#160;&#160;<a class="el" href="namespacecen_1_1log.html#a532c798004d58c59f9564bdf28920eeeaa5ca0b5894324f8bb54bb9fffad29d1e">cen::log::category::audio</a> = SDL_LOG_CATEGORY_AUDIO, 
-<br />
-&#160;&#160;<a class="el" href="namespacecen_1_1log.html#a532c798004d58c59f9564bdf28920eeea421b47ffd946ca083b65cd668c6b17e6">cen::log::category::video</a> = SDL_LOG_CATEGORY_VIDEO, 
-<br />
-&#160;&#160;<a class="el" href="namespacecen_1_1log.html#a532c798004d58c59f9564bdf28920eeea9e5f0bb330344d580b9e30d338d6ab6d">cen::log::category::render</a> = SDL_LOG_CATEGORY_RENDER, 
-<br />
-&#160;&#160;<a class="el" href="namespacecen_1_1log.html#a532c798004d58c59f9564bdf28920eeeaa43c1b0aa53a0c908810c06ab1ff3967">cen::log::category::input</a> = SDL_LOG_CATEGORY_INPUT, 
-<br />
-&#160;&#160;<a class="el" href="namespacecen_1_1log.html#a532c798004d58c59f9564bdf28920eeea098f6bcd4621d373cade4e832627b4f6">cen::log::category::test</a> = SDL_LOG_CATEGORY_TEST, 
-<br />
-&#160;&#160;<a class="el" href="namespacecen_1_1log.html#a532c798004d58c59f9564bdf28920eeeabc957e26ff41470c556ee5d09e96880b">cen::log::category::misc</a> = SDL_LOG_CATEGORY_CUSTOM
+&#160;&#160;<a class="el" href="group__core.html#gga910862a214870faa7b625862de858c52acb5e100e5a9a3e7f6d1fd97512215282">cen::log_priority::error</a> = SDL_LOG_PRIORITY_ERROR
 <br />
  }</td></tr>
-<tr class="memdesc:a532c798004d58c59f9564bdf28920eee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mirrors the <code>SDL_LogCategory</code> enum.  <a href="namespacecen_1_1log.html#a532c798004d58c59f9564bdf28920eee">More...</a><br /></td></tr>
-<tr class="separator:a532c798004d58c59f9564bdf28920eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:ga910862a214870faa7b625862de858c52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides values that represent different logging priorities.  <a href="group__core.html#ga910862a214870faa7b625862de858c52">More...</a><br /></td></tr>
+<tr class="separator:ga910862a214870faa7b625862de858c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5a2bed2933e3748ad2a77961417a102b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">cen::log_category</a> : int { <br />
+&#160;&#160;<a class="el" href="group__core.html#gga5a2bed2933e3748ad2a77961417a102bad2a57dc1d883fd21fb9951699df71cc7">cen::log_category::app</a> = SDL_LOG_CATEGORY_APPLICATION, 
+<br />
+&#160;&#160;<a class="el" href="group__core.html#gga5a2bed2933e3748ad2a77961417a102bacb5e100e5a9a3e7f6d1fd97512215282">cen::log_category::error</a> = SDL_LOG_CATEGORY_ERROR, 
+<br />
+&#160;&#160;<a class="el" href="group__core.html#gga5a2bed2933e3748ad2a77961417a102bae44e4612f62d2fb8f8738bab118a9850">cen::log_category::assert</a> = SDL_LOG_CATEGORY_ASSERT, 
+<br />
+&#160;&#160;<a class="el" href="group__core.html#gga5a2bed2933e3748ad2a77961417a102ba54b53072540eeeb8f8e9343e71f28176">cen::log_category::system</a> = SDL_LOG_CATEGORY_SYSTEM, 
+<br />
+&#160;&#160;<a class="el" href="group__core.html#gga5a2bed2933e3748ad2a77961417a102baa5ca0b5894324f8bb54bb9fffad29d1e">cen::log_category::audio</a> = SDL_LOG_CATEGORY_AUDIO, 
+<br />
+&#160;&#160;<a class="el" href="group__core.html#gga5a2bed2933e3748ad2a77961417a102ba421b47ffd946ca083b65cd668c6b17e6">cen::log_category::video</a> = SDL_LOG_CATEGORY_VIDEO, 
+<br />
+&#160;&#160;<a class="el" href="group__core.html#gga5a2bed2933e3748ad2a77961417a102ba9e5f0bb330344d580b9e30d338d6ab6d">cen::log_category::render</a> = SDL_LOG_CATEGORY_RENDER, 
+<br />
+&#160;&#160;<a class="el" href="group__core.html#gga5a2bed2933e3748ad2a77961417a102baa43c1b0aa53a0c908810c06ab1ff3967">cen::log_category::input</a> = SDL_LOG_CATEGORY_INPUT, 
+<br />
+&#160;&#160;<a class="el" href="group__core.html#gga5a2bed2933e3748ad2a77961417a102ba098f6bcd4621d373cade4e832627b4f6">cen::log_category::test</a> = SDL_LOG_CATEGORY_TEST, 
+<br />
+&#160;&#160;<a class="el" href="group__core.html#gga5a2bed2933e3748ad2a77961417a102babc957e26ff41470c556ee5d09e96880b">cen::log_category::misc</a> = SDL_LOG_CATEGORY_CUSTOM
+<br />
+ }</td></tr>
+<tr class="memdesc:ga5a2bed2933e3748ad2a77961417a102b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides values that represent different logging categories.  <a href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">More...</a><br /></td></tr>
+<tr class="separator:ga5a2bed2933e3748ad2a77961417a102b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ad61cce6978741dcdb518b5863f574460"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:ad61cce6978741dcdb518b5863f574460"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecen_1_1log.html#ad61cce6978741dcdb518b5863f574460">cen::log::msg</a> (const priority priority, const category category, const not_null&lt; czstring &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
-<tr class="memdesc:ad61cce6978741dcdb518b5863f574460"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with the specified priority and category.  <a href="namespacecen_1_1log.html#ad61cce6978741dcdb518b5863f574460">More...</a><br /></td></tr>
-<tr class="separator:ad61cce6978741dcdb518b5863f574460"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f2f95be9e559876c17805a5c7c0ce9b"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:a4f2f95be9e559876c17805a5c7c0ce9b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecen_1_1log.html#a4f2f95be9e559876c17805a5c7c0ce9b">cen::log::info</a> (const category category, const not_null&lt; czstring &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
-<tr class="memdesc:a4f2f95be9e559876c17805a5c7c0ce9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with <code><a class="el" href="namespacecen_1_1log.html#ac501138914acaf9fc6555b67628d6b9dacaf9b6b99962bf5c2264824231d7a40c">priority::info</a></code> and the specified category.  <a href="namespacecen_1_1log.html#a4f2f95be9e559876c17805a5c7c0ce9b">More...</a><br /></td></tr>
-<tr class="separator:a4f2f95be9e559876c17805a5c7c0ce9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f21c8844d4cc7a49018aa8d6bc35fac"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:a5f21c8844d4cc7a49018aa8d6bc35fac"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecen_1_1log.html#a5f21c8844d4cc7a49018aa8d6bc35fac">cen::log::info</a> (const not_null&lt; czstring &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
-<tr class="memdesc:a5f21c8844d4cc7a49018aa8d6bc35fac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with <code><a class="el" href="namespacecen_1_1log.html#ac501138914acaf9fc6555b67628d6b9dacaf9b6b99962bf5c2264824231d7a40c">priority::info</a></code> and <code><a class="el" href="namespacecen_1_1log.html#a532c798004d58c59f9564bdf28920eeead2a57dc1d883fd21fb9951699df71cc7">category::app</a></code>.  <a href="namespacecen_1_1log.html#a5f21c8844d4cc7a49018aa8d6bc35fac">More...</a><br /></td></tr>
-<tr class="separator:a5f21c8844d4cc7a49018aa8d6bc35fac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a640962d1adae3b273639b88f1697d718"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:a640962d1adae3b273639b88f1697d718"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecen_1_1log.html#a640962d1adae3b273639b88f1697d718">cen::log::warn</a> (const category category, const not_null&lt; czstring &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
-<tr class="memdesc:a640962d1adae3b273639b88f1697d718"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with <code><a class="el" href="namespacecen_1_1log.html#ac501138914acaf9fc6555b67628d6b9da1ea4c3ab05ee0c6d4de30740443769cb">priority::warn</a></code> and the specified category.  <a href="namespacecen_1_1log.html#a640962d1adae3b273639b88f1697d718">More...</a><br /></td></tr>
-<tr class="separator:a640962d1adae3b273639b88f1697d718"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcd98acb2c7f7efe09ed98d8b0067400"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:adcd98acb2c7f7efe09ed98d8b0067400"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecen_1_1log.html#adcd98acb2c7f7efe09ed98d8b0067400">cen::log::warn</a> (const not_null&lt; czstring &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
-<tr class="memdesc:adcd98acb2c7f7efe09ed98d8b0067400"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with <code><a class="el" href="namespacecen_1_1log.html#ac501138914acaf9fc6555b67628d6b9da1ea4c3ab05ee0c6d4de30740443769cb">priority::warn</a></code> and <code><a class="el" href="namespacecen_1_1log.html#a532c798004d58c59f9564bdf28920eeead2a57dc1d883fd21fb9951699df71cc7">category::app</a></code>.  <a href="namespacecen_1_1log.html#adcd98acb2c7f7efe09ed98d8b0067400">More...</a><br /></td></tr>
-<tr class="separator:adcd98acb2c7f7efe09ed98d8b0067400"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f6a11bb5776c79ad6f5fc3ebf0a87da"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:a5f6a11bb5776c79ad6f5fc3ebf0a87da"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecen_1_1log.html#a5f6a11bb5776c79ad6f5fc3ebf0a87da">cen::log::verbose</a> (const category category, const not_null&lt; czstring &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
-<tr class="memdesc:a5f6a11bb5776c79ad6f5fc3ebf0a87da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with <code><a class="el" href="namespacecen_1_1log.html#ac501138914acaf9fc6555b67628d6b9da2c7aea4237e25b4f8ee3b0bf77d6fed0">priority::verbose</a></code> and the specified category.  <a href="namespacecen_1_1log.html#a5f6a11bb5776c79ad6f5fc3ebf0a87da">More...</a><br /></td></tr>
-<tr class="separator:a5f6a11bb5776c79ad6f5fc3ebf0a87da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad84b2f3233c32ab0994cfa3320d5456"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:aad84b2f3233c32ab0994cfa3320d5456"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecen_1_1log.html#aad84b2f3233c32ab0994cfa3320d5456">cen::log::verbose</a> (const not_null&lt; czstring &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
-<tr class="memdesc:aad84b2f3233c32ab0994cfa3320d5456"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with <code><a class="el" href="namespacecen_1_1log.html#ac501138914acaf9fc6555b67628d6b9da2c7aea4237e25b4f8ee3b0bf77d6fed0">priority::verbose</a></code> and <code><a class="el" href="namespacecen_1_1log.html#a532c798004d58c59f9564bdf28920eeead2a57dc1d883fd21fb9951699df71cc7">category::app</a></code>.  <a href="namespacecen_1_1log.html#aad84b2f3233c32ab0994cfa3320d5456">More...</a><br /></td></tr>
-<tr class="separator:aad84b2f3233c32ab0994cfa3320d5456"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7c5e63533246197722e78f9af2309c5"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:ad7c5e63533246197722e78f9af2309c5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecen_1_1log.html#ad7c5e63533246197722e78f9af2309c5">cen::log::debug</a> (const category category, const not_null&lt; czstring &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
-<tr class="memdesc:ad7c5e63533246197722e78f9af2309c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with <code><a class="el" href="namespacecen_1_1log.html#ac501138914acaf9fc6555b67628d6b9daad42f6697b035b7580e4fef93be20b4d">priority::debug</a></code> and the specified category.  <a href="namespacecen_1_1log.html#ad7c5e63533246197722e78f9af2309c5">More...</a><br /></td></tr>
-<tr class="separator:ad7c5e63533246197722e78f9af2309c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2858b6ecbdcf0244ec103543dc67cd92"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:a2858b6ecbdcf0244ec103543dc67cd92"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecen_1_1log.html#a2858b6ecbdcf0244ec103543dc67cd92">cen::log::debug</a> (const not_null&lt; czstring &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
-<tr class="memdesc:a2858b6ecbdcf0244ec103543dc67cd92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with <code><a class="el" href="namespacecen_1_1log.html#ac501138914acaf9fc6555b67628d6b9daad42f6697b035b7580e4fef93be20b4d">priority::debug</a></code> and <code><a class="el" href="namespacecen_1_1log.html#a532c798004d58c59f9564bdf28920eeead2a57dc1d883fd21fb9951699df71cc7">category::app</a></code>.  <a href="namespacecen_1_1log.html#a2858b6ecbdcf0244ec103543dc67cd92">More...</a><br /></td></tr>
-<tr class="separator:a2858b6ecbdcf0244ec103543dc67cd92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa0eb019eb5203f224bd16e6c133da64"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:afa0eb019eb5203f224bd16e6c133da64"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecen_1_1log.html#afa0eb019eb5203f224bd16e6c133da64">cen::log::critical</a> (const category category, const not_null&lt; czstring &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
-<tr class="memdesc:afa0eb019eb5203f224bd16e6c133da64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with <code><a class="el" href="namespacecen_1_1log.html#ac501138914acaf9fc6555b67628d6b9da7e85bcb66fb9a809d5ab4f62a8b8bea8">priority::critical</a></code> and the specified category.  <a href="namespacecen_1_1log.html#afa0eb019eb5203f224bd16e6c133da64">More...</a><br /></td></tr>
-<tr class="separator:afa0eb019eb5203f224bd16e6c133da64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54b95f153ded86556e4e2f6cd114c6c2"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:a54b95f153ded86556e4e2f6cd114c6c2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecen_1_1log.html#a54b95f153ded86556e4e2f6cd114c6c2">cen::log::critical</a> (const not_null&lt; czstring &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
-<tr class="memdesc:a54b95f153ded86556e4e2f6cd114c6c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with <code><a class="el" href="namespacecen_1_1log.html#ac501138914acaf9fc6555b67628d6b9da7e85bcb66fb9a809d5ab4f62a8b8bea8">priority::critical</a></code> and <code><a class="el" href="namespacecen_1_1log.html#a532c798004d58c59f9564bdf28920eeead2a57dc1d883fd21fb9951699df71cc7">category::app</a></code> .  <a href="namespacecen_1_1log.html#a54b95f153ded86556e4e2f6cd114c6c2">More...</a><br /></td></tr>
-<tr class="separator:a54b95f153ded86556e4e2f6cd114c6c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbf7cd4bfc4b547df61eeab684ba50c2"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:acbf7cd4bfc4b547df61eeab684ba50c2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecen_1_1log.html#acbf7cd4bfc4b547df61eeab684ba50c2">cen::log::error</a> (const category category, const czstring fmt, Args &amp;&amp;... args) noexcept</td></tr>
-<tr class="memdesc:acbf7cd4bfc4b547df61eeab684ba50c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with <code><a class="el" href="namespacecen_1_1log.html#ac501138914acaf9fc6555b67628d6b9dacb5e100e5a9a3e7f6d1fd97512215282">priority::error</a></code> and the specified category.  <a href="namespacecen_1_1log.html#acbf7cd4bfc4b547df61eeab684ba50c2">More...</a><br /></td></tr>
-<tr class="separator:acbf7cd4bfc4b547df61eeab684ba50c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45887157534b2b7076a003d5c388abf6"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:a45887157534b2b7076a003d5c388abf6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecen_1_1log.html#a45887157534b2b7076a003d5c388abf6">cen::log::error</a> (const not_null&lt; czstring &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
-<tr class="memdesc:a45887157534b2b7076a003d5c388abf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with the <code><a class="el" href="namespacecen_1_1log.html#ac501138914acaf9fc6555b67628d6b9dacb5e100e5a9a3e7f6d1fd97512215282">priority::error</a></code> and <code><a class="el" href="namespacecen_1_1log.html#a532c798004d58c59f9564bdf28920eeead2a57dc1d883fd21fb9951699df71cc7">category::app</a></code>.  <a href="namespacecen_1_1log.html#a45887157534b2b7076a003d5c388abf6">More...</a><br /></td></tr>
-<tr class="separator:a45887157534b2b7076a003d5c388abf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab901117d958b0aec7afe5972bac80a47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1log.html#ab901117d958b0aec7afe5972bac80a47">cen::log::put</a> (const std::string &amp;str) noexcept</td></tr>
-<tr class="memdesc:ab901117d958b0aec7afe5972bac80a47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a string.  <a href="namespacecen_1_1log.html#ab901117d958b0aec7afe5972bac80a47">More...</a><br /></td></tr>
-<tr class="separator:ab901117d958b0aec7afe5972bac80a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13de2185c8438c11661e8892d5bdcb2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1log.html#a13de2185c8438c11661e8892d5bdcb2a">cen::log::put</a> (const not_null&lt; czstring &gt; str) noexcept</td></tr>
-<tr class="memdesc:a13de2185c8438c11661e8892d5bdcb2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a string.  <a href="namespacecen_1_1log.html#a13de2185c8438c11661e8892d5bdcb2a">More...</a><br /></td></tr>
-<tr class="separator:a13de2185c8438c11661e8892d5bdcb2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c6a49a0bf8a79c4d3f4bd50ccc3fe3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1log.html#a2c6a49a0bf8a79c4d3f4bd50ccc3fe3e">cen::log::reset_priorities</a> () noexcept</td></tr>
-<tr class="memdesc:a2c6a49a0bf8a79c4d3f4bd50ccc3fe3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets all of the logging priorities.  <a href="namespacecen_1_1log.html#a2c6a49a0bf8a79c4d3f4bd50ccc3fe3e">More...</a><br /></td></tr>
-<tr class="separator:a2c6a49a0bf8a79c4d3f4bd50ccc3fe3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38f3d95d9d769923091c070d2f61dc79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1log.html#a38f3d95d9d769923091c070d2f61dc79">cen::log::set_priority</a> (const priority prio) noexcept</td></tr>
-<tr class="memdesc:a38f3d95d9d769923091c070d2f61dc79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the priority of all categories.  <a href="namespacecen_1_1log.html#a38f3d95d9d769923091c070d2f61dc79">More...</a><br /></td></tr>
-<tr class="separator:a38f3d95d9d769923091c070d2f61dc79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b5f137589999c9a508848e800cdaf22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1log.html#a0b5f137589999c9a508848e800cdaf22">cen::log::set_priority</a> (const category category, const priority prio) noexcept</td></tr>
-<tr class="memdesc:a0b5f137589999c9a508848e800cdaf22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the priority of the specified category.  <a href="namespacecen_1_1log.html#a0b5f137589999c9a508848e800cdaf22">More...</a><br /></td></tr>
-<tr class="separator:a0b5f137589999c9a508848e800cdaf22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae148934cc7dfe7cc1942a3a40177ebbd"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1log.html#ae148934cc7dfe7cc1942a3a40177ebbd">cen::log::get_priority</a> (const category category) noexcept -&gt; priority</td></tr>
-<tr class="memdesc:ae148934cc7dfe7cc1942a3a40177ebbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the priority of the specified category.  <a href="namespacecen_1_1log.html#ae148934cc7dfe7cc1942a3a40177ebbd">More...</a><br /></td></tr>
-<tr class="separator:ae148934cc7dfe7cc1942a3a40177ebbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73d3977d4425f366611f0b2f2e7c2405"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1log.html#a73d3977d4425f366611f0b2f2e7c2405">cen::log::max_message_size</a> () noexcept -&gt; int</td></tr>
-<tr class="memdesc:a73d3977d4425f366611f0b2f2e7c2405"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the maximum size, i.e the maximum amount of characters that a string can contain and successfully be logged without being truncated.  <a href="namespacecen_1_1log.html#a73d3977d4425f366611f0b2f2e7c2405">More...</a><br /></td></tr>
-<tr class="separator:a73d3977d4425f366611f0b2f2e7c2405"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02252fc6f4342445d566e1ebc3f1ac2a"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1log.html#a02252fc6f4342445d566e1ebc3f1ac2a">cen::log::operator==</a> (const priority lhs, const SDL_LogPriority rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:a02252fc6f4342445d566e1ebc3f1ac2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two log priorities values are the same.  <a href="namespacecen_1_1log.html#a02252fc6f4342445d566e1ebc3f1ac2a">More...</a><br /></td></tr>
-<tr class="separator:a02252fc6f4342445d566e1ebc3f1ac2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a658ebb309d42485e642d80b75e0abe2c"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1log.html#a658ebb309d42485e642d80b75e0abe2c">cen::log::operator==</a> (const SDL_LogPriority lhs, const priority rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:a658ebb309d42485e642d80b75e0abe2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two log priorities values are the same.  <a href="namespacecen_1_1log.html#a658ebb309d42485e642d80b75e0abe2c">More...</a><br /></td></tr>
-<tr class="separator:a658ebb309d42485e642d80b75e0abe2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2b13849b76c182e192c748b0429dda1"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1log.html#ac2b13849b76c182e192c748b0429dda1">cen::log::operator!=</a> (const priority lhs, const SDL_LogPriority rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ac2b13849b76c182e192c748b0429dda1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two log priorities values aren't the same.  <a href="namespacecen_1_1log.html#ac2b13849b76c182e192c748b0429dda1">More...</a><br /></td></tr>
-<tr class="separator:ac2b13849b76c182e192c748b0429dda1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9003d0f9d3f258adcbd4b13adc2b7708"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1log.html#a9003d0f9d3f258adcbd4b13adc2b7708">cen::log::operator!=</a> (const SDL_LogPriority lhs, const priority rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:a9003d0f9d3f258adcbd4b13adc2b7708"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two log priorities values aren't the same.  <a href="namespacecen_1_1log.html#a9003d0f9d3f258adcbd4b13adc2b7708">More...</a><br /></td></tr>
-<tr class="separator:a9003d0f9d3f258adcbd4b13adc2b7708"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06669279daedbb8ebcae3af7338e3ca0"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1log.html#a06669279daedbb8ebcae3af7338e3ca0">cen::log::operator==</a> (const category lhs, const SDL_LogCategory rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:a06669279daedbb8ebcae3af7338e3ca0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two log category values are the same.  <a href="namespacecen_1_1log.html#a06669279daedbb8ebcae3af7338e3ca0">More...</a><br /></td></tr>
-<tr class="separator:a06669279daedbb8ebcae3af7338e3ca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac62549775d04d96ff0d21ad2aaffae9e"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1log.html#ac62549775d04d96ff0d21ad2aaffae9e">cen::log::operator==</a> (const SDL_LogCategory lhs, const category rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ac62549775d04d96ff0d21ad2aaffae9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two log category values are the same.  <a href="namespacecen_1_1log.html#ac62549775d04d96ff0d21ad2aaffae9e">More...</a><br /></td></tr>
-<tr class="separator:ac62549775d04d96ff0d21ad2aaffae9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9e9bdd6970ec0e26e5f82aa505768e1"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1log.html#aa9e9bdd6970ec0e26e5f82aa505768e1">cen::log::operator!=</a> (const category lhs, const SDL_LogCategory rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:aa9e9bdd6970ec0e26e5f82aa505768e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two log category values are the same.  <a href="namespacecen_1_1log.html#aa9e9bdd6970ec0e26e5f82aa505768e1">More...</a><br /></td></tr>
-<tr class="separator:aa9e9bdd6970ec0e26e5f82aa505768e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1b9fbdec2e0b1b052b585629785b112"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1log.html#af1b9fbdec2e0b1b052b585629785b112">cen::log::operator!=</a> (const SDL_LogCategory lhs, const category rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:af1b9fbdec2e0b1b052b585629785b112"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two log category values are the same.  <a href="namespacecen_1_1log.html#af1b9fbdec2e0b1b052b585629785b112">More...</a><br /></td></tr>
-<tr class="separator:af1b9fbdec2e0b1b052b585629785b112"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga41ba5ae32529129a98d415f0abcb9a34"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:ga41ba5ae32529129a98d415f0abcb9a34"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga41ba5ae32529129a98d415f0abcb9a34">cen::log::msg</a> (const log_priority priority, const log_category category, const not_null&lt; czstring &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
+<tr class="memdesc:ga41ba5ae32529129a98d415f0abcb9a34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with the specified priority and category.  <a href="group__core.html#ga41ba5ae32529129a98d415f0abcb9a34">More...</a><br /></td></tr>
+<tr class="separator:ga41ba5ae32529129a98d415f0abcb9a34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gade61dd59932e5273e2442b8691a4fe14"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:gade61dd59932e5273e2442b8691a4fe14"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#gade61dd59932e5273e2442b8691a4fe14">cen::log::info</a> (const log_category category, const not_null&lt; czstring &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
+<tr class="memdesc:gade61dd59932e5273e2442b8691a4fe14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with <code>priority::info</code> and the specified category.  <a href="group__core.html#gade61dd59932e5273e2442b8691a4fe14">More...</a><br /></td></tr>
+<tr class="separator:gade61dd59932e5273e2442b8691a4fe14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5f21c8844d4cc7a49018aa8d6bc35fac"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:ga5f21c8844d4cc7a49018aa8d6bc35fac"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga5f21c8844d4cc7a49018aa8d6bc35fac">cen::log::info</a> (const not_null&lt; czstring &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
+<tr class="memdesc:ga5f21c8844d4cc7a49018aa8d6bc35fac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with <code>priority::info</code> and <code>category::app</code>.  <a href="group__core.html#ga5f21c8844d4cc7a49018aa8d6bc35fac">More...</a><br /></td></tr>
+<tr class="separator:ga5f21c8844d4cc7a49018aa8d6bc35fac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga65e665db41c65b67e9eca0c10aba0d54"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:ga65e665db41c65b67e9eca0c10aba0d54"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga65e665db41c65b67e9eca0c10aba0d54">cen::log::warn</a> (const log_category category, const not_null&lt; czstring &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
+<tr class="memdesc:ga65e665db41c65b67e9eca0c10aba0d54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with <code>priority::warn</code> and the specified category.  <a href="group__core.html#ga65e665db41c65b67e9eca0c10aba0d54">More...</a><br /></td></tr>
+<tr class="separator:ga65e665db41c65b67e9eca0c10aba0d54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadcd98acb2c7f7efe09ed98d8b0067400"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:gadcd98acb2c7f7efe09ed98d8b0067400"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#gadcd98acb2c7f7efe09ed98d8b0067400">cen::log::warn</a> (const not_null&lt; czstring &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
+<tr class="memdesc:gadcd98acb2c7f7efe09ed98d8b0067400"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with <code>priority::warn</code> and <code>category::app</code>.  <a href="group__core.html#gadcd98acb2c7f7efe09ed98d8b0067400">More...</a><br /></td></tr>
+<tr class="separator:gadcd98acb2c7f7efe09ed98d8b0067400"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf6c0ead6e900adb312e4f9670b25ad2b"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:gaf6c0ead6e900adb312e4f9670b25ad2b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#gaf6c0ead6e900adb312e4f9670b25ad2b">cen::log::verbose</a> (const log_category category, const not_null&lt; czstring &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
+<tr class="memdesc:gaf6c0ead6e900adb312e4f9670b25ad2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with <code>priority::verbose</code> and the specified category.  <a href="group__core.html#gaf6c0ead6e900adb312e4f9670b25ad2b">More...</a><br /></td></tr>
+<tr class="separator:gaf6c0ead6e900adb312e4f9670b25ad2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaad84b2f3233c32ab0994cfa3320d5456"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:gaad84b2f3233c32ab0994cfa3320d5456"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#gaad84b2f3233c32ab0994cfa3320d5456">cen::log::verbose</a> (const not_null&lt; czstring &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
+<tr class="memdesc:gaad84b2f3233c32ab0994cfa3320d5456"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with <code>priority::verbose</code> and <code>category::app</code>.  <a href="group__core.html#gaad84b2f3233c32ab0994cfa3320d5456">More...</a><br /></td></tr>
+<tr class="separator:gaad84b2f3233c32ab0994cfa3320d5456"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadfb0045da7506b622ebf058fa740a352"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:gadfb0045da7506b622ebf058fa740a352"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#gadfb0045da7506b622ebf058fa740a352">cen::log::debug</a> (const log_category category, const not_null&lt; czstring &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
+<tr class="memdesc:gadfb0045da7506b622ebf058fa740a352"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with <code>priority::debug</code> and the specified category.  <a href="group__core.html#gadfb0045da7506b622ebf058fa740a352">More...</a><br /></td></tr>
+<tr class="separator:gadfb0045da7506b622ebf058fa740a352"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2858b6ecbdcf0244ec103543dc67cd92"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:ga2858b6ecbdcf0244ec103543dc67cd92"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga2858b6ecbdcf0244ec103543dc67cd92">cen::log::debug</a> (const not_null&lt; czstring &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
+<tr class="memdesc:ga2858b6ecbdcf0244ec103543dc67cd92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with <code>priority::debug</code> and <code>category::app</code>.  <a href="group__core.html#ga2858b6ecbdcf0244ec103543dc67cd92">More...</a><br /></td></tr>
+<tr class="separator:ga2858b6ecbdcf0244ec103543dc67cd92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga39c273922d2cbceaf98af455ce6d612f"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:ga39c273922d2cbceaf98af455ce6d612f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga39c273922d2cbceaf98af455ce6d612f">cen::log::critical</a> (const log_category category, const not_null&lt; czstring &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
+<tr class="memdesc:ga39c273922d2cbceaf98af455ce6d612f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with <code>priority::critical</code> and the specified category.  <a href="group__core.html#ga39c273922d2cbceaf98af455ce6d612f">More...</a><br /></td></tr>
+<tr class="separator:ga39c273922d2cbceaf98af455ce6d612f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga54b95f153ded86556e4e2f6cd114c6c2"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:ga54b95f153ded86556e4e2f6cd114c6c2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga54b95f153ded86556e4e2f6cd114c6c2">cen::log::critical</a> (const not_null&lt; czstring &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
+<tr class="memdesc:ga54b95f153ded86556e4e2f6cd114c6c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with <code>priority::critical</code> and <code>category::app</code> .  <a href="group__core.html#ga54b95f153ded86556e4e2f6cd114c6c2">More...</a><br /></td></tr>
+<tr class="separator:ga54b95f153ded86556e4e2f6cd114c6c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac18f2b4a4c1d6fb4f50e09c7677a2671"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:gac18f2b4a4c1d6fb4f50e09c7677a2671"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#gac18f2b4a4c1d6fb4f50e09c7677a2671">cen::log::error</a> (const log_category category, const czstring fmt, Args &amp;&amp;... args) noexcept</td></tr>
+<tr class="memdesc:gac18f2b4a4c1d6fb4f50e09c7677a2671"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with <code>priority::error</code> and the specified category.  <a href="group__core.html#gac18f2b4a4c1d6fb4f50e09c7677a2671">More...</a><br /></td></tr>
+<tr class="separator:gac18f2b4a4c1d6fb4f50e09c7677a2671"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga45887157534b2b7076a003d5c388abf6"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:ga45887157534b2b7076a003d5c388abf6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga45887157534b2b7076a003d5c388abf6">cen::log::error</a> (const not_null&lt; czstring &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
+<tr class="memdesc:ga45887157534b2b7076a003d5c388abf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with the <code>priority::error</code> and <code>category::app</code>.  <a href="group__core.html#ga45887157534b2b7076a003d5c388abf6">More...</a><br /></td></tr>
+<tr class="separator:ga45887157534b2b7076a003d5c388abf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab901117d958b0aec7afe5972bac80a47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#gab901117d958b0aec7afe5972bac80a47">cen::log::put</a> (const std::string &amp;str) noexcept</td></tr>
+<tr class="memdesc:gab901117d958b0aec7afe5972bac80a47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a string.  <a href="group__core.html#gab901117d958b0aec7afe5972bac80a47">More...</a><br /></td></tr>
+<tr class="separator:gab901117d958b0aec7afe5972bac80a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga13de2185c8438c11661e8892d5bdcb2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga13de2185c8438c11661e8892d5bdcb2a">cen::log::put</a> (const not_null&lt; czstring &gt; str) noexcept</td></tr>
+<tr class="memdesc:ga13de2185c8438c11661e8892d5bdcb2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a string.  <a href="group__core.html#ga13de2185c8438c11661e8892d5bdcb2a">More...</a><br /></td></tr>
+<tr class="separator:ga13de2185c8438c11661e8892d5bdcb2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2c6a49a0bf8a79c4d3f4bd50ccc3fe3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga2c6a49a0bf8a79c4d3f4bd50ccc3fe3e">cen::log::reset_priorities</a> () noexcept</td></tr>
+<tr class="memdesc:ga2c6a49a0bf8a79c4d3f4bd50ccc3fe3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets all of the logging priorities.  <a href="group__core.html#ga2c6a49a0bf8a79c4d3f4bd50ccc3fe3e">More...</a><br /></td></tr>
+<tr class="separator:ga2c6a49a0bf8a79c4d3f4bd50ccc3fe3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga67d98c104b501a4f8c49c3790d2f1a57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga67d98c104b501a4f8c49c3790d2f1a57">cen::log::set_priority</a> (const log_priority priority) noexcept</td></tr>
+<tr class="memdesc:ga67d98c104b501a4f8c49c3790d2f1a57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the priority of all categories.  <a href="group__core.html#ga67d98c104b501a4f8c49c3790d2f1a57">More...</a><br /></td></tr>
+<tr class="separator:ga67d98c104b501a4f8c49c3790d2f1a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga24cb37c6e03197bd2ddf20f7a43c3e99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga24cb37c6e03197bd2ddf20f7a43c3e99">cen::log::set_priority</a> (const log_category category, const log_priority priority) noexcept</td></tr>
+<tr class="memdesc:ga24cb37c6e03197bd2ddf20f7a43c3e99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the priority of the specified category.  <a href="group__core.html#ga24cb37c6e03197bd2ddf20f7a43c3e99">More...</a><br /></td></tr>
+<tr class="separator:ga24cb37c6e03197bd2ddf20f7a43c3e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0e8d419318fe88bbd41b5e4ece6b5b8d"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga0e8d419318fe88bbd41b5e4ece6b5b8d">cen::log::get_priority</a> (const log_category category) noexcept -&gt; log_priority</td></tr>
+<tr class="memdesc:ga0e8d419318fe88bbd41b5e4ece6b5b8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the priority of the specified category.  <a href="group__core.html#ga0e8d419318fe88bbd41b5e4ece6b5b8d">More...</a><br /></td></tr>
+<tr class="separator:ga0e8d419318fe88bbd41b5e4ece6b5b8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga73d3977d4425f366611f0b2f2e7c2405"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga73d3977d4425f366611f0b2f2e7c2405">cen::log::max_message_size</a> () noexcept -&gt; int</td></tr>
+<tr class="memdesc:ga73d3977d4425f366611f0b2f2e7c2405"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the maximum size, i.e the maximum amount of characters that a string can contain and successfully be logged without being truncated.  <a href="group__core.html#ga73d3977d4425f366611f0b2f2e7c2405">More...</a><br /></td></tr>
+<tr class="separator:ga73d3977d4425f366611f0b2f2e7c2405"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf6e461d22ae78238e801b9367b8b4a2c"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#gaf6e461d22ae78238e801b9367b8b4a2c">cen::operator==</a> (const log_priority lhs, const SDL_LogPriority rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:gaf6e461d22ae78238e801b9367b8b4a2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two log priorities values are the same.  <a href="group__core.html#gaf6e461d22ae78238e801b9367b8b4a2c">More...</a><br /></td></tr>
+<tr class="separator:gaf6e461d22ae78238e801b9367b8b4a2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga343e7daaacd57073420d714796291393"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga343e7daaacd57073420d714796291393">cen::operator==</a> (const SDL_LogPriority lhs, const log_priority rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga343e7daaacd57073420d714796291393"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two log priorities values are the same.  <a href="group__core.html#ga343e7daaacd57073420d714796291393">More...</a><br /></td></tr>
+<tr class="separator:ga343e7daaacd57073420d714796291393"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2aa32fcee319fe760f0c24c936a48230"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga2aa32fcee319fe760f0c24c936a48230">cen::operator!=</a> (const log_priority lhs, const SDL_LogPriority rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga2aa32fcee319fe760f0c24c936a48230"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two log priorities values aren't the same.  <a href="group__core.html#ga2aa32fcee319fe760f0c24c936a48230">More...</a><br /></td></tr>
+<tr class="separator:ga2aa32fcee319fe760f0c24c936a48230"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga99b6c84f5e3b19b1bfc1ceaa62fd17da"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga99b6c84f5e3b19b1bfc1ceaa62fd17da">cen::operator!=</a> (const SDL_LogPriority lhs, const log_priority rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga99b6c84f5e3b19b1bfc1ceaa62fd17da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two log priorities values aren't the same.  <a href="group__core.html#ga99b6c84f5e3b19b1bfc1ceaa62fd17da">More...</a><br /></td></tr>
+<tr class="separator:ga99b6c84f5e3b19b1bfc1ceaa62fd17da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga982f1cbb4e415a203e6ebfd308e70771"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga982f1cbb4e415a203e6ebfd308e70771">cen::operator==</a> (const log_category lhs, const SDL_LogCategory rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga982f1cbb4e415a203e6ebfd308e70771"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two log category values are the same.  <a href="group__core.html#ga982f1cbb4e415a203e6ebfd308e70771">More...</a><br /></td></tr>
+<tr class="separator:ga982f1cbb4e415a203e6ebfd308e70771"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeb23156280d35536a6130f09762407a5"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#gaeb23156280d35536a6130f09762407a5">cen::operator==</a> (const SDL_LogCategory lhs, const log_category rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:gaeb23156280d35536a6130f09762407a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two log category values are the same.  <a href="group__core.html#gaeb23156280d35536a6130f09762407a5">More...</a><br /></td></tr>
+<tr class="separator:gaeb23156280d35536a6130f09762407a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5b552e7c88bfe0236d6115d6bd1b801c"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga5b552e7c88bfe0236d6115d6bd1b801c">cen::operator!=</a> (const log_category lhs, const SDL_LogCategory rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga5b552e7c88bfe0236d6115d6bd1b801c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two log category values are the same.  <a href="group__core.html#ga5b552e7c88bfe0236d6115d6bd1b801c">More...</a><br /></td></tr>
+<tr class="separator:ga5b552e7c88bfe0236d6115d6bd1b801c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga07f0a68789800cfd82da0eea92257101"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga07f0a68789800cfd82da0eea92257101">cen::operator!=</a> (const SDL_LogCategory lhs, const log_category rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga07f0a68789800cfd82da0eea92257101"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two log category values are the same.  <a href="group__core.html#ga07f0a68789800cfd82da0eea92257101">More...</a><br /></td></tr>
+<tr class="separator:ga07f0a68789800cfd82da0eea92257101"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

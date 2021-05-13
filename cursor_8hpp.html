@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/cursor.hpp File Reference</title>
+        <title>Centurion: src/centurion/video/cursor.hpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_b630b0fc10333b78f2ff60d8d1210ae7.html">video</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -93,17 +93,14 @@ $(function() {
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
 <div class="title">cursor.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;SDL.h&gt;</code><br />
-<code>#include &lt;type_traits&gt;</code><br />
-<code>#include &quot;<a class="el" href="centurion__cfg_8hpp_source.html">centurion_cfg.hpp</a>&quot;</code><br />
-<code>#include &quot;detail/owner_handle_api.hpp&quot;</code><br />
-<code>#include &quot;<a class="el" href="point_8hpp_source.html">point.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="owner__handle__api_8hpp_source.html">../detail/owner_handle_api.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="point_8hpp_source.html">../math/point.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="surface_8hpp_source.html">surface.hpp</a>&quot;</code><br />
 </div>
 <p><a href="cursor_8hpp_source.html">Go to the source code of this file.</a></p>
@@ -125,57 +122,57 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ga180cff5e670804c3ba3f2b2b0f6c34dd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#ga180cff5e670804c3ba3f2b2b0f6c34dd">cen::cursor</a> = basic_cursor&lt; std::true_type &gt;</td></tr>
-<tr class="memdesc:ga180cff5e670804c3ba3f2b2b0f6c34dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an owning cursor.  <a href="group__graphics.html#ga180cff5e670804c3ba3f2b2b0f6c34dd">More...</a><br /></td></tr>
+<tr class="memitem:ga180cff5e670804c3ba3f2b2b0f6c34dd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga180cff5e670804c3ba3f2b2b0f6c34dd">cen::cursor</a> = basic_cursor&lt; detail::owning_type &gt;</td></tr>
+<tr class="memdesc:ga180cff5e670804c3ba3f2b2b0f6c34dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an owning cursor.  <a href="group__video.html#ga180cff5e670804c3ba3f2b2b0f6c34dd">More...</a><br /></td></tr>
 <tr class="separator:ga180cff5e670804c3ba3f2b2b0f6c34dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga569144087c06cf7afecce394d1102fac"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#ga569144087c06cf7afecce394d1102fac">cen::cursor_handle</a> = basic_cursor&lt; std::false_type &gt;</td></tr>
-<tr class="memdesc:ga569144087c06cf7afecce394d1102fac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a non-owning cursor.  <a href="group__graphics.html#ga569144087c06cf7afecce394d1102fac">More...</a><br /></td></tr>
+<tr class="memitem:ga569144087c06cf7afecce394d1102fac"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga569144087c06cf7afecce394d1102fac">cen::cursor_handle</a> = basic_cursor&lt; detail::handle_type &gt;</td></tr>
+<tr class="memdesc:ga569144087c06cf7afecce394d1102fac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a non-owning cursor.  <a href="group__video.html#ga569144087c06cf7afecce394d1102fac">More...</a><br /></td></tr>
 <tr class="separator:ga569144087c06cf7afecce394d1102fac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:gae9a235b363a989632da847a0678cf0b8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#gae9a235b363a989632da847a0678cf0b8">cen::system_cursor</a> { <br />
-&#160;&#160;<a class="el" href="group__graphics.html#ggae9a235b363a989632da847a0678cf0b8a9022a153e6190f10d9b57aa4232b8aea">cen::system_cursor::arrow</a> = SDL_SYSTEM_CURSOR_ARROW, 
+<tr class="memitem:gae9a235b363a989632da847a0678cf0b8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#gae9a235b363a989632da847a0678cf0b8">cen::system_cursor</a> { <br />
+&#160;&#160;<a class="el" href="group__video.html#ggae9a235b363a989632da847a0678cf0b8a9022a153e6190f10d9b57aa4232b8aea">cen::system_cursor::arrow</a> = SDL_SYSTEM_CURSOR_ARROW, 
 <br />
-&#160;&#160;<a class="el" href="group__graphics.html#ggae9a235b363a989632da847a0678cf0b8a67d5a92fabc2cc76f7cc53a8d1a0f722">cen::system_cursor::ibeam</a> = SDL_SYSTEM_CURSOR_IBEAM, 
+&#160;&#160;<a class="el" href="group__video.html#ggae9a235b363a989632da847a0678cf0b8a67d5a92fabc2cc76f7cc53a8d1a0f722">cen::system_cursor::ibeam</a> = SDL_SYSTEM_CURSOR_IBEAM, 
 <br />
-&#160;&#160;<a class="el" href="group__graphics.html#ggae9a235b363a989632da847a0678cf0b8a49256b9819abacbb8e6e031a03abe81b">cen::system_cursor::wait</a> = SDL_SYSTEM_CURSOR_WAIT, 
+&#160;&#160;<a class="el" href="group__video.html#ggae9a235b363a989632da847a0678cf0b8a49256b9819abacbb8e6e031a03abe81b">cen::system_cursor::wait</a> = SDL_SYSTEM_CURSOR_WAIT, 
 <br />
-&#160;&#160;<a class="el" href="group__graphics.html#ggae9a235b363a989632da847a0678cf0b8aad90324c60706e26f566f84a1b1f55b0">cen::system_cursor::crosshair</a> = SDL_SYSTEM_CURSOR_CROSSHAIR, 
+&#160;&#160;<a class="el" href="group__video.html#ggae9a235b363a989632da847a0678cf0b8aad90324c60706e26f566f84a1b1f55b0">cen::system_cursor::crosshair</a> = SDL_SYSTEM_CURSOR_CROSSHAIR, 
 <br />
-&#160;&#160;<a class="el" href="group__graphics.html#ggae9a235b363a989632da847a0678cf0b8a392f72ce825fc74a94f980e6efbfd8fb">cen::system_cursor::wait_arrow</a> = SDL_SYSTEM_CURSOR_WAITARROW, 
+&#160;&#160;<a class="el" href="group__video.html#ggae9a235b363a989632da847a0678cf0b8a392f72ce825fc74a94f980e6efbfd8fb">cen::system_cursor::wait_arrow</a> = SDL_SYSTEM_CURSOR_WAITARROW, 
 <br />
-&#160;&#160;<a class="el" href="group__graphics.html#ggae9a235b363a989632da847a0678cf0b8a031b1cce319cecb313670820dc625375">cen::system_cursor::arrow_nw_se</a> = SDL_SYSTEM_CURSOR_SIZENWSE, 
+&#160;&#160;<a class="el" href="group__video.html#ggae9a235b363a989632da847a0678cf0b8a031b1cce319cecb313670820dc625375">cen::system_cursor::arrow_nw_se</a> = SDL_SYSTEM_CURSOR_SIZENWSE, 
 <br />
-&#160;&#160;<a class="el" href="group__graphics.html#ggae9a235b363a989632da847a0678cf0b8aa7ce73ff86e1745ee2a9c1366e9bd649">cen::system_cursor::arrow_ne_sw</a> = SDL_SYSTEM_CURSOR_SIZENESW, 
+&#160;&#160;<a class="el" href="group__video.html#ggae9a235b363a989632da847a0678cf0b8aa7ce73ff86e1745ee2a9c1366e9bd649">cen::system_cursor::arrow_ne_sw</a> = SDL_SYSTEM_CURSOR_SIZENESW, 
 <br />
-&#160;&#160;<a class="el" href="group__graphics.html#ggae9a235b363a989632da847a0678cf0b8a362dc17a18cc27709172665e8a030028">cen::system_cursor::arrow_w_e</a> = SDL_SYSTEM_CURSOR_SIZEWE, 
+&#160;&#160;<a class="el" href="group__video.html#ggae9a235b363a989632da847a0678cf0b8a362dc17a18cc27709172665e8a030028">cen::system_cursor::arrow_w_e</a> = SDL_SYSTEM_CURSOR_SIZEWE, 
 <br />
-&#160;&#160;<a class="el" href="group__graphics.html#ggae9a235b363a989632da847a0678cf0b8a1d543e9e6c3948ff7138b416366bfeb1">cen::system_cursor::arrow_n_s</a> = SDL_SYSTEM_CURSOR_SIZENS, 
+&#160;&#160;<a class="el" href="group__video.html#ggae9a235b363a989632da847a0678cf0b8a1d543e9e6c3948ff7138b416366bfeb1">cen::system_cursor::arrow_n_s</a> = SDL_SYSTEM_CURSOR_SIZENS, 
 <br />
-&#160;&#160;<a class="el" href="group__graphics.html#ggae9a235b363a989632da847a0678cf0b8a4da09870a9c37d3d6d6155336aa1b4ca">cen::system_cursor::arrow_all</a> = SDL_SYSTEM_CURSOR_SIZEALL, 
+&#160;&#160;<a class="el" href="group__video.html#ggae9a235b363a989632da847a0678cf0b8a4da09870a9c37d3d6d6155336aa1b4ca">cen::system_cursor::arrow_all</a> = SDL_SYSTEM_CURSOR_SIZEALL, 
 <br />
-&#160;&#160;<a class="el" href="group__graphics.html#ggae9a235b363a989632da847a0678cf0b8a7fa3b767c460b54a2be4d49030b349c7">cen::system_cursor::no</a> = SDL_SYSTEM_CURSOR_NO, 
+&#160;&#160;<a class="el" href="group__video.html#ggae9a235b363a989632da847a0678cf0b8a7fa3b767c460b54a2be4d49030b349c7">cen::system_cursor::no</a> = SDL_SYSTEM_CURSOR_NO, 
 <br />
-&#160;&#160;<a class="el" href="group__graphics.html#ggae9a235b363a989632da847a0678cf0b8a573ce5969e9884d49d4fab77b09a306a">cen::system_cursor::hand</a> = SDL_SYSTEM_CURSOR_HAND
+&#160;&#160;<a class="el" href="group__video.html#ggae9a235b363a989632da847a0678cf0b8a573ce5969e9884d49d4fab77b09a306a">cen::system_cursor::hand</a> = SDL_SYSTEM_CURSOR_HAND
 <br />
  }</td></tr>
-<tr class="memdesc:gae9a235b363a989632da847a0678cf0b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the various available system cursors.  <a href="group__graphics.html#gae9a235b363a989632da847a0678cf0b8">More...</a><br /></td></tr>
+<tr class="memdesc:gae9a235b363a989632da847a0678cf0b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the various available system cursors.  <a href="group__video.html#gae9a235b363a989632da847a0678cf0b8">More...</a><br /></td></tr>
 <tr class="separator:gae9a235b363a989632da847a0678cf0b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:gaf72e6db4c11d08297377734e50554c1d"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#gaf72e6db4c11d08297377734e50554c1d">cen::operator==</a> (const system_cursor lhs, const SDL_SystemCursor rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:gaf72e6db4c11d08297377734e50554c1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two system cursor values are the same.  <a href="group__graphics.html#gaf72e6db4c11d08297377734e50554c1d">More...</a><br /></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Cursor comparison operators</h2></td></tr>
+<tr class="memitem:gaf72e6db4c11d08297377734e50554c1d"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#gaf72e6db4c11d08297377734e50554c1d">cen::operator==</a> (const system_cursor lhs, const SDL_SystemCursor rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:gaf72e6db4c11d08297377734e50554c1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two system cursor values are the same.  <a href="group__video.html#gaf72e6db4c11d08297377734e50554c1d">More...</a><br /></td></tr>
 <tr class="separator:gaf72e6db4c11d08297377734e50554c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaba3678070ca855e45254e7e8748e0e4c"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#gaba3678070ca855e45254e7e8748e0e4c">cen::operator==</a> (const SDL_SystemCursor lhs, const system_cursor rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:gaba3678070ca855e45254e7e8748e0e4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two system cursor values are the same.  <a href="group__graphics.html#gaba3678070ca855e45254e7e8748e0e4c">More...</a><br /></td></tr>
+<tr class="memitem:gaba3678070ca855e45254e7e8748e0e4c"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#gaba3678070ca855e45254e7e8748e0e4c">cen::operator==</a> (const SDL_SystemCursor lhs, const system_cursor rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:gaba3678070ca855e45254e7e8748e0e4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two system cursor values are the same.  <a href="group__video.html#gaba3678070ca855e45254e7e8748e0e4c">More...</a><br /></td></tr>
 <tr class="separator:gaba3678070ca855e45254e7e8748e0e4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7d04ad5ba9df22f3738e4bc7485fe6b5"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#ga7d04ad5ba9df22f3738e4bc7485fe6b5">cen::operator!=</a> (const system_cursor lhs, const SDL_SystemCursor rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga7d04ad5ba9df22f3738e4bc7485fe6b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two system cursor values aren't the same.  <a href="group__graphics.html#ga7d04ad5ba9df22f3738e4bc7485fe6b5">More...</a><br /></td></tr>
+<tr class="memitem:ga7d04ad5ba9df22f3738e4bc7485fe6b5"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga7d04ad5ba9df22f3738e4bc7485fe6b5">cen::operator!=</a> (const system_cursor lhs, const SDL_SystemCursor rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga7d04ad5ba9df22f3738e4bc7485fe6b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two system cursor values aren't the same.  <a href="group__video.html#ga7d04ad5ba9df22f3738e4bc7485fe6b5">More...</a><br /></td></tr>
 <tr class="separator:ga7d04ad5ba9df22f3738e4bc7485fe6b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac8284aed61e0388a584951a8cf208b37"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#gac8284aed61e0388a584951a8cf208b37">cen::operator!=</a> (const SDL_SystemCursor lhs, const system_cursor rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:gac8284aed61e0388a584951a8cf208b37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two system cursor values aren't the same.  <a href="group__graphics.html#gac8284aed61e0388a584951a8cf208b37">More...</a><br /></td></tr>
+<tr class="memitem:gac8284aed61e0388a584951a8cf208b37"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#gac8284aed61e0388a584951a8cf208b37">cen::operator!=</a> (const SDL_SystemCursor lhs, const system_cursor rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:gac8284aed61e0388a584951a8cf208b37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two system cursor values aren't the same.  <a href="group__video.html#gac8284aed61e0388a584951a8cf208b37">More...</a><br /></td></tr>
 <tr class="separator:gac8284aed61e0388a584951a8cf208b37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

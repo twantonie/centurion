@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/controller.hpp File Reference</title>
+        <title>Centurion: src/centurion/input/controller.hpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_7cbddb6c5dd5dfebc4ed1b9c679e311f.html">input</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -106,20 +106,21 @@ $(function() {
 <code>#include &lt;optional&gt;</code><br />
 <code>#include &lt;ostream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
-<code>#include &lt;type_traits&gt;</code><br />
+<code>#include &quot;<a class="el" href="czstring_8hpp_source.html">../core/czstring.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="exception_8hpp_source.html">../core/exception.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="integers_8hpp_source.html">../core/integers.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="not__null_8hpp_source.html">../core/not_null.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="owner_8hpp_source.html">../core/owner.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="result_8hpp_source.html">../core/result.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="sdl__string_8hpp_source.html">../core/sdl_string.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="time_8hpp_source.html">../core/time.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="address__of_8hpp_source.html">../detail/address_of.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="owner__handle__api_8hpp_source.html">../detail/owner_handle_api.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="sdl__version__at__least_8hpp_source.html">../detail/sdl_version_at_least.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="color_8hpp_source.html">../video/color.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="button__state_8hpp_source.html">button_state.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="centurion__cfg_8hpp_source.html">centurion_cfg.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="color_8hpp_source.html">color.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="czstring_8hpp_source.html">czstring.hpp</a>&quot;</code><br />
-<code>#include &quot;detail/address_of.hpp&quot;</code><br />
-<code>#include &quot;detail/owner_handle_api.hpp&quot;</code><br />
-<code>#include &quot;<a class="el" href="exception_8hpp_source.html">exception.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="integers_8hpp_source.html">integers.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="joystick_8hpp_source.html">joystick.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="not__null_8hpp_source.html">not_null.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="sdl__string_8hpp_source.html">sdl_string.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="sensor_8hpp_source.html">sensor.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="time_8hpp_source.html">time.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="touch_8hpp_source.html">touch.hpp</a>&quot;</code><br />
 </div>
 <p><a href="controller_8hpp_source.html">Go to the source code of this file.</a></p>
@@ -127,10 +128,10 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html">cen::basic_controller</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a game controller, e.g. an xbox-controller.  <a href="classcen_1_1basic__controller.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a game controller, e.g. Xbox or Playstation controllers.  <a href="classcen_1_1basic__controller.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html">cen::basic_controller</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a game controller, e.g. an xbox-controller.  <a href="classcen_1_1basic__controller.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a game controller, e.g. Xbox or Playstation controllers.  <a href="classcen_1_1basic__controller.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -141,15 +142,35 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:gaf9e877696febb889dfde2343a21764a7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#gaf9e877696febb889dfde2343a21764a7">cen::controller</a> = basic_controller&lt; std::true_type &gt;</td></tr>
+<tr class="memitem:gaf9e877696febb889dfde2343a21764a7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#gaf9e877696febb889dfde2343a21764a7">cen::controller</a> = basic_controller&lt; detail::owning_type &gt;</td></tr>
 <tr class="memdesc:gaf9e877696febb889dfde2343a21764a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an owning game controller.  <a href="group__input.html#gaf9e877696febb889dfde2343a21764a7">More...</a><br /></td></tr>
 <tr class="separator:gaf9e877696febb889dfde2343a21764a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1476814bb2dcf0ff6e37af4dbe5736bd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga1476814bb2dcf0ff6e37af4dbe5736bd">cen::controller_handle</a> = basic_controller&lt; std::false_type &gt;</td></tr>
+<tr class="memitem:ga1476814bb2dcf0ff6e37af4dbe5736bd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga1476814bb2dcf0ff6e37af4dbe5736bd">cen::controller_handle</a> = basic_controller&lt; detail::handle_type &gt;</td></tr>
 <tr class="memdesc:ga1476814bb2dcf0ff6e37af4dbe5736bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a non-owning game controller.  <a href="group__input.html#ga1476814bb2dcf0ff6e37af4dbe5736bd">More...</a><br /></td></tr>
 <tr class="separator:ga1476814bb2dcf0ff6e37af4dbe5736bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
+<tr class="memitem:gafe17aeb9f1085c0ab6485aae5aafc9f6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#gafe17aeb9f1085c0ab6485aae5aafc9f6">cen::controller_type</a> { <br />
+&#160;&#160;<a class="el" href="group__input.html#ggafe17aeb9f1085c0ab6485aae5aafc9f6aad921d60486366258809553a3db49a4a">cen::controller_type::unknown</a> = SDL_CONTROLLER_TYPE_UNKNOWN, 
+<br />
+&#160;&#160;<a class="el" href="group__input.html#ggafe17aeb9f1085c0ab6485aae5aafc9f6ad832fe12d87955c22740227fdef2a51d">cen::controller_type::xbox_360</a> = SDL_CONTROLLER_TYPE_XBOX360, 
+<br />
+&#160;&#160;<a class="el" href="group__input.html#ggafe17aeb9f1085c0ab6485aae5aafc9f6a03a3abe103e367f553e8f0505858cfdf">cen::controller_type::xbox_one</a> = SDL_CONTROLLER_TYPE_XBOXONE, 
+<br />
+&#160;&#160;<a class="el" href="group__input.html#ggafe17aeb9f1085c0ab6485aae5aafc9f6a5260b615ca0c10c06eace91395139b0e">cen::controller_type::ps3</a> = SDL_CONTROLLER_TYPE_PS3, 
+<br />
+&#160;&#160;<a class="el" href="group__input.html#ggafe17aeb9f1085c0ab6485aae5aafc9f6a0e740342f31e9aa65ae671ea1ec61413">cen::controller_type::ps4</a> = SDL_CONTROLLER_TYPE_PS4, 
+<br />
+&#160;&#160;<a class="el" href="group__input.html#ggafe17aeb9f1085c0ab6485aae5aafc9f6a458a2eb0daa8654a68c39ef768141728">cen::controller_type::ps5</a> = SDL_CONTROLLER_TYPE_PS5, 
+<br />
+&#160;&#160;<a class="el" href="group__input.html#ggafe17aeb9f1085c0ab6485aae5aafc9f6aa385e96c9dcb7d1865a718934a8798fc">cen::controller_type::virt</a> = SDL_CONTROLLER_TYPE_VIRTUAL, 
+<br />
+&#160;&#160;<a class="el" href="group__input.html#ggafe17aeb9f1085c0ab6485aae5aafc9f6a416a664e5e911567eda0b225221c2708">cen::controller_type::nintendo_switch_pro</a> = SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_PRO
+<br />
+ }</td></tr>
+<tr class="memdesc:gafe17aeb9f1085c0ab6485aae5aafc9f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents different game controller types.  <a href="group__input.html#gafe17aeb9f1085c0ab6485aae5aafc9f6">More...</a><br /></td></tr>
+<tr class="separator:gafe17aeb9f1085c0ab6485aae5aafc9f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1e58560c3414740db4b3f78929e9ddc3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga1e58560c3414740db4b3f78929e9ddc3">cen::controller_axis</a> { <br />
 &#160;&#160;<a class="el" href="group__input.html#gga1e58560c3414740db4b3f78929e9ddc3afedb2d84cafe20862cb4399751a8a7e3">cen::controller_axis::invalid</a> = SDL_CONTROLLER_AXIS_INVALID, 
 <br />
@@ -168,7 +189,7 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="group__input.html#gga1e58560c3414740db4b3f78929e9ddc3a2ffe4e77325d9a7152f7086ea7aa5114">cen::controller_axis::max</a> = SDL_CONTROLLER_AXIS_MAX
 <br />
  }</td></tr>
-<tr class="memdesc:ga1e58560c3414740db4b3f78929e9ddc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mirrors the values of the <code>SDL_GameControllerAxis</code> enum.  <a href="group__input.html#ga1e58560c3414740db4b3f78929e9ddc3">More...</a><br /></td></tr>
+<tr class="memdesc:ga1e58560c3414740db4b3f78929e9ddc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents different game controller axes.  <a href="group__input.html#ga1e58560c3414740db4b3f78929e9ddc3">More...</a><br /></td></tr>
 <tr class="separator:ga1e58560c3414740db4b3f78929e9ddc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gadeba7b364c5b4830cc2c8e2541e334b2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">cen::controller_button</a> { <br />
 &#160;&#160;<a class="el" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2afedb2d84cafe20862cb4399751a8a7e3">cen::controller_button::invalid</a> = SDL_CONTROLLER_BUTTON_INVALID, 
@@ -203,10 +224,22 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2ab0c048a3ced53c0689bc37cbc80ee742">cen::controller_button::dpad_right</a> = SDL_CONTROLLER_BUTTON_DPAD_RIGHT, 
 <br />
+&#160;&#160;<a class="el" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a97771c2b239c9a6c28bfdba6e6af0494">cen::controller_button::misc1</a> = SDL_CONTROLLER_BUTTON_MISC1, 
+<br />
+&#160;&#160;<a class="el" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2af167c2c53cbfcabfb67247cc93c36cbc">cen::controller_button::paddle1</a> = SDL_CONTROLLER_BUTTON_PADDLE1, 
+<br />
+&#160;&#160;<a class="el" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a8f89dd445137954871ffd98090113372">cen::controller_button::paddle2</a> = SDL_CONTROLLER_BUTTON_PADDLE2, 
+<br />
+&#160;&#160;<a class="el" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a191b5107c1c270d395894ba928b91a20">cen::controller_button::paddle3</a> = SDL_CONTROLLER_BUTTON_PADDLE3, 
+<br />
+&#160;&#160;<a class="el" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a8a9e13477a69297324357ebb14814e6f">cen::controller_button::paddle4</a> = SDL_CONTROLLER_BUTTON_PADDLE4, 
+<br />
+&#160;&#160;<a class="el" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2ad299d30071a84c63744533f2543e0e45">cen::controller_button::touchpad</a> = SDL_CONTROLLER_BUTTON_TOUCHPAD, 
+<br />
 &#160;&#160;<a class="el" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a2ffe4e77325d9a7152f7086ea7aa5114">cen::controller_button::max</a> = SDL_CONTROLLER_BUTTON_MAX
 <br />
  }</td></tr>
-<tr class="memdesc:gadeba7b364c5b4830cc2c8e2541e334b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mirrors the values of the <code>SDL_GameControllerButton</code> enum.  <a href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">More...</a><br /></td></tr>
+<tr class="memdesc:gadeba7b364c5b4830cc2c8e2541e334b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents different game controller buttons.  <a href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">More...</a><br /></td></tr>
 <tr class="separator:gadeba7b364c5b4830cc2c8e2541e334b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2779bd4878fed7a711e390b086f77444"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga2779bd4878fed7a711e390b086f77444">cen::controller_bind_type</a> { <br />
 &#160;&#160;<a class="el" href="group__input.html#gga2779bd4878fed7a711e390b086f77444a334c4a4c42fdb79d7ebc3e73b517e6f8">cen::controller_bind_type::none</a> = SDL_CONTROLLER_BINDTYPE_NONE, 
@@ -218,7 +251,7 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="group__input.html#gga2779bd4878fed7a711e390b086f77444a46b5e59b2fd342bf8fee10c561958725">cen::controller_bind_type::hat</a> = SDL_CONTROLLER_BINDTYPE_HAT
 <br />
  }</td></tr>
-<tr class="memdesc:ga2779bd4878fed7a711e390b086f77444"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mirrors the values of the <code>SDL_GameControllerBindType</code> enum.  <a href="group__input.html#ga2779bd4878fed7a711e390b086f77444">More...</a><br /></td></tr>
+<tr class="memdesc:ga2779bd4878fed7a711e390b086f77444"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents different game controller bind types.  <a href="group__input.html#ga2779bd4878fed7a711e390b086f77444">More...</a><br /></td></tr>
 <tr class="separator:ga2779bd4878fed7a711e390b086f77444"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -231,6 +264,21 @@ Functions</h2></td></tr>
 <tr class="memitem:ga288f4d0cd32e9fd51af5a470aac0727f"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__input.html#ga288f4d0cd32e9fd51af5a470aac0727f">cen::operator&lt;&lt;</a> (std::ostream &amp;stream, const basic_controller&lt; T &gt; &amp;controller) -&gt; std::ostream &amp;</td></tr>
 <tr class="memdesc:ga288f4d0cd32e9fd51af5a470aac0727f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a textual representation of a game controller.  <a href="group__input.html#ga288f4d0cd32e9fd51af5a470aac0727f">More...</a><br /></td></tr>
 <tr class="separator:ga288f4d0cd32e9fd51af5a470aac0727f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Game controller comparison operators</h2></td></tr>
+<tr class="memitem:ga698c39ad676ea9db7414dff2f9174c2a"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga698c39ad676ea9db7414dff2f9174c2a">cen::operator==</a> (const controller_type lhs, const SDL_GameControllerType rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga698c39ad676ea9db7414dff2f9174c2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not to controller type values are the same.  <a href="group__input.html#ga698c39ad676ea9db7414dff2f9174c2a">More...</a><br /></td></tr>
+<tr class="separator:ga698c39ad676ea9db7414dff2f9174c2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga731b6a169fcc8353205cefaff36f3a66"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga731b6a169fcc8353205cefaff36f3a66">cen::operator==</a> (const SDL_GameControllerType lhs, const controller_type rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga731b6a169fcc8353205cefaff36f3a66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not to controller type values are the same.  <a href="group__input.html#ga731b6a169fcc8353205cefaff36f3a66">More...</a><br /></td></tr>
+<tr class="separator:ga731b6a169fcc8353205cefaff36f3a66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga251ebdb221b44200948150ad7fd98664"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga251ebdb221b44200948150ad7fd98664">cen::operator!=</a> (const controller_type lhs, const SDL_GameControllerType rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga251ebdb221b44200948150ad7fd98664"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not to controller type values aren't the same.  <a href="group__input.html#ga251ebdb221b44200948150ad7fd98664">More...</a><br /></td></tr>
+<tr class="separator:ga251ebdb221b44200948150ad7fd98664"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga49622747cb3178bbdb1326a8c1b67c5d"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga49622747cb3178bbdb1326a8c1b67c5d">cen::operator!=</a> (const SDL_GameControllerType lhs, const controller_type rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga49622747cb3178bbdb1326a8c1b67c5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not to controller type values aren't the same.  <a href="group__input.html#ga49622747cb3178bbdb1326a8c1b67c5d">More...</a><br /></td></tr>
+<tr class="separator:ga49622747cb3178bbdb1326a8c1b67c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5bb7ee9a16135d02afd273d952314201"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga5bb7ee9a16135d02afd273d952314201">cen::operator==</a> (const controller_axis lhs, const SDL_GameControllerAxis rhs) noexcept -&gt; bool</td></tr>
 <tr class="memdesc:ga5bb7ee9a16135d02afd273d952314201"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two game controller axis values are the same.  <a href="group__input.html#ga5bb7ee9a16135d02afd273d952314201">More...</a><br /></td></tr>
 <tr class="separator:ga5bb7ee9a16135d02afd273d952314201"><td class="memSeparator" colspan="2">&#160;</td></tr>

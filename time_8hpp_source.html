@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/time.hpp Source File</title>
+        <title>Centurion: src/centurion/core/time.hpp Source File</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_033c555e8ea57d729336171de4fce59a.html">core</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -99,70 +99,73 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;chrono&gt;</span>  <span class="comment">// duration</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;ratio&gt;</span>   <span class="comment">// milli, micro, nano</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="centurion__cfg_8hpp.html">centurion_cfg.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="integers_8hpp.html">integers.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifdef CENTURION_USE_PRAGMA_ONCE</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#endif  // CENTURION_USE_PRAGMA_ONCE</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="integers_8hpp.html">integers.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecen.html">cen</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecen.html">cen</a> {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="namespacecen.html#a826ec294a3b6962454d669b9c277537b">   22</a></span>&#160;<span class="keyword">using</span> <a class="code" href="namespacecen.html#a826ec294a3b6962454d669b9c277537b">seconds</a> = std::chrono::duration&lt;T&gt;;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="namespacecen.html#aeabb8896b493294e6781651b0abfbef5">   30</a></span>&#160;<span class="keyword">using</span> <a class="code" href="namespacecen.html#aeabb8896b493294e6781651b0abfbef5">milliseconds</a> = std::chrono::duration&lt;T, std::milli&gt;;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="namespacecen.html#ada2bad74550597b858800bc27a1b3bd2">   38</a></span>&#160;<span class="keyword">using</span> <a class="code" href="namespacecen.html#ada2bad74550597b858800bc27a1b3bd2">microseconds</a> = std::chrono::duration&lt;T, std::micro&gt;;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="namespacecen.html#aff0a2a191da04027994ede6ec49d5e55">   46</a></span>&#160;<span class="keyword">using</span> <a class="code" href="namespacecen.html#aff0a2a191da04027994ede6ec49d5e55">nanoseconds</a> = std::chrono::duration&lt;T, std::nano&gt;;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="namespacecen.html#a188e11bfe67eb564ec1c9afa24a204db">   54</a></span>&#160;<span class="keyword">using</span> <a class="code" href="namespacecen.html#a188e11bfe67eb564ec1c9afa24a204db">minutes</a> = std::chrono::duration&lt;T, std::ratio&lt;60&gt;&gt;;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceliterals.html">literals</a> {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="namespacecen_1_1literals.html#a7409f64eb7a97f2b50906ad62061f8c8">   65</a></span>&#160;constexpr <span class="keyword">auto</span> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span> _ns(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> value) noexcept</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    -&gt; <a class="code" href="namespacecen.html#aff0a2a191da04027994ede6ec49d5e55">nanoseconds&lt;u32&gt;</a></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="namespacecen.html#aff0a2a191da04027994ede6ec49d5e55">nanoseconds&lt;u32&gt;</a>{value};</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="namespacecen_1_1literals.html#ac11d312fe6142d05783bc37b8bc9996f">   71</a></span>&#160;constexpr <span class="keyword">auto</span> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span> _us(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> value) noexcept</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    -&gt; <a class="code" href="namespacecen.html#ada2bad74550597b858800bc27a1b3bd2">microseconds&lt;u32&gt;</a></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="namespacecen.html#ada2bad74550597b858800bc27a1b3bd2">microseconds&lt;u32&gt;</a>{value};</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="namespacecen_1_1literals.html#a9439d986f2d9239db7ecce13a8ed41a2">   77</a></span>&#160;constexpr <span class="keyword">auto</span> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span> _ms(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> value) noexcept</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    -&gt; <a class="code" href="namespacecen.html#aeabb8896b493294e6781651b0abfbef5">milliseconds&lt;u32&gt;</a></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="namespacecen.html#aeabb8896b493294e6781651b0abfbef5">milliseconds&lt;u32&gt;</a>{value};</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="namespacecen_1_1literals.html#a2e3bf01111159979aba4fbc9172ce26d">   83</a></span>&#160;constexpr <span class="keyword">auto</span> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span> _s(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> value) noexcept</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    -&gt; <a class="code" href="namespacecen.html#a826ec294a3b6962454d669b9c277537b">seconds&lt;u32&gt;</a></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;{</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="namespacecen.html#a826ec294a3b6962454d669b9c277537b">seconds&lt;u32&gt;</a>{value};</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="group__core.html#ga826ec294a3b6962454d669b9c277537b">   23</a></span>&#160;<span class="keyword">using</span> <a class="code" href="group__core.html#ga826ec294a3b6962454d669b9c277537b">seconds</a> = std::chrono::duration&lt;T&gt;;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">   31</a></span>&#160;<span class="keyword">using</span> <a class="code" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a> = std::chrono::duration&lt;T, std::milli&gt;;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="group__core.html#gada2bad74550597b858800bc27a1b3bd2">   39</a></span>&#160;<span class="keyword">using</span> <a class="code" href="group__core.html#gada2bad74550597b858800bc27a1b3bd2">microseconds</a> = std::chrono::duration&lt;T, std::micro&gt;;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="group__core.html#gaff0a2a191da04027994ede6ec49d5e55">   47</a></span>&#160;<span class="keyword">using</span> <a class="code" href="group__core.html#gaff0a2a191da04027994ede6ec49d5e55">nanoseconds</a> = std::chrono::duration&lt;T, std::nano&gt;;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="group__core.html#ga188e11bfe67eb564ec1c9afa24a204db">   55</a></span>&#160;<span class="keyword">using</span> <a class="code" href="group__core.html#ga188e11bfe67eb564ec1c9afa24a204db">minutes</a> = std::chrono::duration&lt;T, std::ratio&lt;60&gt;&gt;;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">namespace </span>literals {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">// clang-format off</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="namespacecen_1_1literals.html#aa723db343b1a470b59deee72c4a1fbd5">   63</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span> _ns(<span class="keyword">const</span> <a class="code" href="group__core.html#ga208b5a60b996ef99b54adea25fc1a9a6">ulonglong</a> value) noexcept(noexcept(<a class="code" href="group__core.html#gaff0a2a191da04027994ede6ec49d5e55">nanoseconds&lt;u32&gt;</a>{}))</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    -&gt; <a class="code" href="group__core.html#gaff0a2a191da04027994ede6ec49d5e55">nanoseconds&lt;u32&gt;</a></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="group__core.html#gaff0a2a191da04027994ede6ec49d5e55">nanoseconds&lt;u32&gt;</a>{value};</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="namespacecen_1_1literals.html#a93cfb239103045cba561851114f8be59">   69</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span> _us(<span class="keyword">const</span> <a class="code" href="group__core.html#ga208b5a60b996ef99b54adea25fc1a9a6">ulonglong</a> value) noexcept(noexcept(<a class="code" href="group__core.html#gada2bad74550597b858800bc27a1b3bd2">microseconds&lt;u32&gt;</a>{}))</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    -&gt; <a class="code" href="group__core.html#gada2bad74550597b858800bc27a1b3bd2">microseconds&lt;u32&gt;</a></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="group__core.html#gada2bad74550597b858800bc27a1b3bd2">microseconds&lt;u32&gt;</a>{value};</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="namespacecen_1_1literals.html#ac8516632173958f97b233693ba9f750d">   75</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span> _ms(<span class="keyword">const</span> <a class="code" href="group__core.html#ga208b5a60b996ef99b54adea25fc1a9a6">ulonglong</a> value) noexcept(noexcept(<a class="code" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds&lt;u32&gt;</a>{}))</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    -&gt; <a class="code" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds&lt;u32&gt;</a></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds&lt;u32&gt;</a>{value};</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="namespacecen_1_1literals.html#af85f035d535f6534ebfd64dc8ad8a3ed">   81</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span> _s(<span class="keyword">const</span> <a class="code" href="group__core.html#ga208b5a60b996ef99b54adea25fc1a9a6">ulonglong</a> value) noexcept(noexcept(<a class="code" href="group__core.html#ga826ec294a3b6962454d669b9c277537b">seconds&lt;u32&gt;</a>{}))</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    -&gt; <a class="code" href="group__core.html#ga826ec294a3b6962454d669b9c277537b">seconds&lt;u32&gt;</a></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;{</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="group__core.html#ga826ec294a3b6962454d669b9c277537b">seconds&lt;u32&gt;</a>{value};</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">// clang-format on</span></div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}  <span class="comment">// namespace literals</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}  <span class="comment">// namespace cen</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#endif  // CENTURION_TIME_HEADER</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}  <span class="comment">// namespace cen</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#endif  // CENTURION_TIME_HEADER</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="anamespacecen_html_aeabb8896b493294e6781651b0abfbef5"><div class="ttname"><a href="namespacecen.html#aeabb8896b493294e6781651b0abfbef5">cen::milliseconds</a></div><div class="ttdeci">std::chrono::duration&lt; T, std::milli &gt; milliseconds</div><div class="ttdoc">Templated alias for durations in milliseconds.</div><div class="ttdef"><b>Definition:</b> time.hpp:30</div></div>
-<div class="ttc" id="anamespacecen_html_a826ec294a3b6962454d669b9c277537b"><div class="ttname"><a href="namespacecen.html#a826ec294a3b6962454d669b9c277537b">cen::seconds</a></div><div class="ttdeci">std::chrono::duration&lt; T &gt; seconds</div><div class="ttdoc">Templated alias for durations in seconds.</div><div class="ttdef"><b>Definition:</b> time.hpp:22</div></div>
 <div class="ttc" id="aintegers_8hpp_html"><div class="ttname"><a href="integers_8hpp.html">integers.hpp</a></div></div>
-<div class="ttc" id="anamespaceliterals_html"><div class="ttname"><a href="namespaceliterals.html">literals</a></div><div class="ttdoc">Contains suffix operators.</div></div>
-<div class="ttc" id="anamespacecen_html_aff0a2a191da04027994ede6ec49d5e55"><div class="ttname"><a href="namespacecen.html#aff0a2a191da04027994ede6ec49d5e55">cen::nanoseconds</a></div><div class="ttdeci">std::chrono::duration&lt; T, std::nano &gt; nanoseconds</div><div class="ttdoc">Templated alias for durations in nanoseconds.</div><div class="ttdef"><b>Definition:</b> time.hpp:46</div></div>
-<div class="ttc" id="anamespacecen_html"><div class="ttname"><a href="namespacecen.html">cen</a></div><div class="ttdoc">The top-level namespace that all components of the library reside in.</div><div class="ttdef"><b>Definition:</b> area.hpp:16</div></div>
-<div class="ttc" id="acenturion__cfg_8hpp_html"><div class="ttname"><a href="centurion__cfg_8hpp.html">centurion_cfg.hpp</a></div></div>
-<div class="ttc" id="anamespacecen_html_a188e11bfe67eb564ec1c9afa24a204db"><div class="ttname"><a href="namespacecen.html#a188e11bfe67eb564ec1c9afa24a204db">cen::minutes</a></div><div class="ttdeci">std::chrono::duration&lt; T, std::ratio&lt; 60 &gt; &gt; minutes</div><div class="ttdoc">Templated alias for durations in minutes.</div><div class="ttdef"><b>Definition:</b> time.hpp:54</div></div>
-<div class="ttc" id="anamespacecen_html_ada2bad74550597b858800bc27a1b3bd2"><div class="ttname"><a href="namespacecen.html#ada2bad74550597b858800bc27a1b3bd2">cen::microseconds</a></div><div class="ttdeci">std::chrono::duration&lt; T, std::micro &gt; microseconds</div><div class="ttdoc">Templated alias for durations in microseconds.</div><div class="ttdef"><b>Definition:</b> time.hpp:38</div></div>
+<div class="ttc" id="anamespacecen_html"><div class="ttname"><a href="namespacecen.html">cen</a></div><div class="ttdoc">The top-level namespace that all components of the library reside in.</div><div class="ttdef"><b>Definition:</b> channels.hpp:12</div></div>
+<div class="ttc" id="agroup__core_html_gaff0a2a191da04027994ede6ec49d5e55"><div class="ttname"><a href="group__core.html#gaff0a2a191da04027994ede6ec49d5e55">cen::nanoseconds</a></div><div class="ttdeci">std::chrono::duration&lt; T, std::nano &gt; nanoseconds</div><div class="ttdoc">Templated alias for durations in nanoseconds.</div><div class="ttdef"><b>Definition:</b> time.hpp:47</div></div>
+<div class="ttc" id="agroup__core_html_ga188e11bfe67eb564ec1c9afa24a204db"><div class="ttname"><a href="group__core.html#ga188e11bfe67eb564ec1c9afa24a204db">cen::minutes</a></div><div class="ttdeci">std::chrono::duration&lt; T, std::ratio&lt; 60 &gt; &gt; minutes</div><div class="ttdoc">Templated alias for durations in minutes.</div><div class="ttdef"><b>Definition:</b> time.hpp:55</div></div>
+<div class="ttc" id="agroup__core_html_gada2bad74550597b858800bc27a1b3bd2"><div class="ttname"><a href="group__core.html#gada2bad74550597b858800bc27a1b3bd2">cen::microseconds</a></div><div class="ttdeci">std::chrono::duration&lt; T, std::micro &gt; microseconds</div><div class="ttdoc">Templated alias for durations in microseconds.</div><div class="ttdef"><b>Definition:</b> time.hpp:39</div></div>
+<div class="ttc" id="agroup__core_html_gaeabb8896b493294e6781651b0abfbef5"><div class="ttname"><a href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">cen::milliseconds</a></div><div class="ttdeci">std::chrono::duration&lt; T, std::milli &gt; milliseconds</div><div class="ttdoc">Templated alias for durations in milliseconds.</div><div class="ttdef"><b>Definition:</b> time.hpp:31</div></div>
+<div class="ttc" id="agroup__core_html_ga208b5a60b996ef99b54adea25fc1a9a6"><div class="ttname"><a href="group__core.html#ga208b5a60b996ef99b54adea25fc1a9a6">cen::ulonglong</a></div><div class="ttdeci">unsigned long long ulonglong</div><div class="ttdoc">Alias for the type used for integer literal operators.</div><div class="ttdef"><b>Definition:</b> integers.hpp:18</div></div>
+<div class="ttc" id="agroup__core_html_ga826ec294a3b6962454d669b9c277537b"><div class="ttname"><a href="group__core.html#ga826ec294a3b6962454d669b9c277537b">cen::seconds</a></div><div class="ttdeci">std::chrono::duration&lt; T &gt; seconds</div><div class="ttdoc">Templated alias for durations in seconds.</div><div class="ttdef"><b>Definition:</b> time.hpp:23</div></div>
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
 </div>

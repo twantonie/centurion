@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/platform.hpp Source File</title>
+        <title>Centurion: src/centurion/system/platform.hpp Source File</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_c6d2c5988ce62fe45ec82cf89dcf887c.html">system</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -102,193 +102,189 @@ $(function() {
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;optional&gt;</span>  <span class="comment">// optional</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span>    <span class="comment">// string</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="centurion__cfg_8hpp.html">centurion_cfg.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="czstring_8hpp.html">czstring.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;detail/czstring_eq.hpp&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="not__null_8hpp.html">not_null.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pixel__format_8hpp.html">pixel_format.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../core/czstring.hpp&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../core/not_null.hpp&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../core/result.hpp&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../detail/czstring_eq.hpp&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;../video/pixel_format.hpp&quot;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#ifdef CENTURION_USE_PRAGMA_ONCE</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#endif  // CENTURION_USE_PRAGMA_ONCE</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecen_1_1platform.html">cen::platform</a> {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="group__system.html#ga07dc54b3fa6cd40d83ebd0c66e50cdbd">   49</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="group__system.html#ga07dc54b3fa6cd40d83ebd0c66e50cdbd">platform_id</a></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <a class="code" href="group__system.html#gga07dc54b3fa6cd40d83ebd0c66e50cdbdaad921d60486366258809553a3db49a4a">unknown</a>,  </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="group__system.html#gga07dc54b3fa6cd40d83ebd0c66e50cdbda0f4137ed1502b5045d6083aa258b5c42">windows</a>,  </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <a class="code" href="group__system.html#gga07dc54b3fa6cd40d83ebd0c66e50cdbdab4059e7486eab53a4da7191b009ec285">mac_osx</a>,  </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <a class="code" href="group__system.html#gga07dc54b3fa6cd40d83ebd0c66e50cdbda2510547bee6db5d7a54ac18f49ba20a6">linuxx</a>,   </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <a class="code" href="group__system.html#gga07dc54b3fa6cd40d83ebd0c66e50cdbda9e304d4e8df1b74cfa009913198428ab">ios</a>,      </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <a class="code" href="group__system.html#gga07dc54b3fa6cd40d83ebd0c66e50cdbdac31b32364ce19ca8fcd150a417ecce58">android</a>   </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;};</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#if SDL_VERSION_ATLEAST(2, 0, 14)</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> open_url(<span class="keyword">const</span> <a class="code" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null&lt;czstring&gt;</a> url) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecen.html">cen</a> {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="group__system.html#gaf5df2e2d6f7f4da0f006d54c4372890f">   28</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="group__system.html#gaf5df2e2d6f7f4da0f006d54c4372890f">platform_id</a></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="group__system.html#ggaf5df2e2d6f7f4da0f006d54c4372890faad921d60486366258809553a3db49a4a">unknown</a>,   </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <a class="code" href="group__system.html#ggaf5df2e2d6f7f4da0f006d54c4372890fa0f4137ed1502b5045d6083aa258b5c42">windows</a>,   </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <a class="code" href="group__system.html#ggaf5df2e2d6f7f4da0f006d54c4372890fab4059e7486eab53a4da7191b009ec285">mac_osx</a>,   </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <a class="code" href="group__system.html#ggaf5df2e2d6f7f4da0f006d54c4372890fad12c13442940f30512b2b6c851a9f2c5">linux_os</a>,  </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="group__system.html#ggaf5df2e2d6f7f4da0f006d54c4372890fa9e304d4e8df1b74cfa009913198428ab">ios</a>,       </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <a class="code" href="group__system.html#ggaf5df2e2d6f7f4da0f006d54c4372890fac31b32364ce19ca8fcd150a417ecce58">android</a>    </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#if SDL_VERSION_ATLEAST(2, 0, 14)</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="group__system.html#gaa9fa8565db4f85595d719f55ee4e4ac8">   58</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#gaa9fa8565db4f85595d719f55ee4e4ac8">open_url</a>(<span class="keyword">const</span> <a class="code" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null&lt;czstring&gt;</a> url) noexcept -&gt; <a class="code" href="classcen_1_1result.html">result</a></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <a class="code" href="group__core.html#gga5a2bed2933e3748ad2a77961417a102bae44e4612f62d2fb8f8738bab118a9850">assert</a>(url);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordflow">return</span> SDL_OpenURL(url) == 0;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="group__system.html#ga5f419736a187461bed5d129d910f07e0">   66</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#gaa9fa8565db4f85595d719f55ee4e4ac8">open_url</a>(<span class="keyword">const</span> std::string&amp; url) noexcept -&gt; <a class="code" href="classcen_1_1result.html">result</a></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="group__system.html#gaa9fa8565db4f85595d719f55ee4e4ac8">open_url</a>(url.c_str());</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif  // SDL_VERSION_ATLEAST(2, 0, 14)</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="group__system.html#ga6742b3a4939d9d04f6ef50d5a7f0f1ee">   80</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#ga6742b3a4939d9d04f6ef50d5a7f0f1ee">current_platform</a>() noexcept -&gt; <a class="code" href="group__system.html#gaf5df2e2d6f7f4da0f006d54c4372890f">platform_id</a></div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  assert(url);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordflow">return</span> SDL_OpenURL(url) == 0;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> open_url(<span class="keyword">const</span> std::string&amp; url) noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;{</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordflow">return</span> open_url(url.c_str());</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#endif  // SDL_VERSION_ATLEAST(2, 0, 14)</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="group__system.html#gac45b4f0a65b8c70749dd1afa34f51711">  104</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#gac45b4f0a65b8c70749dd1afa34f51711">id</a>() noexcept -&gt; <a class="code" href="group__system.html#ga07dc54b3fa6cd40d83ebd0c66e50cdbd">platform_id</a></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;{</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keyword">const</span> <a class="code" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a> platform = SDL_GetPlatform();</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordflow">if</span> (detail::czstring_eq(platform, <span class="stringliteral">&quot;Windows&quot;</span>))</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  {</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__system.html#gga07dc54b3fa6cd40d83ebd0c66e50cdbda0f4137ed1502b5045d6083aa258b5c42">platform_id::windows</a>;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  }</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (detail::czstring_eq(platform, <span class="stringliteral">&quot;Mac OS X&quot;</span>))</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  {</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__system.html#gga07dc54b3fa6cd40d83ebd0c66e50cdbdab4059e7486eab53a4da7191b009ec285">platform_id::mac_osx</a>;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  }</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (detail::czstring_eq(platform, <span class="stringliteral">&quot;Linux&quot;</span>))</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  {</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__system.html#gga07dc54b3fa6cd40d83ebd0c66e50cdbda2510547bee6db5d7a54ac18f49ba20a6">platform_id::linuxx</a>;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  }</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (detail::czstring_eq(platform, <span class="stringliteral">&quot;iOS&quot;</span>))</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  {</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__system.html#gga07dc54b3fa6cd40d83ebd0c66e50cdbda9e304d4e8df1b74cfa009913198428ab">platform_id::ios</a>;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  }</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (detail::czstring_eq(platform, <span class="stringliteral">&quot;Android&quot;</span>))</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  {</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__system.html#gga07dc54b3fa6cd40d83ebd0c66e50cdbdac31b32364ce19ca8fcd150a417ecce58">platform_id::android</a>;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  }</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  {</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__system.html#gga07dc54b3fa6cd40d83ebd0c66e50cdbdaad921d60486366258809553a3db49a4a">platform_id::unknown</a>;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keyword">const</span> <a class="code" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> platform = SDL_GetPlatform();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordflow">if</span> (detail::czstring_eq(platform, <span class="stringliteral">&quot;Windows&quot;</span>))</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__system.html#ggaf5df2e2d6f7f4da0f006d54c4372890fa0f4137ed1502b5045d6083aa258b5c42">platform_id::windows</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (detail::czstring_eq(platform, <span class="stringliteral">&quot;Mac OS X&quot;</span>))</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__system.html#ggaf5df2e2d6f7f4da0f006d54c4372890fab4059e7486eab53a4da7191b009ec285">platform_id::mac_osx</a>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (detail::czstring_eq(platform, <span class="stringliteral">&quot;Linux&quot;</span>))</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__system.html#ggaf5df2e2d6f7f4da0f006d54c4372890fad12c13442940f30512b2b6c851a9f2c5">platform_id::linux_os</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (detail::czstring_eq(platform, <span class="stringliteral">&quot;iOS&quot;</span>))</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__system.html#ggaf5df2e2d6f7f4da0f006d54c4372890fa9e304d4e8df1b74cfa009913198428ab">platform_id::ios</a>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (detail::czstring_eq(platform, <span class="stringliteral">&quot;Android&quot;</span>))</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__system.html#ggaf5df2e2d6f7f4da0f006d54c4372890fac31b32364ce19ca8fcd150a417ecce58">platform_id::android</a>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__system.html#ggaf5df2e2d6f7f4da0f006d54c4372890faad921d60486366258809553a3db49a4a">platform_id::unknown</a>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="group__system.html#ga51ecaf5e3af6e68038ca21a3be28f477">  116</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#ga51ecaf5e3af6e68038ca21a3be28f477">is_windows</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;{</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="group__system.html#ga6742b3a4939d9d04f6ef50d5a7f0f1ee">current_platform</a>() == <a class="code" href="group__system.html#ggaf5df2e2d6f7f4da0f006d54c4372890fa0f4137ed1502b5045d6083aa258b5c42">platform_id::windows</a>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="group__system.html#ga3e62afc353e7b2eb357eb49642edd436">  128</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#ga3e62afc353e7b2eb357eb49642edd436">is_mac_osx</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;{</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="group__system.html#ga6742b3a4939d9d04f6ef50d5a7f0f1ee">current_platform</a>() == <a class="code" href="group__system.html#ggaf5df2e2d6f7f4da0f006d54c4372890fab4059e7486eab53a4da7191b009ec285">platform_id::mac_osx</a>;</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;}</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
-<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="group__system.html#ga90012d25ea2cc7bbaedca9460cd084d6">  140</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#ga90012d25ea2cc7bbaedca9460cd084d6">is_windows</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="group__system.html#ga806019d8c666151c57a54dc827a6d92c">  140</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#ga806019d8c666151c57a54dc827a6d92c">is_linux</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;{</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="group__system.html#gac45b4f0a65b8c70749dd1afa34f51711">id</a>() == <a class="code" href="group__system.html#gga07dc54b3fa6cd40d83ebd0c66e50cdbda0f4137ed1502b5045d6083aa258b5c42">platform_id::windows</a>;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="group__system.html#ga6742b3a4939d9d04f6ef50d5a7f0f1ee">current_platform</a>() == <a class="code" href="group__system.html#ggaf5df2e2d6f7f4da0f006d54c4372890fad12c13442940f30512b2b6c851a9f2c5">platform_id::linux_os</a>;</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;}</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
-<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="group__system.html#ga49186ef49d4a95871af8656774bad33b">  152</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#ga49186ef49d4a95871af8656774bad33b">is_mac_osx</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="group__system.html#gaf9c16e67ca0f07609cd00fe216e0f56e">  152</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#gaf9c16e67ca0f07609cd00fe216e0f56e">is_ios</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;{</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="group__system.html#gac45b4f0a65b8c70749dd1afa34f51711">id</a>() == <a class="code" href="group__system.html#gga07dc54b3fa6cd40d83ebd0c66e50cdbdab4059e7486eab53a4da7191b009ec285">platform_id::mac_osx</a>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="group__system.html#ga6742b3a4939d9d04f6ef50d5a7f0f1ee">current_platform</a>() == <a class="code" href="group__system.html#ggaf5df2e2d6f7f4da0f006d54c4372890fa9e304d4e8df1b74cfa009913198428ab">platform_id::ios</a>;</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;}</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
-<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="group__system.html#ga79f2187e3daf72401fab9b9d568c6eeb">  164</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#ga79f2187e3daf72401fab9b9d568c6eeb">is_linux</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="group__system.html#ga583b188ad41383435f28aa2932b03fdb">  164</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#ga583b188ad41383435f28aa2932b03fdb">is_android</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;{</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="group__system.html#gac45b4f0a65b8c70749dd1afa34f51711">id</a>() == <a class="code" href="group__system.html#gga07dc54b3fa6cd40d83ebd0c66e50cdbda2510547bee6db5d7a54ac18f49ba20a6">platform_id::linuxx</a>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="group__system.html#ga6742b3a4939d9d04f6ef50d5a7f0f1ee">current_platform</a>() == <a class="code" href="group__system.html#ggaf5df2e2d6f7f4da0f006d54c4372890fac31b32364ce19ca8fcd150a417ecce58">platform_id::android</a>;</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;}</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
-<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="group__system.html#gaf046e8985dbc30ff005d7ff92d905995">  176</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#gaf046e8985dbc30ff005d7ff92d905995">is_ios</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="group__system.html#ga6ffb9e970d0c91c7e73b5522073a157a">  176</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#ga6ffb9e970d0c91c7e73b5522073a157a">platform_name</a>() -&gt; std::optional&lt;std::string&gt;</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;{</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="group__system.html#gac45b4f0a65b8c70749dd1afa34f51711">id</a>() == <a class="code" href="group__system.html#gga07dc54b3fa6cd40d83ebd0c66e50cdbda9e304d4e8df1b74cfa009913198428ab">platform_id::ios</a>;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;}</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
-<div class="line"><a name="l00188"></a><span class="lineno"><a class="line" href="group__system.html#ga0a53d0107a321905f6f939c9dbcdc8db">  188</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#ga0a53d0107a321905f6f939c9dbcdc8db">is_android</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;{</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="group__system.html#gac45b4f0a65b8c70749dd1afa34f51711">id</a>() == <a class="code" href="group__system.html#gga07dc54b3fa6cd40d83ebd0c66e50cdbdac31b32364ce19ca8fcd150a417ecce58">platform_id::android</a>;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;}</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
-<div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="group__system.html#ga820110f667747768162eb7e19b42e374">  201</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#ga820110f667747768162eb7e19b42e374">name</a>() -&gt; std::optional&lt;std::string&gt;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;{</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  <span class="keyword">const</span> std::string <a class="code" href="group__system.html#ga820110f667747768162eb7e19b42e374">name</a>{SDL_GetPlatform()};</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="group__system.html#ga820110f667747768162eb7e19b42e374">name</a> != <span class="stringliteral">&quot;Unknown&quot;</span>)</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  {</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__system.html#ga820110f667747768162eb7e19b42e374">name</a>;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  }</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  {</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keywordflow">return</span> std::nullopt;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  }</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;}</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
-<div class="line"><a name="l00221"></a><span class="lineno"><a class="line" href="group__system.html#ga99285a05723a27b34259259fefc13d92">  221</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#ga99285a05723a27b34259259fefc13d92">is_tablet</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;{</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(SDL_IsTablet());</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;}</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
-<div class="line"><a name="l00235"></a><span class="lineno"><a class="line" href="group__system.html#gaf11b74db0aee4db681767f10037e2ff3">  235</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__system.html#gaf11b74db0aee4db681767f10037e2ff3">ifdef_win32</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;{</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="preprocessor">#ifdef _WIN32</span></div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;}</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
-<div class="line"><a name="l00252"></a><span class="lineno"><a class="line" href="group__system.html#gae375f1008e926b5ebba2cd8987bf1273">  252</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__system.html#gae375f1008e926b5ebba2cd8987bf1273">ifdef_win64</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;{</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="preprocessor">#ifdef _WIN64</span></div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;}</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
-<div class="line"><a name="l00268"></a><span class="lineno"><a class="line" href="group__system.html#gaee2753296273bcc66e248e87b8f48855">  268</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__system.html#gaee2753296273bcc66e248e87b8f48855">ifdef_linux</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;{</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="preprocessor">#ifdef __linux__</span></div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;}</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
-<div class="line"><a name="l00284"></a><span class="lineno"><a class="line" href="group__system.html#gaafb2933375cffb55f504cc6d92a6fc2c">  284</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__system.html#gaafb2933375cffb55f504cc6d92a6fc2c">ifdef_android</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;{</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="preprocessor">#ifdef __ANDROID__</span></div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;}</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
-<div class="line"><a name="l00300"></a><span class="lineno"><a class="line" href="group__system.html#ga364b871a2ec2db0a26a4125e39d9764e">  300</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__system.html#ga364b871a2ec2db0a26a4125e39d9764e">ifdef_apple</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;{</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="preprocessor">#ifdef __APPLE__</span></div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;}</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160; </div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;}  <span class="comment">// namespace cen::platform</span></div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160; </div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="preprocessor">#endif  // CENTURION_PLATFORM_HEADER</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <span class="keyword">const</span> std::string <a class="code" href="namespacecen_1_1screen.html#ab133b4e8b3b0eee8c74306c9bc3b8a69">name</a>{SDL_GetPlatform()};</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1screen.html#ab133b4e8b3b0eee8c74306c9bc3b8a69">name</a> != <span class="stringliteral">&quot;Unknown&quot;</span>)</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespacecen_1_1screen.html#ab133b4e8b3b0eee8c74306c9bc3b8a69">name</a>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  }</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;}</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00196"></a><span class="lineno"><a class="line" href="group__system.html#gaa5277fc7afca40870fce31af77372051">  196</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#gaa5277fc7afca40870fce31af77372051">is_tablet</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;{</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(SDL_IsTablet());</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;}</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
+<div class="line"><a name="l00210"></a><span class="lineno"><a class="line" href="group__system.html#ga17742e9e970cb8233592afe3dd362051">  210</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__system.html#ga17742e9e970cb8233592afe3dd362051">ifdef_win32</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;{</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="preprocessor">#ifdef _WIN32</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;}</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
+<div class="line"><a name="l00226"></a><span class="lineno"><a class="line" href="group__system.html#ga85849d2df4e81e1c0423c62adf2d85c0">  226</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__system.html#ga85849d2df4e81e1c0423c62adf2d85c0">ifdef_win64</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;{</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="preprocessor">#ifdef _WIN64</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;}</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
+<div class="line"><a name="l00242"></a><span class="lineno"><a class="line" href="group__system.html#ga906e2d76c817a65e95b2bdc5ae0f7b40">  242</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__system.html#ga906e2d76c817a65e95b2bdc5ae0f7b40">ifdef_linux</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;{</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="preprocessor">#ifdef __linux__</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;}</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
+<div class="line"><a name="l00258"></a><span class="lineno"><a class="line" href="group__system.html#ga28dd9eb2a03def1dd91bc58d07f93cc5">  258</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__system.html#ga28dd9eb2a03def1dd91bc58d07f93cc5">ifdef_android</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;{</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="preprocessor">#ifdef __ANDROID__</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;}</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
+<div class="line"><a name="l00274"></a><span class="lineno"><a class="line" href="group__system.html#ga89c4431613a1c6020c9bc69bb7144853">  274</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__system.html#ga89c4431613a1c6020c9bc69bb7144853">ifdef_apple</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;{</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="preprocessor">#ifdef __APPLE__</span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;}</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160; </div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;}  <span class="comment">// namespace cen</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="preprocessor">#endif  // CENTURION_PLATFORM_HEADER</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="agroup__system_html_gaf11b74db0aee4db681767f10037e2ff3"><div class="ttname"><a href="group__system.html#gaf11b74db0aee4db681767f10037e2ff3">cen::platform::ifdef_win32</a></div><div class="ttdeci">constexpr auto ifdef_win32() noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the current OS is 32-bit Windows.</div><div class="ttdef"><b>Definition:</b> platform.hpp:235</div></div>
-<div class="ttc" id="agroup__system_html_gga07dc54b3fa6cd40d83ebd0c66e50cdbda9e304d4e8df1b74cfa009913198428ab"><div class="ttname"><a href="group__system.html#gga07dc54b3fa6cd40d83ebd0c66e50cdbda9e304d4e8df1b74cfa009913198428ab">cen::platform::platform_id::ios</a></div><div class="ttdeci">@ ios</div><div class="ttdoc">Represents the Apple iOS platform.</div></div>
-<div class="ttc" id="agroup__system_html_gaafb2933375cffb55f504cc6d92a6fc2c"><div class="ttname"><a href="group__system.html#gaafb2933375cffb55f504cc6d92a6fc2c">cen::platform::ifdef_android</a></div><div class="ttdeci">constexpr auto ifdef_android() noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the current OS is Android.</div><div class="ttdef"><b>Definition:</b> platform.hpp:284</div></div>
-<div class="ttc" id="agroup__system_html_ga79f2187e3daf72401fab9b9d568c6eeb"><div class="ttname"><a href="group__system.html#ga79f2187e3daf72401fab9b9d568c6eeb">cen::platform::is_linux</a></div><div class="ttdeci">auto is_linux() noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the current platform is Linux.</div><div class="ttdef"><b>Definition:</b> platform.hpp:164</div></div>
-<div class="ttc" id="agroup__system_html_gga07dc54b3fa6cd40d83ebd0c66e50cdbdac31b32364ce19ca8fcd150a417ecce58"><div class="ttname"><a href="group__system.html#gga07dc54b3fa6cd40d83ebd0c66e50cdbdac31b32364ce19ca8fcd150a417ecce58">cen::platform::platform_id::android</a></div><div class="ttdeci">@ android</div><div class="ttdoc">Represents the Android platform.</div></div>
-<div class="ttc" id="agroup__system_html_ga90012d25ea2cc7bbaedca9460cd084d6"><div class="ttname"><a href="group__system.html#ga90012d25ea2cc7bbaedca9460cd084d6">cen::platform::is_windows</a></div><div class="ttdeci">auto is_windows() noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the current platform is Windows.</div><div class="ttdef"><b>Definition:</b> platform.hpp:140</div></div>
-<div class="ttc" id="agroup__system_html_gae375f1008e926b5ebba2cd8987bf1273"><div class="ttname"><a href="group__system.html#gae375f1008e926b5ebba2cd8987bf1273">cen::platform::ifdef_win64</a></div><div class="ttdeci">constexpr auto ifdef_win64() noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the current OS is 64-bit Windows.</div><div class="ttdef"><b>Definition:</b> platform.hpp:252</div></div>
-<div class="ttc" id="agroup__system_html_ga364b871a2ec2db0a26a4125e39d9764e"><div class="ttname"><a href="group__system.html#ga364b871a2ec2db0a26a4125e39d9764e">cen::platform::ifdef_apple</a></div><div class="ttdeci">constexpr auto ifdef_apple() noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the current OS is either MacOS or iOS.</div><div class="ttdef"><b>Definition:</b> platform.hpp:300</div></div>
-<div class="ttc" id="anot__null_8hpp_html"><div class="ttname"><a href="not__null_8hpp.html">not_null.hpp</a></div></div>
-<div class="ttc" id="agroup__system_html_gaf046e8985dbc30ff005d7ff92d905995"><div class="ttname"><a href="group__system.html#gaf046e8985dbc30ff005d7ff92d905995">cen::platform::is_ios</a></div><div class="ttdeci">auto is_ios() noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the current platform is iOS.</div><div class="ttdef"><b>Definition:</b> platform.hpp:176</div></div>
-<div class="ttc" id="agroup__system_html_ga820110f667747768162eb7e19b42e374"><div class="ttname"><a href="group__system.html#ga820110f667747768162eb7e19b42e374">cen::platform::name</a></div><div class="ttdeci">auto name() -&gt; std::optional&lt; std::string &gt;</div><div class="ttdoc">Returns the name of the current platform.</div><div class="ttdef"><b>Definition:</b> platform.hpp:201</div></div>
-<div class="ttc" id="anamespacecen_1_1platform_html"><div class="ttname"><a href="namespacecen_1_1platform.html">cen::platform</a></div><div class="ttdoc">Contains utilities related to platform information.</div></div>
-<div class="ttc" id="agroup__system_html_gga07dc54b3fa6cd40d83ebd0c66e50cdbdab4059e7486eab53a4da7191b009ec285"><div class="ttname"><a href="group__system.html#gga07dc54b3fa6cd40d83ebd0c66e50cdbdab4059e7486eab53a4da7191b009ec285">cen::platform::platform_id::mac_osx</a></div><div class="ttdeci">@ mac_osx</div><div class="ttdoc">Represents the Apple OSX platform.</div></div>
-<div class="ttc" id="agroup__system_html_ga99285a05723a27b34259259fefc13d92"><div class="ttname"><a href="group__system.html#ga99285a05723a27b34259259fefc13d92">cen::platform::is_tablet</a></div><div class="ttdeci">auto is_tablet() noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the current system is a tablet.</div><div class="ttdef"><b>Definition:</b> platform.hpp:221</div></div>
-<div class="ttc" id="acenturion__cfg_8hpp_html"><div class="ttname"><a href="centurion__cfg_8hpp.html">centurion_cfg.hpp</a></div></div>
-<div class="ttc" id="aczstring_8hpp_html"><div class="ttname"><a href="czstring_8hpp.html">czstring.hpp</a></div></div>
-<div class="ttc" id="anamespacecen_html_a9f195a3e65e79c88a96dd7b767dc0657"><div class="ttname"><a href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">cen::not_null</a></div><div class="ttdeci">T not_null</div><div class="ttdoc">Tag used to indicate that a pointer cannot be null.</div><div class="ttdef"><b>Definition:</b> not_null.hpp:26</div></div>
-<div class="ttc" id="apixel__format_8hpp_html"><div class="ttname"><a href="pixel__format_8hpp.html">pixel_format.hpp</a></div></div>
-<div class="ttc" id="agroup__system_html_ga0a53d0107a321905f6f939c9dbcdc8db"><div class="ttname"><a href="group__system.html#ga0a53d0107a321905f6f939c9dbcdc8db">cen::platform::is_android</a></div><div class="ttdeci">auto is_android() noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the current platform is Android.</div><div class="ttdef"><b>Definition:</b> platform.hpp:188</div></div>
-<div class="ttc" id="agroup__system_html_gga07dc54b3fa6cd40d83ebd0c66e50cdbdaad921d60486366258809553a3db49a4a"><div class="ttname"><a href="group__system.html#gga07dc54b3fa6cd40d83ebd0c66e50cdbdaad921d60486366258809553a3db49a4a">cen::platform::platform_id::unknown</a></div><div class="ttdeci">@ unknown</div><div class="ttdoc">Indicates that the platform is unknown.</div></div>
-<div class="ttc" id="agroup__system_html_gga07dc54b3fa6cd40d83ebd0c66e50cdbda2510547bee6db5d7a54ac18f49ba20a6"><div class="ttname"><a href="group__system.html#gga07dc54b3fa6cd40d83ebd0c66e50cdbda2510547bee6db5d7a54ac18f49ba20a6">cen::platform::platform_id::linuxx</a></div><div class="ttdeci">@ linuxx</div><div class="ttdoc">Represents the Linux platform.</div></div>
-<div class="ttc" id="agroup__system_html_gaee2753296273bcc66e248e87b8f48855"><div class="ttname"><a href="group__system.html#gaee2753296273bcc66e248e87b8f48855">cen::platform::ifdef_linux</a></div><div class="ttdeci">constexpr auto ifdef_linux() noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the current OS is derived from Linux.</div><div class="ttdef"><b>Definition:</b> platform.hpp:268</div></div>
-<div class="ttc" id="anamespacecen_html_a24997ff418228ddb51ae13e2805288a4"><div class="ttname"><a href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">cen::czstring</a></div><div class="ttdeci">const char * czstring</div><div class="ttdoc">Alias for a const C-style null-terminated string.</div><div class="ttdef"><b>Definition:</b> czstring.hpp:18</div></div>
-<div class="ttc" id="agroup__system_html_gga07dc54b3fa6cd40d83ebd0c66e50cdbda0f4137ed1502b5045d6083aa258b5c42"><div class="ttname"><a href="group__system.html#gga07dc54b3fa6cd40d83ebd0c66e50cdbda0f4137ed1502b5045d6083aa258b5c42">cen::platform::platform_id::windows</a></div><div class="ttdeci">@ windows</div><div class="ttdoc">Represents the Windows platform.</div></div>
-<div class="ttc" id="agroup__system_html_ga49186ef49d4a95871af8656774bad33b"><div class="ttname"><a href="group__system.html#ga49186ef49d4a95871af8656774bad33b">cen::platform::is_mac_osx</a></div><div class="ttdeci">auto is_mac_osx() noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the current platform is Mac OSX.</div><div class="ttdef"><b>Definition:</b> platform.hpp:152</div></div>
-<div class="ttc" id="agroup__system_html_ga07dc54b3fa6cd40d83ebd0c66e50cdbd"><div class="ttname"><a href="group__system.html#ga07dc54b3fa6cd40d83ebd0c66e50cdbd">cen::platform::platform_id</a></div><div class="ttdeci">platform_id</div><div class="ttdoc">Provides values that represent various different operating systems.</div><div class="ttdef"><b>Definition:</b> platform.hpp:49</div></div>
-<div class="ttc" id="agroup__system_html_gac45b4f0a65b8c70749dd1afa34f51711"><div class="ttname"><a href="group__system.html#gac45b4f0a65b8c70749dd1afa34f51711">cen::platform::id</a></div><div class="ttdeci">auto id() noexcept -&gt; platform_id</div><div class="ttdoc">Returns the value that represents the current platform.</div><div class="ttdef"><b>Definition:</b> platform.hpp:104</div></div>
+<div class="ttc" id="agroup__system_html_ggaf5df2e2d6f7f4da0f006d54c4372890fad12c13442940f30512b2b6c851a9f2c5"><div class="ttname"><a href="group__system.html#ggaf5df2e2d6f7f4da0f006d54c4372890fad12c13442940f30512b2b6c851a9f2c5">cen::platform_id::linux_os</a></div><div class="ttdeci">@ linux_os</div><div class="ttdoc">Represents the Linux platform.</div></div>
+<div class="ttc" id="agroup__system_html_gaa9fa8565db4f85595d719f55ee4e4ac8"><div class="ttname"><a href="group__system.html#gaa9fa8565db4f85595d719f55ee4e4ac8">cen::open_url</a></div><div class="ttdeci">auto open_url(const not_null&lt; czstring &gt; url) noexcept -&gt; result</div><div class="ttdoc">Attempts to open a URL using a web browser or even a file manager for local files.</div><div class="ttdef"><b>Definition:</b> platform.hpp:58</div></div>
+<div class="ttc" id="agroup__system_html_gaf5df2e2d6f7f4da0f006d54c4372890f"><div class="ttname"><a href="group__system.html#gaf5df2e2d6f7f4da0f006d54c4372890f">cen::platform_id</a></div><div class="ttdeci">platform_id</div><div class="ttdoc">Provides values that represent various different operating systems.</div><div class="ttdef"><b>Definition:</b> platform.hpp:28</div></div>
+<div class="ttc" id="agroup__system_html_ga17742e9e970cb8233592afe3dd362051"><div class="ttname"><a href="group__system.html#ga17742e9e970cb8233592afe3dd362051">cen::ifdef_win32</a></div><div class="ttdeci">constexpr auto ifdef_win32() noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the current OS is 32-bit Windows.</div><div class="ttdef"><b>Definition:</b> platform.hpp:210</div></div>
+<div class="ttc" id="agroup__core_html_ga9f195a3e65e79c88a96dd7b767dc0657"><div class="ttname"><a href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">cen::not_null</a></div><div class="ttdeci">T not_null</div><div class="ttdoc">Tag used to indicate that a pointer cannot be null.</div><div class="ttdef"><b>Definition:</b> not_null.hpp:20</div></div>
+<div class="ttc" id="aclasscen_1_1result_html"><div class="ttname"><a href="classcen_1_1result.html">cen::result</a></div><div class="ttdoc">A simple indicator for the result of different operations.</div><div class="ttdef"><b>Definition:</b> result.hpp:49</div></div>
+<div class="ttc" id="agroup__system_html_ga6742b3a4939d9d04f6ef50d5a7f0f1ee"><div class="ttname"><a href="group__system.html#ga6742b3a4939d9d04f6ef50d5a7f0f1ee">cen::current_platform</a></div><div class="ttdeci">auto current_platform() noexcept -&gt; platform_id</div><div class="ttdoc">Returns the value that represents the current platform.</div><div class="ttdef"><b>Definition:</b> platform.hpp:80</div></div>
+<div class="ttc" id="anamespacecen_1_1screen_html_ab133b4e8b3b0eee8c74306c9bc3b8a69"><div class="ttname"><a href="namespacecen_1_1screen.html#ab133b4e8b3b0eee8c74306c9bc3b8a69">cen::screen::name</a></div><div class="ttdeci">auto name(const int index=0) noexcept -&gt; czstring</div><div class="ttdoc">Returns the name of a display.</div><div class="ttdef"><b>Definition:</b> screen.hpp:123</div></div>
+<div class="ttc" id="agroup__system_html_ga906e2d76c817a65e95b2bdc5ae0f7b40"><div class="ttname"><a href="group__system.html#ga906e2d76c817a65e95b2bdc5ae0f7b40">cen::ifdef_linux</a></div><div class="ttdeci">constexpr auto ifdef_linux() noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the current OS is derived from Linux.</div><div class="ttdef"><b>Definition:</b> platform.hpp:242</div></div>
+<div class="ttc" id="agroup__system_html_ggaf5df2e2d6f7f4da0f006d54c4372890fa9e304d4e8df1b74cfa009913198428ab"><div class="ttname"><a href="group__system.html#ggaf5df2e2d6f7f4da0f006d54c4372890fa9e304d4e8df1b74cfa009913198428ab">cen::platform_id::ios</a></div><div class="ttdeci">@ ios</div><div class="ttdoc">Represents the Apple iOS platform.</div></div>
+<div class="ttc" id="agroup__system_html_ggaf5df2e2d6f7f4da0f006d54c4372890fa0f4137ed1502b5045d6083aa258b5c42"><div class="ttname"><a href="group__system.html#ggaf5df2e2d6f7f4da0f006d54c4372890fa0f4137ed1502b5045d6083aa258b5c42">cen::platform_id::windows</a></div><div class="ttdeci">@ windows</div><div class="ttdoc">Represents the Windows platform.</div></div>
+<div class="ttc" id="agroup__system_html_ga89c4431613a1c6020c9bc69bb7144853"><div class="ttname"><a href="group__system.html#ga89c4431613a1c6020c9bc69bb7144853">cen::ifdef_apple</a></div><div class="ttdeci">constexpr auto ifdef_apple() noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the current OS is either MacOS or iOS.</div><div class="ttdef"><b>Definition:</b> platform.hpp:274</div></div>
+<div class="ttc" id="anamespacecen_html"><div class="ttname"><a href="namespacecen.html">cen</a></div><div class="ttdoc">The top-level namespace that all components of the library reside in.</div><div class="ttdef"><b>Definition:</b> channels.hpp:12</div></div>
+<div class="ttc" id="agroup__core_html_ga24997ff418228ddb51ae13e2805288a4"><div class="ttname"><a href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">cen::czstring</a></div><div class="ttdeci">const char * czstring</div><div class="ttdoc">Alias for a const C-style null-terminated string.</div><div class="ttdef"><b>Definition:</b> czstring.hpp:16</div></div>
+<div class="ttc" id="agroup__system_html_ga583b188ad41383435f28aa2932b03fdb"><div class="ttname"><a href="group__system.html#ga583b188ad41383435f28aa2932b03fdb">cen::is_android</a></div><div class="ttdeci">auto is_android() noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the current platform is Android.</div><div class="ttdef"><b>Definition:</b> platform.hpp:164</div></div>
+<div class="ttc" id="agroup__system_html_ga6ffb9e970d0c91c7e73b5522073a157a"><div class="ttname"><a href="group__system.html#ga6ffb9e970d0c91c7e73b5522073a157a">cen::platform_name</a></div><div class="ttdeci">auto platform_name() -&gt; std::optional&lt; std::string &gt;</div><div class="ttdoc">Returns the name of the current platform.</div><div class="ttdef"><b>Definition:</b> platform.hpp:176</div></div>
+<div class="ttc" id="agroup__system_html_ga28dd9eb2a03def1dd91bc58d07f93cc5"><div class="ttname"><a href="group__system.html#ga28dd9eb2a03def1dd91bc58d07f93cc5">cen::ifdef_android</a></div><div class="ttdeci">constexpr auto ifdef_android() noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the current OS is Android.</div><div class="ttdef"><b>Definition:</b> platform.hpp:258</div></div>
+<div class="ttc" id="agroup__system_html_ga85849d2df4e81e1c0423c62adf2d85c0"><div class="ttname"><a href="group__system.html#ga85849d2df4e81e1c0423c62adf2d85c0">cen::ifdef_win64</a></div><div class="ttdeci">constexpr auto ifdef_win64() noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the current OS is 64-bit Windows.</div><div class="ttdef"><b>Definition:</b> platform.hpp:226</div></div>
+<div class="ttc" id="agroup__system_html_ggaf5df2e2d6f7f4da0f006d54c4372890fab4059e7486eab53a4da7191b009ec285"><div class="ttname"><a href="group__system.html#ggaf5df2e2d6f7f4da0f006d54c4372890fab4059e7486eab53a4da7191b009ec285">cen::platform_id::mac_osx</a></div><div class="ttdeci">@ mac_osx</div><div class="ttdoc">Represents the Apple OSX platform.</div></div>
+<div class="ttc" id="agroup__system_html_gaa5277fc7afca40870fce31af77372051"><div class="ttname"><a href="group__system.html#gaa5277fc7afca40870fce31af77372051">cen::is_tablet</a></div><div class="ttdeci">auto is_tablet() noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the current system is a tablet.</div><div class="ttdef"><b>Definition:</b> platform.hpp:196</div></div>
+<div class="ttc" id="agroup__system_html_gaf9c16e67ca0f07609cd00fe216e0f56e"><div class="ttname"><a href="group__system.html#gaf9c16e67ca0f07609cd00fe216e0f56e">cen::is_ios</a></div><div class="ttdeci">auto is_ios() noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the current platform is iOS.</div><div class="ttdef"><b>Definition:</b> platform.hpp:152</div></div>
+<div class="ttc" id="agroup__system_html_ggaf5df2e2d6f7f4da0f006d54c4372890faad921d60486366258809553a3db49a4a"><div class="ttname"><a href="group__system.html#ggaf5df2e2d6f7f4da0f006d54c4372890faad921d60486366258809553a3db49a4a">cen::platform_id::unknown</a></div><div class="ttdeci">@ unknown</div><div class="ttdoc">Indicates that the platform is unknown.</div></div>
+<div class="ttc" id="agroup__system_html_ga806019d8c666151c57a54dc827a6d92c"><div class="ttname"><a href="group__system.html#ga806019d8c666151c57a54dc827a6d92c">cen::is_linux</a></div><div class="ttdeci">auto is_linux() noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the current platform is Linux.</div><div class="ttdef"><b>Definition:</b> platform.hpp:140</div></div>
+<div class="ttc" id="agroup__core_html_gga5a2bed2933e3748ad2a77961417a102bae44e4612f62d2fb8f8738bab118a9850"><div class="ttname"><a href="group__core.html#gga5a2bed2933e3748ad2a77961417a102bae44e4612f62d2fb8f8738bab118a9850">cen::log_category::assert</a></div><div class="ttdeci">@ assert</div></div>
+<div class="ttc" id="agroup__system_html_ggaf5df2e2d6f7f4da0f006d54c4372890fac31b32364ce19ca8fcd150a417ecce58"><div class="ttname"><a href="group__system.html#ggaf5df2e2d6f7f4da0f006d54c4372890fac31b32364ce19ca8fcd150a417ecce58">cen::platform_id::android</a></div><div class="ttdeci">@ android</div><div class="ttdoc">Represents the Android platform.</div></div>
+<div class="ttc" id="agroup__system_html_ga51ecaf5e3af6e68038ca21a3be28f477"><div class="ttname"><a href="group__system.html#ga51ecaf5e3af6e68038ca21a3be28f477">cen::is_windows</a></div><div class="ttdeci">auto is_windows() noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the current platform is Windows.</div><div class="ttdef"><b>Definition:</b> platform.hpp:116</div></div>
+<div class="ttc" id="agroup__system_html_ga3e62afc353e7b2eb357eb49642edd436"><div class="ttname"><a href="group__system.html#ga3e62afc353e7b2eb357eb49642edd436">cen::is_mac_osx</a></div><div class="ttdeci">auto is_mac_osx() noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the current platform is Mac OSX.</div><div class="ttdef"><b>Definition:</b> platform.hpp:128</div></div>
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
 </div>

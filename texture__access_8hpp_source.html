@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/texture_access.hpp Source File</title>
+        <title>Centurion: src/centurion/video/texture_access.hpp Source File</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_b630b0fc10333b78f2ff60d8d1210ae7.html">video</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -98,60 +98,53 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;SDL.h&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="centurion__cfg_8hpp.html">centurion_cfg.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecen.html">cen</a> {</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecen.html">cen</a> {</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="group__graphics.html#ga74927e90e8a09a52d7377e0687620654">   27</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="group__graphics.html#ga74927e90e8a09a52d7377e0687620654">texture_access</a></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <a class="code" href="group__graphics.html#gga74927e90e8a09a52d7377e0687620654a48c7263dfd854db6c83df5263e3fd341">no_lock</a> = SDL_TEXTUREACCESS_STATIC,  </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="group__graphics.html#gga74927e90e8a09a52d7377e0687620654aabb0256a318439745ab0b343d64b9ba0">streaming</a> =</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      SDL_TEXTUREACCESS_STREAMING,   </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <a class="code" href="group__graphics.html#gga74927e90e8a09a52d7377e0687620654a42aefbae01d2dfd981f7da7d823d689e">target</a> = SDL_TEXTUREACCESS_TARGET  </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="group__graphics.html#gade55375f224f7a5204a09954ef5b97a4">   48</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__geometry.html#gaec6248e19dd64af37449d012f4e7726b">operator==</a>(<span class="keyword">const</span> <a class="code" href="group__graphics.html#ga74927e90e8a09a52d7377e0687620654">texture_access</a> lhs,</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                                        <span class="keyword">const</span> SDL_TextureAccess rhs) noexcept</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>SDL_TextureAccess<span class="keyword">&gt;</span>(lhs) == rhs;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="group__graphics.html#ga89d0b6d697a17f096e0f6bb72dd69c6d">   58</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__geometry.html#gaec6248e19dd64af37449d012f4e7726b">operator==</a>(<span class="keyword">const</span> SDL_TextureAccess lhs,</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="group__graphics.html#ga74927e90e8a09a52d7377e0687620654">texture_access</a> rhs) noexcept</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordflow">return</span> rhs == lhs;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="group__graphics.html#ga0e80a1cf135a04e997633664c9c83fc4">   77</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__geometry.html#ga364a81620a5b7c2be324bdc87275a69b">operator!=</a>(<span class="keyword">const</span> <a class="code" href="group__graphics.html#ga74927e90e8a09a52d7377e0687620654">texture_access</a> lhs,</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                                        <span class="keyword">const</span> SDL_TextureAccess rhs) noexcept</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="group__graphics.html#ga592bf11739da182412f04a529b2b6e38">   87</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__geometry.html#ga364a81620a5b7c2be324bdc87275a69b">operator!=</a>(<span class="keyword">const</span> SDL_TextureAccess lhs,</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="group__graphics.html#ga74927e90e8a09a52d7377e0687620654">texture_access</a> rhs) noexcept</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}  <span class="comment">// namespace cen</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#endif  // CENTURION_TEXTURE_ACCESS_HEADER</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="group__video.html#ga6952adc5f093252560469686271182aa">   22</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="group__video.html#ga6952adc5f093252560469686271182aa">texture_access</a> : int</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <a class="code" href="group__video.html#gga6952adc5f093252560469686271182aaa48c7263dfd854db6c83df5263e3fd341">no_lock</a> = SDL_TEXTUREACCESS_STATIC,  </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <a class="code" href="group__video.html#gga6952adc5f093252560469686271182aaaabb0256a318439745ab0b343d64b9ba0">streaming</a> =</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      SDL_TEXTUREACCESS_STREAMING,   </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <a class="code" href="group__video.html#gga6952adc5f093252560469686271182aaa42aefbae01d2dfd981f7da7d823d689e">target</a> = SDL_TEXTUREACCESS_TARGET  </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="group__video.html#gade55375f224f7a5204a09954ef5b97a4">   40</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> <a class="code" href="group__video.html#ga6952adc5f093252560469686271182aa">texture_access</a> lhs,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                                        <span class="keyword">const</span> SDL_TextureAccess rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>SDL_TextureAccess<span class="keyword">&gt;</span>(lhs) == rhs;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="group__video.html#ga89d0b6d697a17f096e0f6bb72dd69c6d">   47</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> SDL_TextureAccess lhs,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="group__video.html#ga6952adc5f093252560469686271182aa">texture_access</a> rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordflow">return</span> rhs == lhs;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="group__video.html#ga0e80a1cf135a04e997633664c9c83fc4">   64</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> <a class="code" href="group__video.html#ga6952adc5f093252560469686271182aa">texture_access</a> lhs,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                                        <span class="keyword">const</span> SDL_TextureAccess rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="group__video.html#ga592bf11739da182412f04a529b2b6e38">   71</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> SDL_TextureAccess lhs,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="group__video.html#ga6952adc5f093252560469686271182aa">texture_access</a> rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}  <span class="comment">// namespace cen</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#endif  // CENTURION_TEXTURE_ACCESS_HEADER</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="agroup__graphics_html_gga74927e90e8a09a52d7377e0687620654a42aefbae01d2dfd981f7da7d823d689e"><div class="ttname"><a href="group__graphics.html#gga74927e90e8a09a52d7377e0687620654a42aefbae01d2dfd981f7da7d823d689e">cen::texture_access::target</a></div><div class="ttdeci">@ target</div></div>
-<div class="ttc" id="agroup__geometry_html_gaec6248e19dd64af37449d012f4e7726b"><div class="ttname"><a href="group__geometry.html#gaec6248e19dd64af37449d012f4e7726b">cen::operator==</a></div><div class="ttdeci">constexpr auto operator==(const basic_area&lt; T &gt; &amp;lhs, const basic_area&lt; T &gt; &amp;rhs) noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not two areas are considered to be equal.</div><div class="ttdef"><b>Definition:</b> area.hpp:163</div></div>
-<div class="ttc" id="agroup__graphics_html_gga74927e90e8a09a52d7377e0687620654aabb0256a318439745ab0b343d64b9ba0"><div class="ttname"><a href="group__graphics.html#gga74927e90e8a09a52d7377e0687620654aabb0256a318439745ab0b343d64b9ba0">cen::texture_access::streaming</a></div><div class="ttdeci">@ streaming</div></div>
-<div class="ttc" id="anamespacecen_html"><div class="ttname"><a href="namespacecen.html">cen</a></div><div class="ttdoc">The top-level namespace that all components of the library reside in.</div><div class="ttdef"><b>Definition:</b> area.hpp:16</div></div>
-<div class="ttc" id="acenturion__cfg_8hpp_html"><div class="ttname"><a href="centurion__cfg_8hpp.html">centurion_cfg.hpp</a></div></div>
-<div class="ttc" id="agroup__graphics_html_ga74927e90e8a09a52d7377e0687620654"><div class="ttname"><a href="group__graphics.html#ga74927e90e8a09a52d7377e0687620654">cen::texture_access</a></div><div class="ttdeci">texture_access</div><div class="ttdoc">Mirrors the SDL_TextureAccess enum.</div><div class="ttdef"><b>Definition:</b> texture_access.hpp:27</div></div>
-<div class="ttc" id="agroup__geometry_html_ga364a81620a5b7c2be324bdc87275a69b"><div class="ttname"><a href="group__geometry.html#ga364a81620a5b7c2be324bdc87275a69b">cen::operator!=</a></div><div class="ttdeci">constexpr auto operator!=(const basic_area&lt; T &gt; &amp;lhs, const basic_area&lt; T &gt; &amp;rhs) noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not two areas aren't considered to be equal.</div><div class="ttdef"><b>Definition:</b> area.hpp:181</div></div>
-<div class="ttc" id="agroup__graphics_html_gga74927e90e8a09a52d7377e0687620654a48c7263dfd854db6c83df5263e3fd341"><div class="ttname"><a href="group__graphics.html#gga74927e90e8a09a52d7377e0687620654a48c7263dfd854db6c83df5263e3fd341">cen::texture_access::no_lock</a></div><div class="ttdeci">@ no_lock</div></div>
+<div class="ttc" id="agroup__video_html_ga6952adc5f093252560469686271182aa"><div class="ttname"><a href="group__video.html#ga6952adc5f093252560469686271182aa">cen::texture_access</a></div><div class="ttdeci">texture_access</div><div class="ttdoc">Represents different texture access modes.</div><div class="ttdef"><b>Definition:</b> texture_access.hpp:22</div></div>
+<div class="ttc" id="agroup__video_html_gga6952adc5f093252560469686271182aaa48c7263dfd854db6c83df5263e3fd341"><div class="ttname"><a href="group__video.html#gga6952adc5f093252560469686271182aaa48c7263dfd854db6c83df5263e3fd341">cen::texture_access::no_lock</a></div><div class="ttdeci">@ no_lock</div><div class="ttdoc">Texture changes rarely, and isn't lockable.</div></div>
+<div class="ttc" id="anamespacecen_html"><div class="ttname"><a href="namespacecen.html">cen</a></div><div class="ttdoc">The top-level namespace that all components of the library reside in.</div><div class="ttdef"><b>Definition:</b> channels.hpp:12</div></div>
+<div class="ttc" id="agroup__video_html_gga6952adc5f093252560469686271182aaaabb0256a318439745ab0b343d64b9ba0"><div class="ttname"><a href="group__video.html#gga6952adc5f093252560469686271182aaaabb0256a318439745ab0b343d64b9ba0">cen::texture_access::streaming</a></div><div class="ttdeci">@ streaming</div><div class="ttdoc">Texture changes frequently, and is lockable.</div></div>
+<div class="ttc" id="agroup__audio_html_ga322c699fa08098bd801164819d2f4cc8"><div class="ttname"><a href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">cen::operator!=</a></div><div class="ttdeci">constexpr auto operator!=(const fade_status lhs, const Mix_Fading rhs) noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the fading status values represent aren't the same.</div><div class="ttdef"><b>Definition:</b> music.hpp:659</div></div>
+<div class="ttc" id="agroup__audio_html_gaf72595df3886dbb34dbcf030d14333d2"><div class="ttname"><a href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">cen::operator==</a></div><div class="ttdeci">constexpr auto operator==(const fade_status lhs, const Mix_Fading rhs) noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the fading status values represent are the same.</div><div class="ttdef"><b>Definition:</b> music.hpp:636</div></div>
+<div class="ttc" id="agroup__video_html_gga6952adc5f093252560469686271182aaa42aefbae01d2dfd981f7da7d823d689e"><div class="ttname"><a href="group__video.html#gga6952adc5f093252560469686271182aaa42aefbae01d2dfd981f7da7d823d689e">cen::texture_access::target</a></div><div class="ttdeci">@ target</div><div class="ttdoc">Texture can be used as a render target.</div></div>
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
 </div>

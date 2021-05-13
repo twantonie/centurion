@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -95,128 +95,32 @@ $(function() {
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classcen_1_1basic__rect-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">cen::basic_rect Class Reference<div class="ingroups"><a class="el" href="group__geometry.html">Geometry</a></div></div>  </div>
+<div class="title">cen::basic_rect Class Reference<div class="ingroups"><a class="el" href="group__math.html">Math</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>A simple rectangle implementation.  
+<p>A simple rectangle implementation, based on either <code>SDL_Rect</code> or <code>SDL_FRect</code>.  
  <a href="classcen_1_1basic__rect.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="rect_8hpp_source.html">rect.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a12d4b0ad1d7efd19a8d512f19c3557fd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a> = typename <a class="el" href="classcen_1_1rect__traits.html">rect_traits</a>&lt; T &gt;::<a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a></td></tr>
-<tr class="memdesc:a12d4b0ad1d7efd19a8d512f19c3557fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The representation type, i.e. <code>int</code> or <code>float</code>.  <a href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">More...</a><br /></td></tr>
-<tr class="separator:a12d4b0ad1d7efd19a8d512f19c3557fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85217c220729bb00e8f9d61041fed6de"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a85217c220729bb00e8f9d61041fed6de">point_type</a> = typename <a class="el" href="classcen_1_1rect__traits.html">rect_traits</a>&lt; T &gt;::<a class="el" href="classcen_1_1basic__rect.html#a85217c220729bb00e8f9d61041fed6de">point_type</a></td></tr>
-<tr class="memdesc:a85217c220729bb00e8f9d61041fed6de"><td class="mdescLeft">&#160;</td><td class="mdescRight">The point type used, i.e. <code>ipoint</code> or <code>fpoint</code>.  <a href="classcen_1_1basic__rect.html#a85217c220729bb00e8f9d61041fed6de">More...</a><br /></td></tr>
-<tr class="separator:a85217c220729bb00e8f9d61041fed6de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5998b9324e9fc2733873ce1ad1f6c94b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a5998b9324e9fc2733873ce1ad1f6c94b">area_type</a> = typename <a class="el" href="classcen_1_1rect__traits.html">rect_traits</a>&lt; T &gt;::<a class="el" href="classcen_1_1basic__rect.html#a5998b9324e9fc2733873ce1ad1f6c94b">area_type</a></td></tr>
-<tr class="memdesc:a5998b9324e9fc2733873ce1ad1f6c94b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The area type used, i.e. <code>iarea</code> or <code>farea</code>.  <a href="classcen_1_1basic__rect.html#a5998b9324e9fc2733873ce1ad1f6c94b">More...</a><br /></td></tr>
-<tr class="separator:a5998b9324e9fc2733873ce1ad1f6c94b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0941f5ec5a873b3eab683b963655d63a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a0941f5ec5a873b3eab683b963655d63a">rect_type</a> = typename <a class="el" href="classcen_1_1rect__traits.html">rect_traits</a>&lt; T &gt;::<a class="el" href="classcen_1_1basic__rect.html#a0941f5ec5a873b3eab683b963655d63a">rect_type</a></td></tr>
-<tr class="memdesc:a0941f5ec5a873b3eab683b963655d63a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The underlying SDL rectangle type, i.e. <code>SDL_Rect</code> or <code>SDL_FRect</code>.  <a href="classcen_1_1basic__rect.html#a0941f5ec5a873b3eab683b963655d63a">More...</a><br /></td></tr>
-<tr class="separator:a0941f5ec5a873b3eab683b963655d63a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8682553ce7057617709d69a2a128d91"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a> = typename <a class="el" href="classcen_1_1rect__traits.html">rect_traits</a>&lt; T &gt;::<a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a></td></tr>
+<tr class="memdesc:af8682553ce7057617709d69a2a128d91"><td class="mdescLeft">&#160;</td><td class="mdescRight">The representation type, i.e. <code>int</code> or <code>float</code>.  <a href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">More...</a><br /></td></tr>
+<tr class="separator:af8682553ce7057617709d69a2a128d91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2d33c986de7e903b655ba6214c819e1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#ae2d33c986de7e903b655ba6214c819e1">point_type</a> = typename <a class="el" href="classcen_1_1rect__traits.html">rect_traits</a>&lt; T &gt;::<a class="el" href="classcen_1_1basic__rect.html#ae2d33c986de7e903b655ba6214c819e1">point_type</a></td></tr>
+<tr class="memdesc:ae2d33c986de7e903b655ba6214c819e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The point type used, i.e. <code>ipoint</code> or <code>fpoint</code>.  <a href="classcen_1_1basic__rect.html#ae2d33c986de7e903b655ba6214c819e1">More...</a><br /></td></tr>
+<tr class="separator:ae2d33c986de7e903b655ba6214c819e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a875c13dd1232b3fc6efa9189a9e017dc"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a875c13dd1232b3fc6efa9189a9e017dc">area_type</a> = typename <a class="el" href="classcen_1_1rect__traits.html">rect_traits</a>&lt; T &gt;::<a class="el" href="classcen_1_1basic__rect.html#a875c13dd1232b3fc6efa9189a9e017dc">area_type</a></td></tr>
+<tr class="memdesc:a875c13dd1232b3fc6efa9189a9e017dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The area type used, i.e. <code>iarea</code> or <code>farea</code>.  <a href="classcen_1_1basic__rect.html#a875c13dd1232b3fc6efa9189a9e017dc">More...</a><br /></td></tr>
+<tr class="separator:a875c13dd1232b3fc6efa9189a9e017dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4b829c9432dfd5ba60e24f3de50e936"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#ad4b829c9432dfd5ba60e24f3de50e936">rect_type</a> = typename <a class="el" href="classcen_1_1rect__traits.html">rect_traits</a>&lt; T &gt;::<a class="el" href="classcen_1_1basic__rect.html#ad4b829c9432dfd5ba60e24f3de50e936">rect_type</a></td></tr>
+<tr class="memdesc:ad4b829c9432dfd5ba60e24f3de50e936"><td class="mdescLeft">&#160;</td><td class="mdescRight">The underlying SDL rectangle type, i.e. <code>SDL_Rect</code> or <code>SDL_FRect</code>.  <a href="classcen_1_1basic__rect.html#ad4b829c9432dfd5ba60e24f3de50e936">More...</a><br /></td></tr>
+<tr class="separator:ad4b829c9432dfd5ba60e24f3de50e936"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad5837cb89b3cae7434f6b01a2c29c9cc"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#ad5837cb89b3cae7434f6b01a2c29c9cc">basic_rect</a> () noexcept=default</td></tr>
-<tr class="memdesc:ad5837cb89b3cae7434f6b01a2c29c9cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a rectangle with the components (0, 0, 0, 0).  <a href="classcen_1_1basic__rect.html#ad5837cb89b3cae7434f6b01a2c29c9cc">More...</a><br /></td></tr>
-<tr class="separator:ad5837cb89b3cae7434f6b01a2c29c9cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae16f7e248bcc6b9fd8469396837becf3"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#ae16f7e248bcc6b9fd8469396837becf3">basic_rect</a> (const <a class="el" href="classcen_1_1basic__rect.html#a0941f5ec5a873b3eab683b963655d63a">rect_type</a> &amp;rect) noexcept</td></tr>
-<tr class="memdesc:ae16f7e248bcc6b9fd8469396837becf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a rectangle based on an SDL rectangle.  <a href="classcen_1_1basic__rect.html#ae16f7e248bcc6b9fd8469396837becf3">More...</a><br /></td></tr>
-<tr class="separator:ae16f7e248bcc6b9fd8469396837becf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91b4330f62f8d8d7d996409babaafb07"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a91b4330f62f8d8d7d996409babaafb07">basic_rect</a> (const <a class="el" href="classcen_1_1basic__rect.html#a85217c220729bb00e8f9d61041fed6de">point_type</a> &amp;<a class="el" href="classcen_1_1basic__rect.html#a6d722dadba251a6c67509e06cb460d9d">position</a>, const <a class="el" href="classcen_1_1basic__rect.html#a5998b9324e9fc2733873ce1ad1f6c94b">area_type</a> &amp;<a class="el" href="classcen_1_1basic__rect.html#afbd3eed27cfdf04f8e9b083a71653ec0">size</a>) noexcept</td></tr>
-<tr class="memdesc:a91b4330f62f8d8d7d996409babaafb07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a rectangle with the supplied position and size.  <a href="classcen_1_1basic__rect.html#a91b4330f62f8d8d7d996409babaafb07">More...</a><br /></td></tr>
-<tr class="separator:a91b4330f62f8d8d7d996409babaafb07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7831d7a007352300d0ebb2a396622cf6"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a7831d7a007352300d0ebb2a396622cf6">basic_rect</a> (const <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a> <a class="el" href="classcen_1_1basic__rect.html#a1974837c365130ad4e1c9057be0092b1">x</a>, const <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a> <a class="el" href="classcen_1_1basic__rect.html#afa7e273884805b1408a7564df6f8168d">y</a>, const <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a> <a class="el" href="classcen_1_1basic__rect.html#adf299a560884a778b87d17c8c458f318">width</a>, const <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a> <a class="el" href="classcen_1_1basic__rect.html#a8dd18886c8ded59c2100cc265d2c60c4">height</a>) noexcept</td></tr>
-<tr class="memdesc:a7831d7a007352300d0ebb2a396622cf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a rectangle with the supplied position and size.  <a href="classcen_1_1basic__rect.html#a7831d7a007352300d0ebb2a396622cf6">More...</a><br /></td></tr>
-<tr class="separator:a7831d7a007352300d0ebb2a396622cf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e6e4d4efc732c5cba85be7900a7383f"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a9e6e4d4efc732c5cba85be7900a7383f">set_x</a> (const <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a> <a class="el" href="classcen_1_1basic__rect.html#a1974837c365130ad4e1c9057be0092b1">x</a>) noexcept</td></tr>
-<tr class="memdesc:a9e6e4d4efc732c5cba85be7900a7383f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the x-coordinate of the rectangle.  <a href="classcen_1_1basic__rect.html#a9e6e4d4efc732c5cba85be7900a7383f">More...</a><br /></td></tr>
-<tr class="separator:a9e6e4d4efc732c5cba85be7900a7383f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1cfac1e99303326270c9758dfc03fd7f"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a1cfac1e99303326270c9758dfc03fd7f">set_y</a> (const <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a> <a class="el" href="classcen_1_1basic__rect.html#afa7e273884805b1408a7564df6f8168d">y</a>) noexcept</td></tr>
-<tr class="memdesc:a1cfac1e99303326270c9758dfc03fd7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the y-coordinate of the rectangle.  <a href="classcen_1_1basic__rect.html#a1cfac1e99303326270c9758dfc03fd7f">More...</a><br /></td></tr>
-<tr class="separator:a1cfac1e99303326270c9758dfc03fd7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4505a8850234c94f7c48537dd1cb6f3f"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a4505a8850234c94f7c48537dd1cb6f3f">set_max_x</a> (const <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a> maxX) noexcept</td></tr>
-<tr class="memdesc:a4505a8850234c94f7c48537dd1cb6f3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the maximum x-coordinate of the rectangle.  <a href="classcen_1_1basic__rect.html#a4505a8850234c94f7c48537dd1cb6f3f">More...</a><br /></td></tr>
-<tr class="separator:a4505a8850234c94f7c48537dd1cb6f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcbdf56a64fa8225d1b26a74087028d0"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#afcbdf56a64fa8225d1b26a74087028d0">set_max_y</a> (const <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a> maxY) noexcept</td></tr>
-<tr class="memdesc:afcbdf56a64fa8225d1b26a74087028d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the maximum y-coordinate of the rectangle.  <a href="classcen_1_1basic__rect.html#afcbdf56a64fa8225d1b26a74087028d0">More...</a><br /></td></tr>
-<tr class="separator:afcbdf56a64fa8225d1b26a74087028d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18b1981f8969cebfc75baec26183c0a8"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a18b1981f8969cebfc75baec26183c0a8">set_position</a> (const <a class="el" href="classcen_1_1basic__rect.html#a85217c220729bb00e8f9d61041fed6de">point_type</a> &amp;pos) noexcept</td></tr>
-<tr class="memdesc:a18b1981f8969cebfc75baec26183c0a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the position of the rectangle.  <a href="classcen_1_1basic__rect.html#a18b1981f8969cebfc75baec26183c0a8">More...</a><br /></td></tr>
-<tr class="separator:a18b1981f8969cebfc75baec26183c0a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a153da5a30e643822f93d39c5712f0184"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a153da5a30e643822f93d39c5712f0184">set_width</a> (const <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a> <a class="el" href="classcen_1_1basic__rect.html#adf299a560884a778b87d17c8c458f318">width</a>) noexcept</td></tr>
-<tr class="memdesc:a153da5a30e643822f93d39c5712f0184"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the width of the rectangle.  <a href="classcen_1_1basic__rect.html#a153da5a30e643822f93d39c5712f0184">More...</a><br /></td></tr>
-<tr class="separator:a153da5a30e643822f93d39c5712f0184"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bfb7c18d0046d2d7982fb832095f2cf"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a1bfb7c18d0046d2d7982fb832095f2cf">set_height</a> (const <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a> <a class="el" href="classcen_1_1basic__rect.html#a8dd18886c8ded59c2100cc265d2c60c4">height</a>) noexcept</td></tr>
-<tr class="memdesc:a1bfb7c18d0046d2d7982fb832095f2cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the height of the rectangle.  <a href="classcen_1_1basic__rect.html#a1bfb7c18d0046d2d7982fb832095f2cf">More...</a><br /></td></tr>
-<tr class="separator:a1bfb7c18d0046d2d7982fb832095f2cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8cf7a80c5d7ca7c8cc4edfe36a8c7699"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a8cf7a80c5d7ca7c8cc4edfe36a8c7699">set_size</a> (const <a class="el" href="classcen_1_1basic__rect.html#a5998b9324e9fc2733873ce1ad1f6c94b">area_type</a> &amp;<a class="el" href="classcen_1_1basic__rect.html#afbd3eed27cfdf04f8e9b083a71653ec0">size</a>) noexcept</td></tr>
-<tr class="memdesc:a8cf7a80c5d7ca7c8cc4edfe36a8c7699"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the size of the rectangle.  <a href="classcen_1_1basic__rect.html#a8cf7a80c5d7ca7c8cc4edfe36a8c7699">More...</a><br /></td></tr>
-<tr class="separator:a8cf7a80c5d7ca7c8cc4edfe36a8c7699"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4189e1ef0640a99607f2932030670c8f"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a4189e1ef0640a99607f2932030670c8f">contains</a> (const <a class="el" href="classcen_1_1basic__rect.html#a85217c220729bb00e8f9d61041fed6de">point_type</a> &amp;point) const noexcept -&gt; bool</td></tr>
-<tr class="memdesc:a4189e1ef0640a99607f2932030670c8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the rectangle contains the point.  <a href="classcen_1_1basic__rect.html#a4189e1ef0640a99607f2932030670c8f">More...</a><br /></td></tr>
-<tr class="separator:a4189e1ef0640a99607f2932030670c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1974837c365130ad4e1c9057be0092b1"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a1974837c365130ad4e1c9057be0092b1">x</a> () const noexcept -&gt; <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a></td></tr>
-<tr class="memdesc:a1974837c365130ad4e1c9057be0092b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the x-coordinate of the rectangle.  <a href="classcen_1_1basic__rect.html#a1974837c365130ad4e1c9057be0092b1">More...</a><br /></td></tr>
-<tr class="separator:a1974837c365130ad4e1c9057be0092b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa7e273884805b1408a7564df6f8168d"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#afa7e273884805b1408a7564df6f8168d">y</a> () const noexcept -&gt; <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a></td></tr>
-<tr class="memdesc:afa7e273884805b1408a7564df6f8168d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the y-coordinate of the rectangle.  <a href="classcen_1_1basic__rect.html#afa7e273884805b1408a7564df6f8168d">More...</a><br /></td></tr>
-<tr class="separator:afa7e273884805b1408a7564df6f8168d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d722dadba251a6c67509e06cb460d9d"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a6d722dadba251a6c67509e06cb460d9d">position</a> () const noexcept -&gt; <a class="el" href="classcen_1_1basic__rect.html#a85217c220729bb00e8f9d61041fed6de">point_type</a></td></tr>
-<tr class="memdesc:a6d722dadba251a6c67509e06cb460d9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the position of the rectangle.  <a href="classcen_1_1basic__rect.html#a6d722dadba251a6c67509e06cb460d9d">More...</a><br /></td></tr>
-<tr class="separator:a6d722dadba251a6c67509e06cb460d9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf299a560884a778b87d17c8c458f318"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#adf299a560884a778b87d17c8c458f318">width</a> () const noexcept -&gt; <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a></td></tr>
-<tr class="memdesc:adf299a560884a778b87d17c8c458f318"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the width of the rectangle.  <a href="classcen_1_1basic__rect.html#adf299a560884a778b87d17c8c458f318">More...</a><br /></td></tr>
-<tr class="separator:adf299a560884a778b87d17c8c458f318"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8dd18886c8ded59c2100cc265d2c60c4"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a8dd18886c8ded59c2100cc265d2c60c4">height</a> () const noexcept -&gt; <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a></td></tr>
-<tr class="memdesc:a8dd18886c8ded59c2100cc265d2c60c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the height of the rectangle.  <a href="classcen_1_1basic__rect.html#a8dd18886c8ded59c2100cc265d2c60c4">More...</a><br /></td></tr>
-<tr class="separator:a8dd18886c8ded59c2100cc265d2c60c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbd3eed27cfdf04f8e9b083a71653ec0"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#afbd3eed27cfdf04f8e9b083a71653ec0">size</a> () const noexcept -&gt; <a class="el" href="classcen_1_1basic__rect.html#a5998b9324e9fc2733873ce1ad1f6c94b">area_type</a></td></tr>
-<tr class="memdesc:afbd3eed27cfdf04f8e9b083a71653ec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the rectangle.  <a href="classcen_1_1basic__rect.html#afbd3eed27cfdf04f8e9b083a71653ec0">More...</a><br /></td></tr>
-<tr class="separator:afbd3eed27cfdf04f8e9b083a71653ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91597188ccd4a0ce89df42e08f228c6c"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a91597188ccd4a0ce89df42e08f228c6c">max_x</a> () const noexcept -&gt; <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a></td></tr>
-<tr class="memdesc:a91597188ccd4a0ce89df42e08f228c6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the maximum x-coordinate of the rectangle.  <a href="classcen_1_1basic__rect.html#a91597188ccd4a0ce89df42e08f228c6c">More...</a><br /></td></tr>
-<tr class="separator:a91597188ccd4a0ce89df42e08f228c6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc80fa97fb2043bf0fe3dcb187636294"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#abc80fa97fb2043bf0fe3dcb187636294">max_y</a> () const noexcept -&gt; <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a></td></tr>
-<tr class="memdesc:abc80fa97fb2043bf0fe3dcb187636294"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the maximum y-coordinate of the rectangle.  <a href="classcen_1_1basic__rect.html#abc80fa97fb2043bf0fe3dcb187636294">More...</a><br /></td></tr>
-<tr class="separator:abc80fa97fb2043bf0fe3dcb187636294"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab01571a52f2d7b95a9a6f16701ec079e"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#ab01571a52f2d7b95a9a6f16701ec079e">center_x</a> () const noexcept -&gt; <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a></td></tr>
-<tr class="memdesc:ab01571a52f2d7b95a9a6f16701ec079e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the x-coordinate of the center point of the rectangle.  <a href="classcen_1_1basic__rect.html#ab01571a52f2d7b95a9a6f16701ec079e">More...</a><br /></td></tr>
-<tr class="separator:ab01571a52f2d7b95a9a6f16701ec079e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a825cd76588408a438ec1b14e0d2ca61b"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a825cd76588408a438ec1b14e0d2ca61b">center_y</a> () const noexcept -&gt; <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a></td></tr>
-<tr class="memdesc:a825cd76588408a438ec1b14e0d2ca61b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the y-coordinate of the center point of the rectangle.  <a href="classcen_1_1basic__rect.html#a825cd76588408a438ec1b14e0d2ca61b">More...</a><br /></td></tr>
-<tr class="separator:a825cd76588408a438ec1b14e0d2ca61b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c48e97bb1c95d068c45a8b265485e66"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a0c48e97bb1c95d068c45a8b265485e66">center</a> () const noexcept -&gt; <a class="el" href="classcen_1_1basic__rect.html#a85217c220729bb00e8f9d61041fed6de">point_type</a></td></tr>
-<tr class="memdesc:a0c48e97bb1c95d068c45a8b265485e66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the center point of the rectangle.  <a href="classcen_1_1basic__rect.html#a0c48e97bb1c95d068c45a8b265485e66">More...</a><br /></td></tr>
-<tr class="separator:a0c48e97bb1c95d068c45a8b265485e66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cb7b177a9729b31559b82514f933fc0"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a2cb7b177a9729b31559b82514f933fc0">area</a> () const noexcept -&gt; <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a></td></tr>
-<tr class="memdesc:a2cb7b177a9729b31559b82514f933fc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total area of the rectangle.  <a href="classcen_1_1basic__rect.html#a2cb7b177a9729b31559b82514f933fc0">More...</a><br /></td></tr>
-<tr class="separator:a2cb7b177a9729b31559b82514f933fc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18228b8fc4a7b0e75741b42d8727ee4b"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a18228b8fc4a7b0e75741b42d8727ee4b">has_area</a> () const noexcept -&gt; bool</td></tr>
-<tr class="memdesc:a18228b8fc4a7b0e75741b42d8727ee4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the rectangle has an area.  <a href="classcen_1_1basic__rect.html#a18228b8fc4a7b0e75741b42d8727ee4b">More...</a><br /></td></tr>
-<tr class="separator:a18228b8fc4a7b0e75741b42d8727ee4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfe2d4ed1a35f8fa6d8bbeae4ae8d257"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#abfe2d4ed1a35f8fa6d8bbeae4ae8d257">get</a> () noexcept -&gt; <a class="el" href="classcen_1_1basic__rect.html#a0941f5ec5a873b3eab683b963655d63a">rect_type</a> &amp;</td></tr>
-<tr class="memdesc:abfe2d4ed1a35f8fa6d8bbeae4ae8d257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the internal rectangle.  <a href="classcen_1_1basic__rect.html#abfe2d4ed1a35f8fa6d8bbeae4ae8d257">More...</a><br /></td></tr>
-<tr class="separator:abfe2d4ed1a35f8fa6d8bbeae4ae8d257"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0ee7fb747377df1ba5826b4c4414ac8"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#ae0ee7fb747377df1ba5826b4c4414ac8">get</a> () const noexcept -&gt; const <a class="el" href="classcen_1_1basic__rect.html#a0941f5ec5a873b3eab683b963655d63a">rect_type</a> &amp;</td></tr>
-<tr class="memdesc:ae0ee7fb747377df1ba5826b4c4414ac8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the internal rectangle.  <a href="classcen_1_1basic__rect.html#ae0ee7fb747377df1ba5826b4c4414ac8">More...</a><br /></td></tr>
-<tr class="separator:ae0ee7fb747377df1ba5826b4c4414ac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65cc915bf75c167757797d5cd1288fc5"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a65cc915bf75c167757797d5cd1288fc5">data</a> () noexcept -&gt; <a class="el" href="classcen_1_1basic__rect.html#a0941f5ec5a873b3eab683b963655d63a">rect_type</a> *</td></tr>
-<tr class="memdesc:a65cc915bf75c167757797d5cd1288fc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the internal rectangle representation.  <a href="classcen_1_1basic__rect.html#a65cc915bf75c167757797d5cd1288fc5">More...</a><br /></td></tr>
-<tr class="separator:a65cc915bf75c167757797d5cd1288fc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d26804b8fc04cbc4981c89364f7435b"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a8d26804b8fc04cbc4981c89364f7435b">data</a> () const noexcept -&gt; const <a class="el" href="classcen_1_1basic__rect.html#a0941f5ec5a873b3eab683b963655d63a">rect_type</a> *</td></tr>
-<tr class="memdesc:a8d26804b8fc04cbc4981c89364f7435b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the internal rectangle representation.  <a href="classcen_1_1basic__rect.html#a8d26804b8fc04cbc4981c89364f7435b">More...</a><br /></td></tr>
-<tr class="separator:a8d26804b8fc04cbc4981c89364f7435b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f50483b813dee6b8234c1f7dcd05f00"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a8f50483b813dee6b8234c1f7dcd05f00">operator rect_type *</a> () noexcept</td></tr>
-<tr class="memdesc:a8f50483b813dee6b8234c1f7dcd05f00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the internal rectangle.  <a href="classcen_1_1basic__rect.html#a8f50483b813dee6b8234c1f7dcd05f00">More...</a><br /></td></tr>
-<tr class="separator:a8f50483b813dee6b8234c1f7dcd05f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd4891196db5606b1afcac8defe8e8c1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#abd4891196db5606b1afcac8defe8e8c1">operator const rect_type *</a> () const noexcept</td></tr>
-<tr class="memdesc:abd4891196db5606b1afcac8defe8e8c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the internal rectangle.  <a href="classcen_1_1basic__rect.html#abd4891196db5606b1afcac8defe8e8c1">More...</a><br /></td></tr>
-<tr class="separator:abd4891196db5606b1afcac8defe8e8c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a511c58a6c2c241e4e6d9deffc981e4d0"><td class="memTemplParams" colspan="2">template&lt;typename Archive &gt; </td></tr>
 <tr class="memitem:a511c58a6c2c241e4e6d9deffc981e4d0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a511c58a6c2c241e4e6d9deffc981e4d0">serialize</a> (Archive &amp;archive)</td></tr>
 <tr class="memdesc:a511c58a6c2c241e4e6d9deffc981e4d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serializes the rectangle.  <a href="classcen_1_1basic__rect.html#a511c58a6c2c241e4e6d9deffc981e4d0">More...</a><br /></td></tr>
@@ -230,28 +134,156 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:a5f9060b87af5e9be86197fec5a756739"><td class="memItemLeft" align="right" valign="top">constexpr static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a5f9060b87af5e9be86197fec5a756739">isFloating</a> = <a class="el" href="classcen_1_1rect__traits.html">rect_traits</a>&lt;T&gt;::isFloating</td></tr>
 <tr class="memdesc:a5f9060b87af5e9be86197fec5a756739"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the rectangle is based on a floating-point type.  <a href="classcen_1_1basic__rect.html#a5f9060b87af5e9be86197fec5a756739">More...</a><br /></td></tr>
 <tr class="separator:a5f9060b87af5e9be86197fec5a756739"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Construction</h2></td></tr>
+<tr class="memitem:ad5837cb89b3cae7434f6b01a2c29c9cc"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#ad5837cb89b3cae7434f6b01a2c29c9cc">basic_rect</a> () noexcept=default</td></tr>
+<tr class="memdesc:ad5837cb89b3cae7434f6b01a2c29c9cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a rectangle with the components (0, 0, 0, 0).  <a href="classcen_1_1basic__rect.html#ad5837cb89b3cae7434f6b01a2c29c9cc">More...</a><br /></td></tr>
+<tr class="separator:ad5837cb89b3cae7434f6b01a2c29c9cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae16f7e248bcc6b9fd8469396837becf3"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#ae16f7e248bcc6b9fd8469396837becf3">basic_rect</a> (const <a class="el" href="classcen_1_1basic__rect.html#ad4b829c9432dfd5ba60e24f3de50e936">rect_type</a> &amp;<a class="el" href="group__math.html#ga08ea85ac8c9cd2e6b973921722cbe2c9">rect</a>) noexcept</td></tr>
+<tr class="memdesc:ae16f7e248bcc6b9fd8469396837becf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a rectangle based on an SDL rectangle.  <a href="classcen_1_1basic__rect.html#ae16f7e248bcc6b9fd8469396837becf3">More...</a><br /></td></tr>
+<tr class="separator:ae16f7e248bcc6b9fd8469396837becf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91b4330f62f8d8d7d996409babaafb07"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a91b4330f62f8d8d7d996409babaafb07">basic_rect</a> (const <a class="el" href="classcen_1_1basic__rect.html#ae2d33c986de7e903b655ba6214c819e1">point_type</a> &amp;<a class="el" href="classcen_1_1basic__rect.html#a6d722dadba251a6c67509e06cb460d9d">position</a>, const <a class="el" href="classcen_1_1basic__rect.html#a875c13dd1232b3fc6efa9189a9e017dc">area_type</a> &amp;<a class="el" href="classcen_1_1basic__rect.html#afbd3eed27cfdf04f8e9b083a71653ec0">size</a>) noexcept</td></tr>
+<tr class="memdesc:a91b4330f62f8d8d7d996409babaafb07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a rectangle with the supplied position and size.  <a href="classcen_1_1basic__rect.html#a91b4330f62f8d8d7d996409babaafb07">More...</a><br /></td></tr>
+<tr class="separator:a91b4330f62f8d8d7d996409babaafb07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7831d7a007352300d0ebb2a396622cf6"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a7831d7a007352300d0ebb2a396622cf6">basic_rect</a> (const <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a> <a class="el" href="classcen_1_1basic__rect.html#a1974837c365130ad4e1c9057be0092b1">x</a>, const <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a> <a class="el" href="classcen_1_1basic__rect.html#afa7e273884805b1408a7564df6f8168d">y</a>, const <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a> <a class="el" href="classcen_1_1basic__rect.html#adf299a560884a778b87d17c8c458f318">width</a>, const <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a> <a class="el" href="classcen_1_1basic__rect.html#a8dd18886c8ded59c2100cc265d2c60c4">height</a>) noexcept</td></tr>
+<tr class="memdesc:a7831d7a007352300d0ebb2a396622cf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a rectangle with the supplied position and size.  <a href="classcen_1_1basic__rect.html#a7831d7a007352300d0ebb2a396622cf6">More...</a><br /></td></tr>
+<tr class="separator:a7831d7a007352300d0ebb2a396622cf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Setters</h2></td></tr>
+<tr class="memitem:a9e6e4d4efc732c5cba85be7900a7383f"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a9e6e4d4efc732c5cba85be7900a7383f">set_x</a> (const <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a> <a class="el" href="classcen_1_1basic__rect.html#a1974837c365130ad4e1c9057be0092b1">x</a>) noexcept</td></tr>
+<tr class="memdesc:a9e6e4d4efc732c5cba85be7900a7383f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the x-coordinate of the rectangle.  <a href="classcen_1_1basic__rect.html#a9e6e4d4efc732c5cba85be7900a7383f">More...</a><br /></td></tr>
+<tr class="separator:a9e6e4d4efc732c5cba85be7900a7383f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cfac1e99303326270c9758dfc03fd7f"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a1cfac1e99303326270c9758dfc03fd7f">set_y</a> (const <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a> <a class="el" href="classcen_1_1basic__rect.html#afa7e273884805b1408a7564df6f8168d">y</a>) noexcept</td></tr>
+<tr class="memdesc:a1cfac1e99303326270c9758dfc03fd7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the y-coordinate of the rectangle.  <a href="classcen_1_1basic__rect.html#a1cfac1e99303326270c9758dfc03fd7f">More...</a><br /></td></tr>
+<tr class="separator:a1cfac1e99303326270c9758dfc03fd7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4505a8850234c94f7c48537dd1cb6f3f"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a4505a8850234c94f7c48537dd1cb6f3f">set_max_x</a> (const <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a> maxX) noexcept</td></tr>
+<tr class="memdesc:a4505a8850234c94f7c48537dd1cb6f3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the maximum x-coordinate of the rectangle.  <a href="classcen_1_1basic__rect.html#a4505a8850234c94f7c48537dd1cb6f3f">More...</a><br /></td></tr>
+<tr class="separator:a4505a8850234c94f7c48537dd1cb6f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcbdf56a64fa8225d1b26a74087028d0"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#afcbdf56a64fa8225d1b26a74087028d0">set_max_y</a> (const <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a> maxY) noexcept</td></tr>
+<tr class="memdesc:afcbdf56a64fa8225d1b26a74087028d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the maximum y-coordinate of the rectangle.  <a href="classcen_1_1basic__rect.html#afcbdf56a64fa8225d1b26a74087028d0">More...</a><br /></td></tr>
+<tr class="separator:afcbdf56a64fa8225d1b26a74087028d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74eb25c06b392ca8ebbaf362f8b891fd"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a74eb25c06b392ca8ebbaf362f8b891fd">offset_x</a> (const <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a> offset) noexcept</td></tr>
+<tr class="memdesc:a74eb25c06b392ca8ebbaf362f8b891fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offsets the x-coordinate of the rectangle by the specified amount.  <a href="classcen_1_1basic__rect.html#a74eb25c06b392ca8ebbaf362f8b891fd">More...</a><br /></td></tr>
+<tr class="separator:a74eb25c06b392ca8ebbaf362f8b891fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b6c057b8b985e181838818b38157df2"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a7b6c057b8b985e181838818b38157df2">offset_y</a> (const <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a> offset) noexcept</td></tr>
+<tr class="memdesc:a7b6c057b8b985e181838818b38157df2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offsets the y-coordinate of the rectangle by the specified amount.  <a href="classcen_1_1basic__rect.html#a7b6c057b8b985e181838818b38157df2">More...</a><br /></td></tr>
+<tr class="separator:a7b6c057b8b985e181838818b38157df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a257c6ab6c401a9dc4b299d87d23c4175"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a257c6ab6c401a9dc4b299d87d23c4175">offset_width</a> (const <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a> offset) noexcept</td></tr>
+<tr class="memdesc:a257c6ab6c401a9dc4b299d87d23c4175"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tweaks the width of the rectangle by the specified amount.  <a href="classcen_1_1basic__rect.html#a257c6ab6c401a9dc4b299d87d23c4175">More...</a><br /></td></tr>
+<tr class="separator:a257c6ab6c401a9dc4b299d87d23c4175"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca777d731bcab1be24ec31f0e2303fd6"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#aca777d731bcab1be24ec31f0e2303fd6">offset_height</a> (const <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a> offset) noexcept</td></tr>
+<tr class="memdesc:aca777d731bcab1be24ec31f0e2303fd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tweaks the height of the rectangle by the specified amount.  <a href="classcen_1_1basic__rect.html#aca777d731bcab1be24ec31f0e2303fd6">More...</a><br /></td></tr>
+<tr class="separator:aca777d731bcab1be24ec31f0e2303fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18b1981f8969cebfc75baec26183c0a8"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a18b1981f8969cebfc75baec26183c0a8">set_position</a> (const <a class="el" href="classcen_1_1basic__rect.html#ae2d33c986de7e903b655ba6214c819e1">point_type</a> &amp;pos) noexcept</td></tr>
+<tr class="memdesc:a18b1981f8969cebfc75baec26183c0a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the position of the rectangle.  <a href="classcen_1_1basic__rect.html#a18b1981f8969cebfc75baec26183c0a8">More...</a><br /></td></tr>
+<tr class="separator:a18b1981f8969cebfc75baec26183c0a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a153da5a30e643822f93d39c5712f0184"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a153da5a30e643822f93d39c5712f0184">set_width</a> (const <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a> <a class="el" href="classcen_1_1basic__rect.html#adf299a560884a778b87d17c8c458f318">width</a>) noexcept</td></tr>
+<tr class="memdesc:a153da5a30e643822f93d39c5712f0184"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the width of the rectangle.  <a href="classcen_1_1basic__rect.html#a153da5a30e643822f93d39c5712f0184">More...</a><br /></td></tr>
+<tr class="separator:a153da5a30e643822f93d39c5712f0184"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bfb7c18d0046d2d7982fb832095f2cf"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a1bfb7c18d0046d2d7982fb832095f2cf">set_height</a> (const <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a> <a class="el" href="classcen_1_1basic__rect.html#a8dd18886c8ded59c2100cc265d2c60c4">height</a>) noexcept</td></tr>
+<tr class="memdesc:a1bfb7c18d0046d2d7982fb832095f2cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the height of the rectangle.  <a href="classcen_1_1basic__rect.html#a1bfb7c18d0046d2d7982fb832095f2cf">More...</a><br /></td></tr>
+<tr class="separator:a1bfb7c18d0046d2d7982fb832095f2cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cf7a80c5d7ca7c8cc4edfe36a8c7699"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a8cf7a80c5d7ca7c8cc4edfe36a8c7699">set_size</a> (const <a class="el" href="classcen_1_1basic__rect.html#a875c13dd1232b3fc6efa9189a9e017dc">area_type</a> &amp;<a class="el" href="classcen_1_1basic__rect.html#afbd3eed27cfdf04f8e9b083a71653ec0">size</a>) noexcept</td></tr>
+<tr class="memdesc:a8cf7a80c5d7ca7c8cc4edfe36a8c7699"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the size of the rectangle.  <a href="classcen_1_1basic__rect.html#a8cf7a80c5d7ca7c8cc4edfe36a8c7699">More...</a><br /></td></tr>
+<tr class="separator:a8cf7a80c5d7ca7c8cc4edfe36a8c7699"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Queries</h2></td></tr>
+<tr class="memitem:a1974837c365130ad4e1c9057be0092b1"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a1974837c365130ad4e1c9057be0092b1">x</a> () const noexcept -&gt; <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a></td></tr>
+<tr class="memdesc:a1974837c365130ad4e1c9057be0092b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the x-coordinate of the rectangle.  <a href="classcen_1_1basic__rect.html#a1974837c365130ad4e1c9057be0092b1">More...</a><br /></td></tr>
+<tr class="separator:a1974837c365130ad4e1c9057be0092b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa7e273884805b1408a7564df6f8168d"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#afa7e273884805b1408a7564df6f8168d">y</a> () const noexcept -&gt; <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a></td></tr>
+<tr class="memdesc:afa7e273884805b1408a7564df6f8168d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the y-coordinate of the rectangle.  <a href="classcen_1_1basic__rect.html#afa7e273884805b1408a7564df6f8168d">More...</a><br /></td></tr>
+<tr class="separator:afa7e273884805b1408a7564df6f8168d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d722dadba251a6c67509e06cb460d9d"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a6d722dadba251a6c67509e06cb460d9d">position</a> () const noexcept -&gt; <a class="el" href="classcen_1_1basic__rect.html#ae2d33c986de7e903b655ba6214c819e1">point_type</a></td></tr>
+<tr class="memdesc:a6d722dadba251a6c67509e06cb460d9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the position of the rectangle.  <a href="classcen_1_1basic__rect.html#a6d722dadba251a6c67509e06cb460d9d">More...</a><br /></td></tr>
+<tr class="separator:a6d722dadba251a6c67509e06cb460d9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf299a560884a778b87d17c8c458f318"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#adf299a560884a778b87d17c8c458f318">width</a> () const noexcept -&gt; <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a></td></tr>
+<tr class="memdesc:adf299a560884a778b87d17c8c458f318"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the width of the rectangle.  <a href="classcen_1_1basic__rect.html#adf299a560884a778b87d17c8c458f318">More...</a><br /></td></tr>
+<tr class="separator:adf299a560884a778b87d17c8c458f318"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dd18886c8ded59c2100cc265d2c60c4"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a8dd18886c8ded59c2100cc265d2c60c4">height</a> () const noexcept -&gt; <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a></td></tr>
+<tr class="memdesc:a8dd18886c8ded59c2100cc265d2c60c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the height of the rectangle.  <a href="classcen_1_1basic__rect.html#a8dd18886c8ded59c2100cc265d2c60c4">More...</a><br /></td></tr>
+<tr class="separator:a8dd18886c8ded59c2100cc265d2c60c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbd3eed27cfdf04f8e9b083a71653ec0"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#afbd3eed27cfdf04f8e9b083a71653ec0">size</a> () const noexcept -&gt; <a class="el" href="classcen_1_1basic__rect.html#a875c13dd1232b3fc6efa9189a9e017dc">area_type</a></td></tr>
+<tr class="memdesc:afbd3eed27cfdf04f8e9b083a71653ec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the rectangle.  <a href="classcen_1_1basic__rect.html#afbd3eed27cfdf04f8e9b083a71653ec0">More...</a><br /></td></tr>
+<tr class="separator:afbd3eed27cfdf04f8e9b083a71653ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91597188ccd4a0ce89df42e08f228c6c"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a91597188ccd4a0ce89df42e08f228c6c">max_x</a> () const noexcept -&gt; <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a></td></tr>
+<tr class="memdesc:a91597188ccd4a0ce89df42e08f228c6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the maximum x-coordinate of the rectangle.  <a href="classcen_1_1basic__rect.html#a91597188ccd4a0ce89df42e08f228c6c">More...</a><br /></td></tr>
+<tr class="separator:a91597188ccd4a0ce89df42e08f228c6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc80fa97fb2043bf0fe3dcb187636294"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#abc80fa97fb2043bf0fe3dcb187636294">max_y</a> () const noexcept -&gt; <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a></td></tr>
+<tr class="memdesc:abc80fa97fb2043bf0fe3dcb187636294"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the maximum y-coordinate of the rectangle.  <a href="classcen_1_1basic__rect.html#abc80fa97fb2043bf0fe3dcb187636294">More...</a><br /></td></tr>
+<tr class="separator:abc80fa97fb2043bf0fe3dcb187636294"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab01571a52f2d7b95a9a6f16701ec079e"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#ab01571a52f2d7b95a9a6f16701ec079e">center_x</a> () const noexcept -&gt; <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a></td></tr>
+<tr class="memdesc:ab01571a52f2d7b95a9a6f16701ec079e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the x-coordinate of the center point of the rectangle.  <a href="classcen_1_1basic__rect.html#ab01571a52f2d7b95a9a6f16701ec079e">More...</a><br /></td></tr>
+<tr class="separator:ab01571a52f2d7b95a9a6f16701ec079e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a825cd76588408a438ec1b14e0d2ca61b"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a825cd76588408a438ec1b14e0d2ca61b">center_y</a> () const noexcept -&gt; <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a></td></tr>
+<tr class="memdesc:a825cd76588408a438ec1b14e0d2ca61b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the y-coordinate of the center point of the rectangle.  <a href="classcen_1_1basic__rect.html#a825cd76588408a438ec1b14e0d2ca61b">More...</a><br /></td></tr>
+<tr class="separator:a825cd76588408a438ec1b14e0d2ca61b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c48e97bb1c95d068c45a8b265485e66"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a0c48e97bb1c95d068c45a8b265485e66">center</a> () const noexcept -&gt; <a class="el" href="classcen_1_1basic__rect.html#ae2d33c986de7e903b655ba6214c819e1">point_type</a></td></tr>
+<tr class="memdesc:a0c48e97bb1c95d068c45a8b265485e66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the center point of the rectangle.  <a href="classcen_1_1basic__rect.html#a0c48e97bb1c95d068c45a8b265485e66">More...</a><br /></td></tr>
+<tr class="separator:a0c48e97bb1c95d068c45a8b265485e66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cb7b177a9729b31559b82514f933fc0"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a2cb7b177a9729b31559b82514f933fc0">area</a> () const noexcept -&gt; <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a></td></tr>
+<tr class="memdesc:a2cb7b177a9729b31559b82514f933fc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total area of the rectangle.  <a href="classcen_1_1basic__rect.html#a2cb7b177a9729b31559b82514f933fc0">More...</a><br /></td></tr>
+<tr class="separator:a2cb7b177a9729b31559b82514f933fc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4189e1ef0640a99607f2932030670c8f"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a4189e1ef0640a99607f2932030670c8f">contains</a> (const <a class="el" href="classcen_1_1basic__rect.html#ae2d33c986de7e903b655ba6214c819e1">point_type</a> &amp;<a class="el" href="group__math.html#ga0ea9dbc4b64f2d8d6c83919a080b805b">point</a>) const noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a4189e1ef0640a99607f2932030670c8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the rectangle contains the point.  <a href="classcen_1_1basic__rect.html#a4189e1ef0640a99607f2932030670c8f">More...</a><br /></td></tr>
+<tr class="separator:a4189e1ef0640a99607f2932030670c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18228b8fc4a7b0e75741b42d8727ee4b"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a18228b8fc4a7b0e75741b42d8727ee4b">has_area</a> () const noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a18228b8fc4a7b0e75741b42d8727ee4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the rectangle has an area.  <a href="classcen_1_1basic__rect.html#a18228b8fc4a7b0e75741b42d8727ee4b">More...</a><br /></td></tr>
+<tr class="separator:a18228b8fc4a7b0e75741b42d8727ee4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65cc915bf75c167757797d5cd1288fc5"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a65cc915bf75c167757797d5cd1288fc5">data</a> () noexcept -&gt; <a class="el" href="classcen_1_1basic__rect.html#ad4b829c9432dfd5ba60e24f3de50e936">rect_type</a> *</td></tr>
+<tr class="memdesc:a65cc915bf75c167757797d5cd1288fc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the internal rectangle representation.  <a href="classcen_1_1basic__rect.html#a65cc915bf75c167757797d5cd1288fc5">More...</a><br /></td></tr>
+<tr class="separator:a65cc915bf75c167757797d5cd1288fc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d26804b8fc04cbc4981c89364f7435b"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a8d26804b8fc04cbc4981c89364f7435b">data</a> () const noexcept -&gt; const <a class="el" href="classcen_1_1basic__rect.html#ad4b829c9432dfd5ba60e24f3de50e936">rect_type</a> *</td></tr>
+<tr class="memdesc:a8d26804b8fc04cbc4981c89364f7435b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the internal rectangle representation.  <a href="classcen_1_1basic__rect.html#a8d26804b8fc04cbc4981c89364f7435b">More...</a><br /></td></tr>
+<tr class="separator:a8d26804b8fc04cbc4981c89364f7435b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfe2d4ed1a35f8fa6d8bbeae4ae8d257"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#abfe2d4ed1a35f8fa6d8bbeae4ae8d257">get</a> () noexcept -&gt; <a class="el" href="classcen_1_1basic__rect.html#ad4b829c9432dfd5ba60e24f3de50e936">rect_type</a> &amp;</td></tr>
+<tr class="memdesc:abfe2d4ed1a35f8fa6d8bbeae4ae8d257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the internal rectangle.  <a href="classcen_1_1basic__rect.html#abfe2d4ed1a35f8fa6d8bbeae4ae8d257">More...</a><br /></td></tr>
+<tr class="separator:abfe2d4ed1a35f8fa6d8bbeae4ae8d257"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0ee7fb747377df1ba5826b4c4414ac8"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#ae0ee7fb747377df1ba5826b4c4414ac8">get</a> () const noexcept -&gt; const <a class="el" href="classcen_1_1basic__rect.html#ad4b829c9432dfd5ba60e24f3de50e936">rect_type</a> &amp;</td></tr>
+<tr class="memdesc:ae0ee7fb747377df1ba5826b4c4414ac8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the internal rectangle.  <a href="classcen_1_1basic__rect.html#ae0ee7fb747377df1ba5826b4c4414ac8">More...</a><br /></td></tr>
+<tr class="separator:ae0ee7fb747377df1ba5826b4c4414ac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Conversions</h2></td></tr>
+<tr class="memitem:a8f50483b813dee6b8234c1f7dcd05f00"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#a8f50483b813dee6b8234c1f7dcd05f00">operator rect_type *</a> () noexcept</td></tr>
+<tr class="memdesc:a8f50483b813dee6b8234c1f7dcd05f00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the internal rectangle.  <a href="classcen_1_1basic__rect.html#a8f50483b813dee6b8234c1f7dcd05f00">More...</a><br /></td></tr>
+<tr class="separator:a8f50483b813dee6b8234c1f7dcd05f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd4891196db5606b1afcac8defe8e8c1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__rect.html#abd4891196db5606b1afcac8defe8e8c1">operator const rect_type *</a> () const noexcept</td></tr>
+<tr class="memdesc:abd4891196db5606b1afcac8defe8e8c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the internal rectangle.  <a href="classcen_1_1basic__rect.html#abd4891196db5606b1afcac8defe8e8c1">More...</a><br /></td></tr>
+<tr class="separator:abd4891196db5606b1afcac8defe8e8c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A simple rectangle implementation. </p>
+<div class="textblock"><p>A simple rectangle implementation, based on either <code>SDL_Rect</code> or <code>SDL_FRect</code>. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>the representation type. Must be convertible to either <code>int</code> or <code>float</code>.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="group__geometry.html#gac693dcf48436f48e7aa257db423e1bdc" title="Alias for an int-based rectangle.">irect</a></code> </dd>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="group__math.html#gac693dcf48436f48e7aa257db423e1bdc" title="Alias for an int-based rectangle.">irect</a></code> </dd>
 <dd>
-<code><a class="el" href="group__geometry.html#gaf122d5b3b6ac5e5909ca9a7287c36556" title="Alias for a float-based rectangle.">frect</a></code></dd></dl>
+<code><a class="el" href="group__math.html#gaf122d5b3b6ac5e5909ca9a7287c36556" title="Alias for a float-based rectangle.">frect</a></code> </dd>
+<dd>
+<code><a class="el" href="group__math.html#ga08ea85ac8c9cd2e6b973921722cbe2c9" title="Creates a rectangle with automatically deduced precision.">rect()</a></code> </dd>
+<dd>
+<code><a class="el" href="group__math.html#gafdb630e2a87668b2fd270ec50b0e7c79" title="Indicates whether or not the two rectangles intersect.">intersects()</a></code> </dd>
+<dd>
+<code><a class="el" href="group__math.html#gaf577232f501e7ff9e83204a851bf207d" title="Indicates whether or not two rectangles are colliding.">collides()</a></code> </dd>
+<dd>
+<code><a class="el" href="group__math.html#ga4a625dd7684ecc133d1583e526a8946f" title="Returns the union of two rectangles.">get_union()</a></code></dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a5998b9324e9fc2733873ce1ad1f6c94b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5998b9324e9fc2733873ce1ad1f6c94b">&#9670;&nbsp;</a></span>area_type</h2>
+<a id="a875c13dd1232b3fc6efa9189a9e017dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a875c13dd1232b3fc6efa9189a9e017dc">&#9670;&nbsp;</a></span>area_type</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classcen_1_1basic__rect.html#a5998b9324e9fc2733873ce1ad1f6c94b">cen::basic_rect::area_type</a> =  typename <a class="el" href="classcen_1_1rect__traits.html">rect_traits</a>&lt;T&gt;::<a class="el" href="classcen_1_1basic__rect.html#a5998b9324e9fc2733873ce1ad1f6c94b">area_type</a></td>
+          <td class="memname"><a class="el" href="classcen_1_1basic__rect.html#a875c13dd1232b3fc6efa9189a9e017dc">cen::basic_rect::area_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -261,14 +293,14 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a85217c220729bb00e8f9d61041fed6de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a85217c220729bb00e8f9d61041fed6de">&#9670;&nbsp;</a></span>point_type</h2>
+<a id="ae2d33c986de7e903b655ba6214c819e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2d33c986de7e903b655ba6214c819e1">&#9670;&nbsp;</a></span>point_type</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classcen_1_1basic__rect.html#a85217c220729bb00e8f9d61041fed6de">cen::basic_rect::point_type</a> =  typename <a class="el" href="classcen_1_1rect__traits.html">rect_traits</a>&lt;T&gt;::<a class="el" href="classcen_1_1basic__rect.html#a85217c220729bb00e8f9d61041fed6de">point_type</a></td>
+          <td class="memname"><a class="el" href="classcen_1_1basic__rect.html#ae2d33c986de7e903b655ba6214c819e1">cen::basic_rect::point_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -278,14 +310,14 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a0941f5ec5a873b3eab683b963655d63a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0941f5ec5a873b3eab683b963655d63a">&#9670;&nbsp;</a></span>rect_type</h2>
+<a id="ad4b829c9432dfd5ba60e24f3de50e936"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4b829c9432dfd5ba60e24f3de50e936">&#9670;&nbsp;</a></span>rect_type</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classcen_1_1basic__rect.html#a0941f5ec5a873b3eab683b963655d63a">cen::basic_rect::rect_type</a> =  typename <a class="el" href="classcen_1_1rect__traits.html">rect_traits</a>&lt;T&gt;::<a class="el" href="classcen_1_1basic__rect.html#a0941f5ec5a873b3eab683b963655d63a">rect_type</a></td>
+          <td class="memname"><a class="el" href="classcen_1_1basic__rect.html#ad4b829c9432dfd5ba60e24f3de50e936">cen::basic_rect::rect_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -295,14 +327,14 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a12d4b0ad1d7efd19a8d512f19c3557fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12d4b0ad1d7efd19a8d512f19c3557fd">&#9670;&nbsp;</a></span>value_type</h2>
+<a id="af8682553ce7057617709d69a2a128d91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8682553ce7057617709d69a2a128d91">&#9670;&nbsp;</a></span>value_type</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">cen::basic_rect::value_type</a> =  typename <a class="el" href="classcen_1_1rect__traits.html">rect_traits</a>&lt;T&gt;::<a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a></td>
+          <td class="memname"><a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">cen::basic_rect::value_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -353,7 +385,7 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">constexpr cen::basic_rect::basic_rect </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#a0941f5ec5a873b3eab683b963655d63a">rect_type</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#ad4b829c9432dfd5ba60e24f3de50e936">rect_type</a> &amp;&#160;</td>
           <td class="paramname"><em>rect</em></td><td>)</td>
           <td></td>
         </tr>
@@ -388,13 +420,13 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">constexpr cen::basic_rect::basic_rect </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#a85217c220729bb00e8f9d61041fed6de">point_type</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#ae2d33c986de7e903b655ba6214c819e1">point_type</a> &amp;&#160;</td>
           <td class="paramname"><em>position</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#a5998b9324e9fc2733873ce1ad1f6c94b">area_type</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#a875c13dd1232b3fc6efa9189a9e017dc">area_type</a> &amp;&#160;</td>
           <td class="paramname"><em>size</em>&#160;</td>
         </tr>
         <tr>
@@ -434,25 +466,25 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">constexpr cen::basic_rect::basic_rect </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a>&#160;</td>
           <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a>&#160;</td>
           <td class="paramname"><em>y</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a>&#160;</td>
           <td class="paramname"><em>width</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a>&#160;</td>
           <td class="paramname"><em>height</em>&#160;</td>
         </tr>
         <tr>
@@ -496,7 +528,7 @@ Static Public Attributes</h2></td></tr>
           <td class="memname">constexpr auto cen::basic_rect::area </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a>
+          <td> const -&gt; <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a>
   </td>
         </tr>
       </table>
@@ -526,7 +558,7 @@ Static Public Attributes</h2></td></tr>
           <td class="memname">constexpr auto cen::basic_rect::center </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="classcen_1_1basic__rect.html#a85217c220729bb00e8f9d61041fed6de">point_type</a>
+          <td> const -&gt; <a class="el" href="classcen_1_1basic__rect.html#ae2d33c986de7e903b655ba6214c819e1">point_type</a>
   </td>
         </tr>
       </table>
@@ -556,7 +588,7 @@ Static Public Attributes</h2></td></tr>
           <td class="memname">constexpr auto cen::basic_rect::center_x </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a>
+          <td> const -&gt; <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a>
   </td>
         </tr>
       </table>
@@ -586,7 +618,7 @@ Static Public Attributes</h2></td></tr>
           <td class="memname">constexpr auto cen::basic_rect::center_y </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a>
+          <td> const -&gt; <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a>
   </td>
         </tr>
       </table>
@@ -615,7 +647,7 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">constexpr auto cen::basic_rect::contains </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#a85217c220729bb00e8f9d61041fed6de">point_type</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#ae2d33c986de7e903b655ba6214c819e1">point_type</a> &amp;&#160;</td>
           <td class="paramname"><em>point</em></td><td>)</td>
           <td> const -&gt; bool
   </td>
@@ -653,7 +685,7 @@ Static Public Attributes</h2></td></tr>
           <td class="memname">auto cen::basic_rect::data </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; const <a class="el" href="classcen_1_1basic__rect.html#a0941f5ec5a873b3eab683b963655d63a">rect_type</a>*
+          <td> const -&gt; const <a class="el" href="classcen_1_1basic__rect.html#ad4b829c9432dfd5ba60e24f3de50e936">rect_type</a>*
   </td>
         </tr>
       </table>
@@ -684,7 +716,7 @@ Static Public Attributes</h2></td></tr>
           <td class="memname">auto cen::basic_rect::data </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1basic__rect.html#a0941f5ec5a873b3eab683b963655d63a">rect_type</a>*
+          <td> -&gt; <a class="el" href="classcen_1_1basic__rect.html#ad4b829c9432dfd5ba60e24f3de50e936">rect_type</a>*
   </td>
         </tr>
       </table>
@@ -715,7 +747,7 @@ Static Public Attributes</h2></td></tr>
           <td class="memname">constexpr auto cen::basic_rect::get </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; const <a class="el" href="classcen_1_1basic__rect.html#a0941f5ec5a873b3eab683b963655d63a">rect_type</a>&amp;
+          <td> const -&gt; const <a class="el" href="classcen_1_1basic__rect.html#ad4b829c9432dfd5ba60e24f3de50e936">rect_type</a>&amp;
   </td>
         </tr>
       </table>
@@ -745,7 +777,7 @@ Static Public Attributes</h2></td></tr>
           <td class="memname">constexpr auto cen::basic_rect::get </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1basic__rect.html#a0941f5ec5a873b3eab683b963655d63a">rect_type</a>&amp;
+          <td> -&gt; <a class="el" href="classcen_1_1basic__rect.html#ad4b829c9432dfd5ba60e24f3de50e936">rect_type</a>&amp;
   </td>
         </tr>
       </table>
@@ -806,7 +838,7 @@ Static Public Attributes</h2></td></tr>
           <td class="memname">constexpr auto cen::basic_rect::height </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a>
+          <td> const -&gt; <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a>
   </td>
         </tr>
       </table>
@@ -836,7 +868,7 @@ Static Public Attributes</h2></td></tr>
           <td class="memname">constexpr auto cen::basic_rect::max_x </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a>
+          <td> const -&gt; <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a>
   </td>
         </tr>
       </table>
@@ -866,7 +898,7 @@ Static Public Attributes</h2></td></tr>
           <td class="memname">constexpr auto cen::basic_rect::max_y </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a>
+          <td> const -&gt; <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a>
   </td>
         </tr>
       </table>
@@ -883,6 +915,150 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="aca777d731bcab1be24ec31f0e2303fd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca777d731bcab1be24ec31f0e2303fd6">&#9670;&nbsp;</a></span>offset_height()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr void cen::basic_rect::offset_height </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a>&#160;</td>
+          <td class="paramname"><em>offset</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tweaks the height of the rectangle by the specified amount. </p>
+<p>This function is effectively equivalent to calling <code><a class="el" href="classcen_1_1basic__rect.html#a1bfb7c18d0046d2d7982fb832095f2cf" title="Sets the height of the rectangle.">set_height()</a></code> with the sum of <code><a class="el" href="classcen_1_1basic__rect.html#a8dd18886c8ded59c2100cc265d2c60c4" title="Returns the height of the rectangle.">height()</a></code> and <code>offset</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">offset</td><td>the offset to the height of the rectangle.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a257c6ab6c401a9dc4b299d87d23c4175"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a257c6ab6c401a9dc4b299d87d23c4175">&#9670;&nbsp;</a></span>offset_width()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr void cen::basic_rect::offset_width </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a>&#160;</td>
+          <td class="paramname"><em>offset</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tweaks the width of the rectangle by the specified amount. </p>
+<p>This function is effectively equivalent to calling <code><a class="el" href="classcen_1_1basic__rect.html#a153da5a30e643822f93d39c5712f0184" title="Sets the width of the rectangle.">set_width()</a></code> with the sum of <code><a class="el" href="classcen_1_1basic__rect.html#adf299a560884a778b87d17c8c458f318" title="Returns the width of the rectangle.">width()</a></code> and <code>offset</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">offset</td><td>the offset to the width of the rectangle.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a74eb25c06b392ca8ebbaf362f8b891fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74eb25c06b392ca8ebbaf362f8b891fd">&#9670;&nbsp;</a></span>offset_x()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr void cen::basic_rect::offset_x </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a>&#160;</td>
+          <td class="paramname"><em>offset</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Offsets the x-coordinate of the rectangle by the specified amount. </p>
+<p>This function is effectively equivalent to calling <code><a class="el" href="classcen_1_1basic__rect.html#a9e6e4d4efc732c5cba85be7900a7383f" title="Sets the x-coordinate of the rectangle.">set_x()</a></code> with the sum of <code><a class="el" href="classcen_1_1basic__rect.html#a1974837c365130ad4e1c9057be0092b1" title="Returns the x-coordinate of the rectangle.">x()</a></code> and <code>offset</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">offset</td><td>the offset to the x-coordinate of the rectangle.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a7b6c057b8b985e181838818b38157df2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b6c057b8b985e181838818b38157df2">&#9670;&nbsp;</a></span>offset_y()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr void cen::basic_rect::offset_y </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a>&#160;</td>
+          <td class="paramname"><em>offset</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Offsets the y-coordinate of the rectangle by the specified amount. </p>
+<p>This function is effectively equivalent to calling <code><a class="el" href="classcen_1_1basic__rect.html#a1cfac1e99303326270c9758dfc03fd7f" title="Sets the y-coordinate of the rectangle.">set_y()</a></code> with the sum of <code><a class="el" href="classcen_1_1basic__rect.html#afa7e273884805b1408a7564df6f8168d" title="Returns the y-coordinate of the rectangle.">y()</a></code> and <code>offset</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">offset</td><td>the offset to the y-coordinate of the rectangle.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
 <a id="abd4891196db5606b1afcac8defe8e8c1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abd4891196db5606b1afcac8defe8e8c1">&#9670;&nbsp;</a></span>operator const rect_type *()</h2>
 
@@ -893,7 +1069,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">cen::basic_rect::operator const <a class="el" href="classcen_1_1basic__rect.html#a0941f5ec5a873b3eab683b963655d63a">rect_type</a> * </td>
+          <td class="memname">cen::basic_rect::operator const <a class="el" href="classcen_1_1basic__rect.html#ad4b829c9432dfd5ba60e24f3de50e936">rect_type</a> * </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -922,7 +1098,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">cen::basic_rect::operator <a class="el" href="classcen_1_1basic__rect.html#a0941f5ec5a873b3eab683b963655d63a">rect_type</a> * </td>
+          <td class="memname">cen::basic_rect::operator <a class="el" href="classcen_1_1basic__rect.html#ad4b829c9432dfd5ba60e24f3de50e936">rect_type</a> * </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -954,7 +1130,7 @@ Static Public Attributes</h2></td></tr>
           <td class="memname">constexpr auto cen::basic_rect::position </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="classcen_1_1basic__rect.html#a85217c220729bb00e8f9d61041fed6de">point_type</a>
+          <td> const -&gt; <a class="el" href="classcen_1_1basic__rect.html#ae2d33c986de7e903b655ba6214c819e1">point_type</a>
   </td>
         </tr>
       </table>
@@ -1027,7 +1203,7 @@ template&lt;typename Archive &gt; </div>
         <tr>
           <td class="memname">constexpr void cen::basic_rect::set_height </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a>&#160;</td>
           <td class="paramname"><em>height</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1062,7 +1238,7 @@ template&lt;typename Archive &gt; </div>
         <tr>
           <td class="memname">constexpr void cen::basic_rect::set_max_x </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a>&#160;</td>
           <td class="paramname"><em>maxX</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1098,7 +1274,7 @@ template&lt;typename Archive &gt; </div>
         <tr>
           <td class="memname">constexpr void cen::basic_rect::set_max_y </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a>&#160;</td>
           <td class="paramname"><em>maxY</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1134,7 +1310,7 @@ template&lt;typename Archive &gt; </div>
         <tr>
           <td class="memname">constexpr void cen::basic_rect::set_position </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#a85217c220729bb00e8f9d61041fed6de">point_type</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#ae2d33c986de7e903b655ba6214c819e1">point_type</a> &amp;&#160;</td>
           <td class="paramname"><em>pos</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1170,7 +1346,7 @@ template&lt;typename Archive &gt; </div>
         <tr>
           <td class="memname">constexpr void cen::basic_rect::set_size </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#a5998b9324e9fc2733873ce1ad1f6c94b">area_type</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#a875c13dd1232b3fc6efa9189a9e017dc">area_type</a> &amp;&#160;</td>
           <td class="paramname"><em>size</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1205,7 +1381,7 @@ template&lt;typename Archive &gt; </div>
         <tr>
           <td class="memname">constexpr void cen::basic_rect::set_width </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a>&#160;</td>
           <td class="paramname"><em>width</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1240,7 +1416,7 @@ template&lt;typename Archive &gt; </div>
         <tr>
           <td class="memname">constexpr void cen::basic_rect::set_x </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a>&#160;</td>
           <td class="paramname"><em>x</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1275,7 +1451,7 @@ template&lt;typename Archive &gt; </div>
         <tr>
           <td class="memname">constexpr void cen::basic_rect::set_y </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a>&#160;</td>
           <td class="paramname"><em>y</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1311,7 +1487,7 @@ template&lt;typename Archive &gt; </div>
           <td class="memname">constexpr auto cen::basic_rect::size </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="classcen_1_1basic__rect.html#a5998b9324e9fc2733873ce1ad1f6c94b">area_type</a>
+          <td> const -&gt; <a class="el" href="classcen_1_1basic__rect.html#a875c13dd1232b3fc6efa9189a9e017dc">area_type</a>
   </td>
         </tr>
       </table>
@@ -1341,7 +1517,7 @@ template&lt;typename Archive &gt; </div>
           <td class="memname">constexpr auto cen::basic_rect::width </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a>
+          <td> const -&gt; <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a>
   </td>
         </tr>
       </table>
@@ -1371,7 +1547,7 @@ template&lt;typename Archive &gt; </div>
           <td class="memname">constexpr auto cen::basic_rect::x </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a>
+          <td> const -&gt; <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a>
   </td>
         </tr>
       </table>
@@ -1401,7 +1577,7 @@ template&lt;typename Archive &gt; </div>
           <td class="memname">constexpr auto cen::basic_rect::y </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="classcen_1_1basic__rect.html#a12d4b0ad1d7efd19a8d512f19c3557fd">value_type</a>
+          <td> const -&gt; <a class="el" href="classcen_1_1basic__rect.html#af8682553ce7057617709d69a2a128d91">value_type</a>
   </td>
         </tr>
       </table>
@@ -1470,7 +1646,7 @@ template&lt;typename Archive &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/centurion/<a class="el" href="rect_8hpp_source.html">rect.hpp</a></li>
+<li>src/centurion/math/<a class="el" href="rect_8hpp_source.html">rect.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

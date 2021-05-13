@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: cen::rect_traits&lt; T, typename &gt; Class Template Reference</title>
+        <title>Centurion: cen::rect_traits&lt; T, &gt; Class Template Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -94,44 +94,38 @@ $(function() {
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classcen_1_1rect__traits-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">cen::rect_traits&lt; T, typename &gt; Class Template Reference<span class="mlabels"><span class="mlabel">final</span></span><div class="ingroups"><a class="el" href="group__geometry.html">Geometry</a></div></div>  </div>
+<div class="title">cen::rect_traits&lt; T, &gt; Class Template Reference<span class="mlabels"><span class="mlabel">final</span></span><div class="ingroups"><a class="el" href="group__math.html">Math</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Provides rectangle traits used by <code><a class="el" href="classcen_1_1basic__rect.html" title="A simple rectangle implementation.">basic_rect</a></code>.  
+<p>Provides rectangle traits used by <code><a class="el" href="classcen_1_1basic__rect.html" title="A simple rectangle implementation, based on either SDL_Rect or SDL_FRect.">basic_rect</a></code>.  
  <a href="classcen_1_1rect__traits.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="rect_8hpp_source.html">rect.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a12bfb8a4046605fa7c8218bb64693326"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1rect__traits.html#a12bfb8a4046605fa7c8218bb64693326">value_type</a> = std::conditional_t&lt; <a class="el" href="classcen_1_1rect__traits.html#ac8c2ec768f34e6f9aa3504d8549b0db6">isIntegral</a>, int, float &gt;</td></tr>
-<tr class="memdesc:a12bfb8a4046605fa7c8218bb64693326"><td class="mdescLeft">&#160;</td><td class="mdescRight">The representation type, i.e. <code>int</code> or <code>float</code>.  <a href="classcen_1_1rect__traits.html#a12bfb8a4046605fa7c8218bb64693326">More...</a><br /></td></tr>
-<tr class="separator:a12bfb8a4046605fa7c8218bb64693326"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43fcb93f9a63846cf838a4618d4e4f5a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1rect__traits.html#a43fcb93f9a63846cf838a4618d4e4f5a">point_type</a> = std::conditional_t&lt; <a class="el" href="classcen_1_1rect__traits.html#ac8c2ec768f34e6f9aa3504d8549b0db6">isIntegral</a>, <a class="el" href="group__geometry.html#ga482cd24468a5a74647742e69379566c7">ipoint</a>, <a class="el" href="group__geometry.html#gac8dd351748b0f07b280e685ae4097d40">fpoint</a> &gt;</td></tr>
-<tr class="memdesc:a43fcb93f9a63846cf838a4618d4e4f5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The point type used, i.e. <code>ipoint</code> or <code>fpoint</code>.  <a href="classcen_1_1rect__traits.html#a43fcb93f9a63846cf838a4618d4e4f5a">More...</a><br /></td></tr>
-<tr class="separator:a43fcb93f9a63846cf838a4618d4e4f5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3baef37ab40685b52490d6f4fc03e65d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1rect__traits.html#a3baef37ab40685b52490d6f4fc03e65d">area_type</a> = std::conditional_t&lt; <a class="el" href="classcen_1_1rect__traits.html#ac8c2ec768f34e6f9aa3504d8549b0db6">isIntegral</a>, <a class="el" href="group__geometry.html#gac34681d6cc8018e07938793d4c420369">iarea</a>, <a class="el" href="group__geometry.html#gafd6913012154925effd164a24d0bdaf1">farea</a> &gt;</td></tr>
-<tr class="memdesc:a3baef37ab40685b52490d6f4fc03e65d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The area type used, i.e. <code>iarea</code> or <code>farea</code>.  <a href="classcen_1_1rect__traits.html#a3baef37ab40685b52490d6f4fc03e65d">More...</a><br /></td></tr>
-<tr class="separator:a3baef37ab40685b52490d6f4fc03e65d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67225636d9c575d946f70f692c3a4519"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1rect__traits.html#a67225636d9c575d946f70f692c3a4519">rect_type</a> = std::conditional_t&lt; <a class="el" href="classcen_1_1rect__traits.html#ac8c2ec768f34e6f9aa3504d8549b0db6">isIntegral</a>, SDL_Rect, SDL_FRect &gt;</td></tr>
-<tr class="memdesc:a67225636d9c575d946f70f692c3a4519"><td class="mdescLeft">&#160;</td><td class="mdescRight">The underlying SDL rectangle type, i.e. <code>SDL_Rect</code> or <code>SDL_FRect</code>.  <a href="classcen_1_1rect__traits.html#a67225636d9c575d946f70f692c3a4519">More...</a><br /></td></tr>
-<tr class="separator:a67225636d9c575d946f70f692c3a4519"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10f0fe55e4a5506a249147e2bfe3fc37"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1rect__traits.html#a10f0fe55e4a5506a249147e2bfe3fc37">value_type</a> = std::conditional_t&lt; <a class="el" href="classcen_1_1rect__traits.html#ac353d0fe32678e651a3f4736c1c8d036">isIntegral</a>, int, float &gt;</td></tr>
+<tr class="separator:a10f0fe55e4a5506a249147e2bfe3fc37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7732d6f767728a469848887c33b801a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1rect__traits.html#ae7732d6f767728a469848887c33b801a">point_type</a> = std::conditional_t&lt; <a class="el" href="classcen_1_1rect__traits.html#ac353d0fe32678e651a3f4736c1c8d036">isIntegral</a>, <a class="el" href="group__math.html#ga482cd24468a5a74647742e69379566c7">ipoint</a>, <a class="el" href="group__math.html#gac8dd351748b0f07b280e685ae4097d40">fpoint</a> &gt;</td></tr>
+<tr class="separator:ae7732d6f767728a469848887c33b801a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6a548e1d2ecf083d5b3ec5fb6c11bcc"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1rect__traits.html#ae6a548e1d2ecf083d5b3ec5fb6c11bcc">area_type</a> = std::conditional_t&lt; <a class="el" href="classcen_1_1rect__traits.html#ac353d0fe32678e651a3f4736c1c8d036">isIntegral</a>, <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>, <a class="el" href="group__math.html#gafd6913012154925effd164a24d0bdaf1">farea</a> &gt;</td></tr>
+<tr class="separator:ae6a548e1d2ecf083d5b3ec5fb6c11bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a216dec431a487124a1c1f676bdd3d628"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1rect__traits.html#a216dec431a487124a1c1f676bdd3d628">rect_type</a> = std::conditional_t&lt; <a class="el" href="classcen_1_1rect__traits.html#ac353d0fe32678e651a3f4736c1c8d036">isIntegral</a>, SDL_Rect, SDL_FRect &gt;</td></tr>
+<tr class="separator:a216dec431a487124a1c1f676bdd3d628"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:ac8c2ec768f34e6f9aa3504d8549b0db6"><td class="memItemLeft" align="right" valign="top">constexpr static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1rect__traits.html#ac8c2ec768f34e6f9aa3504d8549b0db6">isIntegral</a> = std::is_integral_v&lt;T&gt;</td></tr>
-<tr class="memdesc:ac8c2ec768f34e6f9aa3504d8549b0db6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the rectangle is based on an integral type.  <a href="classcen_1_1rect__traits.html#ac8c2ec768f34e6f9aa3504d8549b0db6">More...</a><br /></td></tr>
-<tr class="separator:ac8c2ec768f34e6f9aa3504d8549b0db6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59da8bc69e6b29e1af05c4def580d1d2"><td class="memItemLeft" align="right" valign="top">constexpr static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1rect__traits.html#a59da8bc69e6b29e1af05c4def580d1d2">isFloating</a> = std::is_floating_point_v&lt;T&gt;</td></tr>
-<tr class="memdesc:a59da8bc69e6b29e1af05c4def580d1d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the rectangle is based on a floating-point type.  <a href="classcen_1_1rect__traits.html#a59da8bc69e6b29e1af05c4def580d1d2">More...</a><br /></td></tr>
-<tr class="separator:a59da8bc69e6b29e1af05c4def580d1d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac353d0fe32678e651a3f4736c1c8d036"><td class="memItemLeft" align="right" valign="top">constexpr static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1rect__traits.html#ac353d0fe32678e651a3f4736c1c8d036">isIntegral</a> = std::is_integral_v&lt;T&gt;</td></tr>
+<tr class="separator:ac353d0fe32678e651a3f4736c1c8d036"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0de4c5d8948e37badb26733ffb26d14"><td class="memItemLeft" align="right" valign="top">constexpr static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1rect__traits.html#aa0de4c5d8948e37badb26733ffb26d14">isFloating</a> = std::is_floating_point_v&lt;T&gt;</td></tr>
+<tr class="separator:aa0de4c5d8948e37badb26733ffb26d14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename T, typename = std::enable_if_t&lt;std::is_convertible_v&lt;T, int&gt; ||                                      std::is_convertible_v&lt;T, float&gt;&gt;&gt;<br />
-class cen::rect_traits&lt; T, typename &gt;</h3>
+<div class="textblock"><h3>template&lt;typename T, enable_if_convertible_t&lt; T, int, float &gt; = 0&gt;<br />
+class cen::rect_traits&lt; T, &gt;</h3>
 
-<p>Provides rectangle traits used by <code><a class="el" href="classcen_1_1basic__rect.html" title="A simple rectangle implementation.">basic_rect</a></code>. </p>
+<p>Provides rectangle traits used by <code><a class="el" href="classcen_1_1basic__rect.html" title="A simple rectangle implementation, based on either SDL_Rect or SDL_FRect.">basic_rect</a></code>. </p>
 <dl class="section note"><dt>Note</dt><dd>Whilst it is possible to supply a type that isn't <code>int</code> or <code>float</code>, rectangles will always use one of them as the representation type.</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -139,103 +133,91 @@ class cen::rect_traits&lt; T, typename &gt;</h3>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1basic__rect.html" title="A simple rectangle implementation.">basic_rect</a></code> </dd>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1basic__rect.html" title="A simple rectangle implementation, based on either SDL_Rect or SDL_FRect.">basic_rect</a></code> </dd>
 <dd>
-<code><a class="el" href="group__geometry.html#gac693dcf48436f48e7aa257db423e1bdc" title="Alias for an int-based rectangle.">irect</a></code> </dd>
+<code><a class="el" href="group__math.html#gac693dcf48436f48e7aa257db423e1bdc" title="Alias for an int-based rectangle.">irect</a></code> </dd>
 <dd>
-<code><a class="el" href="group__geometry.html#gaf122d5b3b6ac5e5909ca9a7287c36556" title="Alias for a float-based rectangle.">frect</a></code></dd></dl>
+<code><a class="el" href="group__math.html#gaf122d5b3b6ac5e5909ca9a7287c36556" title="Alias for a float-based rectangle.">frect</a></code></dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a3baef37ab40685b52490d6f4fc03e65d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3baef37ab40685b52490d6f4fc03e65d">&#9670;&nbsp;</a></span>area_type</h2>
+<a id="ae6a548e1d2ecf083d5b3ec5fb6c11bcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6a548e1d2ecf083d5b3ec5fb6c11bcc">&#9670;&nbsp;</a></span>area_type</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename  = std::enable_if_t&lt;std::is_convertible_v&lt;T, int&gt; ||                                      std::is_convertible_v&lt;T, float&gt;&gt;&gt; </div>
+template&lt;typename T , enable_if_convertible_t&lt; T, int, float &gt;  = 0&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classcen_1_1rect__traits.html">cen::rect_traits</a>&lt; T, typename &gt;::<a class="el" href="classcen_1_1rect__traits.html#a3baef37ab40685b52490d6f4fc03e65d">area_type</a></td>
+          <td class="memname">using <a class="el" href="classcen_1_1rect__traits.html">cen::rect_traits</a>&lt; T, &gt;::<a class="el" href="classcen_1_1rect__traits.html#ae6a548e1d2ecf083d5b3ec5fb6c11bcc">area_type</a> =  std::conditional_t&lt;<a class="el" href="classcen_1_1rect__traits.html#ac353d0fe32678e651a3f4736c1c8d036">isIntegral</a>, <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>, <a class="el" href="group__math.html#gafd6913012154925effd164a24d0bdaf1">farea</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>The area type used, i.e. <code>iarea</code> or <code>farea</code>. </p>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
 </div>
 </div>
-<a id="a43fcb93f9a63846cf838a4618d4e4f5a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43fcb93f9a63846cf838a4618d4e4f5a">&#9670;&nbsp;</a></span>point_type</h2>
+<a id="ae7732d6f767728a469848887c33b801a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7732d6f767728a469848887c33b801a">&#9670;&nbsp;</a></span>point_type</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename  = std::enable_if_t&lt;std::is_convertible_v&lt;T, int&gt; ||                                      std::is_convertible_v&lt;T, float&gt;&gt;&gt; </div>
+template&lt;typename T , enable_if_convertible_t&lt; T, int, float &gt;  = 0&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classcen_1_1rect__traits.html">cen::rect_traits</a>&lt; T, typename &gt;::<a class="el" href="classcen_1_1rect__traits.html#a43fcb93f9a63846cf838a4618d4e4f5a">point_type</a></td>
+          <td class="memname">using <a class="el" href="classcen_1_1rect__traits.html">cen::rect_traits</a>&lt; T, &gt;::<a class="el" href="classcen_1_1rect__traits.html#ae7732d6f767728a469848887c33b801a">point_type</a> =  std::conditional_t&lt;<a class="el" href="classcen_1_1rect__traits.html#ac353d0fe32678e651a3f4736c1c8d036">isIntegral</a>, <a class="el" href="group__math.html#ga482cd24468a5a74647742e69379566c7">ipoint</a>, <a class="el" href="group__math.html#gac8dd351748b0f07b280e685ae4097d40">fpoint</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>The point type used, i.e. <code>ipoint</code> or <code>fpoint</code>. </p>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
 </div>
 </div>
-<a id="a67225636d9c575d946f70f692c3a4519"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67225636d9c575d946f70f692c3a4519">&#9670;&nbsp;</a></span>rect_type</h2>
+<a id="a216dec431a487124a1c1f676bdd3d628"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a216dec431a487124a1c1f676bdd3d628">&#9670;&nbsp;</a></span>rect_type</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename  = std::enable_if_t&lt;std::is_convertible_v&lt;T, int&gt; ||                                      std::is_convertible_v&lt;T, float&gt;&gt;&gt; </div>
+template&lt;typename T , enable_if_convertible_t&lt; T, int, float &gt;  = 0&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classcen_1_1rect__traits.html">cen::rect_traits</a>&lt; T, typename &gt;::<a class="el" href="classcen_1_1rect__traits.html#a67225636d9c575d946f70f692c3a4519">rect_type</a></td>
+          <td class="memname">using <a class="el" href="classcen_1_1rect__traits.html">cen::rect_traits</a>&lt; T, &gt;::<a class="el" href="classcen_1_1rect__traits.html#a216dec431a487124a1c1f676bdd3d628">rect_type</a> =  std::conditional_t&lt;<a class="el" href="classcen_1_1rect__traits.html#ac353d0fe32678e651a3f4736c1c8d036">isIntegral</a>, SDL_Rect, SDL_FRect&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>The underlying SDL rectangle type, i.e. <code>SDL_Rect</code> or <code>SDL_FRect</code>. </p>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
 </div>
 </div>
-<a id="a12bfb8a4046605fa7c8218bb64693326"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12bfb8a4046605fa7c8218bb64693326">&#9670;&nbsp;</a></span>value_type</h2>
+<a id="a10f0fe55e4a5506a249147e2bfe3fc37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10f0fe55e4a5506a249147e2bfe3fc37">&#9670;&nbsp;</a></span>value_type</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename  = std::enable_if_t&lt;std::is_convertible_v&lt;T, int&gt; ||                                      std::is_convertible_v&lt;T, float&gt;&gt;&gt; </div>
+template&lt;typename T , enable_if_convertible_t&lt; T, int, float &gt;  = 0&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classcen_1_1rect__traits.html">cen::rect_traits</a>&lt; T, typename &gt;::<a class="el" href="classcen_1_1rect__traits.html#a12bfb8a4046605fa7c8218bb64693326">value_type</a></td>
+          <td class="memname">using <a class="el" href="classcen_1_1rect__traits.html">cen::rect_traits</a>&lt; T, &gt;::<a class="el" href="classcen_1_1rect__traits.html#a10f0fe55e4a5506a249147e2bfe3fc37">value_type</a> =  std::conditional_t&lt;<a class="el" href="classcen_1_1rect__traits.html#ac353d0fe32678e651a3f4736c1c8d036">isIntegral</a>, int, float&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>The representation type, i.e. <code>int</code> or <code>float</code>. </p>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a59da8bc69e6b29e1af05c4def580d1d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59da8bc69e6b29e1af05c4def580d1d2">&#9670;&nbsp;</a></span>isFloating</h2>
+<a id="aa0de4c5d8948e37badb26733ffb26d14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0de4c5d8948e37badb26733ffb26d14">&#9670;&nbsp;</a></span>isFloating</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename  = std::enable_if_t&lt;std::is_convertible_v&lt;T, int&gt; ||                                      std::is_convertible_v&lt;T, float&gt;&gt;&gt; </div>
+template&lt;typename T , enable_if_convertible_t&lt; T, int, float &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classcen_1_1rect__traits.html">cen::rect_traits</a>&lt; T, typename &gt;::isFloating = std::is_floating_point_v&lt;T&gt;</td>
+          <td class="memname">constexpr static bool <a class="el" href="classcen_1_1rect__traits.html">cen::rect_traits</a>&lt; T, &gt;::isFloating = std::is_floating_point_v&lt;T&gt;</td>
         </tr>
       </table>
   </td>
@@ -245,24 +227,21 @@ template&lt;typename T , typename  = std::enable_if_t&lt;std::is_convertible_v&l
 </table>
 </div><div class="memdoc">
 
-<p>Indicates whether or not the rectangle is based on a floating-point type. </p>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
 </div>
 </div>
-<a id="ac8c2ec768f34e6f9aa3504d8549b0db6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8c2ec768f34e6f9aa3504d8549b0db6">&#9670;&nbsp;</a></span>isIntegral</h2>
+<a id="ac353d0fe32678e651a3f4736c1c8d036"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac353d0fe32678e651a3f4736c1c8d036">&#9670;&nbsp;</a></span>isIntegral</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename  = std::enable_if_t&lt;std::is_convertible_v&lt;T, int&gt; ||                                      std::is_convertible_v&lt;T, float&gt;&gt;&gt; </div>
+template&lt;typename T , enable_if_convertible_t&lt; T, int, float &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classcen_1_1rect__traits.html">cen::rect_traits</a>&lt; T, typename &gt;::isIntegral = std::is_integral_v&lt;T&gt;</td>
+          <td class="memname">constexpr static bool <a class="el" href="classcen_1_1rect__traits.html">cen::rect_traits</a>&lt; T, &gt;::isIntegral = std::is_integral_v&lt;T&gt;</td>
         </tr>
       </table>
   </td>
@@ -271,14 +250,11 @@ template&lt;typename T , typename  = std::enable_if_t&lt;std::is_convertible_v&l
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Indicates whether or not the rectangle is based on an integral type. </p>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/centurion/<a class="el" href="rect_8hpp_source.html">rect.hpp</a></li>
+<li>src/centurion/math/<a class="el" href="rect_8hpp_source.html">rect.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

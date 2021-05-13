@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -90,97 +90,72 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">cen::screen Namespace Reference<div class="ingroups"><a class="el" href="group__system.html">System</a></div></div>  </div>
+<div class="title">cen::screen Namespace Reference<div class="ingroups"><a class="el" href="group__video.html">Video</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Contains functions that provide information about the screen.  
+<p>Contains functions that provide information about screen(s).  
 <a href="namespacecen_1_1screen.html#details">More...</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcen_1_1screen_1_1dpi__info.html">dpi_info</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple POD-type for storing diagonal, horizontal and vertical DPI values.  <a href="structcen_1_1screen_1_1dpi__info.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:a68276042dfa7ef0d9d1cca9299d40893"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1screen.html#a68276042dfa7ef0d9d1cca9299d40893">orientation</a> { <br />
-&#160;&#160;<a class="el" href="namespacecen_1_1screen.html#a68276042dfa7ef0d9d1cca9299d40893aad921d60486366258809553a3db49a4a">orientation::unknown</a> = SDL_ORIENTATION_UNKNOWN, 
-<br />
-&#160;&#160;<a class="el" href="namespacecen_1_1screen.html#a68276042dfa7ef0d9d1cca9299d40893a992763c3260eacff8cdc4c8bba147554">orientation::landscape</a> = SDL_ORIENTATION_LANDSCAPE, 
-<br />
-&#160;&#160;<a class="el" href="namespacecen_1_1screen.html#a68276042dfa7ef0d9d1cca9299d40893aff102c247c34723ae6593dd5f51a2048">orientation::landscape_flipped</a> = SDL_ORIENTATION_LANDSCAPE_FLIPPED, 
-<br />
-&#160;&#160;<a class="el" href="namespacecen_1_1screen.html#a68276042dfa7ef0d9d1cca9299d40893aad9b8a7b14ee53434eba710fb4086cb4">orientation::portrait</a> = SDL_ORIENTATION_PORTRAIT, 
-<br />
-&#160;&#160;<a class="el" href="namespacecen_1_1screen.html#a68276042dfa7ef0d9d1cca9299d40893aaf1789cfe9f79a7deaf0fee72ccd3d7e">orientation::portrait_flipped</a> = SDL_ORIENTATION_PORTRAIT_FLIPPED
-<br />
- }</td></tr>
-<tr class="memdesc:a68276042dfa7ef0d9d1cca9299d40893"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents different screen orientations.  <a href="namespacecen_1_1screen.html#a68276042dfa7ef0d9d1cca9299d40893">More...</a><br /></td></tr>
-<tr class="separator:a68276042dfa7ef0d9d1cca9299d40893"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ae807248766bc5d4d1be8aca673b928db"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1screen.html#ae807248766bc5d4d1be8aca673b928db">dpi</a> (const int displayIndex=0) -&gt; std::optional&lt; <a class="el" href="structcen_1_1screen_1_1dpi__info.html">dpi_info</a> &gt;</td></tr>
-<tr class="memdesc:ae807248766bc5d4d1be8aca673b928db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns DPI information about a display.  <a href="namespacecen_1_1screen.html#ae807248766bc5d4d1be8aca673b928db">More...</a><br /></td></tr>
-<tr class="separator:ae807248766bc5d4d1be8aca673b928db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e1c88e0672d85b1c45ff0fdff32e80f"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1screen.html#a1e1c88e0672d85b1c45ff0fdff32e80f">vertical_dpi</a> (const int displayIndex=0) -&gt; std::optional&lt; float &gt;</td></tr>
-<tr class="memdesc:a1e1c88e0672d85b1c45ff0fdff32e80f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns vertical DPI information about a display.  <a href="namespacecen_1_1screen.html#a1e1c88e0672d85b1c45ff0fdff32e80f">More...</a><br /></td></tr>
-<tr class="separator:a1e1c88e0672d85b1c45ff0fdff32e80f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5909b18d82cde14e2479ec318de509db"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1screen.html#a5909b18d82cde14e2479ec318de509db">diagonal_dpi</a> (const int displayIndex=0) -&gt; std::optional&lt; float &gt;</td></tr>
-<tr class="memdesc:a5909b18d82cde14e2479ec318de509db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns diagonal DPI information about a display.  <a href="namespacecen_1_1screen.html#a5909b18d82cde14e2479ec318de509db">More...</a><br /></td></tr>
-<tr class="separator:a5909b18d82cde14e2479ec318de509db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37350a15e28cb06ecaf25eb3245b6a60"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1screen.html#a37350a15e28cb06ecaf25eb3245b6a60">horizontal_dpi</a> (const int displayIndex=0) -&gt; std::optional&lt; float &gt;</td></tr>
-<tr class="memdesc:a37350a15e28cb06ecaf25eb3245b6a60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns horizontal DPI information about a display.  <a href="namespacecen_1_1screen.html#a37350a15e28cb06ecaf25eb3245b6a60">More...</a><br /></td></tr>
-<tr class="separator:a37350a15e28cb06ecaf25eb3245b6a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b04a5b68180d7b1e3bbf52fda2634b4"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1screen.html#a3b04a5b68180d7b1e3bbf52fda2634b4">bounds</a> (const int displayIndex=0) -&gt; std::optional&lt; <a class="el" href="group__geometry.html#gac693dcf48436f48e7aa257db423e1bdc">irect</a> &gt;</td></tr>
-<tr class="memdesc:a3b04a5b68180d7b1e3bbf52fda2634b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bounds of a display.  <a href="namespacecen_1_1screen.html#a3b04a5b68180d7b1e3bbf52fda2634b4">More...</a><br /></td></tr>
-<tr class="separator:a3b04a5b68180d7b1e3bbf52fda2634b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8d6f5b307c49ddee53fb3b87397b6c4"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1screen.html#aa8d6f5b307c49ddee53fb3b87397b6c4">usable_bounds</a> (const int displayIndex=0) -&gt; std::optional&lt; <a class="el" href="group__geometry.html#gac693dcf48436f48e7aa257db423e1bdc">irect</a> &gt;</td></tr>
-<tr class="memdesc:aa8d6f5b307c49ddee53fb3b87397b6c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the usable bounds of a display.  <a href="namespacecen_1_1screen.html#aa8d6f5b307c49ddee53fb3b87397b6c4">More...</a><br /></td></tr>
-<tr class="separator:aa8d6f5b307c49ddee53fb3b87397b6c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6bf7bde66b990de6ae66741950e24a78"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1screen.html#a6bf7bde66b990de6ae66741950e24a78">get_orientation</a> (const int displayIndex=0) -&gt; <a class="el" href="namespacecen_1_1screen.html#a68276042dfa7ef0d9d1cca9299d40893">orientation</a></td></tr>
-<tr class="memdesc:a6bf7bde66b990de6ae66741950e24a78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the orientation of the specified display.  <a href="namespacecen_1_1screen.html#a6bf7bde66b990de6ae66741950e24a78">More...</a><br /></td></tr>
-<tr class="separator:a6bf7bde66b990de6ae66741950e24a78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a159052259e55698ab0777b9cad40ddd2"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1screen.html#a159052259e55698ab0777b9cad40ddd2">amount</a> () noexcept -&gt; int</td></tr>
-<tr class="memdesc:a159052259e55698ab0777b9cad40ddd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the amount of available displays.  <a href="namespacecen_1_1screen.html#a159052259e55698ab0777b9cad40ddd2">More...</a><br /></td></tr>
-<tr class="separator:a159052259e55698ab0777b9cad40ddd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a225035234aee8c2950b2e8e22315a160"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1screen.html#a225035234aee8c2950b2e8e22315a160">name</a> (const int displayIndex=0) noexcept -&gt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a></td></tr>
-<tr class="memdesc:a225035234aee8c2950b2e8e22315a160"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of a display.  <a href="namespacecen_1_1screen.html#a225035234aee8c2950b2e8e22315a160">More...</a><br /></td></tr>
-<tr class="separator:a225035234aee8c2950b2e8e22315a160"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac8383faa548b9c759ade7c8f44dd3a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1screen.html#aac8383faa548b9c759ade7c8f44dd3a6">set_screen_saver_enabled</a> (const bool enabled) noexcept</td></tr>
-<tr class="memdesc:aac8383faa548b9c759ade7c8f44dd3a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether or not screen savers are enabled.  <a href="namespacecen_1_1screen.html#aac8383faa548b9c759ade7c8f44dd3a6">More...</a><br /></td></tr>
-<tr class="separator:aac8383faa548b9c759ade7c8f44dd3a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52dd4828958d04edc552bb6788cc6a4e"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1screen.html#a52dd4828958d04edc552bb6788cc6a4e">screen_saver_enabled</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:a52dd4828958d04edc552bb6788cc6a4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not screen savers are enabled.  <a href="namespacecen_1_1screen.html#a52dd4828958d04edc552bb6788cc6a4e">More...</a><br /></td></tr>
-<tr class="separator:a52dd4828958d04edc552bb6788cc6a4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcbfce77cb585029ddeb510d3ba6badc"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1screen.html#afcbfce77cb585029ddeb510d3ba6badc">width</a> () noexcept -&gt; int</td></tr>
-<tr class="memdesc:afcbfce77cb585029ddeb510d3ba6badc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the width of the screen.  <a href="namespacecen_1_1screen.html#afcbfce77cb585029ddeb510d3ba6badc">More...</a><br /></td></tr>
-<tr class="separator:afcbfce77cb585029ddeb510d3ba6badc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb93d64c5543556efa31875a7d3a44fb"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1screen.html#afb93d64c5543556efa31875a7d3a44fb">height</a> () noexcept -&gt; int</td></tr>
-<tr class="memdesc:afb93d64c5543556efa31875a7d3a44fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the height of the screen.  <a href="namespacecen_1_1screen.html#afb93d64c5543556efa31875a7d3a44fb">More...</a><br /></td></tr>
-<tr class="separator:afb93d64c5543556efa31875a7d3a44fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33c2ee898454a11983d7a873629ed4be"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1screen.html#a33c2ee898454a11983d7a873629ed4be">size</a> () noexcept -&gt; <a class="el" href="group__geometry.html#gac34681d6cc8018e07938793d4c420369">iarea</a></td></tr>
-<tr class="memdesc:a33c2ee898454a11983d7a873629ed4be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the screen.  <a href="namespacecen_1_1screen.html#a33c2ee898454a11983d7a873629ed4be">More...</a><br /></td></tr>
-<tr class="separator:a33c2ee898454a11983d7a873629ed4be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a209f8646779fd21e92a2abccc090e8b1"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1screen.html#a209f8646779fd21e92a2abccc090e8b1">refresh_rate</a> () noexcept -&gt; int</td></tr>
-<tr class="memdesc:a209f8646779fd21e92a2abccc090e8b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the refresh rate of the screen.  <a href="namespacecen_1_1screen.html#a209f8646779fd21e92a2abccc090e8b1">More...</a><br /></td></tr>
-<tr class="separator:a209f8646779fd21e92a2abccc090e8b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad47eefde4852e31576bd913999963625"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1screen.html#ad47eefde4852e31576bd913999963625">get_pixel_format</a> () noexcept -&gt; <a class="el" href="group__graphics.html#ga2b2a5cc747e0869488d872b28d939dae">pixel_format</a></td></tr>
-<tr class="memdesc:ad47eefde4852e31576bd913999963625"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the pixel format of the desktop display mode.  <a href="namespacecen_1_1screen.html#ad47eefde4852e31576bd913999963625">More...</a><br /></td></tr>
-<tr class="separator:ad47eefde4852e31576bd913999963625"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0949b8c22f4f1066f751221fbdd61f76"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76">count</a> () noexcept -&gt; int</td></tr>
+<tr class="memdesc:a0949b8c22f4f1066f751221fbdd61f76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the amount of available displays.  <a href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76">More...</a><br /></td></tr>
+<tr class="separator:a0949b8c22f4f1066f751221fbdd61f76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab133b4e8b3b0eee8c74306c9bc3b8a69"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1screen.html#ab133b4e8b3b0eee8c74306c9bc3b8a69">name</a> (const int index=0) noexcept -&gt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a></td></tr>
+<tr class="memdesc:ab133b4e8b3b0eee8c74306c9bc3b8a69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of a display.  <a href="namespacecen_1_1screen.html#ab133b4e8b3b0eee8c74306c9bc3b8a69">More...</a><br /></td></tr>
+<tr class="separator:ab133b4e8b3b0eee8c74306c9bc3b8a69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15c9623bbc9f459152623391acbddb68"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1screen.html#a15c9623bbc9f459152623391acbddb68">get_orientation</a> (const int index=0) noexcept -&gt; <a class="el" href="group__video.html#ga522ad9ba5315e9ce7570fe4a9456537a">screen_orientation</a></td></tr>
+<tr class="memdesc:a15c9623bbc9f459152623391acbddb68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the orientation of the specified display.  <a href="namespacecen_1_1screen.html#a15c9623bbc9f459152623391acbddb68">More...</a><br /></td></tr>
+<tr class="separator:a15c9623bbc9f459152623391acbddb68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Display mode queries</h2></td></tr>
+<tr class="memitem:a47081ee7e5039b6173bf4b7fea612355"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1screen.html#a47081ee7e5039b6173bf4b7fea612355">display_mode</a> (const int index=0) noexcept -&gt; std::optional&lt; SDL_DisplayMode &gt;</td></tr>
+<tr class="memdesc:a47081ee7e5039b6173bf4b7fea612355"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the desktop display mode.  <a href="namespacecen_1_1screen.html#a47081ee7e5039b6173bf4b7fea612355">More...</a><br /></td></tr>
+<tr class="separator:a47081ee7e5039b6173bf4b7fea612355"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7b850a3c8072e199e803a3749937126"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1screen.html#af7b850a3c8072e199e803a3749937126">refresh_rate</a> (const int index=0) noexcept -&gt; std::optional&lt; int &gt;</td></tr>
+<tr class="memdesc:af7b850a3c8072e199e803a3749937126"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the refresh rate of the screen.  <a href="namespacecen_1_1screen.html#af7b850a3c8072e199e803a3749937126">More...</a><br /></td></tr>
+<tr class="separator:af7b850a3c8072e199e803a3749937126"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a388facc4d335b83f431eaf012919e1a7"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1screen.html#a388facc4d335b83f431eaf012919e1a7">get_pixel_format</a> (const int index=0) noexcept -&gt; std::optional&lt; <a class="el" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a> &gt;</td></tr>
+<tr class="memdesc:a388facc4d335b83f431eaf012919e1a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the pixel format of the desktop display mode.  <a href="namespacecen_1_1screen.html#a388facc4d335b83f431eaf012919e1a7">More...</a><br /></td></tr>
+<tr class="separator:a388facc4d335b83f431eaf012919e1a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51418b5e332ae0740b0c7a6d4e6f91ff"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1screen.html#a51418b5e332ae0740b0c7a6d4e6f91ff">width</a> (const int index=0) noexcept -&gt; std::optional&lt; int &gt;</td></tr>
+<tr class="memdesc:a51418b5e332ae0740b0c7a6d4e6f91ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the width of the screen.  <a href="namespacecen_1_1screen.html#a51418b5e332ae0740b0c7a6d4e6f91ff">More...</a><br /></td></tr>
+<tr class="separator:a51418b5e332ae0740b0c7a6d4e6f91ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5098cd098c4b2d13c14f7adc47013eb"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1screen.html#ae5098cd098c4b2d13c14f7adc47013eb">height</a> (const int index=0) noexcept -&gt; std::optional&lt; int &gt;</td></tr>
+<tr class="memdesc:ae5098cd098c4b2d13c14f7adc47013eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the height of the screen.  <a href="namespacecen_1_1screen.html#ae5098cd098c4b2d13c14f7adc47013eb">More...</a><br /></td></tr>
+<tr class="separator:ae5098cd098c4b2d13c14f7adc47013eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace3e8973f91462485a5708227d1f19ef"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1screen.html#ace3e8973f91462485a5708227d1f19ef">size</a> (const int index=0) noexcept -&gt; std::optional&lt; <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a> &gt;</td></tr>
+<tr class="memdesc:ace3e8973f91462485a5708227d1f19ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the screen.  <a href="namespacecen_1_1screen.html#ace3e8973f91462485a5708227d1f19ef">More...</a><br /></td></tr>
+<tr class="separator:ace3e8973f91462485a5708227d1f19ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfb5c9e3f2d1f64c09ab10a58b5052d8"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1screen.html#abfb5c9e3f2d1f64c09ab10a58b5052d8">dpi</a> (const int index=0) noexcept -&gt; std::optional&lt; <a class="el" href="structcen_1_1dpi__info.html">dpi_info</a> &gt;</td></tr>
+<tr class="memdesc:abfb5c9e3f2d1f64c09ab10a58b5052d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns DPI information about a display.  <a href="namespacecen_1_1screen.html#abfb5c9e3f2d1f64c09ab10a58b5052d8">More...</a><br /></td></tr>
+<tr class="separator:abfb5c9e3f2d1f64c09ab10a58b5052d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53292357d526bbdc2c82f10f154722f1"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1screen.html#a53292357d526bbdc2c82f10f154722f1">vertical_dpi</a> (const int index=0) noexcept -&gt; std::optional&lt; float &gt;</td></tr>
+<tr class="memdesc:a53292357d526bbdc2c82f10f154722f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns vertical DPI information about a display.  <a href="namespacecen_1_1screen.html#a53292357d526bbdc2c82f10f154722f1">More...</a><br /></td></tr>
+<tr class="separator:a53292357d526bbdc2c82f10f154722f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc13ac78fed12fd4f2680f30bd525239"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1screen.html#acc13ac78fed12fd4f2680f30bd525239">diagonal_dpi</a> (const int index=0) noexcept -&gt; std::optional&lt; float &gt;</td></tr>
+<tr class="memdesc:acc13ac78fed12fd4f2680f30bd525239"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns diagonal DPI information about a display.  <a href="namespacecen_1_1screen.html#acc13ac78fed12fd4f2680f30bd525239">More...</a><br /></td></tr>
+<tr class="separator:acc13ac78fed12fd4f2680f30bd525239"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab98d95c12e70ee77cd835149c9368d69"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1screen.html#ab98d95c12e70ee77cd835149c9368d69">horizontal_dpi</a> (const int index=0) noexcept -&gt; std::optional&lt; float &gt;</td></tr>
+<tr class="memdesc:ab98d95c12e70ee77cd835149c9368d69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns horizontal DPI information about a display.  <a href="namespacecen_1_1screen.html#ab98d95c12e70ee77cd835149c9368d69">More...</a><br /></td></tr>
+<tr class="separator:ab98d95c12e70ee77cd835149c9368d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6a89a9d863744805f4632fd21027a2c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1screen.html#ac6a89a9d863744805f4632fd21027a2c">bounds</a> (const int index=0) noexcept -&gt; std::optional&lt; <a class="el" href="group__math.html#gac693dcf48436f48e7aa257db423e1bdc">irect</a> &gt;</td></tr>
+<tr class="memdesc:ac6a89a9d863744805f4632fd21027a2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bounds of a display.  <a href="namespacecen_1_1screen.html#ac6a89a9d863744805f4632fd21027a2c">More...</a><br /></td></tr>
+<tr class="separator:ac6a89a9d863744805f4632fd21027a2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49dd3b4f11b36b17a3275eca78ca420c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1screen.html#a49dd3b4f11b36b17a3275eca78ca420c">usable_bounds</a> (const int index=0) noexcept -&gt; std::optional&lt; <a class="el" href="group__math.html#gac693dcf48436f48e7aa257db423e1bdc">irect</a> &gt;</td></tr>
+<tr class="memdesc:a49dd3b4f11b36b17a3275eca78ca420c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the usable bounds of a display.  <a href="namespacecen_1_1screen.html#a49dd3b4f11b36b17a3275eca78ca420c">More...</a><br /></td></tr>
+<tr class="separator:a49dd3b4f11b36b17a3275eca78ca420c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Contains functions that provide information about the screen. </p>
+<div class="textblock"><p>Contains functions that provide information about screen(s). </p>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-</div><h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a68276042dfa7ef0d9d1cca9299d40893"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68276042dfa7ef0d9d1cca9299d40893">&#9670;&nbsp;</a></span>orientation</h2>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="ac6a89a9d863744805f4632fd21027a2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6a89a9d863744805f4632fd21027a2c">&#9670;&nbsp;</a></span>bounds()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -189,32 +164,36 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="namespacecen_1_1screen.html#a68276042dfa7ef0d9d1cca9299d40893">cen::screen::orientation</a></td>
+          <td class="memname">auto cen::screen::bounds </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>index</em> = <code>0</code></td><td>)</td>
+          <td> -&gt; std::optional&lt;<a class="el" href="group__math.html#gac693dcf48436f48e7aa257db423e1bdc">irect</a>&gt;
+</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Represents different screen orientations. </p>
-<dl class="section since"><dt>Since</dt><dd>5.0.0</dd></dl>
-<dl class="section see"><dt>See also</dt><dd>SDL_DisplayOrientation </dd></dl>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a68276042dfa7ef0d9d1cca9299d40893aad921d60486366258809553a3db49a4a"></a>unknown&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a68276042dfa7ef0d9d1cca9299d40893a992763c3260eacff8cdc4c8bba147554"></a>landscape&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a68276042dfa7ef0d9d1cca9299d40893aff102c247c34723ae6593dd5f51a2048"></a>landscape_flipped&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a68276042dfa7ef0d9d1cca9299d40893aad9b8a7b14ee53434eba710fb4086cb4"></a>portrait&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a68276042dfa7ef0d9d1cca9299d40893aaf1789cfe9f79a7deaf0fee72ccd3d7e"></a>portrait_flipped&#160;</td><td class="fielddoc"></td></tr>
-</table>
+<p>Returns the bounds of a display. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the index of the queried display, in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76" title="Returns the amount of available displays.">cen::screen::count()</a></code>].</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the bounds of the specified display; <code>std::nullopt</code> if something went wrong.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd>SDL_GetDisplayBounds</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
 </div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a159052259e55698ab0777b9cad40ddd2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a159052259e55698ab0777b9cad40ddd2">&#9670;&nbsp;</a></span>amount()</h2>
+<a id="a0949b8c22f4f1066f751221fbdd61f76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0949b8c22f4f1066f751221fbdd61f76">&#9670;&nbsp;</a></span>count()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -223,7 +202,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::screen::amount </td>
+          <td class="memname">auto cen::screen::count </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> -&gt; int
@@ -243,46 +222,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a3b04a5b68180d7b1e3bbf52fda2634b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3b04a5b68180d7b1e3bbf52fda2634b4">&#9670;&nbsp;</a></span>bounds()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::screen::bounds </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>displayIndex</em> = <code>0</code></td><td>)</td>
-          <td> -&gt; std::optional&lt;<a class="el" href="group__geometry.html#gac693dcf48436f48e7aa257db423e1bdc">irect</a>&gt;
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the bounds of a display. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">displayIndex</td><td>the index of the display to query, must be in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a159052259e55698ab0777b9cad40ddd2" title="Returns the amount of available displays.">cen::screen::amount()</a></code>].</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the bounds of the specified display; <code>std::nullopt</code> if something went wrong.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd>SDL_GetDisplayBounds</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a5909b18d82cde14e2479ec318de509db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5909b18d82cde14e2479ec318de509db">&#9670;&nbsp;</a></span>diagonal_dpi()</h2>
+<a id="acc13ac78fed12fd4f2680f30bd525239"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc13ac78fed12fd4f2680f30bd525239">&#9670;&nbsp;</a></span>diagonal_dpi()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -294,14 +235,14 @@ Functions</h2></td></tr>
           <td class="memname">auto cen::screen::diagonal_dpi </td>
           <td>(</td>
           <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>displayIndex</em> = <code>0</code></td><td>)</td>
+          <td class="paramname"><em>index</em> = <code>0</code></td><td>)</td>
           <td> -&gt; std::optional&lt;float&gt;
 </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -309,7 +250,7 @@ Functions</h2></td></tr>
 <p>Returns diagonal DPI information about a display. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">displayIndex</td><td>the index of the display to query, must be in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a159052259e55698ab0777b9cad40ddd2" title="Returns the amount of available displays.">cen::screen::amount()</a></code>].</td></tr>
+    <tr><td class="paramname">index</td><td>the index of the queried display, in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76" title="Returns the amount of available displays.">cen::screen::count()</a></code>].</td></tr>
   </table>
   </dd>
 </dl>
@@ -318,8 +259,45 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ae807248766bc5d4d1be8aca673b928db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae807248766bc5d4d1be8aca673b928db">&#9670;&nbsp;</a></span>dpi()</h2>
+<a id="a47081ee7e5039b6173bf4b7fea612355"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47081ee7e5039b6173bf4b7fea612355">&#9670;&nbsp;</a></span>display_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::screen::display_mode </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>index</em> = <code>0</code></td><td>)</td>
+          <td> -&gt; std::optional&lt;SDL_DisplayMode&gt;
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the desktop display mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the index of the queried display, in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76" title="Returns the amount of available displays.">cen::screen::count()</a></code>].</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the desktop display mode; <code>std::nullopt</code> if something goes wrong.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="abfb5c9e3f2d1f64c09ab10a58b5052d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfb5c9e3f2d1f64c09ab10a58b5052d8">&#9670;&nbsp;</a></span>dpi()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -331,14 +309,14 @@ Functions</h2></td></tr>
           <td class="memname">auto cen::screen::dpi </td>
           <td>(</td>
           <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>displayIndex</em> = <code>0</code></td><td>)</td>
-          <td> -&gt; std::optional&lt;<a class="el" href="structcen_1_1screen_1_1dpi__info.html">dpi_info</a>&gt;
+          <td class="paramname"><em>index</em> = <code>0</code></td><td>)</td>
+          <td> -&gt; std::optional&lt;<a class="el" href="structcen_1_1dpi__info.html">dpi_info</a>&gt;
 </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -346,7 +324,7 @@ Functions</h2></td></tr>
 <p>Returns DPI information about a display. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">displayIndex</td><td>the index of the display to query, must be in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a159052259e55698ab0777b9cad40ddd2" title="Returns the amount of available displays.">cen::screen::amount()</a></code>].</td></tr>
+    <tr><td class="paramname">index</td><td>the index of the queried display, in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76" title="Returns the amount of available displays.">cen::screen::count()</a></code>].</td></tr>
   </table>
   </dd>
 </dl>
@@ -356,8 +334,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a6bf7bde66b990de6ae66741950e24a78"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6bf7bde66b990de6ae66741950e24a78">&#9670;&nbsp;</a></span>get_orientation()</h2>
+<a id="a15c9623bbc9f459152623391acbddb68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15c9623bbc9f459152623391acbddb68">&#9670;&nbsp;</a></span>get_orientation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -369,14 +347,14 @@ Functions</h2></td></tr>
           <td class="memname">auto cen::screen::get_orientation </td>
           <td>(</td>
           <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>displayIndex</em> = <code>0</code></td><td>)</td>
-          <td> -&gt; <a class="el" href="namespacecen_1_1screen.html#a68276042dfa7ef0d9d1cca9299d40893">orientation</a>
+          <td class="paramname"><em>index</em> = <code>0</code></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__video.html#ga522ad9ba5315e9ce7570fe4a9456537a">screen_orientation</a>
 </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -384,7 +362,7 @@ Functions</h2></td></tr>
 <p>Returns the orientation of the specified display. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">displayIndex</td><td>the index of the display to obtain the orientation of, must be in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a159052259e55698ab0777b9cad40ddd2" title="Returns the amount of available displays.">cen::screen::amount()</a></code>].</td></tr>
+    <tr><td class="paramname">index</td><td>the index of the queried display, in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76" title="Returns the amount of available displays.">cen::screen::count()</a></code>].</td></tr>
   </table>
   </dd>
 </dl>
@@ -393,8 +371,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad47eefde4852e31576bd913999963625"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad47eefde4852e31576bd913999963625">&#9670;&nbsp;</a></span>get_pixel_format()</h2>
+<a id="a388facc4d335b83f431eaf012919e1a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a388facc4d335b83f431eaf012919e1a7">&#9670;&nbsp;</a></span>get_pixel_format()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -405,8 +383,9 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">auto cen::screen::get_pixel_format </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__graphics.html#ga2b2a5cc747e0869488d872b28d939dae">pixel_format</a>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>index</em> = <code>0</code></td><td>)</td>
+          <td> -&gt; std::optional&lt;<a class="el" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a>&gt;
 </td>
         </tr>
       </table>
@@ -419,13 +398,19 @@ Functions</h2></td></tr>
 
 <p>Returns the pixel format of the desktop display mode. </p>
 <dl class="section note"><dt>Note</dt><dd>This function returns the pixel format used by the desktop display mode, i.e. the fullscreen display mode, so it might not be accurate for non-fullscreen windows.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>the pixel format of the desktop display mode.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the index of the queried display, in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76" title="Returns the amount of available displays.">cen::screen::count()</a></code>].</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the pixel format of the desktop display mode; <code>std::nullopt</code> if something goes wrong.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="afb93d64c5543556efa31875a7d3a44fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb93d64c5543556efa31875a7d3a44fb">&#9670;&nbsp;</a></span>height()</h2>
+<a id="ae5098cd098c4b2d13c14f7adc47013eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5098cd098c4b2d13c14f7adc47013eb">&#9670;&nbsp;</a></span>height()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -436,8 +421,9 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">auto cen::screen::height </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; int
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>index</em> = <code>0</code></td><td>)</td>
+          <td> -&gt; std::optional&lt;int&gt;
 </td>
         </tr>
       </table>
@@ -449,13 +435,19 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the height of the screen. </p>
-<dl class="section return"><dt>Returns</dt><dd>the height of the screen.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the index of the queried display, in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76" title="Returns the amount of available displays.">cen::screen::count()</a></code>].</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the height of the screen; <code>std::nullopt</code> if something goes wrong.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="a37350a15e28cb06ecaf25eb3245b6a60"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37350a15e28cb06ecaf25eb3245b6a60">&#9670;&nbsp;</a></span>horizontal_dpi()</h2>
+<a id="ab98d95c12e70ee77cd835149c9368d69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab98d95c12e70ee77cd835149c9368d69">&#9670;&nbsp;</a></span>horizontal_dpi()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -467,14 +459,14 @@ Functions</h2></td></tr>
           <td class="memname">auto cen::screen::horizontal_dpi </td>
           <td>(</td>
           <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>displayIndex</em> = <code>0</code></td><td>)</td>
+          <td class="paramname"><em>index</em> = <code>0</code></td><td>)</td>
           <td> -&gt; std::optional&lt;float&gt;
 </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -482,7 +474,7 @@ Functions</h2></td></tr>
 <p>Returns horizontal DPI information about a display. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">displayIndex</td><td>the index of the display to query, must be in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a159052259e55698ab0777b9cad40ddd2" title="Returns the amount of available displays.">cen::screen::amount()</a></code>].</td></tr>
+    <tr><td class="paramname">index</td><td>the index of the queried display, in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76" title="Returns the amount of available displays.">cen::screen::count()</a></code>].</td></tr>
   </table>
   </dd>
 </dl>
@@ -491,8 +483,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a225035234aee8c2950b2e8e22315a160"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a225035234aee8c2950b2e8e22315a160">&#9670;&nbsp;</a></span>name()</h2>
+<a id="ab133b4e8b3b0eee8c74306c9bc3b8a69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab133b4e8b3b0eee8c74306c9bc3b8a69">&#9670;&nbsp;</a></span>name()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -504,8 +496,8 @@ Functions</h2></td></tr>
           <td class="memname">auto cen::screen::name </td>
           <td>(</td>
           <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>displayIndex</em> = <code>0</code></td><td>)</td>
-          <td> -&gt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a>
+          <td class="paramname"><em>index</em> = <code>0</code></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a>
 </td>
         </tr>
       </table>
@@ -519,7 +511,7 @@ Functions</h2></td></tr>
 <p>Returns the name of a display. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">displayIndex</td><td>the index of the display to obtain the name of, must be in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a159052259e55698ab0777b9cad40ddd2" title="Returns the amount of available displays.">cen::screen::amount()</a></code>].</td></tr>
+    <tr><td class="paramname">index</td><td>the index of the queried display, in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76" title="Returns the amount of available displays.">cen::screen::count()</a></code>].</td></tr>
   </table>
   </dd>
 </dl>
@@ -528,8 +520,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a209f8646779fd21e92a2abccc090e8b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a209f8646779fd21e92a2abccc090e8b1">&#9670;&nbsp;</a></span>refresh_rate()</h2>
+<a id="af7b850a3c8072e199e803a3749937126"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7b850a3c8072e199e803a3749937126">&#9670;&nbsp;</a></span>refresh_rate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -540,8 +532,9 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">auto cen::screen::refresh_rate </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; int
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>index</em> = <code>0</code></td><td>)</td>
+          <td> -&gt; std::optional&lt;int&gt;
 </td>
         </tr>
       </table>
@@ -553,80 +546,19 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the refresh rate of the screen. </p>
-<dl class="section return"><dt>Returns</dt><dd>the refresh rate of the screen.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the index of the queried display, in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76" title="Returns the amount of available displays.">cen::screen::count()</a></code>].</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the refresh rate of the screen; <code>std::nullopt</code> if something goes wrong.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="a52dd4828958d04edc552bb6788cc6a4e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52dd4828958d04edc552bb6788cc6a4e">&#9670;&nbsp;</a></span>screen_saver_enabled()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::screen::screen_saver_enabled </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; bool
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not screen savers are enabled. </p>
-<dl class="section note"><dt>Note</dt><dd>By default, screen savers are disabled.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if screen savers are enabled; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="aac8383faa548b9c759ade7c8f44dd3a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac8383faa548b9c759ade7c8f44dd3a6">&#9670;&nbsp;</a></span>set_screen_saver_enabled()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cen::screen::set_screen_saver_enabled </td>
-          <td>(</td>
-          <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>enabled</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets whether or not screen savers are enabled. </p>
-<dl class="section note"><dt>Note</dt><dd>By default, screen savers are disabled.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">enabled</td><td><code>true</code> if screen savers should be enabled; <code>false</code> otherwise.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a33c2ee898454a11983d7a873629ed4be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33c2ee898454a11983d7a873629ed4be">&#9670;&nbsp;</a></span>size()</h2>
+<a id="ace3e8973f91462485a5708227d1f19ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace3e8973f91462485a5708227d1f19ef">&#9670;&nbsp;</a></span>size()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -637,8 +569,9 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">auto cen::screen::size </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__geometry.html#gac34681d6cc8018e07938793d4c420369">iarea</a>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>index</em> = <code>0</code></td><td>)</td>
+          <td> -&gt; std::optional&lt;<a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>&gt;
 </td>
         </tr>
       </table>
@@ -650,13 +583,19 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the size of the screen. </p>
-<dl class="section return"><dt>Returns</dt><dd>the size of the screen.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the index of the queried display, in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76" title="Returns the amount of available displays.">cen::screen::count()</a></code>].</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the size of the screen; <code>std::nullopt</code> if something goes wrong.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.1.0 </dd></dl>
 
 </div>
 </div>
-<a id="aa8d6f5b307c49ddee53fb3b87397b6c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8d6f5b307c49ddee53fb3b87397b6c4">&#9670;&nbsp;</a></span>usable_bounds()</h2>
+<a id="a49dd3b4f11b36b17a3275eca78ca420c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49dd3b4f11b36b17a3275eca78ca420c">&#9670;&nbsp;</a></span>usable_bounds()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -668,14 +607,14 @@ Functions</h2></td></tr>
           <td class="memname">auto cen::screen::usable_bounds </td>
           <td>(</td>
           <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>displayIndex</em> = <code>0</code></td><td>)</td>
-          <td> -&gt; std::optional&lt;<a class="el" href="group__geometry.html#gac693dcf48436f48e7aa257db423e1bdc">irect</a>&gt;
+          <td class="paramname"><em>index</em> = <code>0</code></td><td>)</td>
+          <td> -&gt; std::optional&lt;<a class="el" href="group__math.html#gac693dcf48436f48e7aa257db423e1bdc">irect</a>&gt;
 </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -683,7 +622,7 @@ Functions</h2></td></tr>
 <p>Returns the usable bounds of a display. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">displayIndex</td><td>the index of the display to query, must be in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a159052259e55698ab0777b9cad40ddd2" title="Returns the amount of available displays.">cen::screen::amount()</a></code>].</td></tr>
+    <tr><td class="paramname">index</td><td>the index of the queried display, in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76" title="Returns the amount of available displays.">cen::screen::count()</a></code>].</td></tr>
   </table>
   </dd>
 </dl>
@@ -693,8 +632,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a1e1c88e0672d85b1c45ff0fdff32e80f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e1c88e0672d85b1c45ff0fdff32e80f">&#9670;&nbsp;</a></span>vertical_dpi()</h2>
+<a id="a53292357d526bbdc2c82f10f154722f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53292357d526bbdc2c82f10f154722f1">&#9670;&nbsp;</a></span>vertical_dpi()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -706,14 +645,14 @@ Functions</h2></td></tr>
           <td class="memname">auto cen::screen::vertical_dpi </td>
           <td>(</td>
           <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>displayIndex</em> = <code>0</code></td><td>)</td>
+          <td class="paramname"><em>index</em> = <code>0</code></td><td>)</td>
           <td> -&gt; std::optional&lt;float&gt;
 </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -721,7 +660,7 @@ Functions</h2></td></tr>
 <p>Returns vertical DPI information about a display. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">displayIndex</td><td>the index of the display to query, must be in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a159052259e55698ab0777b9cad40ddd2" title="Returns the amount of available displays.">cen::screen::amount()</a></code>].</td></tr>
+    <tr><td class="paramname">index</td><td>the index of the queried display, in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76" title="Returns the amount of available displays.">cen::screen::count()</a></code>].</td></tr>
   </table>
   </dd>
 </dl>
@@ -730,8 +669,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="afcbfce77cb585029ddeb510d3ba6badc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afcbfce77cb585029ddeb510d3ba6badc">&#9670;&nbsp;</a></span>width()</h2>
+<a id="a51418b5e332ae0740b0c7a6d4e6f91ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51418b5e332ae0740b0c7a6d4e6f91ff">&#9670;&nbsp;</a></span>width()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -742,8 +681,9 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">auto cen::screen::width </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; int
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>index</em> = <code>0</code></td><td>)</td>
+          <td> -&gt; std::optional&lt;int&gt;
 </td>
         </tr>
       </table>
@@ -755,7 +695,13 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the width of the screen. </p>
-<dl class="section return"><dt>Returns</dt><dd>the width of the screen.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the index of the queried display, in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76" title="Returns the amount of available displays.">cen::screen::count()</a></code>].</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the width of the screen; <code>std::nullopt</code> if something goes wrong.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 
 </div>

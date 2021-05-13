@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['key_5fmodifier_3087',['key_modifier',['../group__input.html#gab42688bc97e687065efcf871350628f6',1,'cen']]]
+  ['joy_5fhat_5fposition_3607',['joy_hat_position',['../group__event.html#ga3014c4847759c6eacbc0f75a90e5caa1',1,'cen']]],
+  ['joystick_5fpower_3608',['joystick_power',['../group__input.html#gaacdee637148c269e0eb2cbedaa0076a4',1,'cen']]],
+  ['joystick_5ftype_3609',['joystick_type',['../group__input.html#ga0fdb54f2d315bb56f64ed18410c0e9cf',1,'cen']]]
 ];

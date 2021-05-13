@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/window.hpp File Reference</title>
+        <title>Centurion: src/centurion/video/window.hpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_b630b0fc10333b78f2ff60d8d1210ae7.html">video</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -100,22 +100,24 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &lt;SDL.h&gt;</code><br />
 <code>#include &lt;cassert&gt;</code><br />
+<code>#include &lt;optional&gt;</code><br />
 <code>#include &lt;ostream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
-<code>#include &lt;type_traits&gt;</code><br />
-<code>#include &quot;<a class="el" href="area_8hpp_source.html">area.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="centurion__cfg_8hpp_source.html">centurion_cfg.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="czstring_8hpp_source.html">czstring.hpp</a>&quot;</code><br />
-<code>#include &quot;detail/address_of.hpp&quot;</code><br />
-<code>#include &quot;detail/clamp.hpp&quot;</code><br />
-<code>#include &quot;detail/convert_bool.hpp&quot;</code><br />
-<code>#include &quot;detail/max.hpp&quot;</code><br />
-<code>#include &quot;detail/owner_handle_api.hpp&quot;</code><br />
-<code>#include &quot;detail/to_string.hpp&quot;</code><br />
-<code>#include &quot;<a class="el" href="exception_8hpp_source.html">exception.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="not__null_8hpp_source.html">not_null.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="czstring_8hpp_source.html">../core/czstring.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="exception_8hpp_source.html">../core/exception.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="integers_8hpp_source.html">../core/integers.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="not__null_8hpp_source.html">../core/not_null.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="owner_8hpp_source.html">../core/owner.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="result_8hpp_source.html">../core/result.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="address__of_8hpp_source.html">../detail/address_of.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="clamp_8hpp_source.html">../detail/clamp.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="convert__bool_8hpp_source.html">../detail/convert_bool.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="max_8hpp_source.html">../detail/max.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="owner__handle__api_8hpp_source.html">../detail/owner_handle_api.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="to__string_8hpp_source.html">../detail/to_string.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="area_8hpp_source.html">../math/area.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="rect_8hpp_source.html">../math/rect.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="pixel__format_8hpp_source.html">pixel_format.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="rect_8hpp_source.html">rect.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="surface_8hpp_source.html">surface.hpp</a>&quot;</code><br />
 </div>
 <p><a href="window_8hpp_source.html">Go to the source code of this file.</a></p>
@@ -137,22 +139,22 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:gaf061afd66d5eb42fc564662e1d864828"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#gaf061afd66d5eb42fc564662e1d864828">cen::window</a> = basic_window&lt; std::true_type &gt;</td></tr>
-<tr class="memdesc:gaf061afd66d5eb42fc564662e1d864828"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an owning window.  <a href="group__graphics.html#gaf061afd66d5eb42fc564662e1d864828">More...</a><br /></td></tr>
+<tr class="memitem:gaf061afd66d5eb42fc564662e1d864828"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#gaf061afd66d5eb42fc564662e1d864828">cen::window</a> = basic_window&lt; detail::owning_type &gt;</td></tr>
+<tr class="memdesc:gaf061afd66d5eb42fc564662e1d864828"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an owning window.  <a href="group__video.html#gaf061afd66d5eb42fc564662e1d864828">More...</a><br /></td></tr>
 <tr class="separator:gaf061afd66d5eb42fc564662e1d864828"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac16d78286764452f4beb682fb3b0289f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#gac16d78286764452f4beb682fb3b0289f">cen::window_handle</a> = basic_window&lt; std::false_type &gt;</td></tr>
-<tr class="memdesc:gac16d78286764452f4beb682fb3b0289f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a non-owning window.  <a href="group__graphics.html#gac16d78286764452f4beb682fb3b0289f">More...</a><br /></td></tr>
+<tr class="memitem:gac16d78286764452f4beb682fb3b0289f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#gac16d78286764452f4beb682fb3b0289f">cen::window_handle</a> = basic_window&lt; detail::handle_type &gt;</td></tr>
+<tr class="memdesc:gac16d78286764452f4beb682fb3b0289f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a non-owning window.  <a href="group__video.html#gac16d78286764452f4beb682fb3b0289f">More...</a><br /></td></tr>
 <tr class="separator:gac16d78286764452f4beb682fb3b0289f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga15bd96c1704dd100f45dce5ec0e363c4"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ga15bd96c1704dd100f45dce5ec0e363c4"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__graphics.html#ga15bd96c1704dd100f45dce5ec0e363c4">cen::to_string</a> (const basic_window&lt; T &gt; &amp;window) -&gt; std::string</td></tr>
-<tr class="memdesc:ga15bd96c1704dd100f45dce5ec0e363c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a textual representation of a window.  <a href="group__graphics.html#ga15bd96c1704dd100f45dce5ec0e363c4">More...</a><br /></td></tr>
+<tr class="memitem:ga15bd96c1704dd100f45dce5ec0e363c4"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__video.html#ga15bd96c1704dd100f45dce5ec0e363c4">cen::to_string</a> (const basic_window&lt; T &gt; &amp;window) -&gt; std::string</td></tr>
+<tr class="memdesc:ga15bd96c1704dd100f45dce5ec0e363c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a textual representation of a window.  <a href="group__video.html#ga15bd96c1704dd100f45dce5ec0e363c4">More...</a><br /></td></tr>
 <tr class="separator:ga15bd96c1704dd100f45dce5ec0e363c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5c206fda2b51bd205c24c92f1d97c7c0"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ga5c206fda2b51bd205c24c92f1d97c7c0"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__graphics.html#ga5c206fda2b51bd205c24c92f1d97c7c0">cen::operator&lt;&lt;</a> (std::ostream &amp;stream, const basic_window&lt; T &gt; &amp;window) -&gt; std::ostream &amp;</td></tr>
-<tr class="memdesc:ga5c206fda2b51bd205c24c92f1d97c7c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a textual representation of a window.  <a href="group__graphics.html#ga5c206fda2b51bd205c24c92f1d97c7c0">More...</a><br /></td></tr>
+<tr class="memitem:ga5c206fda2b51bd205c24c92f1d97c7c0"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__video.html#ga5c206fda2b51bd205c24c92f1d97c7c0">cen::operator&lt;&lt;</a> (std::ostream &amp;stream, const basic_window&lt; T &gt; &amp;window) -&gt; std::ostream &amp;</td></tr>
+<tr class="memdesc:ga5c206fda2b51bd205c24c92f1d97c7c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a textual representation of a window.  <a href="group__video.html#ga5c206fda2b51bd205c24c92f1d97c7c0">More...</a><br /></td></tr>
 <tr class="separator:ga5c206fda2b51bd205c24c92f1d97c7c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

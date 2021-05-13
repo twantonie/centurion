@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/color.hpp File Reference</title>
+        <title>Centurion: src/centurion/video/color.hpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_b630b0fc10333b78f2ff60d8d1210ae7.html">video</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -102,9 +102,8 @@ $(function() {
 <code>#include &lt;cmath&gt;</code><br />
 <code>#include &lt;ostream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
-<code>#include &quot;<a class="el" href="centurion__cfg_8hpp_source.html">centurion_cfg.hpp</a>&quot;</code><br />
-<code>#include &quot;detail/to_string.hpp&quot;</code><br />
-<code>#include &quot;<a class="el" href="integers_8hpp_source.html">integers.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="integers_8hpp_source.html">../core/integers.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="to__string_8hpp_source.html">../detail/to_string.hpp</a>&quot;</code><br />
 </div>
 <p><a href="color_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -122,41 +121,47 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga5cccd9c669fdd74579d28f4a16101941"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#ga5cccd9c669fdd74579d28f4a16101941">cen::to_string</a> (const color &amp;color) -&gt; std::string</td></tr>
-<tr class="memdesc:ga5cccd9c669fdd74579d28f4a16101941"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a textual representation of the color.  <a href="group__graphics.html#ga5cccd9c669fdd74579d28f4a16101941">More...</a><br /></td></tr>
+<tr class="memitem:ga5cccd9c669fdd74579d28f4a16101941"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga5cccd9c669fdd74579d28f4a16101941">cen::to_string</a> (const color &amp;color) -&gt; std::string</td></tr>
+<tr class="memdesc:ga5cccd9c669fdd74579d28f4a16101941"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a textual representation of the color.  <a href="group__video.html#ga5cccd9c669fdd74579d28f4a16101941">More...</a><br /></td></tr>
 <tr class="separator:ga5cccd9c669fdd74579d28f4a16101941"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9b2b88e0d39f0088b6940317fe33dbdf"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#ga9b2b88e0d39f0088b6940317fe33dbdf">cen::operator&lt;&lt;</a> (std::ostream &amp;stream, const color &amp;color) -&gt; std::ostream &amp;</td></tr>
-<tr class="memdesc:ga9b2b88e0d39f0088b6940317fe33dbdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a textual representation of a color.  <a href="group__graphics.html#ga9b2b88e0d39f0088b6940317fe33dbdf">More...</a><br /></td></tr>
+<tr class="memitem:ga9b2b88e0d39f0088b6940317fe33dbdf"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga9b2b88e0d39f0088b6940317fe33dbdf">cen::operator&lt;&lt;</a> (std::ostream &amp;stream, const color &amp;color) -&gt; std::ostream &amp;</td></tr>
+<tr class="memdesc:ga9b2b88e0d39f0088b6940317fe33dbdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a textual representation of a color.  <a href="group__video.html#ga9b2b88e0d39f0088b6940317fe33dbdf">More...</a><br /></td></tr>
 <tr class="separator:ga9b2b88e0d39f0088b6940317fe33dbdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa4de664e3f142d2755f77ebeb388fe86"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#gaa4de664e3f142d2755f77ebeb388fe86">cen::operator==</a> (const color &amp;lhs, const color &amp;rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:gaa4de664e3f142d2755f77ebeb388fe86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two colors are equal.  <a href="group__graphics.html#gaa4de664e3f142d2755f77ebeb388fe86">More...</a><br /></td></tr>
+<tr class="memitem:gaa0633728260ba4798184964a3d606b7b"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#gaa0633728260ba4798184964a3d606b7b">cen::blend</a> (const color &amp;a, const color &amp;b, const double bias=0.5) -&gt; color</td></tr>
+<tr class="memdesc:gaa0633728260ba4798184964a3d606b7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blends two colors according to the specified bias.  <a href="group__video.html#gaa0633728260ba4798184964a3d606b7b">More...</a><br /></td></tr>
+<tr class="separator:gaa0633728260ba4798184964a3d606b7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Color comparison operators</h2></td></tr>
+<tr class="memitem:gaa4de664e3f142d2755f77ebeb388fe86"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#gaa4de664e3f142d2755f77ebeb388fe86">cen::operator==</a> (const color &amp;lhs, const color &amp;rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:gaa4de664e3f142d2755f77ebeb388fe86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two colors are equal.  <a href="group__video.html#gaa4de664e3f142d2755f77ebeb388fe86">More...</a><br /></td></tr>
 <tr class="separator:gaa4de664e3f142d2755f77ebeb388fe86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga35de669fdaa64e3613dae361f1d212b8"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#ga35de669fdaa64e3613dae361f1d212b8">cen::operator==</a> (const color &amp;lhs, const SDL_Color &amp;rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga35de669fdaa64e3613dae361f1d212b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two colors are equal.  <a href="group__graphics.html#ga35de669fdaa64e3613dae361f1d212b8">More...</a><br /></td></tr>
+<tr class="memitem:ga35de669fdaa64e3613dae361f1d212b8"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga35de669fdaa64e3613dae361f1d212b8">cen::operator==</a> (const color &amp;lhs, const SDL_Color &amp;rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga35de669fdaa64e3613dae361f1d212b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two colors are equal.  <a href="group__video.html#ga35de669fdaa64e3613dae361f1d212b8">More...</a><br /></td></tr>
 <tr class="separator:ga35de669fdaa64e3613dae361f1d212b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga417597f683d0171e440b372291d60488"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#ga417597f683d0171e440b372291d60488">cen::operator==</a> (const SDL_Color &amp;lhs, const color &amp;rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga417597f683d0171e440b372291d60488"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two colors are equal.  <a href="group__graphics.html#ga417597f683d0171e440b372291d60488">More...</a><br /></td></tr>
+<tr class="memitem:ga417597f683d0171e440b372291d60488"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga417597f683d0171e440b372291d60488">cen::operator==</a> (const SDL_Color &amp;lhs, const color &amp;rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga417597f683d0171e440b372291d60488"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two colors are equal.  <a href="group__video.html#ga417597f683d0171e440b372291d60488">More...</a><br /></td></tr>
 <tr class="separator:ga417597f683d0171e440b372291d60488"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga24db18486aaf8f2f2c489b3a53206354"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#ga24db18486aaf8f2f2c489b3a53206354">cen::operator==</a> (const color &amp;lhs, const SDL_MessageBoxColor &amp;rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga24db18486aaf8f2f2c489b3a53206354"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two colors are equal.  <a href="group__graphics.html#ga24db18486aaf8f2f2c489b3a53206354">More...</a><br /></td></tr>
+<tr class="memitem:ga24db18486aaf8f2f2c489b3a53206354"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga24db18486aaf8f2f2c489b3a53206354">cen::operator==</a> (const color &amp;lhs, const SDL_MessageBoxColor &amp;rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga24db18486aaf8f2f2c489b3a53206354"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two colors are equal.  <a href="group__video.html#ga24db18486aaf8f2f2c489b3a53206354">More...</a><br /></td></tr>
 <tr class="separator:ga24db18486aaf8f2f2c489b3a53206354"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5a288b9edb6fce00cb0c57adc172b1e1"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#ga5a288b9edb6fce00cb0c57adc172b1e1">cen::operator==</a> (const SDL_MessageBoxColor &amp;lhs, const color &amp;rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga5a288b9edb6fce00cb0c57adc172b1e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two colors are equal.  <a href="group__graphics.html#ga5a288b9edb6fce00cb0c57adc172b1e1">More...</a><br /></td></tr>
+<tr class="memitem:ga5a288b9edb6fce00cb0c57adc172b1e1"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga5a288b9edb6fce00cb0c57adc172b1e1">cen::operator==</a> (const SDL_MessageBoxColor &amp;lhs, const color &amp;rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga5a288b9edb6fce00cb0c57adc172b1e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two colors are equal.  <a href="group__video.html#ga5a288b9edb6fce00cb0c57adc172b1e1">More...</a><br /></td></tr>
 <tr class="separator:ga5a288b9edb6fce00cb0c57adc172b1e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga51a5ced89253e5ffbdf57a205e78ad29"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#ga51a5ced89253e5ffbdf57a205e78ad29">cen::operator!=</a> (const color &amp;lhs, const color &amp;rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga51a5ced89253e5ffbdf57a205e78ad29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two colors aren't equal.  <a href="group__graphics.html#ga51a5ced89253e5ffbdf57a205e78ad29">More...</a><br /></td></tr>
+<tr class="memitem:ga51a5ced89253e5ffbdf57a205e78ad29"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga51a5ced89253e5ffbdf57a205e78ad29">cen::operator!=</a> (const color &amp;lhs, const color &amp;rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga51a5ced89253e5ffbdf57a205e78ad29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two colors aren't equal.  <a href="group__video.html#ga51a5ced89253e5ffbdf57a205e78ad29">More...</a><br /></td></tr>
 <tr class="separator:ga51a5ced89253e5ffbdf57a205e78ad29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga630647a4ae815b7ddbdefc79ec4f00a8"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#ga630647a4ae815b7ddbdefc79ec4f00a8">cen::operator!=</a> (const color &amp;lhs, const SDL_Color &amp;rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga630647a4ae815b7ddbdefc79ec4f00a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two colors aren't equal.  <a href="group__graphics.html#ga630647a4ae815b7ddbdefc79ec4f00a8">More...</a><br /></td></tr>
+<tr class="memitem:ga630647a4ae815b7ddbdefc79ec4f00a8"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga630647a4ae815b7ddbdefc79ec4f00a8">cen::operator!=</a> (const color &amp;lhs, const SDL_Color &amp;rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga630647a4ae815b7ddbdefc79ec4f00a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two colors aren't equal.  <a href="group__video.html#ga630647a4ae815b7ddbdefc79ec4f00a8">More...</a><br /></td></tr>
 <tr class="separator:ga630647a4ae815b7ddbdefc79ec4f00a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga35c45c0739031b2da198d017b4de62b8"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#ga35c45c0739031b2da198d017b4de62b8">cen::operator!=</a> (const SDL_Color &amp;lhs, const color &amp;rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga35c45c0739031b2da198d017b4de62b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two colors aren't equal.  <a href="group__graphics.html#ga35c45c0739031b2da198d017b4de62b8">More...</a><br /></td></tr>
+<tr class="memitem:ga35c45c0739031b2da198d017b4de62b8"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga35c45c0739031b2da198d017b4de62b8">cen::operator!=</a> (const SDL_Color &amp;lhs, const color &amp;rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga35c45c0739031b2da198d017b4de62b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two colors aren't equal.  <a href="group__video.html#ga35c45c0739031b2da198d017b4de62b8">More...</a><br /></td></tr>
 <tr class="separator:ga35c45c0739031b2da198d017b4de62b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga04473dc66397625946ea6332366cbd1e"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#ga04473dc66397625946ea6332366cbd1e">cen::operator!=</a> (const color &amp;lhs, const SDL_MessageBoxColor &amp;rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga04473dc66397625946ea6332366cbd1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two colors aren't equal.  <a href="group__graphics.html#ga04473dc66397625946ea6332366cbd1e">More...</a><br /></td></tr>
+<tr class="memitem:ga04473dc66397625946ea6332366cbd1e"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga04473dc66397625946ea6332366cbd1e">cen::operator!=</a> (const color &amp;lhs, const SDL_MessageBoxColor &amp;rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga04473dc66397625946ea6332366cbd1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two colors aren't equal.  <a href="group__video.html#ga04473dc66397625946ea6332366cbd1e">More...</a><br /></td></tr>
 <tr class="separator:ga04473dc66397625946ea6332366cbd1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga596586cbd10dca63db3afb6dfb662456"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#ga596586cbd10dca63db3afb6dfb662456">cen::operator!=</a> (const SDL_MessageBoxColor &amp;lhs, const color &amp;rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga596586cbd10dca63db3afb6dfb662456"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two colors aren't equal.  <a href="group__graphics.html#ga596586cbd10dca63db3afb6dfb662456">More...</a><br /></td></tr>
+<tr class="memitem:ga596586cbd10dca63db3afb6dfb662456"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga596586cbd10dca63db3afb6dfb662456">cen::operator!=</a> (const SDL_MessageBoxColor &amp;lhs, const color &amp;rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga596586cbd10dca63db3afb6dfb662456"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two colors aren't equal.  <a href="group__video.html#ga596586cbd10dca63db3afb6dfb662456">More...</a><br /></td></tr>
 <tr class="separator:ga596586cbd10dca63db3afb6dfb662456"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

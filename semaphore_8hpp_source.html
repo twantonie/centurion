@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/semaphore.hpp Source File</title>
+        <title>Centurion: src/centurion/thread/semaphore.hpp Source File</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_d1a878c88e5267b23b5863fc5b658fbb.html">thread</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -100,90 +100,81 @@ $(function() {
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span>  <span class="comment">// unique_ptr</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="centurion__cfg_8hpp.html">centurion_cfg.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="exception_8hpp.html">exception.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="integers_8hpp.html">integers.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="mutex_8hpp.html">mutex.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="time_8hpp.html">time.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../core/exception.hpp&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../core/integers.hpp&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../core/result.hpp&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../core/time.hpp&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="mutex_8hpp.html">mutex.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#ifdef CENTURION_USE_PRAGMA_ONCE</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif  // CENTURION_USE_PRAGMA_ONCE</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecen.html">cen</a> {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classcen_1_1semaphore.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcen_1_1semaphore.html">semaphore</a> final</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classcen_1_1semaphore.html#afc3131b9e51196943f8990d8914b9621">   44</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classcen_1_1semaphore.html#afc3131b9e51196943f8990d8914b9621">semaphore</a>(<span class="keyword">const</span> <a class="code" href="namespacecen.html#ad1dcf848a9ee33237a96cde6b5a1d466">u32</a> <a class="code" href="classcen_1_1semaphore.html#a66a917c0ff22a65a265fa216e0f0e2c1">tokens</a>)</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      : m_semaphore{SDL_CreateSemaphore(<a class="code" href="classcen_1_1semaphore.html#a66a917c0ff22a65a265fa216e0f0e2c1">tokens</a>)}</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span> (!m_semaphore)</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1sdl__error.html">sdl_error</a>{};</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classcen_1_1semaphore.html#a8bbb92ec59a64994d8b0c7eeeb96ac88">   62</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1semaphore.html#a8bbb92ec59a64994d8b0c7eeeb96ac88">acquire</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span> SDL_SemWait(m_semaphore.get()) == 0;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classcen_1_1semaphore.html#a8f2243e93222c85f1602f875d6967918">   77</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1semaphore.html#a8f2243e93222c85f1602f875d6967918">acquire</a>(<span class="keyword">const</span> <a class="code" href="namespacecen.html#aeabb8896b493294e6781651b0abfbef5">milliseconds&lt;u32&gt;</a> ms) -&gt; <a class="code" href="group__thread.html#ga81e5eda2a43cc39dee8bb8d60cff70d3">lock_status</a></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  {</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="group__thread.html#ga81e5eda2a43cc39dee8bb8d60cff70d3">lock_status</a><span class="keyword">&gt;</span>(</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        SDL_SemWaitTimeout(m_semaphore.get(), ms.count()));</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classcen_1_1semaphore.html#aa45ac77da17eea46a8cb0c058be5a633">   91</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1semaphore.html#aa45ac77da17eea46a8cb0c058be5a633">try_acquire</a>() noexcept -&gt; <a class="code" href="group__thread.html#ga81e5eda2a43cc39dee8bb8d60cff70d3">lock_status</a></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="group__thread.html#ga81e5eda2a43cc39dee8bb8d60cff70d3">lock_status</a><span class="keyword">&gt;</span>(SDL_SemTryWait(m_semaphore.get()));</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classcen_1_1semaphore.html#afe41cfe1718ebf87078b8a493972b254">  103</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1semaphore.html#afe41cfe1718ebf87078b8a493972b254">release</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  {</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">return</span> SDL_SemPost(m_semaphore.get()) == 0;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  }</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="classcen_1_1semaphore.html#a66a917c0ff22a65a265fa216e0f0e2c1">  115</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1semaphore.html#a66a917c0ff22a65a265fa216e0f0e2c1">tokens</a>() const noexcept -&gt; <a class="code" href="namespacecen.html#ad1dcf848a9ee33237a96cde6b5a1d466">u32</a></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  {</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">return</span> SDL_SemValue(m_semaphore.get());</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  }</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="keyword">struct </span>deleter final</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  {</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordtype">void</span> operator()(SDL_sem* <a class="code" href="classcen_1_1semaphore.html">semaphore</a>) noexcept</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    {</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      SDL_DestroySemaphore(<a class="code" href="classcen_1_1semaphore.html">semaphore</a>);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  };</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  std::unique_ptr&lt;SDL_sem, deleter&gt; m_semaphore;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;};</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;}  <span class="comment">// namespace cen</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="preprocessor">#endif  // CENTURION_SEMAPHORE_HEADER</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecen.html">cen</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classcen_1_1semaphore.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcen_1_1semaphore.html">semaphore</a> final</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classcen_1_1semaphore.html#afc3131b9e51196943f8990d8914b9621">   38</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classcen_1_1semaphore.html#afc3131b9e51196943f8990d8914b9621">semaphore</a>(<span class="keyword">const</span> <a class="code" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a> <a class="code" href="classcen_1_1semaphore.html#a66a917c0ff22a65a265fa216e0f0e2c1">tokens</a>) : m_semaphore{SDL_CreateSemaphore(<a class="code" href="classcen_1_1semaphore.html#a66a917c0ff22a65a265fa216e0f0e2c1">tokens</a>)}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">if</span> (!m_semaphore)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1sdl__error.html">sdl_error</a>{};</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classcen_1_1semaphore.html#a7cb8fce676d36b2869cd3751b86bf11d">   55</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1semaphore.html#a7cb8fce676d36b2869cd3751b86bf11d">acquire</a>() noexcept -&gt; <a class="code" href="classcen_1_1result.html">result</a></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">return</span> SDL_SemWait(m_semaphore.get()) == 0;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classcen_1_1semaphore.html#a67302338c53357748407a5316aa27fd8">   70</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1semaphore.html#a67302338c53357748407a5316aa27fd8">acquire</a>(<span class="keyword">const</span> <a class="code" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds&lt;u32&gt;</a> ms) noexcept(noexcept(ms.count())) -&gt; <a class="code" href="group__thread.html#ga81e5eda2a43cc39dee8bb8d60cff70d3">lock_status</a></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="group__thread.html#ga81e5eda2a43cc39dee8bb8d60cff70d3">lock_status</a><span class="keyword">&gt;</span>(SDL_SemWaitTimeout(m_semaphore.get(), ms.count()));</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classcen_1_1semaphore.html#aa45ac77da17eea46a8cb0c058be5a633">   83</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1semaphore.html#aa45ac77da17eea46a8cb0c058be5a633">try_acquire</a>() noexcept -&gt; <a class="code" href="group__thread.html#ga81e5eda2a43cc39dee8bb8d60cff70d3">lock_status</a></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="group__thread.html#ga81e5eda2a43cc39dee8bb8d60cff70d3">lock_status</a><span class="keyword">&gt;</span>(SDL_SemTryWait(m_semaphore.get()));</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classcen_1_1semaphore.html#a3170445f1a0b5f6cbf6094e924f169d8">   95</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1semaphore.html#a3170445f1a0b5f6cbf6094e924f169d8">release</a>() noexcept -&gt; <a class="code" href="classcen_1_1result.html">result</a></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">return</span> SDL_SemPost(m_semaphore.get()) == 0;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="classcen_1_1semaphore.html#a66a917c0ff22a65a265fa216e0f0e2c1">  107</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1semaphore.html#a66a917c0ff22a65a265fa216e0f0e2c1">tokens</a>() const noexcept -&gt; <a class="code" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">return</span> SDL_SemValue(m_semaphore.get());</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keyword">struct </span>deleter final</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">void</span> operator()(SDL_sem* <a class="code" href="classcen_1_1semaphore.html">semaphore</a>) noexcept</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      SDL_DestroySemaphore(<a class="code" href="classcen_1_1semaphore.html">semaphore</a>);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  };</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  std::unique_ptr&lt;SDL_sem, deleter&gt; m_semaphore;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;};</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;}  <span class="comment">// namespace cen</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="preprocessor">#endif  // CENTURION_SEMAPHORE_HEADER</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclasscen_1_1semaphore_html_afe41cfe1718ebf87078b8a493972b254"><div class="ttname"><a href="classcen_1_1semaphore.html#afe41cfe1718ebf87078b8a493972b254">cen::semaphore::release</a></div><div class="ttdeci">auto release() noexcept -&gt; bool</div><div class="ttdoc">Returns a token to the semaphore and notifies waiting threads.</div><div class="ttdef"><b>Definition:</b> semaphore.hpp:103</div></div>
-<div class="ttc" id="anamespacecen_html_aeabb8896b493294e6781651b0abfbef5"><div class="ttname"><a href="namespacecen.html#aeabb8896b493294e6781651b0abfbef5">cen::milliseconds</a></div><div class="ttdeci">std::chrono::duration&lt; T, std::milli &gt; milliseconds</div><div class="ttdoc">Templated alias for durations in milliseconds.</div><div class="ttdef"><b>Definition:</b> time.hpp:30</div></div>
-<div class="ttc" id="aintegers_8hpp_html"><div class="ttname"><a href="integers_8hpp.html">integers.hpp</a></div></div>
-<div class="ttc" id="aclasscen_1_1semaphore_html_a66a917c0ff22a65a265fa216e0f0e2c1"><div class="ttname"><a href="classcen_1_1semaphore.html#a66a917c0ff22a65a265fa216e0f0e2c1">cen::semaphore::tokens</a></div><div class="ttdeci">auto tokens() const noexcept -&gt; u32</div><div class="ttdoc">Returns the amount of available tokens.</div><div class="ttdef"><b>Definition:</b> semaphore.hpp:115</div></div>
-<div class="ttc" id="aclasscen_1_1semaphore_html_aa45ac77da17eea46a8cb0c058be5a633"><div class="ttname"><a href="classcen_1_1semaphore.html#aa45ac77da17eea46a8cb0c058be5a633">cen::semaphore::try_acquire</a></div><div class="ttdeci">auto try_acquire() noexcept -&gt; lock_status</div><div class="ttdoc">Attempts to acquire a token from the semaphore.</div><div class="ttdef"><b>Definition:</b> semaphore.hpp:91</div></div>
-<div class="ttc" id="agroup__thread_html_ga81e5eda2a43cc39dee8bb8d60cff70d3"><div class="ttname"><a href="group__thread.html#ga81e5eda2a43cc39dee8bb8d60cff70d3">cen::lock_status</a></div><div class="ttdeci">lock_status</div><div class="ttdef"><b>Definition:</b> mutex.hpp:20</div></div>
-<div class="ttc" id="anamespacecen_html"><div class="ttname"><a href="namespacecen.html">cen</a></div><div class="ttdoc">The top-level namespace that all components of the library reside in.</div><div class="ttdef"><b>Definition:</b> area.hpp:16</div></div>
-<div class="ttc" id="anamespacecen_html_ad1dcf848a9ee33237a96cde6b5a1d466"><div class="ttname"><a href="namespacecen.html#ad1dcf848a9ee33237a96cde6b5a1d466">cen::u32</a></div><div class="ttdeci">Uint32 u32</div><div class="ttdoc">Alias for a 32-bit unsigned integer.</div><div class="ttdef"><b>Definition:</b> integers.hpp:26</div></div>
-<div class="ttc" id="aclasscen_1_1semaphore_html_a8bbb92ec59a64994d8b0c7eeeb96ac88"><div class="ttname"><a href="classcen_1_1semaphore.html#a8bbb92ec59a64994d8b0c7eeeb96ac88">cen::semaphore::acquire</a></div><div class="ttdeci">auto acquire() noexcept -&gt; bool</div><div class="ttdoc">Acquires a token from the semaphore.</div><div class="ttdef"><b>Definition:</b> semaphore.hpp:62</div></div>
-<div class="ttc" id="aclasscen_1_1semaphore_html_afc3131b9e51196943f8990d8914b9621"><div class="ttname"><a href="classcen_1_1semaphore.html#afc3131b9e51196943f8990d8914b9621">cen::semaphore::semaphore</a></div><div class="ttdeci">semaphore(const u32 tokens)</div><div class="ttdoc">Creates a semaphore with the specified amount of tokens.</div><div class="ttdef"><b>Definition:</b> semaphore.hpp:44</div></div>
-<div class="ttc" id="acenturion__cfg_8hpp_html"><div class="ttname"><a href="centurion__cfg_8hpp.html">centurion_cfg.hpp</a></div></div>
-<div class="ttc" id="aexception_8hpp_html"><div class="ttname"><a href="exception_8hpp.html">exception.hpp</a></div></div>
-<div class="ttc" id="atime_8hpp_html"><div class="ttname"><a href="time_8hpp.html">time.hpp</a></div></div>
-<div class="ttc" id="aclasscen_1_1sdl__error_html"><div class="ttname"><a href="classcen_1_1sdl__error.html">cen::sdl_error</a></div><div class="ttdoc">Represents an error related to the core SDL2 library.</div><div class="ttdef"><b>Definition:</b> exception.hpp:66</div></div>
+<div class="ttc" id="aclasscen_1_1semaphore_html_a7cb8fce676d36b2869cd3751b86bf11d"><div class="ttname"><a href="classcen_1_1semaphore.html#a7cb8fce676d36b2869cd3751b86bf11d">cen::semaphore::acquire</a></div><div class="ttdeci">auto acquire() noexcept -&gt; result</div><div class="ttdoc">Acquires a token from the semaphore.</div><div class="ttdef"><b>Definition:</b> semaphore.hpp:55</div></div>
+<div class="ttc" id="aclasscen_1_1result_html"><div class="ttname"><a href="classcen_1_1result.html">cen::result</a></div><div class="ttdoc">A simple indicator for the result of different operations.</div><div class="ttdef"><b>Definition:</b> result.hpp:49</div></div>
+<div class="ttc" id="aclasscen_1_1semaphore_html_a66a917c0ff22a65a265fa216e0f0e2c1"><div class="ttname"><a href="classcen_1_1semaphore.html#a66a917c0ff22a65a265fa216e0f0e2c1">cen::semaphore::tokens</a></div><div class="ttdeci">auto tokens() const noexcept -&gt; u32</div><div class="ttdoc">Returns the amount of available tokens.</div><div class="ttdef"><b>Definition:</b> semaphore.hpp:107</div></div>
+<div class="ttc" id="aclasscen_1_1semaphore_html_aa45ac77da17eea46a8cb0c058be5a633"><div class="ttname"><a href="classcen_1_1semaphore.html#aa45ac77da17eea46a8cb0c058be5a633">cen::semaphore::try_acquire</a></div><div class="ttdeci">auto try_acquire() noexcept -&gt; lock_status</div><div class="ttdoc">Attempts to acquire a token from the semaphore.</div><div class="ttdef"><b>Definition:</b> semaphore.hpp:83</div></div>
+<div class="ttc" id="agroup__thread_html_ga81e5eda2a43cc39dee8bb8d60cff70d3"><div class="ttname"><a href="group__thread.html#ga81e5eda2a43cc39dee8bb8d60cff70d3">cen::lock_status</a></div><div class="ttdeci">lock_status</div><div class="ttdef"><b>Definition:</b> mutex.hpp:16</div></div>
+<div class="ttc" id="anamespacecen_html"><div class="ttname"><a href="namespacecen.html">cen</a></div><div class="ttdoc">The top-level namespace that all components of the library reside in.</div><div class="ttdef"><b>Definition:</b> channels.hpp:12</div></div>
+<div class="ttc" id="aclasscen_1_1semaphore_html_afc3131b9e51196943f8990d8914b9621"><div class="ttname"><a href="classcen_1_1semaphore.html#afc3131b9e51196943f8990d8914b9621">cen::semaphore::semaphore</a></div><div class="ttdeci">semaphore(const u32 tokens)</div><div class="ttdoc">Creates a semaphore with the specified amount of tokens.</div><div class="ttdef"><b>Definition:</b> semaphore.hpp:38</div></div>
+<div class="ttc" id="aclasscen_1_1semaphore_html_a3170445f1a0b5f6cbf6094e924f169d8"><div class="ttname"><a href="classcen_1_1semaphore.html#a3170445f1a0b5f6cbf6094e924f169d8">cen::semaphore::release</a></div><div class="ttdeci">auto release() noexcept -&gt; result</div><div class="ttdoc">Returns a token to the semaphore and notifies waiting threads.</div><div class="ttdef"><b>Definition:</b> semaphore.hpp:95</div></div>
+<div class="ttc" id="aclasscen_1_1semaphore_html_a67302338c53357748407a5316aa27fd8"><div class="ttname"><a href="classcen_1_1semaphore.html#a67302338c53357748407a5316aa27fd8">cen::semaphore::acquire</a></div><div class="ttdeci">auto acquire(const milliseconds&lt; u32 &gt; ms) noexcept(noexcept(ms.count())) -&gt; lock_status</div><div class="ttdoc">Attempts to acquire a token from the semaphore.</div><div class="ttdef"><b>Definition:</b> semaphore.hpp:70</div></div>
+<div class="ttc" id="agroup__core_html_gaeabb8896b493294e6781651b0abfbef5"><div class="ttname"><a href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">cen::milliseconds</a></div><div class="ttdeci">std::chrono::duration&lt; T, std::milli &gt; milliseconds</div><div class="ttdoc">Templated alias for durations in milliseconds.</div><div class="ttdef"><b>Definition:</b> time.hpp:31</div></div>
+<div class="ttc" id="agroup__core_html_ga4abd620246f76cc48168dc52a04a62da"><div class="ttname"><a href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">cen::u32</a></div><div class="ttdeci">Uint32 u32</div><div class="ttdoc">Alias for a 32-bit unsigned integer.</div><div class="ttdef"><b>Definition:</b> integers.hpp:24</div></div>
+<div class="ttc" id="aclasscen_1_1sdl__error_html"><div class="ttname"><a href="classcen_1_1sdl__error.html">cen::sdl_error</a></div><div class="ttdoc">Represents an error related to the core SDL2 library.</div><div class="ttdef"><b>Definition:</b> exception.hpp:54</div></div>
 <div class="ttc" id="amutex_8hpp_html"><div class="ttname"><a href="mutex_8hpp.html">mutex.hpp</a></div></div>
-<div class="ttc" id="aclasscen_1_1semaphore_html_a8f2243e93222c85f1602f875d6967918"><div class="ttname"><a href="classcen_1_1semaphore.html#a8f2243e93222c85f1602f875d6967918">cen::semaphore::acquire</a></div><div class="ttdeci">auto acquire(const milliseconds&lt; u32 &gt; ms) -&gt; lock_status</div><div class="ttdoc">Attempts to acquire a token from the semaphore.</div><div class="ttdef"><b>Definition:</b> semaphore.hpp:77</div></div>
-<div class="ttc" id="aclasscen_1_1semaphore_html"><div class="ttname"><a href="classcen_1_1semaphore.html">cen::semaphore</a></div><div class="ttdoc">Represents a semaphore with a set of &quot;tokens&quot; (or permits).</div><div class="ttdef"><b>Definition:</b> semaphore.hpp:32</div></div>
+<div class="ttc" id="aclasscen_1_1semaphore_html"><div class="ttname"><a href="classcen_1_1semaphore.html">cen::semaphore</a></div><div class="ttdoc">Represents a semaphore with a set of &quot;tokens&quot; (or permits).</div><div class="ttdef"><b>Definition:</b> semaphore.hpp:26</div></div>
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
 </div>

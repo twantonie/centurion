@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/base_path.hpp File Reference</title>
+        <title>Centurion: src/centurion/filesystem/base_path.hpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,12 +85,11 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_7bec340a5f0d742a2bf28bb9c2af6d5e.html">filesystem</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -98,19 +97,10 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;SDL.h&gt;</code><br />
-<code>#include &lt;ostream&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
-<code>#include &quot;<a class="el" href="centurion__cfg_8hpp_source.html">centurion_cfg.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="sdl__string_8hpp_source.html">sdl_string.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="sdl__string_8hpp_source.html">../core/sdl_string.hpp</a>&quot;</code><br />
 </div>
 <p><a href="base__path_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1base__path.html">cen::base_path</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A wrapper for the application path obtained through <code>SDL_GetBasePath</code>.  <a href="classcen_1_1base__path.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacecen"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen.html">cen</a></td></tr>
@@ -119,15 +109,9 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gadea76fd0b63511ff054539212eb02e23"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gadea76fd0b63511ff054539212eb02e23">cen::get_base_path</a> () -&gt; sdl_string</td></tr>
-<tr class="memdesc:gadea76fd0b63511ff054539212eb02e23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the "base" path associated with the application.  <a href="group__system.html#gadea76fd0b63511ff054539212eb02e23">More...</a><br /></td></tr>
-<tr class="separator:gadea76fd0b63511ff054539212eb02e23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6cd8b28f9685348e2ebb68f05cede24c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga6cd8b28f9685348e2ebb68f05cede24c">cen::to_string</a> (const base_path &amp;path) -&gt; std::string</td></tr>
-<tr class="memdesc:ga6cd8b28f9685348e2ebb68f05cede24c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a textual representation of a base path.  <a href="group__system.html#ga6cd8b28f9685348e2ebb68f05cede24c">More...</a><br /></td></tr>
-<tr class="separator:ga6cd8b28f9685348e2ebb68f05cede24c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga55886fa5f9e7a605792b4cf58360d5e1"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga55886fa5f9e7a605792b4cf58360d5e1">cen::operator&lt;&lt;</a> (std::ostream &amp;stream, const base_path &amp;path) -&gt; std::ostream &amp;</td></tr>
-<tr class="memdesc:ga55886fa5f9e7a605792b4cf58360d5e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a textual representation of a base path.  <a href="group__system.html#ga55886fa5f9e7a605792b4cf58360d5e1">More...</a><br /></td></tr>
-<tr class="separator:ga55886fa5f9e7a605792b4cf58360d5e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9ec396fcf96806fa71bce5c568e826d4"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga9ec396fcf96806fa71bce5c568e826d4">cen::base_path</a> () -&gt; sdl_string</td></tr>
+<tr class="memdesc:ga9ec396fcf96806fa71bce5c568e826d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the "base" path associated with the application.  <a href="group__system.html#ga9ec396fcf96806fa71bce5c568e826d4">More...</a><br /></td></tr>
+<tr class="separator:ga9ec396fcf96806fa71bce5c568e826d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

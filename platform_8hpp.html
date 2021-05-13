@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/platform.hpp File Reference</title>
+        <title>Centurion: src/centurion/system/platform.hpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_c6d2c5988ce62fe45ec82cf89dcf887c.html">system</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -101,83 +101,85 @@ $(function() {
 <code>#include &lt;cassert&gt;</code><br />
 <code>#include &lt;optional&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
-<code>#include &quot;<a class="el" href="centurion__cfg_8hpp_source.html">centurion_cfg.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="czstring_8hpp_source.html">czstring.hpp</a>&quot;</code><br />
-<code>#include &quot;detail/czstring_eq.hpp&quot;</code><br />
-<code>#include &quot;<a class="el" href="not__null_8hpp_source.html">not_null.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="pixel__format_8hpp_source.html">pixel_format.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="czstring_8hpp_source.html">../core/czstring.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="not__null_8hpp_source.html">../core/not_null.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="result_8hpp_source.html">../core/result.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="czstring__eq_8hpp_source.html">../detail/czstring_eq.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pixel__format_8hpp_source.html">../video/pixel_format.hpp</a>&quot;</code><br />
 </div>
 <p><a href="platform_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:namespacecen_1_1platform"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1platform.html">cen::platform</a></td></tr>
-<tr class="memdesc:namespacecen_1_1platform"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains utilities related to platform information. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacecen"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen.html">cen</a></td></tr>
 <tr class="memdesc:namespacecen"><td class="mdescLeft">&#160;</td><td class="mdescRight">The top-level namespace that all components of the library reside in. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:ga07dc54b3fa6cd40d83ebd0c66e50cdbd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga07dc54b3fa6cd40d83ebd0c66e50cdbd">cen::platform::platform_id</a> { <br />
-&#160;&#160;<a class="el" href="group__system.html#gga07dc54b3fa6cd40d83ebd0c66e50cdbdaad921d60486366258809553a3db49a4a">cen::platform::platform_id::unknown</a>, 
+<tr class="memitem:gaf5df2e2d6f7f4da0f006d54c4372890f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gaf5df2e2d6f7f4da0f006d54c4372890f">cen::platform_id</a> { <br />
+&#160;&#160;<a class="el" href="group__system.html#ggaf5df2e2d6f7f4da0f006d54c4372890faad921d60486366258809553a3db49a4a">cen::platform_id::unknown</a>, 
 <br />
-&#160;&#160;<a class="el" href="group__system.html#gga07dc54b3fa6cd40d83ebd0c66e50cdbda0f4137ed1502b5045d6083aa258b5c42">cen::platform::platform_id::windows</a>, 
+&#160;&#160;<a class="el" href="group__system.html#ggaf5df2e2d6f7f4da0f006d54c4372890fa0f4137ed1502b5045d6083aa258b5c42">cen::platform_id::windows</a>, 
 <br />
-&#160;&#160;<a class="el" href="group__system.html#gga07dc54b3fa6cd40d83ebd0c66e50cdbdab4059e7486eab53a4da7191b009ec285">cen::platform::platform_id::mac_osx</a>, 
+&#160;&#160;<a class="el" href="group__system.html#ggaf5df2e2d6f7f4da0f006d54c4372890fab4059e7486eab53a4da7191b009ec285">cen::platform_id::mac_osx</a>, 
 <br />
-&#160;&#160;<a class="el" href="group__system.html#gga07dc54b3fa6cd40d83ebd0c66e50cdbda2510547bee6db5d7a54ac18f49ba20a6">cen::platform::platform_id::linuxx</a>, 
+&#160;&#160;<a class="el" href="group__system.html#ggaf5df2e2d6f7f4da0f006d54c4372890fad12c13442940f30512b2b6c851a9f2c5">cen::platform_id::linux_os</a>, 
 <br />
-&#160;&#160;<a class="el" href="group__system.html#gga07dc54b3fa6cd40d83ebd0c66e50cdbda9e304d4e8df1b74cfa009913198428ab">cen::platform::platform_id::ios</a>, 
+&#160;&#160;<a class="el" href="group__system.html#ggaf5df2e2d6f7f4da0f006d54c4372890fa9e304d4e8df1b74cfa009913198428ab">cen::platform_id::ios</a>, 
 <br />
-&#160;&#160;<a class="el" href="group__system.html#gga07dc54b3fa6cd40d83ebd0c66e50cdbdac31b32364ce19ca8fcd150a417ecce58">cen::platform::platform_id::android</a>
+&#160;&#160;<a class="el" href="group__system.html#ggaf5df2e2d6f7f4da0f006d54c4372890fac31b32364ce19ca8fcd150a417ecce58">cen::platform_id::android</a>
 <br />
  }</td></tr>
-<tr class="memdesc:ga07dc54b3fa6cd40d83ebd0c66e50cdbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides values that represent various different operating systems.  <a href="group__system.html#ga07dc54b3fa6cd40d83ebd0c66e50cdbd">More...</a><br /></td></tr>
-<tr class="separator:ga07dc54b3fa6cd40d83ebd0c66e50cdbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:gaf5df2e2d6f7f4da0f006d54c4372890f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides values that represent various different operating systems.  <a href="group__system.html#gaf5df2e2d6f7f4da0f006d54c4372890f">More...</a><br /></td></tr>
+<tr class="separator:gaf5df2e2d6f7f4da0f006d54c4372890f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gac45b4f0a65b8c70749dd1afa34f51711"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gac45b4f0a65b8c70749dd1afa34f51711">cen::platform::id</a> () noexcept -&gt; platform_id</td></tr>
-<tr class="memdesc:gac45b4f0a65b8c70749dd1afa34f51711"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value that represents the current platform.  <a href="group__system.html#gac45b4f0a65b8c70749dd1afa34f51711">More...</a><br /></td></tr>
-<tr class="separator:gac45b4f0a65b8c70749dd1afa34f51711"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga90012d25ea2cc7bbaedca9460cd084d6"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga90012d25ea2cc7bbaedca9460cd084d6">cen::platform::is_windows</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga90012d25ea2cc7bbaedca9460cd084d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the current platform is Windows.  <a href="group__system.html#ga90012d25ea2cc7bbaedca9460cd084d6">More...</a><br /></td></tr>
-<tr class="separator:ga90012d25ea2cc7bbaedca9460cd084d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga49186ef49d4a95871af8656774bad33b"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga49186ef49d4a95871af8656774bad33b">cen::platform::is_mac_osx</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga49186ef49d4a95871af8656774bad33b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the current platform is Mac OSX.  <a href="group__system.html#ga49186ef49d4a95871af8656774bad33b">More...</a><br /></td></tr>
-<tr class="separator:ga49186ef49d4a95871af8656774bad33b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga79f2187e3daf72401fab9b9d568c6eeb"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga79f2187e3daf72401fab9b9d568c6eeb">cen::platform::is_linux</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga79f2187e3daf72401fab9b9d568c6eeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the current platform is Linux.  <a href="group__system.html#ga79f2187e3daf72401fab9b9d568c6eeb">More...</a><br /></td></tr>
-<tr class="separator:ga79f2187e3daf72401fab9b9d568c6eeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf046e8985dbc30ff005d7ff92d905995"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gaf046e8985dbc30ff005d7ff92d905995">cen::platform::is_ios</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:gaf046e8985dbc30ff005d7ff92d905995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the current platform is iOS.  <a href="group__system.html#gaf046e8985dbc30ff005d7ff92d905995">More...</a><br /></td></tr>
-<tr class="separator:gaf046e8985dbc30ff005d7ff92d905995"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0a53d0107a321905f6f939c9dbcdc8db"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga0a53d0107a321905f6f939c9dbcdc8db">cen::platform::is_android</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga0a53d0107a321905f6f939c9dbcdc8db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the current platform is Android.  <a href="group__system.html#ga0a53d0107a321905f6f939c9dbcdc8db">More...</a><br /></td></tr>
-<tr class="separator:ga0a53d0107a321905f6f939c9dbcdc8db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga820110f667747768162eb7e19b42e374"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga820110f667747768162eb7e19b42e374">cen::platform::name</a> () -&gt; std::optional&lt; std::string &gt;</td></tr>
-<tr class="memdesc:ga820110f667747768162eb7e19b42e374"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of the current platform.  <a href="group__system.html#ga820110f667747768162eb7e19b42e374">More...</a><br /></td></tr>
-<tr class="separator:ga820110f667747768162eb7e19b42e374"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga99285a05723a27b34259259fefc13d92"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga99285a05723a27b34259259fefc13d92">cen::platform::is_tablet</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga99285a05723a27b34259259fefc13d92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the current system is a tablet.  <a href="group__system.html#ga99285a05723a27b34259259fefc13d92">More...</a><br /></td></tr>
-<tr class="separator:ga99285a05723a27b34259259fefc13d92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf11b74db0aee4db681767f10037e2ff3"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gaf11b74db0aee4db681767f10037e2ff3">cen::platform::ifdef_win32</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:gaf11b74db0aee4db681767f10037e2ff3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the current OS is 32-bit Windows.  <a href="group__system.html#gaf11b74db0aee4db681767f10037e2ff3">More...</a><br /></td></tr>
-<tr class="separator:gaf11b74db0aee4db681767f10037e2ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae375f1008e926b5ebba2cd8987bf1273"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gae375f1008e926b5ebba2cd8987bf1273">cen::platform::ifdef_win64</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:gae375f1008e926b5ebba2cd8987bf1273"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the current OS is 64-bit Windows.  <a href="group__system.html#gae375f1008e926b5ebba2cd8987bf1273">More...</a><br /></td></tr>
-<tr class="separator:gae375f1008e926b5ebba2cd8987bf1273"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaee2753296273bcc66e248e87b8f48855"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gaee2753296273bcc66e248e87b8f48855">cen::platform::ifdef_linux</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:gaee2753296273bcc66e248e87b8f48855"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the current OS is derived from Linux.  <a href="group__system.html#gaee2753296273bcc66e248e87b8f48855">More...</a><br /></td></tr>
-<tr class="separator:gaee2753296273bcc66e248e87b8f48855"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaafb2933375cffb55f504cc6d92a6fc2c"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gaafb2933375cffb55f504cc6d92a6fc2c">cen::platform::ifdef_android</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:gaafb2933375cffb55f504cc6d92a6fc2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the current OS is Android.  <a href="group__system.html#gaafb2933375cffb55f504cc6d92a6fc2c">More...</a><br /></td></tr>
-<tr class="separator:gaafb2933375cffb55f504cc6d92a6fc2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga364b871a2ec2db0a26a4125e39d9764e"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga364b871a2ec2db0a26a4125e39d9764e">cen::platform::ifdef_apple</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga364b871a2ec2db0a26a4125e39d9764e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the current OS is either MacOS or iOS.  <a href="group__system.html#ga364b871a2ec2db0a26a4125e39d9764e">More...</a><br /></td></tr>
-<tr class="separator:ga364b871a2ec2db0a26a4125e39d9764e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa9fa8565db4f85595d719f55ee4e4ac8"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gaa9fa8565db4f85595d719f55ee4e4ac8">cen::open_url</a> (const not_null&lt; czstring &gt; url) noexcept -&gt; result</td></tr>
+<tr class="memdesc:gaa9fa8565db4f85595d719f55ee4e4ac8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to open a URL using a web browser or even a file manager for local files.  <a href="group__system.html#gaa9fa8565db4f85595d719f55ee4e4ac8">More...</a><br /></td></tr>
+<tr class="separator:gaa9fa8565db4f85595d719f55ee4e4ac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5f419736a187461bed5d129d910f07e0"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga5f419736a187461bed5d129d910f07e0">cen::open_url</a> (const std::string &amp;url) noexcept -&gt; result</td></tr>
+<tr class="separator:ga5f419736a187461bed5d129d910f07e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6742b3a4939d9d04f6ef50d5a7f0f1ee"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga6742b3a4939d9d04f6ef50d5a7f0f1ee">cen::current_platform</a> () noexcept -&gt; platform_id</td></tr>
+<tr class="memdesc:ga6742b3a4939d9d04f6ef50d5a7f0f1ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value that represents the current platform.  <a href="group__system.html#ga6742b3a4939d9d04f6ef50d5a7f0f1ee">More...</a><br /></td></tr>
+<tr class="separator:ga6742b3a4939d9d04f6ef50d5a7f0f1ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga51ecaf5e3af6e68038ca21a3be28f477"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga51ecaf5e3af6e68038ca21a3be28f477">cen::is_windows</a> () noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga51ecaf5e3af6e68038ca21a3be28f477"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the current platform is Windows.  <a href="group__system.html#ga51ecaf5e3af6e68038ca21a3be28f477">More...</a><br /></td></tr>
+<tr class="separator:ga51ecaf5e3af6e68038ca21a3be28f477"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3e62afc353e7b2eb357eb49642edd436"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga3e62afc353e7b2eb357eb49642edd436">cen::is_mac_osx</a> () noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga3e62afc353e7b2eb357eb49642edd436"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the current platform is Mac OSX.  <a href="group__system.html#ga3e62afc353e7b2eb357eb49642edd436">More...</a><br /></td></tr>
+<tr class="separator:ga3e62afc353e7b2eb357eb49642edd436"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga806019d8c666151c57a54dc827a6d92c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga806019d8c666151c57a54dc827a6d92c">cen::is_linux</a> () noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga806019d8c666151c57a54dc827a6d92c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the current platform is Linux.  <a href="group__system.html#ga806019d8c666151c57a54dc827a6d92c">More...</a><br /></td></tr>
+<tr class="separator:ga806019d8c666151c57a54dc827a6d92c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf9c16e67ca0f07609cd00fe216e0f56e"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gaf9c16e67ca0f07609cd00fe216e0f56e">cen::is_ios</a> () noexcept -&gt; bool</td></tr>
+<tr class="memdesc:gaf9c16e67ca0f07609cd00fe216e0f56e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the current platform is iOS.  <a href="group__system.html#gaf9c16e67ca0f07609cd00fe216e0f56e">More...</a><br /></td></tr>
+<tr class="separator:gaf9c16e67ca0f07609cd00fe216e0f56e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga583b188ad41383435f28aa2932b03fdb"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga583b188ad41383435f28aa2932b03fdb">cen::is_android</a> () noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga583b188ad41383435f28aa2932b03fdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the current platform is Android.  <a href="group__system.html#ga583b188ad41383435f28aa2932b03fdb">More...</a><br /></td></tr>
+<tr class="separator:ga583b188ad41383435f28aa2932b03fdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6ffb9e970d0c91c7e73b5522073a157a"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga6ffb9e970d0c91c7e73b5522073a157a">cen::platform_name</a> () -&gt; std::optional&lt; std::string &gt;</td></tr>
+<tr class="memdesc:ga6ffb9e970d0c91c7e73b5522073a157a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of the current platform.  <a href="group__system.html#ga6ffb9e970d0c91c7e73b5522073a157a">More...</a><br /></td></tr>
+<tr class="separator:ga6ffb9e970d0c91c7e73b5522073a157a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa5277fc7afca40870fce31af77372051"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gaa5277fc7afca40870fce31af77372051">cen::is_tablet</a> () noexcept -&gt; bool</td></tr>
+<tr class="memdesc:gaa5277fc7afca40870fce31af77372051"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the current system is a tablet.  <a href="group__system.html#gaa5277fc7afca40870fce31af77372051">More...</a><br /></td></tr>
+<tr class="separator:gaa5277fc7afca40870fce31af77372051"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga17742e9e970cb8233592afe3dd362051"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga17742e9e970cb8233592afe3dd362051">cen::ifdef_win32</a> () noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga17742e9e970cb8233592afe3dd362051"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the current OS is 32-bit Windows.  <a href="group__system.html#ga17742e9e970cb8233592afe3dd362051">More...</a><br /></td></tr>
+<tr class="separator:ga17742e9e970cb8233592afe3dd362051"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga85849d2df4e81e1c0423c62adf2d85c0"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga85849d2df4e81e1c0423c62adf2d85c0">cen::ifdef_win64</a> () noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga85849d2df4e81e1c0423c62adf2d85c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the current OS is 64-bit Windows.  <a href="group__system.html#ga85849d2df4e81e1c0423c62adf2d85c0">More...</a><br /></td></tr>
+<tr class="separator:ga85849d2df4e81e1c0423c62adf2d85c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga906e2d76c817a65e95b2bdc5ae0f7b40"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga906e2d76c817a65e95b2bdc5ae0f7b40">cen::ifdef_linux</a> () noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga906e2d76c817a65e95b2bdc5ae0f7b40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the current OS is derived from Linux.  <a href="group__system.html#ga906e2d76c817a65e95b2bdc5ae0f7b40">More...</a><br /></td></tr>
+<tr class="separator:ga906e2d76c817a65e95b2bdc5ae0f7b40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga28dd9eb2a03def1dd91bc58d07f93cc5"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga28dd9eb2a03def1dd91bc58d07f93cc5">cen::ifdef_android</a> () noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga28dd9eb2a03def1dd91bc58d07f93cc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the current OS is Android.  <a href="group__system.html#ga28dd9eb2a03def1dd91bc58d07f93cc5">More...</a><br /></td></tr>
+<tr class="separator:ga28dd9eb2a03def1dd91bc58d07f93cc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga89c4431613a1c6020c9bc69bb7144853"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga89c4431613a1c6020c9bc69bb7144853">cen::ifdef_apple</a> () noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga89c4431613a1c6020c9bc69bb7144853"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the current OS is either MacOS or iOS.  <a href="group__system.html#ga89c4431613a1c6020c9bc69bb7144853">More...</a><br /></td></tr>
+<tr class="separator:ga89c4431613a1c6020c9bc69bb7144853"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -90,7 +90,6 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">cen::cpu Namespace Reference<div class="ingroups"><a class="el" href="group__system.html">System</a></div></div>  </div>
@@ -100,73 +99,641 @@ $(function() {
 <p>Provides methods for obtaining information about the processor.  
 <a href="namespacecen_1_1cpu.html#details">More...</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1cpu_1_1simd__block.html">simd_block</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a block of memory, allocated in SIMD-friendly way.  <a href="classcen_1_1cpu_1_1simd__block.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gad7f4f7b51ba007c59b0f404f8d9b2c40"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gad7f4f7b51ba007c59b0f404f8d9b2c40">cache_line_size</a> () noexcept -&gt; int</td></tr>
-<tr class="memdesc:gad7f4f7b51ba007c59b0f404f8d9b2c40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the CPU L1 cache line size.  <a href="group__system.html#gad7f4f7b51ba007c59b0f404f8d9b2c40">More...</a><br /></td></tr>
-<tr class="separator:gad7f4f7b51ba007c59b0f404f8d9b2c40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab9a7860bf24c9a668750a3322914954c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gab9a7860bf24c9a668750a3322914954c">cores</a> () noexcept -&gt; int</td></tr>
-<tr class="memdesc:gab9a7860bf24c9a668750a3322914954c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the amount of cores that the CPU has.  <a href="group__system.html#gab9a7860bf24c9a668750a3322914954c">More...</a><br /></td></tr>
-<tr class="separator:gab9a7860bf24c9a668750a3322914954c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab90bcbe4b10fda10f02032e3e351286a"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gab90bcbe4b10fda10f02032e3e351286a">has_rdtsc</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:gab90bcbe4b10fda10f02032e3e351286a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the CPU has the RDTSC instruction.  <a href="group__system.html#gab90bcbe4b10fda10f02032e3e351286a">More...</a><br /></td></tr>
-<tr class="separator:gab90bcbe4b10fda10f02032e3e351286a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9dc10298fd972127a273923ec35944ff"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga9dc10298fd972127a273923ec35944ff">has_altivec</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga9dc10298fd972127a273923ec35944ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the CPU has AltiVec features.  <a href="group__system.html#ga9dc10298fd972127a273923ec35944ff">More...</a><br /></td></tr>
-<tr class="separator:ga9dc10298fd972127a273923ec35944ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga03d03ba3b82ada97c557851a909e11f5"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga03d03ba3b82ada97c557851a909e11f5">has_mmx</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga03d03ba3b82ada97c557851a909e11f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the CPU has MMX features.  <a href="group__system.html#ga03d03ba3b82ada97c557851a909e11f5">More...</a><br /></td></tr>
-<tr class="separator:ga03d03ba3b82ada97c557851a909e11f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5408e7f2d63dc976dd49b30fd8df7d84"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga5408e7f2d63dc976dd49b30fd8df7d84">has_3dnow</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga5408e7f2d63dc976dd49b30fd8df7d84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the CPU has 3DNow! features.  <a href="group__system.html#ga5408e7f2d63dc976dd49b30fd8df7d84">More...</a><br /></td></tr>
-<tr class="separator:ga5408e7f2d63dc976dd49b30fd8df7d84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab075ebe133c7e601cc70594010bb4f09"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gab075ebe133c7e601cc70594010bb4f09">has_sse</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:gab075ebe133c7e601cc70594010bb4f09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the CPU has SSE features.  <a href="group__system.html#gab075ebe133c7e601cc70594010bb4f09">More...</a><br /></td></tr>
-<tr class="separator:gab075ebe133c7e601cc70594010bb4f09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga00bd05eba4f27fab87d400406efa5986"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga00bd05eba4f27fab87d400406efa5986">has_sse2</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga00bd05eba4f27fab87d400406efa5986"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the CPU has SSE2 features.  <a href="group__system.html#ga00bd05eba4f27fab87d400406efa5986">More...</a><br /></td></tr>
-<tr class="separator:ga00bd05eba4f27fab87d400406efa5986"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaad2a140cbff644f1e4c5b72bec2fb1a0"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gaad2a140cbff644f1e4c5b72bec2fb1a0">has_sse3</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:gaad2a140cbff644f1e4c5b72bec2fb1a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the CPU has SSE3 features.  <a href="group__system.html#gaad2a140cbff644f1e4c5b72bec2fb1a0">More...</a><br /></td></tr>
-<tr class="separator:gaad2a140cbff644f1e4c5b72bec2fb1a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab955252213848f6dc838cd56de859065"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gab955252213848f6dc838cd56de859065">has_sse41</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:gab955252213848f6dc838cd56de859065"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the CPU has SSE4.1 features.  <a href="group__system.html#gab955252213848f6dc838cd56de859065">More...</a><br /></td></tr>
-<tr class="separator:gab955252213848f6dc838cd56de859065"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga270c145e8208c2637503ee17b4d7f162"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga270c145e8208c2637503ee17b4d7f162">has_sse42</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga270c145e8208c2637503ee17b4d7f162"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the CPU has SSE4.2 features.  <a href="group__system.html#ga270c145e8208c2637503ee17b4d7f162">More...</a><br /></td></tr>
-<tr class="separator:ga270c145e8208c2637503ee17b4d7f162"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2d4ba33c65aefcccbe257ed303dfc5eb"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga2d4ba33c65aefcccbe257ed303dfc5eb">has_avx</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga2d4ba33c65aefcccbe257ed303dfc5eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the CPU has AVX features.  <a href="group__system.html#ga2d4ba33c65aefcccbe257ed303dfc5eb">More...</a><br /></td></tr>
-<tr class="separator:ga2d4ba33c65aefcccbe257ed303dfc5eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0892a4c29f3b0796f0b675661ed42406"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga0892a4c29f3b0796f0b675661ed42406">has_avx2</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga0892a4c29f3b0796f0b675661ed42406"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the CPU has AVX2 features.  <a href="group__system.html#ga0892a4c29f3b0796f0b675661ed42406">More...</a><br /></td></tr>
-<tr class="separator:ga0892a4c29f3b0796f0b675661ed42406"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa6181356061e735b340a0fcff2ea4774"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gaa6181356061e735b340a0fcff2ea4774">has_avx512f</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:gaa6181356061e735b340a0fcff2ea4774"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the CPU has AVX-512F (foundation) features.  <a href="group__system.html#gaa6181356061e735b340a0fcff2ea4774">More...</a><br /></td></tr>
-<tr class="separator:gaa6181356061e735b340a0fcff2ea4774"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4fbc240011c35a5ab44b2640494e1ad8"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga4fbc240011c35a5ab44b2640494e1ad8">has_neon</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga4fbc240011c35a5ab44b2640494e1ad8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the CPU has NEON (ARM SIMD) features.  <a href="group__system.html#ga4fbc240011c35a5ab44b2640494e1ad8">More...</a><br /></td></tr>
-<tr class="separator:ga4fbc240011c35a5ab44b2640494e1ad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7a33af2a3b50d1ab23efbb9281b4b007"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga7a33af2a3b50d1ab23efbb9281b4b007">simd_alignment</a> () noexcept -&gt; std::size_t</td></tr>
-<tr class="memdesc:ga7a33af2a3b50d1ab23efbb9281b4b007"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the minimum number of bytes to which a pointer must be aligned to be compatible with SIMD instructions on the current CPU.  <a href="group__system.html#ga7a33af2a3b50d1ab23efbb9281b4b007">More...</a><br /></td></tr>
-<tr class="separator:ga7a33af2a3b50d1ab23efbb9281b4b007"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gadd391b1edbbe2373b0c66be116257da5"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gadd391b1edbbe2373b0c66be116257da5">is_big_endian</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:gadd391b1edbbe2373b0c66be116257da5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the CPU uses big-endian byte ordering.  <a href="group__system.html#gadd391b1edbbe2373b0c66be116257da5">More...</a><br /></td></tr>
-<tr class="separator:gadd391b1edbbe2373b0c66be116257da5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga66597a0c9ed986e5591ddc558a783727"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga66597a0c9ed986e5591ddc558a783727">is_little_endian</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga66597a0c9ed986e5591ddc558a783727"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the CPU uses little-endian byte ordering.  <a href="group__system.html#ga66597a0c9ed986e5591ddc558a783727">More...</a><br /></td></tr>
-<tr class="separator:ga66597a0c9ed986e5591ddc558a783727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7f4f7b51ba007c59b0f404f8d9b2c40"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1cpu.html#ad7f4f7b51ba007c59b0f404f8d9b2c40">cache_line_size</a> () noexcept -&gt; int</td></tr>
+<tr class="memdesc:ad7f4f7b51ba007c59b0f404f8d9b2c40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the CPU L1 cache line size.  <a href="namespacecen_1_1cpu.html#ad7f4f7b51ba007c59b0f404f8d9b2c40">More...</a><br /></td></tr>
+<tr class="separator:ad7f4f7b51ba007c59b0f404f8d9b2c40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9a7860bf24c9a668750a3322914954c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1cpu.html#ab9a7860bf24c9a668750a3322914954c">cores</a> () noexcept -&gt; int</td></tr>
+<tr class="memdesc:ab9a7860bf24c9a668750a3322914954c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the amount of cores that the CPU has.  <a href="namespacecen_1_1cpu.html#ab9a7860bf24c9a668750a3322914954c">More...</a><br /></td></tr>
+<tr class="separator:ab9a7860bf24c9a668750a3322914954c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab90bcbe4b10fda10f02032e3e351286a"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1cpu.html#ab90bcbe4b10fda10f02032e3e351286a">has_rdtsc</a> () noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ab90bcbe4b10fda10f02032e3e351286a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the CPU has the RDTSC instruction.  <a href="namespacecen_1_1cpu.html#ab90bcbe4b10fda10f02032e3e351286a">More...</a><br /></td></tr>
+<tr class="separator:ab90bcbe4b10fda10f02032e3e351286a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dc10298fd972127a273923ec35944ff"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1cpu.html#a9dc10298fd972127a273923ec35944ff">has_altivec</a> () noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a9dc10298fd972127a273923ec35944ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the CPU has AltiVec features.  <a href="namespacecen_1_1cpu.html#a9dc10298fd972127a273923ec35944ff">More...</a><br /></td></tr>
+<tr class="separator:a9dc10298fd972127a273923ec35944ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03d03ba3b82ada97c557851a909e11f5"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1cpu.html#a03d03ba3b82ada97c557851a909e11f5">has_mmx</a> () noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a03d03ba3b82ada97c557851a909e11f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the CPU has MMX features.  <a href="namespacecen_1_1cpu.html#a03d03ba3b82ada97c557851a909e11f5">More...</a><br /></td></tr>
+<tr class="separator:a03d03ba3b82ada97c557851a909e11f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5408e7f2d63dc976dd49b30fd8df7d84"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1cpu.html#a5408e7f2d63dc976dd49b30fd8df7d84">has_3dnow</a> () noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a5408e7f2d63dc976dd49b30fd8df7d84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the CPU has 3DNow! features.  <a href="namespacecen_1_1cpu.html#a5408e7f2d63dc976dd49b30fd8df7d84">More...</a><br /></td></tr>
+<tr class="separator:a5408e7f2d63dc976dd49b30fd8df7d84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab075ebe133c7e601cc70594010bb4f09"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1cpu.html#ab075ebe133c7e601cc70594010bb4f09">has_sse</a> () noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ab075ebe133c7e601cc70594010bb4f09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the CPU has SSE features.  <a href="namespacecen_1_1cpu.html#ab075ebe133c7e601cc70594010bb4f09">More...</a><br /></td></tr>
+<tr class="separator:ab075ebe133c7e601cc70594010bb4f09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00bd05eba4f27fab87d400406efa5986"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1cpu.html#a00bd05eba4f27fab87d400406efa5986">has_sse2</a> () noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a00bd05eba4f27fab87d400406efa5986"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the CPU has SSE2 features.  <a href="namespacecen_1_1cpu.html#a00bd05eba4f27fab87d400406efa5986">More...</a><br /></td></tr>
+<tr class="separator:a00bd05eba4f27fab87d400406efa5986"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad2a140cbff644f1e4c5b72bec2fb1a0"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1cpu.html#aad2a140cbff644f1e4c5b72bec2fb1a0">has_sse3</a> () noexcept -&gt; bool</td></tr>
+<tr class="memdesc:aad2a140cbff644f1e4c5b72bec2fb1a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the CPU has SSE3 features.  <a href="namespacecen_1_1cpu.html#aad2a140cbff644f1e4c5b72bec2fb1a0">More...</a><br /></td></tr>
+<tr class="separator:aad2a140cbff644f1e4c5b72bec2fb1a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab955252213848f6dc838cd56de859065"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1cpu.html#ab955252213848f6dc838cd56de859065">has_sse41</a> () noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ab955252213848f6dc838cd56de859065"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the CPU has SSE4.1 features.  <a href="namespacecen_1_1cpu.html#ab955252213848f6dc838cd56de859065">More...</a><br /></td></tr>
+<tr class="separator:ab955252213848f6dc838cd56de859065"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a270c145e8208c2637503ee17b4d7f162"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1cpu.html#a270c145e8208c2637503ee17b4d7f162">has_sse42</a> () noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a270c145e8208c2637503ee17b4d7f162"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the CPU has SSE4.2 features.  <a href="namespacecen_1_1cpu.html#a270c145e8208c2637503ee17b4d7f162">More...</a><br /></td></tr>
+<tr class="separator:a270c145e8208c2637503ee17b4d7f162"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d4ba33c65aefcccbe257ed303dfc5eb"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1cpu.html#a2d4ba33c65aefcccbe257ed303dfc5eb">has_avx</a> () noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a2d4ba33c65aefcccbe257ed303dfc5eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the CPU has AVX features.  <a href="namespacecen_1_1cpu.html#a2d4ba33c65aefcccbe257ed303dfc5eb">More...</a><br /></td></tr>
+<tr class="separator:a2d4ba33c65aefcccbe257ed303dfc5eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0892a4c29f3b0796f0b675661ed42406"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1cpu.html#a0892a4c29f3b0796f0b675661ed42406">has_avx2</a> () noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a0892a4c29f3b0796f0b675661ed42406"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the CPU has AVX2 features.  <a href="namespacecen_1_1cpu.html#a0892a4c29f3b0796f0b675661ed42406">More...</a><br /></td></tr>
+<tr class="separator:a0892a4c29f3b0796f0b675661ed42406"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6181356061e735b340a0fcff2ea4774"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1cpu.html#aa6181356061e735b340a0fcff2ea4774">has_avx512f</a> () noexcept -&gt; bool</td></tr>
+<tr class="memdesc:aa6181356061e735b340a0fcff2ea4774"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the CPU has AVX-512F (foundation) features.  <a href="namespacecen_1_1cpu.html#aa6181356061e735b340a0fcff2ea4774">More...</a><br /></td></tr>
+<tr class="separator:aa6181356061e735b340a0fcff2ea4774"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fbc240011c35a5ab44b2640494e1ad8"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1cpu.html#a4fbc240011c35a5ab44b2640494e1ad8">has_neon</a> () noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a4fbc240011c35a5ab44b2640494e1ad8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the CPU has NEON (ARM SIMD) features.  <a href="namespacecen_1_1cpu.html#a4fbc240011c35a5ab44b2640494e1ad8">More...</a><br /></td></tr>
+<tr class="separator:a4fbc240011c35a5ab44b2640494e1ad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7f87188bd9f3ecad3d4da62db6a6a4c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1cpu.html#ac7f87188bd9f3ecad3d4da62db6a6a4c">has_arm_simd</a> () noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ac7f87188bd9f3ecad3d4da62db6a6a4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the CPU has ARM SIMD (ARMv6+) features.  <a href="namespacecen_1_1cpu.html#ac7f87188bd9f3ecad3d4da62db6a6a4c">More...</a><br /></td></tr>
+<tr class="separator:ac7f87188bd9f3ecad3d4da62db6a6a4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a33af2a3b50d1ab23efbb9281b4b007"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1cpu.html#a7a33af2a3b50d1ab23efbb9281b4b007">simd_alignment</a> () noexcept -&gt; std::size_t</td></tr>
+<tr class="memdesc:a7a33af2a3b50d1ab23efbb9281b4b007"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the minimum number of bytes to which a pointer must be aligned to be compatible with SIMD instructions on the current CPU.  <a href="namespacecen_1_1cpu.html#a7a33af2a3b50d1ab23efbb9281b4b007">More...</a><br /></td></tr>
+<tr class="separator:a7a33af2a3b50d1ab23efbb9281b4b007"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add391b1edbbe2373b0c66be116257da5"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1cpu.html#add391b1edbbe2373b0c66be116257da5">is_big_endian</a> () noexcept -&gt; bool</td></tr>
+<tr class="memdesc:add391b1edbbe2373b0c66be116257da5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the CPU uses big-endian byte ordering.  <a href="namespacecen_1_1cpu.html#add391b1edbbe2373b0c66be116257da5">More...</a><br /></td></tr>
+<tr class="separator:add391b1edbbe2373b0c66be116257da5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66597a0c9ed986e5591ddc558a783727"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1cpu.html#a66597a0c9ed986e5591ddc558a783727">is_little_endian</a> () noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a66597a0c9ed986e5591ddc558a783727"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the CPU uses little-endian byte ordering.  <a href="namespacecen_1_1cpu.html#a66597a0c9ed986e5591ddc558a783727">More...</a><br /></td></tr>
+<tr class="separator:a66597a0c9ed986e5591ddc558a783727"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Provides methods for obtaining information about the processor. </p>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="ad7f4f7b51ba007c59b0f404f8d9b2c40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7f4f7b51ba007c59b0f404f8d9b2c40">&#9670;&nbsp;</a></span>cache_line_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::cpu::cache_line_size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; int
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the CPU L1 cache line size. </p>
+<dl class="section return"><dt>Returns</dt><dd>the L1 cache line size, in bytes.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ab9a7860bf24c9a668750a3322914954c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9a7860bf24c9a668750a3322914954c">&#9670;&nbsp;</a></span>cores()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::cpu::cores </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; int
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the amount of cores that the CPU has. </p>
+<dl class="section return"><dt>Returns</dt><dd>the amount of cores.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a5408e7f2d63dc976dd49b30fd8df7d84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5408e7f2d63dc976dd49b30fd8df7d84">&#9670;&nbsp;</a></span>has_3dnow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::cpu::has_3dnow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the CPU has 3DNow! features. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the CPU has 3DNow! features; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a9dc10298fd972127a273923ec35944ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dc10298fd972127a273923ec35944ff">&#9670;&nbsp;</a></span>has_altivec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::cpu::has_altivec </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the CPU has AltiVec features. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the CPU has AltiVec features; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ac7f87188bd9f3ecad3d4da62db6a6a4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7f87188bd9f3ecad3d4da62db6a6a4c">&#9670;&nbsp;</a></span>has_arm_simd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::cpu::has_arm_simd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the CPU has ARM SIMD (ARMv6+) features. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the CPU has ARM SIMD (ARMv6+) features; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a2d4ba33c65aefcccbe257ed303dfc5eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d4ba33c65aefcccbe257ed303dfc5eb">&#9670;&nbsp;</a></span>has_avx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::cpu::has_avx </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the CPU has AVX features. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the CPU has AVX features; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a0892a4c29f3b0796f0b675661ed42406"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0892a4c29f3b0796f0b675661ed42406">&#9670;&nbsp;</a></span>has_avx2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::cpu::has_avx2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the CPU has AVX2 features. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the CPU has AVX2 features; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="aa6181356061e735b340a0fcff2ea4774"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6181356061e735b340a0fcff2ea4774">&#9670;&nbsp;</a></span>has_avx512f()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::cpu::has_avx512f </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the CPU has AVX-512F (foundation) features. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the CPU has AVX-512F (foundation) features; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a03d03ba3b82ada97c557851a909e11f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03d03ba3b82ada97c557851a909e11f5">&#9670;&nbsp;</a></span>has_mmx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::cpu::has_mmx </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the CPU has MMX features. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the CPU has MMX features; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a4fbc240011c35a5ab44b2640494e1ad8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fbc240011c35a5ab44b2640494e1ad8">&#9670;&nbsp;</a></span>has_neon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::cpu::has_neon </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the CPU has NEON (ARM SIMD) features. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the CPU has NEON (ARM SIMD) features; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ab90bcbe4b10fda10f02032e3e351286a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab90bcbe4b10fda10f02032e3e351286a">&#9670;&nbsp;</a></span>has_rdtsc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::cpu::has_rdtsc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the CPU has the RDTSC instruction. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the CPU has the RDTSC instruction; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ab075ebe133c7e601cc70594010bb4f09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab075ebe133c7e601cc70594010bb4f09">&#9670;&nbsp;</a></span>has_sse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::cpu::has_sse </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the CPU has SSE features. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the CPU has SSE features; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a00bd05eba4f27fab87d400406efa5986"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00bd05eba4f27fab87d400406efa5986">&#9670;&nbsp;</a></span>has_sse2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::cpu::has_sse2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the CPU has SSE2 features. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the CPU has SSE2 features; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="aad2a140cbff644f1e4c5b72bec2fb1a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad2a140cbff644f1e4c5b72bec2fb1a0">&#9670;&nbsp;</a></span>has_sse3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::cpu::has_sse3 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the CPU has SSE3 features. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the CPU has SSE3 features; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ab955252213848f6dc838cd56de859065"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab955252213848f6dc838cd56de859065">&#9670;&nbsp;</a></span>has_sse41()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::cpu::has_sse41 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the CPU has SSE4.1 features. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the CPU has SSE4.1 features; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a270c145e8208c2637503ee17b4d7f162"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a270c145e8208c2637503ee17b4d7f162">&#9670;&nbsp;</a></span>has_sse42()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::cpu::has_sse42 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the CPU has SSE4.2 features. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the CPU has SSE4.2 features; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="add391b1edbbe2373b0c66be116257da5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add391b1edbbe2373b0c66be116257da5">&#9670;&nbsp;</a></span>is_big_endian()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::cpu::is_big_endian </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the CPU uses big-endian byte ordering. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the CPU uses big-endian byte ordering; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.1.0 </dd></dl>
+
+</div>
+</div>
+<a id="a66597a0c9ed986e5591ddc558a783727"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66597a0c9ed986e5591ddc558a783727">&#9670;&nbsp;</a></span>is_little_endian()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::cpu::is_little_endian </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the CPU uses little-endian byte ordering. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the CPU uses little-endian byte ordering; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.1.0 </dd></dl>
+
+</div>
+</div>
+<a id="a7a33af2a3b50d1ab23efbb9281b4b007"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a33af2a3b50d1ab23efbb9281b4b007">&#9670;&nbsp;</a></span>simd_alignment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::cpu::simd_alignment </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; std::size_t
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the minimum number of bytes to which a pointer must be aligned to be compatible with SIMD instructions on the current CPU. </p>
+<dl class="section return"><dt>Returns</dt><dd>the minimum number of bytes to which a pointer must be aligned to be compatible with SIMD instructions.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
 </div>

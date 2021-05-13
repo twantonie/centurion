@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/font.hpp File Reference</title>
+        <title>Centurion: src/centurion/video/font.hpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,13 +85,14 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_b630b0fc10333b78f2ff60d8d1210ae7.html">video</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">font.hpp File Reference</div>  </div>
@@ -103,13 +104,13 @@ $(function() {
 <code>#include &lt;optional&gt;</code><br />
 <code>#include &lt;ostream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
-<code>#include &quot;<a class="el" href="area_8hpp_source.html">area.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="centurion__cfg_8hpp_source.html">centurion_cfg.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="czstring_8hpp_source.html">czstring.hpp</a>&quot;</code><br />
-<code>#include &quot;detail/address_of.hpp&quot;</code><br />
-<code>#include &quot;detail/to_string.hpp&quot;</code><br />
-<code>#include &quot;<a class="el" href="exception_8hpp_source.html">exception.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="not__null_8hpp_source.html">not_null.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="czstring_8hpp_source.html">../core/czstring.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="exception_8hpp_source.html">../core/exception.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="not__null_8hpp_source.html">../core/not_null.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="to__underlying_8hpp_source.html">../core/to_underlying.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="address__of_8hpp_source.html">../detail/address_of.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="to__string_8hpp_source.html">../detail/to_string.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="area_8hpp_source.html">../math/area.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="unicode__string_8hpp_source.html">unicode_string.hpp</a>&quot;</code><br />
 </div>
 <p><a href="font_8hpp_source.html">Go to the source code of this file.</a></p>
@@ -120,7 +121,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides metrics about a glyph in a font.  <a href="structcen_1_1glyph__metrics.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html">cen::font</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a True Type font.  <a href="classcen_1_1font.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a TrueType font.  <a href="classcen_1_1font.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -129,13 +130,28 @@ Namespaces</h2></td></tr>
 <tr class="memdesc:namespacecen"><td class="mdescLeft">&#160;</td><td class="mdescRight">The top-level namespace that all components of the library reside in. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:gabacebf68fce34449f67d1016a835796a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#gabacebf68fce34449f67d1016a835796a">cen::font_hint</a> : int { <br />
+&#160;&#160;<a class="el" href="group__video.html#ggabacebf68fce34449f67d1016a835796aafea087517c26fadd409bd4b9dc642555">cen::font_hint::normal</a> = TTF_HINTING_NORMAL, 
+<br />
+&#160;&#160;<a class="el" href="group__video.html#ggabacebf68fce34449f67d1016a835796aa2ac43aa43bf473f9a9c09b4b608619d3">cen::font_hint::light</a> = TTF_HINTING_LIGHT, 
+<br />
+&#160;&#160;<a class="el" href="group__video.html#ggabacebf68fce34449f67d1016a835796aa654db8a14a5f633b9ba85ec92dc51f7c">cen::font_hint::mono</a> = TTF_HINTING_MONO, 
+<br />
+&#160;&#160;<a class="el" href="group__video.html#ggabacebf68fce34449f67d1016a835796aa334c4a4c42fdb79d7ebc3e73b517e6f8">cen::font_hint::none</a> = TTF_HINTING_NONE
+<br />
+ }</td></tr>
+<tr class="memdesc:gabacebf68fce34449f67d1016a835796a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides different possible TrueType font hint values.  <a href="group__video.html#gabacebf68fce34449f67d1016a835796a">More...</a><br /></td></tr>
+<tr class="separator:gabacebf68fce34449f67d1016a835796a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga0e4b2672f349c41de750b0641259483b"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#ga0e4b2672f349c41de750b0641259483b">cen::to_string</a> (const font &amp;font) -&gt; std::string</td></tr>
-<tr class="memdesc:ga0e4b2672f349c41de750b0641259483b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a textual representation of a font instance.  <a href="group__graphics.html#ga0e4b2672f349c41de750b0641259483b">More...</a><br /></td></tr>
+<tr class="memitem:ga0e4b2672f349c41de750b0641259483b"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga0e4b2672f349c41de750b0641259483b">cen::to_string</a> (const font &amp;font) -&gt; std::string</td></tr>
+<tr class="memdesc:ga0e4b2672f349c41de750b0641259483b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a textual representation of a font instance.  <a href="group__video.html#ga0e4b2672f349c41de750b0641259483b">More...</a><br /></td></tr>
 <tr class="separator:ga0e4b2672f349c41de750b0641259483b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacca68161ee8917d1276a64aac6a4c398"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#gacca68161ee8917d1276a64aac6a4c398">cen::operator&lt;&lt;</a> (std::ostream &amp;stream, const font &amp;font) -&gt; std::ostream &amp;</td></tr>
-<tr class="memdesc:gacca68161ee8917d1276a64aac6a4c398"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a textual representation of a font.  <a href="group__graphics.html#gacca68161ee8917d1276a64aac6a4c398">More...</a><br /></td></tr>
+<tr class="memitem:gacca68161ee8917d1276a64aac6a4c398"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#gacca68161ee8917d1276a64aac6a4c398">cen::operator&lt;&lt;</a> (std::ostream &amp;stream, const font &amp;font) -&gt; std::ostream &amp;</td></tr>
+<tr class="memdesc:gacca68161ee8917d1276a64aac6a4c398"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a textual representation of a font.  <a href="group__video.html#gacca68161ee8917d1276a64aac6a4c398">More...</a><br /></td></tr>
 <tr class="separator:gacca68161ee8917d1276a64aac6a4c398"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -99,11 +99,11 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1common__event.html">cen::common_event&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The templated base class of all Centurion events.  <a href="classcen_1_1common__event.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1audio__device__event.html">cen::audio_device_event</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an event that is associated with some sort of audio device, either capture of output.  <a href="classcen_1_1audio__device__event.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1common__event.html">cen::common_event&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The templated base class of all Centurion events.  <a href="classcen_1_1common__event.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1controller__axis__event.html">cen::controller_axis_event</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an event triggered by game controller axis motion.  <a href="classcen_1_1controller__axis__event.html#details">More...</a><br /></td></tr>
@@ -119,6 +119,15 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1drop__event.html">cen::drop_event</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the event of requesting a file to be opened.  <a href="classcen_1_1drop__event.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1event.html">cen::event</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serves as the main interface for dealing with events.  <a href="classcen_1_1event.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1event__sink.html">cen::event_sink&lt; E &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manages a subscription to an event.  <a href="classcen_1_1event__sink.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1event__dispatcher.html">cen::event_dispatcher&lt; E &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An event dispatcher wrapper around a <code><a class="el" href="classcen_1_1event.html" title="Serves as the main interface for dealing with events.">cen::event</a></code> instance.  <a href="classcen_1_1event__dispatcher.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1joy__axis__event.html">cen::joy_axis_event</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an event that occurs whenever a user moves an axis on a joystick.  <a href="classcen_1_1joy__axis__event.html#details">More...</a><br /></td></tr>
@@ -165,47 +174,138 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1window__event.html">cen::window_event</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an event that is associated with an action related to a window.  <a href="classcen_1_1window__event.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1event.html">cen::event</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serves as the main interface for dealing with events.  <a href="classcen_1_1event.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1event__sink.html">cen::event_sink&lt; E &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manages a subscription to an event.  <a href="classcen_1_1event__sink.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1event__dispatcher.html">cen::event_dispatcher&lt; E &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An event dispatcher wrapper around a <code><a class="el" href="classcen_1_1event.html" title="Serves as the main interface for dealing with events.">cen::event</a></code> instance.  <a href="classcen_1_1event__dispatcher.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:ga92aa23a9d098fb77e8149e66a4c032b7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__event.html#ga92aa23a9d098fb77e8149e66a4c032b7">cen::joy_hat_position</a> { <br />
-&#160;&#160;<a class="el" href="group__event.html#gga92aa23a9d098fb77e8149e66a4c032b7a7bee01317f52e2c54856e73909d487f2">cen::joy_hat_position::left_up</a> = SDL_HAT_LEFTUP, 
+<tr class="memitem:gaa96233ec6356fc786c810d6aaf5e939b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__event.html#gaa96233ec6356fc786c810d6aaf5e939b">cen::event_type</a> : u32 { <br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939badbd73c2b545209688ed794c0d5413d5a">cen::event_type::quit</a> = SDL_QUIT, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#gga92aa23a9d098fb77e8149e66a4c032b7a811882fecd5c7618d7099ebbd39ea254">cen::joy_hat_position::left</a> = SDL_HAT_LEFT, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba594a951506371c6c4b5c6714fde56210">cen::event_type::app_terminating</a> = SDL_APP_TERMINATING, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#gga92aa23a9d098fb77e8149e66a4c032b7a7e960b9ae88fd5fb46be255328deb430">cen::joy_hat_position::left_down</a> = SDL_HAT_LEFTDOWN, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba424176dd81e2ab7097f6c71b325aa2f7">cen::event_type::app_low_memory</a> = SDL_APP_LOWMEMORY, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#gga92aa23a9d098fb77e8149e66a4c032b7a46c48bec0d282018b9d167eef7711b2c">cen::joy_hat_position::up</a> = SDL_HAT_UP, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939bad78a45502c925119ffd217e539b93d75">cen::event_type::app_will_enter_background</a> = SDL_APP_WILLENTERBACKGROUND, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#gga92aa23a9d098fb77e8149e66a4c032b7a15c012757aea2b45f1ea7550869cea02">cen::joy_hat_position::centered</a> = SDL_HAT_CENTERED, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba37fc114d1d7e7ca54140b0f543a9380c">cen::event_type::app_did_enter_background</a> = SDL_APP_DIDENTERBACKGROUND, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#gga92aa23a9d098fb77e8149e66a4c032b7a74e8333ad11685ff3bdae589c8f6e34d">cen::joy_hat_position::down</a> = SDL_HAT_DOWN, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba4fb8cea91e58a3c3d8e584a6e8c5fffb">cen::event_type::app_did_enter_foreground</a> = SDL_APP_DIDENTERFOREGROUND, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#gga92aa23a9d098fb77e8149e66a4c032b7a09bfc976eaed05de8a55b9f798d3299c">cen::joy_hat_position::right_up</a> = SDL_HAT_RIGHTUP, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939baebf78b512222fe4dcd14e7d5060a15b0">cen::event_type::display</a> = SDL_DISPLAYEVENT, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#gga92aa23a9d098fb77e8149e66a4c032b7a7c4f29407893c334a6cb7a87bf045c0d">cen::joy_hat_position::right</a> = SDL_HAT_RIGHT, 
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba05b8c74cbd96fbf2de4c1a352702fbf4">cen::event_type::window</a> = SDL_WINDOWEVENT, 
 <br />
-&#160;&#160;<a class="el" href="group__event.html#gga92aa23a9d098fb77e8149e66a4c032b7a13e9aba075fa84cd48dad4426de5d705">cen::joy_hat_position::right_down</a> = SDL_HAT_RIGHTDOWN
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba54b53072540eeeb8f8e9343e71f28176">cen::event_type::system</a> = SDL_SYSWMEVENT, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba88aee4617a01e1e5da7f11f3b5fb7ac0">cen::event_type::key_down</a> = SDL_KEYDOWN, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba2d19def4e5861d6d2e62450fcc84cb97">cen::event_type::key_up</a> = SDL_KEYUP, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939bab0f31b1e427c96840a50a543c3e37af9">cen::event_type::text_editing</a> = SDL_TEXTEDITING, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939bae1ba83437c55caa1b29b1d3228f2591a">cen::event_type::text_input</a> = SDL_TEXTINPUT, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba587c13d591880465ffc356f94463852c">cen::event_type::keymap_changed</a> = SDL_KEYMAPCHANGED, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba903f7a99c62619729849164b06f649e5">cen::event_type::mouse_motion</a> = SDL_MOUSEMOTION, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba3d1967c26f79d9e652ecded5f4a4a4e9">cen::event_type::mouse_button_down</a> = SDL_MOUSEBUTTONDOWN, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba054816ad6699e4aa626272b9c12cb75e">cen::event_type::mouse_button_up</a> = SDL_MOUSEBUTTONUP, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba8405b4133b61983c995a62136337b4ec">cen::event_type::mouse_wheel</a> = SDL_MOUSEWHEEL, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba32d6ecc4ef026e6308210718441a3fc9">cen::event_type::joystick_axis_motion</a> = SDL_JOYAXISMOTION, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba17269873a20a99f4663243a615ef50e8">cen::event_type::joystick_ball_motion</a> = SDL_JOYBALLMOTION, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939baf2c25380e3e12793c5729249146a18b6">cen::event_type::joystick_hat_motion</a> = SDL_JOYHATMOTION, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba40c3f0d12ff6af33fc1757998212ed86">cen::event_type::joystick_button_down</a> = SDL_JOYBUTTONDOWN, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939bacb08d5d164250984595194e54d5d6719">cen::event_type::joystick_button_up</a> = SDL_JOYBUTTONUP, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba2db9343c8b2623c435315e596a24866e">cen::event_type::joystick_device_added</a> = SDL_JOYDEVICEADDED, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939bac6b6fc87c82334a194bc911f1f5f09e6">cen::event_type::joystick_device_removed</a> = SDL_JOYDEVICEREMOVED, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba1aafb53ad025d38ab2adfdf81c127065">cen::event_type::controller_axis_motion</a> = SDL_CONTROLLERAXISMOTION, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba118ace45fad8d04e924ccaf0abf132e2">cen::event_type::controller_button_down</a> = SDL_CONTROLLERBUTTONDOWN, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939baf963da24bb9aabd00b0fdf8d1262b267">cen::event_type::controller_button_up</a> = SDL_CONTROLLERBUTTONUP, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939bacc50f109dd585ce50d7a4040fb52c468">cen::event_type::controller_device_added</a> = SDL_CONTROLLERDEVICEADDED, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba9a13ae35bfe2cfe12ada4119bc4964a7">cen::event_type::controller_device_removed</a> = SDL_CONTROLLERDEVICEREMOVED, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939bac0285b503aea149987b2a28ae7af96ca">cen::event_type::controller_device_remapped</a> = SDL_CONTROLLERDEVICEREMAPPED, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba36acdbf9714963b10ba93cfc39791787">cen::event_type::touch_down</a> = SDL_FINGERDOWN, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba703aaa492c24c09fc36119dbf99d3cfd">cen::event_type::touch_up</a> = SDL_FINGERUP, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939bae4b1aba507135dba49c194e27bb258d8">cen::event_type::touch_motion</a> = SDL_FINGERMOTION, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba9d8c8709900c57ce9699a28c6ed9d674">cen::event_type::dollar_gesture</a> = SDL_DOLLARGESTURE, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba1f2ef26f9f79c5c10d67122245bdc346">cen::event_type::dollar_record</a> = SDL_DOLLARRECORD, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba3e84b5a634062d5e9a02a0bcd59837dd">cen::event_type::multi_gesture</a> = SDL_MULTIGESTURE, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba53619367dcd7a4f802c8e02cdb73c124">cen::event_type::clipboard_update</a> = SDL_CLIPBOARDUPDATE, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba15e418ea049939b287455391ad76be31">cen::event_type::drop_file</a> = SDL_DROPFILE, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba27dd818ec803f32b7917fb77be780c0c">cen::event_type::drop_text</a> = SDL_DROPTEXT, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba6d9544fc7e5433f0d04d58d15b0c25e1">cen::event_type::drop_begin</a> = SDL_DROPBEGIN, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba58603ae401ec2339fc500e58c0618d6b">cen::event_type::drop_complete</a> = SDL_DROPCOMPLETE, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba1849894c975bbbb8093f95207d703f13">cen::event_type::audio_device_added</a> = SDL_AUDIODEVICEADDED, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939bacb952a764ade94f5bb614c88a04557f5">cen::event_type::audio_device_removed</a> = SDL_AUDIODEVICEREMOVED, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba3647f10e65fea4ec3bdb7a9e3183ca7a">cen::event_type::sensor_update</a> = SDL_SENSORUPDATE, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba773fc3926c4d7427202274e4a5176558">cen::event_type::render_targets_reset</a> = SDL_RENDER_TARGETS_RESET, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba322405e926da977d24724a14e6ce3261">cen::event_type::render_device_reset</a> = SDL_RENDER_DEVICE_RESET, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939baee11cbb19052e40b07aac0ca060c23ee">cen::event_type::user</a> = SDL_USEREVENT
 <br />
  }</td></tr>
-<tr class="memdesc:ga92aa23a9d098fb77e8149e66a4c032b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serves as a wrapper for the <code>SDL_HAT_x</code> macro values.  <a href="group__event.html#ga92aa23a9d098fb77e8149e66a4c032b7">More...</a><br /></td></tr>
-<tr class="separator:ga92aa23a9d098fb77e8149e66a4c032b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:gaa96233ec6356fc786c810d6aaf5e939b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the different event types.  <a href="group__event.html#gaa96233ec6356fc786c810d6aaf5e939b">More...</a><br /></td></tr>
+<tr class="separator:gaa96233ec6356fc786c810d6aaf5e939b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3014c4847759c6eacbc0f75a90e5caa1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__event.html#ga3014c4847759c6eacbc0f75a90e5caa1">cen::joy_hat_position</a> : u8 { <br />
+&#160;&#160;<a class="el" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a7bee01317f52e2c54856e73909d487f2">cen::joy_hat_position::left_up</a> = SDL_HAT_LEFTUP, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a811882fecd5c7618d7099ebbd39ea254">cen::joy_hat_position::left</a> = SDL_HAT_LEFT, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a7e960b9ae88fd5fb46be255328deb430">cen::joy_hat_position::left_down</a> = SDL_HAT_LEFTDOWN, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a46c48bec0d282018b9d167eef7711b2c">cen::joy_hat_position::up</a> = SDL_HAT_UP, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a15c012757aea2b45f1ea7550869cea02">cen::joy_hat_position::centered</a> = SDL_HAT_CENTERED, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a74e8333ad11685ff3bdae589c8f6e34d">cen::joy_hat_position::down</a> = SDL_HAT_DOWN, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a09bfc976eaed05de8a55b9f798d3299c">cen::joy_hat_position::right_up</a> = SDL_HAT_RIGHTUP, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a7c4f29407893c334a6cb7a87bf045c0d">cen::joy_hat_position::right</a> = SDL_HAT_RIGHT, 
+<br />
+&#160;&#160;<a class="el" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a13e9aba075fa84cd48dad4426de5d705">cen::joy_hat_position::right_down</a> = SDL_HAT_RIGHTDOWN
+<br />
+ }</td></tr>
+<tr class="memdesc:ga3014c4847759c6eacbc0f75a90e5caa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serves as a wrapper for the <code>SDL_HAT_x</code> macro values.  <a href="group__event.html#ga3014c4847759c6eacbc0f75a90e5caa1">More...</a><br /></td></tr>
+<tr class="separator:ga3014c4847759c6eacbc0f75a90e5caa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga909df89e0a6c9576daeed396c314641e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__event.html#ga909df89e0a6c9576daeed396c314641e">cen::mouse_wheel_direction</a> { <br />
 &#160;&#160;<a class="el" href="group__event.html#gga909df89e0a6c9576daeed396c314641eafea087517c26fadd409bd4b9dc642555">cen::mouse_wheel_direction::normal</a> = SDL_MOUSEWHEEL_NORMAL, 
 <br />
 &#160;&#160;<a class="el" href="group__event.html#gga909df89e0a6c9576daeed396c314641ea5bef9da31993fe26a832c7d4b9630147">cen::mouse_wheel_direction::flipped</a> = SDL_MOUSEWHEEL_FLIPPED
 <br />
  }</td></tr>
-<tr class="memdesc:ga909df89e0a6c9576daeed396c314641e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mirrors the the <code>SDL_MouseWheelDirection</code> enum.  <a href="group__event.html#ga909df89e0a6c9576daeed396c314641e">More...</a><br /></td></tr>
+<tr class="memdesc:ga909df89e0a6c9576daeed396c314641e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents mouse wheel directions.  <a href="group__event.html#ga909df89e0a6c9576daeed396c314641e">More...</a><br /></td></tr>
 <tr class="separator:ga909df89e0a6c9576daeed396c314641e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga117be29d4e5afcc206640c1a2ee69f29"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__event.html#ga117be29d4e5afcc206640c1a2ee69f29">cen::window_event_id</a> { <br />
 &#160;&#160;<a class="el" href="group__event.html#gga117be29d4e5afcc206640c1a2ee69f29a334c4a4c42fdb79d7ebc3e73b517e6f8">cen::window_event_id::none</a> = SDL_WINDOWEVENT_NONE, 
@@ -243,117 +343,17 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="group__event.html#gga117be29d4e5afcc206640c1a2ee69f29af00bdf46003daf0f3b001610c2340851">cen::window_event_id::hit_test</a> = SDL_WINDOWEVENT_HIT_TEST
 <br />
  }</td></tr>
-<tr class="memdesc:ga117be29d4e5afcc206640c1a2ee69f29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mirrors the <code>SDL_WindowEventID</code> enum.  <a href="group__event.html#ga117be29d4e5afcc206640c1a2ee69f29">More...</a><br /></td></tr>
+<tr class="memdesc:ga117be29d4e5afcc206640c1a2ee69f29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents different flavours of window events.  <a href="group__event.html#ga117be29d4e5afcc206640c1a2ee69f29">More...</a><br /></td></tr>
 <tr class="separator:ga117be29d4e5afcc206640c1a2ee69f29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa2429849e0f3a3f8dc5dabd278b110b2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__event.html#gaa2429849e0f3a3f8dc5dabd278b110b2">cen::event_type</a> { <br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2adbd73c2b545209688ed794c0d5413d5a">cen::event_type::quit</a> = SDL_QUIT, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a594a951506371c6c4b5c6714fde56210">cen::event_type::app_terminating</a> = SDL_APP_TERMINATING, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a424176dd81e2ab7097f6c71b325aa2f7">cen::event_type::app_low_memory</a> = SDL_APP_LOWMEMORY, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2ad78a45502c925119ffd217e539b93d75">cen::event_type::app_will_enter_background</a> = SDL_APP_WILLENTERBACKGROUND, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a37fc114d1d7e7ca54140b0f543a9380c">cen::event_type::app_did_enter_background</a> = SDL_APP_DIDENTERBACKGROUND, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a4fb8cea91e58a3c3d8e584a6e8c5fffb">cen::event_type::app_did_enter_foreground</a> = SDL_APP_DIDENTERFOREGROUND, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2aebf78b512222fe4dcd14e7d5060a15b0">cen::event_type::display</a> = SDL_DISPLAYEVENT, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a05b8c74cbd96fbf2de4c1a352702fbf4">cen::event_type::window</a> = SDL_WINDOWEVENT, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a54b53072540eeeb8f8e9343e71f28176">cen::event_type::system</a> = SDL_SYSWMEVENT, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a88aee4617a01e1e5da7f11f3b5fb7ac0">cen::event_type::key_down</a> = SDL_KEYDOWN, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a2d19def4e5861d6d2e62450fcc84cb97">cen::event_type::key_up</a> = SDL_KEYUP, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2ab0f31b1e427c96840a50a543c3e37af9">cen::event_type::text_editing</a> = SDL_TEXTEDITING, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2ae1ba83437c55caa1b29b1d3228f2591a">cen::event_type::text_input</a> = SDL_TEXTINPUT, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a587c13d591880465ffc356f94463852c">cen::event_type::keymap_changed</a> = SDL_KEYMAPCHANGED, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a903f7a99c62619729849164b06f649e5">cen::event_type::mouse_motion</a> = SDL_MOUSEMOTION, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a3d1967c26f79d9e652ecded5f4a4a4e9">cen::event_type::mouse_button_down</a> = SDL_MOUSEBUTTONDOWN, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a054816ad6699e4aa626272b9c12cb75e">cen::event_type::mouse_button_up</a> = SDL_MOUSEBUTTONUP, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a8405b4133b61983c995a62136337b4ec">cen::event_type::mouse_wheel</a> = SDL_MOUSEWHEEL, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a32d6ecc4ef026e6308210718441a3fc9">cen::event_type::joystick_axis_motion</a> = SDL_JOYAXISMOTION, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a17269873a20a99f4663243a615ef50e8">cen::event_type::joystick_ball_motion</a> = SDL_JOYBALLMOTION, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2af2c25380e3e12793c5729249146a18b6">cen::event_type::joystick_hat_motion</a> = SDL_JOYHATMOTION, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a40c3f0d12ff6af33fc1757998212ed86">cen::event_type::joystick_button_down</a> = SDL_JOYBUTTONDOWN, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2acb08d5d164250984595194e54d5d6719">cen::event_type::joystick_button_up</a> = SDL_JOYBUTTONUP, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a2db9343c8b2623c435315e596a24866e">cen::event_type::joystick_device_added</a> = SDL_JOYDEVICEADDED, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2ac6b6fc87c82334a194bc911f1f5f09e6">cen::event_type::joystick_device_removed</a> = SDL_JOYDEVICEREMOVED, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a1aafb53ad025d38ab2adfdf81c127065">cen::event_type::controller_axis_motion</a> = SDL_CONTROLLERAXISMOTION, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a118ace45fad8d04e924ccaf0abf132e2">cen::event_type::controller_button_down</a> = SDL_CONTROLLERBUTTONDOWN, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2af963da24bb9aabd00b0fdf8d1262b267">cen::event_type::controller_button_up</a> = SDL_CONTROLLERBUTTONUP, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2acc50f109dd585ce50d7a4040fb52c468">cen::event_type::controller_device_added</a> = SDL_CONTROLLERDEVICEADDED, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a9a13ae35bfe2cfe12ada4119bc4964a7">cen::event_type::controller_device_removed</a> = SDL_CONTROLLERDEVICEREMOVED, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2ac0285b503aea149987b2a28ae7af96ca">cen::event_type::controller_device_remapped</a> = SDL_CONTROLLERDEVICEREMAPPED, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a36acdbf9714963b10ba93cfc39791787">cen::event_type::touch_down</a> = SDL_FINGERDOWN, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a703aaa492c24c09fc36119dbf99d3cfd">cen::event_type::touch_up</a> = SDL_FINGERUP, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2ae4b1aba507135dba49c194e27bb258d8">cen::event_type::touch_motion</a> = SDL_FINGERMOTION, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a9d8c8709900c57ce9699a28c6ed9d674">cen::event_type::dollar_gesture</a> = SDL_DOLLARGESTURE, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a1f2ef26f9f79c5c10d67122245bdc346">cen::event_type::dollar_record</a> = SDL_DOLLARRECORD, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a3e84b5a634062d5e9a02a0bcd59837dd">cen::event_type::multi_gesture</a> = SDL_MULTIGESTURE, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a53619367dcd7a4f802c8e02cdb73c124">cen::event_type::clipboard_update</a> = SDL_CLIPBOARDUPDATE, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a15e418ea049939b287455391ad76be31">cen::event_type::drop_file</a> = SDL_DROPFILE, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a27dd818ec803f32b7917fb77be780c0c">cen::event_type::drop_text</a> = SDL_DROPTEXT, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a6d9544fc7e5433f0d04d58d15b0c25e1">cen::event_type::drop_begin</a> = SDL_DROPBEGIN, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a58603ae401ec2339fc500e58c0618d6b">cen::event_type::drop_complete</a> = SDL_DROPCOMPLETE, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a1849894c975bbbb8093f95207d703f13">cen::event_type::audio_device_added</a> = SDL_AUDIODEVICEADDED, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2acb952a764ade94f5bb614c88a04557f5">cen::event_type::audio_device_removed</a> = SDL_AUDIODEVICEREMOVED, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a3647f10e65fea4ec3bdb7a9e3183ca7a">cen::event_type::sensor_update</a> = SDL_SENSORUPDATE, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a773fc3926c4d7427202274e4a5176558">cen::event_type::render_targets_reset</a> = SDL_RENDER_TARGETS_RESET, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2a322405e926da977d24724a14e6ce3261">cen::event_type::render_device_reset</a> = SDL_RENDER_DEVICE_RESET, 
-<br />
-&#160;&#160;<a class="el" href="group__event.html#ggaa2429849e0f3a3f8dc5dabd278b110b2aee11cbb19052e40b07aac0ca060c23ee">cen::event_type::user</a> = SDL_USEREVENT
-<br />
- }</td></tr>
-<tr class="memdesc:gaa2429849e0f3a3f8dc5dabd278b110b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mirrors the <code>SDL_EventType</code> enum.  <a href="group__event.html#gaa2429849e0f3a3f8dc5dabd278b110b2">More...</a><br /></td></tr>
-<tr class="separator:gaa2429849e0f3a3f8dc5dabd278b110b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga8c88546b169b5331c065d343a73a5027"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ga8c88546b169b5331c065d343a73a5027"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__event.html#ga8c88546b169b5331c065d343a73a5027">cen::as_sdl_event</a> (const <a class="el" href="classcen_1_1common__event.html">common_event</a>&lt; T &gt; &amp;<a class="el" href="classcen_1_1event.html">event</a>) -&gt; SDL_Event</td></tr>
-<tr class="separator:ga8c88546b169b5331c065d343a73a5027"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab91eb8882f850519906a6a446b34a03d"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
 <tr class="memitem:gab91eb8882f850519906a6a446b34a03d"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__event.html#gab91eb8882f850519906a6a446b34a03d">cen::as_sdl_event</a> (const <a class="el" href="classcen_1_1common__event.html">common_event</a>&lt; SDL_AudioDeviceEvent &gt; &amp;<a class="el" href="classcen_1_1event.html">event</a>) -&gt; SDL_Event</td></tr>
 <tr class="separator:gab91eb8882f850519906a6a446b34a03d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8c88546b169b5331c065d343a73a5027"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga8c88546b169b5331c065d343a73a5027"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__event.html#ga8c88546b169b5331c065d343a73a5027">cen::as_sdl_event</a> (const <a class="el" href="classcen_1_1common__event.html">common_event</a>&lt; T &gt; &amp;<a class="el" href="classcen_1_1event.html">event</a>) -&gt; SDL_Event</td></tr>
+<tr class="separator:ga8c88546b169b5331c065d343a73a5027"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7a73634d711fcce0af7cdc0cae031897"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
 <tr class="memitem:ga7a73634d711fcce0af7cdc0cae031897"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__event.html#ga7a73634d711fcce0af7cdc0cae031897">cen::as_sdl_event</a> (const <a class="el" href="classcen_1_1common__event.html">common_event</a>&lt; SDL_ControllerAxisEvent &gt; &amp;<a class="el" href="classcen_1_1event.html">event</a>) -&gt; SDL_Event</td></tr>
 <tr class="separator:ga7a73634d711fcce0af7cdc0cae031897"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -369,6 +369,24 @@ Functions</h2></td></tr>
 <tr class="memitem:ga9b2712d8b5e30517463967ebb5ecafc4"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
 <tr class="memitem:ga9b2712d8b5e30517463967ebb5ecafc4"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__event.html#ga9b2712d8b5e30517463967ebb5ecafc4">cen::as_sdl_event</a> (const <a class="el" href="classcen_1_1common__event.html">common_event</a>&lt; SDL_DropEvent &gt; &amp;<a class="el" href="classcen_1_1event.html">event</a>) -&gt; SDL_Event</td></tr>
 <tr class="separator:ga9b2712d8b5e30517463967ebb5ecafc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3495db37c3a74358d4c26d358e6c3c9c"><td class="memTemplParams" colspan="2">template&lt;typename... E&gt; </td></tr>
+<tr class="memitem:ga3495db37c3a74358d4c26d358e6c3c9c"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__event.html#ga3495db37c3a74358d4c26d358e6c3c9c">cen::to_string</a> (const <a class="el" href="classcen_1_1event__dispatcher.html">event_dispatcher</a>&lt; E... &gt; &amp;dispatcher) -&gt; std::string</td></tr>
+<tr class="separator:ga3495db37c3a74358d4c26d358e6c3c9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6789325ffb9c1d836aac53bb7c7748d8"><td class="memTemplParams" colspan="2">template&lt;typename... E&gt; </td></tr>
+<tr class="memitem:ga6789325ffb9c1d836aac53bb7c7748d8"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__event.html#ga6789325ffb9c1d836aac53bb7c7748d8">cen::operator&lt;&lt;</a> (std::ostream &amp;stream, const <a class="el" href="classcen_1_1event__dispatcher.html">event_dispatcher</a>&lt; E... &gt; &amp;dispatcher) -&gt; std::ostream &amp;</td></tr>
+<tr class="separator:ga6789325ffb9c1d836aac53bb7c7748d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5996dc81f8eb731b5f8c4ae5fb60a787"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__event.html#ga5996dc81f8eb731b5f8c4ae5fb60a787">cen::operator==</a> (const <a class="el" href="group__event.html#gaa96233ec6356fc786c810d6aaf5e939b">event_type</a> lhs, const SDL_EventType rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga5996dc81f8eb731b5f8c4ae5fb60a787"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two event type values are the same.  <a href="group__event.html#ga5996dc81f8eb731b5f8c4ae5fb60a787">More...</a><br /></td></tr>
+<tr class="separator:ga5996dc81f8eb731b5f8c4ae5fb60a787"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga27e38524031bbd6c8f8fde271b9ad85a"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__event.html#ga27e38524031bbd6c8f8fde271b9ad85a">cen::operator==</a> (const SDL_EventType lhs, const <a class="el" href="group__event.html#gaa96233ec6356fc786c810d6aaf5e939b">event_type</a> rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga27e38524031bbd6c8f8fde271b9ad85a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two event type values are the same.  <a href="group__event.html#ga27e38524031bbd6c8f8fde271b9ad85a">More...</a><br /></td></tr>
+<tr class="separator:ga27e38524031bbd6c8f8fde271b9ad85a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga54776a75e7694e451e85858b89b393c1"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__event.html#ga54776a75e7694e451e85858b89b393c1">cen::operator!=</a> (const <a class="el" href="group__event.html#gaa96233ec6356fc786c810d6aaf5e939b">event_type</a> lhs, const SDL_EventType rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga54776a75e7694e451e85858b89b393c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two event type values aren't the same.  <a href="group__event.html#ga54776a75e7694e451e85858b89b393c1">More...</a><br /></td></tr>
+<tr class="separator:ga54776a75e7694e451e85858b89b393c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga90d384994b8f79994919f3b447d88b0b"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__event.html#ga90d384994b8f79994919f3b447d88b0b">cen::operator!=</a> (const SDL_EventType lhs, const <a class="el" href="group__event.html#gaa96233ec6356fc786c810d6aaf5e939b">event_type</a> rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga90d384994b8f79994919f3b447d88b0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two event type values aren't the same.  <a href="group__event.html#ga90d384994b8f79994919f3b447d88b0b">More...</a><br /></td></tr>
+<tr class="separator:ga90d384994b8f79994919f3b447d88b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0acb39fc7502cbcedc71295b345a1e4a"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
 <tr class="memitem:ga0acb39fc7502cbcedc71295b345a1e4a"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__event.html#ga0acb39fc7502cbcedc71295b345a1e4a">cen::as_sdl_event</a> (const <a class="el" href="classcen_1_1common__event.html">common_event</a>&lt; SDL_JoyAxisEvent &gt; &amp;<a class="el" href="classcen_1_1event.html">event</a>) -&gt; SDL_Event</td></tr>
 <tr class="separator:ga0acb39fc7502cbcedc71295b345a1e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -396,6 +414,18 @@ Functions</h2></td></tr>
 <tr class="memitem:ga675dbe99dd644a75e2841ff9c6b30d77"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
 <tr class="memitem:ga675dbe99dd644a75e2841ff9c6b30d77"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__event.html#ga675dbe99dd644a75e2841ff9c6b30d77">cen::as_sdl_event</a> (const <a class="el" href="classcen_1_1common__event.html">common_event</a>&lt; SDL_MouseWheelEvent &gt; &amp;<a class="el" href="classcen_1_1event.html">event</a>) -&gt; SDL_Event</td></tr>
 <tr class="separator:ga675dbe99dd644a75e2841ff9c6b30d77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga34864d369c41764576e222a5b483296a"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__event.html#ga34864d369c41764576e222a5b483296a">cen::operator==</a> (const <a class="el" href="group__event.html#ga909df89e0a6c9576daeed396c314641e">mouse_wheel_direction</a> lhs, const SDL_MouseWheelDirection rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga34864d369c41764576e222a5b483296a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two mouse wheel direction values are equal.  <a href="group__event.html#ga34864d369c41764576e222a5b483296a">More...</a><br /></td></tr>
+<tr class="separator:ga34864d369c41764576e222a5b483296a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa3b46049e9005646d38bdcdcb8b81324"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__event.html#gaa3b46049e9005646d38bdcdcb8b81324">cen::operator==</a> (const SDL_MouseWheelDirection lhs, const <a class="el" href="group__event.html#ga909df89e0a6c9576daeed396c314641e">mouse_wheel_direction</a> rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:gaa3b46049e9005646d38bdcdcb8b81324"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two mouse wheel direction values are equal.  <a href="group__event.html#gaa3b46049e9005646d38bdcdcb8b81324">More...</a><br /></td></tr>
+<tr class="separator:gaa3b46049e9005646d38bdcdcb8b81324"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa3c28269c8511161040352a58c2be600"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__event.html#gaa3c28269c8511161040352a58c2be600">cen::operator!=</a> (const <a class="el" href="group__event.html#ga909df89e0a6c9576daeed396c314641e">mouse_wheel_direction</a> lhs, const SDL_MouseWheelDirection rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:gaa3c28269c8511161040352a58c2be600"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two mouse wheel direction values aren't equal.  <a href="group__event.html#gaa3c28269c8511161040352a58c2be600">More...</a><br /></td></tr>
+<tr class="separator:gaa3c28269c8511161040352a58c2be600"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9a06650658613782076a2039e7a0999f"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__event.html#ga9a06650658613782076a2039e7a0999f">cen::operator!=</a> (const SDL_MouseWheelDirection lhs, const <a class="el" href="group__event.html#ga909df89e0a6c9576daeed396c314641e">mouse_wheel_direction</a> rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga9a06650658613782076a2039e7a0999f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two mouse wheel direction values aren't equal.  <a href="group__event.html#ga9a06650658613782076a2039e7a0999f">More...</a><br /></td></tr>
+<tr class="separator:ga9a06650658613782076a2039e7a0999f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0319ae0242184d5c379277108224cfc8"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
 <tr class="memitem:ga0319ae0242184d5c379277108224cfc8"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__event.html#ga0319ae0242184d5c379277108224cfc8">cen::as_sdl_event</a> (const <a class="el" href="classcen_1_1common__event.html">common_event</a>&lt; SDL_MultiGestureEvent &gt; &amp;<a class="el" href="classcen_1_1event.html">event</a>) -&gt; SDL_Event</td></tr>
 <tr class="separator:ga0319ae0242184d5c379277108224cfc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -414,18 +444,6 @@ Functions</h2></td></tr>
 <tr class="memitem:gabc8514063fb2d47ad1d0f83b099325b9"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
 <tr class="memitem:gabc8514063fb2d47ad1d0f83b099325b9"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__event.html#gabc8514063fb2d47ad1d0f83b099325b9">cen::as_sdl_event</a> (const <a class="el" href="classcen_1_1common__event.html">common_event</a>&lt; SDL_WindowEvent &gt; &amp;<a class="el" href="classcen_1_1event.html">event</a>) -&gt; SDL_Event</td></tr>
 <tr class="separator:gabc8514063fb2d47ad1d0f83b099325b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga34864d369c41764576e222a5b483296a"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__event.html#ga34864d369c41764576e222a5b483296a">cen::operator==</a> (const <a class="el" href="group__event.html#ga909df89e0a6c9576daeed396c314641e">mouse_wheel_direction</a> lhs, const SDL_MouseWheelDirection rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga34864d369c41764576e222a5b483296a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two mouse wheel direction values are equal.  <a href="group__event.html#ga34864d369c41764576e222a5b483296a">More...</a><br /></td></tr>
-<tr class="separator:ga34864d369c41764576e222a5b483296a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa3b46049e9005646d38bdcdcb8b81324"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__event.html#gaa3b46049e9005646d38bdcdcb8b81324">cen::operator==</a> (const SDL_MouseWheelDirection lhs, const <a class="el" href="group__event.html#ga909df89e0a6c9576daeed396c314641e">mouse_wheel_direction</a> rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:gaa3b46049e9005646d38bdcdcb8b81324"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two mouse wheel direction values are equal.  <a href="group__event.html#gaa3b46049e9005646d38bdcdcb8b81324">More...</a><br /></td></tr>
-<tr class="separator:gaa3b46049e9005646d38bdcdcb8b81324"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa3c28269c8511161040352a58c2be600"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__event.html#gaa3c28269c8511161040352a58c2be600">cen::operator!=</a> (const <a class="el" href="group__event.html#ga909df89e0a6c9576daeed396c314641e">mouse_wheel_direction</a> lhs, const SDL_MouseWheelDirection rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:gaa3c28269c8511161040352a58c2be600"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two mouse wheel direction values aren't equal.  <a href="group__event.html#gaa3c28269c8511161040352a58c2be600">More...</a><br /></td></tr>
-<tr class="separator:gaa3c28269c8511161040352a58c2be600"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9a06650658613782076a2039e7a0999f"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__event.html#ga9a06650658613782076a2039e7a0999f">cen::operator!=</a> (const SDL_MouseWheelDirection lhs, const <a class="el" href="group__event.html#ga909df89e0a6c9576daeed396c314641e">mouse_wheel_direction</a> rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga9a06650658613782076a2039e7a0999f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two mouse wheel direction values aren't equal.  <a href="group__event.html#ga9a06650658613782076a2039e7a0999f">More...</a><br /></td></tr>
-<tr class="separator:ga9a06650658613782076a2039e7a0999f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab0815d6bb1f5594cee8bbbb2557a240d"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__event.html#gab0815d6bb1f5594cee8bbbb2557a240d">cen::operator==</a> (const <a class="el" href="group__event.html#ga117be29d4e5afcc206640c1a2ee69f29">window_event_id</a> lhs, const SDL_WindowEventID rhs) noexcept -&gt; bool</td></tr>
 <tr class="memdesc:gab0815d6bb1f5594cee8bbbb2557a240d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two window event ID values are the same.  <a href="group__event.html#gab0815d6bb1f5594cee8bbbb2557a240d">More...</a><br /></td></tr>
 <tr class="separator:gab0815d6bb1f5594cee8bbbb2557a240d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -438,30 +456,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ga3b21bc4ebf405aba19b2dd2a44c1b095"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__event.html#ga3b21bc4ebf405aba19b2dd2a44c1b095">cen::operator!=</a> (const SDL_WindowEventID lhs, const <a class="el" href="group__event.html#ga117be29d4e5afcc206640c1a2ee69f29">window_event_id</a> rhs) noexcept -&gt; bool</td></tr>
 <tr class="memdesc:ga3b21bc4ebf405aba19b2dd2a44c1b095"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two window event ID values aren't the same.  <a href="group__event.html#ga3b21bc4ebf405aba19b2dd2a44c1b095">More...</a><br /></td></tr>
 <tr class="separator:ga3b21bc4ebf405aba19b2dd2a44c1b095"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3495db37c3a74358d4c26d358e6c3c9c"><td class="memTemplParams" colspan="2">template&lt;typename... E&gt; </td></tr>
-<tr class="memitem:ga3495db37c3a74358d4c26d358e6c3c9c"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__event.html#ga3495db37c3a74358d4c26d358e6c3c9c">cen::to_string</a> (const <a class="el" href="classcen_1_1event__dispatcher.html">event_dispatcher</a>&lt; E... &gt; &amp;dispatcher) -&gt; std::string</td></tr>
-<tr class="separator:ga3495db37c3a74358d4c26d358e6c3c9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6789325ffb9c1d836aac53bb7c7748d8"><td class="memTemplParams" colspan="2">template&lt;typename... E&gt; </td></tr>
-<tr class="memitem:ga6789325ffb9c1d836aac53bb7c7748d8"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__event.html#ga6789325ffb9c1d836aac53bb7c7748d8">cen::operator&lt;&lt;</a> (std::ostream &amp;stream, const <a class="el" href="classcen_1_1event__dispatcher.html">event_dispatcher</a>&lt; E... &gt; &amp;dispatcher) -&gt; std::ostream &amp;</td></tr>
-<tr class="separator:ga6789325ffb9c1d836aac53bb7c7748d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5996dc81f8eb731b5f8c4ae5fb60a787"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__event.html#ga5996dc81f8eb731b5f8c4ae5fb60a787">cen::operator==</a> (const <a class="el" href="group__event.html#gaa2429849e0f3a3f8dc5dabd278b110b2">event_type</a> lhs, const SDL_EventType rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga5996dc81f8eb731b5f8c4ae5fb60a787"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two event type values are the same.  <a href="group__event.html#ga5996dc81f8eb731b5f8c4ae5fb60a787">More...</a><br /></td></tr>
-<tr class="separator:ga5996dc81f8eb731b5f8c4ae5fb60a787"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga27e38524031bbd6c8f8fde271b9ad85a"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__event.html#ga27e38524031bbd6c8f8fde271b9ad85a">cen::operator==</a> (const SDL_EventType lhs, const <a class="el" href="group__event.html#gaa2429849e0f3a3f8dc5dabd278b110b2">event_type</a> rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga27e38524031bbd6c8f8fde271b9ad85a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two event type values are the same.  <a href="group__event.html#ga27e38524031bbd6c8f8fde271b9ad85a">More...</a><br /></td></tr>
-<tr class="separator:ga27e38524031bbd6c8f8fde271b9ad85a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga54776a75e7694e451e85858b89b393c1"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__event.html#ga54776a75e7694e451e85858b89b393c1">cen::operator!=</a> (const <a class="el" href="group__event.html#gaa2429849e0f3a3f8dc5dabd278b110b2">event_type</a> lhs, const SDL_EventType rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga54776a75e7694e451e85858b89b393c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two event type values aren't the same.  <a href="group__event.html#ga54776a75e7694e451e85858b89b393c1">More...</a><br /></td></tr>
-<tr class="separator:ga54776a75e7694e451e85858b89b393c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga90d384994b8f79994919f3b447d88b0b"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__event.html#ga90d384994b8f79994919f3b447d88b0b">cen::operator!=</a> (const SDL_EventType lhs, const <a class="el" href="group__event.html#gaa2429849e0f3a3f8dc5dabd278b110b2">event_type</a> rhs) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ga90d384994b8f79994919f3b447d88b0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two event type values aren't the same.  <a href="group__event.html#ga90d384994b8f79994919f3b447d88b0b">More...</a><br /></td></tr>
-<tr class="separator:ga90d384994b8f79994919f3b447d88b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Contains entities related to events. </p>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="gaa2429849e0f3a3f8dc5dabd278b110b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa2429849e0f3a3f8dc5dabd278b110b2">&#9670;&nbsp;</a></span>event_type</h2>
+<a id="gaa96233ec6356fc786c810d6aaf5e939b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa96233ec6356fc786c810d6aaf5e939b">&#9670;&nbsp;</a></span>event_type</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -470,7 +470,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="group__event.html#gaa2429849e0f3a3f8dc5dabd278b110b2">cen::event_type</a></td>
+          <td class="memname">enum <a class="el" href="group__event.html#gaa96233ec6356fc786c810d6aaf5e939b">cen::event_type</a> : <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a></td>
         </tr>
       </table>
   </td>
@@ -480,64 +480,64 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Mirrors the <code>SDL_EventType</code> enum. </p>
+<p>Represents the different event types. </p>
 <dl class="section see"><dt>See also</dt><dd><code>SDL_EventType</code></dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.1.0 </dd></dl>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2adbd73c2b545209688ed794c0d5413d5a"></a>quit&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a594a951506371c6c4b5c6714fde56210"></a>app_terminating&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a424176dd81e2ab7097f6c71b325aa2f7"></a>app_low_memory&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2ad78a45502c925119ffd217e539b93d75"></a>app_will_enter_background&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a37fc114d1d7e7ca54140b0f543a9380c"></a>app_did_enter_background&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a4fb8cea91e58a3c3d8e584a6e8c5fffb"></a>app_did_enter_foreground&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2aebf78b512222fe4dcd14e7d5060a15b0"></a>display&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a05b8c74cbd96fbf2de4c1a352702fbf4"></a>window&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a54b53072540eeeb8f8e9343e71f28176"></a>system&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a88aee4617a01e1e5da7f11f3b5fb7ac0"></a>key_down&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a2d19def4e5861d6d2e62450fcc84cb97"></a>key_up&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2ab0f31b1e427c96840a50a543c3e37af9"></a>text_editing&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2ae1ba83437c55caa1b29b1d3228f2591a"></a>text_input&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a587c13d591880465ffc356f94463852c"></a>keymap_changed&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a903f7a99c62619729849164b06f649e5"></a>mouse_motion&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a3d1967c26f79d9e652ecded5f4a4a4e9"></a>mouse_button_down&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a054816ad6699e4aa626272b9c12cb75e"></a>mouse_button_up&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a8405b4133b61983c995a62136337b4ec"></a>mouse_wheel&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a32d6ecc4ef026e6308210718441a3fc9"></a>joystick_axis_motion&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a17269873a20a99f4663243a615ef50e8"></a>joystick_ball_motion&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2af2c25380e3e12793c5729249146a18b6"></a>joystick_hat_motion&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a40c3f0d12ff6af33fc1757998212ed86"></a>joystick_button_down&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2acb08d5d164250984595194e54d5d6719"></a>joystick_button_up&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a2db9343c8b2623c435315e596a24866e"></a>joystick_device_added&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2ac6b6fc87c82334a194bc911f1f5f09e6"></a>joystick_device_removed&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a1aafb53ad025d38ab2adfdf81c127065"></a>controller_axis_motion&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a118ace45fad8d04e924ccaf0abf132e2"></a>controller_button_down&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2af963da24bb9aabd00b0fdf8d1262b267"></a>controller_button_up&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2acc50f109dd585ce50d7a4040fb52c468"></a>controller_device_added&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a9a13ae35bfe2cfe12ada4119bc4964a7"></a>controller_device_removed&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2ac0285b503aea149987b2a28ae7af96ca"></a>controller_device_remapped&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a36acdbf9714963b10ba93cfc39791787"></a>touch_down&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a703aaa492c24c09fc36119dbf99d3cfd"></a>touch_up&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2ae4b1aba507135dba49c194e27bb258d8"></a>touch_motion&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a9d8c8709900c57ce9699a28c6ed9d674"></a>dollar_gesture&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a1f2ef26f9f79c5c10d67122245bdc346"></a>dollar_record&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a3e84b5a634062d5e9a02a0bcd59837dd"></a>multi_gesture&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a53619367dcd7a4f802c8e02cdb73c124"></a>clipboard_update&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a15e418ea049939b287455391ad76be31"></a>drop_file&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a27dd818ec803f32b7917fb77be780c0c"></a>drop_text&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a6d9544fc7e5433f0d04d58d15b0c25e1"></a>drop_begin&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a58603ae401ec2339fc500e58c0618d6b"></a>drop_complete&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a1849894c975bbbb8093f95207d703f13"></a>audio_device_added&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2acb952a764ade94f5bb614c88a04557f5"></a>audio_device_removed&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a3647f10e65fea4ec3bdb7a9e3183ca7a"></a>sensor_update&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a773fc3926c4d7427202274e4a5176558"></a>render_targets_reset&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2a322405e926da977d24724a14e6ce3261"></a>render_device_reset&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaa2429849e0f3a3f8dc5dabd278b110b2aee11cbb19052e40b07aac0ca060c23ee"></a>user&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939badbd73c2b545209688ed794c0d5413d5a"></a>quit&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba594a951506371c6c4b5c6714fde56210"></a>app_terminating&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba424176dd81e2ab7097f6c71b325aa2f7"></a>app_low_memory&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939bad78a45502c925119ffd217e539b93d75"></a>app_will_enter_background&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba37fc114d1d7e7ca54140b0f543a9380c"></a>app_did_enter_background&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba4fb8cea91e58a3c3d8e584a6e8c5fffb"></a>app_did_enter_foreground&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939baebf78b512222fe4dcd14e7d5060a15b0"></a>display&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba05b8c74cbd96fbf2de4c1a352702fbf4"></a>window&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba54b53072540eeeb8f8e9343e71f28176"></a>system&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba88aee4617a01e1e5da7f11f3b5fb7ac0"></a>key_down&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba2d19def4e5861d6d2e62450fcc84cb97"></a>key_up&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939bab0f31b1e427c96840a50a543c3e37af9"></a>text_editing&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939bae1ba83437c55caa1b29b1d3228f2591a"></a>text_input&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba587c13d591880465ffc356f94463852c"></a>keymap_changed&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba903f7a99c62619729849164b06f649e5"></a>mouse_motion&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba3d1967c26f79d9e652ecded5f4a4a4e9"></a>mouse_button_down&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba054816ad6699e4aa626272b9c12cb75e"></a>mouse_button_up&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba8405b4133b61983c995a62136337b4ec"></a>mouse_wheel&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba32d6ecc4ef026e6308210718441a3fc9"></a>joystick_axis_motion&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba17269873a20a99f4663243a615ef50e8"></a>joystick_ball_motion&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939baf2c25380e3e12793c5729249146a18b6"></a>joystick_hat_motion&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba40c3f0d12ff6af33fc1757998212ed86"></a>joystick_button_down&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939bacb08d5d164250984595194e54d5d6719"></a>joystick_button_up&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba2db9343c8b2623c435315e596a24866e"></a>joystick_device_added&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939bac6b6fc87c82334a194bc911f1f5f09e6"></a>joystick_device_removed&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba1aafb53ad025d38ab2adfdf81c127065"></a>controller_axis_motion&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba118ace45fad8d04e924ccaf0abf132e2"></a>controller_button_down&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939baf963da24bb9aabd00b0fdf8d1262b267"></a>controller_button_up&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939bacc50f109dd585ce50d7a4040fb52c468"></a>controller_device_added&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba9a13ae35bfe2cfe12ada4119bc4964a7"></a>controller_device_removed&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939bac0285b503aea149987b2a28ae7af96ca"></a>controller_device_remapped&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba36acdbf9714963b10ba93cfc39791787"></a>touch_down&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba703aaa492c24c09fc36119dbf99d3cfd"></a>touch_up&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939bae4b1aba507135dba49c194e27bb258d8"></a>touch_motion&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba9d8c8709900c57ce9699a28c6ed9d674"></a>dollar_gesture&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba1f2ef26f9f79c5c10d67122245bdc346"></a>dollar_record&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba3e84b5a634062d5e9a02a0bcd59837dd"></a>multi_gesture&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba53619367dcd7a4f802c8e02cdb73c124"></a>clipboard_update&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba15e418ea049939b287455391ad76be31"></a>drop_file&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba27dd818ec803f32b7917fb77be780c0c"></a>drop_text&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba6d9544fc7e5433f0d04d58d15b0c25e1"></a>drop_begin&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba58603ae401ec2339fc500e58c0618d6b"></a>drop_complete&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba1849894c975bbbb8093f95207d703f13"></a>audio_device_added&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939bacb952a764ade94f5bb614c88a04557f5"></a>audio_device_removed&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba3647f10e65fea4ec3bdb7a9e3183ca7a"></a>sensor_update&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba773fc3926c4d7427202274e4a5176558"></a>render_targets_reset&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939ba322405e926da977d24724a14e6ce3261"></a>render_device_reset&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaa96233ec6356fc786c810d6aaf5e939baee11cbb19052e40b07aac0ca060c23ee"></a>user&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
 </div>
-<a id="ga92aa23a9d098fb77e8149e66a4c032b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga92aa23a9d098fb77e8149e66a4c032b7">&#9670;&nbsp;</a></span>joy_hat_position</h2>
+<a id="ga3014c4847759c6eacbc0f75a90e5caa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3014c4847759c6eacbc0f75a90e5caa1">&#9670;&nbsp;</a></span>joy_hat_position</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -546,7 +546,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="group__event.html#ga92aa23a9d098fb77e8149e66a4c032b7">cen::joy_hat_position</a></td>
+          <td class="memname">enum <a class="el" href="group__event.html#ga3014c4847759c6eacbc0f75a90e5caa1">cen::joy_hat_position</a> : <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a></td>
         </tr>
       </table>
   </td>
@@ -559,15 +559,15 @@ Functions</h2></td></tr>
 <p>Serves as a wrapper for the <code>SDL_HAT_x</code> macro values. </p>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga92aa23a9d098fb77e8149e66a4c032b7a7bee01317f52e2c54856e73909d487f2"></a>left_up&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga92aa23a9d098fb77e8149e66a4c032b7a811882fecd5c7618d7099ebbd39ea254"></a>left&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga92aa23a9d098fb77e8149e66a4c032b7a7e960b9ae88fd5fb46be255328deb430"></a>left_down&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga92aa23a9d098fb77e8149e66a4c032b7a46c48bec0d282018b9d167eef7711b2c"></a>up&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga92aa23a9d098fb77e8149e66a4c032b7a15c012757aea2b45f1ea7550869cea02"></a>centered&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga92aa23a9d098fb77e8149e66a4c032b7a74e8333ad11685ff3bdae589c8f6e34d"></a>down&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga92aa23a9d098fb77e8149e66a4c032b7a09bfc976eaed05de8a55b9f798d3299c"></a>right_up&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga92aa23a9d098fb77e8149e66a4c032b7a7c4f29407893c334a6cb7a87bf045c0d"></a>right&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga92aa23a9d098fb77e8149e66a4c032b7a13e9aba075fa84cd48dad4426de5d705"></a>right_down&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga3014c4847759c6eacbc0f75a90e5caa1a7bee01317f52e2c54856e73909d487f2"></a>left_up&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga3014c4847759c6eacbc0f75a90e5caa1a811882fecd5c7618d7099ebbd39ea254"></a>left&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga3014c4847759c6eacbc0f75a90e5caa1a7e960b9ae88fd5fb46be255328deb430"></a>left_down&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga3014c4847759c6eacbc0f75a90e5caa1a46c48bec0d282018b9d167eef7711b2c"></a>up&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga3014c4847759c6eacbc0f75a90e5caa1a15c012757aea2b45f1ea7550869cea02"></a>centered&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga3014c4847759c6eacbc0f75a90e5caa1a74e8333ad11685ff3bdae589c8f6e34d"></a>down&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga3014c4847759c6eacbc0f75a90e5caa1a09bfc976eaed05de8a55b9f798d3299c"></a>right_up&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga3014c4847759c6eacbc0f75a90e5caa1a7c4f29407893c334a6cb7a87bf045c0d"></a>right&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga3014c4847759c6eacbc0f75a90e5caa1a13e9aba075fa84cd48dad4426de5d705"></a>right_down&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -592,7 +592,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Mirrors the the <code>SDL_MouseWheelDirection</code> enum. </p>
+<p>Represents mouse wheel directions. </p>
 <dl class="section see"><dt>See also</dt><dd><code>SDL_MouseWheelDirection</code></dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 <table class="fieldtable">
@@ -624,7 +624,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Mirrors the <code>SDL_WindowEventID</code> enum. </p>
+<p>Represents different flavours of window events. </p>
 <p>Depending on the event ID of a <code><a class="el" href="classcen_1_1window__event.html" title="Represents an event that is associated with an action related to a window.">window_event</a></code> instance, the <code><a class="el" href="classcen_1_1window__event.html#a76fab68f8da985490b69f9fd956e7a37" title="Returns the value of the first data value.">window_event::data_1()</a></code> and <code><a class="el" href="classcen_1_1window__event.html#a85f12eda87a7176d3f7ea0b7a5a3a12a" title="Returns the value of the second data value.">window_event::data_2()</a></code> methods have special meanings.</p>
 <table style="width:100%">
 <tr>
@@ -1329,7 +1329,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">constexpr auto cen::operator!= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__event.html#gaa2429849e0f3a3f8dc5dabd278b110b2">event_type</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__event.html#gaa96233ec6356fc786c810d6aaf5e939b">event_type</a>&#160;</td>
           <td class="paramname"><em>lhs</em>, </td>
         </tr>
         <tr>
@@ -1431,7 +1431,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="group__event.html#gaa2429849e0f3a3f8dc5dabd278b110b2">event_type</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__event.html#gaa96233ec6356fc786c810d6aaf5e939b">event_type</a>&#160;</td>
           <td class="paramname"><em>rhs</em>&#160;</td>
         </tr>
         <tr>
@@ -1656,7 +1656,7 @@ template&lt;typename... E&gt; </div>
         <tr>
           <td class="memname">constexpr auto cen::operator== </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__event.html#gaa2429849e0f3a3f8dc5dabd278b110b2">event_type</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__event.html#gaa96233ec6356fc786c810d6aaf5e939b">event_type</a>&#160;</td>
           <td class="paramname"><em>lhs</em>, </td>
         </tr>
         <tr>
@@ -1758,7 +1758,7 @@ template&lt;typename... E&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="group__event.html#gaa2429849e0f3a3f8dc5dabd278b110b2">event_type</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__event.html#gaa96233ec6356fc786c810d6aaf5e939b">event_type</a>&#160;</td>
           <td class="paramname"><em>rhs</em>&#160;</td>
         </tr>
         <tr>

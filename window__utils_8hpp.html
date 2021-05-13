@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/window_utils.hpp File Reference</title>
+        <title>Centurion: src/centurion/video/window_utils.hpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_b630b0fc10333b78f2ff60d8d1210ae7.html">video</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -97,8 +97,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;SDL.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="centurion__cfg_8hpp_source.html">centurion_cfg.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="integers_8hpp_source.html">integers.hpp</a>&quot;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+<code>#include &quot;<a class="el" href="integers_8hpp_source.html">../core/integers.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="area_8hpp_source.html">../math/area.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="renderer_8hpp_source.html">renderer.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="window_8hpp_source.html">window.hpp</a>&quot;</code><br />
 </div>
@@ -112,22 +113,25 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gae3e08c5348c6a51773c3096a6fd40d3e"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#gae3e08c5348c6a51773c3096a6fd40d3e">cen::get_grabbed_window</a> () noexcept -&gt; window_handle</td></tr>
-<tr class="memdesc:gae3e08c5348c6a51773c3096a6fd40d3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a handle to the currently grabbed window.  <a href="group__graphics.html#gae3e08c5348c6a51773c3096a6fd40d3e">More...</a><br /></td></tr>
+<tr class="memitem:gae3e08c5348c6a51773c3096a6fd40d3e"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#gae3e08c5348c6a51773c3096a6fd40d3e">cen::get_grabbed_window</a> () noexcept -&gt; window_handle</td></tr>
+<tr class="memdesc:gae3e08c5348c6a51773c3096a6fd40d3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a handle to the currently grabbed window.  <a href="group__video.html#gae3e08c5348c6a51773c3096a6fd40d3e">More...</a><br /></td></tr>
 <tr class="separator:gae3e08c5348c6a51773c3096a6fd40d3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4beeb2bb167a3eb223e9b29470b37706"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#ga4beeb2bb167a3eb223e9b29470b37706">cen::mouse_focus_window</a> () noexcept -&gt; window_handle</td></tr>
-<tr class="memdesc:ga4beeb2bb167a3eb223e9b29470b37706"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a handle to the window that has mouse focus.  <a href="group__graphics.html#ga4beeb2bb167a3eb223e9b29470b37706">More...</a><br /></td></tr>
+<tr class="memitem:ga4beeb2bb167a3eb223e9b29470b37706"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga4beeb2bb167a3eb223e9b29470b37706">cen::mouse_focus_window</a> () noexcept -&gt; window_handle</td></tr>
+<tr class="memdesc:ga4beeb2bb167a3eb223e9b29470b37706"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a handle to the window that has mouse focus.  <a href="group__video.html#ga4beeb2bb167a3eb223e9b29470b37706">More...</a><br /></td></tr>
 <tr class="separator:ga4beeb2bb167a3eb223e9b29470b37706"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga792d5524a1cf4f5954bffc346cfba949"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#ga792d5524a1cf4f5954bffc346cfba949">cen::keyboard_focus_window</a> () noexcept -&gt; window_handle</td></tr>
-<tr class="memdesc:ga792d5524a1cf4f5954bffc346cfba949"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a handle to the window that has keyboard focus.  <a href="group__graphics.html#ga792d5524a1cf4f5954bffc346cfba949">More...</a><br /></td></tr>
+<tr class="memitem:ga792d5524a1cf4f5954bffc346cfba949"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga792d5524a1cf4f5954bffc346cfba949">cen::keyboard_focus_window</a> () noexcept -&gt; window_handle</td></tr>
+<tr class="memdesc:ga792d5524a1cf4f5954bffc346cfba949"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a handle to the window that has keyboard focus.  <a href="group__video.html#ga792d5524a1cf4f5954bffc346cfba949">More...</a><br /></td></tr>
 <tr class="separator:ga792d5524a1cf4f5954bffc346cfba949"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9c765f78c47f6abb27cefd0504168998"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#ga9c765f78c47f6abb27cefd0504168998">cen::get_window_from_id</a> (const u32 id) noexcept -&gt; window_handle</td></tr>
-<tr class="memdesc:ga9c765f78c47f6abb27cefd0504168998"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a handle to the window associated with the specified ID.  <a href="group__graphics.html#ga9c765f78c47f6abb27cefd0504168998">More...</a><br /></td></tr>
-<tr class="separator:ga9c765f78c47f6abb27cefd0504168998"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0429917df2fbc52a55313fa03285e6d3"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga0429917df2fbc52a55313fa03285e6d3">cen::get_window</a> (const u32 id) noexcept -&gt; window_handle</td></tr>
+<tr class="memdesc:ga0429917df2fbc52a55313fa03285e6d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a handle to the window associated with the specified ID.  <a href="group__video.html#ga0429917df2fbc52a55313fa03285e6d3">More...</a><br /></td></tr>
+<tr class="separator:ga0429917df2fbc52a55313fa03285e6d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga82f18a68e25eb040ed6ee5f6a8f022f8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ga82f18a68e25eb040ed6ee5f6a8f022f8"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__graphics.html#ga82f18a68e25eb040ed6ee5f6a8f022f8">cen::get_renderer</a> (const basic_window&lt; T &gt; &amp;window) noexcept -&gt; renderer_handle</td></tr>
-<tr class="memdesc:ga82f18a68e25eb040ed6ee5f6a8f022f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a handle to the renderer associated with a window.  <a href="group__graphics.html#ga82f18a68e25eb040ed6ee5f6a8f022f8">More...</a><br /></td></tr>
+<tr class="memitem:ga82f18a68e25eb040ed6ee5f6a8f022f8"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__video.html#ga82f18a68e25eb040ed6ee5f6a8f022f8">cen::get_renderer</a> (const basic_window&lt; T &gt; &amp;window) noexcept -&gt; renderer_handle</td></tr>
+<tr class="memdesc:ga82f18a68e25eb040ed6ee5f6a8f022f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a handle to the renderer associated with a window.  <a href="group__video.html#ga82f18a68e25eb040ed6ee5f6a8f022f8">More...</a><br /></td></tr>
 <tr class="separator:ga82f18a68e25eb040ed6ee5f6a8f022f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga48b3a90cfba05493c695d79084809e53"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga48b3a90cfba05493c695d79084809e53">cen::make_window_and_renderer</a> (const iarea size=window::default_size(), const u32 flags=window::default_flags()) -&gt; std::pair&lt; window, renderer &gt;</td></tr>
+<tr class="memdesc:ga48b3a90cfba05493c695d79084809e53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a window and an associated renderer.  <a href="group__video.html#ga48b3a90cfba05493c695d79084809e53">More...</a><br /></td></tr>
+<tr class="separator:ga48b3a90cfba05493c695d79084809e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

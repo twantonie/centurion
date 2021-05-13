@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -91,42 +91,35 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classcen_1_1font-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">cen::font Class Reference<span class="mlabels"><span class="mlabel">final</span></span><div class="ingroups"><a class="el" href="group__graphics.html">Graphics</a></div></div>  </div>
+<div class="title">cen::font Class Reference<span class="mlabels"><span class="mlabel">final</span></span><div class="ingroups"><a class="el" href="group__video.html">Video</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Represents a True Type font.  
+<p>Represents a TrueType font.  
  <a href="classcen_1_1font.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="font_8hpp_source.html">font.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a29790e6a0a8eb8bbdde902091a69eed4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a29790e6a0a8eb8bbdde902091a69eed4">hint</a> { <br />
-&#160;&#160;<a class="el" href="classcen_1_1font.html#a29790e6a0a8eb8bbdde902091a69eed4afea087517c26fadd409bd4b9dc642555">hint::normal</a> = TTF_HINTING_NORMAL, 
-<br />
-&#160;&#160;<a class="el" href="classcen_1_1font.html#a29790e6a0a8eb8bbdde902091a69eed4a2ac43aa43bf473f9a9c09b4b608619d3">hint::light</a> = TTF_HINTING_LIGHT, 
-<br />
-&#160;&#160;<a class="el" href="classcen_1_1font.html#a29790e6a0a8eb8bbdde902091a69eed4a654db8a14a5f633b9ba85ec92dc51f7c">hint::mono</a> = TTF_HINTING_MONO, 
-<br />
-&#160;&#160;<a class="el" href="classcen_1_1font.html#a29790e6a0a8eb8bbdde902091a69eed4a334c4a4c42fdb79d7ebc3e73b517e6f8">hint::none</a> = TTF_HINTING_NONE
-<br />
- }</td></tr>
-<tr class="memdesc:a29790e6a0a8eb8bbdde902091a69eed4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides different possible TrueType font hint values.  <a href="classcen_1_1font.html#a29790e6a0a8eb8bbdde902091a69eed4">More...</a><br /></td></tr>
-<tr class="separator:a29790e6a0a8eb8bbdde902091a69eed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7d1d413bae82a92411f4cea801221fb4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a7d1d413bae82a92411f4cea801221fb4">font</a> (const <a class="el" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; <a class="el" href="classcen_1_1file.html">file</a>, const int <a class="el" href="classcen_1_1font.html#a4e9e2fbd063c889421bb7b0f1ff5d5f0">size</a>)</td></tr>
+<tr class="memitem:a4e833b4401468c3e6c97899682db033b"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a4e833b4401468c3e6c97899682db033b">get</a> () const noexcept -&gt; TTF_Font *</td></tr>
+<tr class="memdesc:a4e833b4401468c3e6c97899682db033b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the associated <code>TTF_Font</code>.  <a href="classcen_1_1font.html#a4e833b4401468c3e6c97899682db033b">More...</a><br /></td></tr>
+<tr class="separator:a4e833b4401468c3e6c97899682db033b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Construction</h2></td></tr>
+<tr class="memitem:a7d1d413bae82a92411f4cea801221fb4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a7d1d413bae82a92411f4cea801221fb4">font</a> (const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; <a class="el" href="classcen_1_1file.html">file</a>, const int <a class="el" href="classcen_1_1font.html#a4e9e2fbd063c889421bb7b0f1ff5d5f0">size</a>)</td></tr>
 <tr class="memdesc:a7d1d413bae82a92411f4cea801221fb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a font based on the <code>.ttf</code>-file at the specified path.  <a href="classcen_1_1font.html#a7d1d413bae82a92411f4cea801221fb4">More...</a><br /></td></tr>
 <tr class="separator:a7d1d413bae82a92411f4cea801221fb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2e7bbfba68ca6c8026fb5fb6c8c83aa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#ae2e7bbfba68ca6c8026fb5fb6c8c83aa">font</a> (const std::string &amp;<a class="el" href="classcen_1_1file.html">file</a>, const int <a class="el" href="classcen_1_1font.html#a4e9e2fbd063c889421bb7b0f1ff5d5f0">size</a>)</td></tr>
 <tr class="memdesc:ae2e7bbfba68ca6c8026fb5fb6c8c83aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a font based on the <code>.ttf</code>-file at the specified path.  <a href="classcen_1_1font.html#ae2e7bbfba68ca6c8026fb5fb6c8c83aa">More...</a><br /></td></tr>
 <tr class="separator:ae2e7bbfba68ca6c8026fb5fb6c8c83aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Style functions</h2></td></tr>
 <tr class="memitem:a1a865095b464afd343917c1f48f4a70f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a1a865095b464afd343917c1f48f4a70f">reset</a> () noexcept</td></tr>
 <tr class="memdesc:a1a865095b464afd343917c1f48f4a70f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the style of the font.  <a href="classcen_1_1font.html#a1a865095b464afd343917c1f48f4a70f">More...</a><br /></td></tr>
 <tr class="separator:a1a865095b464afd343917c1f48f4a70f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,12 +138,36 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a43b21e169584c0ca1d123aa5a565616b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a43b21e169584c0ca1d123aa5a565616b">set_outline</a> (const int <a class="el" href="classcen_1_1font.html#a812fd39165eb9d0e854b7f30e6f56469">outline</a>) noexcept</td></tr>
 <tr class="memdesc:a43b21e169584c0ca1d123aa5a565616b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the outline size of the font.  <a href="classcen_1_1font.html#a43b21e169584c0ca1d123aa5a565616b">More...</a><br /></td></tr>
 <tr class="separator:a43b21e169584c0ca1d123aa5a565616b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7d132544a6bbd714c7e0cd38dbcd284"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#ad7d132544a6bbd714c7e0cd38dbcd284">set_font_hinting</a> (const <a class="el" href="classcen_1_1font.html#a29790e6a0a8eb8bbdde902091a69eed4">hint</a> <a class="el" href="classcen_1_1font.html#a29790e6a0a8eb8bbdde902091a69eed4">hint</a>) noexcept</td></tr>
-<tr class="memdesc:ad7d132544a6bbd714c7e0cd38dbcd284"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the TrueType font hint of the font.  <a href="classcen_1_1font.html#ad7d132544a6bbd714c7e0cd38dbcd284">More...</a><br /></td></tr>
-<tr class="separator:ad7d132544a6bbd714c7e0cd38dbcd284"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afecf75f31085cdf42b20985b71f9c13c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#afecf75f31085cdf42b20985b71f9c13c">set_font_hinting</a> (const <a class="el" href="group__video.html#gabacebf68fce34449f67d1016a835796a">font_hint</a> hint) noexcept</td></tr>
+<tr class="memdesc:afecf75f31085cdf42b20985b71f9c13c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the TrueType font hint of the font.  <a href="classcen_1_1font.html#afecf75f31085cdf42b20985b71f9c13c">More...</a><br /></td></tr>
+<tr class="separator:afecf75f31085cdf42b20985b71f9c13c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa004f7901e86d4b1ccb895f7540951fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#aa004f7901e86d4b1ccb895f7540951fb">set_kerning</a> (const bool kerning) noexcept</td></tr>
 <tr class="memdesc:aa004f7901e86d4b1ccb895f7540951fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether or not font kerning is allowed.  <a href="classcen_1_1font.html#aa004f7901e86d4b1ccb895f7540951fb">More...</a><br /></td></tr>
 <tr class="separator:aa004f7901e86d4b1ccb895f7540951fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a744d38423be6562c9a1ca8d92114fdd2"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a744d38423be6562c9a1ca8d92114fdd2">is_bold</a> () const noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a744d38423be6562c9a1ca8d92114fdd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the font is bold.  <a href="classcen_1_1font.html#a744d38423be6562c9a1ca8d92114fdd2">More...</a><br /></td></tr>
+<tr class="separator:a744d38423be6562c9a1ca8d92114fdd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3aee511858ff7b186caa1ad5f5967079"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a3aee511858ff7b186caa1ad5f5967079">is_italic</a> () const noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a3aee511858ff7b186caa1ad5f5967079"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the font is italic.  <a href="classcen_1_1font.html#a3aee511858ff7b186caa1ad5f5967079">More...</a><br /></td></tr>
+<tr class="separator:a3aee511858ff7b186caa1ad5f5967079"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8a41188f92480f81a4aaf4c27ac8b9c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#ab8a41188f92480f81a4aaf4c27ac8b9c">is_underlined</a> () const noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ab8a41188f92480f81a4aaf4c27ac8b9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the font is underlined.  <a href="classcen_1_1font.html#ab8a41188f92480f81a4aaf4c27ac8b9c">More...</a><br /></td></tr>
+<tr class="separator:ab8a41188f92480f81a4aaf4c27ac8b9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95b9669cd7dc54e332360ec6e45e81c4"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a95b9669cd7dc54e332360ec6e45e81c4">is_strikethrough</a> () const noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a95b9669cd7dc54e332360ec6e45e81c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the font is a strikethrough font.  <a href="classcen_1_1font.html#a95b9669cd7dc54e332360ec6e45e81c4">More...</a><br /></td></tr>
+<tr class="separator:a95b9669cd7dc54e332360ec6e45e81c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a812fd39165eb9d0e854b7f30e6f56469"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a812fd39165eb9d0e854b7f30e6f56469">outline</a> () const noexcept -&gt; int</td></tr>
+<tr class="memdesc:a812fd39165eb9d0e854b7f30e6f56469"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the outline of the font.  <a href="classcen_1_1font.html#a812fd39165eb9d0e854b7f30e6f56469">More...</a><br /></td></tr>
+<tr class="separator:a812fd39165eb9d0e854b7f30e6f56469"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc49f52ce7836da7b60da51701725c6b"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#acc49f52ce7836da7b60da51701725c6b">font_hinting</a> () const noexcept -&gt; <a class="el" href="group__video.html#gabacebf68fce34449f67d1016a835796a">font_hint</a></td></tr>
+<tr class="memdesc:acc49f52ce7836da7b60da51701725c6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the TrueType font hinting of the font.  <a href="classcen_1_1font.html#acc49f52ce7836da7b60da51701725c6b">More...</a><br /></td></tr>
+<tr class="separator:acc49f52ce7836da7b60da51701725c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17798486ccb6ce269f367604feea3233"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a17798486ccb6ce269f367604feea3233">has_kerning</a> () const noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a17798486ccb6ce269f367604feea3233"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not kerning is being used.  <a href="classcen_1_1font.html#a17798486ccb6ce269f367604feea3233">More...</a><br /></td></tr>
+<tr class="separator:a17798486ccb6ce269f367604feea3233"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Queries</h2></td></tr>
 <tr class="memitem:a839f59c0ce17d3d100f932a1ce745d7f"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a839f59c0ce17d3d100f932a1ce745d7f">height</a> () const noexcept -&gt; int</td></tr>
 <tr class="memdesc:a839f59c0ce17d3d100f932a1ce745d7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the maximum height of a character in this font.  <a href="classcen_1_1font.html#a839f59c0ce17d3d100f932a1ce745d7f">More...</a><br /></td></tr>
 <tr class="separator:a839f59c0ce17d3d100f932a1ce745d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -166,72 +183,57 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab3530bd4945842a48191969288cfd90f"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#ab3530bd4945842a48191969288cfd90f">font_faces</a> () const noexcept -&gt; int</td></tr>
 <tr class="memdesc:ab3530bd4945842a48191969288cfd90f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of available font faces in the font.  <a href="classcen_1_1font.html#ab3530bd4945842a48191969288cfd90f">More...</a><br /></td></tr>
 <tr class="separator:ab3530bd4945842a48191969288cfd90f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a467e5b4d7a43c4c38d6f4d6401eb1437"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a467e5b4d7a43c4c38d6f4d6401eb1437">font_hinting</a> () const noexcept -&gt; <a class="el" href="classcen_1_1font.html#a29790e6a0a8eb8bbdde902091a69eed4">hint</a></td></tr>
-<tr class="memdesc:a467e5b4d7a43c4c38d6f4d6401eb1437"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the TrueType font hinting of the font.  <a href="classcen_1_1font.html#a467e5b4d7a43c4c38d6f4d6401eb1437">More...</a><br /></td></tr>
-<tr class="separator:a467e5b4d7a43c4c38d6f4d6401eb1437"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17798486ccb6ce269f367604feea3233"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a17798486ccb6ce269f367604feea3233">has_kerning</a> () const noexcept -&gt; bool</td></tr>
-<tr class="memdesc:a17798486ccb6ce269f367604feea3233"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not kerning is being used.  <a href="classcen_1_1font.html#a17798486ccb6ce269f367604feea3233">More...</a><br /></td></tr>
-<tr class="separator:a17798486ccb6ce269f367604feea3233"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a744d38423be6562c9a1ca8d92114fdd2"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a744d38423be6562c9a1ca8d92114fdd2">is_bold</a> () const noexcept -&gt; bool</td></tr>
-<tr class="memdesc:a744d38423be6562c9a1ca8d92114fdd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the font is bold.  <a href="classcen_1_1font.html#a744d38423be6562c9a1ca8d92114fdd2">More...</a><br /></td></tr>
-<tr class="separator:a744d38423be6562c9a1ca8d92114fdd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3aee511858ff7b186caa1ad5f5967079"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a3aee511858ff7b186caa1ad5f5967079">is_italic</a> () const noexcept -&gt; bool</td></tr>
-<tr class="memdesc:a3aee511858ff7b186caa1ad5f5967079"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the font is italic.  <a href="classcen_1_1font.html#a3aee511858ff7b186caa1ad5f5967079">More...</a><br /></td></tr>
-<tr class="separator:a3aee511858ff7b186caa1ad5f5967079"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8a41188f92480f81a4aaf4c27ac8b9c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#ab8a41188f92480f81a4aaf4c27ac8b9c">is_underlined</a> () const noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ab8a41188f92480f81a4aaf4c27ac8b9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the font is underlined.  <a href="classcen_1_1font.html#ab8a41188f92480f81a4aaf4c27ac8b9c">More...</a><br /></td></tr>
-<tr class="separator:ab8a41188f92480f81a4aaf4c27ac8b9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95b9669cd7dc54e332360ec6e45e81c4"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a95b9669cd7dc54e332360ec6e45e81c4">is_strikethrough</a> () const noexcept -&gt; bool</td></tr>
-<tr class="memdesc:a95b9669cd7dc54e332360ec6e45e81c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the font is a strikethrough font.  <a href="classcen_1_1font.html#a95b9669cd7dc54e332360ec6e45e81c4">More...</a><br /></td></tr>
-<tr class="separator:a95b9669cd7dc54e332360ec6e45e81c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7258b9e47ec99828f3646ba4077a6f90"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a7258b9e47ec99828f3646ba4077a6f90">is_outlined</a> () const noexcept -&gt; bool</td></tr>
 <tr class="memdesc:a7258b9e47ec99828f3646ba4077a6f90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the font is outlined.  <a href="classcen_1_1font.html#a7258b9e47ec99828f3646ba4077a6f90">More...</a><br /></td></tr>
 <tr class="separator:a7258b9e47ec99828f3646ba4077a6f90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bbdc38c0d20d5134c2dfda284510f1c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a8bbdc38c0d20d5134c2dfda284510f1c">is_fixed_width</a> () const noexcept -&gt; bool</td></tr>
 <tr class="memdesc:a8bbdc38c0d20d5134c2dfda284510f1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the font is fixed width.  <a href="classcen_1_1font.html#a8bbdc38c0d20d5134c2dfda284510f1c">More...</a><br /></td></tr>
 <tr class="separator:a8bbdc38c0d20d5134c2dfda284510f1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a812fd39165eb9d0e854b7f30e6f56469"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a812fd39165eb9d0e854b7f30e6f56469">outline</a> () const noexcept -&gt; int</td></tr>
-<tr class="memdesc:a812fd39165eb9d0e854b7f30e6f56469"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the outline of the font.  <a href="classcen_1_1font.html#a812fd39165eb9d0e854b7f30e6f56469">More...</a><br /></td></tr>
-<tr class="separator:a812fd39165eb9d0e854b7f30e6f56469"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaacfe144b40c071c6b6c6af26c1389a3"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#aaacfe144b40c071c6b6c6af26c1389a3">kerning_amount</a> (const <a class="el" href="namespacecen.html#af3098f6170a7917381990e5abaf025e9">unicode</a> firstGlyph, const <a class="el" href="namespacecen.html#af3098f6170a7917381990e5abaf025e9">unicode</a> secondGlyph) const noexcept -&gt; int</td></tr>
-<tr class="memdesc:aaacfe144b40c071c6b6c6af26c1389a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the kerning amount between two glyphs in the font, if kerning would be enabled.  <a href="classcen_1_1font.html#aaacfe144b40c071c6b6c6af26c1389a3">More...</a><br /></td></tr>
-<tr class="separator:aaacfe144b40c071c6b6c6af26c1389a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5cc8c83c355f64c72f55dc43c896884"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#ae5cc8c83c355f64c72f55dc43c896884">is_glyph_provided</a> (const <a class="el" href="namespacecen.html#af3098f6170a7917381990e5abaf025e9">unicode</a> glyph) const noexcept -&gt; bool</td></tr>
-<tr class="memdesc:ae5cc8c83c355f64c72f55dc43c896884"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the specified glyph is available in the font.  <a href="classcen_1_1font.html#ae5cc8c83c355f64c72f55dc43c896884">More...</a><br /></td></tr>
-<tr class="separator:ae5cc8c83c355f64c72f55dc43c896884"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6eda509100513e3d6b7b12fcadc28fae"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a6eda509100513e3d6b7b12fcadc28fae">get_metrics</a> (const <a class="el" href="namespacecen.html#af3098f6170a7917381990e5abaf025e9">unicode</a> glyph) const noexcept -&gt; std::optional&lt; <a class="el" href="structcen_1_1glyph__metrics.html">glyph_metrics</a> &gt;</td></tr>
-<tr class="memdesc:a6eda509100513e3d6b7b12fcadc28fae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the metrics of the specified glyph in this font.  <a href="classcen_1_1font.html#a6eda509100513e3d6b7b12fcadc28fae">More...</a><br /></td></tr>
-<tr class="separator:a6eda509100513e3d6b7b12fcadc28fae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affe6fd5691b4d05d314ddcf1b23375ee"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#affe6fd5691b4d05d314ddcf1b23375ee">family_name</a> () const noexcept -&gt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a></td></tr>
+<tr class="memitem:affe6fd5691b4d05d314ddcf1b23375ee"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#affe6fd5691b4d05d314ddcf1b23375ee">family_name</a> () const noexcept -&gt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a></td></tr>
 <tr class="memdesc:affe6fd5691b4d05d314ddcf1b23375ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the family name of the font.  <a href="classcen_1_1font.html#affe6fd5691b4d05d314ddcf1b23375ee">More...</a><br /></td></tr>
 <tr class="separator:affe6fd5691b4d05d314ddcf1b23375ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a043982d8b461ecb72a04d4a6ec8a25da"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a043982d8b461ecb72a04d4a6ec8a25da">style_name</a> () const noexcept -&gt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a></td></tr>
+<tr class="memitem:a043982d8b461ecb72a04d4a6ec8a25da"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a043982d8b461ecb72a04d4a6ec8a25da">style_name</a> () const noexcept -&gt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a></td></tr>
 <tr class="memdesc:a043982d8b461ecb72a04d4a6ec8a25da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the font face style name of the font.  <a href="classcen_1_1font.html#a043982d8b461ecb72a04d4a6ec8a25da">More...</a><br /></td></tr>
 <tr class="separator:a043982d8b461ecb72a04d4a6ec8a25da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae906e64b99fdcc6f3fb1fba21ca2e4b"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#aae906e64b99fdcc6f3fb1fba21ca2e4b">string_width</a> (const <a class="el" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; str) const noexcept -&gt; int</td></tr>
-<tr class="memdesc:aae906e64b99fdcc6f3fb1fba21ca2e4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the width of the supplied string, if it was rendered using the font.  <a href="classcen_1_1font.html#aae906e64b99fdcc6f3fb1fba21ca2e4b">More...</a><br /></td></tr>
-<tr class="separator:aae906e64b99fdcc6f3fb1fba21ca2e4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49130cd5ff26a637cb806eb9bb260ead"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a49130cd5ff26a637cb806eb9bb260ead">string_width</a> (const std::string &amp;str) const noexcept -&gt; int</td></tr>
-<tr class="memdesc:a49130cd5ff26a637cb806eb9bb260ead"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the width of the supplied string, if it was rendered using the font.  <a href="classcen_1_1font.html#a49130cd5ff26a637cb806eb9bb260ead">More...</a><br /></td></tr>
-<tr class="separator:a49130cd5ff26a637cb806eb9bb260ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2729bd79750becf5ef4554b251e3bd8e"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a2729bd79750becf5ef4554b251e3bd8e">string_height</a> (const <a class="el" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; str) const noexcept -&gt; int</td></tr>
-<tr class="memdesc:a2729bd79750becf5ef4554b251e3bd8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the height of the supplied string, if it was rendered using the font.  <a href="classcen_1_1font.html#a2729bd79750becf5ef4554b251e3bd8e">More...</a><br /></td></tr>
-<tr class="separator:a2729bd79750becf5ef4554b251e3bd8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb4e6c5cf77f42fe417e93e392c576ba"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#adb4e6c5cf77f42fe417e93e392c576ba">string_height</a> (const std::string &amp;str) const noexcept -&gt; int</td></tr>
-<tr class="memdesc:adb4e6c5cf77f42fe417e93e392c576ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the height of the supplied string, if it was rendered using the font.  <a href="classcen_1_1font.html#adb4e6c5cf77f42fe417e93e392c576ba">More...</a><br /></td></tr>
-<tr class="separator:adb4e6c5cf77f42fe417e93e392c576ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4be7ce2bf74bae582d22b032df067e22"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a4be7ce2bf74bae582d22b032df067e22">string_size</a> (const <a class="el" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; str) const noexcept -&gt; <a class="el" href="group__geometry.html#gac34681d6cc8018e07938793d4c420369">iarea</a></td></tr>
-<tr class="memdesc:a4be7ce2bf74bae582d22b032df067e22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the supplied string, if it was rendered using the font.  <a href="classcen_1_1font.html#a4be7ce2bf74bae582d22b032df067e22">More...</a><br /></td></tr>
-<tr class="separator:a4be7ce2bf74bae582d22b032df067e22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2893f61d97f3f329fdfe649970a85064"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a2893f61d97f3f329fdfe649970a85064">string_size</a> (const std::string &amp;str) const noexcept -&gt; <a class="el" href="group__geometry.html#gac34681d6cc8018e07938793d4c420369">iarea</a></td></tr>
-<tr class="memdesc:a2893f61d97f3f329fdfe649970a85064"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the supplied string, if it was rendered using the font.  <a href="classcen_1_1font.html#a2893f61d97f3f329fdfe649970a85064">More...</a><br /></td></tr>
-<tr class="separator:a2893f61d97f3f329fdfe649970a85064"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e9e2fbd063c889421bb7b0f1ff5d5f0"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a4e9e2fbd063c889421bb7b0f1ff5d5f0">size</a> () const noexcept -&gt; int</td></tr>
 <tr class="memdesc:a4e9e2fbd063c889421bb7b0f1ff5d5f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the font.  <a href="classcen_1_1font.html#a4e9e2fbd063c889421bb7b0f1ff5d5f0">More...</a><br /></td></tr>
 <tr class="separator:a4e9e2fbd063c889421bb7b0f1ff5d5f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e833b4401468c3e6c97899682db033b"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a4e833b4401468c3e6c97899682db033b">get</a> () const noexcept -&gt; TTF_Font *</td></tr>
-<tr class="memdesc:a4e833b4401468c3e6c97899682db033b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the associated <code>TTF_Font</code>.  <a href="classcen_1_1font.html#a4e833b4401468c3e6c97899682db033b">More...</a><br /></td></tr>
-<tr class="separator:a4e833b4401468c3e6c97899682db033b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Glyph information</h2></td></tr>
+<tr class="memitem:aaacfe144b40c071c6b6c6af26c1389a3"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#aaacfe144b40c071c6b6c6af26c1389a3">kerning_amount</a> (const <a class="el" href="group__video.html#gaf3098f6170a7917381990e5abaf025e9">unicode</a> firstGlyph, const <a class="el" href="group__video.html#gaf3098f6170a7917381990e5abaf025e9">unicode</a> secondGlyph) const noexcept -&gt; int</td></tr>
+<tr class="memdesc:aaacfe144b40c071c6b6c6af26c1389a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the kerning amount between two glyphs in the font, if kerning would be enabled.  <a href="classcen_1_1font.html#aaacfe144b40c071c6b6c6af26c1389a3">More...</a><br /></td></tr>
+<tr class="separator:aaacfe144b40c071c6b6c6af26c1389a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5cc8c83c355f64c72f55dc43c896884"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#ae5cc8c83c355f64c72f55dc43c896884">is_glyph_provided</a> (const <a class="el" href="group__video.html#gaf3098f6170a7917381990e5abaf025e9">unicode</a> glyph) const noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ae5cc8c83c355f64c72f55dc43c896884"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the specified glyph is available in the font.  <a href="classcen_1_1font.html#ae5cc8c83c355f64c72f55dc43c896884">More...</a><br /></td></tr>
+<tr class="separator:ae5cc8c83c355f64c72f55dc43c896884"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6eda509100513e3d6b7b12fcadc28fae"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a6eda509100513e3d6b7b12fcadc28fae">get_metrics</a> (const <a class="el" href="group__video.html#gaf3098f6170a7917381990e5abaf025e9">unicode</a> glyph) const noexcept -&gt; std::optional&lt; <a class="el" href="structcen_1_1glyph__metrics.html">glyph_metrics</a> &gt;</td></tr>
+<tr class="memdesc:a6eda509100513e3d6b7b12fcadc28fae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the metrics of the specified glyph in this font.  <a href="classcen_1_1font.html#a6eda509100513e3d6b7b12fcadc28fae">More...</a><br /></td></tr>
+<tr class="separator:a6eda509100513e3d6b7b12fcadc28fae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Rendered string size functions</h2></td></tr>
+<tr class="memitem:a475a8ecf08787646121145090fbf65a1"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a475a8ecf08787646121145090fbf65a1">string_size</a> (const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; str) const noexcept -&gt; std::optional&lt; <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a> &gt;</td></tr>
+<tr class="memdesc:a475a8ecf08787646121145090fbf65a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the supplied string, if it was rendered using the font.  <a href="classcen_1_1font.html#a475a8ecf08787646121145090fbf65a1">More...</a><br /></td></tr>
+<tr class="separator:a475a8ecf08787646121145090fbf65a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a230dc8867644aeb22a30b2e5bed2b9de"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a230dc8867644aeb22a30b2e5bed2b9de">string_size</a> (const std::string &amp;str) const noexcept -&gt; std::optional&lt; <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a> &gt;</td></tr>
+<tr class="memdesc:a230dc8867644aeb22a30b2e5bed2b9de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the supplied string, if it was rendered using the font.  <a href="classcen_1_1font.html#a230dc8867644aeb22a30b2e5bed2b9de">More...</a><br /></td></tr>
+<tr class="separator:a230dc8867644aeb22a30b2e5bed2b9de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14e0a1ada27a721a46b2bb9742fa83b1"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a14e0a1ada27a721a46b2bb9742fa83b1">string_width</a> (const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; str) const noexcept -&gt; std::optional&lt; int &gt;</td></tr>
+<tr class="memdesc:a14e0a1ada27a721a46b2bb9742fa83b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the width of the supplied string, if it was rendered using the font.  <a href="classcen_1_1font.html#a14e0a1ada27a721a46b2bb9742fa83b1">More...</a><br /></td></tr>
+<tr class="separator:a14e0a1ada27a721a46b2bb9742fa83b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a053df470fc793505d56063b2fad8578a"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a053df470fc793505d56063b2fad8578a">string_width</a> (const std::string &amp;str) const noexcept -&gt; std::optional&lt; int &gt;</td></tr>
+<tr class="memdesc:a053df470fc793505d56063b2fad8578a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the width of the supplied string, if it was rendered using the font.  <a href="classcen_1_1font.html#a053df470fc793505d56063b2fad8578a">More...</a><br /></td></tr>
+<tr class="separator:a053df470fc793505d56063b2fad8578a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec78fd68e8138caa298a732ed724edb3"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#aec78fd68e8138caa298a732ed724edb3">string_height</a> (const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; str) const noexcept -&gt; std::optional&lt; int &gt;</td></tr>
+<tr class="memdesc:aec78fd68e8138caa298a732ed724edb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the height of the supplied string, if it was rendered using the font.  <a href="classcen_1_1font.html#aec78fd68e8138caa298a732ed724edb3">More...</a><br /></td></tr>
+<tr class="separator:aec78fd68e8138caa298a732ed724edb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a250ef81c6c70a335c33322a69a81b099"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a250ef81c6c70a335c33322a69a81b099">string_height</a> (const std::string &amp;str) const noexcept -&gt; std::optional&lt; int &gt;</td></tr>
+<tr class="memdesc:a250ef81c6c70a335c33322a69a81b099"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the height of the supplied string, if it was rendered using the font.  <a href="classcen_1_1font.html#a250ef81c6c70a335c33322a69a81b099">More...</a><br /></td></tr>
+<tr class="separator:a250ef81c6c70a335c33322a69a81b099"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Conversions</h2></td></tr>
 <tr class="memitem:a526e66094e1da0864cb825a4eca79c69"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1font.html#a526e66094e1da0864cb825a4eca79c69">operator TTF_Font *</a> () noexcept</td></tr>
 <tr class="memdesc:a526e66094e1da0864cb825a4eca79c69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts to <code>TTF_Font*</code>.  <a href="classcen_1_1font.html#a526e66094e1da0864cb825a4eca79c69">More...</a><br /></td></tr>
 <tr class="separator:a526e66094e1da0864cb825a4eca79c69"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -240,43 +242,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a89fef7ac91a9482382fcbca9cd426a00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Represents a True Type font. </p>
+<div class="textblock"><p>Represents a TrueType font. </p>
+<p>This class provides information about a TrueType font, but it can also be used for text rendering and obtaining information about the size of rendered strings, etc.</p>
 <dl class="section see"><dt>See also</dt><dd><code>TTF_Font</code></dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-</div><h2 class="groupheader">Member Enumeration Documentation</h2>
-<a id="a29790e6a0a8eb8bbdde902091a69eed4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29790e6a0a8eb8bbdde902091a69eed4">&#9670;&nbsp;</a></span>hint</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="classcen_1_1font.html#a29790e6a0a8eb8bbdde902091a69eed4">cen::font::hint</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Provides different possible TrueType font hint values. </p>
-<dl class="section since"><dt>Since</dt><dd>3.1.0</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>Centurion 6: Make this a normal enum?</dd></dl>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a29790e6a0a8eb8bbdde902091a69eed4afea087517c26fadd409bd4b9dc642555"></a>normal&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a29790e6a0a8eb8bbdde902091a69eed4a2ac43aa43bf473f9a9c09b4b608619d3"></a>light&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a29790e6a0a8eb8bbdde902091a69eed4a654db8a14a5f633b9ba85ec92dc51f7c"></a>mono&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a29790e6a0a8eb8bbdde902091a69eed4a334c4a4c42fdb79d7ebc3e73b517e6f8"></a>none&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-</div>
-</div>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7d1d413bae82a92411f4cea801221fb4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7d1d413bae82a92411f4cea801221fb4">&#9670;&nbsp;</a></span>font() <span class="overload">[1/2]</span></h2>
 
@@ -289,7 +259,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">cen::font::font </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
           <td class="paramname"><em>file</em>, </td>
         </tr>
         <tr>
@@ -321,7 +291,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">exception</td><td>if the supplied size is not greater than zero. </td></tr>
+    <tr><td class="paramname"><a class="el" href="classcen_1_1cen__error.html" title="The base of all exceptions explicitly thrown by the library.">cen_error</a></td><td>if the supplied size is not greater than zero. </td></tr>
     <tr><td class="paramname"><a class="el" href="classcen_1_1ttf__error.html" title="Represents an error related to the SDL2_ttf library.">ttf_error</a></td><td>if the font cannot be loaded.</td></tr>
   </table>
   </dd>
@@ -374,7 +344,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">exception</td><td>if the supplied size is not greater than zero. </td></tr>
+    <tr><td class="paramname"><a class="el" href="classcen_1_1cen__error.html" title="The base of all exceptions explicitly thrown by the library.">cen_error</a></td><td>if the supplied size is not greater than zero. </td></tr>
     <tr><td class="paramname"><a class="el" href="classcen_1_1ttf__error.html" title="Represents an error related to the SDL2_ttf library.">ttf_error</a></td><td>if the font cannot be loaded.</td></tr>
   </table>
   </dd>
@@ -459,7 +429,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">auto cen::font::family_name </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a>
+          <td> const -&gt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a>
   </td>
         </tr>
       </table>
@@ -506,8 +476,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a467e5b4d7a43c4c38d6f4d6401eb1437"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a467e5b4d7a43c4c38d6f4d6401eb1437">&#9670;&nbsp;</a></span>font_hinting()</h2>
+<a id="acc49f52ce7836da7b60da51701725c6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc49f52ce7836da7b60da51701725c6b">&#9670;&nbsp;</a></span>font_hinting()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -519,7 +489,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">auto cen::font::font_hinting </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="classcen_1_1font.html#a29790e6a0a8eb8bbdde902091a69eed4">hint</a>
+          <td> const -&gt; <a class="el" href="group__video.html#gabacebf68fce34449f67d1016a835796a">font_hint</a>
   </td>
         </tr>
       </table>
@@ -582,7 +552,7 @@ Don't take ownership of the returned pointer!</dd></dl>
         <tr>
           <td class="memname">auto cen::font::get_metrics </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#af3098f6170a7917381990e5abaf025e9">unicode</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__video.html#gaf3098f6170a7917381990e5abaf025e9">unicode</a>&#160;</td>
           <td class="paramname"><em>glyph</em></td><td>)</td>
           <td> const -&gt; std::optional&lt;<a class="el" href="structcen_1_1glyph__metrics.html">glyph_metrics</a>&gt;
   </td>
@@ -740,7 +710,7 @@ Don't take ownership of the returned pointer!</dd></dl>
         <tr>
           <td class="memname">auto cen::font::is_glyph_provided </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#af3098f6170a7917381990e5abaf025e9">unicode</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__video.html#gaf3098f6170a7917381990e5abaf025e9">unicode</a>&#160;</td>
           <td class="paramname"><em>glyph</em></td><td>)</td>
           <td> const -&gt; bool
   </td>
@@ -897,13 +867,13 @@ Don't take ownership of the returned pointer!</dd></dl>
         <tr>
           <td class="memname">auto cen::font::kerning_amount </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#af3098f6170a7917381990e5abaf025e9">unicode</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__video.html#gaf3098f6170a7917381990e5abaf025e9">unicode</a>&#160;</td>
           <td class="paramname"><em>firstGlyph</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#af3098f6170a7917381990e5abaf025e9">unicode</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__video.html#gaf3098f6170a7917381990e5abaf025e9">unicode</a>&#160;</td>
           <td class="paramname"><em>secondGlyph</em>&#160;</td>
         </tr>
         <tr>
@@ -1116,8 +1086,8 @@ Don't take ownership of the returned pointer!</dd></dl>
 
 </div>
 </div>
-<a id="ad7d132544a6bbd714c7e0cd38dbcd284"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7d132544a6bbd714c7e0cd38dbcd284">&#9670;&nbsp;</a></span>set_font_hinting()</h2>
+<a id="afecf75f31085cdf42b20985b71f9c13c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afecf75f31085cdf42b20985b71f9c13c">&#9670;&nbsp;</a></span>set_font_hinting()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1128,7 +1098,7 @@ Don't take ownership of the returned pointer!</dd></dl>
         <tr>
           <td class="memname">void cen::font::set_font_hinting </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1font.html#a29790e6a0a8eb8bbdde902091a69eed4">hint</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__video.html#gabacebf68fce34449f67d1016a835796a">font_hint</a>&#160;</td>
           <td class="paramname"><em>hint</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1357,8 +1327,8 @@ Don't take ownership of the returned pointer!</dd></dl>
 
 </div>
 </div>
-<a id="a2729bd79750becf5ef4554b251e3bd8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2729bd79750becf5ef4554b251e3bd8e">&#9670;&nbsp;</a></span>string_height() <span class="overload">[1/2]</span></h2>
+<a id="aec78fd68e8138caa298a732ed724edb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec78fd68e8138caa298a732ed724edb3">&#9670;&nbsp;</a></span>string_height() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1369,9 +1339,9 @@ Don't take ownership of the returned pointer!</dd></dl>
         <tr>
           <td class="memname">auto cen::font::string_height </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
           <td class="paramname"><em>str</em></td><td>)</td>
-          <td> const -&gt; int
+          <td> const -&gt; std::optional&lt;int&gt;
   </td>
         </tr>
       </table>
@@ -1389,13 +1359,13 @@ Don't take ownership of the returned pointer!</dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the height of the supplied string, if it was rendered using the font.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the height of the supplied string, if it was rendered using the font; <code>std::nullopt</code> if something goes wrong.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="adb4e6c5cf77f42fe417e93e392c576ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb4e6c5cf77f42fe417e93e392c576ba">&#9670;&nbsp;</a></span>string_height() <span class="overload">[2/2]</span></h2>
+<a id="a250ef81c6c70a335c33322a69a81b099"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a250ef81c6c70a335c33322a69a81b099">&#9670;&nbsp;</a></span>string_height() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1408,7 +1378,7 @@ Don't take ownership of the returned pointer!</dd></dl>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>str</em></td><td>)</td>
-          <td> const -&gt; int
+          <td> const -&gt; std::optional&lt;int&gt;
   </td>
         </tr>
       </table>
@@ -1426,13 +1396,13 @@ Don't take ownership of the returned pointer!</dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the height of the supplied string, if it was rendered using the font.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the height of the supplied string, if it was rendered using the font; <code>std::nullopt</code> if something goes wrong.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
 
 </div>
 </div>
-<a id="a4be7ce2bf74bae582d22b032df067e22"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4be7ce2bf74bae582d22b032df067e22">&#9670;&nbsp;</a></span>string_size() <span class="overload">[1/2]</span></h2>
+<a id="a475a8ecf08787646121145090fbf65a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a475a8ecf08787646121145090fbf65a1">&#9670;&nbsp;</a></span>string_size() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1443,9 +1413,9 @@ Don't take ownership of the returned pointer!</dd></dl>
         <tr>
           <td class="memname">auto cen::font::string_size </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
           <td class="paramname"><em>str</em></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__geometry.html#gac34681d6cc8018e07938793d4c420369">iarea</a>
+          <td> const -&gt; std::optional&lt;<a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>&gt;
   </td>
         </tr>
       </table>
@@ -1463,13 +1433,13 @@ Don't take ownership of the returned pointer!</dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the size of the string, if it was rendered using the font.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the size of the string, if it was rendered using the font; <code>std::nullopt</code> if something goes wrong.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="a2893f61d97f3f329fdfe649970a85064"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2893f61d97f3f329fdfe649970a85064">&#9670;&nbsp;</a></span>string_size() <span class="overload">[2/2]</span></h2>
+<a id="a230dc8867644aeb22a30b2e5bed2b9de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a230dc8867644aeb22a30b2e5bed2b9de">&#9670;&nbsp;</a></span>string_size() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1482,7 +1452,7 @@ Don't take ownership of the returned pointer!</dd></dl>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>str</em></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__geometry.html#gac34681d6cc8018e07938793d4c420369">iarea</a>
+          <td> const -&gt; std::optional&lt;<a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>&gt;
   </td>
         </tr>
       </table>
@@ -1500,13 +1470,13 @@ Don't take ownership of the returned pointer!</dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the size of the string, if it was rendered using the font.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the size of the string, if it was rendered using the font; <code>std::nullopt</code> if something goes wrong.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
 
 </div>
 </div>
-<a id="aae906e64b99fdcc6f3fb1fba21ca2e4b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae906e64b99fdcc6f3fb1fba21ca2e4b">&#9670;&nbsp;</a></span>string_width() <span class="overload">[1/2]</span></h2>
+<a id="a14e0a1ada27a721a46b2bb9742fa83b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14e0a1ada27a721a46b2bb9742fa83b1">&#9670;&nbsp;</a></span>string_width() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1517,9 +1487,9 @@ Don't take ownership of the returned pointer!</dd></dl>
         <tr>
           <td class="memname">auto cen::font::string_width </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#a9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
           <td class="paramname"><em>str</em></td><td>)</td>
-          <td> const -&gt; int
+          <td> const -&gt; std::optional&lt;int&gt;
   </td>
         </tr>
       </table>
@@ -1537,13 +1507,13 @@ Don't take ownership of the returned pointer!</dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the width of the supplied string, if it was rendered using the font.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the width of the supplied string, if it was rendered using the font; <code>std::nullopt</code> if something goes wrong.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="a49130cd5ff26a637cb806eb9bb260ead"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49130cd5ff26a637cb806eb9bb260ead">&#9670;&nbsp;</a></span>string_width() <span class="overload">[2/2]</span></h2>
+<a id="a053df470fc793505d56063b2fad8578a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a053df470fc793505d56063b2fad8578a">&#9670;&nbsp;</a></span>string_width() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1556,7 +1526,7 @@ Don't take ownership of the returned pointer!</dd></dl>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>str</em></td><td>)</td>
-          <td> const -&gt; int
+          <td> const -&gt; std::optional&lt;int&gt;
   </td>
         </tr>
       </table>
@@ -1574,7 +1544,7 @@ Don't take ownership of the returned pointer!</dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the width of the supplied string, if it was rendered using the font.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the width of the supplied string, if it was rendered using the font; <code>std::nullopt</code> if something goes wrong.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
 
 </div>
@@ -1592,7 +1562,7 @@ Don't take ownership of the returned pointer!</dd></dl>
           <td class="memname">auto cen::font::style_name </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="namespacecen.html#a24997ff418228ddb51ae13e2805288a4">czstring</a>
+          <td> const -&gt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a>
   </td>
         </tr>
       </table>
@@ -1611,7 +1581,7 @@ Don't take ownership of the returned pointer!</dd></dl>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/centurion/<a class="el" href="font_8hpp_source.html">font.hpp</a></li>
+<li>src/centurion/video/<a class="el" href="font_8hpp_source.html">font.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

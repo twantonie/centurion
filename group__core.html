@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -86,8 +86,12 @@ $(function() {
 
 <div class="header">
   <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">Core</div>  </div>
@@ -97,32 +101,295 @@ $(function() {
 <p>Contains entities considered to be fundamental for the library.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacecen_1_1literals"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1literals.html">cen::literals</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacecen_1_1log"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1log.html">cen::log</a></td></tr>
+<tr class="memdesc:namespacecen_1_1log"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains easy-to-use logging facilities. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1cen__error.html">cen::cen_error</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The base of all exceptions explicitly thrown by the library.  <a href="classcen_1_1cen__error.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1sdl__error.html">cen::sdl_error</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an error related to the core SDL2 library.  <a href="classcen_1_1sdl__error.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1img__error.html">cen::img_error</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an error related to the SDL2_image library.  <a href="classcen_1_1img__error.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1ttf__error.html">cen::ttf_error</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an error related to the SDL2_ttf library.  <a href="classcen_1_1ttf__error.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1mix__error.html">cen::mix_error</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an error related to the SDL2_mixer library.  <a href="classcen_1_1mix__error.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcen_1_1config.html">cen::config</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to specify how the library is initialized.  <a href="structcen_1_1config.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1library.html">cen::library</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to initialize and de-initialize the library.  <a href="classcen_1_1library.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1result.html">cen::result</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A simple indicator for the result of different operations.  <a href="classcen_1_1result.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1sdl__string.html">cen::sdl_string</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a string obtained from SDL, usually a <code>char*</code> that has to be freed using <code>SDL_free</code>.  <a href="classcen_1_1sdl__string.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structversion.html">version</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a set of major/minor/patch version numbers.  <a href="structversion.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ga94c0c24ba0471cd142eec81f9bfd12d4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga94c0c24ba0471cd142eec81f9bfd12d4">CENTURION_USE_PRAGMA_ONCE</a></td></tr>
-<tr class="memdesc:ga94c0c24ba0471cd142eec81f9bfd12d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This macro indicates whether or not Centurion headers will use <code>#pragma once</code> in addition with the traditional include guards. By default, this macro is defined.  <a href="group__core.html#ga94c0c24ba0471cd142eec81f9bfd12d4">More...</a><br /></td></tr>
-<tr class="separator:ga94c0c24ba0471cd142eec81f9bfd12d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga155fb52e5f1cc04d0fa5880deb5c663a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga155fb52e5f1cc04d0fa5880deb5c663a">CENTURION_USE_DEBUG_LOGGING_MACROS</a></td></tr>
-<tr class="memdesc:ga155fb52e5f1cc04d0fa5880deb5c663a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This macro indicates whether or not debug-only logging macros will be defined. These can be found in the <code><a class="el" href="log_8hpp.html">log.hpp</a></code> header. By default, this macro is defined.  <a href="group__core.html#ga155fb52e5f1cc04d0fa5880deb5c663a">More...</a><br /></td></tr>
-<tr class="separator:ga155fb52e5f1cc04d0fa5880deb5c663a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga89f2454d679c9715e3fbdb8438d820ba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga89f2454d679c9715e3fbdb8438d820ba">CENTURION_SDL_VERSION_IS</a>(x,  y,  z)</td></tr>
-<tr class="memdesc:ga89f2454d679c9715e3fbdb8438d820ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">This macro is meant to be used when conditionally including code for a specific version of SDL. It is useful for applying workarounds.  <a href="group__core.html#ga89f2454d679c9715e3fbdb8438d820ba">More...</a><br /></td></tr>
-<tr class="separator:ga89f2454d679c9715e3fbdb8438d820ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5f87c352e07b5b378fc4637ee8d6386a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga5f87c352e07b5b378fc4637ee8d6386a">CENTURION_LOG_INFO</a>(fmt, ...)&#160;&#160;&#160;<a class="el" href="group__core.html#gade61dd59932e5273e2442b8691a4fe14">cen::log::info</a>(fmt, __VA_ARGS__)</td></tr>
+<tr class="memdesc:ga5f87c352e07b5b378fc4637ee8d6386a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A debug-only macro that expands to <code><a class="el" href="group__core.html#gade61dd59932e5273e2442b8691a4fe14" title="Logs a message with priority::info and the specified category.">cen::log::info</a></code>.  <a href="group__core.html#ga5f87c352e07b5b378fc4637ee8d6386a">More...</a><br /></td></tr>
+<tr class="separator:ga5f87c352e07b5b378fc4637ee8d6386a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2df696db24d44a5f95727ebdb2c23834"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga2df696db24d44a5f95727ebdb2c23834">CENTURION_LOG_WARN</a>(fmt, ...)&#160;&#160;&#160;<a class="el" href="group__core.html#ga65e665db41c65b67e9eca0c10aba0d54">cen::log::warn</a>(fmt, __VA_ARGS__)</td></tr>
+<tr class="memdesc:ga2df696db24d44a5f95727ebdb2c23834"><td class="mdescLeft">&#160;</td><td class="mdescRight">A debug-only macro that expands to <code><a class="el" href="group__core.html#ga65e665db41c65b67e9eca0c10aba0d54" title="Logs a message with priority::warn and the specified category.">cen::log::warn</a></code>.  <a href="group__core.html#ga2df696db24d44a5f95727ebdb2c23834">More...</a><br /></td></tr>
+<tr class="separator:ga2df696db24d44a5f95727ebdb2c23834"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4e3d19b659d5345f278aac93311a56fa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga4e3d19b659d5345f278aac93311a56fa">CENTURION_LOG_VERBOSE</a>(fmt, ...)&#160;&#160;&#160;<a class="el" href="group__core.html#gaf6c0ead6e900adb312e4f9670b25ad2b">cen::log::verbose</a>(fmt, __VA_ARGS__)</td></tr>
+<tr class="memdesc:ga4e3d19b659d5345f278aac93311a56fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">A debug-only macro that expands to <code><a class="el" href="group__core.html#gaf6c0ead6e900adb312e4f9670b25ad2b" title="Logs a message with priority::verbose and the specified category.">cen::log::verbose</a></code>.  <a href="group__core.html#ga4e3d19b659d5345f278aac93311a56fa">More...</a><br /></td></tr>
+<tr class="separator:ga4e3d19b659d5345f278aac93311a56fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga71955e2201cee9494ba7425eace7c29c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga71955e2201cee9494ba7425eace7c29c">CENTURION_LOG_DEBUG</a>(fmt, ...)&#160;&#160;&#160;<a class="el" href="group__core.html#gadfb0045da7506b622ebf058fa740a352">cen::log::debug</a>(fmt, __VA_ARGS__)</td></tr>
+<tr class="memdesc:ga71955e2201cee9494ba7425eace7c29c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A debug-only macro that expands to <code><a class="el" href="group__core.html#gadfb0045da7506b622ebf058fa740a352" title="Logs a message with priority::debug and the specified category.">cen::log::debug</a></code>.  <a href="group__core.html#ga71955e2201cee9494ba7425eace7c29c">More...</a><br /></td></tr>
+<tr class="separator:ga71955e2201cee9494ba7425eace7c29c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaf9463acf118a57b29e678638c010147"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#gaaf9463acf118a57b29e678638c010147">CENTURION_LOG_CRITICAL</a>(fmt, ...)&#160;&#160;&#160;<a class="el" href="group__core.html#ga39c273922d2cbceaf98af455ce6d612f">cen::log::critical</a>(fmt, __VA_ARGS__)</td></tr>
+<tr class="memdesc:gaaf9463acf118a57b29e678638c010147"><td class="mdescLeft">&#160;</td><td class="mdescRight">A debug-only macro that expands to <code><a class="el" href="group__core.html#ga39c273922d2cbceaf98af455ce6d612f" title="Logs a message with priority::critical and the specified category.">cen::log::critical</a></code>.  <a href="group__core.html#gaaf9463acf118a57b29e678638c010147">More...</a><br /></td></tr>
+<tr class="separator:gaaf9463acf118a57b29e678638c010147"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6f0c2c40d23b43618b5d84c9a1b93689"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga6f0c2c40d23b43618b5d84c9a1b93689">CENTURION_LOG_ERROR</a>(fmt, ...)&#160;&#160;&#160;<a class="el" href="group__core.html#gac18f2b4a4c1d6fb4f50e09c7677a2671">cen::log::error</a>(fmt, __VA_ARGS__)</td></tr>
+<tr class="memdesc:ga6f0c2c40d23b43618b5d84c9a1b93689"><td class="mdescLeft">&#160;</td><td class="mdescRight">A debug-only macro that expands to <code><a class="el" href="group__core.html#gac18f2b4a4c1d6fb4f50e09c7677a2671" title="Logs a message with priority::error and the specified category.">cen::log::error</a></code>.  <a href="group__core.html#ga6f0c2c40d23b43618b5d84c9a1b93689">More...</a><br /></td></tr>
+<tr class="separator:ga6f0c2c40d23b43618b5d84c9a1b93689"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga51d61a41d7678b137b7ca3e9ab980839"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga51d61a41d7678b137b7ca3e9ab980839">CENTURION_HAS_STD_MEMORY_RESOURCE</a></td></tr>
 <tr class="memdesc:ga51d61a41d7678b137b7ca3e9ab980839"><td class="mdescLeft">&#160;</td><td class="mdescRight">This macro is defined if the <code>memory_resource</code> header is available.  <a href="group__core.html#ga51d61a41d7678b137b7ca3e9ab980839">More...</a><br /></td></tr>
 <tr class="separator:ga51d61a41d7678b137b7ca3e9ab980839"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga89f2454d679c9715e3fbdb8438d820ba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga89f2454d679c9715e3fbdb8438d820ba">CENTURION_SDL_VERSION_IS</a>(x,  y,  z)&#160;&#160;&#160;((SDL_MAJOR_VERSION == (x)) &amp;&amp; (SDL_MINOR_VERSION == (y)) &amp;&amp; (SDL_PATCHLEVEL == (z)))</td></tr>
+<tr class="memdesc:ga89f2454d679c9715e3fbdb8438d820ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">This macro is meant to be used when conditionally including code for a specific version of SDL. It is useful for applying workarounds.  <a href="group__core.html#ga89f2454d679c9715e3fbdb8438d820ba">More...</a><br /></td></tr>
+<tr class="separator:ga89f2454d679c9715e3fbdb8438d820ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabb128f43d118774119abcfc1b6850969"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#gabb128f43d118774119abcfc1b6850969">CENTURION_VERSION_MAJOR</a>&#160;&#160;&#160;6</td></tr>
+<tr class="memdesc:gabb128f43d118774119abcfc1b6850969"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expands into the current major version of the library.  <a href="group__core.html#gabb128f43d118774119abcfc1b6850969">More...</a><br /></td></tr>
+<tr class="separator:gabb128f43d118774119abcfc1b6850969"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8b16108dc2167d553f75de238ef34585"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga8b16108dc2167d553f75de238ef34585">CENTURION_VERSION_MINOR</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:ga8b16108dc2167d553f75de238ef34585"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expands into the current minor version of the library.  <a href="group__core.html#ga8b16108dc2167d553f75de238ef34585">More...</a><br /></td></tr>
+<tr class="separator:ga8b16108dc2167d553f75de238ef34585"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga96273196c331e9525ac52c5e3f457ac9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga96273196c331e9525ac52c5e3f457ac9">CENTURION_VERSION_PATCH</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:ga96273196c331e9525ac52c5e3f457ac9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expands into the current patch version of the library.  <a href="group__core.html#ga96273196c331e9525ac52c5e3f457ac9">More...</a><br /></td></tr>
+<tr class="separator:ga96273196c331e9525ac52c5e3f457ac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga72ac086ecf3b266a17145e696fbceacf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga72ac086ecf3b266a17145e696fbceacf">CENTURION_MAKE_VERSION_NUMBER</a></td></tr>
+<tr class="memdesc:ga72ac086ecf3b266a17145e696fbceacf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro for creating version numbers from a set of major/minor/patch numbers.  <a href="group__core.html#ga72ac086ecf3b266a17145e696fbceacf">More...</a><br /></td></tr>
+<tr class="separator:ga72ac086ecf3b266a17145e696fbceacf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae7e739c6265d5b1e9c59ea6f976a45f7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#gae7e739c6265d5b1e9c59ea6f976a45f7">CENTURION_VERSION_NUMBER</a></td></tr>
+<tr class="memdesc:gae7e739c6265d5b1e9c59ea6f976a45f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expands into a version number based on the current Centurion version.  <a href="group__core.html#gae7e739c6265d5b1e9c59ea6f976a45f7">More...</a><br /></td></tr>
+<tr class="separator:gae7e739c6265d5b1e9c59ea6f976a45f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab494819e16afcec9f847c66edb679cd4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#gab494819e16afcec9f847c66edb679cd4">CENTURION_VERSION_AT_LEAST</a></td></tr>
+<tr class="memdesc:gab494819e16afcec9f847c66edb679cd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This macro is intended to be used for conditional compilation, based on the Centurion version.  <a href="group__core.html#gab494819e16afcec9f847c66edb679cd4">More...</a><br /></td></tr>
+<tr class="separator:gab494819e16afcec9f847c66edb679cd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ga24997ff418228ddb51ae13e2805288a4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">cen::czstring</a> = const char *</td></tr>
+<tr class="memdesc:ga24997ff418228ddb51ae13e2805288a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for a const C-style null-terminated string.  <a href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">More...</a><br /></td></tr>
+<tr class="separator:ga24997ff418228ddb51ae13e2805288a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga68051bcb1a6cd89543bb13afb6cdd0a2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga68051bcb1a6cd89543bb13afb6cdd0a2">cen::zstring</a> = char *</td></tr>
+<tr class="memdesc:ga68051bcb1a6cd89543bb13afb6cdd0a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for a C-style null-terminated string.  <a href="group__core.html#ga68051bcb1a6cd89543bb13afb6cdd0a2">More...</a><br /></td></tr>
+<tr class="separator:ga68051bcb1a6cd89543bb13afb6cdd0a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7545e3b19148e7aa04c43e8dca24226a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga7545e3b19148e7aa04c43e8dca24226a"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga7545e3b19148e7aa04c43e8dca24226a">cen::enable_if_number_t</a> = std::enable_if_t&lt;!std::is_same_v&lt; T, bool &gt; &amp;&amp;(std::is_integral_v&lt; T &gt;||std::is_floating_point_v&lt; T &gt;), int &gt;</td></tr>
+<tr class="memdesc:ga7545e3b19148e7aa04c43e8dca24226a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables a template if the type is either integral of floating-point, but not a boolean.  <a href="group__core.html#ga7545e3b19148e7aa04c43e8dca24226a">More...</a><br /></td></tr>
+<tr class="separator:ga7545e3b19148e7aa04c43e8dca24226a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafce94e372a958cc90aa690615e81b3e5"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:gafce94e372a958cc90aa690615e81b3e5"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#gafce94e372a958cc90aa690615e81b3e5">cen::enable_if_pointer_v</a> = std::enable_if_t&lt; std::is_pointer_v&lt; T &gt;, int &gt;</td></tr>
+<tr class="memdesc:gafce94e372a958cc90aa690615e81b3e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables a template if the type is a pointer.  <a href="group__core.html#gafce94e372a958cc90aa690615e81b3e5">More...</a><br /></td></tr>
+<tr class="separator:gafce94e372a958cc90aa690615e81b3e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga321b1f0f88fb93fbbb8b527733132330"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Args&gt; </td></tr>
+<tr class="memitem:ga321b1f0f88fb93fbbb8b527733132330"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga321b1f0f88fb93fbbb8b527733132330">cen::enable_if_convertible_t</a> = std::enable_if_t&lt;(std::is_convertible_v&lt; T, Args &gt;||...), int &gt;</td></tr>
+<tr class="memdesc:ga321b1f0f88fb93fbbb8b527733132330"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables a template if T is convertible to any of the specified types.  <a href="group__core.html#ga321b1f0f88fb93fbbb8b527733132330">More...</a><br /></td></tr>
+<tr class="separator:ga321b1f0f88fb93fbbb8b527733132330"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9f195a3e65e79c88a96dd7b767dc0657"><td class="memTemplParams" colspan="2">template&lt;typename T , enable_if_pointer_v&lt; T &gt;  = 0&gt; </td></tr>
+<tr class="memitem:ga9f195a3e65e79c88a96dd7b767dc0657"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">cen::not_null</a> = T</td></tr>
+<tr class="memdesc:ga9f195a3e65e79c88a96dd7b767dc0657"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tag used to indicate that a pointer cannot be null.  <a href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">More...</a><br /></td></tr>
+<tr class="separator:ga9f195a3e65e79c88a96dd7b767dc0657"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga922c9ffa0c4b1b0dcaf50b7c6033a809"><td class="memTemplParams" colspan="2">template&lt;typename T , enable_if_pointer_v&lt; T &gt;  = 0&gt; </td></tr>
+<tr class="memitem:ga922c9ffa0c4b1b0dcaf50b7c6033a809"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga922c9ffa0c4b1b0dcaf50b7c6033a809">cen::owner</a> = T</td></tr>
+<tr class="memdesc:ga922c9ffa0c4b1b0dcaf50b7c6033a809"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tag used to denote ownership of raw pointers directly in code.  <a href="group__core.html#ga922c9ffa0c4b1b0dcaf50b7c6033a809">More...</a><br /></td></tr>
+<tr class="separator:ga922c9ffa0c4b1b0dcaf50b7c6033a809"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga00614d944c81543b03c7f2cb202fdc50"><td class="memTemplParams" colspan="2">template&lt;typename T , enable_if_pointer_v&lt; T &gt;  = 0&gt; </td></tr>
+<tr class="memitem:ga00614d944c81543b03c7f2cb202fdc50"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga00614d944c81543b03c7f2cb202fdc50">cen::maybe_owner</a> = T</td></tr>
+<tr class="memdesc:ga00614d944c81543b03c7f2cb202fdc50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tag used to denote conditional ownership of raw pointers directly in code.  <a href="group__core.html#ga00614d944c81543b03c7f2cb202fdc50">More...</a><br /></td></tr>
+<tr class="separator:ga00614d944c81543b03c7f2cb202fdc50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ga910862a214870faa7b625862de858c52"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga910862a214870faa7b625862de858c52">cen::log_priority</a> : int { <br />
+&#160;&#160;<a class="el" href="group__core.html#gga910862a214870faa7b625862de858c52acaf9b6b99962bf5c2264824231d7a40c">cen::log_priority::info</a> = SDL_LOG_PRIORITY_INFO, 
+<br />
+&#160;&#160;<a class="el" href="group__core.html#gga910862a214870faa7b625862de858c52a1ea4c3ab05ee0c6d4de30740443769cb">cen::log_priority::warn</a> = SDL_LOG_PRIORITY_WARN, 
+<br />
+&#160;&#160;<a class="el" href="group__core.html#gga910862a214870faa7b625862de858c52a2c7aea4237e25b4f8ee3b0bf77d6fed0">cen::log_priority::verbose</a> = SDL_LOG_PRIORITY_VERBOSE, 
+<br />
+&#160;&#160;<a class="el" href="group__core.html#gga910862a214870faa7b625862de858c52aad42f6697b035b7580e4fef93be20b4d">cen::log_priority::debug</a> = SDL_LOG_PRIORITY_DEBUG, 
+<br />
+&#160;&#160;<a class="el" href="group__core.html#gga910862a214870faa7b625862de858c52a7e85bcb66fb9a809d5ab4f62a8b8bea8">cen::log_priority::critical</a> = SDL_LOG_PRIORITY_CRITICAL, 
+<br />
+&#160;&#160;<a class="el" href="group__core.html#gga910862a214870faa7b625862de858c52acb5e100e5a9a3e7f6d1fd97512215282">cen::log_priority::error</a> = SDL_LOG_PRIORITY_ERROR
+<br />
+ }</td></tr>
+<tr class="memdesc:ga910862a214870faa7b625862de858c52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides values that represent different logging priorities.  <a href="group__core.html#ga910862a214870faa7b625862de858c52">More...</a><br /></td></tr>
+<tr class="separator:ga910862a214870faa7b625862de858c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5a2bed2933e3748ad2a77961417a102b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">cen::log_category</a> : int { <br />
+&#160;&#160;<a class="el" href="group__core.html#gga5a2bed2933e3748ad2a77961417a102bad2a57dc1d883fd21fb9951699df71cc7">cen::log_category::app</a> = SDL_LOG_CATEGORY_APPLICATION, 
+<br />
+&#160;&#160;<a class="el" href="group__core.html#gga5a2bed2933e3748ad2a77961417a102bacb5e100e5a9a3e7f6d1fd97512215282">cen::log_category::error</a> = SDL_LOG_CATEGORY_ERROR, 
+<br />
+&#160;&#160;<a class="el" href="group__core.html#gga5a2bed2933e3748ad2a77961417a102bae44e4612f62d2fb8f8738bab118a9850">cen::log_category::assert</a> = SDL_LOG_CATEGORY_ASSERT, 
+<br />
+&#160;&#160;<a class="el" href="group__core.html#gga5a2bed2933e3748ad2a77961417a102ba54b53072540eeeb8f8e9343e71f28176">cen::log_category::system</a> = SDL_LOG_CATEGORY_SYSTEM, 
+<br />
+&#160;&#160;<a class="el" href="group__core.html#gga5a2bed2933e3748ad2a77961417a102baa5ca0b5894324f8bb54bb9fffad29d1e">cen::log_category::audio</a> = SDL_LOG_CATEGORY_AUDIO, 
+<br />
+&#160;&#160;<a class="el" href="group__core.html#gga5a2bed2933e3748ad2a77961417a102ba421b47ffd946ca083b65cd668c6b17e6">cen::log_category::video</a> = SDL_LOG_CATEGORY_VIDEO, 
+<br />
+&#160;&#160;<a class="el" href="group__core.html#gga5a2bed2933e3748ad2a77961417a102ba9e5f0bb330344d580b9e30d338d6ab6d">cen::log_category::render</a> = SDL_LOG_CATEGORY_RENDER, 
+<br />
+&#160;&#160;<a class="el" href="group__core.html#gga5a2bed2933e3748ad2a77961417a102baa43c1b0aa53a0c908810c06ab1ff3967">cen::log_category::input</a> = SDL_LOG_CATEGORY_INPUT, 
+<br />
+&#160;&#160;<a class="el" href="group__core.html#gga5a2bed2933e3748ad2a77961417a102ba098f6bcd4621d373cade4e832627b4f6">cen::log_category::test</a> = SDL_LOG_CATEGORY_TEST, 
+<br />
+&#160;&#160;<a class="el" href="group__core.html#gga5a2bed2933e3748ad2a77961417a102babc957e26ff41470c556ee5d09e96880b">cen::log_category::misc</a> = SDL_LOG_CATEGORY_CUSTOM
+<br />
+ }</td></tr>
+<tr class="memdesc:ga5a2bed2933e3748ad2a77961417a102b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides values that represent different logging categories.  <a href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">More...</a><br /></td></tr>
+<tr class="separator:ga5a2bed2933e3748ad2a77961417a102b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga10fbba7e12ccd2e8cee2d661d629a1da"><td class="memTemplParams" colspan="2">template&lt;typename To , typename From &gt; </td></tr>
+<tr class="memitem:ga10fbba7e12ccd2e8cee2d661d629a1da"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga10fbba7e12ccd2e8cee2d661d629a1da">cen::cast</a> (const From &amp;from) noexcept -&gt; To</td></tr>
+<tr class="memdesc:ga10fbba7e12ccd2e8cee2d661d629a1da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts a value to a value of another type.  <a href="group__core.html#ga10fbba7e12ccd2e8cee2d661d629a1da">More...</a><br /></td></tr>
+<tr class="separator:ga10fbba7e12ccd2e8cee2d661d629a1da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf1f62ce7a6598d0b25a1a037ef819ff0"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#gaf1f62ce7a6598d0b25a1a037ef819ff0">cen::str_or_na</a> (const <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> str) noexcept -&gt; <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;</td></tr>
+<tr class="memdesc:gaf1f62ce7a6598d0b25a1a037ef819ff0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simply returns the string if it isn't null, returning a placeholder otherwise.  <a href="group__core.html#gaf1f62ce7a6598d0b25a1a037ef819ff0">More...</a><br /></td></tr>
+<tr class="separator:gaf1f62ce7a6598d0b25a1a037ef819ff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3764941d9ec9f936c62296ed6490ce70"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga3764941d9ec9f936c62296ed6490ce70"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga3764941d9ec9f936c62296ed6490ce70">cen::isize</a> (const T &amp;container) noexcept(noexcept(container.size())) -&gt; int</td></tr>
+<tr class="memdesc:ga3764941d9ec9f936c62296ed6490ce70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtains the size of a container as an <code>int</code>.  <a href="group__core.html#ga3764941d9ec9f936c62296ed6490ce70">More...</a><br /></td></tr>
+<tr class="separator:ga3764941d9ec9f936c62296ed6490ce70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga41ba5ae32529129a98d415f0abcb9a34"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:ga41ba5ae32529129a98d415f0abcb9a34"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga41ba5ae32529129a98d415f0abcb9a34">cen::log::msg</a> (const <a class="el" href="group__core.html#ga910862a214870faa7b625862de858c52">log_priority</a> priority, const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a> category, const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
+<tr class="memdesc:ga41ba5ae32529129a98d415f0abcb9a34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with the specified priority and category.  <a href="group__core.html#ga41ba5ae32529129a98d415f0abcb9a34">More...</a><br /></td></tr>
+<tr class="separator:ga41ba5ae32529129a98d415f0abcb9a34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gade61dd59932e5273e2442b8691a4fe14"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:gade61dd59932e5273e2442b8691a4fe14"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#gade61dd59932e5273e2442b8691a4fe14">cen::log::info</a> (const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a> category, const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
+<tr class="memdesc:gade61dd59932e5273e2442b8691a4fe14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with <code>priority::info</code> and the specified category.  <a href="group__core.html#gade61dd59932e5273e2442b8691a4fe14">More...</a><br /></td></tr>
+<tr class="separator:gade61dd59932e5273e2442b8691a4fe14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5f21c8844d4cc7a49018aa8d6bc35fac"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:ga5f21c8844d4cc7a49018aa8d6bc35fac"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga5f21c8844d4cc7a49018aa8d6bc35fac">cen::log::info</a> (const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
+<tr class="memdesc:ga5f21c8844d4cc7a49018aa8d6bc35fac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with <code>priority::info</code> and <code>category::app</code>.  <a href="group__core.html#ga5f21c8844d4cc7a49018aa8d6bc35fac">More...</a><br /></td></tr>
+<tr class="separator:ga5f21c8844d4cc7a49018aa8d6bc35fac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga65e665db41c65b67e9eca0c10aba0d54"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:ga65e665db41c65b67e9eca0c10aba0d54"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga65e665db41c65b67e9eca0c10aba0d54">cen::log::warn</a> (const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a> category, const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
+<tr class="memdesc:ga65e665db41c65b67e9eca0c10aba0d54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with <code>priority::warn</code> and the specified category.  <a href="group__core.html#ga65e665db41c65b67e9eca0c10aba0d54">More...</a><br /></td></tr>
+<tr class="separator:ga65e665db41c65b67e9eca0c10aba0d54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadcd98acb2c7f7efe09ed98d8b0067400"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:gadcd98acb2c7f7efe09ed98d8b0067400"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#gadcd98acb2c7f7efe09ed98d8b0067400">cen::log::warn</a> (const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
+<tr class="memdesc:gadcd98acb2c7f7efe09ed98d8b0067400"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with <code>priority::warn</code> and <code>category::app</code>.  <a href="group__core.html#gadcd98acb2c7f7efe09ed98d8b0067400">More...</a><br /></td></tr>
+<tr class="separator:gadcd98acb2c7f7efe09ed98d8b0067400"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf6c0ead6e900adb312e4f9670b25ad2b"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:gaf6c0ead6e900adb312e4f9670b25ad2b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#gaf6c0ead6e900adb312e4f9670b25ad2b">cen::log::verbose</a> (const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a> category, const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
+<tr class="memdesc:gaf6c0ead6e900adb312e4f9670b25ad2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with <code>priority::verbose</code> and the specified category.  <a href="group__core.html#gaf6c0ead6e900adb312e4f9670b25ad2b">More...</a><br /></td></tr>
+<tr class="separator:gaf6c0ead6e900adb312e4f9670b25ad2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaad84b2f3233c32ab0994cfa3320d5456"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:gaad84b2f3233c32ab0994cfa3320d5456"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#gaad84b2f3233c32ab0994cfa3320d5456">cen::log::verbose</a> (const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
+<tr class="memdesc:gaad84b2f3233c32ab0994cfa3320d5456"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with <code>priority::verbose</code> and <code>category::app</code>.  <a href="group__core.html#gaad84b2f3233c32ab0994cfa3320d5456">More...</a><br /></td></tr>
+<tr class="separator:gaad84b2f3233c32ab0994cfa3320d5456"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadfb0045da7506b622ebf058fa740a352"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:gadfb0045da7506b622ebf058fa740a352"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#gadfb0045da7506b622ebf058fa740a352">cen::log::debug</a> (const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a> category, const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
+<tr class="memdesc:gadfb0045da7506b622ebf058fa740a352"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with <code>priority::debug</code> and the specified category.  <a href="group__core.html#gadfb0045da7506b622ebf058fa740a352">More...</a><br /></td></tr>
+<tr class="separator:gadfb0045da7506b622ebf058fa740a352"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2858b6ecbdcf0244ec103543dc67cd92"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:ga2858b6ecbdcf0244ec103543dc67cd92"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga2858b6ecbdcf0244ec103543dc67cd92">cen::log::debug</a> (const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
+<tr class="memdesc:ga2858b6ecbdcf0244ec103543dc67cd92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with <code>priority::debug</code> and <code>category::app</code>.  <a href="group__core.html#ga2858b6ecbdcf0244ec103543dc67cd92">More...</a><br /></td></tr>
+<tr class="separator:ga2858b6ecbdcf0244ec103543dc67cd92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga39c273922d2cbceaf98af455ce6d612f"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:ga39c273922d2cbceaf98af455ce6d612f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga39c273922d2cbceaf98af455ce6d612f">cen::log::critical</a> (const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a> category, const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
+<tr class="memdesc:ga39c273922d2cbceaf98af455ce6d612f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with <code>priority::critical</code> and the specified category.  <a href="group__core.html#ga39c273922d2cbceaf98af455ce6d612f">More...</a><br /></td></tr>
+<tr class="separator:ga39c273922d2cbceaf98af455ce6d612f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga54b95f153ded86556e4e2f6cd114c6c2"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:ga54b95f153ded86556e4e2f6cd114c6c2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga54b95f153ded86556e4e2f6cd114c6c2">cen::log::critical</a> (const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
+<tr class="memdesc:ga54b95f153ded86556e4e2f6cd114c6c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with <code>priority::critical</code> and <code>category::app</code> .  <a href="group__core.html#ga54b95f153ded86556e4e2f6cd114c6c2">More...</a><br /></td></tr>
+<tr class="separator:ga54b95f153ded86556e4e2f6cd114c6c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac18f2b4a4c1d6fb4f50e09c7677a2671"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:gac18f2b4a4c1d6fb4f50e09c7677a2671"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#gac18f2b4a4c1d6fb4f50e09c7677a2671">cen::log::error</a> (const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a> category, const <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> fmt, Args &amp;&amp;... args) noexcept</td></tr>
+<tr class="memdesc:gac18f2b4a4c1d6fb4f50e09c7677a2671"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with <code>priority::error</code> and the specified category.  <a href="group__core.html#gac18f2b4a4c1d6fb4f50e09c7677a2671">More...</a><br /></td></tr>
+<tr class="separator:gac18f2b4a4c1d6fb4f50e09c7677a2671"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga45887157534b2b7076a003d5c388abf6"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:ga45887157534b2b7076a003d5c388abf6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga45887157534b2b7076a003d5c388abf6">cen::log::error</a> (const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; fmt, Args &amp;&amp;... args) noexcept</td></tr>
+<tr class="memdesc:ga45887157534b2b7076a003d5c388abf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with the <code>priority::error</code> and <code>category::app</code>.  <a href="group__core.html#ga45887157534b2b7076a003d5c388abf6">More...</a><br /></td></tr>
+<tr class="separator:ga45887157534b2b7076a003d5c388abf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab901117d958b0aec7afe5972bac80a47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#gab901117d958b0aec7afe5972bac80a47">cen::log::put</a> (const std::string &amp;str) noexcept</td></tr>
+<tr class="memdesc:gab901117d958b0aec7afe5972bac80a47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a string.  <a href="group__core.html#gab901117d958b0aec7afe5972bac80a47">More...</a><br /></td></tr>
+<tr class="separator:gab901117d958b0aec7afe5972bac80a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga13de2185c8438c11661e8892d5bdcb2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga13de2185c8438c11661e8892d5bdcb2a">cen::log::put</a> (const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt; str) noexcept</td></tr>
+<tr class="memdesc:ga13de2185c8438c11661e8892d5bdcb2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a string.  <a href="group__core.html#ga13de2185c8438c11661e8892d5bdcb2a">More...</a><br /></td></tr>
+<tr class="separator:ga13de2185c8438c11661e8892d5bdcb2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2c6a49a0bf8a79c4d3f4bd50ccc3fe3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga2c6a49a0bf8a79c4d3f4bd50ccc3fe3e">cen::log::reset_priorities</a> () noexcept</td></tr>
+<tr class="memdesc:ga2c6a49a0bf8a79c4d3f4bd50ccc3fe3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets all of the logging priorities.  <a href="group__core.html#ga2c6a49a0bf8a79c4d3f4bd50ccc3fe3e">More...</a><br /></td></tr>
+<tr class="separator:ga2c6a49a0bf8a79c4d3f4bd50ccc3fe3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga67d98c104b501a4f8c49c3790d2f1a57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga67d98c104b501a4f8c49c3790d2f1a57">cen::log::set_priority</a> (const <a class="el" href="group__core.html#ga910862a214870faa7b625862de858c52">log_priority</a> priority) noexcept</td></tr>
+<tr class="memdesc:ga67d98c104b501a4f8c49c3790d2f1a57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the priority of all categories.  <a href="group__core.html#ga67d98c104b501a4f8c49c3790d2f1a57">More...</a><br /></td></tr>
+<tr class="separator:ga67d98c104b501a4f8c49c3790d2f1a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga24cb37c6e03197bd2ddf20f7a43c3e99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga24cb37c6e03197bd2ddf20f7a43c3e99">cen::log::set_priority</a> (const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a> category, const <a class="el" href="group__core.html#ga910862a214870faa7b625862de858c52">log_priority</a> priority) noexcept</td></tr>
+<tr class="memdesc:ga24cb37c6e03197bd2ddf20f7a43c3e99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the priority of the specified category.  <a href="group__core.html#ga24cb37c6e03197bd2ddf20f7a43c3e99">More...</a><br /></td></tr>
+<tr class="separator:ga24cb37c6e03197bd2ddf20f7a43c3e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0e8d419318fe88bbd41b5e4ece6b5b8d"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga0e8d419318fe88bbd41b5e4ece6b5b8d">cen::log::get_priority</a> (const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a> category) noexcept -&gt; <a class="el" href="group__core.html#ga910862a214870faa7b625862de858c52">log_priority</a></td></tr>
+<tr class="memdesc:ga0e8d419318fe88bbd41b5e4ece6b5b8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the priority of the specified category.  <a href="group__core.html#ga0e8d419318fe88bbd41b5e4ece6b5b8d">More...</a><br /></td></tr>
+<tr class="separator:ga0e8d419318fe88bbd41b5e4ece6b5b8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga73d3977d4425f366611f0b2f2e7c2405"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga73d3977d4425f366611f0b2f2e7c2405">cen::log::max_message_size</a> () noexcept -&gt; int</td></tr>
+<tr class="memdesc:ga73d3977d4425f366611f0b2f2e7c2405"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the maximum size, i.e the maximum amount of characters that a string can contain and successfully be logged without being truncated.  <a href="group__core.html#ga73d3977d4425f366611f0b2f2e7c2405">More...</a><br /></td></tr>
+<tr class="separator:ga73d3977d4425f366611f0b2f2e7c2405"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf6e461d22ae78238e801b9367b8b4a2c"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#gaf6e461d22ae78238e801b9367b8b4a2c">cen::operator==</a> (const <a class="el" href="group__core.html#ga910862a214870faa7b625862de858c52">log_priority</a> lhs, const SDL_LogPriority rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:gaf6e461d22ae78238e801b9367b8b4a2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two log priorities values are the same.  <a href="group__core.html#gaf6e461d22ae78238e801b9367b8b4a2c">More...</a><br /></td></tr>
+<tr class="separator:gaf6e461d22ae78238e801b9367b8b4a2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga343e7daaacd57073420d714796291393"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga343e7daaacd57073420d714796291393">cen::operator==</a> (const SDL_LogPriority lhs, const <a class="el" href="group__core.html#ga910862a214870faa7b625862de858c52">log_priority</a> rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga343e7daaacd57073420d714796291393"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two log priorities values are the same.  <a href="group__core.html#ga343e7daaacd57073420d714796291393">More...</a><br /></td></tr>
+<tr class="separator:ga343e7daaacd57073420d714796291393"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2aa32fcee319fe760f0c24c936a48230"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga2aa32fcee319fe760f0c24c936a48230">cen::operator!=</a> (const <a class="el" href="group__core.html#ga910862a214870faa7b625862de858c52">log_priority</a> lhs, const SDL_LogPriority rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga2aa32fcee319fe760f0c24c936a48230"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two log priorities values aren't the same.  <a href="group__core.html#ga2aa32fcee319fe760f0c24c936a48230">More...</a><br /></td></tr>
+<tr class="separator:ga2aa32fcee319fe760f0c24c936a48230"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga99b6c84f5e3b19b1bfc1ceaa62fd17da"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga99b6c84f5e3b19b1bfc1ceaa62fd17da">cen::operator!=</a> (const SDL_LogPriority lhs, const <a class="el" href="group__core.html#ga910862a214870faa7b625862de858c52">log_priority</a> rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga99b6c84f5e3b19b1bfc1ceaa62fd17da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two log priorities values aren't the same.  <a href="group__core.html#ga99b6c84f5e3b19b1bfc1ceaa62fd17da">More...</a><br /></td></tr>
+<tr class="separator:ga99b6c84f5e3b19b1bfc1ceaa62fd17da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga982f1cbb4e415a203e6ebfd308e70771"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga982f1cbb4e415a203e6ebfd308e70771">cen::operator==</a> (const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a> lhs, const SDL_LogCategory rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga982f1cbb4e415a203e6ebfd308e70771"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two log category values are the same.  <a href="group__core.html#ga982f1cbb4e415a203e6ebfd308e70771">More...</a><br /></td></tr>
+<tr class="separator:ga982f1cbb4e415a203e6ebfd308e70771"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeb23156280d35536a6130f09762407a5"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#gaeb23156280d35536a6130f09762407a5">cen::operator==</a> (const SDL_LogCategory lhs, const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a> rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:gaeb23156280d35536a6130f09762407a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two log category values are the same.  <a href="group__core.html#gaeb23156280d35536a6130f09762407a5">More...</a><br /></td></tr>
+<tr class="separator:gaeb23156280d35536a6130f09762407a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5b552e7c88bfe0236d6115d6bd1b801c"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga5b552e7c88bfe0236d6115d6bd1b801c">cen::operator!=</a> (const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a> lhs, const SDL_LogCategory rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga5b552e7c88bfe0236d6115d6bd1b801c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two log category values are the same.  <a href="group__core.html#ga5b552e7c88bfe0236d6115d6bd1b801c">More...</a><br /></td></tr>
+<tr class="separator:ga5b552e7c88bfe0236d6115d6bd1b801c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga07f0a68789800cfd82da0eea92257101"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga07f0a68789800cfd82da0eea92257101">cen::operator!=</a> (const SDL_LogCategory lhs, const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a> rhs) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:ga07f0a68789800cfd82da0eea92257101"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the two log category values are the same.  <a href="group__core.html#ga07f0a68789800cfd82da0eea92257101">More...</a><br /></td></tr>
+<tr class="separator:ga07f0a68789800cfd82da0eea92257101"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga17ea7623d76209bdfd5e76545149f455"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga17ea7623d76209bdfd5e76545149f455">cen::to_string</a> (const <a class="el" href="classcen_1_1result.html">result</a> <a class="el" href="classcen_1_1result.html">result</a>) -&gt; std::string</td></tr>
+<tr class="memdesc:ga17ea7623d76209bdfd5e76545149f455"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string that represents a result value.  <a href="group__core.html#ga17ea7623d76209bdfd5e76545149f455">More...</a><br /></td></tr>
+<tr class="separator:ga17ea7623d76209bdfd5e76545149f455"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1d5c4e3cc81ce35f02e8fc0700387a97"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga1d5c4e3cc81ce35f02e8fc0700387a97">cen::operator&lt;&lt;</a> (std::ostream &amp;stream, const <a class="el" href="classcen_1_1result.html">result</a> <a class="el" href="classcen_1_1result.html">result</a>) -&gt; std::ostream &amp;</td></tr>
+<tr class="memdesc:ga1d5c4e3cc81ce35f02e8fc0700387a97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a textual representation of a result value using a stream.  <a href="group__core.html#ga1d5c4e3cc81ce35f02e8fc0700387a97">More...</a><br /></td></tr>
+<tr class="separator:ga1d5c4e3cc81ce35f02e8fc0700387a97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1b0d65474648eaf9b1bfe720e037eb9c"><td class="memTemplParams" colspan="2">template&lt;typename Enum , std::enable_if_t&lt; std::is_enum_v&lt; Enum &gt;, int &gt;  = 0&gt; </td></tr>
+<tr class="memitem:ga1b0d65474648eaf9b1bfe720e037eb9c"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga1b0d65474648eaf9b1bfe720e037eb9c">cen::to_underlying</a> (const Enum value) noexcept -&gt; std::underlying_type_t&lt; Enum &gt;</td></tr>
+<tr class="memdesc:ga1b0d65474648eaf9b1bfe720e037eb9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an enum value to an integral value using the underlying type.  <a href="group__core.html#ga1b0d65474648eaf9b1bfe720e037eb9c">More...</a><br /></td></tr>
+<tr class="separator:ga1b0d65474648eaf9b1bfe720e037eb9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:ga00bb6bb52f4cb3888d1e10e9efc6c853"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classcen_1_1result.html">result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga00bb6bb52f4cb3888d1e10e9efc6c853">cen::success</a> {true}</td></tr>
+<tr class="separator:ga00bb6bb52f4cb3888d1e10e9efc6c853"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad7045b2ab448aa975ec256f09abcd359"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classcen_1_1result.html">result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#gad7045b2ab448aa975ec256f09abcd359">cen::failure</a> {false}</td></tr>
+<tr class="separator:gad7045b2ab448aa975ec256f09abcd359"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae48f08d6dc9254716d0072deef2ac967"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#gae48f08d6dc9254716d0072deef2ac967">cen::config::initCore</a> {true}</td></tr>
 <tr class="separator:gae48f08d6dc9254716d0072deef2ac967"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga512355a8e23f2b3a8b9c1af042f3a9f3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga512355a8e23f2b3a8b9c1af042f3a9f3">cen::config::initImage</a> {true}</td></tr>
@@ -131,7 +398,7 @@ Variables</h2></td></tr>
 <tr class="separator:ga30f339c061ef087db37efadf76f44e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga260b6a62528e8fcae2cf9b7fee048725"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga260b6a62528e8fcae2cf9b7fee048725">cen::config::initTTF</a> {true}</td></tr>
 <tr class="separator:ga260b6a62528e8fcae2cf9b7fee048725"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1ed86a26cf1d09208a65a195932f5ba8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecen.html#ad1dcf848a9ee33237a96cde6b5a1d466">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga1ed86a26cf1d09208a65a195932f5ba8">cen::config::coreFlags</a> {SDL_INIT_EVERYTHING}</td></tr>
+<tr class="memitem:ga1ed86a26cf1d09208a65a195932f5ba8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga1ed86a26cf1d09208a65a195932f5ba8">cen::config::coreFlags</a> {SDL_INIT_EVERYTHING}</td></tr>
 <tr class="separator:ga1ed86a26cf1d09208a65a195932f5ba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab3404e40113ea6808ea85d8b32d358ab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#gab3404e40113ea6808ea85d8b32d358ab">cen::config::imageFlags</a> {IMG_INIT_PNG | IMG_INIT_JPG | IMG_INIT_TIF | IMG_INIT_WEBP}</td></tr>
 <tr class="separator:gab3404e40113ea6808ea85d8b32d358ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,7 +406,7 @@ Variables</h2></td></tr>
 <tr class="separator:ga43c0880388c8fe4eedca64951e9c432e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9ec403126d3c7b97ca99b3d446a13ccf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga9ec403126d3c7b97ca99b3d446a13ccf">cen::config::mixerFreq</a> {MIX_DEFAULT_FREQUENCY}</td></tr>
 <tr class="separator:ga9ec403126d3c7b97ca99b3d446a13ccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3fbf1d2aa61479ef35657b0416bf07d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">u16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga3fbf1d2aa61479ef35657b0416bf07d2">cen::config::mixerFormat</a> {MIX_DEFAULT_FORMAT}</td></tr>
+<tr class="memitem:ga3fbf1d2aa61479ef35657b0416bf07d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga3fbf1d2aa61479ef35657b0416bf07d2">cen::config::mixerFormat</a> {MIX_DEFAULT_FORMAT}</td></tr>
 <tr class="separator:ga3fbf1d2aa61479ef35657b0416bf07d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2e48c48e6ada5af983e078f2ef3c9d78"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga2e48c48e6ada5af983e078f2ef3c9d78">cen::config::mixerChannels</a> {MIX_DEFAULT_CHANNELS}</td></tr>
 <tr class="separator:ga2e48c48e6ada5af983e078f2ef3c9d78"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,22 +414,60 @@ Variables</h2></td></tr>
 <tr class="separator:gaa234a5c2836cf32a54d6fc50ef5ffc0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
-SDL version queries</h2></td></tr>
-<tr class="memitem:ga7d21feb1f73b72b2becec16f0c05eaab"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga7d21feb1f73b72b2becec16f0c05eaab">cen::sdl_linked_version</a> () noexcept -&gt; SDL_version</td></tr>
-<tr class="memdesc:ga7d21feb1f73b72b2becec16f0c05eaab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the version of SDL2 that is linked against the program.  <a href="group__core.html#ga7d21feb1f73b72b2becec16f0c05eaab">More...</a><br /></td></tr>
-<tr class="separator:ga7d21feb1f73b72b2becec16f0c05eaab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga19dd83d9132080f1d85421a2deb6a6c1"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga19dd83d9132080f1d85421a2deb6a6c1">cen::sdl_version</a> () noexcept -&gt; SDL_version</td></tr>
-<tr class="memdesc:ga19dd83d9132080f1d85421a2deb6a6c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the compile-time version of SDL2 that is being used.  <a href="group__core.html#ga19dd83d9132080f1d85421a2deb6a6c1">More...</a><br /></td></tr>
-<tr class="separator:ga19dd83d9132080f1d85421a2deb6a6c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gadabf5d56b9e3a166dfc7cd63a69acfb9"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#gadabf5d56b9e3a166dfc7cd63a69acfb9">cen::sdl_image_version</a> () noexcept -&gt; SDL_version</td></tr>
-<tr class="memdesc:gadabf5d56b9e3a166dfc7cd63a69acfb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the compile-time version of SDL2_image that is being used.  <a href="group__core.html#gadabf5d56b9e3a166dfc7cd63a69acfb9">More...</a><br /></td></tr>
-<tr class="separator:gadabf5d56b9e3a166dfc7cd63a69acfb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga54fcfa03eff9c7eec4b4708af167651b"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga54fcfa03eff9c7eec4b4708af167651b">cen::sdl_mixer_version</a> () noexcept -&gt; SDL_version</td></tr>
-<tr class="memdesc:ga54fcfa03eff9c7eec4b4708af167651b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the compile-time version of SDL2_mixer that is being used.  <a href="group__core.html#ga54fcfa03eff9c7eec4b4708af167651b">More...</a><br /></td></tr>
-<tr class="separator:ga54fcfa03eff9c7eec4b4708af167651b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga187280ea35ca97c62fb2c474d557bf2a"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga187280ea35ca97c62fb2c474d557bf2a">cen::sdl_ttf_version</a> () noexcept -&gt; SDL_version</td></tr>
-<tr class="memdesc:ga187280ea35ca97c62fb2c474d557bf2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the compile-time version of SDL2_ttf that is being used.  <a href="group__core.html#ga187280ea35ca97c62fb2c474d557bf2a">More...</a><br /></td></tr>
-<tr class="separator:ga187280ea35ca97c62fb2c474d557bf2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+Integer aliases</h2></td></tr>
+<tr class="memitem:gaf548af65ed935a05b3fbbccc0c708481"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#gaf548af65ed935a05b3fbbccc0c708481">cen::uint</a> = unsigned int</td></tr>
+<tr class="memdesc:gaf548af65ed935a05b3fbbccc0c708481"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for an unsigned integer.  <a href="group__core.html#gaf548af65ed935a05b3fbbccc0c708481">More...</a><br /></td></tr>
+<tr class="separator:gaf548af65ed935a05b3fbbccc0c708481"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga208b5a60b996ef99b54adea25fc1a9a6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga208b5a60b996ef99b54adea25fc1a9a6">cen::ulonglong</a> = unsigned long long</td></tr>
+<tr class="memdesc:ga208b5a60b996ef99b54adea25fc1a9a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for the type used for integer literal operators.  <a href="group__core.html#ga208b5a60b996ef99b54adea25fc1a9a6">More...</a><br /></td></tr>
+<tr class="separator:ga208b5a60b996ef99b54adea25fc1a9a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga23844aa05b9b994328870cca9e5a7808"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga23844aa05b9b994328870cca9e5a7808">cen::u64</a> = Uint64</td></tr>
+<tr class="memdesc:ga23844aa05b9b994328870cca9e5a7808"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for a 64-bit unsigned integer.  <a href="group__core.html#ga23844aa05b9b994328870cca9e5a7808">More...</a><br /></td></tr>
+<tr class="separator:ga23844aa05b9b994328870cca9e5a7808"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4abd620246f76cc48168dc52a04a62da"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">cen::u32</a> = Uint32</td></tr>
+<tr class="memdesc:ga4abd620246f76cc48168dc52a04a62da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for a 32-bit unsigned integer.  <a href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">More...</a><br /></td></tr>
+<tr class="separator:ga4abd620246f76cc48168dc52a04a62da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4c6f8bc4ac32726f877ba95d65e5f67f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">cen::u16</a> = Uint16</td></tr>
+<tr class="memdesc:ga4c6f8bc4ac32726f877ba95d65e5f67f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for a 16-bit unsigned integer.  <a href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">More...</a><br /></td></tr>
+<tr class="separator:ga4c6f8bc4ac32726f877ba95d65e5f67f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga89b6da3d8b9fb42c7799b22d6afd1093"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">cen::u8</a> = Uint8</td></tr>
+<tr class="memdesc:ga89b6da3d8b9fb42c7799b22d6afd1093"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for an 8-bit unsigned integer.  <a href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">More...</a><br /></td></tr>
+<tr class="separator:ga89b6da3d8b9fb42c7799b22d6afd1093"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf1410adff3afd80e0c07d477cd8b1f43"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#gaf1410adff3afd80e0c07d477cd8b1f43">cen::i64</a> = Sint64</td></tr>
+<tr class="memdesc:gaf1410adff3afd80e0c07d477cd8b1f43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for a 64-bit signed integer.  <a href="group__core.html#gaf1410adff3afd80e0c07d477cd8b1f43">More...</a><br /></td></tr>
+<tr class="separator:gaf1410adff3afd80e0c07d477cd8b1f43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa69ad1561271765c17f77879a492d85b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#gaa69ad1561271765c17f77879a492d85b">cen::i32</a> = Sint32</td></tr>
+<tr class="memdesc:gaa69ad1561271765c17f77879a492d85b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for a 32-bit signed integer.  <a href="group__core.html#gaa69ad1561271765c17f77879a492d85b">More...</a><br /></td></tr>
+<tr class="separator:gaa69ad1561271765c17f77879a492d85b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga995971102059bcb96d27921ffb7c4916"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga995971102059bcb96d27921ffb7c4916">cen::i16</a> = Sint16</td></tr>
+<tr class="memdesc:ga995971102059bcb96d27921ffb7c4916"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for a 16-bit signed integer.  <a href="group__core.html#ga995971102059bcb96d27921ffb7c4916">More...</a><br /></td></tr>
+<tr class="separator:ga995971102059bcb96d27921ffb7c4916"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga071f405c0d96991bfc59d01f99562f96"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga071f405c0d96991bfc59d01f99562f96">cen::i8</a> = Sint8</td></tr>
+<tr class="memdesc:ga071f405c0d96991bfc59d01f99562f96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for an 8-bit signed integer.  <a href="group__core.html#ga071f405c0d96991bfc59d01f99562f96">More...</a><br /></td></tr>
+<tr class="separator:ga071f405c0d96991bfc59d01f99562f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Time (std::chrono) aliases</h2></td></tr>
+<tr class="memitem:ga826ec294a3b6962454d669b9c277537b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga826ec294a3b6962454d669b9c277537b"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga826ec294a3b6962454d669b9c277537b">cen::seconds</a> = std::chrono::duration&lt; T &gt;</td></tr>
+<tr class="memdesc:ga826ec294a3b6962454d669b9c277537b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Templated alias for durations in seconds.  <a href="group__core.html#ga826ec294a3b6962454d669b9c277537b">More...</a><br /></td></tr>
+<tr class="separator:ga826ec294a3b6962454d669b9c277537b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeabb8896b493294e6781651b0abfbef5"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:gaeabb8896b493294e6781651b0abfbef5"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">cen::milliseconds</a> = std::chrono::duration&lt; T, std::milli &gt;</td></tr>
+<tr class="memdesc:gaeabb8896b493294e6781651b0abfbef5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Templated alias for durations in milliseconds.  <a href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">More...</a><br /></td></tr>
+<tr class="separator:gaeabb8896b493294e6781651b0abfbef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gada2bad74550597b858800bc27a1b3bd2"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:gada2bad74550597b858800bc27a1b3bd2"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#gada2bad74550597b858800bc27a1b3bd2">cen::microseconds</a> = std::chrono::duration&lt; T, std::micro &gt;</td></tr>
+<tr class="memdesc:gada2bad74550597b858800bc27a1b3bd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Templated alias for durations in microseconds.  <a href="group__core.html#gada2bad74550597b858800bc27a1b3bd2">More...</a><br /></td></tr>
+<tr class="separator:gada2bad74550597b858800bc27a1b3bd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaff0a2a191da04027994ede6ec49d5e55"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:gaff0a2a191da04027994ede6ec49d5e55"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#gaff0a2a191da04027994ede6ec49d5e55">cen::nanoseconds</a> = std::chrono::duration&lt; T, std::nano &gt;</td></tr>
+<tr class="memdesc:gaff0a2a191da04027994ede6ec49d5e55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Templated alias for durations in nanoseconds.  <a href="group__core.html#gaff0a2a191da04027994ede6ec49d5e55">More...</a><br /></td></tr>
+<tr class="separator:gaff0a2a191da04027994ede6ec49d5e55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga188e11bfe67eb564ec1c9afa24a204db"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga188e11bfe67eb564ec1c9afa24a204db"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga188e11bfe67eb564ec1c9afa24a204db">cen::minutes</a> = std::chrono::duration&lt; T, std::ratio&lt; 60 &gt; &gt;</td></tr>
+<tr class="memdesc:ga188e11bfe67eb564ec1c9afa24a204db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Templated alias for durations in minutes.  <a href="group__core.html#ga188e11bfe67eb564ec1c9afa24a204db">More...</a><br /></td></tr>
+<tr class="separator:ga188e11bfe67eb564ec1c9afa24a204db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Contains entities considered to be fundamental for the library. </p>
@@ -180,9 +485,219 @@ SDL version queries</h2></td></tr>
 </div><div class="memdoc">
 
 <p>This macro is defined if the <code>memory_resource</code> header is available. </p>
-<dl class="section note"><dt>Note</dt><dd>This is a very rough check, that assumes that as long as we are using MSVC or GCC, we are fine.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This is a very rough check, that assumes that as long as we are not using Clang, we are fine.</dd></dl>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>C++20: Use the feature test macro for this instead.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="gaaf9463acf118a57b29e678638c010147"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaf9463acf118a57b29e678638c010147">&#9670;&nbsp;</a></span>CENTURION_LOG_CRITICAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CENTURION_LOG_CRITICAL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fmt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="group__core.html#ga39c273922d2cbceaf98af455ce6d612f">cen::log::critical</a>(fmt, __VA_ARGS__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A debug-only macro that expands to <code><a class="el" href="group__core.html#ga39c273922d2cbceaf98af455ce6d612f" title="Logs a message with priority::critical and the specified category.">cen::log::critical</a></code>. </p>
+<dl class="section note"><dt>Note</dt><dd>This macro can be excluded by defining <code>CENTURION_NO_DEBUG_LOG_MACROS</code>.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga71955e2201cee9494ba7425eace7c29c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga71955e2201cee9494ba7425eace7c29c">&#9670;&nbsp;</a></span>CENTURION_LOG_DEBUG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CENTURION_LOG_DEBUG</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fmt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="group__core.html#gadfb0045da7506b622ebf058fa740a352">cen::log::debug</a>(fmt, __VA_ARGS__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A debug-only macro that expands to <code><a class="el" href="group__core.html#gadfb0045da7506b622ebf058fa740a352" title="Logs a message with priority::debug and the specified category.">cen::log::debug</a></code>. </p>
+<dl class="section note"><dt>Note</dt><dd>This macro can be excluded by defining <code>CENTURION_NO_DEBUG_LOG_MACROS</code>.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga6f0c2c40d23b43618b5d84c9a1b93689"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6f0c2c40d23b43618b5d84c9a1b93689">&#9670;&nbsp;</a></span>CENTURION_LOG_ERROR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CENTURION_LOG_ERROR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fmt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="group__core.html#gac18f2b4a4c1d6fb4f50e09c7677a2671">cen::log::error</a>(fmt, __VA_ARGS__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A debug-only macro that expands to <code><a class="el" href="group__core.html#gac18f2b4a4c1d6fb4f50e09c7677a2671" title="Logs a message with priority::error and the specified category.">cen::log::error</a></code>. </p>
+<dl class="section note"><dt>Note</dt><dd>This macro can be excluded by defining <code>CENTURION_NO_DEBUG_LOG_MACROS</code>.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga5f87c352e07b5b378fc4637ee8d6386a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5f87c352e07b5b378fc4637ee8d6386a">&#9670;&nbsp;</a></span>CENTURION_LOG_INFO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CENTURION_LOG_INFO</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fmt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="group__core.html#gade61dd59932e5273e2442b8691a4fe14">cen::log::info</a>(fmt, __VA_ARGS__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A debug-only macro that expands to <code><a class="el" href="group__core.html#gade61dd59932e5273e2442b8691a4fe14" title="Logs a message with priority::info and the specified category.">cen::log::info</a></code>. </p>
+<dl class="section note"><dt>Note</dt><dd>This macro can be excluded by defining <code>CENTURION_NO_DEBUG_LOG_MACROS</code>.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga4e3d19b659d5345f278aac93311a56fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4e3d19b659d5345f278aac93311a56fa">&#9670;&nbsp;</a></span>CENTURION_LOG_VERBOSE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CENTURION_LOG_VERBOSE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fmt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="group__core.html#gaf6c0ead6e900adb312e4f9670b25ad2b">cen::log::verbose</a>(fmt, __VA_ARGS__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A debug-only macro that expands to <code><a class="el" href="group__core.html#gaf6c0ead6e900adb312e4f9670b25ad2b" title="Logs a message with priority::verbose and the specified category.">cen::log::verbose</a></code>. </p>
+<dl class="section note"><dt>Note</dt><dd>This macro can be excluded by defining <code>CENTURION_NO_DEBUG_LOG_MACROS</code>.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga2df696db24d44a5f95727ebdb2c23834"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2df696db24d44a5f95727ebdb2c23834">&#9670;&nbsp;</a></span>CENTURION_LOG_WARN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CENTURION_LOG_WARN</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fmt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="group__core.html#ga65e665db41c65b67e9eca0c10aba0d54">cen::log::warn</a>(fmt, __VA_ARGS__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A debug-only macro that expands to <code><a class="el" href="group__core.html#ga65e665db41c65b67e9eca0c10aba0d54" title="Logs a message with priority::warn and the specified category.">cen::log::warn</a></code>. </p>
+<dl class="section note"><dt>Note</dt><dd>This macro can be excluded by defining <code>CENTURION_NO_DEBUG_LOG_MACROS</code>.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga72ac086ecf3b266a17145e696fbceacf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga72ac086ecf3b266a17145e696fbceacf">&#9670;&nbsp;</a></span>CENTURION_MAKE_VERSION_NUMBER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CENTURION_MAKE_VERSION_NUMBER</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Helper macro for creating version numbers from a set of major/minor/patch numbers. </p>
+<p>For example, if the version is 8.4.2, the resulting version number would be 8402.</p>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
 
 </div>
 </div>
@@ -213,55 +728,501 @@ SDL version queries</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td>&#160;&#160;&#160;((SDL_MAJOR_VERSION == (x)) &amp;&amp; (SDL_MINOR_VERSION == (y)) &amp;&amp; (SDL_PATCHLEVEL == (z)))</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">  ((SDL_MAJOR_VERSION == (<a class="code" href="namespacecen_1_1keycodes.html#a13c078f567f87344b242c92a93c0819d">x</a>)) &amp;&amp; (SDL_MINOR_VERSION == (<a class="code" href="namespacecen_1_1keycodes.html#a11afefb7283219df1e067cb6700f9ae0">y</a>)) &amp;&amp; \</div>
-<div class="line">   (SDL_PATCHLEVEL == (<a class="code" href="namespacecen_1_1keycodes.html#ac6a5ac3024e361a713f7c0331df7fb50">z</a>)))</div>
-</div><!-- fragment -->
+
 <p>This macro is meant to be used when conditionally including code for a specific version of SDL. It is useful for applying workarounds. </p>
 <dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
 
 </div>
 </div>
-<a id="ga155fb52e5f1cc04d0fa5880deb5c663a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga155fb52e5f1cc04d0fa5880deb5c663a">&#9670;&nbsp;</a></span>CENTURION_USE_DEBUG_LOGGING_MACROS</h2>
+<a id="gab494819e16afcec9f847c66edb679cd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab494819e16afcec9f847c66edb679cd4">&#9670;&nbsp;</a></span>CENTURION_VERSION_AT_LEAST</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define CENTURION_USE_DEBUG_LOGGING_MACROS</td>
+          <td class="memname">#define CENTURION_VERSION_AT_LEAST</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>This macro indicates whether or not debug-only logging macros will be defined. These can be found in the <code><a class="el" href="log_8hpp.html">log.hpp</a></code> header. By default, this macro is defined. </p>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+<p>This macro is intended to be used for conditional compilation, based on the Centurion version. </p>
+<p>This macro is used in the same way as the <code>SDL_VERSION_ATLEAST</code>, where you use it as the condition with <code>#if</code> statements.</p>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="ga94c0c24ba0471cd142eec81f9bfd12d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga94c0c24ba0471cd142eec81f9bfd12d4">&#9670;&nbsp;</a></span>CENTURION_USE_PRAGMA_ONCE</h2>
+<a id="gabb128f43d118774119abcfc1b6850969"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabb128f43d118774119abcfc1b6850969">&#9670;&nbsp;</a></span>CENTURION_VERSION_MAJOR</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define CENTURION_USE_PRAGMA_ONCE</td>
+          <td class="memname">#define CENTURION_VERSION_MAJOR&#160;&#160;&#160;6</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>This macro indicates whether or not Centurion headers will use <code>#pragma once</code> in addition with the traditional include guards. By default, this macro is defined. </p>
+<p>Expands into the current major version of the library. </p>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga8b16108dc2167d553f75de238ef34585"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8b16108dc2167d553f75de238ef34585">&#9670;&nbsp;</a></span>CENTURION_VERSION_MINOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CENTURION_VERSION_MINOR&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Expands into the current minor version of the library. </p>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="gae7e739c6265d5b1e9c59ea6f976a45f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae7e739c6265d5b1e9c59ea6f976a45f7">&#9670;&nbsp;</a></span>CENTURION_VERSION_NUMBER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CENTURION_VERSION_NUMBER</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Expands into a version number based on the current Centurion version. </p>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga96273196c331e9525ac52c5e3f457ac9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga96273196c331e9525ac52c5e3f457ac9">&#9670;&nbsp;</a></span>CENTURION_VERSION_PATCH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CENTURION_VERSION_PATCH&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Expands into the current patch version of the library. </p>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="ga24997ff418228ddb51ae13e2805288a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga24997ff418228ddb51ae13e2805288a4">&#9670;&nbsp;</a></span>czstring</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">cen::czstring</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alias for a const C-style null-terminated string. </p>
+
+</div>
+</div>
+<a id="ga321b1f0f88fb93fbbb8b527733132330"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga321b1f0f88fb93fbbb8b527733132330">&#9670;&nbsp;</a></span>enable_if_convertible_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group__core.html#ga321b1f0f88fb93fbbb8b527733132330">cen::enable_if_convertible_t</a> = typedef std::enable_if_t&lt;(std::is_convertible_v&lt;T, Args&gt; || ...), int&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enables a template if T is convertible to any of the specified types. </p>
+
+</div>
+</div>
+<a id="ga7545e3b19148e7aa04c43e8dca24226a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7545e3b19148e7aa04c43e8dca24226a">&#9670;&nbsp;</a></span>enable_if_number_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group__core.html#ga7545e3b19148e7aa04c43e8dca24226a">cen::enable_if_number_t</a> = typedef std::enable_if_t&lt;!std::is_same_v&lt;T, bool&gt; &amp;&amp; (std::is_integral_v&lt;T&gt; || std::is_floating_point_v&lt;T&gt;), int&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enables a template if the type is either integral of floating-point, but not a boolean. </p>
+
+</div>
+</div>
+<a id="gafce94e372a958cc90aa690615e81b3e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafce94e372a958cc90aa690615e81b3e5">&#9670;&nbsp;</a></span>enable_if_pointer_v</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group__core.html#gafce94e372a958cc90aa690615e81b3e5">cen::enable_if_pointer_v</a> = typedef std::enable_if_t&lt;std::is_pointer_v&lt;T&gt;, int&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enables a template if the type is a pointer. </p>
+
+</div>
+</div>
+<a id="ga995971102059bcb96d27921ffb7c4916"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga995971102059bcb96d27921ffb7c4916">&#9670;&nbsp;</a></span>i16</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group__core.html#ga995971102059bcb96d27921ffb7c4916">cen::i16</a> = typedef Sint16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alias for a 16-bit signed integer. </p>
+
+</div>
+</div>
+<a id="gaa69ad1561271765c17f77879a492d85b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa69ad1561271765c17f77879a492d85b">&#9670;&nbsp;</a></span>i32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group__core.html#gaa69ad1561271765c17f77879a492d85b">cen::i32</a> = typedef Sint32</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alias for a 32-bit signed integer. </p>
+
+</div>
+</div>
+<a id="gaf1410adff3afd80e0c07d477cd8b1f43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf1410adff3afd80e0c07d477cd8b1f43">&#9670;&nbsp;</a></span>i64</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group__core.html#gaf1410adff3afd80e0c07d477cd8b1f43">cen::i64</a> = typedef Sint64</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alias for a 64-bit signed integer. </p>
+
+</div>
+</div>
+<a id="ga071f405c0d96991bfc59d01f99562f96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga071f405c0d96991bfc59d01f99562f96">&#9670;&nbsp;</a></span>i8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group__core.html#ga071f405c0d96991bfc59d01f99562f96">cen::i8</a> = typedef Sint8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alias for an 8-bit signed integer. </p>
+
+</div>
+</div>
+<a id="ga00614d944c81543b03c7f2cb202fdc50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga00614d944c81543b03c7f2cb202fdc50">&#9670;&nbsp;</a></span>maybe_owner</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , enable_if_pointer_v&lt; T &gt;  = 0&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core.html#ga00614d944c81543b03c7f2cb202fdc50">cen::maybe_owner</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tag used to denote conditional ownership of raw pointers directly in code. </p>
+<p>This is primarily used in constructors of owner/handle classes, where the owner version will claim ownership of the pointer, whilst the handle does not.</p>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="gada2bad74550597b858800bc27a1b3bd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gada2bad74550597b858800bc27a1b3bd2">&#9670;&nbsp;</a></span>microseconds</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core.html#gada2bad74550597b858800bc27a1b3bd2">cen::microseconds</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Templated alias for durations in microseconds. </p>
+
+</div>
+</div>
+<a id="gaeabb8896b493294e6781651b0abfbef5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeabb8896b493294e6781651b0abfbef5">&#9670;&nbsp;</a></span>milliseconds</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">cen::milliseconds</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Templated alias for durations in milliseconds. </p>
+
+</div>
+</div>
+<a id="ga188e11bfe67eb564ec1c9afa24a204db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga188e11bfe67eb564ec1c9afa24a204db">&#9670;&nbsp;</a></span>minutes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core.html#ga188e11bfe67eb564ec1c9afa24a204db">cen::minutes</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Templated alias for durations in minutes. </p>
+
+</div>
+</div>
+<a id="gaff0a2a191da04027994ede6ec49d5e55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaff0a2a191da04027994ede6ec49d5e55">&#9670;&nbsp;</a></span>nanoseconds</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core.html#gaff0a2a191da04027994ede6ec49d5e55">cen::nanoseconds</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Templated alias for durations in nanoseconds. </p>
+
+</div>
+</div>
+<a id="ga9f195a3e65e79c88a96dd7b767dc0657"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9f195a3e65e79c88a96dd7b767dc0657">&#9670;&nbsp;</a></span>not_null</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , enable_if_pointer_v&lt; T &gt;  = 0&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">cen::not_null</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tag used to indicate that a pointer cannot be null. </p>
+<dl class="section note"><dt>Note</dt><dd>This alias is equivalent to <code>T</code>, it is a no-op.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
 </div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="gadabf5d56b9e3a166dfc7cd63a69acfb9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gadabf5d56b9e3a166dfc7cd63a69acfb9">&#9670;&nbsp;</a></span>sdl_image_version()</h2>
+<a id="ga922c9ffa0c4b1b0dcaf50b7c6033a809"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga922c9ffa0c4b1b0dcaf50b7c6033a809">&#9670;&nbsp;</a></span>owner</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , enable_if_pointer_v&lt; T &gt;  = 0&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core.html#ga922c9ffa0c4b1b0dcaf50b7c6033a809">cen::owner</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tag used to denote ownership of raw pointers directly in code. </p>
+<p>If a function takes an <code>owner&lt;T*&gt;</code> as a parameter, then the function will claim ownership of that pointer. Subsequently, if a function returns an <code>owner&lt;T*&gt;</code>, then ownership is transferred to the caller. </p>
+
+</div>
+</div>
+<a id="ga826ec294a3b6962454d669b9c277537b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga826ec294a3b6962454d669b9c277537b">&#9670;&nbsp;</a></span>seconds</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core.html#ga826ec294a3b6962454d669b9c277537b">cen::seconds</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Templated alias for durations in seconds. </p>
+
+</div>
+</div>
+<a id="ga4c6f8bc4ac32726f877ba95d65e5f67f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4c6f8bc4ac32726f877ba95d65e5f67f">&#9670;&nbsp;</a></span>u16</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">cen::u16</a> = typedef Uint16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alias for a 16-bit unsigned integer. </p>
+
+</div>
+</div>
+<a id="ga4abd620246f76cc48168dc52a04a62da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4abd620246f76cc48168dc52a04a62da">&#9670;&nbsp;</a></span>u32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">cen::u32</a> = typedef Uint32</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alias for a 32-bit unsigned integer. </p>
+
+</div>
+</div>
+<a id="ga23844aa05b9b994328870cca9e5a7808"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga23844aa05b9b994328870cca9e5a7808">&#9670;&nbsp;</a></span>u64</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group__core.html#ga23844aa05b9b994328870cca9e5a7808">cen::u64</a> = typedef Uint64</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alias for a 64-bit unsigned integer. </p>
+
+</div>
+</div>
+<a id="ga89b6da3d8b9fb42c7799b22d6afd1093"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga89b6da3d8b9fb42c7799b22d6afd1093">&#9670;&nbsp;</a></span>u8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">cen::u8</a> = typedef Uint8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alias for an 8-bit unsigned integer. </p>
+
+</div>
+</div>
+<a id="gaf548af65ed935a05b3fbbccc0c708481"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf548af65ed935a05b3fbbccc0c708481">&#9670;&nbsp;</a></span>uint</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group__core.html#gaf548af65ed935a05b3fbbccc0c708481">cen::uint</a> = typedef unsigned int</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alias for an unsigned integer. </p>
+
+</div>
+</div>
+<a id="ga208b5a60b996ef99b54adea25fc1a9a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga208b5a60b996ef99b54adea25fc1a9a6">&#9670;&nbsp;</a></span>ulonglong</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group__core.html#ga208b5a60b996ef99b54adea25fc1a9a6">cen::ulonglong</a> = typedef unsigned long long</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alias for the type used for integer literal operators. </p>
+
+</div>
+</div>
+<a id="ga68051bcb1a6cd89543bb13afb6cdd0a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga68051bcb1a6cd89543bb13afb6cdd0a2">&#9670;&nbsp;</a></span>zstring</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core.html#ga68051bcb1a6cd89543bb13afb6cdd0a2">cen::zstring</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alias for a C-style null-terminated string. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ga5a2bed2933e3748ad2a77961417a102b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5a2bed2933e3748ad2a77961417a102b">&#9670;&nbsp;</a></span>log_category</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -270,10 +1231,86 @@ SDL version queries</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr auto cen::sdl_image_version </td>
+          <td class="memname">enum <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">cen::log_category</a> : int</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Provides values that represent different logging categories. </p>
+<dl class="section see"><dt>See also</dt><dd><code>SDL_LogCategory</code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga5a2bed2933e3748ad2a77961417a102bad2a57dc1d883fd21fb9951699df71cc7"></a>app&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga5a2bed2933e3748ad2a77961417a102bacb5e100e5a9a3e7f6d1fd97512215282"></a>error&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga5a2bed2933e3748ad2a77961417a102bae44e4612f62d2fb8f8738bab118a9850"></a>assert&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga5a2bed2933e3748ad2a77961417a102ba54b53072540eeeb8f8e9343e71f28176"></a>system&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga5a2bed2933e3748ad2a77961417a102baa5ca0b5894324f8bb54bb9fffad29d1e"></a>audio&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga5a2bed2933e3748ad2a77961417a102ba421b47ffd946ca083b65cd668c6b17e6"></a>video&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga5a2bed2933e3748ad2a77961417a102ba9e5f0bb330344d580b9e30d338d6ab6d"></a>render&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga5a2bed2933e3748ad2a77961417a102baa43c1b0aa53a0c908810c06ab1ff3967"></a>input&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga5a2bed2933e3748ad2a77961417a102ba098f6bcd4621d373cade4e832627b4f6"></a>test&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga5a2bed2933e3748ad2a77961417a102babc957e26ff41470c556ee5d09e96880b"></a>misc&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga910862a214870faa7b625862de858c52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga910862a214870faa7b625862de858c52">&#9670;&nbsp;</a></span>log_priority</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__core.html#ga910862a214870faa7b625862de858c52">cen::log_priority</a> : int</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Provides values that represent different logging priorities. </p>
+<dl class="section see"><dt>See also</dt><dd><code>SDL_LogPriority</code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga910862a214870faa7b625862de858c52acaf9b6b99962bf5c2264824231d7a40c"></a>info&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga910862a214870faa7b625862de858c52a1ea4c3ab05ee0c6d4de30740443769cb"></a>warn&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga910862a214870faa7b625862de858c52a2c7aea4237e25b4f8ee3b0bf77d6fed0"></a>verbose&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga910862a214870faa7b625862de858c52aad42f6697b035b7580e4fef93be20b4d"></a>debug&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga910862a214870faa7b625862de858c52a7e85bcb66fb9a809d5ab4f62a8b8bea8"></a>critical&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga910862a214870faa7b625862de858c52acb5e100e5a9a3e7f6d1fd97512215282"></a>error&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga10fbba7e12ccd2e8cee2d661d629a1da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga10fbba7e12ccd2e8cee2d661d629a1da">&#9670;&nbsp;</a></span>cast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename To , typename From &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::cast </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; SDL_version
+          <td class="paramtype">const From &amp;&#160;</td>
+          <td class="paramname"><em>from</em></td><td>)</td>
+          <td> -&gt; To
 </td>
         </tr>
       </table>
@@ -284,14 +1321,378 @@ SDL version queries</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the compile-time version of SDL2_image that is being used. </p>
-<dl class="section return"><dt>Returns</dt><dd>the compile-time version of SDL2_image that is being used.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
+<p>Casts a value to a value of another type. </p>
+<p>This is the default implementation, which simply attempts to use <code>static_cast</code>. The idea is that this function will be specialized for various Centurion and SDL types. This is useful because it isn't always possible to implement conversion operators as members.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">To</td><td>the type of the value that will be converted. </td></tr>
+    <tr><td class="paramname">From</td><td>the type that the value will be casted to.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">from</td><td>the value that will be converted.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the result of casting the supplied value to the specified type.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="ga7d21feb1f73b72b2becec16f0c05eaab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga7d21feb1f73b72b2becec16f0c05eaab">&#9670;&nbsp;</a></span>sdl_linked_version()</h2>
+<a id="ga39c273922d2cbceaf98af455ce6d612f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga39c273922d2cbceaf98af455ce6d612f">&#9670;&nbsp;</a></span>critical() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::log::critical </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a>&#160;</td>
+          <td class="paramname"><em>category</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Logs a message with <code>priority::critical</code> and the specified category. </p>
+<p>This method has no effect if the supplied string is null.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Args</td><td>the types of the arguments that will be used in the formatted string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">category</td><td>the category that will be used. </td></tr>
+    <tr><td class="paramname">fmt</td><td>the formatted string that will be logged, cannot be null. </td></tr>
+    <tr><td class="paramname">args</td><td>the arguments that will be used by the formatted string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga54b95f153ded86556e4e2f6cd114c6c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga54b95f153ded86556e4e2f6cd114c6c2">&#9670;&nbsp;</a></span>critical() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::log::critical </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Logs a message with <code>priority::critical</code> and <code>category::app</code> . </p>
+<p>This method has no effect if the supplied string is null.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Args</td><td>the types of the arguments that will be used in the formatted string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fmt</td><td>the formatted string that will be logged, cannot be null. </td></tr>
+    <tr><td class="paramname">args</td><td>the arguments that will be used by the formatted string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="gadfb0045da7506b622ebf058fa740a352"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadfb0045da7506b622ebf058fa740a352">&#9670;&nbsp;</a></span>debug() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::log::debug </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a>&#160;</td>
+          <td class="paramname"><em>category</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Logs a message with <code>priority::debug</code> and the specified category. </p>
+<p>This method has no effect if the supplied string is null.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Args</td><td>the types of the arguments that will be used in the formatted string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">category</td><td>the category that will be used. </td></tr>
+    <tr><td class="paramname">fmt</td><td>the formatted string that will be logged, cannot be null. </td></tr>
+    <tr><td class="paramname">args</td><td>the arguments that will be used by the formatted string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga2858b6ecbdcf0244ec103543dc67cd92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2858b6ecbdcf0244ec103543dc67cd92">&#9670;&nbsp;</a></span>debug() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::log::debug </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Logs a message with <code>priority::debug</code> and <code>category::app</code>. </p>
+<p>This method has no effect if the supplied string is null.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Args</td><td>the types of the arguments that will be used in the formatted string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fmt</td><td>the formatted string that will be logged, cannot be null. </td></tr>
+    <tr><td class="paramname">args</td><td>the arguments that will be used by the formatted string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="gac18f2b4a4c1d6fb4f50e09c7677a2671"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac18f2b4a4c1d6fb4f50e09c7677a2671">&#9670;&nbsp;</a></span>error() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::log::error </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a>&#160;</td>
+          <td class="paramname"><em>category</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a>&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Logs a message with <code>priority::error</code> and the specified category. </p>
+<p>This method has no effect if the supplied string is null.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Args</td><td>the types of the arguments that will be used in the formatted string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">category</td><td>the category that will be used. </td></tr>
+    <tr><td class="paramname">fmt</td><td>the formatted string that will be logged, cannot be null. </td></tr>
+    <tr><td class="paramname">args</td><td>the arguments that will be used by the formatted string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga45887157534b2b7076a003d5c388abf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga45887157534b2b7076a003d5c388abf6">&#9670;&nbsp;</a></span>error() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::log::error </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Logs a message with the <code>priority::error</code> and <code>category::app</code>. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Args</td><td>the types of the arguments that will be used in the formatted string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fmt</td><td>the formatted string that will be logged, cannot be null. </td></tr>
+    <tr><td class="paramname">args</td><td>the arguments that will be used by the formatted string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga0e8d419318fe88bbd41b5e4ece6b5b8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0e8d419318fe88bbd41b5e4ece6b5b8d">&#9670;&nbsp;</a></span>get_priority()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -300,10 +1701,11 @@ SDL version queries</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::sdl_linked_version </td>
+          <td class="memname">auto cen::log::get_priority </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; SDL_version
+          <td class="paramtype">const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a>&#160;</td>
+          <td class="paramname"><em>category</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__core.html#ga910862a214870faa7b625862de858c52">log_priority</a>
 </td>
         </tr>
       </table>
@@ -314,27 +1716,152 @@ SDL version queries</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the version of SDL2 that is linked against the program. </p>
-<dl class="section note"><dt>Note</dt><dd>The linked version isn't necessarily the same as the version of SDL that the program was compiled against.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>the linked version of SDL2.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+<p>Returns the priority of the specified category. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">category</td><td>the category to return the priority of. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the priority of the specified category.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="ga54fcfa03eff9c7eec4b4708af167651b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga54fcfa03eff9c7eec4b4708af167651b">&#9670;&nbsp;</a></span>sdl_mixer_version()</h2>
+<a id="gade61dd59932e5273e2442b8691a4fe14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gade61dd59932e5273e2442b8691a4fe14">&#9670;&nbsp;</a></span>info() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr auto cen::sdl_mixer_version </td>
+          <td class="memname">void cen::log::info </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; SDL_version
+          <td class="paramtype">const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a>&#160;</td>
+          <td class="paramname"><em>category</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Logs a message with <code>priority::info</code> and the specified category. </p>
+<p>This method has no effect if the supplied string is null.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Args</td><td>the types of the arguments that will be used in the formatted string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">category</td><td>the category that will be used. </td></tr>
+    <tr><td class="paramname">fmt</td><td>the formatted string that will be logged, cannot be null. </td></tr>
+    <tr><td class="paramname">args</td><td>the arguments that will be used by the formatted string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga5f21c8844d4cc7a49018aa8d6bc35fac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5f21c8844d4cc7a49018aa8d6bc35fac">&#9670;&nbsp;</a></span>info() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::log::info </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Logs a message with <code>priority::info</code> and <code>category::app</code>. </p>
+<p>This method has no effect if the supplied string is null.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Args</td><td>the types of the arguments that will be used in the formatted string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fmt</td><td>the formatted string that will be logged, cannot be null. </td></tr>
+    <tr><td class="paramname">args</td><td>the arguments that will be used by the formatted string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga3764941d9ec9f936c62296ed6490ce70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3764941d9ec9f936c62296ed6490ce70">&#9670;&nbsp;</a></span>isize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::isize </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>container</em></td><td>)</td>
+          <td> -&gt; int
 </td>
         </tr>
       </table>
@@ -345,14 +1872,26 @@ SDL version queries</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the compile-time version of SDL2_mixer that is being used. </p>
-<dl class="section return"><dt>Returns</dt><dd>the compile-time version of SDL2_mixer that is being used.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
+<p>Obtains the size of a container as an <code>int</code>. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>a "container" that provides a <code><a class="el" href="namespacecen_1_1screen.html#ace3e8973f91462485a5708227d1f19ef" title="Returns the size of the screen.">size()</a></code> member function.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">container</td><td>the container to query the size of.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the size of the container as an <code>int</code> value.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
 
 </div>
 </div>
-<a id="ga187280ea35ca97c62fb2c474d557bf2a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga187280ea35ca97c62fb2c474d557bf2a">&#9670;&nbsp;</a></span>sdl_ttf_version()</h2>
+<a id="ga73d3977d4425f366611f0b2f2e7c2405"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga73d3977d4425f366611f0b2f2e7c2405">&#9670;&nbsp;</a></span>max_message_size()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -361,10 +1900,10 @@ SDL version queries</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr auto cen::sdl_ttf_version </td>
+          <td class="memname">constexpr auto cen::log::max_message_size </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> -&gt; SDL_version
+          <td> -&gt; int
 </td>
         </tr>
       </table>
@@ -375,14 +1914,85 @@ SDL version queries</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the compile-time version of SDL2_ttf that is being used. </p>
-<dl class="section return"><dt>Returns</dt><dd>the compile-time version of SDL2_ttf that is being used.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
+<p>Returns the maximum size, i.e the maximum amount of characters that a string can contain and successfully be logged without being truncated. </p>
+<dl class="section note"><dt>Note</dt><dd>Strings longer that this value will be truncated.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the maximum amount of characters that a loggable string can contain.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code>SDL_MAX_LOG_MESSAGE</code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="ga19dd83d9132080f1d85421a2deb6a6c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga19dd83d9132080f1d85421a2deb6a6c1">&#9670;&nbsp;</a></span>sdl_version()</h2>
+<a id="ga41ba5ae32529129a98d415f0abcb9a34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga41ba5ae32529129a98d415f0abcb9a34">&#9670;&nbsp;</a></span>msg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::log::msg </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga910862a214870faa7b625862de858c52">log_priority</a>&#160;</td>
+          <td class="paramname"><em>priority</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a>&#160;</td>
+          <td class="paramname"><em>category</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Logs a message with the specified priority and category. </p>
+<p>This method has no effect if the supplied string is null. Usage of this method is quite bulky, so refer to the other logging methods for casual logging.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Args</td><td>the types of the arguments that will be used in the formatted string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">priority</td><td>the priority that will be used. </td></tr>
+    <tr><td class="paramname">category</td><td>the category that will be used. </td></tr>
+    <tr><td class="paramname">fmt</td><td>the formatted string that will be logged, cannot be null. </td></tr>
+    <tr><td class="paramname">args</td><td>the arguments that will be used by the formatted string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga5b552e7c88bfe0236d6115d6bd1b801c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5b552e7c88bfe0236d6115d6bd1b801c">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -391,10 +2001,21 @@ SDL version queries</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr auto cen::sdl_version </td>
+          <td class="memname">constexpr auto cen::operator!= </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; SDL_version
+          <td class="paramtype">const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a>&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const SDL_LogCategory&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; bool
 </td>
         </tr>
       </table>
@@ -405,9 +2026,937 @@ SDL version queries</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the compile-time version of SDL2 that is being used. </p>
-<dl class="section return"><dt>Returns</dt><dd>the compile-time version of SDL2 that is being used.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
+<p>Indicates whether or not the two log category values are the same. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>the left-hand side log category value. </td></tr>
+    <tr><td class="paramname">rhs</td><td>the right-hand side log category value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the categories are the same; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga2aa32fcee319fe760f0c24c936a48230"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2aa32fcee319fe760f0c24c936a48230">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga910862a214870faa7b625862de858c52">log_priority</a>&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const SDL_LogPriority&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the two log priorities values aren't the same. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>the left-hand side log priority value. </td></tr>
+    <tr><td class="paramname">rhs</td><td>the right-hand side log priority value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the priorities aren't the same; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga07f0a68789800cfd82da0eea92257101"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga07f0a68789800cfd82da0eea92257101">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const SDL_LogCategory&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a>&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the two log category values are the same. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>the left-hand side log category value. </td></tr>
+    <tr><td class="paramname">rhs</td><td>the right-hand side log category value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the categories are the same; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga99b6c84f5e3b19b1bfc1ceaa62fd17da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga99b6c84f5e3b19b1bfc1ceaa62fd17da">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const SDL_LogPriority&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga910862a214870faa7b625862de858c52">log_priority</a>&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the two log priorities values aren't the same. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>the left-hand side log priority value. </td></tr>
+    <tr><td class="paramname">rhs</td><td>the right-hand side log priority value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the priorities aren't the same; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga1d5c4e3cc81ce35f02e8fc0700387a97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1d5c4e3cc81ce35f02e8fc0700387a97">&#9670;&nbsp;</a></span>operator&lt;&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1result.html">result</a>&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; std::ostream&amp;
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prints a textual representation of a result value using a stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream</td><td>the stream that will be used. </td></tr>
+    <tr><td class="paramname">result</td><td>the result value that will be printed.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the used stream.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga982f1cbb4e415a203e6ebfd308e70771"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga982f1cbb4e415a203e6ebfd308e70771">&#9670;&nbsp;</a></span>operator==() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a>&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const SDL_LogCategory&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the two log category values are the same. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>the left-hand side log category value. </td></tr>
+    <tr><td class="paramname">rhs</td><td>the right-hand side log category value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the categories are the same; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="gaf6e461d22ae78238e801b9367b8b4a2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf6e461d22ae78238e801b9367b8b4a2c">&#9670;&nbsp;</a></span>operator==() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga910862a214870faa7b625862de858c52">log_priority</a>&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const SDL_LogPriority&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the two log priorities values are the same. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>the left-hand side log priority value. </td></tr>
+    <tr><td class="paramname">rhs</td><td>the right-hand side log priority value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the priorities are the same; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="gaeb23156280d35536a6130f09762407a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeb23156280d35536a6130f09762407a5">&#9670;&nbsp;</a></span>operator==() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const SDL_LogCategory&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a>&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the two log category values are the same. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>the left-hand side log category value. </td></tr>
+    <tr><td class="paramname">rhs</td><td>the right-hand side log category value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the categories are the same; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga343e7daaacd57073420d714796291393"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga343e7daaacd57073420d714796291393">&#9670;&nbsp;</a></span>operator==() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const SDL_LogPriority&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga910862a214870faa7b625862de858c52">log_priority</a>&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the two log priorities values are the same. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>the left-hand side log priority value. </td></tr>
+    <tr><td class="paramname">rhs</td><td>the right-hand side log priority value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the priorities are the same; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga13de2185c8438c11661e8892d5bdcb2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga13de2185c8438c11661e8892d5bdcb2a">&#9670;&nbsp;</a></span>put() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::log::put </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Logs a string. </p>
+<p>This function is meant to be used for casual logging, where you just want to log a string. The message will be logged with <code>priority::info</code> and <code>category::app</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>the string that will be logged.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="gab901117d958b0aec7afe5972bac80a47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab901117d958b0aec7afe5972bac80a47">&#9670;&nbsp;</a></span>put() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::log::put </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Logs a string. </p>
+<p>This function is meant to be used for casual logging, where you just want to log a string. The message will be logged with <code>priority::info</code> and <code>category::app</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>the string that will be logged.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga2c6a49a0bf8a79c4d3f4bd50ccc3fe3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2c6a49a0bf8a79c4d3f4bd50ccc3fe3e">&#9670;&nbsp;</a></span>reset_priorities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::log::reset_priorities </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resets all of the logging priorities. </p>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga24cb37c6e03197bd2ddf20f7a43c3e99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga24cb37c6e03197bd2ddf20f7a43c3e99">&#9670;&nbsp;</a></span>set_priority() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::log::set_priority </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a>&#160;</td>
+          <td class="paramname"><em>category</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga910862a214870faa7b625862de858c52">log_priority</a>&#160;</td>
+          <td class="paramname"><em>priority</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the priority of the specified category. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">category</td><td>the category that will have its priority changed. </td></tr>
+    <tr><td class="paramname">priority</td><td>the new priority value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga67d98c104b501a4f8c49c3790d2f1a57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga67d98c104b501a4f8c49c3790d2f1a57">&#9670;&nbsp;</a></span>set_priority() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::log::set_priority </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga910862a214870faa7b625862de858c52">log_priority</a>&#160;</td>
+          <td class="paramname"><em>priority</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the priority of all categories. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">priority</td><td>the priority that will be used.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="gaf1f62ce7a6598d0b25a1a037ef819ff0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf1f62ce7a6598d0b25a1a037ef819ff0">&#9670;&nbsp;</a></span>str_or_na()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::str_or_na </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a>&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt;<a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a>&gt;
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Simply returns the string if it isn't null, returning a placeholder otherwise. </p>
+<dl class="section note"><dt>Note</dt><dd>This is mainly used in <code><a class="el" href="group__audio.html#ga45aa3eac6ffe05fce3966b0e75948d79" title="Returns a textual representation of a music instance.">to_string()</a></code> overloads.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>the string that will be checked.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the supplied string if it isn't null; "n/a" otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga17ea7623d76209bdfd5e76545149f455"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga17ea7623d76209bdfd5e76545149f455">&#9670;&nbsp;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::to_string </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1result.html">result</a>&#160;</td>
+          <td class="paramname"><em>result</em></td><td>)</td>
+          <td> -&gt; std::string
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a string that represents a result value. </p>
+<dl class="section note"><dt>Note</dt><dd>The returned string is in a slightly different format compared to other Centurion components.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">result</td><td>the value that will be converted.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>"success"</code> for a successful result; <code>"failure"</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga1b0d65474648eaf9b1bfe720e037eb9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1b0d65474648eaf9b1bfe720e037eb9c">&#9670;&nbsp;</a></span>to_underlying()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Enum , std::enable_if_t&lt; std::is_enum_v&lt; Enum &gt;, int &gt;  = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::to_underlying </td>
+          <td>(</td>
+          <td class="paramtype">const Enum&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td> -&gt; std::underlying_type_t&lt;Enum&gt;
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts an enum value to an integral value using the underlying type. </p>
+<dl class="section note"><dt>Note</dt><dd>If you're using C++23, see <code><a class="el" href="group__core.html#ga1b0d65474648eaf9b1bfe720e037eb9c" title="Converts an enum value to an integral value using the underlying type.">std::to_underlying()</a></code>.</dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Enum</td><td>the enum type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>the enum value that will be converted.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the value of the enum, in the underlying type.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="gaf6c0ead6e900adb312e4f9670b25ad2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf6c0ead6e900adb312e4f9670b25ad2b">&#9670;&nbsp;</a></span>verbose() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::log::verbose </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a>&#160;</td>
+          <td class="paramname"><em>category</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Logs a message with <code>priority::verbose</code> and the specified category. </p>
+<p>This method has no effect if the supplied string is null.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Args</td><td>the types of the arguments that will be used in the formatted string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">category</td><td>the category that will be used. </td></tr>
+    <tr><td class="paramname">fmt</td><td>the formatted string that will be logged, cannot be null. </td></tr>
+    <tr><td class="paramname">args</td><td>the arguments that will be used by the formatted string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="gaad84b2f3233c32ab0994cfa3320d5456"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaad84b2f3233c32ab0994cfa3320d5456">&#9670;&nbsp;</a></span>verbose() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::log::verbose </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Logs a message with <code>priority::verbose</code> and <code>category::app</code>. </p>
+<p>This method has no effect if the supplied string is null.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Args</td><td>the types of the arguments that will be used in the formatted string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fmt</td><td>the formatted string that will be logged, cannot be null. </td></tr>
+    <tr><td class="paramname">args</td><td>the arguments that will be used by the formatted string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga65e665db41c65b67e9eca0c10aba0d54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga65e665db41c65b67e9eca0c10aba0d54">&#9670;&nbsp;</a></span>warn() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::log::warn </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a>&#160;</td>
+          <td class="paramname"><em>category</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Logs a message with <code>priority::warn</code> and the specified category. </p>
+<p>This method has no effect if the supplied string is null.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Args</td><td>the types of the arguments that will be used in the formatted string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">category</td><td>the category that will be used. </td></tr>
+    <tr><td class="paramname">fmt</td><td>the formatted string that will be logged, cannot be null. </td></tr>
+    <tr><td class="paramname">args</td><td>the arguments that will be used by the formatted string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="gadcd98acb2c7f7efe09ed98d8b0067400"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadcd98acb2c7f7efe09ed98d8b0067400">&#9670;&nbsp;</a></span>warn() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::log::warn </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">czstring</a> &gt;&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Logs a message with <code>priority::warn</code> and <code>category::app</code>. </p>
+<p>This method has no effect if the supplied string is null.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Args</td><td>the types of the arguments that will be used in the formatted string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fmt</td><td>the formatted string that will be logged, cannot be null. </td></tr>
+    <tr><td class="paramname">args</td><td>the arguments that will be used by the formatted string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
 </div>
@@ -424,6 +2973,29 @@ SDL version queries</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Flags passed on to <code>SDL_Init()</code>, if <a class="el" href="group__core.html#gae48f08d6dc9254716d0072deef2ac967">config::initCore</a> is <code>true</code>. </p>
+
+</div>
+</div>
+<a id="gad7045b2ab448aa975ec256f09abcd359"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad7045b2ab448aa975ec256f09abcd359">&#9670;&nbsp;</a></span>failure</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classcen_1_1result.html">result</a> cen::failure {false}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Represents a failure of some kind. </p><dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
 
 </div>
 </div>
@@ -579,10 +3151,30 @@ SDL version queries</h2></td></tr>
 
 </div>
 </div>
+<a id="ga00bb6bb52f4cb3888d1e10e9efc6c853"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga00bb6bb52f4cb3888d1e10e9efc6c853">&#9670;&nbsp;</a></span>success</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classcen_1_1result.html">result</a> cen::success {true}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Represents a successful result. </p><dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
-<div class="ttc" id="anamespacecen_1_1keycodes_html_ac6a5ac3024e361a713f7c0331df7fb50"><div class="ttname"><a href="namespacecen_1_1keycodes.html#ac6a5ac3024e361a713f7c0331df7fb50">cen::keycodes::z</a></div><div class="ttdeci">constexpr key_code z</div><div class="ttdoc">Represents the key with the label &quot;Z&quot;.</div><div class="ttdef"><b>Definition:</b> key_code.hpp:623</div></div>
-<div class="ttc" id="anamespacecen_1_1keycodes_html_a11afefb7283219df1e067cb6700f9ae0"><div class="ttname"><a href="namespacecen_1_1keycodes.html#a11afefb7283219df1e067cb6700f9ae0">cen::keycodes::y</a></div><div class="ttdeci">constexpr key_code y</div><div class="ttdoc">Represents the key with the label &quot;Y&quot;.</div><div class="ttdef"><b>Definition:</b> key_code.hpp:614</div></div>
-<div class="ttc" id="anamespacecen_1_1keycodes_html_a13c078f567f87344b242c92a93c0819d"><div class="ttname"><a href="namespacecen_1_1keycodes.html#a13c078f567f87344b242c92a93c0819d">cen::keycodes::x</a></div><div class="ttdeci">constexpr key_code x</div><div class="ttdoc">Represents the key with the label &quot;X&quot;.</div><div class="ttdef"><b>Definition:</b> key_code.hpp:605</div></div>
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
 </div>

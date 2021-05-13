@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -91,11 +91,9 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classcen_1_1basic__cursor-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">cen::basic_cursor Class Reference<div class="ingroups"><a class="el" href="group__graphics.html">Graphics</a></div></div>  </div>
+<div class="title">cen::basic_cursor Class Reference<div class="ingroups"><a class="el" href="group__video.html">Video</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -104,46 +102,27 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="cursor_8hpp_source.html">cursor.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:aa5dd5cea65a95ccf70c5fdb79694d15f"><td class="memTemplParams" colspan="2">template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </td></tr>
-<tr class="memitem:aa5dd5cea65a95ccf70c5fdb79694d15f"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__cursor.html#aa5dd5cea65a95ccf70c5fdb79694d15f">basic_cursor</a> (const <a class="el" href="group__graphics.html#gae9a235b363a989632da847a0678cf0b8">system_cursor</a> <a class="el" href="group__graphics.html#ga180cff5e670804c3ba3f2b2b0f6c34dd">cursor</a>)</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Construction</h2></td></tr>
+<tr class="memitem:aa5dd5cea65a95ccf70c5fdb79694d15f"><td class="memTemplParams" colspan="2">template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </td></tr>
+<tr class="memitem:aa5dd5cea65a95ccf70c5fdb79694d15f"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__cursor.html#aa5dd5cea65a95ccf70c5fdb79694d15f">basic_cursor</a> (const <a class="el" href="group__video.html#gae9a235b363a989632da847a0678cf0b8">system_cursor</a> <a class="el" href="group__video.html#ga180cff5e670804c3ba3f2b2b0f6c34dd">cursor</a>)</td></tr>
 <tr class="memdesc:aa5dd5cea65a95ccf70c5fdb79694d15f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a cursor based on a cursor type.  <a href="classcen_1_1basic__cursor.html#aa5dd5cea65a95ccf70c5fdb79694d15f">More...</a><br /></td></tr>
 <tr class="separator:aa5dd5cea65a95ccf70c5fdb79694d15f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae91f3190c94c8e223fe6d56747bc3d87"><td class="memTemplParams" colspan="2">template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </td></tr>
-<tr class="memitem:ae91f3190c94c8e223fe6d56747bc3d87"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__cursor.html#ae91f3190c94c8e223fe6d56747bc3d87">basic_cursor</a> (const <a class="el" href="group__graphics.html#ga8b71461a73c8e75c41923ffa705d67b6">surface</a> &amp;<a class="el" href="group__graphics.html#ga8b71461a73c8e75c41923ffa705d67b6">surface</a>, const <a class="el" href="group__geometry.html#ga482cd24468a5a74647742e69379566c7">ipoint</a> &amp;hotspot)</td></tr>
-<tr class="memdesc:ae91f3190c94c8e223fe6d56747bc3d87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a cursor based on a surface and an associated hotspot.  <a href="classcen_1_1basic__cursor.html#ae91f3190c94c8e223fe6d56747bc3d87">More...</a><br /></td></tr>
-<tr class="separator:ae91f3190c94c8e223fe6d56747bc3d87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aecaef63f255b127d53d3e680fe2cfae8"><td class="memTemplParams" colspan="2">template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </td></tr>
-<tr class="memitem:aecaef63f255b127d53d3e680fe2cfae8"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__cursor.html#aecaef63f255b127d53d3e680fe2cfae8">basic_cursor</a> (SDL_Cursor *<a class="el" href="group__graphics.html#ga180cff5e670804c3ba3f2b2b0f6c34dd">cursor</a>) noexcept</td></tr>
+<tr class="memitem:aa9736ca3a64d78509c1ee913abac968b"><td class="memTemplParams" colspan="2">template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </td></tr>
+<tr class="memitem:aa9736ca3a64d78509c1ee913abac968b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__cursor.html#aa9736ca3a64d78509c1ee913abac968b">basic_cursor</a> (const <a class="el" href="group__video.html#ga8b71461a73c8e75c41923ffa705d67b6">surface</a> &amp;<a class="el" href="group__video.html#ga8b71461a73c8e75c41923ffa705d67b6">surface</a>, const <a class="el" href="group__math.html#ga482cd24468a5a74647742e69379566c7">ipoint</a> hotspot)</td></tr>
+<tr class="memdesc:aa9736ca3a64d78509c1ee913abac968b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a cursor based on a surface and an associated hotspot.  <a href="classcen_1_1basic__cursor.html#aa9736ca3a64d78509c1ee913abac968b">More...</a><br /></td></tr>
+<tr class="separator:aa9736ca3a64d78509c1ee913abac968b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecaef63f255b127d53d3e680fe2cfae8"><td class="memTemplParams" colspan="2">template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </td></tr>
+<tr class="memitem:aecaef63f255b127d53d3e680fe2cfae8"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__cursor.html#aecaef63f255b127d53d3e680fe2cfae8">basic_cursor</a> (SDL_Cursor *<a class="el" href="group__video.html#ga180cff5e670804c3ba3f2b2b0f6c34dd">cursor</a>) noexcept</td></tr>
 <tr class="memdesc:aecaef63f255b127d53d3e680fe2cfae8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a handle to a cursor based on a raw pointer.  <a href="classcen_1_1basic__cursor.html#aecaef63f255b127d53d3e680fe2cfae8">More...</a><br /></td></tr>
 <tr class="separator:aecaef63f255b127d53d3e680fe2cfae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeee1120db325f6b7626e57e5b0ce07c1"><td class="memTemplParams" colspan="2">template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </td></tr>
-<tr class="memitem:aeee1120db325f6b7626e57e5b0ce07c1"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__cursor.html#aeee1120db325f6b7626e57e5b0ce07c1">basic_cursor</a> (const <a class="el" href="group__graphics.html#ga180cff5e670804c3ba3f2b2b0f6c34dd">cursor</a> &amp;<a class="el" href="namespacecen.html#a922c9ffa0c4b1b0dcaf50b7c6033a809">owner</a>) noexcept</td></tr>
+<tr class="memitem:aeee1120db325f6b7626e57e5b0ce07c1"><td class="memTemplParams" colspan="2">template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </td></tr>
+<tr class="memitem:aeee1120db325f6b7626e57e5b0ce07c1"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__cursor.html#aeee1120db325f6b7626e57e5b0ce07c1">basic_cursor</a> (const <a class="el" href="group__video.html#ga180cff5e670804c3ba3f2b2b0f6c34dd">cursor</a> &amp;<a class="el" href="group__core.html#ga922c9ffa0c4b1b0dcaf50b7c6033a809">owner</a>) noexcept</td></tr>
 <tr class="memdesc:aeee1120db325f6b7626e57e5b0ce07c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a handle to an owning cursor.  <a href="classcen_1_1basic__cursor.html#aeee1120db325f6b7626e57e5b0ce07c1">More...</a><br /></td></tr>
 <tr class="separator:aeee1120db325f6b7626e57e5b0ce07c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac55c8bd7683051e8dd1a7a18c2ff9f0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__cursor.html#ac55c8bd7683051e8dd1a7a18c2ff9f0c">enable</a> () noexcept</td></tr>
-<tr class="memdesc:ac55c8bd7683051e8dd1a7a18c2ff9f0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables the cursor by making it the currently active cursor.  <a href="classcen_1_1basic__cursor.html#ac55c8bd7683051e8dd1a7a18c2ff9f0c">More...</a><br /></td></tr>
-<tr class="separator:ac55c8bd7683051e8dd1a7a18c2ff9f0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee8f4171facf70c520c4b81fcfffab2b"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__cursor.html#aee8f4171facf70c520c4b81fcfffab2b">is_enabled</a> () const noexcept -&gt; bool</td></tr>
-<tr class="memdesc:aee8f4171facf70c520c4b81fcfffab2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not this cursor is currently active.  <a href="classcen_1_1basic__cursor.html#aee8f4171facf70c520c4b81fcfffab2b">More...</a><br /></td></tr>
-<tr class="separator:aee8f4171facf70c520c4b81fcfffab2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71202de76647755a95587f3d81bc8ada"><td class="memTemplParams" colspan="2">template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </td></tr>
-<tr class="memitem:a71202de76647755a95587f3d81bc8ada"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__cursor.html#a71202de76647755a95587f3d81bc8ada">operator bool</a> () const noexcept</td></tr>
-<tr class="memdesc:a71202de76647755a95587f3d81bc8ada"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the cursor handle holds a non-null pointer.  <a href="classcen_1_1basic__cursor.html#a71202de76647755a95587f3d81bc8ada">More...</a><br /></td></tr>
-<tr class="separator:a71202de76647755a95587f3d81bc8ada"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c6b67e3b20808ed10a9dfe3700fcf32"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__cursor.html#a2c6b67e3b20808ed10a9dfe3700fcf32">get</a> () const noexcept -&gt; SDL_Cursor *</td></tr>
-<tr class="memdesc:a2c6b67e3b20808ed10a9dfe3700fcf32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the associated cursor.  <a href="classcen_1_1basic__cursor.html#a2c6b67e3b20808ed10a9dfe3700fcf32">More...</a><br /></td></tr>
-<tr class="separator:a2c6b67e3b20808ed10a9dfe3700fcf32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a607ea4919d4397ec8cee34b40ce9d2ab"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__cursor.html#a607ea4919d4397ec8cee34b40ce9d2ab">get_default</a> () noexcept -&gt; <a class="el" href="group__graphics.html#ga569144087c06cf7afecce394d1102fac">cursor_handle</a></td></tr>
-<tr class="memdesc:a607ea4919d4397ec8cee34b40ce9d2ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a handle to the default cursor for the system.  <a href="classcen_1_1basic__cursor.html#a607ea4919d4397ec8cee34b40ce9d2ab">More...</a><br /></td></tr>
-<tr class="separator:a607ea4919d4397ec8cee34b40ce9d2ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4aa71bfeec32848d5017910d4106cc6"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__cursor.html#af4aa71bfeec32848d5017910d4106cc6">get_current</a> () noexcept -&gt; <a class="el" href="group__graphics.html#ga569144087c06cf7afecce394d1102fac">cursor_handle</a></td></tr>
-<tr class="memdesc:af4aa71bfeec32848d5017910d4106cc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a handle to the currently active cursor.  <a href="classcen_1_1basic__cursor.html#af4aa71bfeec32848d5017910d4106cc6">More...</a><br /></td></tr>
-<tr class="separator:af4aa71bfeec32848d5017910d4106cc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Static members</h2></td></tr>
 <tr class="memitem:a0a91fa34895ff1446a867296741592eb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__cursor.html#a0a91fa34895ff1446a867296741592eb">reset</a> () noexcept</td></tr>
 <tr class="memdesc:a0a91fa34895ff1446a867296741592eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the active cursor to the system default.  <a href="classcen_1_1basic__cursor.html#a0a91fa34895ff1446a867296741592eb">More...</a><br /></td></tr>
 <tr class="separator:a0a91fa34895ff1446a867296741592eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -153,26 +132,45 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a49c40d4dad37f2cc64cda484476e6b34"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__cursor.html#a49c40d4dad37f2cc64cda484476e6b34">set_visible</a> (const bool <a class="el" href="classcen_1_1basic__cursor.html#a0e5ddf1829568bbc21af8c5fc538ec87">visible</a>) noexcept</td></tr>
 <tr class="memdesc:a49c40d4dad37f2cc64cda484476e6b34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether or not any mouse cursor is visible.  <a href="classcen_1_1basic__cursor.html#a49c40d4dad37f2cc64cda484476e6b34">More...</a><br /></td></tr>
 <tr class="separator:a49c40d4dad37f2cc64cda484476e6b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a607ea4919d4397ec8cee34b40ce9d2ab"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__cursor.html#a607ea4919d4397ec8cee34b40ce9d2ab">get_default</a> () noexcept -&gt; <a class="el" href="group__video.html#ga569144087c06cf7afecce394d1102fac">cursor_handle</a></td></tr>
+<tr class="memdesc:a607ea4919d4397ec8cee34b40ce9d2ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a handle to the default cursor for the system.  <a href="classcen_1_1basic__cursor.html#a607ea4919d4397ec8cee34b40ce9d2ab">More...</a><br /></td></tr>
+<tr class="separator:a607ea4919d4397ec8cee34b40ce9d2ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4aa71bfeec32848d5017910d4106cc6"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__cursor.html#af4aa71bfeec32848d5017910d4106cc6">get_current</a> () noexcept -&gt; <a class="el" href="group__video.html#ga569144087c06cf7afecce394d1102fac">cursor_handle</a></td></tr>
+<tr class="memdesc:af4aa71bfeec32848d5017910d4106cc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a handle to the currently active cursor.  <a href="classcen_1_1basic__cursor.html#af4aa71bfeec32848d5017910d4106cc6">More...</a><br /></td></tr>
+<tr class="separator:af4aa71bfeec32848d5017910d4106cc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e5ddf1829568bbc21af8c5fc538ec87"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__cursor.html#a0e5ddf1829568bbc21af8c5fc538ec87">visible</a> () noexcept -&gt; bool</td></tr>
 <tr class="memdesc:a0e5ddf1829568bbc21af8c5fc538ec87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not cursors are visible.  <a href="classcen_1_1basic__cursor.html#a0e5ddf1829568bbc21af8c5fc538ec87">More...</a><br /></td></tr>
 <tr class="separator:a0e5ddf1829568bbc21af8c5fc538ec87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9aac1785a223c87c9a23497464244c66"><td class="memItemLeft" align="right" valign="top">constexpr static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__cursor.html#a9aac1785a223c87c9a23497464244c66">num_system_cursors</a> () noexcept -&gt; int</td></tr>
-<tr class="memdesc:a9aac1785a223c87c9a23497464244c66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of system cursors.  <a href="classcen_1_1basic__cursor.html#a9aac1785a223c87c9a23497464244c66">More...</a><br /></td></tr>
-<tr class="separator:a9aac1785a223c87c9a23497464244c66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae00bf413658e7942978382d9e4f0fed"><td class="memItemLeft" align="right" valign="top">constexpr static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__cursor.html#aae00bf413658e7942978382d9e4f0fed">count</a> () noexcept -&gt; int</td></tr>
+<tr class="memdesc:aae00bf413658e7942978382d9e4f0fed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of system cursors.  <a href="classcen_1_1basic__cursor.html#aae00bf413658e7942978382d9e4f0fed">More...</a><br /></td></tr>
+<tr class="separator:aae00bf413658e7942978382d9e4f0fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Instance members</h2></td></tr>
+<tr class="memitem:ac55c8bd7683051e8dd1a7a18c2ff9f0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__cursor.html#ac55c8bd7683051e8dd1a7a18c2ff9f0c">enable</a> () noexcept</td></tr>
+<tr class="memdesc:ac55c8bd7683051e8dd1a7a18c2ff9f0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables the cursor by making it the currently active cursor.  <a href="classcen_1_1basic__cursor.html#ac55c8bd7683051e8dd1a7a18c2ff9f0c">More...</a><br /></td></tr>
+<tr class="separator:ac55c8bd7683051e8dd1a7a18c2ff9f0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee8f4171facf70c520c4b81fcfffab2b"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__cursor.html#aee8f4171facf70c520c4b81fcfffab2b">is_enabled</a> () const noexcept -&gt; bool</td></tr>
+<tr class="memdesc:aee8f4171facf70c520c4b81fcfffab2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not this cursor is currently active.  <a href="classcen_1_1basic__cursor.html#aee8f4171facf70c520c4b81fcfffab2b">More...</a><br /></td></tr>
+<tr class="separator:aee8f4171facf70c520c4b81fcfffab2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c6b67e3b20808ed10a9dfe3700fcf32"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__cursor.html#a2c6b67e3b20808ed10a9dfe3700fcf32">get</a> () const noexcept -&gt; SDL_Cursor *</td></tr>
+<tr class="memdesc:a2c6b67e3b20808ed10a9dfe3700fcf32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the associated cursor.  <a href="classcen_1_1basic__cursor.html#a2c6b67e3b20808ed10a9dfe3700fcf32">More...</a><br /></td></tr>
+<tr class="separator:a2c6b67e3b20808ed10a9dfe3700fcf32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Conversions</h2></td></tr>
+<tr class="memitem:a71202de76647755a95587f3d81bc8ada"><td class="memTemplParams" colspan="2">template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a71202de76647755a95587f3d81bc8ada"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__cursor.html#a71202de76647755a95587f3d81bc8ada">operator bool</a> () const noexcept</td></tr>
+<tr class="memdesc:a71202de76647755a95587f3d81bc8ada"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the cursor handle holds a non-null pointer.  <a href="classcen_1_1basic__cursor.html#a71202de76647755a95587f3d81bc8ada">More...</a><br /></td></tr>
+<tr class="separator:a71202de76647755a95587f3d81bc8ada"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a mouse cursor. </p>
 <p>Depending on the template type parameter, this class can represent either an owning or non-owning cursor.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">B</td><td><code>std::true_type</code> for owning cursors, <code>std::false_type</code> for non-owning cursors.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__graphics.html#ga180cff5e670804c3ba3f2b2b0f6c34dd" title="Represents an owning cursor.">cursor</a> </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__video.html#ga180cff5e670804c3ba3f2b2b0f6c34dd" title="Represents an owning cursor.">cursor</a> </dd>
 <dd>
-<a class="el" href="group__graphics.html#ga569144087c06cf7afecce394d1102fac" title="Represents a non-owning cursor.">cursor_handle</a> </dd></dl>
+<a class="el" href="group__video.html#ga569144087c06cf7afecce394d1102fac" title="Represents a non-owning cursor.">cursor_handle</a> </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa5dd5cea65a95ccf70c5fdb79694d15f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa5dd5cea65a95ccf70c5fdb79694d15f">&#9670;&nbsp;</a></span>basic_cursor() <span class="overload">[1/4]</span></h2>
@@ -180,7 +178,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
+template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -188,7 +186,7 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
         <tr>
           <td class="memname">cen::basic_cursor::basic_cursor </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__graphics.html#gae9a235b363a989632da847a0678cf0b8">system_cursor</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__video.html#gae9a235b363a989632da847a0678cf0b8">system_cursor</a>&#160;</td>
           <td class="paramname"><em>cursor</em></td><td>)</td>
           <td></td>
         </tr>
@@ -201,12 +199,6 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
 </div><div class="memdoc">
 
 <p>Creates a cursor based on a cursor type. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">U</td><td>dummy template parameter used for SFINAE.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cursor</td><td>the type of the cursor that will be created.</td></tr>
@@ -223,13 +215,13 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
 
 </div>
 </div>
-<a id="ae91f3190c94c8e223fe6d56747bc3d87"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae91f3190c94c8e223fe6d56747bc3d87">&#9670;&nbsp;</a></span>basic_cursor() <span class="overload">[2/4]</span></h2>
+<a id="aa9736ca3a64d78509c1ee913abac968b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9736ca3a64d78509c1ee913abac968b">&#9670;&nbsp;</a></span>basic_cursor() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
+template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -237,13 +229,13 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
         <tr>
           <td class="memname">cen::basic_cursor::basic_cursor </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__graphics.html#ga8b71461a73c8e75c41923ffa705d67b6">surface</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__video.html#ga8b71461a73c8e75c41923ffa705d67b6">surface</a> &amp;&#160;</td>
           <td class="paramname"><em>surface</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="group__geometry.html#ga482cd24468a5a74647742e69379566c7">ipoint</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__math.html#ga482cd24468a5a74647742e69379566c7">ipoint</a>&#160;</td>
           <td class="paramname"><em>hotspot</em>&#160;</td>
         </tr>
         <tr>
@@ -260,12 +252,6 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
 </div><div class="memdoc">
 
 <p>Creates a cursor based on a surface and an associated hotspot. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">U</td><td>dummy template parameter used for SFINAE.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">surface</td><td>the icon associated with the cursor. </td></tr>
@@ -289,7 +275,7 @@ template&lt;typename BB  = B, detail::is_owner&lt; BB &gt;  = true&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
+template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -311,12 +297,6 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 
 <p>Creates a handle to a cursor based on a raw pointer. </p>
 <dl class="section note"><dt>Note</dt><dd>This constructor is only available for handles since it would be very easy to introduce subtle bugs by creating owning cursors from <code>SDL_GetCursor</code> or <code>SDL_GetDefaultCursor</code>, which should not be freed.</dd></dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">U</td><td>dummy template parameter used for SFINAE.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cursor</td><td>a pointer to the associated cursor.</td></tr>
@@ -333,7 +313,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
+template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -341,7 +321,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
         <tr>
           <td class="memname">cen::basic_cursor::basic_cursor </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__graphics.html#ga180cff5e670804c3ba3f2b2b0f6c34dd">cursor</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__video.html#ga180cff5e670804c3ba3f2b2b0f6c34dd">cursor</a> &amp;&#160;</td>
           <td class="paramname"><em>owner</em></td><td>)</td>
           <td></td>
         </tr>
@@ -354,12 +334,6 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 </div><div class="memdoc">
 
 <p>Creates a handle to an owning cursor. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">BB</td><td>dummy template parameter used for SFINAE.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">owner</td><td>the associated owning cursor.</td></tr>
@@ -371,6 +345,36 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="aae00bf413658e7942978382d9e4f0fed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae00bf413658e7942978382d9e4f0fed">&#9670;&nbsp;</a></span>count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr static auto cen::basic_cursor::count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; int
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the number of system cursors. </p>
+<dl class="section return"><dt>Returns</dt><dd>the amount of system cursors.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
 <a id="ac55c8bd7683051e8dd1a7a18c2ff9f0c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac55c8bd7683051e8dd1a7a18c2ff9f0c">&#9670;&nbsp;</a></span>enable()</h2>
 
@@ -471,7 +475,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
           <td class="memname">static auto cen::basic_cursor::get_current </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__graphics.html#ga569144087c06cf7afecce394d1102fac">cursor_handle</a>
+          <td> -&gt; <a class="el" href="group__video.html#ga569144087c06cf7afecce394d1102fac">cursor_handle</a>
   </td>
         </tr>
       </table>
@@ -501,7 +505,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
           <td class="memname">static auto cen::basic_cursor::get_default </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__graphics.html#ga569144087c06cf7afecce394d1102fac">cursor_handle</a>
+          <td> -&gt; <a class="el" href="group__video.html#ga569144087c06cf7afecce394d1102fac">cursor_handle</a>
   </td>
         </tr>
       </table>
@@ -549,43 +553,13 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 
 </div>
 </div>
-<a id="a9aac1785a223c87c9a23497464244c66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9aac1785a223c87c9a23497464244c66">&#9670;&nbsp;</a></span>num_system_cursors()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr static auto cen::basic_cursor::num_system_cursors </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; int
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the number of system cursors. </p>
-<dl class="section return"><dt>Returns</dt><dd>the amount of system cursors.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
 <a id="a71202de76647755a95587f3d81bc8ada"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a71202de76647755a95587f3d81bc8ada">&#9670;&nbsp;</a></span>operator bool()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
+template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -605,12 +579,6 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 </div><div class="memdoc">
 
 <p>Indicates whether or not the cursor handle holds a non-null pointer. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">U</td><td>dummy template parameter used for SFINAE.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the internal pointer is not null; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
@@ -710,7 +678,7 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = true&gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/centurion/<a class="el" href="cursor_8hpp_source.html">cursor.hpp</a></li>
+<li>src/centurion/video/<a class="el" href="cursor_8hpp_source.html">cursor.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

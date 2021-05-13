@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/ram.hpp Source File</title>
+        <title>Centurion: src/centurion/system/ram.hpp Source File</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_c6d2c5988ce62fe45ec82cf89dcf887c.html">system</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -98,34 +98,27 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;SDL.h&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="centurion__cfg_8hpp.html">centurion_cfg.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifdef CENTURION_USE_PRAGMA_ONCE</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#endif  // CENTURION_USE_PRAGMA_ONCE</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecen_1_1ram.html">cen::ram</a> {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="group__system.html#ga080c5a1d6fcedd5300ab84ab3718ac23">   35</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#ga080c5a1d6fcedd5300ab84ab3718ac23">amount_mb</a>() noexcept -&gt; <span class="keywordtype">int</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordflow">return</span> SDL_GetSystemRAM();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="group__system.html#ga11a249314a4eff6ee6a66804263875e6">   47</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#ga11a249314a4eff6ee6a66804263875e6">amount_gb</a>() noexcept -&gt; <span class="keywordtype">int</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="group__system.html#ga080c5a1d6fcedd5300ab84ab3718ac23">amount_mb</a>() / 1<span class="stringliteral">&#39;000;</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="stringliteral">}</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="stringliteral"></span> </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="stringliteral"></span> </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="stringliteral">}  // namespace cen::ram</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="stringliteral"></span> </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="stringliteral">#endif  // CENTURION_RAM_HEADER</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecen_1_1ram.html">cen::ram</a> {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="namespacecen_1_1ram.html#a080c5a1d6fcedd5300ab84ab3718ac23">   25</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1ram.html#a080c5a1d6fcedd5300ab84ab3718ac23">amount_mb</a>() noexcept -&gt; <span class="keywordtype">int</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordflow">return</span> SDL_GetSystemRAM();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="namespacecen_1_1ram.html#a11a249314a4eff6ee6a66804263875e6">   37</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1ram.html#a11a249314a4eff6ee6a66804263875e6">amount_gb</a>() noexcept -&gt; <span class="keywordtype">int</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="namespacecen_1_1ram.html#a080c5a1d6fcedd5300ab84ab3718ac23">amount_mb</a>() / 1<span class="stringliteral">&#39;000;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="stringliteral">}</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="stringliteral">}  // namespace cen::ram</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="stringliteral">#endif  // CENTURION_RAM_HEADER</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacecen_1_1ram_html"><div class="ttname"><a href="namespacecen_1_1ram.html">cen::ram</a></div><div class="ttdoc">Contains functions related to the system memory.</div></div>
-<div class="ttc" id="agroup__system_html_ga11a249314a4eff6ee6a66804263875e6"><div class="ttname"><a href="group__system.html#ga11a249314a4eff6ee6a66804263875e6">cen::ram::amount_gb</a></div><div class="ttdeci">auto amount_gb() noexcept -&gt; int</div><div class="ttdoc">Returns the total amount of system RAM in gigabytes.</div><div class="ttdef"><b>Definition:</b> ram.hpp:47</div></div>
-<div class="ttc" id="agroup__system_html_ga080c5a1d6fcedd5300ab84ab3718ac23"><div class="ttname"><a href="group__system.html#ga080c5a1d6fcedd5300ab84ab3718ac23">cen::ram::amount_mb</a></div><div class="ttdeci">auto amount_mb() noexcept -&gt; int</div><div class="ttdoc">Returns the total amount of system RAM in megabytes.</div><div class="ttdef"><b>Definition:</b> ram.hpp:35</div></div>
-<div class="ttc" id="acenturion__cfg_8hpp_html"><div class="ttname"><a href="centurion__cfg_8hpp.html">centurion_cfg.hpp</a></div></div>
+<div class="ttc" id="anamespacecen_1_1ram_html_a11a249314a4eff6ee6a66804263875e6"><div class="ttname"><a href="namespacecen_1_1ram.html#a11a249314a4eff6ee6a66804263875e6">cen::ram::amount_gb</a></div><div class="ttdeci">auto amount_gb() noexcept -&gt; int</div><div class="ttdoc">Returns the total amount of system RAM in gigabytes.</div><div class="ttdef"><b>Definition:</b> ram.hpp:37</div></div>
+<div class="ttc" id="anamespacecen_1_1ram_html_a080c5a1d6fcedd5300ab84ab3718ac23"><div class="ttname"><a href="namespacecen_1_1ram.html#a080c5a1d6fcedd5300ab84ab3718ac23">cen::ram::amount_mb</a></div><div class="ttdeci">auto amount_mb() noexcept -&gt; int</div><div class="ttdoc">Returns the total amount of system RAM in megabytes.</div><div class="ttdef"><b>Definition:</b> ram.hpp:25</div></div>
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
 </div>

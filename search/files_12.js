@@ -1,4 +1,19 @@
 var searchData=
 [
-  ['unicode_5fstring_2ehpp_1950',['unicode_string.hpp',['../unicode__string_8hpp.html',1,'']]]
+  ['scale_5fmode_2ehpp_2305',['scale_mode.hpp',['../scale__mode_8hpp.html',1,'']]],
+  ['scan_5fcode_2ehpp_2306',['scan_code.hpp',['../scan__code_8hpp.html',1,'']]],
+  ['scoped_5flock_2ehpp_2307',['scoped_lock.hpp',['../scoped__lock_8hpp.html',1,'']]],
+  ['screen_2ehpp_2308',['screen.hpp',['../screen_8hpp.html',1,'']]],
+  ['sdl_5fdeleter_2ehpp_2309',['sdl_deleter.hpp',['../sdl__deleter_8hpp.html',1,'']]],
+  ['sdl_5fstring_2ehpp_2310',['sdl_string.hpp',['../sdl__string_8hpp.html',1,'']]],
+  ['sdl_5fversion_5fat_5fleast_2ehpp_2311',['sdl_version_at_least.hpp',['../sdl__version__at__least_8hpp.html',1,'']]],
+  ['semaphore_2ehpp_2312',['semaphore.hpp',['../semaphore_8hpp.html',1,'']]],
+  ['sensor_2ehpp_2313',['sensor.hpp',['../sensor_8hpp.html',1,'']]],
+  ['sfinae_2ehpp_2314',['sfinae.hpp',['../sfinae_8hpp.html',1,'']]],
+  ['shared_5fobject_2ehpp_2315',['shared_object.hpp',['../shared__object_8hpp.html',1,'']]],
+  ['sound_5feffect_2ehpp_2316',['sound_effect.hpp',['../sound__effect_8hpp.html',1,'']]],
+  ['sound_5ffonts_2ehpp_2317',['sound_fonts.hpp',['../sound__fonts_8hpp.html',1,'']]],
+  ['stack_5fresource_2ehpp_2318',['stack_resource.hpp',['../stack__resource_8hpp.html',1,'']]],
+  ['static_5fbimap_2ehpp_2319',['static_bimap.hpp',['../static__bimap_8hpp.html',1,'']]],
+  ['surface_2ehpp_2320',['surface.hpp',['../surface_8hpp.html',1,'']]]
 ];

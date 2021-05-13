@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/integers.hpp File Reference</title>
+        <title>Centurion: src/centurion/core/integers.hpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,20 +85,18 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_033c555e8ea57d729336171de4fce59a.html">core</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">integers.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;SDL.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="centurion__cfg_8hpp_source.html">centurion_cfg.hpp</a>&quot;</code><br />
 </div>
 <p><a href="integers_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -110,63 +108,69 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacecen_1_1literals"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1literals.html">cen::literals</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a8e13da4bfe11751d59c11c9e5708d948"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen.html#a8e13da4bfe11751d59c11c9e5708d948">cen::u64</a> = Uint64</td></tr>
-<tr class="memdesc:a8e13da4bfe11751d59c11c9e5708d948"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for a 64-bit unsigned integer.  <a href="namespacecen.html#a8e13da4bfe11751d59c11c9e5708d948">More...</a><br /></td></tr>
-<tr class="separator:a8e13da4bfe11751d59c11c9e5708d948"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1dcf848a9ee33237a96cde6b5a1d466"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen.html#ad1dcf848a9ee33237a96cde6b5a1d466">cen::u32</a> = Uint32</td></tr>
-<tr class="memdesc:ad1dcf848a9ee33237a96cde6b5a1d466"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for a 32-bit unsigned integer.  <a href="namespacecen.html#ad1dcf848a9ee33237a96cde6b5a1d466">More...</a><br /></td></tr>
-<tr class="separator:ad1dcf848a9ee33237a96cde6b5a1d466"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fd591c30def89afffd2d00507c08c49"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">cen::u16</a> = Uint16</td></tr>
-<tr class="memdesc:a5fd591c30def89afffd2d00507c08c49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for a 16-bit unsigned integer.  <a href="namespacecen.html#a5fd591c30def89afffd2d00507c08c49">More...</a><br /></td></tr>
-<tr class="separator:a5fd591c30def89afffd2d00507c08c49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c78257ad3b57dba4858a39101fbf14b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">cen::u8</a> = Uint8</td></tr>
-<tr class="memdesc:a7c78257ad3b57dba4858a39101fbf14b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for an 8-bit unsigned integer.  <a href="namespacecen.html#a7c78257ad3b57dba4858a39101fbf14b">More...</a><br /></td></tr>
-<tr class="separator:a7c78257ad3b57dba4858a39101fbf14b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42b76b478e2c7673d5f89d589609dc00"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen.html#a42b76b478e2c7673d5f89d589609dc00">cen::i64</a> = Sint64</td></tr>
-<tr class="memdesc:a42b76b478e2c7673d5f89d589609dc00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for a 64-bit signed integer.  <a href="namespacecen.html#a42b76b478e2c7673d5f89d589609dc00">More...</a><br /></td></tr>
-<tr class="separator:a42b76b478e2c7673d5f89d589609dc00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabf4aa48048acf5b724d5533df8e525d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen.html#aabf4aa48048acf5b724d5533df8e525d">cen::i32</a> = Sint32</td></tr>
-<tr class="memdesc:aabf4aa48048acf5b724d5533df8e525d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for a 32-bit signed integer.  <a href="namespacecen.html#aabf4aa48048acf5b724d5533df8e525d">More...</a><br /></td></tr>
-<tr class="separator:aabf4aa48048acf5b724d5533df8e525d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42a54ea1f9c6ddee9f2431fc572f5a54"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen.html#a42a54ea1f9c6ddee9f2431fc572f5a54">cen::i16</a> = Sint16</td></tr>
-<tr class="memdesc:a42a54ea1f9c6ddee9f2431fc572f5a54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for a 16-bit signed integer.  <a href="namespacecen.html#a42a54ea1f9c6ddee9f2431fc572f5a54">More...</a><br /></td></tr>
-<tr class="separator:a42a54ea1f9c6ddee9f2431fc572f5a54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a323d0dcaf21010deb9464dbe0474a157"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen.html#a323d0dcaf21010deb9464dbe0474a157">cen::i8</a> = Sint8</td></tr>
-<tr class="memdesc:a323d0dcaf21010deb9464dbe0474a157"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for an 8-bit signed integer.  <a href="namespacecen.html#a323d0dcaf21010deb9464dbe0474a157">More...</a><br /></td></tr>
-<tr class="separator:a323d0dcaf21010deb9464dbe0474a157"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a3764941d9ec9f936c62296ed6490ce70"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a3764941d9ec9f936c62296ed6490ce70"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecen.html#a3764941d9ec9f936c62296ed6490ce70">cen::isize</a> (const T &amp;container) noexcept(noexcept(container.size())) -&gt; int</td></tr>
-<tr class="memdesc:a3764941d9ec9f936c62296ed6490ce70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtains the size of a container as an <code>int</code>.  <a href="namespacecen.html#a3764941d9ec9f936c62296ed6490ce70">More...</a><br /></td></tr>
-<tr class="separator:a3764941d9ec9f936c62296ed6490ce70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65dd1a7dd5bdebede90e0ffa0f40fe0d"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1literals.html#a65dd1a7dd5bdebede90e0ffa0f40fe0d">cen::literals::operator&quot;&quot;_u8</a> (unsigned long long value) noexcept -&gt; u8</td></tr>
-<tr class="memdesc:a65dd1a7dd5bdebede90e0ffa0f40fe0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an 8-bit unsigned integer.  <a href="namespacecen_1_1literals.html#a65dd1a7dd5bdebede90e0ffa0f40fe0d">More...</a><br /></td></tr>
-<tr class="separator:a65dd1a7dd5bdebede90e0ffa0f40fe0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96953f73cd12e42c358dcb06ed00228b"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1literals.html#a96953f73cd12e42c358dcb06ed00228b">cen::literals::operator&quot;&quot;_u16</a> (unsigned long long value) noexcept -&gt; u16</td></tr>
-<tr class="memdesc:a96953f73cd12e42c358dcb06ed00228b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a 16-bit unsigned integer.  <a href="namespacecen_1_1literals.html#a96953f73cd12e42c358dcb06ed00228b">More...</a><br /></td></tr>
-<tr class="separator:a96953f73cd12e42c358dcb06ed00228b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a419970390774359480b5904c7a06e3b2"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1literals.html#a419970390774359480b5904c7a06e3b2">cen::literals::operator&quot;&quot;_u32</a> (unsigned long long value) noexcept -&gt; u32</td></tr>
-<tr class="memdesc:a419970390774359480b5904c7a06e3b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a 32-bit unsigned integer.  <a href="namespacecen_1_1literals.html#a419970390774359480b5904c7a06e3b2">More...</a><br /></td></tr>
-<tr class="separator:a419970390774359480b5904c7a06e3b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69d9578bf27e89a0aa55ee838b3f07a4"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1literals.html#a69d9578bf27e89a0aa55ee838b3f07a4">cen::literals::operator&quot;&quot;_u64</a> (unsigned long long value) noexcept -&gt; u64</td></tr>
-<tr class="memdesc:a69d9578bf27e89a0aa55ee838b3f07a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a 64-bit unsigned integer.  <a href="namespacecen_1_1literals.html#a69d9578bf27e89a0aa55ee838b3f07a4">More...</a><br /></td></tr>
-<tr class="separator:a69d9578bf27e89a0aa55ee838b3f07a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeaa82c48487967f06f4a6138476d0f5a"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1literals.html#aeaa82c48487967f06f4a6138476d0f5a">cen::literals::operator&quot;&quot;_i8</a> (unsigned long long value) noexcept -&gt; i8</td></tr>
-<tr class="memdesc:aeaa82c48487967f06f4a6138476d0f5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an 8-bit signed integer.  <a href="namespacecen_1_1literals.html#aeaa82c48487967f06f4a6138476d0f5a">More...</a><br /></td></tr>
-<tr class="separator:aeaa82c48487967f06f4a6138476d0f5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8e3cbde6673d60674d076d6d94f056e"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1literals.html#ab8e3cbde6673d60674d076d6d94f056e">cen::literals::operator&quot;&quot;_i16</a> (unsigned long long value) noexcept -&gt; i16</td></tr>
-<tr class="memdesc:ab8e3cbde6673d60674d076d6d94f056e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a 16-bit signed integer.  <a href="namespacecen_1_1literals.html#ab8e3cbde6673d60674d076d6d94f056e">More...</a><br /></td></tr>
-<tr class="separator:ab8e3cbde6673d60674d076d6d94f056e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ac68b46f3490955ab5db55065d73fe3"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1literals.html#a3ac68b46f3490955ab5db55065d73fe3">cen::literals::operator&quot;&quot;_i32</a> (unsigned long long value) noexcept -&gt; i32</td></tr>
-<tr class="memdesc:a3ac68b46f3490955ab5db55065d73fe3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a 32-bit signed integer.  <a href="namespacecen_1_1literals.html#a3ac68b46f3490955ab5db55065d73fe3">More...</a><br /></td></tr>
-<tr class="separator:a3ac68b46f3490955ab5db55065d73fe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abae13d2ca74ee0cd9b8dc8242ba4163c"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1literals.html#abae13d2ca74ee0cd9b8dc8242ba4163c">cen::literals::operator&quot;&quot;_i64</a> (unsigned long long value) noexcept -&gt; i64</td></tr>
-<tr class="memdesc:abae13d2ca74ee0cd9b8dc8242ba4163c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a 64-bit signed integer.  <a href="namespacecen_1_1literals.html#abae13d2ca74ee0cd9b8dc8242ba4163c">More...</a><br /></td></tr>
-<tr class="separator:abae13d2ca74ee0cd9b8dc8242ba4163c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3764941d9ec9f936c62296ed6490ce70"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga3764941d9ec9f936c62296ed6490ce70"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga3764941d9ec9f936c62296ed6490ce70">cen::isize</a> (const T &amp;container) noexcept(noexcept(container.size())) -&gt; int</td></tr>
+<tr class="memdesc:ga3764941d9ec9f936c62296ed6490ce70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtains the size of a container as an <code>int</code>.  <a href="group__core.html#ga3764941d9ec9f936c62296ed6490ce70">More...</a><br /></td></tr>
+<tr class="separator:ga3764941d9ec9f936c62296ed6490ce70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a304627ca092d240243fdfc794a23202f"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1literals.html#a304627ca092d240243fdfc794a23202f">cen::literals::operator&quot;&quot;_u8</a> (const ulonglong value) noexcept -&gt; u8</td></tr>
+<tr class="memdesc:a304627ca092d240243fdfc794a23202f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an 8-bit unsigned integer.  <a href="namespacecen_1_1literals.html#a304627ca092d240243fdfc794a23202f">More...</a><br /></td></tr>
+<tr class="separator:a304627ca092d240243fdfc794a23202f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a925fe8585f7f0e993e981f6239761d4b"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1literals.html#a925fe8585f7f0e993e981f6239761d4b">cen::literals::operator&quot;&quot;_u16</a> (const ulonglong value) noexcept -&gt; u16</td></tr>
+<tr class="memdesc:a925fe8585f7f0e993e981f6239761d4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a 16-bit unsigned integer.  <a href="namespacecen_1_1literals.html#a925fe8585f7f0e993e981f6239761d4b">More...</a><br /></td></tr>
+<tr class="separator:a925fe8585f7f0e993e981f6239761d4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3024db80250731d30db9e44c1106a6e"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1literals.html#ad3024db80250731d30db9e44c1106a6e">cen::literals::operator&quot;&quot;_u32</a> (const ulonglong value) noexcept -&gt; u32</td></tr>
+<tr class="memdesc:ad3024db80250731d30db9e44c1106a6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a 32-bit unsigned integer.  <a href="namespacecen_1_1literals.html#ad3024db80250731d30db9e44c1106a6e">More...</a><br /></td></tr>
+<tr class="separator:ad3024db80250731d30db9e44c1106a6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2a540f97848bfeb982f3956bd2fa1c3"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1literals.html#aa2a540f97848bfeb982f3956bd2fa1c3">cen::literals::operator&quot;&quot;_u64</a> (const ulonglong value) noexcept -&gt; u64</td></tr>
+<tr class="memdesc:aa2a540f97848bfeb982f3956bd2fa1c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a 64-bit unsigned integer.  <a href="namespacecen_1_1literals.html#aa2a540f97848bfeb982f3956bd2fa1c3">More...</a><br /></td></tr>
+<tr class="separator:aa2a540f97848bfeb982f3956bd2fa1c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfb37303bdef8b6026cfb87020549335"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1literals.html#abfb37303bdef8b6026cfb87020549335">cen::literals::operator&quot;&quot;_i8</a> (const ulonglong value) noexcept -&gt; i8</td></tr>
+<tr class="memdesc:abfb37303bdef8b6026cfb87020549335"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an 8-bit signed integer.  <a href="namespacecen_1_1literals.html#abfb37303bdef8b6026cfb87020549335">More...</a><br /></td></tr>
+<tr class="separator:abfb37303bdef8b6026cfb87020549335"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ce385aaabb94e2560ca9eac1fbe19c1"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1literals.html#a7ce385aaabb94e2560ca9eac1fbe19c1">cen::literals::operator&quot;&quot;_i16</a> (const ulonglong value) noexcept -&gt; i16</td></tr>
+<tr class="memdesc:a7ce385aaabb94e2560ca9eac1fbe19c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a 16-bit signed integer.  <a href="namespacecen_1_1literals.html#a7ce385aaabb94e2560ca9eac1fbe19c1">More...</a><br /></td></tr>
+<tr class="separator:a7ce385aaabb94e2560ca9eac1fbe19c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a424009c978a8c7f8cc884c894e611fdb"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1literals.html#a424009c978a8c7f8cc884c894e611fdb">cen::literals::operator&quot;&quot;_i32</a> (const ulonglong value) noexcept -&gt; i32</td></tr>
+<tr class="memdesc:a424009c978a8c7f8cc884c894e611fdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a 32-bit signed integer.  <a href="namespacecen_1_1literals.html#a424009c978a8c7f8cc884c894e611fdb">More...</a><br /></td></tr>
+<tr class="separator:a424009c978a8c7f8cc884c894e611fdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a321a353e01c973be71dd6da3872336c0"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1literals.html#a321a353e01c973be71dd6da3872336c0">cen::literals::operator&quot;&quot;_i64</a> (const ulonglong value) noexcept -&gt; i64</td></tr>
+<tr class="memdesc:a321a353e01c973be71dd6da3872336c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a 64-bit signed integer.  <a href="namespacecen_1_1literals.html#a321a353e01c973be71dd6da3872336c0">More...</a><br /></td></tr>
+<tr class="separator:a321a353e01c973be71dd6da3872336c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Integer aliases</h2></td></tr>
+<tr class="memitem:gaf548af65ed935a05b3fbbccc0c708481"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#gaf548af65ed935a05b3fbbccc0c708481">cen::uint</a> = unsigned int</td></tr>
+<tr class="memdesc:gaf548af65ed935a05b3fbbccc0c708481"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for an unsigned integer.  <a href="group__core.html#gaf548af65ed935a05b3fbbccc0c708481">More...</a><br /></td></tr>
+<tr class="separator:gaf548af65ed935a05b3fbbccc0c708481"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga208b5a60b996ef99b54adea25fc1a9a6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga208b5a60b996ef99b54adea25fc1a9a6">cen::ulonglong</a> = unsigned long long</td></tr>
+<tr class="memdesc:ga208b5a60b996ef99b54adea25fc1a9a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for the type used for integer literal operators.  <a href="group__core.html#ga208b5a60b996ef99b54adea25fc1a9a6">More...</a><br /></td></tr>
+<tr class="separator:ga208b5a60b996ef99b54adea25fc1a9a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga23844aa05b9b994328870cca9e5a7808"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga23844aa05b9b994328870cca9e5a7808">cen::u64</a> = Uint64</td></tr>
+<tr class="memdesc:ga23844aa05b9b994328870cca9e5a7808"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for a 64-bit unsigned integer.  <a href="group__core.html#ga23844aa05b9b994328870cca9e5a7808">More...</a><br /></td></tr>
+<tr class="separator:ga23844aa05b9b994328870cca9e5a7808"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4abd620246f76cc48168dc52a04a62da"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">cen::u32</a> = Uint32</td></tr>
+<tr class="memdesc:ga4abd620246f76cc48168dc52a04a62da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for a 32-bit unsigned integer.  <a href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">More...</a><br /></td></tr>
+<tr class="separator:ga4abd620246f76cc48168dc52a04a62da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4c6f8bc4ac32726f877ba95d65e5f67f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">cen::u16</a> = Uint16</td></tr>
+<tr class="memdesc:ga4c6f8bc4ac32726f877ba95d65e5f67f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for a 16-bit unsigned integer.  <a href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">More...</a><br /></td></tr>
+<tr class="separator:ga4c6f8bc4ac32726f877ba95d65e5f67f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga89b6da3d8b9fb42c7799b22d6afd1093"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">cen::u8</a> = Uint8</td></tr>
+<tr class="memdesc:ga89b6da3d8b9fb42c7799b22d6afd1093"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for an 8-bit unsigned integer.  <a href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">More...</a><br /></td></tr>
+<tr class="separator:ga89b6da3d8b9fb42c7799b22d6afd1093"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf1410adff3afd80e0c07d477cd8b1f43"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#gaf1410adff3afd80e0c07d477cd8b1f43">cen::i64</a> = Sint64</td></tr>
+<tr class="memdesc:gaf1410adff3afd80e0c07d477cd8b1f43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for a 64-bit signed integer.  <a href="group__core.html#gaf1410adff3afd80e0c07d477cd8b1f43">More...</a><br /></td></tr>
+<tr class="separator:gaf1410adff3afd80e0c07d477cd8b1f43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa69ad1561271765c17f77879a492d85b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#gaa69ad1561271765c17f77879a492d85b">cen::i32</a> = Sint32</td></tr>
+<tr class="memdesc:gaa69ad1561271765c17f77879a492d85b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for a 32-bit signed integer.  <a href="group__core.html#gaa69ad1561271765c17f77879a492d85b">More...</a><br /></td></tr>
+<tr class="separator:gaa69ad1561271765c17f77879a492d85b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga995971102059bcb96d27921ffb7c4916"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga995971102059bcb96d27921ffb7c4916">cen::i16</a> = Sint16</td></tr>
+<tr class="memdesc:ga995971102059bcb96d27921ffb7c4916"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for a 16-bit signed integer.  <a href="group__core.html#ga995971102059bcb96d27921ffb7c4916">More...</a><br /></td></tr>
+<tr class="separator:ga995971102059bcb96d27921ffb7c4916"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga071f405c0d96991bfc59d01f99562f96"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga071f405c0d96991bfc59d01f99562f96">cen::i8</a> = Sint8</td></tr>
+<tr class="memdesc:ga071f405c0d96991bfc59d01f99562f96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for an 8-bit signed integer.  <a href="group__core.html#ga071f405c0d96991bfc59d01f99562f96">More...</a><br /></td></tr>
+<tr class="separator:ga071f405c0d96991bfc59d01f99562f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

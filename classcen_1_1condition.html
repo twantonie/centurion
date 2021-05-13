@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -107,18 +107,18 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:acab86955d828aabd973280db5419d4e0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1condition.html#acab86955d828aabd973280db5419d4e0">condition</a> ()</td></tr>
 <tr class="separator:acab86955d828aabd973280db5419d4e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8877b55fd016c74257f1e23657cd772f"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1condition.html#a8877b55fd016c74257f1e23657cd772f">signal</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:a8877b55fd016c74257f1e23657cd772f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wakes up one of the threads that are waiting on the condition variable.  <a href="classcen_1_1condition.html#a8877b55fd016c74257f1e23657cd772f">More...</a><br /></td></tr>
-<tr class="separator:a8877b55fd016c74257f1e23657cd772f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5655d76c81e14675475bcad530c9b27"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1condition.html#aa5655d76c81e14675475bcad530c9b27">broadcast</a> () noexcept -&gt; bool</td></tr>
-<tr class="memdesc:aa5655d76c81e14675475bcad530c9b27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wakes up all threads that are waiting on the condition variable.  <a href="classcen_1_1condition.html#aa5655d76c81e14675475bcad530c9b27">More...</a><br /></td></tr>
-<tr class="separator:aa5655d76c81e14675475bcad530c9b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a552a43bd3da007ca92577bad049aaa6c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1condition.html#a552a43bd3da007ca92577bad049aaa6c">wait</a> (<a class="el" href="classcen_1_1mutex.html">mutex</a> &amp;<a class="el" href="classcen_1_1mutex.html">mutex</a>) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:a552a43bd3da007ca92577bad049aaa6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits until the condition variable is signaled.  <a href="classcen_1_1condition.html#a552a43bd3da007ca92577bad049aaa6c">More...</a><br /></td></tr>
-<tr class="separator:a552a43bd3da007ca92577bad049aaa6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c575df95b3b2bbfe34b06ca32065234"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1condition.html#a1c575df95b3b2bbfe34b06ca32065234">wait</a> (<a class="el" href="classcen_1_1mutex.html">mutex</a> &amp;<a class="el" href="classcen_1_1mutex.html">mutex</a>, const <a class="el" href="namespacecen.html#aeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="namespacecen.html#ad1dcf848a9ee33237a96cde6b5a1d466">u32</a> &gt; ms) -&gt; <a class="el" href="group__thread.html#ga81e5eda2a43cc39dee8bb8d60cff70d3">lock_status</a></td></tr>
-<tr class="memdesc:a1c575df95b3b2bbfe34b06ca32065234"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits until the condition variable is signaled or if the specified amount of time has passed.  <a href="classcen_1_1condition.html#a1c575df95b3b2bbfe34b06ca32065234">More...</a><br /></td></tr>
-<tr class="separator:a1c575df95b3b2bbfe34b06ca32065234"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b2204f4d43f7782712a90a57e7902b7"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1condition.html#a9b2204f4d43f7782712a90a57e7902b7">signal</a> () noexcept -&gt; <a class="el" href="classcen_1_1result.html">result</a></td></tr>
+<tr class="memdesc:a9b2204f4d43f7782712a90a57e7902b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wakes up one of the threads that are waiting on the condition variable.  <a href="classcen_1_1condition.html#a9b2204f4d43f7782712a90a57e7902b7">More...</a><br /></td></tr>
+<tr class="separator:a9b2204f4d43f7782712a90a57e7902b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab31f72152027f0a02654f12492d4c623"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1condition.html#ab31f72152027f0a02654f12492d4c623">broadcast</a> () noexcept -&gt; <a class="el" href="classcen_1_1result.html">result</a></td></tr>
+<tr class="memdesc:ab31f72152027f0a02654f12492d4c623"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wakes up all threads that are waiting on the condition variable.  <a href="classcen_1_1condition.html#ab31f72152027f0a02654f12492d4c623">More...</a><br /></td></tr>
+<tr class="separator:ab31f72152027f0a02654f12492d4c623"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ed6513f560b39dd5316dd6bd8d3502f"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1condition.html#a8ed6513f560b39dd5316dd6bd8d3502f">wait</a> (<a class="el" href="classcen_1_1mutex.html">mutex</a> &amp;<a class="el" href="classcen_1_1mutex.html">mutex</a>) noexcept -&gt; <a class="el" href="classcen_1_1result.html">result</a></td></tr>
+<tr class="memdesc:a8ed6513f560b39dd5316dd6bd8d3502f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits until the condition variable is signaled.  <a href="classcen_1_1condition.html#a8ed6513f560b39dd5316dd6bd8d3502f">More...</a><br /></td></tr>
+<tr class="separator:a8ed6513f560b39dd5316dd6bd8d3502f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae41089a286b74f95584793f12b5c80d1"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1condition.html#ae41089a286b74f95584793f12b5c80d1">wait</a> (<a class="el" href="classcen_1_1mutex.html">mutex</a> &amp;<a class="el" href="classcen_1_1mutex.html">mutex</a>, const <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a> &gt; ms) noexcept(noexcept(ms.count())) -&gt; <a class="el" href="group__thread.html#ga81e5eda2a43cc39dee8bb8d60cff70d3">lock_status</a></td></tr>
+<tr class="memdesc:ae41089a286b74f95584793f12b5c80d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits until the condition variable is signaled or if the specified amount of time has passed.  <a href="classcen_1_1condition.html#ae41089a286b74f95584793f12b5c80d1">More...</a><br /></td></tr>
+<tr class="separator:ae41089a286b74f95584793f12b5c80d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a condition variable. </p>
@@ -150,8 +150,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa5655d76c81e14675475bcad530c9b27"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5655d76c81e14675475bcad530c9b27">&#9670;&nbsp;</a></span>broadcast()</h2>
+<a id="ab31f72152027f0a02654f12492d4c623"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab31f72152027f0a02654f12492d4c623">&#9670;&nbsp;</a></span>broadcast()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -163,7 +163,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">auto cen::condition::broadcast </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> -&gt; bool
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
   </td>
         </tr>
       </table>
@@ -175,13 +175,13 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Wakes up all threads that are waiting on the condition variable. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if everything went OK; <code>false</code> on failure.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if nothing went wrong; <code>failure</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="a8877b55fd016c74257f1e23657cd772f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8877b55fd016c74257f1e23657cd772f">&#9670;&nbsp;</a></span>signal()</h2>
+<a id="a9b2204f4d43f7782712a90a57e7902b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b2204f4d43f7782712a90a57e7902b7">&#9670;&nbsp;</a></span>signal()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -193,7 +193,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">auto cen::condition::signal </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> -&gt; bool
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
   </td>
         </tr>
       </table>
@@ -205,13 +205,13 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Wakes up one of the threads that are waiting on the condition variable. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if everything went OK; <code>false</code> upon failure.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if nothing went wrong; <code>failure</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="a552a43bd3da007ca92577bad049aaa6c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a552a43bd3da007ca92577bad049aaa6c">&#9670;&nbsp;</a></span>wait() <span class="overload">[1/2]</span></h2>
+<a id="a8ed6513f560b39dd5316dd6bd8d3502f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ed6513f560b39dd5316dd6bd8d3502f">&#9670;&nbsp;</a></span>wait() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -224,7 +224,7 @@ Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classcen_1_1mutex.html">mutex</a> &amp;&#160;</td>
           <td class="paramname"><em>mutex</em></td><td>)</td>
-          <td> -&gt; bool
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
   </td>
         </tr>
       </table>
@@ -243,13 +243,13 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if everything went OK; <code>false</code> on failure.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if nothing went wrong; <code>failure</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="a1c575df95b3b2bbfe34b06ca32065234"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c575df95b3b2bbfe34b06ca32065234">&#9670;&nbsp;</a></span>wait() <span class="overload">[2/2]</span></h2>
+<a id="ae41089a286b74f95584793f12b5c80d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae41089a286b74f95584793f12b5c80d1">&#9670;&nbsp;</a></span>wait() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -266,7 +266,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacecen.html#aeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="namespacecen.html#ad1dcf848a9ee33237a96cde6b5a1d466">u32</a> &gt;&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a> &gt;&#160;</td>
           <td class="paramname"><em>ms</em>&#160;</td>
         </tr>
         <tr>
@@ -278,7 +278,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -299,7 +299,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/centurion/<a class="el" href="condition_8hpp_source.html">condition.hpp</a></li>
+<li>src/centurion/thread/<a class="el" href="condition_8hpp_source.html">condition.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
         <meta name="generator" content="Doxygen 1.8.17"/>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <title>Centurion: src/centurion/thread.hpp File Reference</title>
+        <title>Centurion: src/centurion/thread/thread.hpp File Reference</title>
         <!--<link href="tabs.css" rel="stylesheet" type="text/css"/>-->
         <script type="text/javascript" src="dynsections.js"></script>
         <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 5.3.0</a>
+                    <a class="navbar-brand">Centurion 6.0.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -85,7 +85,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b82e5e8cfa31d85ce93b6d0eb46ca630.html">centurion</a></li><li class="navelem"><a class="el" href="dir_d1a878c88e5267b23b5863fc5b658fbb.html">thread</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -102,14 +102,14 @@ $(function() {
 <code>#include &lt;cassert&gt;</code><br />
 <code>#include &lt;ostream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
-<code>#include &quot;<a class="el" href="centurion__cfg_8hpp_source.html">centurion_cfg.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="czstring_8hpp_source.html">czstring.hpp</a>&quot;</code><br />
-<code>#include &quot;detail/address_of.hpp&quot;</code><br />
-<code>#include &quot;detail/to_string.hpp&quot;</code><br />
-<code>#include &quot;<a class="el" href="exception_8hpp_source.html">exception.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="integers_8hpp_source.html">integers.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="not__null_8hpp_source.html">not_null.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="time_8hpp_source.html">time.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="czstring_8hpp_source.html">../core/czstring.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="exception_8hpp_source.html">../core/exception.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="integers_8hpp_source.html">../core/integers.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="not__null_8hpp_source.html">../core/not_null.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="result_8hpp_source.html">../core/result.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="time_8hpp_source.html">../core/time.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="address__of_8hpp_source.html">../detail/address_of.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="to__string_8hpp_source.html">../detail/to_string.hpp</a>&quot;</code><br />
 </div>
 <p><a href="thread_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -134,7 +134,7 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="group__thread.html#gga7fba1e8c28384518ae94d5f1f998efaea8d966b2253a917086c8604959e152243">cen::thread_priority::high</a> = SDL_THREAD_PRIORITY_HIGH, 
 <br />
-&#160;&#160;<a class="el" href="group__thread.html#gga7fba1e8c28384518ae94d5f1f998efaea7e85bcb66fb9a809d5ab4f62a8b8bea8">cen::thread_priority::critical</a>
+&#160;&#160;<a class="el" href="group__thread.html#gga7fba1e8c28384518ae94d5f1f998efaea7e85bcb66fb9a809d5ab4f62a8b8bea8">cen::thread_priority::critical</a> = SDL_THREAD_PRIORITY_TIME_CRITICAL
 <br />
  }</td></tr>
 <tr class="memdesc:ga7fba1e8c28384518ae94d5f1f998efae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents different thread priorities.  <a href="group__thread.html#ga7fba1e8c28384518ae94d5f1f998efae">More...</a><br /></td></tr>
@@ -148,6 +148,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga2eff3ea27c959d4127d11bf4f3a22340"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__thread.html#ga2eff3ea27c959d4127d11bf4f3a22340">cen::operator&lt;&lt;</a> (std::ostream &amp;stream, const thread &amp;thread) -&gt; std::ostream &amp;</td></tr>
 <tr class="memdesc:ga2eff3ea27c959d4127d11bf4f3a22340"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a textual representation of a thread.  <a href="group__thread.html#ga2eff3ea27c959d4127d11bf4f3a22340">More...</a><br /></td></tr>
 <tr class="separator:ga2eff3ea27c959d4127d11bf4f3a22340"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Thread priority comparison operators</h2></td></tr>
 <tr class="memitem:gada683df0a6b46b41e7acf635544901ad"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__thread.html#gada683df0a6b46b41e7acf635544901ad">cen::operator==</a> (const thread_priority lhs, const SDL_ThreadPriority rhs) noexcept -&gt; bool</td></tr>
 <tr class="memdesc:gada683df0a6b46b41e7acf635544901ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not two thread priorities are the same.  <a href="group__thread.html#gada683df0a6b46b41e7acf635544901ad">More...</a><br /></td></tr>
 <tr class="separator:gada683df0a6b46b41e7acf635544901ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
