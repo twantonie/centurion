@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 6.0.0</a>
+                    <a class="navbar-brand">Centurion 6.0.1</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -286,10 +286,10 @@ Sensor functions</h2></td></tr>
 <tr class="memitem:a0d128e02e3738436b745233df43ccc9d"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a0d128e02e3738436b745233df43ccc9d">is_sensor_enabled</a> (const <a class="el" href="group__input.html#ga1ce8d8b900d2910ff3605c9cef4b2c3a">sensor_type</a> <a class="el" href="classcen_1_1basic__controller.html#aa4ab6e30d1571a15a78f1e4089c4dc12">type</a>) const noexcept -&gt; bool</td></tr>
 <tr class="memdesc:a0d128e02e3738436b745233df43ccc9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not data reporting is enabled for a sensor.  <a href="classcen_1_1basic__controller.html#a0d128e02e3738436b745233df43ccc9d">More...</a><br /></td></tr>
 <tr class="separator:a0d128e02e3738436b745233df43ccc9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42ecf0b3a0f3ca4200c3cc774868cef1"><td class="memTemplParams" colspan="2">template&lt;std::size_t size&gt; </td></tr>
-<tr class="memitem:a42ecf0b3a0f3ca4200c3cc774868cef1"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#a42ecf0b3a0f3ca4200c3cc774868cef1">get_sensor_data</a> (const <a class="el" href="group__input.html#ga1ce8d8b900d2910ff3605c9cef4b2c3a">sensor_type</a> <a class="el" href="classcen_1_1basic__controller.html#aa4ab6e30d1571a15a78f1e4089c4dc12">type</a>) const noexcept -&gt; std::optional&lt; std::array&lt; float, size &gt;&gt;</td></tr>
-<tr class="memdesc:a42ecf0b3a0f3ca4200c3cc774868cef1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the state of the specified sensor.  <a href="classcen_1_1basic__controller.html#a42ecf0b3a0f3ca4200c3cc774868cef1">More...</a><br /></td></tr>
-<tr class="separator:a42ecf0b3a0f3ca4200c3cc774868cef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6fb19d2aac0e9bfdae5bd3644d7e659"><td class="memTemplParams" colspan="2">template&lt;std::size_t Size&gt; </td></tr>
+<tr class="memitem:ae6fb19d2aac0e9bfdae5bd3644d7e659"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__controller.html#ae6fb19d2aac0e9bfdae5bd3644d7e659">get_sensor_data</a> (const <a class="el" href="group__input.html#ga1ce8d8b900d2910ff3605c9cef4b2c3a">sensor_type</a> <a class="el" href="classcen_1_1basic__controller.html#aa4ab6e30d1571a15a78f1e4089c4dc12">type</a>) const noexcept -&gt; std::optional&lt; std::array&lt; float, Size &gt;&gt;</td></tr>
+<tr class="memdesc:ae6fb19d2aac0e9bfdae5bd3644d7e659"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the state of the specified sensor.  <a href="classcen_1_1basic__controller.html#ae6fb19d2aac0e9bfdae5bd3644d7e659">More...</a><br /></td></tr>
+<tr class="separator:ae6fb19d2aac0e9bfdae5bd3644d7e659"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 LED functions</h2></td></tr>
@@ -1060,13 +1060,13 @@ template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </div>
 
 </div>
 </div>
-<a id="a42ecf0b3a0f3ca4200c3cc774868cef1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42ecf0b3a0f3ca4200c3cc774868cef1">&#9670;&nbsp;</a></span>get_sensor_data()</h2>
+<a id="ae6fb19d2aac0e9bfdae5bd3644d7e659"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6fb19d2aac0e9bfdae5bd3644d7e659">&#9670;&nbsp;</a></span>get_sensor_data()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;std::size_t size&gt; </div>
+template&lt;std::size_t Size&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1076,7 +1076,7 @@ template&lt;std::size_t size&gt; </div>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="group__input.html#ga1ce8d8b900d2910ff3605c9cef4b2c3a">sensor_type</a>&#160;</td>
           <td class="paramname"><em>type</em></td><td>)</td>
-          <td> const -&gt; std::optional&lt;std::array&lt;float, size&gt;&gt;
+          <td> const -&gt; std::optional&lt;std::array&lt;float, Size&gt;&gt;
   </td>
         </tr>
       </table>
@@ -1090,7 +1090,7 @@ template&lt;std::size_t size&gt; </div>
 <p>Returns the state of the specified sensor. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">size</td><td>the amount of data elements.</td></tr>
+    <tr><td class="paramname">Size</td><td>the amount of data elements.</td></tr>
   </table>
   </dd>
 </dl>

@@ -42,7 +42,7 @@ var searchData=
   ['get_5frenderer_630',['get_renderer',['../group__video.html#ga82f18a68e25eb040ed6ee5f6a8f022f8',1,'cen']]],
   ['get_5fscale_5fmode_631',['get_scale_mode',['../classcen_1_1basic__texture.html#ad137273a02104882fb6facd9655dc522',1,'cen::basic_texture']]],
   ['get_5fscan_5fcode_632',['get_scan_code',['../classcen_1_1keyboard__event.html#aefaf43f85b0b4b9043dbf8172eaa11d1',1,'cen::keyboard_event']]],
-  ['get_5fsensor_5fdata_633',['get_sensor_data',['../classcen_1_1basic__controller.html#a42ecf0b3a0f3ca4200c3cc774868cef1',1,'cen::basic_controller']]],
+  ['get_5fsensor_5fdata_633',['get_sensor_data',['../classcen_1_1basic__controller.html#ae6fb19d2aac0e9bfdae5bd3644d7e659',1,'cen::basic_controller']]],
   ['get_5fsound_634',['get_sound',['../group__audio.html#ga4343edd2e0c221d09ee44e2a0653e0e2',1,'cen']]],
   ['get_5fsound_5ffonts_635',['get_sound_fonts',['../group__audio.html#ga159dcb1a73be4e577a6dcc8fdc33c23f',1,'cen']]],
   ['get_5fstate_636',['get_state',['../classcen_1_1basic__controller.html#aa8740c91ce917f16fd8954e6964352a3',1,'cen::basic_controller']]],

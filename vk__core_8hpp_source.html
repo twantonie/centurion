@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 6.0.0</a>
+                    <a class="navbar-brand">Centurion 6.0.1</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -136,35 +136,33 @@ $(function() {
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">return</span> std::nullopt;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  }</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  std::vector&lt;czstring&gt; names;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  names.reserve(<a class="code" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76">count</a>);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordflow">if</span> (!SDL_Vulkan_GetInstanceExtensions(<span class="keyword">nullptr</span>, &amp;<a class="code" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76">count</a>, names.data()))</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> std::nullopt;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keywordflow">return</span> names;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="namespacecen_1_1vk.html#a4639deef5c9904daab636df15440df55">  107</a></span>&#160;[[nodiscard]] <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1vk.html#a4639deef5c9904daab636df15440df55">drawable_size</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1basic__window.html">basic_window&lt;T&gt;</a>&amp; <a class="code" href="classcen_1_1basic__window.html">window</a>) noexcept -&gt; <a class="code" href="structcen_1_1basic__area.html">iarea</a></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;{</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <a class="code" href="group__core.html#gga5a2bed2933e3748ad2a77961417a102bae44e4612f62d2fb8f8738bab118a9850">assert</a>(<a class="code" href="classcen_1_1basic__window.html">window</a>.<a class="code" href="classcen_1_1basic__window.html#a14dbfb3798749ab98c12dc5520d1388d">is_vulkan</a>());</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="namespacecen_1_1screen.html#a51418b5e332ae0740b0c7a6d4e6f91ff">width</a>{};</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="namespacecen_1_1screen.html#ae5098cd098c4b2d13c14f7adc47013eb">height</a>{};</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  std::vector&lt;czstring&gt; names(<a class="code" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76">count</a>);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordflow">if</span> (!SDL_Vulkan_GetInstanceExtensions(<span class="keyword">nullptr</span>, &amp;<a class="code" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76">count</a>, names.data()))</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordflow">return</span> names;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="namespacecen_1_1vk.html#a4639deef5c9904daab636df15440df55">  105</a></span>&#160;[[nodiscard]] <span class="keyword">auto</span> <a class="code" href="namespacecen_1_1vk.html#a4639deef5c9904daab636df15440df55">drawable_size</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1basic__window.html">basic_window&lt;T&gt;</a>&amp; <a class="code" href="classcen_1_1basic__window.html">window</a>) noexcept -&gt; <a class="code" href="structcen_1_1basic__area.html">iarea</a></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;{</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <a class="code" href="group__core.html#gga5a2bed2933e3748ad2a77961417a102bae44e4612f62d2fb8f8738bab118a9850">assert</a>(<a class="code" href="classcen_1_1basic__window.html">window</a>.<a class="code" href="classcen_1_1basic__window.html#a14dbfb3798749ab98c12dc5520d1388d">is_vulkan</a>());</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="namespacecen_1_1screen.html#a51418b5e332ae0740b0c7a6d4e6f91ff">width</a>{};</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="namespacecen_1_1screen.html#ae5098cd098c4b2d13c14f7adc47013eb">height</a>{};</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  SDL_Vulkan_GetDrawableSize(<a class="code" href="classcen_1_1basic__window.html">window</a>.<a class="code" href="classcen_1_1basic__window.html#ac18c34aeb7e4d1a304073218c0d081eb">get</a>(), &amp;<a class="code" href="namespacecen_1_1screen.html#a51418b5e332ae0740b0c7a6d4e6f91ff">width</a>, &amp;<a class="code" href="namespacecen_1_1screen.html#ae5098cd098c4b2d13c14f7adc47013eb">height</a>);</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  SDL_Vulkan_GetDrawableSize(<a class="code" href="classcen_1_1basic__window.html">window</a>.<a class="code" href="classcen_1_1basic__window.html#ac18c34aeb7e4d1a304073218c0d081eb">get</a>(), &amp;<a class="code" href="namespacecen_1_1screen.html#a51418b5e332ae0740b0c7a6d4e6f91ff">width</a>, &amp;<a class="code" href="namespacecen_1_1screen.html#ae5098cd098c4b2d13c14f7adc47013eb">height</a>);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keywordflow">return</span> {<a class="code" href="namespacecen_1_1screen.html#a51418b5e332ae0740b0c7a6d4e6f91ff">width</a>, <a class="code" href="namespacecen_1_1screen.html#ae5098cd098c4b2d13c14f7adc47013eb">height</a>};</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keywordflow">return</span> {<a class="code" href="namespacecen_1_1screen.html#a51418b5e332ae0740b0c7a6d4e6f91ff">width</a>, <a class="code" href="namespacecen_1_1screen.html#ae5098cd098c4b2d13c14f7adc47013eb">height</a>};</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}  <span class="comment">// namespace cen::vk</span></div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}  <span class="comment">// namespace cen::vk</span></div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">#endif  // CENTURION_NO_VULKAN</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#endif  // CENTURION_VULKAN_HEADER</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#endif  // CENTURION_NO_VULKAN</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="preprocessor">#endif  // CENTURION_VULKAN_HEADER</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclasscen_1_1basic__window_html_ac18c34aeb7e4d1a304073218c0d081eb"><div class="ttname"><a href="classcen_1_1basic__window.html#ac18c34aeb7e4d1a304073218c0d081eb">cen::basic_window::get</a></div><div class="ttdeci">auto get() const noexcept -&gt; SDL_Window *</div><div class="ttdoc">Returns a pointer to the associated SDL window.</div><div class="ttdef"><b>Definition:</b> window.hpp:1232</div></div>
 <div class="ttc" id="anamespacecen_1_1screen_html_a0949b8c22f4f1066f751221fbdd61f76"><div class="ttname"><a href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76">cen::screen::count</a></div><div class="ttdeci">auto count() noexcept -&gt; int</div><div class="ttdoc">Returns the amount of available displays.</div><div class="ttdef"><b>Definition:</b> screen.hpp:108</div></div>
@@ -172,7 +170,7 @@ $(function() {
 <div class="ttc" id="aclasscen_1_1result_html"><div class="ttname"><a href="classcen_1_1result.html">cen::result</a></div><div class="ttdoc">A simple indicator for the result of different operations.</div><div class="ttdef"><b>Definition:</b> result.hpp:49</div></div>
 <div class="ttc" id="anamespacecen_1_1screen_html_a51418b5e332ae0740b0c7a6d4e6f91ff"><div class="ttname"><a href="namespacecen_1_1screen.html#a51418b5e332ae0740b0c7a6d4e6f91ff">cen::screen::width</a></div><div class="ttdeci">auto width(const int index=0) noexcept -&gt; std::optional&lt; int &gt;</div><div class="ttdoc">Returns the width of the screen.</div><div class="ttdef"><b>Definition:</b> screen.hpp:230</div></div>
 <div class="ttc" id="anamespacecen_1_1screen_html_ae5098cd098c4b2d13c14f7adc47013eb"><div class="ttname"><a href="namespacecen_1_1screen.html#ae5098cd098c4b2d13c14f7adc47013eb">cen::screen::height</a></div><div class="ttdeci">auto height(const int index=0) noexcept -&gt; std::optional&lt; int &gt;</div><div class="ttdoc">Returns the height of the screen.</div><div class="ttdef"><b>Definition:</b> screen.hpp:252</div></div>
-<div class="ttc" id="anamespacecen_1_1vk_html_a4639deef5c9904daab636df15440df55"><div class="ttname"><a href="namespacecen_1_1vk.html#a4639deef5c9904daab636df15440df55">cen::vk::drawable_size</a></div><div class="ttdeci">auto drawable_size(const basic_window&lt; T &gt; &amp;window) noexcept -&gt; iarea</div><div class="ttdoc">Returns the size of the drawable surface associated with the window.</div><div class="ttdef"><b>Definition:</b> vk_core.hpp:107</div></div>
+<div class="ttc" id="anamespacecen_1_1vk_html_a4639deef5c9904daab636df15440df55"><div class="ttname"><a href="namespacecen_1_1vk.html#a4639deef5c9904daab636df15440df55">cen::vk::drawable_size</a></div><div class="ttdeci">auto drawable_size(const basic_window&lt; T &gt; &amp;window) noexcept -&gt; iarea</div><div class="ttdoc">Returns the size of the drawable surface associated with the window.</div><div class="ttdef"><b>Definition:</b> vk_core.hpp:105</div></div>
 <div class="ttc" id="anamespacecen_1_1vk_html_a81dbeb1b5136411b3eb5b314d57dac7f"><div class="ttname"><a href="namespacecen_1_1vk.html#a81dbeb1b5136411b3eb5b314d57dac7f">cen::vk::get_instance_proc_addr</a></div><div class="ttdeci">auto get_instance_proc_addr() noexcept -&gt; void *</div><div class="ttdoc">Returns the address of the vkGetInstanceProcAddr function.</div><div class="ttdef"><b>Definition:</b> vk_core.hpp:38</div></div>
 <div class="ttc" id="aclasscen_1_1basic__window_html"><div class="ttname"><a href="classcen_1_1basic__window.html">cen::basic_window</a></div><div class="ttdoc">Represents an operating system window.</div><div class="ttdef"><b>Definition:</b> window.hpp:34</div></div>
 <div class="ttc" id="astructcen_1_1basic__area_html"><div class="ttname"><a href="structcen_1_1basic__area.html">cen::basic_area</a></div><div class="ttdoc">Simply represents an area with a width and height.</div><div class="ttdef"><b>Definition:</b> area.hpp:17</div></div>

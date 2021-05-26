@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 6.0.0</a>
+                    <a class="navbar-brand">Centurion 6.0.1</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -146,10 +146,10 @@ Instance-based queries</h2></td></tr>
 <tr class="memitem:a59237bb4d92d6ecaae52bac6763157c7"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__sensor.html#a59237bb4d92d6ecaae52bac6763157c7">non_portable_type</a> () const noexcept -&gt; int</td></tr>
 <tr class="memdesc:a59237bb4d92d6ecaae52bac6763157c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the non-portable type associated with the sensor.  <a href="classcen_1_1basic__sensor.html#a59237bb4d92d6ecaae52bac6763157c7">More...</a><br /></td></tr>
 <tr class="separator:a59237bb4d92d6ecaae52bac6763157c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4dcc8489dd51bd3de97737d76acc566"><td class="memTemplParams" colspan="2">template&lt;std::size_t size&gt; </td></tr>
-<tr class="memitem:ab4dcc8489dd51bd3de97737d76acc566"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__sensor.html#ab4dcc8489dd51bd3de97737d76acc566">data</a> () const noexcept -&gt; std::optional&lt; std::array&lt; float, size &gt;&gt;</td></tr>
-<tr class="memdesc:ab4dcc8489dd51bd3de97737d76acc566"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the sensor-dependent data.  <a href="classcen_1_1basic__sensor.html#ab4dcc8489dd51bd3de97737d76acc566">More...</a><br /></td></tr>
-<tr class="separator:ab4dcc8489dd51bd3de97737d76acc566"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a874787c0d4dab5ef42d26a1222fbfba1"><td class="memTemplParams" colspan="2">template&lt;std::size_t Size&gt; </td></tr>
+<tr class="memitem:a874787c0d4dab5ef42d26a1222fbfba1"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__sensor.html#a874787c0d4dab5ef42d26a1222fbfba1">data</a> () const noexcept -&gt; std::optional&lt; std::array&lt; float, Size &gt;&gt;</td></tr>
+<tr class="memdesc:a874787c0d4dab5ef42d26a1222fbfba1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the sensor-dependent data.  <a href="classcen_1_1basic__sensor.html#a874787c0d4dab5ef42d26a1222fbfba1">More...</a><br /></td></tr>
+<tr class="separator:a874787c0d4dab5ef42d26a1222fbfba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcb3a64239c83c84cecfc0c901173b05"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1basic__sensor.html#abcb3a64239c83c84cecfc0c901173b05">get</a> () const noexcept -&gt; SDL_Sensor *</td></tr>
 <tr class="memdesc:abcb3a64239c83c84cecfc0c901173b05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the associated SDL sensor.  <a href="classcen_1_1basic__sensor.html#abcb3a64239c83c84cecfc0c901173b05">More...</a><br /></td></tr>
 <tr class="separator:abcb3a64239c83c84cecfc0c901173b05"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -336,13 +336,13 @@ template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </div>
 
 </div>
 </div>
-<a id="ab4dcc8489dd51bd3de97737d76acc566"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4dcc8489dd51bd3de97737d76acc566">&#9670;&nbsp;</a></span>data()</h2>
+<a id="a874787c0d4dab5ef42d26a1222fbfba1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a874787c0d4dab5ef42d26a1222fbfba1">&#9670;&nbsp;</a></span>data()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;std::size_t size&gt; </div>
+template&lt;std::size_t Size&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -351,7 +351,7 @@ template&lt;std::size_t size&gt; </div>
           <td class="memname">auto cen::basic_sensor::data </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; std::optional&lt;std::array&lt;float, size&gt;&gt;
+          <td> const -&gt; std::optional&lt;std::array&lt;float, Size&gt;&gt;
   </td>
         </tr>
       </table>
@@ -365,7 +365,7 @@ template&lt;std::size_t size&gt; </div>
 <p>Returns the sensor-dependent data. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">size</td><td>the number of data elements, varies from sensor to sensor.</td></tr>
+    <tr><td class="paramname">Size</td><td>the number of data elements, varies from sensor to sensor.</td></tr>
   </table>
   </dd>
 </dl>
