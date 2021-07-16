@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 6.0.1</a>
+                    <a class="navbar-brand">Centurion 6.1.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -107,6 +107,7 @@ $(function() {
 <code>#include &quot;<a class="el" href="result_8hpp_source.html">../../core/result.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="to__underlying_8hpp_source.html">../../core/to_underlying.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="area_8hpp_source.html">../../math/area.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="texture_8hpp_source.html">../texture.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="window_8hpp_source.html">../window.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="gl__attribute_8hpp_source.html">gl_attribute.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="gl__context_8hpp_source.html">gl_context.hpp</a>&quot;</code><br />
@@ -172,6 +173,14 @@ Functions</h2></td></tr>
 <tr class="memitem:gacf99bedc0bba882f75c90167cd5361a1"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#gacf99bedc0bba882f75c90167cd5361a1">cen::gl::is_extension_supported</a> (const std::string &amp;extension) noexcept -&gt; bool</td></tr>
 <tr class="memdesc:gacf99bedc0bba882f75c90167cd5361a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the specified extension is supported.  <a href="group__video.html#gacf99bedc0bba882f75c90167cd5361a1">More...</a><br /></td></tr>
 <tr class="separator:gacf99bedc0bba882f75c90167cd5361a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadd9fe0dd0ec3dfa1e41fbcc2f576767c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:gadd9fe0dd0ec3dfa1e41fbcc2f576767c"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__video.html#gadd9fe0dd0ec3dfa1e41fbcc2f576767c">cen::gl::bind</a> (basic_texture&lt; T &gt; &amp;texture) noexcept -&gt; std::optional&lt; farea &gt;</td></tr>
+<tr class="memdesc:gadd9fe0dd0ec3dfa1e41fbcc2f576767c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds a texture to the current OpenGL context.  <a href="group__video.html#gadd9fe0dd0ec3dfa1e41fbcc2f576767c">More...</a><br /></td></tr>
+<tr class="separator:gadd9fe0dd0ec3dfa1e41fbcc2f576767c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0c3d4156a287085bff44db84a700009c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga0c3d4156a287085bff44db84a700009c"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__video.html#ga0c3d4156a287085bff44db84a700009c">cen::gl::unbind</a> (basic_texture&lt; T &gt; &amp;texture) noexcept -&gt; result</td></tr>
+<tr class="memdesc:ga0c3d4156a287085bff44db84a700009c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unbinds a texture from the OpenGL context.  <a href="group__video.html#ga0c3d4156a287085bff44db84a700009c">More...</a><br /></td></tr>
+<tr class="separator:ga0c3d4156a287085bff44db84a700009c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->

@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 6.0.1</a>
+                    <a class="navbar-brand">Centurion 6.1.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -105,12 +105,12 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3ee747a7aa59a83bd25d3fcc37539b80"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1simd__block.html#a3ee747a7aa59a83bd25d3fcc37539b80">simd_block</a> (const std::size_t size) noexcept</td></tr>
-<tr class="memdesc:a3ee747a7aa59a83bd25d3fcc37539b80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates a block of SIMD-friendly memory.  <a href="classcen_1_1simd__block.html#a3ee747a7aa59a83bd25d3fcc37539b80">More...</a><br /></td></tr>
-<tr class="separator:a3ee747a7aa59a83bd25d3fcc37539b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e34559659030baed3400602a4576cb2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1simd__block.html#a3e34559659030baed3400602a4576cb2">reallocate</a> (const std::size_t size) noexcept</td></tr>
-<tr class="memdesc:a3e34559659030baed3400602a4576cb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reallocates the associated memory block.  <a href="classcen_1_1simd__block.html#a3e34559659030baed3400602a4576cb2">More...</a><br /></td></tr>
-<tr class="separator:a3e34559659030baed3400602a4576cb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae530e86e53569975096fea94f11c5810"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1simd__block.html#ae530e86e53569975096fea94f11c5810">simd_block</a> (const <a class="el" href="group__core.html#ga2313c92fc18c319ebe1853e2d0579886">usize</a> size) noexcept</td></tr>
+<tr class="memdesc:ae530e86e53569975096fea94f11c5810"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates a block of SIMD-friendly memory.  <a href="classcen_1_1simd__block.html#ae530e86e53569975096fea94f11c5810">More...</a><br /></td></tr>
+<tr class="separator:ae530e86e53569975096fea94f11c5810"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a414e66c836363259d2aee78dddf45697"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1simd__block.html#a414e66c836363259d2aee78dddf45697">reallocate</a> (const <a class="el" href="group__core.html#ga2313c92fc18c319ebe1853e2d0579886">usize</a> size) noexcept</td></tr>
+<tr class="memdesc:a414e66c836363259d2aee78dddf45697"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reallocates the associated memory block.  <a href="classcen_1_1simd__block.html#a414e66c836363259d2aee78dddf45697">More...</a><br /></td></tr>
+<tr class="separator:a414e66c836363259d2aee78dddf45697"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a561b46ee1506680a09b7097fbf7906e2"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1simd__block.html#a561b46ee1506680a09b7097fbf7906e2">data</a> () noexcept -&gt; void *</td></tr>
 <tr class="memdesc:a561b46ee1506680a09b7097fbf7906e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the associated memory block.  <a href="classcen_1_1simd__block.html#a561b46ee1506680a09b7097fbf7906e2">More...</a><br /></td></tr>
 <tr class="separator:a561b46ee1506680a09b7097fbf7906e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,8 +133,8 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Represents a block of memory, allocated in SIMD-friendly way. </p>
 <dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a3ee747a7aa59a83bd25d3fcc37539b80"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ee747a7aa59a83bd25d3fcc37539b80">&#9670;&nbsp;</a></span>simd_block()</h2>
+<a id="ae530e86e53569975096fea94f11c5810"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae530e86e53569975096fea94f11c5810">&#9670;&nbsp;</a></span>simd_block()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -145,7 +145,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">cen::simd_block::simd_block </td>
           <td>(</td>
-          <td class="paramtype">const std::size_t&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga2313c92fc18c319ebe1853e2d0579886">usize</a>&#160;</td>
           <td class="paramname"><em>size</em></td><td>)</td>
           <td></td>
         </tr>
@@ -337,8 +337,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a3e34559659030baed3400602a4576cb2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e34559659030baed3400602a4576cb2">&#9670;&nbsp;</a></span>reallocate()</h2>
+<a id="a414e66c836363259d2aee78dddf45697"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a414e66c836363259d2aee78dddf45697">&#9670;&nbsp;</a></span>reallocate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -349,7 +349,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">void cen::simd_block::reallocate </td>
           <td>(</td>
-          <td class="paramtype">const std::size_t&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga2313c92fc18c319ebe1853e2d0579886">usize</a>&#160;</td>
           <td class="paramname"><em>size</em></td><td>)</td>
           <td></td>
         </tr>

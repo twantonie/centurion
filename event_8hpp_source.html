@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 6.0.1</a>
+                    <a class="navbar-brand">Centurion 6.1.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -268,145 +268,150 @@ $(function() {
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keywordflow">return</span> std::get_if&lt;T&gt;(&amp;m_data);</div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;  }</div>
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160; </div>
-<div class="line"><a name="l00363"></a><span class="lineno"><a class="line" href="classcen_1_1event.html#afe6945897cee5857f1bf6588e60a3fe7">  363</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1event.html#afe6945897cee5857f1bf6588e60a3fe7">is_empty</a>() const noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;  {</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <span class="keywordflow">return</span> is&lt;std::monostate&gt;();</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;  }</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160; </div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;  SDL_Event m_event{};</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160; </div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;  <span class="comment">// behold, the beast!</span></div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;  std::variant&lt;std::monostate,</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;               audio_device_event,</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;               controller_axis_event,</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;               controller_button_event,</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;               controller_device_event,</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;               dollar_gesture_event,</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;               drop_event,</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;               joy_axis_event,</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;               joy_ball_event,</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;               joy_button_event,</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;               joy_device_event,</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;               joy_hat_event,</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;               keyboard_event,</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;               mouse_button_event,</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;               mouse_motion_event,</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;               mouse_wheel_event,</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;               multi_gesture_event,</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;               quit_event,</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;               text_editing_event,</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;               text_input_event,</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;               touch_finger_event,</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;               window_event&gt;</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;      m_data{};</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160; </div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;  <span class="keywordtype">void</span> update_data(<span class="keyword">const</span> std::optional&lt;event_type&gt; <a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a>) noexcept</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;  {</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    <span class="keyword">using</span> et = <a class="code" href="group__event.html#gaa96233ec6356fc786c810d6aaf5e939b">event_type</a>;</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160; </div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::quit)</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    {</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;      m_data.emplace&lt;quit_event&gt;(m_event.quit);</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    }</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::audio_device_added || <a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::audio_device_removed)</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    {</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;      m_data.emplace&lt;audio_device_event&gt;(m_event.adevice);</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    }</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::controller_axis_motion)</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    {</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;      m_data.emplace&lt;controller_axis_event&gt;(m_event.caxis);</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    }</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::controller_button_down || <a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::controller_button_up)</div>
+<div class="line"><a name="l00362"></a><span class="lineno"><a class="line" href="classcen_1_1event.html#a3ca67f228e34ce15c0c1e274fbf9e7f6">  362</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1event.html#a3ca67f228e34ce15c0c1e274fbf9e7f6">data</a>() const noexcept -&gt; const SDL_Event*</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;  {</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="keywordflow">return</span> &amp;m_event;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;  }</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160; </div>
+<div class="line"><a name="l00375"></a><span class="lineno"><a class="line" href="classcen_1_1event.html#afe6945897cee5857f1bf6588e60a3fe7">  375</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1event.html#afe6945897cee5857f1bf6588e60a3fe7">is_empty</a>() const noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;  {</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <span class="keywordflow">return</span> is&lt;std::monostate&gt;();</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;  }</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160; </div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;  SDL_Event m_event{};</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160; </div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;  <span class="comment">// behold, the beast!</span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;  std::variant&lt;std::monostate,</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;               audio_device_event,</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;               controller_axis_event,</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;               controller_button_event,</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;               controller_device_event,</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;               dollar_gesture_event,</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;               drop_event,</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;               joy_axis_event,</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;               joy_ball_event,</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;               joy_button_event,</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;               joy_device_event,</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;               joy_hat_event,</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;               keyboard_event,</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;               mouse_button_event,</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;               mouse_motion_event,</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;               mouse_wheel_event,</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;               multi_gesture_event,</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;               quit_event,</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;               text_editing_event,</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;               text_input_event,</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;               touch_finger_event,</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;               window_event&gt;</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;      m_data{};</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160; </div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;  <span class="keywordtype">void</span> update_data(<span class="keyword">const</span> std::optional&lt;event_type&gt; <a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a>) noexcept</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;  {</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="keyword">using</span> et = <a class="code" href="group__event.html#gaa96233ec6356fc786c810d6aaf5e939b">event_type</a>;</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160; </div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::quit)</div>
 <div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    {</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;      m_data.emplace&lt;controller_button_event&gt;(m_event.cbutton);</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;      m_data.emplace&lt;quit_event&gt;(m_event.quit);</div>
 <div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    }</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::controller_device_added || <a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::controller_device_removed ||</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;             <a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::controller_device_remapped)</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    {</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;      m_data.emplace&lt;controller_device_event&gt;(m_event.cdevice);</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    }</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::dollar_gesture || <a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::dollar_record)</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    {</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;      m_data.emplace&lt;dollar_gesture_event&gt;(m_event.dgesture);</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    }</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::drop_begin || <a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::drop_complete || <a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::drop_file ||</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;             <a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::drop_text)</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    {</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;      m_data.emplace&lt;drop_event&gt;(m_event.drop);</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    }</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::joystick_axis_motion)</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    {</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;      m_data.emplace&lt;joy_axis_event&gt;(m_event.jaxis);</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;    }</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::joystick_ball_motion)</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    {</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;      m_data.emplace&lt;joy_ball_event&gt;(m_event.jball);</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    }</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::joystick_button_up || <a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::joystick_button_down)</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::audio_device_added || <a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::audio_device_removed)</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    {</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;      m_data.emplace&lt;audio_device_event&gt;(m_event.adevice);</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    }</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::controller_axis_motion)</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    {</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;      m_data.emplace&lt;controller_axis_event&gt;(m_event.caxis);</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    }</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::controller_button_down || <a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::controller_button_up)</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    {</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;      m_data.emplace&lt;controller_button_event&gt;(m_event.cbutton);</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    }</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::controller_device_added || <a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::controller_device_removed ||</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;             <a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::controller_device_remapped)</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    {</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;      m_data.emplace&lt;controller_device_event&gt;(m_event.cdevice);</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    }</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::dollar_gesture || <a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::dollar_record)</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    {</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;      m_data.emplace&lt;dollar_gesture_event&gt;(m_event.dgesture);</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    }</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::drop_begin || <a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::drop_complete || <a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::drop_file ||</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;             <a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::drop_text)</div>
 <div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    {</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;      m_data.emplace&lt;joy_button_event&gt;(m_event.jbutton);</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;      m_data.emplace&lt;drop_event&gt;(m_event.drop);</div>
 <div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    }</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::joystick_device_added || <a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::joystick_device_removed)</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::joystick_axis_motion)</div>
 <div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    {</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;      m_data.emplace&lt;joy_device_event&gt;(m_event.jdevice);</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;      m_data.emplace&lt;joy_axis_event&gt;(m_event.jaxis);</div>
 <div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    }</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == <a class="code" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939baf2c25380e3e12793c5729249146a18b6">event_type::joystick_hat_motion</a>)</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::joystick_ball_motion)</div>
 <div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;    {</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;      m_data.emplace&lt;joy_hat_event&gt;(m_event.jhat);</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;      m_data.emplace&lt;joy_ball_event&gt;(m_event.jball);</div>
 <div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    }</div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::key_down || <a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::key_up)</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::joystick_button_up || <a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::joystick_button_down)</div>
 <div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    {</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;      m_data.emplace&lt;keyboard_event&gt;(m_event.key);</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;      m_data.emplace&lt;joy_button_event&gt;(m_event.jbutton);</div>
 <div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    }</div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::mouse_button_up || <a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::mouse_button_down)</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::joystick_device_added || <a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::joystick_device_removed)</div>
 <div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    {</div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;      m_data.emplace&lt;mouse_button_event&gt;(m_event.button);</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;      m_data.emplace&lt;joy_device_event&gt;(m_event.jdevice);</div>
 <div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    }</div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::mouse_motion)</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == <a class="code" href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939baf2c25380e3e12793c5729249146a18b6">event_type::joystick_hat_motion</a>)</div>
 <div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    {</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;      m_data.emplace&lt;mouse_motion_event&gt;(m_event.motion);</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;      m_data.emplace&lt;joy_hat_event&gt;(m_event.jhat);</div>
 <div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;    }</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::mouse_wheel)</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::key_down || <a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::key_up)</div>
 <div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    {</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;      m_data.emplace&lt;mouse_wheel_event&gt;(m_event.wheel);</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;      m_data.emplace&lt;keyboard_event&gt;(m_event.key);</div>
 <div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    }</div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::multi_gesture)</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::mouse_button_up || <a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::mouse_button_down)</div>
 <div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    {</div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;      m_data.emplace&lt;multi_gesture_event&gt;(m_event.mgesture);</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;      m_data.emplace&lt;mouse_button_event&gt;(m_event.button);</div>
 <div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    }</div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::text_editing)</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::mouse_motion)</div>
 <div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    {</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;      m_data.emplace&lt;text_editing_event&gt;(m_event.edit);</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;      m_data.emplace&lt;mouse_motion_event&gt;(m_event.motion);</div>
 <div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    }</div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::text_input)</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::mouse_wheel)</div>
 <div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;    {</div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;      m_data.emplace&lt;text_input_event&gt;(m_event.text);</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;      m_data.emplace&lt;mouse_wheel_event&gt;(m_event.wheel);</div>
 <div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;    }</div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::touch_motion || <a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::touch_down || <a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::touch_up)</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::multi_gesture)</div>
 <div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;    {</div>
-<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;      m_data.emplace&lt;touch_finger_event&gt;(m_event.tfinger);</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;      m_data.emplace&lt;multi_gesture_event&gt;(m_event.mgesture);</div>
 <div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;    }</div>
-<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == <a class="code" href="group__video.html#gaf061afd66d5eb42fc564662e1d864828">et::window</a>)</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::text_editing)</div>
 <div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;    {</div>
-<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;      m_data.emplace&lt;window_event&gt;(m_event.window);</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;      m_data.emplace&lt;text_editing_event&gt;(m_event.edit);</div>
 <div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;    }</div>
-<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::text_input)</div>
 <div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;    {</div>
-<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;      m_data.emplace&lt;std::monostate&gt;();</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;      m_data.emplace&lt;text_input_event&gt;(m_event.text);</div>
 <div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;    }</div>
-<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;  }</div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;};</div>
-<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160; </div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160; </div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;}  <span class="comment">// namespace cen</span></div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160; </div>
-<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;<span class="preprocessor">#endif  // CENTURION_EVENT_HEADER</span></div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::touch_motion || <a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::touch_down || <a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == et::touch_up)</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    {</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;      m_data.emplace&lt;touch_finger_event&gt;(m_event.tfinger);</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    }</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacecen_1_1keycodes.html#a25aa61c8060eab1855d58bb2aa534608">t</a> == <a class="code" href="group__video.html#gaf061afd66d5eb42fc564662e1d864828">et::window</a>)</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;    {</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;      m_data.emplace&lt;window_event&gt;(m_event.window);</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;    }</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;    {</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;      m_data.emplace&lt;std::monostate&gt;();</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;    }</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;  }</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;};</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160; </div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160; </div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;}  <span class="comment">// namespace cen</span></div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160; </div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;<span class="preprocessor">#endif  // CENTURION_EVENT_HEADER</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclasscen_1_1event_html_a5c03445b9ef6770b15a8a1f8d3106ac5"><div class="ttname"><a href="classcen_1_1event.html#a5c03445b9ef6770b15a8a1f8d3106ac5">cen::event::is</a></div><div class="ttdeci">auto is() const noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the event is of a particular type.</div><div class="ttdef"><b>Definition:</b> event.hpp:272</div></div>
 <div class="ttc" id="aclasscen_1_1event_html_afd59159df05f82b0e4e2d90a003be062"><div class="ttname"><a href="classcen_1_1event.html#afd59159df05f82b0e4e2d90a003be062">cen::event::in_queue</a></div><div class="ttdeci">static auto in_queue(const event_type type) noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not any events of the specified type is in the event queue.</div><div class="ttdef"><b>Definition:</b> event.hpp:251</div></div>
 <div class="ttc" id="akeyboard__event_8hpp_html"><div class="ttname"><a href="keyboard__event_8hpp.html">keyboard_event.hpp</a></div></div>
-<div class="ttc" id="agroup__video_html_gaf061afd66d5eb42fc564662e1d864828"><div class="ttname"><a href="group__video.html#gaf061afd66d5eb42fc564662e1d864828">cen::window</a></div><div class="ttdeci">basic_window&lt; detail::owning_type &gt; window</div><div class="ttdoc">Represents an owning window.</div><div class="ttdef"><b>Definition:</b> window.hpp:43</div></div>
+<div class="ttc" id="agroup__video_html_gaf061afd66d5eb42fc564662e1d864828"><div class="ttname"><a href="group__video.html#gaf061afd66d5eb42fc564662e1d864828">cen::window</a></div><div class="ttdeci">basic_window&lt; detail::owning_type &gt; window</div><div class="ttdoc">Represents an owning window.</div><div class="ttdef"><b>Definition:</b> window.hpp:42</div></div>
 <div class="ttc" id="atext__editing__event_8hpp_html"><div class="ttname"><a href="text__editing__event_8hpp.html">text_editing_event.hpp</a></div></div>
 <div class="ttc" id="aclasscen_1_1event_html_ad054f3b25f5a38e3a2554b734b64fa3d"><div class="ttname"><a href="classcen_1_1event.html#ad054f3b25f5a38e3a2554b734b64fa3d">cen::event::get</a></div><div class="ttdeci">auto get() const -&gt; const T &amp;</div><div class="ttdoc">Attempts to return the internal event instance.</div><div class="ttdef"><b>Definition:</b> event.hpp:308</div></div>
 <div class="ttc" id="agroup__event_html_ggaa96233ec6356fc786c810d6aaf5e939baf2c25380e3e12793c5729249146a18b6"><div class="ttname"><a href="group__event.html#ggaa96233ec6356fc786c810d6aaf5e939baf2c25380e3e12793c5729249146a18b6">cen::event_type::joystick_hat_motion</a></div><div class="ttdeci">@ joystick_hat_motion</div></div>
@@ -414,7 +419,7 @@ $(function() {
 <div class="ttc" id="aclasscen_1_1event_html_aa628c0192ef5558b1ddb27d02fe7c553"><div class="ttname"><a href="classcen_1_1event.html#aa628c0192ef5558b1ddb27d02fe7c553">cen::event::flush_all</a></div><div class="ttdeci">static void flush_all() noexcept</div><div class="ttdef"><b>Definition:</b> event.hpp:141</div></div>
 <div class="ttc" id="aclasscen_1_1event_html_a4d8447d82ef7419b9b7a44e5ed2fea45"><div class="ttname"><a href="classcen_1_1event.html#a4d8447d82ef7419b9b7a44e5ed2fea45">cen::event::queue_count</a></div><div class="ttdeci">static auto queue_count() noexcept -&gt; std::optional&lt; int &gt;</div><div class="ttdoc">Returns the current amount of events in the event queue.</div><div class="ttdef"><b>Definition:</b> event.hpp:200</div></div>
 <div class="ttc" id="aclasscen_1_1event_html_a62606b3ff26a4684e047ecbf68fd7a07"><div class="ttname"><a href="classcen_1_1event.html#a62606b3ff26a4684e047ecbf68fd7a07">cen::event::event</a></div><div class="ttdeci">event(const SDL_Event &amp;event) noexcept</div><div class="ttdoc">Creates an event based on the supplied event.</div><div class="ttdef"><b>Definition:</b> event.hpp:67</div></div>
-<div class="ttc" id="aclasscen_1_1event_html_afe6945897cee5857f1bf6588e60a3fe7"><div class="ttname"><a href="classcen_1_1event.html#afe6945897cee5857f1bf6588e60a3fe7">cen::event::is_empty</a></div><div class="ttdeci">auto is_empty() const noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not there is an internal event stored in the instance.</div><div class="ttdef"><b>Definition:</b> event.hpp:363</div></div>
+<div class="ttc" id="aclasscen_1_1event_html_afe6945897cee5857f1bf6588e60a3fe7"><div class="ttname"><a href="classcen_1_1event.html#afe6945897cee5857f1bf6588e60a3fe7">cen::event::is_empty</a></div><div class="ttdeci">auto is_empty() const noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not there is an internal event stored in the instance.</div><div class="ttdef"><b>Definition:</b> event.hpp:375</div></div>
 <div class="ttc" id="agroup__event_html_gab91eb8882f850519906a6a446b34a03d"><div class="ttname"><a href="group__event.html#gab91eb8882f850519906a6a446b34a03d">cen::as_sdl_event</a></div><div class="ttdeci">auto as_sdl_event(const common_event&lt; SDL_AudioDeviceEvent &gt; &amp;event) -&gt; SDL_Event</div><div class="ttdef"><b>Definition:</b> audio_device_event.hpp:114</div></div>
 <div class="ttc" id="aclasscen_1_1event_html_afcecae5b35febee0db7c7d9ddc09d231"><div class="ttname"><a href="classcen_1_1event.html#afcecae5b35febee0db7c7d9ddc09d231">cen::event::push</a></div><div class="ttdeci">static auto push(const common_event&lt; T &gt; &amp;event) noexcept -&gt; result</div><div class="ttdoc">Pushes an event onto the event queue.</div><div class="ttdef"><b>Definition:</b> event.hpp:117</div></div>
 <div class="ttc" id="agroup__event_html_gaa96233ec6356fc786c810d6aaf5e939b"><div class="ttname"><a href="group__event.html#gaa96233ec6356fc786c810d6aaf5e939b">cen::event_type</a></div><div class="ttdeci">event_type</div><div class="ttdoc">Represents the different event types.</div><div class="ttdef"><b>Definition:</b> event_type.hpp:22</div></div>
@@ -433,7 +438,7 @@ $(function() {
 <div class="ttc" id="aclasscen_1_1event_html_a01bd8f0578d39a2cc49474e90794dfe7"><div class="ttname"><a href="classcen_1_1event.html#a01bd8f0578d39a2cc49474e90794dfe7">cen::event::flush</a></div><div class="ttdeci">static void flush() noexcept</div><div class="ttdoc">Flushes all current events from the event queue.</div><div class="ttdef"><b>Definition:</b> event.hpp:130</div></div>
 <div class="ttc" id="ajoy__device__event_8hpp_html"><div class="ttname"><a href="joy__device__event_8hpp.html">joy_device_event.hpp</a></div></div>
 <div class="ttc" id="amouse__wheel__event_8hpp_html"><div class="ttname"><a href="mouse__wheel__event_8hpp.html">mouse_wheel_event.hpp</a></div></div>
-<div class="ttc" id="anamespacecen_html"><div class="ttname"><a href="namespacecen.html">cen</a></div><div class="ttdoc">The top-level namespace that all components of the library reside in.</div><div class="ttdef"><b>Definition:</b> channels.hpp:12</div></div>
+<div class="ttc" id="anamespacecen_html"><div class="ttname"><a href="namespacecen.html">cen</a></div><div class="ttdoc">The top-level namespace that all components of the library reside in.</div><div class="ttdef"><b>Definition:</b> channels.hpp:14</div></div>
 <div class="ttc" id="agroup__input_html_gga2101a411ac6025302800a78f9c54fce4a0fc3cfbc27e91ea60a787de13dae3e3c"><div class="ttname"><a href="group__input.html#gga2101a411ac6025302800a78f9c54fce4a0fc3cfbc27e91ea60a787de13dae3e3c">cen::key_modifier::num</a></div><div class="ttdeci">@ num</div></div>
 <div class="ttc" id="aevent__type_8hpp_html"><div class="ttname"><a href="event__type_8hpp.html">event_type.hpp</a></div></div>
 <div class="ttc" id="amouse__button__event_8hpp_html"><div class="ttname"><a href="mouse__button__event_8hpp.html">mouse_button_event.hpp</a></div></div>
@@ -448,6 +453,7 @@ $(function() {
 <div class="ttc" id="aclasscen_1_1event_html_adb4de8e3db16b5c1a9431c590268c0a4"><div class="ttname"><a href="classcen_1_1event.html#adb4de8e3db16b5c1a9431c590268c0a4">cen::event::event</a></div><div class="ttdeci">event() noexcept=default</div><div class="ttdoc">Creates an empty event.</div></div>
 <div class="ttc" id="aclasscen_1_1event_html_a93f6a1a4d2d969bd7f364bf8cd08e3ec"><div class="ttname"><a href="classcen_1_1event.html#a93f6a1a4d2d969bd7f364bf8cd08e3ec">cen::event::try_get</a></div><div class="ttdeci">auto try_get() const noexcept -&gt; const T *</div><div class="ttdoc">Attempts to return the internal event instance.</div><div class="ttdef"><b>Definition:</b> event.hpp:350</div></div>
 <div class="ttc" id="aclasscen_1_1event_html_abceee5f153d5b33d3827e20de83b098f"><div class="ttname"><a href="classcen_1_1event.html#abceee5f153d5b33d3827e20de83b098f">cen::event::try_get</a></div><div class="ttdeci">auto try_get() noexcept -&gt; T *</div><div class="ttdoc">Attempts to return the internal event instance.</div><div class="ttdef"><b>Definition:</b> event.hpp:329</div></div>
+<div class="ttc" id="aclasscen_1_1event_html_a3ca67f228e34ce15c0c1e274fbf9e7f6"><div class="ttname"><a href="classcen_1_1event.html#a3ca67f228e34ce15c0c1e274fbf9e7f6">cen::event::data</a></div><div class="ttdeci">auto data() const noexcept -&gt; const SDL_Event *</div><div class="ttdoc">Returns a pointer to the internal event representation.</div><div class="ttdef"><b>Definition:</b> event.hpp:362</div></div>
 <div class="ttc" id="atouch__finger__event_8hpp_html"><div class="ttname"><a href="touch__finger__event_8hpp.html">touch_finger_event.hpp</a></div></div>
 <div class="ttc" id="aclasscen_1_1common__event_html"><div class="ttname"><a href="classcen_1_1common__event.html">cen::common_event</a></div><div class="ttdoc">The templated base class of all Centurion events.</div><div class="ttdef"><b>Definition:</b> common_event.hpp:30</div></div>
 <div class="ttc" id="ajoy__hat__event_8hpp_html"><div class="ttname"><a href="joy__hat__event_8hpp.html">joy_hat_event.hpp</a></div></div>

@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 6.0.1</a>
+                    <a class="navbar-brand">Centurion 6.1.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -97,217 +97,218 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CENTURION_EVENT_DISPATCHER_HEADER</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;array&gt;</span>        <span class="comment">// array</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;cstddef&gt;</span>      <span class="comment">// size_t</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span>   <span class="comment">// function, bind</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;ostream&gt;</span>      <span class="comment">// ostream</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span>       <span class="comment">// string</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;tuple&gt;</span>        <span class="comment">// tuple</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;type_traits&gt;</span>  <span class="comment">// is_same_v, is_invocable_v, is_reference_v, ...</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../detail/to_string.hpp&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../detail/tuple_type_index.hpp&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="event_8hpp.html">event.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecen.html">cen</a> {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> E&gt;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classcen_1_1event__sink.html">   34</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcen_1_1event__sink.html">event_sink</a> final</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classcen_1_1event__sink.html#a75992274b61d6b82f74015008c48492f">   37</a></span>&#160;  <span class="keyword">using</span> <a class="code" href="classcen_1_1event__sink.html#a75992274b61d6b82f74015008c48492f">event_type</a> = std::decay_t&lt;E&gt;;              </div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classcen_1_1event__sink.html#a4f86e5841f4c14061fb962fef132aa7f">   38</a></span>&#160;  <span class="keyword">using</span> <a class="code" href="classcen_1_1event__sink.html#a4f86e5841f4c14061fb962fef132aa7f">signature_type</a> = void(<span class="keyword">const</span> <a class="code" href="classcen_1_1event__sink.html#a75992274b61d6b82f74015008c48492f">event_type</a>&amp;);  </div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classcen_1_1event__sink.html#a31ae9cbc9914ef018d6004bdcb766648">   39</a></span>&#160;  <span class="keyword">using</span> <a class="code" href="classcen_1_1event__sink.html#a31ae9cbc9914ef018d6004bdcb766648">function_type</a> = std::function&lt;signature_type&gt;;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classcen_1_1event__sink.html#aa93275336c110d5ef0fa335e753ae133">   46</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcen_1_1event__sink.html#aa93275336c110d5ef0fa335e753ae133">reset</a>() noexcept</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    m_function = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classcen_1_1event__sink.html#a2c22fc4680d2294913c7b60cf0d9f887">   64</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcen_1_1event__sink.html#a2c22fc4680d2294913c7b60cf0d9f887">to</a>(T&amp;&amp; callable)</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    static_assert(std::is_invocable_v&lt;T, const event_type&amp;&gt;,</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                  <span class="stringliteral">&quot;Callable must be invocable with subscribed event!&quot;</span>);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    m_function = <a class="code" href="classcen_1_1event__sink.html#a31ae9cbc9914ef018d6004bdcb766648">function_type</a>{callable};</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keyword">template</span> &lt;auto memberFunc, <span class="keyword">typename</span> Self&gt;</div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classcen_1_1event__sink.html#a3f88f2de817a4120005e1ecc9e89d911">   87</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcen_1_1event__sink.html#a3f88f2de817a4120005e1ecc9e89d911">to</a>(Self* <span class="keyword">self</span>)</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    static_assert(std::is_member_function_pointer_v&lt;decltype(memberFunc)&gt;,</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                  <span class="stringliteral">&quot;\&quot;memberFunc\&quot; must be member function pointer!&quot;</span>);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    static_assert(std::is_invocable_v&lt;decltype(memberFunc), Self*, <span class="keyword">const</span> <a class="code" href="classcen_1_1event__sink.html#a75992274b61d6b82f74015008c48492f">event_type</a>&amp;&gt;,</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                  <span class="stringliteral">&quot;Member function must be invocable with subscribed event!&quot;</span>);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="classcen_1_1event__sink.html#a49daf3a434ec8d3d3c846f8031228a7c">to</a>(std::bind(memberFunc, <span class="keyword">self</span>, std::placeholders::_1));</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keyword">template</span> &lt;auto function&gt;</div>
-<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="classcen_1_1event__sink.html#a49daf3a434ec8d3d3c846f8031228a7c">  107</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcen_1_1event__sink.html#a49daf3a434ec8d3d3c846f8031228a7c">to</a>()</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  {</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="classcen_1_1event__sink.html#a49daf3a434ec8d3d3c846f8031228a7c">to</a>(<span class="keyword">function</span>);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  }</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="classcen_1_1event__sink.html#a12f6dc9d47f0d64f2ab01bf3585e9738">  119</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <span class="keyword">function</span>() -&gt; <a class="code" href="classcen_1_1event__sink.html#a31ae9cbc9914ef018d6004bdcb766648">function_type</a>&amp;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  {</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">return</span> m_function;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  }</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="classcen_1_1event__sink.html#a5562240247dcdeea14f639f13bda5ac1">  124</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <span class="keyword">function</span>() <span class="keyword">const</span> -&gt; <span class="keyword">const</span> <a class="code" href="classcen_1_1event__sink.html#a31ae9cbc9914ef018d6004bdcb766648">function_type</a>&amp;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  {</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">return</span> m_function;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  }</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <a class="code" href="classcen_1_1event__sink.html#a31ae9cbc9914ef018d6004bdcb766648">function_type</a> m_function;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;};</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>... E&gt;</div>
-<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="classcen_1_1event__dispatcher.html">  167</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcen_1_1event__dispatcher.html">event_dispatcher</a> final</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;{</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  static_assert((!std::is_const_v&lt;E&gt; &amp;&amp; ...),</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                <span class="stringliteral">&quot;Can&#39;t use \&quot;const\&quot; on template parameter!&quot;</span>);</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  static_assert((!std::is_volatile_v&lt;E&gt; &amp;&amp; ...),</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                <span class="stringliteral">&quot;Can&#39;t use \&quot;volatile\&quot; on template parameter!&quot;</span>);</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  static_assert((!std::is_reference_v&lt;E&gt; &amp;&amp; ...),</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                <span class="stringliteral">&quot;Reference types can&#39;t be used as template parameters!&quot;</span>);</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  static_assert((!std::is_pointer_v&lt;E&gt; &amp;&amp; ...),</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                <span class="stringliteral">&quot;Pointer types can&#39;t be used as template parameters!&quot;</span>);</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Event&gt;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  [[nodiscard]] constexpr <span class="keyword">static</span> <span class="keyword">auto</span> index_of()</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  {</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keyword">using</span> sink_t = <a class="code" href="classcen_1_1event__sink.html">event_sink&lt;std::decay_t&lt;Event&gt;</a>&gt;;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    constexpr <span class="keyword">auto</span> index = detail::tuple_type_index_v&lt;sink_t, sink_tuple&gt;;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    static_assert(index != -1);</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordflow">return</span> index;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  }</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Event&gt;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  [[nodiscard]] <span class="keyword">auto</span> get_sink() -&gt; <a class="code" href="classcen_1_1event__sink.html">event_sink&lt;Event&gt;</a>&amp;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  {</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    constexpr <span class="keyword">auto</span> index = index_of&lt;Event&gt;();</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordflow">return</span> std::get&lt;index&gt;(m_sinks);</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  }</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Event&gt;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  [[nodiscard]] <span class="keyword">auto</span> get_sink() <span class="keyword">const</span> -&gt; <span class="keyword">const</span> <a class="code" href="classcen_1_1event__sink.html">event_sink&lt;Event&gt;</a>&amp;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  {</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    constexpr <span class="keyword">auto</span> index = index_of&lt;Event&gt;();</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keywordflow">return</span> std::get&lt;index&gt;(m_sinks);</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  }</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Event&gt;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  <span class="keyword">auto</span> check_for() -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  {</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span>* <a class="code" href="classcen_1_1event.html">event</a> = m_event.template try_get&lt;Event&gt;())</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    {</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;      <span class="keywordflow">if</span> (<span class="keyword">auto</span>&amp; <span class="keyword">function</span> = get_sink&lt;Event&gt;().<span class="keyword">function</span>())</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;      {</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="keyword">function</span>(*event);</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      }</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    }</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    {</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    }</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  }</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00243"></a><span class="lineno"><a class="line" href="classcen_1_1event__dispatcher.html#a56e5734a3f6f82917f40fc0175f63e57">  243</a></span>&#160;  <span class="keyword">using</span> <a class="code" href="classcen_1_1event__dispatcher.html#a56e5734a3f6f82917f40fc0175f63e57">size_type</a> = std::size_t;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
-<div class="line"><a name="l00254"></a><span class="lineno"><a class="line" href="classcen_1_1event__dispatcher.html#ab651ab9256952ecec5a284e92fdcdbc2">  254</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcen_1_1event__dispatcher.html#ab651ab9256952ecec5a284e92fdcdbc2">poll</a>()</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;  {</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordflow">while</span> (m_event.<a class="code" href="classcen_1_1event.html#ae36b6fcbe804388a3cc3520fb1b0e239">poll</a>())</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    {</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;      (check_for&lt;E&gt;() || ...);</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    }</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  }</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Event&gt;</div>
-<div class="line"><a name="l00274"></a><span class="lineno"><a class="line" href="classcen_1_1event__dispatcher.html#ac95c2eeced80d2996a0777b4c97f1809">  274</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1event__dispatcher.html#ac95c2eeced80d2996a0777b4c97f1809">bind</a>() -&gt; <a class="code" href="classcen_1_1event__sink.html">event_sink&lt;Event&gt;</a>&amp;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  {</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    static_assert((std::is_same_v&lt;std::decay_t&lt;Event&gt;, E&gt; || ...),</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                  <span class="stringliteral">&quot;Can&#39;t connect unsubscribed event! Make sure that the &quot;</span></div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                  <span class="stringliteral">&quot;event is listed as a class template parameter.&quot;</span>);</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordflow">return</span> get_sink&lt;Event&gt;();</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  }</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160; </div>
-<div class="line"><a name="l00287"></a><span class="lineno"><a class="line" href="classcen_1_1event__dispatcher.html#a30061121c7cd76f91ece0eab1f8c6b3f">  287</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcen_1_1event__dispatcher.html#a30061121c7cd76f91ece0eab1f8c6b3f">reset</a>() noexcept</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;  {</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    (bind&lt;E&gt;().reset(), ...);</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  }</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
-<div class="line"><a name="l00299"></a><span class="lineno"><a class="line" href="classcen_1_1event__dispatcher.html#a7c1c31f9df3341e929dc0c1017c59302">  299</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1event__dispatcher.html#a7c1c31f9df3341e929dc0c1017c59302">active_count</a>() const -&gt; <a class="code" href="classcen_1_1event__dispatcher.html#a56e5734a3f6f82917f40fc0175f63e57">size_type</a></div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  {</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keywordflow">return</span> (0<a class="code" href="namespacecen_1_1keycodes.html#a915396fbc311e9bd0dca80e6ec16337c">u</a> + ... + (get_sink&lt;E&gt;().<span class="keyword">function</span>() ? 1<a class="code" href="namespacecen_1_1keycodes.html#a915396fbc311e9bd0dca80e6ec16337c">u</a> : 0<a class="code" href="namespacecen_1_1keycodes.html#a915396fbc311e9bd0dca80e6ec16337c">u</a>));</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  }</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160; </div>
-<div class="line"><a name="l00314"></a><span class="lineno"><a class="line" href="classcen_1_1event__dispatcher.html#a181897ad09275693d14f4a0931b483f6">  314</a></span>&#160;  [[nodiscard]] constexpr <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code" href="classcen_1_1event__dispatcher.html#a181897ad09275693d14f4a0931b483f6">size</a>() noexcept -&gt; <a class="code" href="classcen_1_1event__dispatcher.html#a56e5734a3f6f82917f40fc0175f63e57">size_type</a></div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  {</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">sizeof</span>...(E);</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  }</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; </div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  <span class="keyword">using</span> sink_tuple = std::tuple&lt;event_sink&lt;E&gt;...&gt;;</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160; </div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;  <a class="code" href="classcen_1_1event.html">cen::event</a> m_event;</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;  sink_tuple m_sinks;</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;};</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>... E&gt;</div>
-<div class="line"><a name="l00327"></a><span class="lineno"><a class="line" href="group__event.html#ga3495db37c3a74358d4c26d358e6c3c9c">  327</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga45aa3eac6ffe05fce3966b0e75948d79">to_string</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1event__dispatcher.html">event_dispatcher&lt;E...&gt;</a>&amp; dispatcher)</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    -&gt; std::string</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;{</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;  <span class="keywordflow">return</span> <span class="stringliteral">&quot;event_dispatcher{size: &quot;</span> + <a class="code" href="group__event.html#ga3495db37c3a74358d4c26d358e6c3c9c">detail::to_string</a>(dispatcher.size()).value() +</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;         <span class="stringliteral">&quot;, #active: &quot;</span> + <a class="code" href="group__event.html#ga3495db37c3a74358d4c26d358e6c3c9c">detail::to_string</a>(dispatcher.active_count()).value() + <span class="stringliteral">&quot;}&quot;</span>;</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;}</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160; </div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>... E&gt;</div>
-<div class="line"><a name="l00335"></a><span class="lineno"><a class="line" href="group__event.html#ga6789325ffb9c1d836aac53bb7c7748d8">  335</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga993c1ccd18c5d8c5d01ff8736eb3bbca">operator&lt;&lt;</a>(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code" href="classcen_1_1event__dispatcher.html">event_dispatcher&lt;E...&gt;</a>&amp; dispatcher)</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    -&gt; std::ostream&amp;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;{</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;  stream &lt;&lt; <a class="code" href="group__audio.html#ga45aa3eac6ffe05fce3966b0e75948d79">to_string</a>(dispatcher);</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;  <span class="keywordflow">return</span> stream;</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;}</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160; </div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160; </div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;}  <span class="comment">// namespace cen</span></div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160; </div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;<span class="preprocessor">#endif  // CENTURION_EVENT_DISPATCHER_HEADER</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span>   <span class="comment">// function, bind</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;ostream&gt;</span>      <span class="comment">// ostream</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span>       <span class="comment">// string, to_string</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;tuple&gt;</span>        <span class="comment">// tuple</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;type_traits&gt;</span>  <span class="comment">// is_same_v, is_invocable_v, is_reference_v, ...</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../core/integers.hpp&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../detail/tuple_type_index.hpp&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="event_8hpp.html">event.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecen.html">cen</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> E&gt;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classcen_1_1event__sink.html">   33</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcen_1_1event__sink.html">event_sink</a> final</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classcen_1_1event__sink.html#a75992274b61d6b82f74015008c48492f">   36</a></span>&#160;  <span class="keyword">using</span> <a class="code" href="classcen_1_1event__sink.html#a75992274b61d6b82f74015008c48492f">event_type</a> = std::decay_t&lt;E&gt;;              </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classcen_1_1event__sink.html#a4f86e5841f4c14061fb962fef132aa7f">   37</a></span>&#160;  <span class="keyword">using</span> <a class="code" href="classcen_1_1event__sink.html#a4f86e5841f4c14061fb962fef132aa7f">signature_type</a> = void(<span class="keyword">const</span> <a class="code" href="classcen_1_1event__sink.html#a75992274b61d6b82f74015008c48492f">event_type</a>&amp;);  </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classcen_1_1event__sink.html#a31ae9cbc9914ef018d6004bdcb766648">   38</a></span>&#160;  <span class="keyword">using</span> <a class="code" href="classcen_1_1event__sink.html#a31ae9cbc9914ef018d6004bdcb766648">function_type</a> = std::function&lt;signature_type&gt;;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classcen_1_1event__sink.html#aa93275336c110d5ef0fa335e753ae133">   45</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcen_1_1event__sink.html#aa93275336c110d5ef0fa335e753ae133">reset</a>() noexcept</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    m_function = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classcen_1_1event__sink.html#a2c22fc4680d2294913c7b60cf0d9f887">   63</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcen_1_1event__sink.html#a2c22fc4680d2294913c7b60cf0d9f887">to</a>(T&amp;&amp; callable)</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    static_assert(std::is_invocable_v&lt;T, const event_type&amp;&gt;,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                  <span class="stringliteral">&quot;Callable must be invocable with subscribed event!&quot;</span>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    m_function = <a class="code" href="classcen_1_1event__sink.html#a31ae9cbc9914ef018d6004bdcb766648">function_type</a>{callable};</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keyword">template</span> &lt;auto memberFunc, <span class="keyword">typename</span> Self&gt;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classcen_1_1event__sink.html#a3f88f2de817a4120005e1ecc9e89d911">   86</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcen_1_1event__sink.html#a3f88f2de817a4120005e1ecc9e89d911">to</a>(Self* <span class="keyword">self</span>)</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    static_assert(std::is_member_function_pointer_v&lt;decltype(memberFunc)&gt;,</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                  <span class="stringliteral">&quot;\&quot;memberFunc\&quot; must be member function pointer!&quot;</span>);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    static_assert(std::is_invocable_v&lt;decltype(memberFunc), Self*, <span class="keyword">const</span> <a class="code" href="classcen_1_1event__sink.html#a75992274b61d6b82f74015008c48492f">event_type</a>&amp;&gt;,</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                  <span class="stringliteral">&quot;Member function must be invocable with subscribed event!&quot;</span>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="classcen_1_1event__sink.html#a49daf3a434ec8d3d3c846f8031228a7c">to</a>(<a class="code" href="group__video.html#gadd9fe0dd0ec3dfa1e41fbcc2f576767c">std::bind</a>(memberFunc, <span class="keyword">self</span>, std::placeholders::_1));</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keyword">template</span> &lt;auto function&gt;</div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="classcen_1_1event__sink.html#a49daf3a434ec8d3d3c846f8031228a7c">  106</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcen_1_1event__sink.html#a49daf3a434ec8d3d3c846f8031228a7c">to</a>()</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="code" href="classcen_1_1event__sink.html#a49daf3a434ec8d3d3c846f8031228a7c">to</a>(<span class="keyword">function</span>);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="classcen_1_1event__sink.html#a12f6dc9d47f0d64f2ab01bf3585e9738">  118</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <span class="keyword">function</span>() -&gt; <a class="code" href="classcen_1_1event__sink.html#a31ae9cbc9914ef018d6004bdcb766648">function_type</a>&amp;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">return</span> m_function;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="classcen_1_1event__sink.html#a5562240247dcdeea14f639f13bda5ac1">  123</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <span class="keyword">function</span>() <span class="keyword">const</span> -&gt; <span class="keyword">const</span> <a class="code" href="classcen_1_1event__sink.html#a31ae9cbc9914ef018d6004bdcb766648">function_type</a>&amp;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">return</span> m_function;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <a class="code" href="classcen_1_1event__sink.html#a31ae9cbc9914ef018d6004bdcb766648">function_type</a> m_function;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;};</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>... E&gt;</div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="classcen_1_1event__dispatcher.html">  166</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcen_1_1event__dispatcher.html">event_dispatcher</a> final</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;{</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  static_assert((!std::is_const_v&lt;E&gt; &amp;&amp; ...),</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                <span class="stringliteral">&quot;Can&#39;t use \&quot;const\&quot; on template parameter!&quot;</span>);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  static_assert((!std::is_volatile_v&lt;E&gt; &amp;&amp; ...),</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                <span class="stringliteral">&quot;Can&#39;t use \&quot;volatile\&quot; on template parameter!&quot;</span>);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  static_assert((!std::is_reference_v&lt;E&gt; &amp;&amp; ...),</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                <span class="stringliteral">&quot;Reference types can&#39;t be used as template parameters!&quot;</span>);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  static_assert((!std::is_pointer_v&lt;E&gt; &amp;&amp; ...),</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                <span class="stringliteral">&quot;Pointer types can&#39;t be used as template parameters!&quot;</span>);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Event&gt;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  [[nodiscard]] constexpr <span class="keyword">static</span> <span class="keyword">auto</span> index_of()</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  {</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keyword">using</span> sink_t = <a class="code" href="classcen_1_1event__sink.html">event_sink&lt;std::decay_t&lt;Event&gt;</a>&gt;;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    constexpr <span class="keyword">auto</span> index = detail::tuple_type_index_v&lt;sink_t, sink_tuple&gt;;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    static_assert(index != -1);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordflow">return</span> index;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  }</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Event&gt;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  [[nodiscard]] <span class="keyword">auto</span> get_sink() -&gt; <a class="code" href="classcen_1_1event__sink.html">event_sink&lt;Event&gt;</a>&amp;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  {</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    constexpr <span class="keyword">auto</span> index = index_of&lt;Event&gt;();</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordflow">return</span> std::get&lt;index&gt;(m_sinks);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  }</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Event&gt;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  [[nodiscard]] <span class="keyword">auto</span> get_sink() <span class="keyword">const</span> -&gt; <span class="keyword">const</span> <a class="code" href="classcen_1_1event__sink.html">event_sink&lt;Event&gt;</a>&amp;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  {</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    constexpr <span class="keyword">auto</span> index = index_of&lt;Event&gt;();</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keywordflow">return</span> std::get&lt;index&gt;(m_sinks);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  }</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Event&gt;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  <span class="keyword">auto</span> check_for() -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  {</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span>* <a class="code" href="classcen_1_1event.html">event</a> = m_event.template try_get&lt;Event&gt;())</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    {</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;      <span class="keywordflow">if</span> (<span class="keyword">auto</span>&amp; <span class="keyword">function</span> = get_sink&lt;Event&gt;().<span class="keyword">function</span>())</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;      {</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="keyword">function</span>(*event);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      }</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    }</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    {</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    }</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  }</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00242"></a><span class="lineno"><a class="line" href="classcen_1_1event__dispatcher.html#a9426475c5dedc6de2917c4be7fcb575a">  242</a></span>&#160;  <span class="keyword">using</span> <a class="code" href="classcen_1_1event__dispatcher.html#a9426475c5dedc6de2917c4be7fcb575a">size_type</a> = <a class="code" href="group__core.html#ga2313c92fc18c319ebe1853e2d0579886">usize</a>;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
+<div class="line"><a name="l00253"></a><span class="lineno"><a class="line" href="classcen_1_1event__dispatcher.html#ab651ab9256952ecec5a284e92fdcdbc2">  253</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcen_1_1event__dispatcher.html#ab651ab9256952ecec5a284e92fdcdbc2">poll</a>()</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  {</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordflow">while</span> (m_event.<a class="code" href="classcen_1_1event.html#ae36b6fcbe804388a3cc3520fb1b0e239">poll</a>())</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    {</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;      (check_for&lt;E&gt;() || ...);</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    }</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  }</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Event&gt;</div>
+<div class="line"><a name="l00273"></a><span class="lineno"><a class="line" href="classcen_1_1event__dispatcher.html#ac95c2eeced80d2996a0777b4c97f1809">  273</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1event__dispatcher.html#ac95c2eeced80d2996a0777b4c97f1809">bind</a>() -&gt; <a class="code" href="classcen_1_1event__sink.html">event_sink&lt;Event&gt;</a>&amp;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  {</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    static_assert((std::is_same_v&lt;std::decay_t&lt;Event&gt;, E&gt; || ...),</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                  <span class="stringliteral">&quot;Can&#39;t connect unsubscribed event! Make sure that the &quot;</span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                  <span class="stringliteral">&quot;event is listed as a class template parameter.&quot;</span>);</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordflow">return</span> get_sink&lt;Event&gt;();</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  }</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
+<div class="line"><a name="l00286"></a><span class="lineno"><a class="line" href="classcen_1_1event__dispatcher.html#a30061121c7cd76f91ece0eab1f8c6b3f">  286</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcen_1_1event__dispatcher.html#a30061121c7cd76f91ece0eab1f8c6b3f">reset</a>() noexcept</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  {</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    (bind&lt;E&gt;().reset(), ...);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  }</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160; </div>
+<div class="line"><a name="l00298"></a><span class="lineno"><a class="line" href="classcen_1_1event__dispatcher.html#a7c1c31f9df3341e929dc0c1017c59302">  298</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1event__dispatcher.html#a7c1c31f9df3341e929dc0c1017c59302">active_count</a>() const -&gt; <a class="code" href="classcen_1_1event__dispatcher.html#a9426475c5dedc6de2917c4be7fcb575a">size_type</a></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  {</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="keywordflow">return</span> (0<a class="code" href="namespacecen_1_1keycodes.html#a915396fbc311e9bd0dca80e6ec16337c">u</a> + ... + (get_sink&lt;E&gt;().<span class="keyword">function</span>() ? 1<a class="code" href="namespacecen_1_1keycodes.html#a915396fbc311e9bd0dca80e6ec16337c">u</a> : 0<a class="code" href="namespacecen_1_1keycodes.html#a915396fbc311e9bd0dca80e6ec16337c">u</a>));</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  }</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
+<div class="line"><a name="l00313"></a><span class="lineno"><a class="line" href="classcen_1_1event__dispatcher.html#a181897ad09275693d14f4a0931b483f6">  313</a></span>&#160;  [[nodiscard]] constexpr <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code" href="classcen_1_1event__dispatcher.html#a181897ad09275693d14f4a0931b483f6">size</a>() noexcept -&gt; <a class="code" href="classcen_1_1event__dispatcher.html#a9426475c5dedc6de2917c4be7fcb575a">size_type</a></div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  {</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">sizeof</span>...(E);</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  }</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160; </div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;  <span class="keyword">using</span> sink_tuple = std::tuple&lt;event_sink&lt;E&gt;...&gt;;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  <a class="code" href="classcen_1_1event.html">cen::event</a> m_event;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;  sink_tuple m_sinks;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;};</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160; </div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>... E&gt;</div>
+<div class="line"><a name="l00326"></a><span class="lineno"><a class="line" href="group__event.html#ga3495db37c3a74358d4c26d358e6c3c9c">  326</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga45aa3eac6ffe05fce3966b0e75948d79">to_string</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1event__dispatcher.html">event_dispatcher&lt;E...&gt;</a>&amp; dispatcher)</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    -&gt; std::string</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;{</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;  <span class="keywordflow">return</span> <span class="stringliteral">&quot;event_dispatcher{size: &quot;</span> + <a class="code" href="group__event.html#ga3495db37c3a74358d4c26d358e6c3c9c">std::to_string</a>(dispatcher.size()) +</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;         <span class="stringliteral">&quot;, #active: &quot;</span> + <a class="code" href="group__event.html#ga3495db37c3a74358d4c26d358e6c3c9c">std::to_string</a>(dispatcher.active_count()) + <span class="stringliteral">&quot;}&quot;</span>;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;}</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>... E&gt;</div>
+<div class="line"><a name="l00334"></a><span class="lineno"><a class="line" href="group__event.html#ga6789325ffb9c1d836aac53bb7c7748d8">  334</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga993c1ccd18c5d8c5d01ff8736eb3bbca">operator&lt;&lt;</a>(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code" href="classcen_1_1event__dispatcher.html">event_dispatcher&lt;E...&gt;</a>&amp; dispatcher)</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    -&gt; std::ostream&amp;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;{</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;  stream &lt;&lt; <a class="code" href="group__audio.html#ga45aa3eac6ffe05fce3966b0e75948d79">to_string</a>(dispatcher);</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;  <span class="keywordflow">return</span> stream;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;}</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160; </div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160; </div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;}  <span class="comment">// namespace cen</span></div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160; </div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="preprocessor">#endif  // CENTURION_EVENT_DISPATCHER_HEADER</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="agroup__audio_html_ga993c1ccd18c5d8c5d01ff8736eb3bbca"><div class="ttname"><a href="group__audio.html#ga993c1ccd18c5d8c5d01ff8736eb3bbca">cen::operator&lt;&lt;</a></div><div class="ttdeci">auto operator&lt;&lt;(std::ostream &amp;stream, const music &amp;music) -&gt; std::ostream &amp;</div><div class="ttdoc">Prints a textual representation of a music instance.</div><div class="ttdef"><b>Definition:</b> music.hpp:618</div></div>
-<div class="ttc" id="aclasscen_1_1event__dispatcher_html_a30061121c7cd76f91ece0eab1f8c6b3f"><div class="ttname"><a href="classcen_1_1event__dispatcher.html#a30061121c7cd76f91ece0eab1f8c6b3f">cen::event_dispatcher::reset</a></div><div class="ttdeci">void reset() noexcept</div><div class="ttdoc">Removes all set handlers from all of the subscribed events.</div><div class="ttdef"><b>Definition:</b> event_dispatcher.hpp:287</div></div>
-<div class="ttc" id="aclasscen_1_1event__dispatcher_html_a7c1c31f9df3341e929dc0c1017c59302"><div class="ttname"><a href="classcen_1_1event__dispatcher.html#a7c1c31f9df3341e929dc0c1017c59302">cen::event_dispatcher::active_count</a></div><div class="ttdeci">auto active_count() const -&gt; size_type</div><div class="ttdoc">Returns the amount of set event handlers.</div><div class="ttdef"><b>Definition:</b> event_dispatcher.hpp:299</div></div>
-<div class="ttc" id="aclasscen_1_1event__sink_html_a49daf3a434ec8d3d3c846f8031228a7c"><div class="ttname"><a href="classcen_1_1event__sink.html#a49daf3a434ec8d3d3c846f8031228a7c">cen::event_sink::to</a></div><div class="ttdeci">void to()</div><div class="ttdoc">Connects to a free function.</div><div class="ttdef"><b>Definition:</b> event_dispatcher.hpp:107</div></div>
-<div class="ttc" id="aclasscen_1_1event__sink_html"><div class="ttname"><a href="classcen_1_1event__sink.html">cen::event_sink</a></div><div class="ttdoc">Manages a subscription to an event.</div><div class="ttdef"><b>Definition:</b> event_dispatcher.hpp:34</div></div>
-<div class="ttc" id="aclasscen_1_1event__sink_html_a75992274b61d6b82f74015008c48492f"><div class="ttname"><a href="classcen_1_1event__sink.html#a75992274b61d6b82f74015008c48492f">cen::event_sink::event_type</a></div><div class="ttdeci">std::decay_t&lt; E &gt; event_type</div><div class="ttdoc">Associated event type.</div><div class="ttdef"><b>Definition:</b> event_dispatcher.hpp:37</div></div>
-<div class="ttc" id="aclasscen_1_1event__sink_html_a4f86e5841f4c14061fb962fef132aa7f"><div class="ttname"><a href="classcen_1_1event__sink.html#a4f86e5841f4c14061fb962fef132aa7f">cen::event_sink::signature_type</a></div><div class="ttdeci">void(const event_type &amp;) signature_type</div><div class="ttdoc">Signature of handler.</div><div class="ttdef"><b>Definition:</b> event_dispatcher.hpp:38</div></div>
-<div class="ttc" id="aclasscen_1_1event__dispatcher_html"><div class="ttname"><a href="classcen_1_1event__dispatcher.html">cen::event_dispatcher</a></div><div class="ttdoc">An event dispatcher wrapper around a cen::event instance.</div><div class="ttdef"><b>Definition:</b> event_dispatcher.hpp:167</div></div>
-<div class="ttc" id="aclasscen_1_1event__dispatcher_html_a181897ad09275693d14f4a0931b483f6"><div class="ttname"><a href="classcen_1_1event__dispatcher.html#a181897ad09275693d14f4a0931b483f6">cen::event_dispatcher::size</a></div><div class="ttdeci">constexpr static auto size() noexcept -&gt; size_type</div><div class="ttdoc">Returns the number of subscribed events.</div><div class="ttdef"><b>Definition:</b> event_dispatcher.hpp:314</div></div>
+<div class="ttc" id="agroup__audio_html_ga993c1ccd18c5d8c5d01ff8736eb3bbca"><div class="ttname"><a href="group__audio.html#ga993c1ccd18c5d8c5d01ff8736eb3bbca">cen::operator&lt;&lt;</a></div><div class="ttdeci">auto operator&lt;&lt;(std::ostream &amp;stream, const music &amp;music) -&gt; std::ostream &amp;</div><div class="ttdoc">Prints a textual representation of a music instance.</div><div class="ttdef"><b>Definition:</b> music.hpp:619</div></div>
+<div class="ttc" id="aclasscen_1_1event__dispatcher_html_a30061121c7cd76f91ece0eab1f8c6b3f"><div class="ttname"><a href="classcen_1_1event__dispatcher.html#a30061121c7cd76f91ece0eab1f8c6b3f">cen::event_dispatcher::reset</a></div><div class="ttdeci">void reset() noexcept</div><div class="ttdoc">Removes all set handlers from all of the subscribed events.</div><div class="ttdef"><b>Definition:</b> event_dispatcher.hpp:286</div></div>
+<div class="ttc" id="aclasscen_1_1event__dispatcher_html_a7c1c31f9df3341e929dc0c1017c59302"><div class="ttname"><a href="classcen_1_1event__dispatcher.html#a7c1c31f9df3341e929dc0c1017c59302">cen::event_dispatcher::active_count</a></div><div class="ttdeci">auto active_count() const -&gt; size_type</div><div class="ttdoc">Returns the amount of set event handlers.</div><div class="ttdef"><b>Definition:</b> event_dispatcher.hpp:298</div></div>
+<div class="ttc" id="aclasscen_1_1event__sink_html_a49daf3a434ec8d3d3c846f8031228a7c"><div class="ttname"><a href="classcen_1_1event__sink.html#a49daf3a434ec8d3d3c846f8031228a7c">cen::event_sink::to</a></div><div class="ttdeci">void to()</div><div class="ttdoc">Connects to a free function.</div><div class="ttdef"><b>Definition:</b> event_dispatcher.hpp:106</div></div>
+<div class="ttc" id="aclasscen_1_1event__sink_html"><div class="ttname"><a href="classcen_1_1event__sink.html">cen::event_sink</a></div><div class="ttdoc">Manages a subscription to an event.</div><div class="ttdef"><b>Definition:</b> event_dispatcher.hpp:33</div></div>
+<div class="ttc" id="aclasscen_1_1event__sink_html_a75992274b61d6b82f74015008c48492f"><div class="ttname"><a href="classcen_1_1event__sink.html#a75992274b61d6b82f74015008c48492f">cen::event_sink::event_type</a></div><div class="ttdeci">std::decay_t&lt; E &gt; event_type</div><div class="ttdoc">Associated event type.</div><div class="ttdef"><b>Definition:</b> event_dispatcher.hpp:36</div></div>
+<div class="ttc" id="aclasscen_1_1event__sink_html_a4f86e5841f4c14061fb962fef132aa7f"><div class="ttname"><a href="classcen_1_1event__sink.html#a4f86e5841f4c14061fb962fef132aa7f">cen::event_sink::signature_type</a></div><div class="ttdeci">void(const event_type &amp;) signature_type</div><div class="ttdoc">Signature of handler.</div><div class="ttdef"><b>Definition:</b> event_dispatcher.hpp:37</div></div>
+<div class="ttc" id="aclasscen_1_1event__dispatcher_html_a9426475c5dedc6de2917c4be7fcb575a"><div class="ttname"><a href="classcen_1_1event__dispatcher.html#a9426475c5dedc6de2917c4be7fcb575a">cen::event_dispatcher::size_type</a></div><div class="ttdeci">usize size_type</div><div class="ttdef"><b>Definition:</b> event_dispatcher.hpp:242</div></div>
+<div class="ttc" id="aclasscen_1_1event__dispatcher_html"><div class="ttname"><a href="classcen_1_1event__dispatcher.html">cen::event_dispatcher</a></div><div class="ttdoc">An event dispatcher wrapper around a cen::event instance.</div><div class="ttdef"><b>Definition:</b> event_dispatcher.hpp:166</div></div>
+<div class="ttc" id="aclasscen_1_1event__dispatcher_html_a181897ad09275693d14f4a0931b483f6"><div class="ttname"><a href="classcen_1_1event__dispatcher.html#a181897ad09275693d14f4a0931b483f6">cen::event_dispatcher::size</a></div><div class="ttdeci">constexpr static auto size() noexcept -&gt; size_type</div><div class="ttdoc">Returns the number of subscribed events.</div><div class="ttdef"><b>Definition:</b> event_dispatcher.hpp:313</div></div>
 <div class="ttc" id="aevent_8hpp_html"><div class="ttname"><a href="event_8hpp.html">event.hpp</a></div></div>
+<div class="ttc" id="agroup__core_html_ga2313c92fc18c319ebe1853e2d0579886"><div class="ttname"><a href="group__core.html#ga2313c92fc18c319ebe1853e2d0579886">cen::usize</a></div><div class="ttdeci">std::size_t usize</div><div class="ttdef"><b>Definition:</b> integers.hpp:16</div></div>
 <div class="ttc" id="anamespacecen_1_1keycodes_html_a915396fbc311e9bd0dca80e6ec16337c"><div class="ttname"><a href="namespacecen_1_1keycodes.html#a915396fbc311e9bd0dca80e6ec16337c">cen::keycodes::u</a></div><div class="ttdeci">constexpr key_code u</div><div class="ttdoc">Represents the key with the label &quot;U&quot;.</div><div class="ttdef"><b>Definition:</b> key_code.hpp:547</div></div>
 <div class="ttc" id="aclasscen_1_1event_html_ae36b6fcbe804388a3cc3520fb1b0e239"><div class="ttname"><a href="classcen_1_1event.html#ae36b6fcbe804388a3cc3520fb1b0e239">cen::event::poll</a></div><div class="ttdeci">auto poll() noexcept -&gt; bool</div><div class="ttdoc">Polls the next available event, if there is one.</div><div class="ttdef"><b>Definition:</b> event.hpp:156</div></div>
 <div class="ttc" id="aclasscen_1_1event_html"><div class="ttname"><a href="classcen_1_1event.html">cen::event</a></div><div class="ttdoc">Serves as the main interface for dealing with events.</div><div class="ttdef"><b>Definition:</b> event.hpp:50</div></div>
-<div class="ttc" id="anamespacecen_html"><div class="ttname"><a href="namespacecen.html">cen</a></div><div class="ttdoc">The top-level namespace that all components of the library reside in.</div><div class="ttdef"><b>Definition:</b> channels.hpp:12</div></div>
-<div class="ttc" id="aclasscen_1_1event__dispatcher_html_ac95c2eeced80d2996a0777b4c97f1809"><div class="ttname"><a href="classcen_1_1event__dispatcher.html#ac95c2eeced80d2996a0777b4c97f1809">cen::event_dispatcher::bind</a></div><div class="ttdeci">auto bind() -&gt; event_sink&lt; Event &gt; &amp;</div><div class="ttdoc">Returns the event sink associated with the specified event.</div><div class="ttdef"><b>Definition:</b> event_dispatcher.hpp:274</div></div>
-<div class="ttc" id="aclasscen_1_1event__sink_html_a31ae9cbc9914ef018d6004bdcb766648"><div class="ttname"><a href="classcen_1_1event__sink.html#a31ae9cbc9914ef018d6004bdcb766648">cen::event_sink::function_type</a></div><div class="ttdeci">std::function&lt; signature_type &gt; function_type</div><div class="ttdef"><b>Definition:</b> event_dispatcher.hpp:39</div></div>
-<div class="ttc" id="aclasscen_1_1event__sink_html_aa93275336c110d5ef0fa335e753ae133"><div class="ttname"><a href="classcen_1_1event__sink.html#aa93275336c110d5ef0fa335e753ae133">cen::event_sink::reset</a></div><div class="ttdeci">void reset() noexcept</div><div class="ttdoc">Resets the event sink, removing any associated handler.</div><div class="ttdef"><b>Definition:</b> event_dispatcher.hpp:46</div></div>
-<div class="ttc" id="aclasscen_1_1event__sink_html_a2c22fc4680d2294913c7b60cf0d9f887"><div class="ttname"><a href="classcen_1_1event__sink.html#a2c22fc4680d2294913c7b60cf0d9f887">cen::event_sink::to</a></div><div class="ttdeci">void to(T &amp;&amp;callable)</div><div class="ttdoc">Connects to a function object.</div><div class="ttdef"><b>Definition:</b> event_dispatcher.hpp:64</div></div>
-<div class="ttc" id="aclasscen_1_1event__dispatcher_html_a56e5734a3f6f82917f40fc0175f63e57"><div class="ttname"><a href="classcen_1_1event__dispatcher.html#a56e5734a3f6f82917f40fc0175f63e57">cen::event_dispatcher::size_type</a></div><div class="ttdeci">std::size_t size_type</div><div class="ttdef"><b>Definition:</b> event_dispatcher.hpp:243</div></div>
-<div class="ttc" id="aclasscen_1_1event__sink_html_a3f88f2de817a4120005e1ecc9e89d911"><div class="ttname"><a href="classcen_1_1event__sink.html#a3f88f2de817a4120005e1ecc9e89d911">cen::event_sink::to</a></div><div class="ttdeci">void to(Self *self)</div><div class="ttdoc">Connects to a member function.</div><div class="ttdef"><b>Definition:</b> event_dispatcher.hpp:87</div></div>
-<div class="ttc" id="agroup__audio_html_ga45aa3eac6ffe05fce3966b0e75948d79"><div class="ttname"><a href="group__audio.html#ga45aa3eac6ffe05fce3966b0e75948d79">cen::to_string</a></div><div class="ttdeci">auto to_string(const music &amp;music) -&gt; std::string</div><div class="ttdoc">Returns a textual representation of a music instance.</div><div class="ttdef"><b>Definition:</b> music.hpp:602</div></div>
-<div class="ttc" id="aclasscen_1_1event__dispatcher_html_ab651ab9256952ecec5a284e92fdcdbc2"><div class="ttname"><a href="classcen_1_1event__dispatcher.html#ab651ab9256952ecec5a284e92fdcdbc2">cen::event_dispatcher::poll</a></div><div class="ttdeci">void poll()</div><div class="ttdoc">Polls all events, checking for subscribed events.</div><div class="ttdef"><b>Definition:</b> event_dispatcher.hpp:254</div></div>
-<div class="ttc" id="agroup__event_html_ga3495db37c3a74358d4c26d358e6c3c9c"><div class="ttname"><a href="group__event.html#ga3495db37c3a74358d4c26d358e6c3c9c">cen::to_string</a></div><div class="ttdeci">auto to_string(const event_dispatcher&lt; E... &gt; &amp;dispatcher) -&gt; std::string</div><div class="ttdef"><b>Definition:</b> event_dispatcher.hpp:327</div></div>
+<div class="ttc" id="anamespacecen_html"><div class="ttname"><a href="namespacecen.html">cen</a></div><div class="ttdoc">The top-level namespace that all components of the library reside in.</div><div class="ttdef"><b>Definition:</b> channels.hpp:14</div></div>
+<div class="ttc" id="aclasscen_1_1event__dispatcher_html_ac95c2eeced80d2996a0777b4c97f1809"><div class="ttname"><a href="classcen_1_1event__dispatcher.html#ac95c2eeced80d2996a0777b4c97f1809">cen::event_dispatcher::bind</a></div><div class="ttdeci">auto bind() -&gt; event_sink&lt; Event &gt; &amp;</div><div class="ttdoc">Returns the event sink associated with the specified event.</div><div class="ttdef"><b>Definition:</b> event_dispatcher.hpp:273</div></div>
+<div class="ttc" id="aclasscen_1_1event__sink_html_a31ae9cbc9914ef018d6004bdcb766648"><div class="ttname"><a href="classcen_1_1event__sink.html#a31ae9cbc9914ef018d6004bdcb766648">cen::event_sink::function_type</a></div><div class="ttdeci">std::function&lt; signature_type &gt; function_type</div><div class="ttdef"><b>Definition:</b> event_dispatcher.hpp:38</div></div>
+<div class="ttc" id="aclasscen_1_1event__sink_html_aa93275336c110d5ef0fa335e753ae133"><div class="ttname"><a href="classcen_1_1event__sink.html#aa93275336c110d5ef0fa335e753ae133">cen::event_sink::reset</a></div><div class="ttdeci">void reset() noexcept</div><div class="ttdoc">Resets the event sink, removing any associated handler.</div><div class="ttdef"><b>Definition:</b> event_dispatcher.hpp:45</div></div>
+<div class="ttc" id="aclasscen_1_1event__sink_html_a2c22fc4680d2294913c7b60cf0d9f887"><div class="ttname"><a href="classcen_1_1event__sink.html#a2c22fc4680d2294913c7b60cf0d9f887">cen::event_sink::to</a></div><div class="ttdeci">void to(T &amp;&amp;callable)</div><div class="ttdoc">Connects to a function object.</div><div class="ttdef"><b>Definition:</b> event_dispatcher.hpp:63</div></div>
+<div class="ttc" id="agroup__video_html_gadd9fe0dd0ec3dfa1e41fbcc2f576767c"><div class="ttname"><a href="group__video.html#gadd9fe0dd0ec3dfa1e41fbcc2f576767c">cen::gl::bind</a></div><div class="ttdeci">auto bind(basic_texture&lt; T &gt; &amp;texture) noexcept -&gt; std::optional&lt; farea &gt;</div><div class="ttdoc">Binds a texture to the current OpenGL context.</div><div class="ttdef"><b>Definition:</b> gl_core.hpp:238</div></div>
+<div class="ttc" id="aclasscen_1_1event__sink_html_a3f88f2de817a4120005e1ecc9e89d911"><div class="ttname"><a href="classcen_1_1event__sink.html#a3f88f2de817a4120005e1ecc9e89d911">cen::event_sink::to</a></div><div class="ttdeci">void to(Self *self)</div><div class="ttdoc">Connects to a member function.</div><div class="ttdef"><b>Definition:</b> event_dispatcher.hpp:86</div></div>
+<div class="ttc" id="agroup__audio_html_ga45aa3eac6ffe05fce3966b0e75948d79"><div class="ttname"><a href="group__audio.html#ga45aa3eac6ffe05fce3966b0e75948d79">cen::to_string</a></div><div class="ttdeci">auto to_string(const music &amp;music) -&gt; std::string</div><div class="ttdoc">Returns a textual representation of a music instance.</div><div class="ttdef"><b>Definition:</b> music.hpp:603</div></div>
+<div class="ttc" id="aclasscen_1_1event__dispatcher_html_ab651ab9256952ecec5a284e92fdcdbc2"><div class="ttname"><a href="classcen_1_1event__dispatcher.html#ab651ab9256952ecec5a284e92fdcdbc2">cen::event_dispatcher::poll</a></div><div class="ttdeci">void poll()</div><div class="ttdoc">Polls all events, checking for subscribed events.</div><div class="ttdef"><b>Definition:</b> event_dispatcher.hpp:253</div></div>
+<div class="ttc" id="agroup__event_html_ga3495db37c3a74358d4c26d358e6c3c9c"><div class="ttname"><a href="group__event.html#ga3495db37c3a74358d4c26d358e6c3c9c">cen::to_string</a></div><div class="ttdeci">auto to_string(const event_dispatcher&lt; E... &gt; &amp;dispatcher) -&gt; std::string</div><div class="ttdef"><b>Definition:</b> event_dispatcher.hpp:326</div></div>
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
 </div>

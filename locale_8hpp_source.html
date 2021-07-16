@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 6.0.1</a>
+                    <a class="navbar-brand">Centurion 6.1.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -99,10 +99,10 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;SDL.h&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;cassert&gt;</span>  <span class="comment">// assert</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;cstddef&gt;</span>  <span class="comment">// size_t</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span>   <span class="comment">// unique_ptr</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../core/czstring.hpp&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span>   <span class="comment">// unique_ptr</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../core/czstring.hpp&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../core/integers.hpp&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../core/not_null.hpp&quot;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../detail/czstring_eq.hpp&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../detail/sdl_deleter.hpp&quot;</span></div>
@@ -152,9 +152,9 @@ $(function() {
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  }</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classcen_1_1locale.html#acfa700b2e2ce500370b98ee66c2edc70">   97</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1locale.html#acfa700b2e2ce500370b98ee66c2edc70">count</a>() const noexcept -&gt; std::<span class="keywordtype">size_t</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classcen_1_1locale.html#a48f4cf5cd9d6d3e4d859f8b5e14675b7">   97</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1locale.html#a48f4cf5cd9d6d3e4d859f8b5e14675b7">count</a>() const noexcept -&gt; <a class="code" href="group__core.html#ga2313c92fc18c319ebe1853e2d0579886">usize</a></div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    std::size_t <a class="code" href="classcen_1_1result.html">result</a>{0};</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="code" href="group__core.html#ga2313c92fc18c319ebe1853e2d0579886">usize</a> <a class="code" href="classcen_1_1result.html">result</a>{0};</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span>* array = m_locales.get())</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    {</div>
@@ -186,12 +186,13 @@ $(function() {
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="preprocessor">#endif  // CENTURION_LOCALE_HEADER</span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclasscen_1_1locale_html_a48f4cf5cd9d6d3e4d859f8b5e14675b7"><div class="ttname"><a href="classcen_1_1locale.html#a48f4cf5cd9d6d3e4d859f8b5e14675b7">cen::locale::count</a></div><div class="ttdeci">auto count() const noexcept -&gt; usize</div><div class="ttdoc">Returns the amount of entries in the locale.</div><div class="ttdef"><b>Definition:</b> locale.hpp:97</div></div>
 <div class="ttc" id="agroup__core_html_ga9f195a3e65e79c88a96dd7b767dc0657"><div class="ttname"><a href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">cen::not_null</a></div><div class="ttdeci">T not_null</div><div class="ttdoc">Tag used to indicate that a pointer cannot be null.</div><div class="ttdef"><b>Definition:</b> not_null.hpp:20</div></div>
 <div class="ttc" id="aclasscen_1_1locale_html_aca2c2d0005afe79b5930825ea2ca8198"><div class="ttname"><a href="classcen_1_1locale.html#aca2c2d0005afe79b5930825ea2ca8198">cen::locale::get_preferred</a></div><div class="ttdeci">static auto get_preferred() noexcept -&gt; locale</div><div class="ttdoc">Returns the current preferred locales on the system.</div><div class="ttdef"><b>Definition:</b> locale.hpp:41</div></div>
 <div class="ttc" id="aclasscen_1_1result_html"><div class="ttname"><a href="classcen_1_1result.html">cen::result</a></div><div class="ttdoc">A simple indicator for the result of different operations.</div><div class="ttdef"><b>Definition:</b> result.hpp:49</div></div>
+<div class="ttc" id="agroup__core_html_ga2313c92fc18c319ebe1853e2d0579886"><div class="ttname"><a href="group__core.html#ga2313c92fc18c319ebe1853e2d0579886">cen::usize</a></div><div class="ttdeci">std::size_t usize</div><div class="ttdef"><b>Definition:</b> integers.hpp:16</div></div>
 <div class="ttc" id="anamespacecen_1_1keycodes_html_a915396fbc311e9bd0dca80e6ec16337c"><div class="ttname"><a href="namespacecen_1_1keycodes.html#a915396fbc311e9bd0dca80e6ec16337c">cen::keycodes::u</a></div><div class="ttdeci">constexpr key_code u</div><div class="ttdoc">Represents the key with the label &quot;U&quot;.</div><div class="ttdef"><b>Definition:</b> key_code.hpp:547</div></div>
-<div class="ttc" id="aclasscen_1_1locale_html_acfa700b2e2ce500370b98ee66c2edc70"><div class="ttname"><a href="classcen_1_1locale.html#acfa700b2e2ce500370b98ee66c2edc70">cen::locale::count</a></div><div class="ttdeci">auto count() const noexcept -&gt; std::size_t</div><div class="ttdoc">Returns the amount of entries in the locale.</div><div class="ttdef"><b>Definition:</b> locale.hpp:97</div></div>
-<div class="ttc" id="anamespacecen_html"><div class="ttname"><a href="namespacecen.html">cen</a></div><div class="ttdoc">The top-level namespace that all components of the library reside in.</div><div class="ttdef"><b>Definition:</b> channels.hpp:12</div></div>
+<div class="ttc" id="anamespacecen_html"><div class="ttname"><a href="namespacecen.html">cen</a></div><div class="ttdoc">The top-level namespace that all components of the library reside in.</div><div class="ttdef"><b>Definition:</b> channels.hpp:14</div></div>
 <div class="ttc" id="agroup__core_html_ga24997ff418228ddb51ae13e2805288a4"><div class="ttname"><a href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">cen::czstring</a></div><div class="ttdeci">const char * czstring</div><div class="ttdoc">Alias for a const C-style null-terminated string.</div><div class="ttdef"><b>Definition:</b> czstring.hpp:16</div></div>
 <div class="ttc" id="aclasscen_1_1locale_html"><div class="ttname"><a href="classcen_1_1locale.html">cen::locale</a></div><div class="ttdoc">Represents a set of locale entries.</div><div class="ttdef"><b>Definition:</b> locale.hpp:29</div></div>
 <div class="ttc" id="agroup__core_html_gga5a2bed2933e3748ad2a77961417a102bae44e4612f62d2fb8f8738bab118a9850"><div class="ttname"><a href="group__core.html#gga5a2bed2933e3748ad2a77961417a102bae44e4612f62d2fb8f8738bab118a9850">cen::log_category::assert</a></div><div class="ttdeci">@ assert</div></div>

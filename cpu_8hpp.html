@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 6.0.1</a>
+                    <a class="navbar-brand">Centurion 6.1.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -98,8 +98,8 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;SDL.h&gt;</code><br />
-<code>#include &lt;cstddef&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
+<code>#include &quot;<a class="el" href="integers_8hpp_source.html">../core/integers.hpp</a>&quot;</code><br />
 </div>
 <p><a href="cpu_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -168,9 +168,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ac7f87188bd9f3ecad3d4da62db6a6a4c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1cpu.html#ac7f87188bd9f3ecad3d4da62db6a6a4c">cen::cpu::has_arm_simd</a> () noexcept -&gt; bool</td></tr>
 <tr class="memdesc:ac7f87188bd9f3ecad3d4da62db6a6a4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the CPU has ARM SIMD (ARMv6+) features.  <a href="namespacecen_1_1cpu.html#ac7f87188bd9f3ecad3d4da62db6a6a4c">More...</a><br /></td></tr>
 <tr class="separator:ac7f87188bd9f3ecad3d4da62db6a6a4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a33af2a3b50d1ab23efbb9281b4b007"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1cpu.html#a7a33af2a3b50d1ab23efbb9281b4b007">cen::cpu::simd_alignment</a> () noexcept -&gt; std::size_t</td></tr>
-<tr class="memdesc:a7a33af2a3b50d1ab23efbb9281b4b007"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the minimum number of bytes to which a pointer must be aligned to be compatible with SIMD instructions on the current CPU.  <a href="namespacecen_1_1cpu.html#a7a33af2a3b50d1ab23efbb9281b4b007">More...</a><br /></td></tr>
-<tr class="separator:a7a33af2a3b50d1ab23efbb9281b4b007"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59b415c2b5dbf07e0874ac474f48d854"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1cpu.html#a59b415c2b5dbf07e0874ac474f48d854">cen::cpu::simd_alignment</a> () noexcept -&gt; usize</td></tr>
+<tr class="memdesc:a59b415c2b5dbf07e0874ac474f48d854"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the minimum number of bytes to which a pointer must be aligned to be compatible with SIMD instructions on the current CPU.  <a href="namespacecen_1_1cpu.html#a59b415c2b5dbf07e0874ac474f48d854">More...</a><br /></td></tr>
+<tr class="separator:a59b415c2b5dbf07e0874ac474f48d854"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add391b1edbbe2373b0c66be116257da5"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecen_1_1cpu.html#add391b1edbbe2373b0c66be116257da5">cen::cpu::is_big_endian</a> () noexcept -&gt; bool</td></tr>
 <tr class="memdesc:add391b1edbbe2373b0c66be116257da5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the CPU uses big-endian byte ordering.  <a href="namespacecen_1_1cpu.html#add391b1edbbe2373b0c66be116257da5">More...</a><br /></td></tr>
 <tr class="separator:add391b1edbbe2373b0c66be116257da5"><td class="memSeparator" colspan="2">&#160;</td></tr>

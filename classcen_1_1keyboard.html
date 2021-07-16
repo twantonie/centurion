@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 6.0.1</a>
+                    <a class="navbar-brand">Centurion 6.1.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -141,9 +141,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a52a9b913c4d8f7ed2025d1796af6aa03"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1keyboard.html#a52a9b913c4d8f7ed2025d1796af6aa03">is_active</a> (const <a class="el" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_modifier</a> modifier) noexcept -&gt; bool</td></tr>
-<tr class="memdesc:a52a9b913c4d8f7ed2025d1796af6aa03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the specified key modifier is active.  <a href="classcen_1_1keyboard.html#a52a9b913c4d8f7ed2025d1796af6aa03">More...</a><br /></td></tr>
-<tr class="separator:a52a9b913c4d8f7ed2025d1796af6aa03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30f6cd0fdb1c1782e86d406012513bb5"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1keyboard.html#a30f6cd0fdb1c1782e86d406012513bb5">is_active</a> (const <a class="el" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a> modifiers) noexcept -&gt; bool</td></tr>
+<tr class="memdesc:a30f6cd0fdb1c1782e86d406012513bb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not any of the specified modifiers are active.  <a href="classcen_1_1keyboard.html#a30f6cd0fdb1c1782e86d406012513bb5">More...</a><br /></td></tr>
+<tr class="separator:a30f6cd0fdb1c1782e86d406012513bb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Provides information about the keyboard state. </p>
@@ -182,8 +182,8 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a52a9b913c4d8f7ed2025d1796af6aa03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52a9b913c4d8f7ed2025d1796af6aa03">&#9670;&nbsp;</a></span>is_active()</h2>
+<a id="a30f6cd0fdb1c1782e86d406012513bb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30f6cd0fdb1c1782e86d406012513bb5">&#9670;&nbsp;</a></span>is_active()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -194,8 +194,8 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">static auto cen::keyboard::is_active </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_modifier</a>&#160;</td>
-          <td class="paramname"><em>modifier</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a>&#160;</td>
+          <td class="paramname"><em>modifiers</em></td><td>)</td>
           <td> -&gt; bool
   </td>
         </tr>
@@ -207,15 +207,15 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Indicates whether or not the specified key modifier is active. </p>
+<p>Indicates whether or not any of the specified modifiers are active. </p>
 <dl class="section note"><dt>Note</dt><dd>Multiple key modifiers can be active at the same time.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">modifier</td><td>the key modifier that will be checked.</td></tr>
+    <tr><td class="paramname">modifiers</td><td>the modifiers that will be checked.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the specified key modifier is active; <code>false</code> otherwise.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if any of the modifiers are active; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>

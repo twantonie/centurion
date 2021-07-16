@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 6.0.1</a>
+                    <a class="navbar-brand">Centurion 6.1.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -578,6 +578,14 @@ Functions</h2></td></tr>
 <tr class="memitem:gacf99bedc0bba882f75c90167cd5361a1"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#gacf99bedc0bba882f75c90167cd5361a1">cen::gl::is_extension_supported</a> (const std::string &amp;extension) noexcept -&gt; bool</td></tr>
 <tr class="memdesc:gacf99bedc0bba882f75c90167cd5361a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the specified extension is supported.  <a href="group__video.html#gacf99bedc0bba882f75c90167cd5361a1">More...</a><br /></td></tr>
 <tr class="separator:gacf99bedc0bba882f75c90167cd5361a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadd9fe0dd0ec3dfa1e41fbcc2f576767c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:gadd9fe0dd0ec3dfa1e41fbcc2f576767c"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__video.html#gadd9fe0dd0ec3dfa1e41fbcc2f576767c">cen::gl::bind</a> (<a class="el" href="classcen_1_1basic__texture.html">basic_texture</a>&lt; T &gt; &amp;<a class="el" href="group__video.html#gab199243ff6286f54d79df8a207b07678">texture</a>) noexcept -&gt; std::optional&lt; <a class="el" href="group__math.html#gafd6913012154925effd164a24d0bdaf1">farea</a> &gt;</td></tr>
+<tr class="memdesc:gadd9fe0dd0ec3dfa1e41fbcc2f576767c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds a texture to the current OpenGL context.  <a href="group__video.html#gadd9fe0dd0ec3dfa1e41fbcc2f576767c">More...</a><br /></td></tr>
+<tr class="separator:gadd9fe0dd0ec3dfa1e41fbcc2f576767c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0c3d4156a287085bff44db84a700009c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga0c3d4156a287085bff44db84a700009c"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__video.html#ga0c3d4156a287085bff44db84a700009c">cen::gl::unbind</a> (<a class="el" href="classcen_1_1basic__texture.html">basic_texture</a>&lt; T &gt; &amp;<a class="el" href="group__video.html#gab199243ff6286f54d79df8a207b07678">texture</a>) noexcept -&gt; <a class="el" href="classcen_1_1result.html">result</a></td></tr>
+<tr class="memdesc:ga0c3d4156a287085bff44db84a700009c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unbinds a texture from the OpenGL context.  <a href="group__video.html#ga0c3d4156a287085bff44db84a700009c">More...</a><br /></td></tr>
+<tr class="separator:ga0c3d4156a287085bff44db84a700009c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga619d169fba9766f25b24bb7c445407ae"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__video.html#ga619d169fba9766f25b24bb7c445407ae">cen::to_string</a> (const <a class="el" href="classcen_1_1palette.html">palette</a> &amp;<a class="el" href="classcen_1_1palette.html">palette</a>) -&gt; std::string</td></tr>
 <tr class="memdesc:ga619d169fba9766f25b24bb7c445407ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a textual representation of a palette.  <a href="group__video.html#ga619d169fba9766f25b24bb7c445407ae">More...</a><br /></td></tr>
 <tr class="separator:ga619d169fba9766f25b24bb7c445407ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1416,6 +1424,51 @@ Pixel format comparison operators</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="gadd9fe0dd0ec3dfa1e41fbcc2f576767c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadd9fe0dd0ec3dfa1e41fbcc2f576767c">&#9670;&nbsp;</a></span>bind()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::gl::bind </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcen_1_1basic__texture.html">basic_texture</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>texture</em></td><td>)</td>
+          <td> -&gt; std::optional&lt;<a class="el" href="group__math.html#gafd6913012154925effd164a24d0bdaf1">farea</a>&gt;
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Binds a texture to the current OpenGL context. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>the ownership semantics tag.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">texture</td><td>the texture to bind.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the size of the texture if it was successfully bound; <code>std::nullopt</code> if something goes wrong.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.1.0 </dd></dl>
+
+</div>
+</div>
 <a id="gaa0633728260ba4798184964a3d606b7b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaa0633728260ba4798184964a3d606b7b">&#9670;&nbsp;</a></span>blend()</h2>
 
@@ -1469,6 +1522,7 @@ Pixel format comparison operators</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a color obtained by blending the two supplied colors.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>Centurion 7: Make the bias parameter a <code>float</code>.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
 
 </div>
@@ -4805,6 +4859,51 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="ga0c3d4156a287085bff44db84a700009c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0c3d4156a287085bff44db84a700009c">&#9670;&nbsp;</a></span>unbind()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::gl::unbind </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcen_1_1basic__texture.html">basic_texture</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>texture</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unbinds a texture from the OpenGL context. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>the ownership semantics tag.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">texture</td><td>the texture to unbind.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the texture was unbound; <code>failure</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.1.0 </dd></dl>
+
+</div>
+</div>
 <a id="ga6cd40c2531924c61c77ce6b5f785f26c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga6cd40c2531924c61c77ce6b5f785f26c">&#9670;&nbsp;</a></span>video_driver_count()</h2>
 
@@ -4836,8 +4935,8 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="agroup__video_html_gaf061afd66d5eb42fc564662e1d864828"><div class="ttname"><a href="group__video.html#gaf061afd66d5eb42fc564662e1d864828">cen::window</a></div><div class="ttdeci">basic_window&lt; detail::owning_type &gt; window</div><div class="ttdoc">Represents an owning window.</div><div class="ttdef"><b>Definition:</b> window.hpp:43</div></div>
-<div class="ttc" id="agroup__video_html_gad2d8e020a073e6f7e05af85abbbe0476"><div class="ttname"><a href="group__video.html#gad2d8e020a073e6f7e05af85abbbe0476">cen::renderer</a></div><div class="ttdeci">basic_renderer&lt; detail::owning_type &gt; renderer</div><div class="ttdoc">Represents an owning renderer.</div><div class="ttdef"><b>Definition:</b> renderer.hpp:50</div></div>
+<div class="ttc" id="agroup__video_html_gaf061afd66d5eb42fc564662e1d864828"><div class="ttname"><a href="group__video.html#gaf061afd66d5eb42fc564662e1d864828">cen::window</a></div><div class="ttdeci">basic_window&lt; detail::owning_type &gt; window</div><div class="ttdoc">Represents an owning window.</div><div class="ttdef"><b>Definition:</b> window.hpp:42</div></div>
+<div class="ttc" id="agroup__video_html_gad2d8e020a073e6f7e05af85abbbe0476"><div class="ttname"><a href="group__video.html#gad2d8e020a073e6f7e05af85abbbe0476">cen::renderer</a></div><div class="ttdeci">basic_renderer&lt; detail::owning_type &gt; renderer</div><div class="ttdoc">Represents an owning renderer.</div><div class="ttdef"><b>Definition:</b> renderer.hpp:49</div></div>
 <div class="ttc" id="agroup__video_html_ga48b3a90cfba05493c695d79084809e53"><div class="ttname"><a href="group__video.html#ga48b3a90cfba05493c695d79084809e53">cen::make_window_and_renderer</a></div><div class="ttdeci">auto make_window_and_renderer(const iarea size=window::default_size(), const u32 flags=window::default_flags()) -&gt; std::pair&lt; window, renderer &gt;</div><div class="ttdoc">Creates a window and an associated renderer.</div><div class="ttdef"><b>Definition:</b> window_utils.hpp:110</div></div>
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->

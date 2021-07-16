@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 6.0.1</a>
+                    <a class="navbar-brand">Centurion 6.1.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -189,6 +189,8 @@ Typedefs</h2></td></tr>
 <tr class="memitem:ga7e139596c259b800eaffbec7765cbcc7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga7e139596c259b800eaffbec7765cbcc7">cen::joystick_handle</a> = <a class="el" href="classcen_1_1basic__joystick.html">basic_joystick</a>&lt; detail::handle_type &gt;</td></tr>
 <tr class="memdesc:ga7e139596c259b800eaffbec7765cbcc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a non-owning joystick.  <a href="group__input.html#ga7e139596c259b800eaffbec7765cbcc7">More...</a><br /></td></tr>
 <tr class="separator:ga7e139596c259b800eaffbec7765cbcc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadff9fd67152af44ce565f6906c056e43"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#gadff9fd67152af44ce565f6906c056e43">cen::key_mod</a> = <a class="el" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_modifier</a></td></tr>
+<tr class="separator:gadff9fd67152af44ce565f6906c056e43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae3c0e0609de5ad9d5ce53e81736ec8b4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#gae3c0e0609de5ad9d5ce53e81736ec8b4">cen::key_state</a> = <a class="el" href="classcen_1_1keyboard.html">keyboard</a></td></tr>
 <tr class="memdesc:gae3c0e0609de5ad9d5ce53e81736ec8b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is provided for backwards compatibility with Centurion 5.  <a href="group__input.html#gae3c0e0609de5ad9d5ce53e81736ec8b4">More...</a><br /></td></tr>
 <tr class="separator:gae3c0e0609de5ad9d5ce53e81736ec8b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -438,14 +440,24 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4acafb1d32288f2cff5693f1f9cf486c58">cen::key_modifier::right_gui</a> = KMOD_RGUI, 
 <br />
+&#160;&#160;<a class="el" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4a2ab64f4ee279e5baf7ab7059b15e6d12">cen::key_modifier::shift</a> = KMOD_SHIFT, 
+<br />
+&#160;&#160;<a class="el" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4abbf7ea1d373e03d16d1418909b05eaf6">cen::key_modifier::ctrl</a> = KMOD_CTRL, 
+<br />
+&#160;&#160;<a class="el" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4a34823136d0dd91d0f5d22db740f7679c">cen::key_modifier::alt</a> = KMOD_ALT, 
+<br />
+&#160;&#160;<a class="el" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4ac00425797de3c98e7b32e814b54a6ec5">cen::key_modifier::gui</a> = KMOD_GUI, 
+<br />
 &#160;&#160;<a class="el" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4a0fc3cfbc27e91ea60a787de13dae3e3c">cen::key_modifier::num</a> = KMOD_NUM, 
 <br />
 &#160;&#160;<a class="el" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4a69cd8955be4678b934e2c90a68c9df7b">cen::key_modifier::caps</a> = KMOD_CAPS, 
 <br />
-&#160;&#160;<a class="el" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4a15d61712450a686a7f365adf4fef581f">cen::key_modifier::mode</a> = KMOD_MODE
+&#160;&#160;<a class="el" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4a15d61712450a686a7f365adf4fef581f">cen::key_modifier::mode</a> = KMOD_MODE, 
+<br />
+&#160;&#160;<a class="el" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4a7f005c3fa691e77c52d3297cc2699072">cen::key_modifier::reserved</a> = KMOD_RESERVED
 <br />
  }</td></tr>
-<tr class="memdesc:ga2101a411ac6025302800a78f9c54fce4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides values that represent different key modifiers.  <a href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">More...</a><br /></td></tr>
+<tr class="memdesc:ga2101a411ac6025302800a78f9c54fce4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents different key modifiers.  <a href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">More...</a><br /></td></tr>
 <tr class="separator:ga2101a411ac6025302800a78f9c54fce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2783619b1566fca313d4a8e7835c91a0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga2783619b1566fca313d4a8e7835c91a0">cen::mouse_button</a> : u8 { <br />
 &#160;&#160;<a class="el" href="group__input.html#gga2783619b1566fca313d4a8e7835c91a0a811882fecd5c7618d7099ebbd39ea254">cen::mouse_button::left</a> = SDL_BUTTON_LEFT, 
@@ -526,6 +538,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ga3a337dc6b4940222b199c44c7561144f"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga3a337dc6b4940222b199c44c7561144f">cen::operator&lt;&lt;</a> (std::ostream &amp;stream, const <a class="el" href="classcen_1_1key__code.html">key_code</a> &amp;keyCode) -&gt; std::ostream &amp;</td></tr>
 <tr class="memdesc:ga3a337dc6b4940222b199c44c7561144f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a key code using a stream.  <a href="group__input.html#ga3a337dc6b4940222b199c44c7561144f">More...</a><br /></td></tr>
 <tr class="separator:ga3a337dc6b4940222b199c44c7561144f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad8c780cbe7f211eeacbe60344f3bafef"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#gad8c780cbe7f211eeacbe60344f3bafef">cen::operator~</a> (const <a class="el" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a> mod) noexcept -&gt; <a class="el" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a></td></tr>
+<tr class="separator:gad8c780cbe7f211eeacbe60344f3bafef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga657b842232d087c20d3aede0e6054dc0"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga657b842232d087c20d3aede0e6054dc0">cen::operator|</a> (const <a class="el" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a> a, const <a class="el" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a> b) noexcept -&gt; <a class="el" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a></td></tr>
+<tr class="separator:ga657b842232d087c20d3aede0e6054dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab851306c400a905d06b818c564687684"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#gab851306c400a905d06b818c564687684">cen::operator&amp;</a> (const <a class="el" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a> a, const <a class="el" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a> b) noexcept -&gt; <a class="el" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a></td></tr>
+<tr class="separator:gab851306c400a905d06b818c564687684"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5c842e1fd74673be3428b7241ee7ded8"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__input.html#ga5c842e1fd74673be3428b7241ee7ded8">cen::has_screen_keyboard</a> () noexcept -&gt; bool</td></tr>
 <tr class="memdesc:ga5c842e1fd74673be3428b7241ee7ded8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether or not the platform has screen keyboard support.  <a href="group__input.html#ga5c842e1fd74673be3428b7241ee7ded8">More...</a><br /></td></tr>
 <tr class="separator:ga5c842e1fd74673be3428b7241ee7ded8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -808,6 +826,20 @@ Touch device comparison operators</h2></td></tr>
 
 </div>
 </div>
+<a id="gadff9fd67152af44ce565f6906c056e43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadff9fd67152af44ce565f6906c056e43">&#9670;&nbsp;</a></span>key_mod</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">cen::key_mod</a> = typedef <a class="el" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_modifier</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="gae3c0e0609de5ad9d5ce53e81736ec8b4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gae3c0e0609de5ad9d5ce53e81736ec8b4">&#9670;&nbsp;</a></span>key_state</h2>
 
@@ -821,7 +853,7 @@ Touch device comparison operators</h2></td></tr>
 </div><div class="memdoc">
 
 <p>This is provided for backwards compatibility with Centurion 5. </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd>This is deprecated since Centurion 6.0.0. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000011">Deprecated:</a></b></dt><dd>This is deprecated since Centurion 6.0.0. </dd></dl>
 
 </div>
 </div>
@@ -838,7 +870,7 @@ Touch device comparison operators</h2></td></tr>
 </div><div class="memdoc">
 
 <p>This is provided for backwards compatibility with Centurion 5. </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd>This was deprecated in Centurion 6.0.0. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000012">Deprecated:</a></b></dt><dd>This was deprecated in Centurion 6.0.0. </dd></dl>
 
 </div>
 </div>
@@ -1346,8 +1378,20 @@ Touch device comparison operators</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Provides values that represent different key modifiers. </p>
-<dl class="section see"><dt>See also</dt><dd><code>SDL_Keymod</code></dd></dl>
+<p>Represents different key modifiers. </p>
+<dl class="section note"><dt>Note</dt><dd>This is a flag enum, and provides overloads for the common bitwise operators.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd><p class="startdd">Centurion 7: Rename this enum to <code>key_mod</code>. </p>
+<p class="enddd">Centurion 7: Replace left_{}/right_{} prefixes with l{}/r{}.</p>
+</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="group__input.html#gadff9fd67152af44ce565f6906c056e43">key_mod</a></code> </dd>
+<dd>
+<code>SDL_Keymod</code> </dd>
+<dd>
+<code><a class="el" href="group__input.html#gad8c780cbe7f211eeacbe60344f3bafef">operator~(key_mod)</a></code> </dd>
+<dd>
+<code><a class="el" href="group__input.html#ga657b842232d087c20d3aede0e6054dc0">operator|(key_mod, key_mod)</a></code> </dd>
+<dd>
+<code><a class="el" href="group__input.html#gab851306c400a905d06b818c564687684">operator&amp;(key_mod, key_mod)</a></code></dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.1.0 </dd></dl>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga2101a411ac6025302800a78f9c54fce4a334c4a4c42fdb79d7ebc3e73b517e6f8"></a>none&#160;</td><td class="fielddoc"></td></tr>
@@ -1359,9 +1403,14 @@ Touch device comparison operators</h2></td></tr>
 <tr><td class="fieldname"><a id="gga2101a411ac6025302800a78f9c54fce4ac868ec4aff5290f22227b0da117cbcc1"></a>right_alt&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="gga2101a411ac6025302800a78f9c54fce4a96f3b2ed5b03176b305763c422906860"></a>left_gui&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="gga2101a411ac6025302800a78f9c54fce4acafb1d32288f2cff5693f1f9cf486c58"></a>right_gui&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga2101a411ac6025302800a78f9c54fce4a2ab64f4ee279e5baf7ab7059b15e6d12"></a>shift&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga2101a411ac6025302800a78f9c54fce4abbf7ea1d373e03d16d1418909b05eaf6"></a>ctrl&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga2101a411ac6025302800a78f9c54fce4a34823136d0dd91d0f5d22db740f7679c"></a>alt&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga2101a411ac6025302800a78f9c54fce4ac00425797de3c98e7b32e814b54a6ec5"></a>gui&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="gga2101a411ac6025302800a78f9c54fce4a0fc3cfbc27e91ea60a787de13dae3e3c"></a>num&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="gga2101a411ac6025302800a78f9c54fce4a69cd8955be4678b934e2c90a68c9df7b"></a>caps&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="gga2101a411ac6025302800a78f9c54fce4a15d61712450a686a7f365adf4fef581f"></a>mode&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga2101a411ac6025302800a78f9c54fce4a7f005c3fa691e77c52d3297cc2699072"></a>reserved&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -2511,6 +2560,44 @@ Touch device comparison operators</h2></td></tr>
 
 </div>
 </div>
+<a id="gab851306c400a905d06b818c564687684"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab851306c400a905d06b818c564687684">&#9670;&nbsp;</a></span>operator&amp;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::operator&amp; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; <a class="el" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a>
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section since"><dt>Since</dt><dd>6.1.0 </dd></dl>
+
+</div>
+</div>
 <a id="ga288f4d0cd32e9fd51af5a470aac0727f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga288f4d0cd32e9fd51af5a470aac0727f">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[1/6]</span></h2>
 
@@ -3642,6 +3729,72 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the two sensor types are equal; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga657b842232d087c20d3aede0e6054dc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga657b842232d087c20d3aede0e6054dc0">&#9670;&nbsp;</a></span>operator|()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::operator| </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; <a class="el" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a>
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section since"><dt>Since</dt><dd>6.1.0 </dd></dl>
+
+</div>
+</div>
+<a id="gad8c780cbe7f211eeacbe60344f3bafef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad8c780cbe7f211eeacbe60344f3bafef">&#9670;&nbsp;</a></span>operator~()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::operator~ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a>&#160;</td>
+          <td class="paramname"><em>mod</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a>
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section since"><dt>Since</dt><dd>6.1.0 </dd></dl>
 
 </div>
 </div>

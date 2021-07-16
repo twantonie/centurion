@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 6.0.1</a>
+                    <a class="navbar-brand">Centurion 6.1.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -90,10 +90,34 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
+<dt>Member <a class="el" href="classcen_1_1color.html#a1c56573ca7f6a9f25cad2ae2cf070f79">cen::color::from_hsl</a>  (const double hue, const double saturation, const double lightness) -&gt; color</dt>
+<dd><a class="anchor" id="_deprecated000014"></a>Since 6.1.0, use the <code>float</code> overload instead.  </dd>
+<dt>Member <a class="el" href="classcen_1_1color.html#a66336ff07300d79d336fe2c04e684df5">cen::color::from_hsv</a>  (const double hue, const double saturation, const double value) -&gt; color</dt>
+<dd><a class="anchor" id="_deprecated000013"></a>Since 6.1.0, use the <code>float</code> overload instead.  </dd>
+<dt>Member <a class="el" href="classcen_1_1dollar__gesture__event.html#a48087d4282be6a88d8e801730e860d06">cen::dollar_gesture_event::fingers</a>  () const noexcept -&gt; u32</dt>
+<dd><a class="anchor" id="_deprecated000001"></a>Since 6.1.0, use <code><a class="el" href="classcen_1_1dollar__gesture__event.html#a0b58a48f98f0aec61cfccb0f8a0dce3d" title="Returns the amount of fingers used to draw the stroke.">finger_count()</a></code> instead. </dd>
 <dt>Member <a class="el" href="group__input.html#gae3c0e0609de5ad9d5ce53e81736ec8b4">cen::key_state</a>  </dt>
-<dd><a class="anchor" id="_deprecated000001"></a>This is deprecated since Centurion 6.0.0.  </dd>
+<dd><a class="anchor" id="_deprecated000011"></a>This is deprecated since Centurion 6.0.0.  </dd>
+<dt>Member <a class="el" href="classcen_1_1keyboard__event.html#a8ea33e642726aaef3e2f54730dfddeab">cen::keyboard_event::alt_active</a>  () const noexcept -&gt; bool</dt>
+<dd><a class="anchor" id="_deprecated000005"></a>Since 6.1.0, use <code>is_active(keymod::alt)</code> instead. </dd>
+<dt>Member <a class="el" href="classcen_1_1keyboard__event.html#a329698b2c608bac6a07dfd56a31adb79">cen::keyboard_event::caps_active</a>  () const noexcept -&gt; bool</dt>
+<dd><a class="anchor" id="_deprecated000007"></a>Since 6.1.0, use <code>is_active(keymod::caps)</code> instead. </dd>
+<dt>Member <a class="el" href="classcen_1_1keyboard__event.html#a83ff7b3327f0bd4cd13df57c5a3b2ed5">cen::keyboard_event::ctrl_active</a>  () const noexcept -&gt; bool</dt>
+<dd><a class="anchor" id="_deprecated000004"></a>Since 6.1.0, use <code>is_active(keymod::ctrl)</code> instead. </dd>
+<dt>Member <a class="el" href="classcen_1_1keyboard__event.html#aee6425c50970ffd4eed55542eb7da038">cen::keyboard_event::gui_active</a>  () const noexcept -&gt; bool</dt>
+<dd><a class="anchor" id="_deprecated000006"></a>Since 6.1.0, use <code>is_active(keymod::gui)</code> instead. </dd>
+<dt>Member <a class="el" href="classcen_1_1keyboard__event.html#af4468669cd47ff91bfe0ee0ec496e0ff">cen::keyboard_event::modifier_active</a>  (const key_mod modifier) const noexcept -&gt; bool</dt>
+<dd><a class="anchor" id="_deprecated000002"></a>Since 6.1.0. Use <code>is_active(key_mod)</code> instead. </dd>
+<dt>Member <a class="el" href="classcen_1_1keyboard__event.html#a4f55bf6a2b0490b376a8a5128c88561e">cen::keyboard_event::num_active</a>  () const noexcept -&gt; bool</dt>
+<dd><a class="anchor" id="_deprecated000008"></a>Since 6.1.0, use <code>is_active(keymod::num)</code> instead. </dd>
+<dt>Member <a class="el" href="classcen_1_1keyboard__event.html#a8086a5abccdd8976be05dcc83552b801">cen::keyboard_event::shift_active</a>  () const noexcept -&gt; bool</dt>
+<dd><a class="anchor" id="_deprecated000003"></a>Since 6.1.0, use <code>is_active(keymod::shift)</code> instead. </dd>
 <dt>Member <a class="el" href="group__input.html#gac5df7dee95fe1c18a86bbc68fb99804b">cen::mouse_state</a>  </dt>
-<dd><a class="anchor" id="_deprecated000002"></a>This was deprecated in Centurion 6.0.0. </dd>
+<dd><a class="anchor" id="_deprecated000012"></a>This was deprecated in Centurion 6.0.0.  </dd>
+<dt>Member <a class="el" href="classcen_1_1multi__gesture__event.html#a2cb4a733bc2329bc9f11cab7ae15af33">cen::multi_gesture_event::fingers</a>  () const noexcept -&gt; float</dt>
+<dd><a class="anchor" id="_deprecated000010"></a>Since 6.1.0, use <code><a class="el" href="classcen_1_1multi__gesture__event.html#a0a4ec200578fecb96d586a91c79da59d" title="Returns the amount of fingers used in the gesture associated with the event.">finger_count()</a></code> instead. Note, this function incorrectly returns a <code>float</code>, and will be removed shortly. </dd>
+<dt>Member <a class="el" href="classcen_1_1multi__gesture__event.html#acdd1e26eedef27082a0685723c4a92fa">cen::multi_gesture_event::set_fingers</a>  (const u16 nFingers) noexcept</dt>
+<dd><a class="anchor" id="_deprecated000009"></a>Since 6.1.0, use <code><a class="el" href="classcen_1_1multi__gesture__event.html#a36f2e73d97859fa1bc6ddc23b2b970e1" title="Sets the number of fingers that was used in the gesture associated with the event.">set_finger_count()</a></code> instead.</dd>
 </dl>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

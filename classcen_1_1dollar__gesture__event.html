@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 6.0.1</a>
+                    <a class="navbar-brand">Centurion 6.1.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -143,6 +143,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4be3f60cea4af943b7a1fe721bae22b1"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1dollar__gesture__event.html#a4be3f60cea4af943b7a1fe721bae22b1">gesture_id</a> () const noexcept -&gt; SDL_GestureID</td></tr>
 <tr class="memdesc:a4be3f60cea4af943b7a1fe721bae22b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the unique ID of the closest gesture to the performed stroke.  <a href="classcen_1_1dollar__gesture__event.html#a4be3f60cea4af943b7a1fe721bae22b1">More...</a><br /></td></tr>
 <tr class="separator:a4be3f60cea4af943b7a1fe721bae22b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b58a48f98f0aec61cfccb0f8a0dce3d"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1dollar__gesture__event.html#a0b58a48f98f0aec61cfccb0f8a0dce3d">finger_count</a> () const noexcept -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a></td></tr>
+<tr class="memdesc:a0b58a48f98f0aec61cfccb0f8a0dce3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the amount of fingers used to draw the stroke.  <a href="classcen_1_1dollar__gesture__event.html#a0b58a48f98f0aec61cfccb0f8a0dce3d">More...</a><br /></td></tr>
+<tr class="separator:a0b58a48f98f0aec61cfccb0f8a0dce3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48087d4282be6a88d8e801730e860d06"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1dollar__gesture__event.html#a48087d4282be6a88d8e801730e860d06">fingers</a> () const noexcept -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a></td></tr>
 <tr class="memdesc:a48087d4282be6a88d8e801730e860d06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the amount of fingers used to draw the stroke.  <a href="classcen_1_1dollar__gesture__event.html#a48087d4282be6a88d8e801730e860d06">More...</a><br /></td></tr>
 <tr class="separator:a48087d4282be6a88d8e801730e860d06"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -287,6 +290,36 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a0b58a48f98f0aec61cfccb0f8a0dce3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b58a48f98f0aec61cfccb0f8a0dce3d">&#9670;&nbsp;</a></span>finger_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::dollar_gesture_event::finger_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the amount of fingers used to draw the stroke. </p>
+<dl class="section return"><dt>Returns</dt><dd>the amount of fingers used to draw the stroke.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.1.0 </dd></dl>
+
+</div>
+</div>
 <a id="a48087d4282be6a88d8e801730e860d06"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a48087d4282be6a88d8e801730e860d06">&#9670;&nbsp;</a></span>fingers()</h2>
 
@@ -313,6 +346,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Returns the amount of fingers used to draw the stroke. </p>
 <dl class="section return"><dt>Returns</dt><dd>the amount of fingers used to draw the stroke.</dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd>Since 6.1.0, use <code><a class="el" href="classcen_1_1dollar__gesture__event.html#a0b58a48f98f0aec61cfccb0f8a0dce3d" title="Returns the amount of fingers used to draw the stroke.">finger_count()</a></code> instead.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>

@@ -25,7 +25,7 @@
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Centurion 6.0.1</a>
+                    <a class="navbar-brand">Centurion 6.1.0</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <!-- Left -->
@@ -100,7 +100,7 @@ $(function() {
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;cassert&gt;</span>  <span class="comment">// assert</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;ostream&gt;</span>  <span class="comment">// ostream</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span>   <span class="comment">// string</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span>   <span class="comment">// string, to_string</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../core/czstring.hpp&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../core/exception.hpp&quot;</span></div>
@@ -109,218 +109,217 @@ $(function() {
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;../core/result.hpp&quot;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;../core/time.hpp&quot;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;../detail/address_of.hpp&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;../detail/to_string.hpp&quot;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecen.html">cen</a> {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="group__thread.html#ga7fba1e8c28384518ae94d5f1f998efae">   33</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="group__thread.html#ga7fba1e8c28384518ae94d5f1f998efae">thread_priority</a></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <a class="code" href="group__thread.html#gga7fba1e8c28384518ae94d5f1f998efaea53cced8d281a1a0ace3cb6594daaa4f7">low</a> = SDL_THREAD_PRIORITY_LOW,                </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <a class="code" href="group__thread.html#gga7fba1e8c28384518ae94d5f1f998efaeafea087517c26fadd409bd4b9dc642555">normal</a> = SDL_THREAD_PRIORITY_NORMAL,          </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <a class="code" href="group__thread.html#gga7fba1e8c28384518ae94d5f1f998efaea8d966b2253a917086c8604959e152243">high</a> = SDL_THREAD_PRIORITY_HIGH,              </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <a class="code" href="group__thread.html#gga7fba1e8c28384518ae94d5f1f998efaea7e85bcb66fb9a809d5ab4f62a8b8bea8">critical</a> = SDL_THREAD_PRIORITY_TIME_CRITICAL  </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html">   59</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcen_1_1thread.html">thread</a> final</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html#a8544da2a795262ee4cdd989583ac7123">   69</a></span>&#160;  <span class="keyword">using</span> <a class="code" href="classcen_1_1thread.html#a8544da2a795262ee4cdd989583ac7123">task_type</a> = SDL_ThreadFunction;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html#a3d5d7fac49508512cdac43ca40182671">   78</a></span>&#160;  <span class="keyword">using</span> <span class="keywordtype">id</span> = SDL_threadID;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html#ae51158fe06ad0648b363cb7f4eeeecad">   95</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classcen_1_1thread.html#ae51158fe06ad0648b363cb7f4eeeecad">thread</a>(<a class="code" href="classcen_1_1thread.html#a8544da2a795262ee4cdd989583ac7123">task_type</a> task,</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                  <a class="code" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null&lt;czstring&gt;</a> <a class="code" href="classcen_1_1thread.html#ada9f6ae45b09039d545c0af3c9712272">name</a> = <span class="stringliteral">&quot;thread&quot;</span>,</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                  <span class="keywordtype">void</span>* data = <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      : m_thread{SDL_CreateThread(task, <a class="code" href="classcen_1_1thread.html#ada9f6ae45b09039d545c0af3c9712272">name</a>, data)}</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  {</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">if</span> (!m_thread)</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    {</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1sdl__error.html">sdl_error</a>{};</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  }</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <a class="code" href="classcen_1_1thread.html#ae51158fe06ad0648b363cb7f4eeeecad">thread</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1thread.html#ae51158fe06ad0648b363cb7f4eeeecad">thread</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1thread.html#ad1140a01574ac62177fc21ae9ad8f8d3">operator=</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1thread.html#ae51158fe06ad0648b363cb7f4eeeecad">thread</a>&amp;) -&gt; <a class="code" href="classcen_1_1thread.html#ae51158fe06ad0648b363cb7f4eeeecad">thread</a>&amp; = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html#a06e850932f6eff7618e803c1ab592077">  115</a></span>&#160;  <a class="code" href="classcen_1_1thread.html#a06e850932f6eff7618e803c1ab592077">~thread</a>() noexcept</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  {</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classcen_1_1thread.html#a5fc5bdd8deeab93a5898947351eebb38">joinable</a>())</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    {</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      <a class="code" href="classcen_1_1thread.html#abdf73f90c6a2a4f3fd03d6e04ddd23d1">join</a>();</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  }</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
-<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html#a45feb8da5b3357347f8bb954ac194e6c">  135</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classcen_1_1thread.html#a45feb8da5b3357347f8bb954ac194e6c">sleep</a>(<span class="keyword">const</span> <a class="code" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds&lt;u32&gt;</a> ms) noexcept(noexcept(ms.count()))</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  {</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    SDL_Delay(ms.count());</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  }</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
-<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html#af9f31a05a50805c3a39e60a0d3462784">  151</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code" href="classcen_1_1thread.html#af9f31a05a50805c3a39e60a0d3462784">set_priority</a>(<span class="keyword">const</span> <a class="code" href="group__thread.html#ga7fba1e8c28384518ae94d5f1f998efae">thread_priority</a> priority) noexcept -&gt; <a class="code" href="classcen_1_1result.html">result</a></div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  {</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> prio = <span class="keyword">static_cast&lt;</span>SDL_ThreadPriority<span class="keyword">&gt;</span>(priority);</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">return</span> SDL_SetThreadPriority(prio) == 0;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  }</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
-<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html#a473c607cab671237bf3cfa2691ace0e3">  167</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcen_1_1thread.html#a473c607cab671237bf3cfa2691ace0e3">detach</a>() noexcept</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  {</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordflow">if</span> (m_joined || m_detached)</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    {</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    }</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    SDL_DetachThread(m_thread);</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    m_detached = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <a class="code" href="group__core.html#gga5a2bed2933e3748ad2a77961417a102bae44e4612f62d2fb8f8738bab118a9850">assert</a>(m_detached != m_joined);</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  }</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
-<div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html#abdf73f90c6a2a4f3fd03d6e04ddd23d1">  190</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1thread.html#abdf73f90c6a2a4f3fd03d6e04ddd23d1">join</a>() noexcept -&gt; <span class="keywordtype">int</span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  {</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordflow">if</span> (m_joined || m_detached)</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    {</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;      <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    }</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="group__input.html#gga4b83e0b5ab5f145bc58be14c2fe96593a9acb44549b41563697bb490144ec6258">status</a>{};</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    SDL_WaitThread(m_thread, &amp;<a class="code" href="group__input.html#gga4b83e0b5ab5f145bc58be14c2fe96593a9acb44549b41563697bb490144ec6258">status</a>);</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    m_joined = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <a class="code" href="group__core.html#gga5a2bed2933e3748ad2a77961417a102bae44e4612f62d2fb8f8738bab118a9850">assert</a>(m_detached != m_joined);</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__input.html#gga4b83e0b5ab5f145bc58be14c2fe96593a9acb44549b41563697bb490144ec6258">status</a>;</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  }</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
-<div class="line"><a name="l00222"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html#a5fc5bdd8deeab93a5898947351eebb38">  222</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1thread.html#a5fc5bdd8deeab93a5898947351eebb38">joinable</a>() const noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  {</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordflow">return</span> !m_joined &amp;&amp; !m_detached;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  }</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
-<div class="line"><a name="l00234"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html#a881fc4e737932c3111ce870951906d78">  234</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1thread.html#a881fc4e737932c3111ce870951906d78">was_joined</a>() const noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  {</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keywordflow">return</span> m_joined;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  }</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
-<div class="line"><a name="l00246"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html#a14e2e6aaf760dd9dc936811a9a9c4ce5">  246</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1thread.html#a14e2e6aaf760dd9dc936811a9a9c4ce5">was_detached</a>() const noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  {</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordflow">return</span> m_detached;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  }</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
-<div class="line"><a name="l00258"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html#af6b146b594b6dd903c261952ead5f3b2">  258</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1thread.html#af6b146b594b6dd903c261952ead5f3b2">get_id</a>() const noexcept -&gt; <span class="keywordtype">id</span></div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  {</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordflow">return</span> SDL_GetThreadID(m_thread);</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  }</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
-<div class="line"><a name="l00270"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html#af15deae32d5a9c245a738f8b4e401dfa">  270</a></span>&#160;  [[nodiscard]] <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code" href="classcen_1_1thread.html#af15deae32d5a9c245a738f8b4e401dfa">current_id</a>() noexcept -&gt; <span class="keywordtype">id</span></div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  {</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordflow">return</span> SDL_ThreadID();</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  }</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
-<div class="line"><a name="l00284"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html#ada9f6ae45b09039d545c0af3c9712272">  284</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1thread.html#ada9f6ae45b09039d545c0af3c9712272">name</a>() const -&gt; std::<span class="keywordtype">string</span></div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;  {</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keywordflow">return</span> SDL_GetThreadName(m_thread);</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  }</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160; </div>
-<div class="line"><a name="l00296"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html#a97cea165187f9a32b6be77c574655aa2">  296</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1thread.html#a97cea165187f9a32b6be77c574655aa2">get</a>() noexcept -&gt; SDL_Thread*</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;  {</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordflow">return</span> m_thread;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  }</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
-<div class="line"><a name="l00302"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html#a69d01ce166055fbb5e937d481e45c146">  302</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1thread.html#a69d01ce166055fbb5e937d481e45c146">get</a>() const noexcept -&gt; const SDL_Thread*</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  {</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keywordflow">return</span> m_thread;</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  }</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160; </div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160; </div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;  SDL_Thread* m_thread{};</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  <span class="keywordtype">bool</span> m_joined{<span class="keyword">false</span>};</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  <span class="keywordtype">bool</span> m_detached{<span class="keyword">false</span>};</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;};</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
-<div class="line"><a name="l00324"></a><span class="lineno"><a class="line" href="group__thread.html#ga6468d958bfe91e1cb693fed9adf43536">  324</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga45aa3eac6ffe05fce3966b0e75948d79">to_string</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1thread.html">thread</a>&amp; <a class="code" href="classcen_1_1thread.html">thread</a>) -&gt; std::string</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;{</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;  <span class="keywordflow">return</span> <span class="stringliteral">&quot;thread{data: &quot;</span> + detail::address_of(<a class="code" href="classcen_1_1thread.html">thread</a>.<a class="code" href="classcen_1_1thread.html#a97cea165187f9a32b6be77c574655aa2">get</a>()) + <span class="stringliteral">&quot;, name: &quot;</span> + <a class="code" href="classcen_1_1thread.html">thread</a>.<a class="code" href="classcen_1_1thread.html#ada9f6ae45b09039d545c0af3c9712272">name</a>() +</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;         <span class="stringliteral">&quot;, id: &quot;</span> + <a class="code" href="group__thread.html#ga6468d958bfe91e1cb693fed9adf43536">detail::to_string</a>(<a class="code" href="classcen_1_1thread.html">thread</a>.<a class="code" href="classcen_1_1thread.html#af6b146b594b6dd903c261952ead5f3b2">get_id</a>()).value() + <span class="stringliteral">&quot;}&quot;</span>;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;}</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160; </div>
-<div class="line"><a name="l00340"></a><span class="lineno"><a class="line" href="group__thread.html#ga2eff3ea27c959d4127d11bf4f3a22340">  340</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga993c1ccd18c5d8c5d01ff8736eb3bbca">operator&lt;&lt;</a>(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code" href="classcen_1_1thread.html">thread</a>&amp; <a class="code" href="classcen_1_1thread.html">thread</a>) -&gt; std::ostream&amp;</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;{</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;  stream &lt;&lt; <a class="code" href="group__audio.html#ga45aa3eac6ffe05fce3966b0e75948d79">to_string</a>(<a class="code" href="classcen_1_1thread.html">thread</a>);</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;  <span class="keywordflow">return</span> stream;</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;}</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160; </div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160; </div>
-<div class="line"><a name="l00359"></a><span class="lineno"><a class="line" href="group__thread.html#gada683df0a6b46b41e7acf635544901ad">  359</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> <a class="code" href="group__thread.html#ga7fba1e8c28384518ae94d5f1f998efae">thread_priority</a> lhs,</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                                        <span class="keyword">const</span> SDL_ThreadPriority rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;{</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>SDL_ThreadPriority<span class="keyword">&gt;</span>(lhs) == rhs;</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;}</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160; </div>
-<div class="line"><a name="l00366"></a><span class="lineno"><a class="line" href="group__thread.html#ga070c15b86ba28fa92ff6eddaae270168">  366</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> SDL_ThreadPriority lhs,</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="group__thread.html#ga7fba1e8c28384518ae94d5f1f998efae">thread_priority</a> rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;{</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;  <span class="keywordflow">return</span> rhs == lhs;</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;}</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160; </div>
-<div class="line"><a name="l00382"></a><span class="lineno"><a class="line" href="group__thread.html#gab2670e85adeaa79763b719817f170caf">  382</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> <a class="code" href="group__thread.html#ga7fba1e8c28384518ae94d5f1f998efae">thread_priority</a> lhs,</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;                                        <span class="keyword">const</span> SDL_ThreadPriority rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;{</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;}</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160; </div>
-<div class="line"><a name="l00389"></a><span class="lineno"><a class="line" href="group__thread.html#gacfe5442100d0a39e4a8b27961d7c8a18">  389</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> SDL_ThreadPriority lhs,</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="group__thread.html#ga7fba1e8c28384518ae94d5f1f998efae">thread_priority</a> rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;{</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;}</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160; </div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160; </div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160; </div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;}  <span class="comment">// namespace cen</span></div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160; </div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;<span class="preprocessor">#endif  // CENTURION_THREAD_HEADER</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecen.html">cen</a> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="group__thread.html#ga7fba1e8c28384518ae94d5f1f998efae">   32</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="group__thread.html#ga7fba1e8c28384518ae94d5f1f998efae">thread_priority</a></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="group__thread.html#gga7fba1e8c28384518ae94d5f1f998efaea53cced8d281a1a0ace3cb6594daaa4f7">low</a> = SDL_THREAD_PRIORITY_LOW,                </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <a class="code" href="group__thread.html#gga7fba1e8c28384518ae94d5f1f998efaeafea087517c26fadd409bd4b9dc642555">normal</a> = SDL_THREAD_PRIORITY_NORMAL,          </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <a class="code" href="group__thread.html#gga7fba1e8c28384518ae94d5f1f998efaea8d966b2253a917086c8604959e152243">high</a> = SDL_THREAD_PRIORITY_HIGH,              </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <a class="code" href="group__thread.html#gga7fba1e8c28384518ae94d5f1f998efaea7e85bcb66fb9a809d5ab4f62a8b8bea8">critical</a> = SDL_THREAD_PRIORITY_TIME_CRITICAL  </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html">   58</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcen_1_1thread.html">thread</a> final</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html#a8544da2a795262ee4cdd989583ac7123">   68</a></span>&#160;  <span class="keyword">using</span> <a class="code" href="classcen_1_1thread.html#a8544da2a795262ee4cdd989583ac7123">task_type</a> = SDL_ThreadFunction;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html#a3d5d7fac49508512cdac43ca40182671">   77</a></span>&#160;  <span class="keyword">using</span> <span class="keywordtype">id</span> = SDL_threadID;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html#ae51158fe06ad0648b363cb7f4eeeecad">   94</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classcen_1_1thread.html#ae51158fe06ad0648b363cb7f4eeeecad">thread</a>(<a class="code" href="classcen_1_1thread.html#a8544da2a795262ee4cdd989583ac7123">task_type</a> task,</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                  <a class="code" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null&lt;czstring&gt;</a> <a class="code" href="classcen_1_1thread.html#ada9f6ae45b09039d545c0af3c9712272">name</a> = <span class="stringliteral">&quot;thread&quot;</span>,</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                  <span class="keywordtype">void</span>* data = <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      : m_thread{SDL_CreateThread(task, <a class="code" href="classcen_1_1thread.html#ada9f6ae45b09039d545c0af3c9712272">name</a>, data)}</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">if</span> (!m_thread)</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1sdl__error.html">sdl_error</a>{};</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <a class="code" href="classcen_1_1thread.html#ae51158fe06ad0648b363cb7f4eeeecad">thread</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1thread.html#ae51158fe06ad0648b363cb7f4eeeecad">thread</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1thread.html#ad1140a01574ac62177fc21ae9ad8f8d3">operator=</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1thread.html#ae51158fe06ad0648b363cb7f4eeeecad">thread</a>&amp;) -&gt; <a class="code" href="classcen_1_1thread.html#ae51158fe06ad0648b363cb7f4eeeecad">thread</a>&amp; = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html#a06e850932f6eff7618e803c1ab592077">  114</a></span>&#160;  <a class="code" href="classcen_1_1thread.html#a06e850932f6eff7618e803c1ab592077">~thread</a>() noexcept</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classcen_1_1thread.html#a5fc5bdd8deeab93a5898947351eebb38">joinable</a>())</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      <a class="code" href="classcen_1_1thread.html#abdf73f90c6a2a4f3fd03d6e04ddd23d1">join</a>();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html#a45feb8da5b3357347f8bb954ac194e6c">  134</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classcen_1_1thread.html#a45feb8da5b3357347f8bb954ac194e6c">sleep</a>(<span class="keyword">const</span> <a class="code" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds&lt;u32&gt;</a> ms) noexcept(noexcept(ms.count()))</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  {</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    SDL_Delay(ms.count());</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  }</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html#af9f31a05a50805c3a39e60a0d3462784">  150</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code" href="classcen_1_1thread.html#af9f31a05a50805c3a39e60a0d3462784">set_priority</a>(<span class="keyword">const</span> <a class="code" href="group__thread.html#ga7fba1e8c28384518ae94d5f1f998efae">thread_priority</a> priority) noexcept -&gt; <a class="code" href="classcen_1_1result.html">result</a></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  {</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> prio = <span class="keyword">static_cast&lt;</span>SDL_ThreadPriority<span class="keyword">&gt;</span>(priority);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">return</span> SDL_SetThreadPriority(prio) == 0;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html#a473c607cab671237bf3cfa2691ace0e3">  166</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcen_1_1thread.html#a473c607cab671237bf3cfa2691ace0e3">detach</a>() noexcept</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordflow">if</span> (m_joined || m_detached)</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;      <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    }</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    SDL_DetachThread(m_thread);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    m_detached = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <a class="code" href="group__core.html#gga5a2bed2933e3748ad2a77961417a102bae44e4612f62d2fb8f8738bab118a9850">assert</a>(m_detached != m_joined);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html#abdf73f90c6a2a4f3fd03d6e04ddd23d1">  189</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1thread.html#abdf73f90c6a2a4f3fd03d6e04ddd23d1">join</a>() noexcept -&gt; <span class="keywordtype">int</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  {</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keywordflow">if</span> (m_joined || m_detached)</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="group__input.html#gga4b83e0b5ab5f145bc58be14c2fe96593a9acb44549b41563697bb490144ec6258">status</a>{};</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    SDL_WaitThread(m_thread, &amp;<a class="code" href="group__input.html#gga4b83e0b5ab5f145bc58be14c2fe96593a9acb44549b41563697bb490144ec6258">status</a>);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    m_joined = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <a class="code" href="group__core.html#gga5a2bed2933e3748ad2a77961417a102bae44e4612f62d2fb8f8738bab118a9850">assert</a>(m_detached != m_joined);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__input.html#gga4b83e0b5ab5f145bc58be14c2fe96593a9acb44549b41563697bb490144ec6258">status</a>;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  }</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
+<div class="line"><a name="l00221"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html#a5fc5bdd8deeab93a5898947351eebb38">  221</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1thread.html#a5fc5bdd8deeab93a5898947351eebb38">joinable</a>() const noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  {</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordflow">return</span> !m_joined &amp;&amp; !m_detached;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  }</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
+<div class="line"><a name="l00233"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html#a881fc4e737932c3111ce870951906d78">  233</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1thread.html#a881fc4e737932c3111ce870951906d78">was_joined</a>() const noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  {</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordflow">return</span> m_joined;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  }</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00245"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html#a14e2e6aaf760dd9dc936811a9a9c4ce5">  245</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1thread.html#a14e2e6aaf760dd9dc936811a9a9c4ce5">was_detached</a>() const noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  {</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordflow">return</span> m_detached;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  }</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
+<div class="line"><a name="l00257"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html#af6b146b594b6dd903c261952ead5f3b2">  257</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1thread.html#af6b146b594b6dd903c261952ead5f3b2">get_id</a>() const noexcept -&gt; <span class="keywordtype">id</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  {</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordflow">return</span> SDL_GetThreadID(m_thread);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  }</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
+<div class="line"><a name="l00269"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html#af15deae32d5a9c245a738f8b4e401dfa">  269</a></span>&#160;  [[nodiscard]] <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code" href="classcen_1_1thread.html#af15deae32d5a9c245a738f8b4e401dfa">current_id</a>() noexcept -&gt; <span class="keywordtype">id</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  {</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keywordflow">return</span> SDL_ThreadID();</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  }</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160; </div>
+<div class="line"><a name="l00283"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html#ada9f6ae45b09039d545c0af3c9712272">  283</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1thread.html#ada9f6ae45b09039d545c0af3c9712272">name</a>() const -&gt; std::<span class="keywordtype">string</span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  {</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordflow">return</span> SDL_GetThreadName(m_thread);</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  }</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
+<div class="line"><a name="l00295"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html#a97cea165187f9a32b6be77c574655aa2">  295</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1thread.html#a97cea165187f9a32b6be77c574655aa2">get</a>() noexcept -&gt; SDL_Thread*</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;  {</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordflow">return</span> m_thread;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  }</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
+<div class="line"><a name="l00301"></a><span class="lineno"><a class="line" href="classcen_1_1thread.html#a69d01ce166055fbb5e937d481e45c146">  301</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1thread.html#a69d01ce166055fbb5e937d481e45c146">get</a>() const noexcept -&gt; const SDL_Thread*</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  {</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordflow">return</span> m_thread;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;  }</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160; </div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160; </div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  SDL_Thread* m_thread{};</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;  <span class="keywordtype">bool</span> m_joined{<span class="keyword">false</span>};</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  <span class="keywordtype">bool</span> m_detached{<span class="keyword">false</span>};</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;};</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160; </div>
+<div class="line"><a name="l00323"></a><span class="lineno"><a class="line" href="group__thread.html#ga6468d958bfe91e1cb693fed9adf43536">  323</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga45aa3eac6ffe05fce3966b0e75948d79">to_string</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1thread.html">thread</a>&amp; <a class="code" href="classcen_1_1thread.html">thread</a>) -&gt; std::string</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;{</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;  <span class="keywordflow">return</span> <span class="stringliteral">&quot;thread{data: &quot;</span> + detail::address_of(<a class="code" href="classcen_1_1thread.html">thread</a>.<a class="code" href="classcen_1_1thread.html#a97cea165187f9a32b6be77c574655aa2">get</a>()) + <span class="stringliteral">&quot;, name: &quot;</span> + <a class="code" href="classcen_1_1thread.html">thread</a>.<a class="code" href="classcen_1_1thread.html#ada9f6ae45b09039d545c0af3c9712272">name</a>() +</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;         <span class="stringliteral">&quot;, id: &quot;</span> + <a class="code" href="group__thread.html#ga6468d958bfe91e1cb693fed9adf43536">std::to_string</a>(<a class="code" href="classcen_1_1thread.html">thread</a>.<a class="code" href="classcen_1_1thread.html#af6b146b594b6dd903c261952ead5f3b2">get_id</a>()) + <span class="stringliteral">&quot;}&quot;</span>;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;}</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
+<div class="line"><a name="l00339"></a><span class="lineno"><a class="line" href="group__thread.html#ga2eff3ea27c959d4127d11bf4f3a22340">  339</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga993c1ccd18c5d8c5d01ff8736eb3bbca">operator&lt;&lt;</a>(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code" href="classcen_1_1thread.html">thread</a>&amp; <a class="code" href="classcen_1_1thread.html">thread</a>) -&gt; std::ostream&amp;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;{</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;  stream &lt;&lt; <a class="code" href="group__audio.html#ga45aa3eac6ffe05fce3966b0e75948d79">to_string</a>(<a class="code" href="classcen_1_1thread.html">thread</a>);</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;  <span class="keywordflow">return</span> stream;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;}</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160; </div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160; </div>
+<div class="line"><a name="l00358"></a><span class="lineno"><a class="line" href="group__thread.html#gada683df0a6b46b41e7acf635544901ad">  358</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> <a class="code" href="group__thread.html#ga7fba1e8c28384518ae94d5f1f998efae">thread_priority</a> lhs,</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                                        <span class="keyword">const</span> SDL_ThreadPriority rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;{</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>SDL_ThreadPriority<span class="keyword">&gt;</span>(lhs) == rhs;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;}</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160; </div>
+<div class="line"><a name="l00365"></a><span class="lineno"><a class="line" href="group__thread.html#ga070c15b86ba28fa92ff6eddaae270168">  365</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> SDL_ThreadPriority lhs,</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="group__thread.html#ga7fba1e8c28384518ae94d5f1f998efae">thread_priority</a> rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;{</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;  <span class="keywordflow">return</span> rhs == lhs;</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;}</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160; </div>
+<div class="line"><a name="l00381"></a><span class="lineno"><a class="line" href="group__thread.html#gab2670e85adeaa79763b719817f170caf">  381</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> <a class="code" href="group__thread.html#ga7fba1e8c28384518ae94d5f1f998efae">thread_priority</a> lhs,</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;                                        <span class="keyword">const</span> SDL_ThreadPriority rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;{</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;}</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160; </div>
+<div class="line"><a name="l00388"></a><span class="lineno"><a class="line" href="group__thread.html#gacfe5442100d0a39e4a8b27961d7c8a18">  388</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> SDL_ThreadPriority lhs,</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="group__thread.html#ga7fba1e8c28384518ae94d5f1f998efae">thread_priority</a> rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;{</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;}</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160; </div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160; </div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160; </div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;}  <span class="comment">// namespace cen</span></div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160; </div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;<span class="preprocessor">#endif  // CENTURION_THREAD_HEADER</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="agroup__audio_html_ga993c1ccd18c5d8c5d01ff8736eb3bbca"><div class="ttname"><a href="group__audio.html#ga993c1ccd18c5d8c5d01ff8736eb3bbca">cen::operator&lt;&lt;</a></div><div class="ttdeci">auto operator&lt;&lt;(std::ostream &amp;stream, const music &amp;music) -&gt; std::ostream &amp;</div><div class="ttdoc">Prints a textual representation of a music instance.</div><div class="ttdef"><b>Definition:</b> music.hpp:618</div></div>
+<div class="ttc" id="agroup__audio_html_ga993c1ccd18c5d8c5d01ff8736eb3bbca"><div class="ttname"><a href="group__audio.html#ga993c1ccd18c5d8c5d01ff8736eb3bbca">cen::operator&lt;&lt;</a></div><div class="ttdeci">auto operator&lt;&lt;(std::ostream &amp;stream, const music &amp;music) -&gt; std::ostream &amp;</div><div class="ttdoc">Prints a textual representation of a music instance.</div><div class="ttdef"><b>Definition:</b> music.hpp:619</div></div>
 <div class="ttc" id="agroup__thread_html_gga7fba1e8c28384518ae94d5f1f998efaea53cced8d281a1a0ace3cb6594daaa4f7"><div class="ttname"><a href="group__thread.html#gga7fba1e8c28384518ae94d5f1f998efaea53cced8d281a1a0ace3cb6594daaa4f7">cen::thread_priority::low</a></div><div class="ttdeci">@ low</div><div class="ttdoc">Non-urgent, background processing.</div></div>
-<div class="ttc" id="aclasscen_1_1thread_html_a473c607cab671237bf3cfa2691ace0e3"><div class="ttname"><a href="classcen_1_1thread.html#a473c607cab671237bf3cfa2691ace0e3">cen::thread::detach</a></div><div class="ttdeci">void detach() noexcept</div><div class="ttdoc">Lets the thread terminate without having another thread join it.</div><div class="ttdef"><b>Definition:</b> thread.hpp:167</div></div>
-<div class="ttc" id="aclasscen_1_1thread_html_a5fc5bdd8deeab93a5898947351eebb38"><div class="ttname"><a href="classcen_1_1thread.html#a5fc5bdd8deeab93a5898947351eebb38">cen::thread::joinable</a></div><div class="ttdeci">auto joinable() const noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the thread can be joined.</div><div class="ttdef"><b>Definition:</b> thread.hpp:222</div></div>
+<div class="ttc" id="aclasscen_1_1thread_html_a473c607cab671237bf3cfa2691ace0e3"><div class="ttname"><a href="classcen_1_1thread.html#a473c607cab671237bf3cfa2691ace0e3">cen::thread::detach</a></div><div class="ttdeci">void detach() noexcept</div><div class="ttdoc">Lets the thread terminate without having another thread join it.</div><div class="ttdef"><b>Definition:</b> thread.hpp:166</div></div>
+<div class="ttc" id="aclasscen_1_1thread_html_a5fc5bdd8deeab93a5898947351eebb38"><div class="ttname"><a href="classcen_1_1thread.html#a5fc5bdd8deeab93a5898947351eebb38">cen::thread::joinable</a></div><div class="ttdeci">auto joinable() const noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the thread can be joined.</div><div class="ttdef"><b>Definition:</b> thread.hpp:221</div></div>
 <div class="ttc" id="agroup__thread_html_gga7fba1e8c28384518ae94d5f1f998efaea7e85bcb66fb9a809d5ab4f62a8b8bea8"><div class="ttname"><a href="group__thread.html#gga7fba1e8c28384518ae94d5f1f998efaea7e85bcb66fb9a809d5ab4f62a8b8bea8">cen::thread_priority::critical</a></div><div class="ttdeci">@ critical</div><div class="ttdoc">For timing-critical processing.</div></div>
-<div class="ttc" id="aclasscen_1_1thread_html_a69d01ce166055fbb5e937d481e45c146"><div class="ttname"><a href="classcen_1_1thread.html#a69d01ce166055fbb5e937d481e45c146">cen::thread::get</a></div><div class="ttdeci">auto get() const noexcept -&gt; const SDL_Thread *</div><div class="ttdoc">Returns a pointer to the associated SDL thread.</div><div class="ttdef"><b>Definition:</b> thread.hpp:302</div></div>
+<div class="ttc" id="aclasscen_1_1thread_html_a69d01ce166055fbb5e937d481e45c146"><div class="ttname"><a href="classcen_1_1thread.html#a69d01ce166055fbb5e937d481e45c146">cen::thread::get</a></div><div class="ttdeci">auto get() const noexcept -&gt; const SDL_Thread *</div><div class="ttdoc">Returns a pointer to the associated SDL thread.</div><div class="ttdef"><b>Definition:</b> thread.hpp:301</div></div>
 <div class="ttc" id="agroup__core_html_ga9f195a3e65e79c88a96dd7b767dc0657"><div class="ttname"><a href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">cen::not_null</a></div><div class="ttdeci">T not_null</div><div class="ttdoc">Tag used to indicate that a pointer cannot be null.</div><div class="ttdef"><b>Definition:</b> not_null.hpp:20</div></div>
 <div class="ttc" id="aclasscen_1_1result_html"><div class="ttname"><a href="classcen_1_1result.html">cen::result</a></div><div class="ttdoc">A simple indicator for the result of different operations.</div><div class="ttdef"><b>Definition:</b> result.hpp:49</div></div>
 <div class="ttc" id="aclasscen_1_1thread_html_ad1140a01574ac62177fc21ae9ad8f8d3"><div class="ttname"><a href="classcen_1_1thread.html#ad1140a01574ac62177fc21ae9ad8f8d3">cen::thread::operator=</a></div><div class="ttdeci">auto operator=(const thread &amp;) -&gt; thread &amp;=delete</div></div>
-<div class="ttc" id="aclasscen_1_1thread_html_a06e850932f6eff7618e803c1ab592077"><div class="ttname"><a href="classcen_1_1thread.html#a06e850932f6eff7618e803c1ab592077">cen::thread::~thread</a></div><div class="ttdeci">~thread() noexcept</div><div class="ttdoc">If the thread is joinable, then the thread is joined.</div><div class="ttdef"><b>Definition:</b> thread.hpp:115</div></div>
-<div class="ttc" id="aclasscen_1_1thread_html"><div class="ttname"><a href="classcen_1_1thread.html">cen::thread</a></div><div class="ttdoc">Represents a single thread of execution.</div><div class="ttdef"><b>Definition:</b> thread.hpp:59</div></div>
-<div class="ttc" id="aclasscen_1_1thread_html_af6b146b594b6dd903c261952ead5f3b2"><div class="ttname"><a href="classcen_1_1thread.html#af6b146b594b6dd903c261952ead5f3b2">cen::thread::get_id</a></div><div class="ttdeci">auto get_id() const noexcept -&gt; id</div><div class="ttdoc">Returns the identifier associated with the thread.</div><div class="ttdef"><b>Definition:</b> thread.hpp:258</div></div>
-<div class="ttc" id="aclasscen_1_1thread_html_af9f31a05a50805c3a39e60a0d3462784"><div class="ttname"><a href="classcen_1_1thread.html#af9f31a05a50805c3a39e60a0d3462784">cen::thread::set_priority</a></div><div class="ttdeci">static auto set_priority(const thread_priority priority) noexcept -&gt; result</div><div class="ttdoc">Sets the priority of the current thread.</div><div class="ttdef"><b>Definition:</b> thread.hpp:151</div></div>
-<div class="ttc" id="anamespacecen_html"><div class="ttname"><a href="namespacecen.html">cen</a></div><div class="ttdoc">The top-level namespace that all components of the library reside in.</div><div class="ttdef"><b>Definition:</b> channels.hpp:12</div></div>
-<div class="ttc" id="aclasscen_1_1thread_html_a8544da2a795262ee4cdd989583ac7123"><div class="ttname"><a href="classcen_1_1thread.html#a8544da2a795262ee4cdd989583ac7123">cen::thread::task_type</a></div><div class="ttdeci">SDL_ThreadFunction task_type</div><div class="ttdoc">The signature of the function object that will be executed.</div><div class="ttdef"><b>Definition:</b> thread.hpp:69</div></div>
-<div class="ttc" id="agroup__thread_html_ga6468d958bfe91e1cb693fed9adf43536"><div class="ttname"><a href="group__thread.html#ga6468d958bfe91e1cb693fed9adf43536">cen::to_string</a></div><div class="ttdeci">auto to_string(const thread &amp;thread) -&gt; std::string</div><div class="ttdoc">Returns a textual representation of a thread.</div><div class="ttdef"><b>Definition:</b> thread.hpp:324</div></div>
-<div class="ttc" id="agroup__thread_html_ga7fba1e8c28384518ae94d5f1f998efae"><div class="ttname"><a href="group__thread.html#ga7fba1e8c28384518ae94d5f1f998efae">cen::thread_priority</a></div><div class="ttdeci">thread_priority</div><div class="ttdoc">Represents different thread priorities.</div><div class="ttdef"><b>Definition:</b> thread.hpp:33</div></div>
+<div class="ttc" id="aclasscen_1_1thread_html_a06e850932f6eff7618e803c1ab592077"><div class="ttname"><a href="classcen_1_1thread.html#a06e850932f6eff7618e803c1ab592077">cen::thread::~thread</a></div><div class="ttdeci">~thread() noexcept</div><div class="ttdoc">If the thread is joinable, then the thread is joined.</div><div class="ttdef"><b>Definition:</b> thread.hpp:114</div></div>
+<div class="ttc" id="aclasscen_1_1thread_html"><div class="ttname"><a href="classcen_1_1thread.html">cen::thread</a></div><div class="ttdoc">Represents a single thread of execution.</div><div class="ttdef"><b>Definition:</b> thread.hpp:58</div></div>
+<div class="ttc" id="aclasscen_1_1thread_html_af6b146b594b6dd903c261952ead5f3b2"><div class="ttname"><a href="classcen_1_1thread.html#af6b146b594b6dd903c261952ead5f3b2">cen::thread::get_id</a></div><div class="ttdeci">auto get_id() const noexcept -&gt; id</div><div class="ttdoc">Returns the identifier associated with the thread.</div><div class="ttdef"><b>Definition:</b> thread.hpp:257</div></div>
+<div class="ttc" id="aclasscen_1_1thread_html_af9f31a05a50805c3a39e60a0d3462784"><div class="ttname"><a href="classcen_1_1thread.html#af9f31a05a50805c3a39e60a0d3462784">cen::thread::set_priority</a></div><div class="ttdeci">static auto set_priority(const thread_priority priority) noexcept -&gt; result</div><div class="ttdoc">Sets the priority of the current thread.</div><div class="ttdef"><b>Definition:</b> thread.hpp:150</div></div>
+<div class="ttc" id="anamespacecen_html"><div class="ttname"><a href="namespacecen.html">cen</a></div><div class="ttdoc">The top-level namespace that all components of the library reside in.</div><div class="ttdef"><b>Definition:</b> channels.hpp:14</div></div>
+<div class="ttc" id="aclasscen_1_1thread_html_a8544da2a795262ee4cdd989583ac7123"><div class="ttname"><a href="classcen_1_1thread.html#a8544da2a795262ee4cdd989583ac7123">cen::thread::task_type</a></div><div class="ttdeci">SDL_ThreadFunction task_type</div><div class="ttdoc">The signature of the function object that will be executed.</div><div class="ttdef"><b>Definition:</b> thread.hpp:68</div></div>
+<div class="ttc" id="agroup__thread_html_ga6468d958bfe91e1cb693fed9adf43536"><div class="ttname"><a href="group__thread.html#ga6468d958bfe91e1cb693fed9adf43536">cen::to_string</a></div><div class="ttdeci">auto to_string(const thread &amp;thread) -&gt; std::string</div><div class="ttdoc">Returns a textual representation of a thread.</div><div class="ttdef"><b>Definition:</b> thread.hpp:323</div></div>
+<div class="ttc" id="agroup__thread_html_ga7fba1e8c28384518ae94d5f1f998efae"><div class="ttname"><a href="group__thread.html#ga7fba1e8c28384518ae94d5f1f998efae">cen::thread_priority</a></div><div class="ttdeci">thread_priority</div><div class="ttdoc">Represents different thread priorities.</div><div class="ttdef"><b>Definition:</b> thread.hpp:32</div></div>
 <div class="ttc" id="agroup__thread_html_gga7fba1e8c28384518ae94d5f1f998efaea8d966b2253a917086c8604959e152243"><div class="ttname"><a href="group__thread.html#gga7fba1e8c28384518ae94d5f1f998efaea8d966b2253a917086c8604959e152243">cen::thread_priority::high</a></div><div class="ttdeci">@ high</div><div class="ttdoc">For high-priority processing.</div></div>
-<div class="ttc" id="aclasscen_1_1thread_html_af15deae32d5a9c245a738f8b4e401dfa"><div class="ttname"><a href="classcen_1_1thread.html#af15deae32d5a9c245a738f8b4e401dfa">cen::thread::current_id</a></div><div class="ttdeci">static auto current_id() noexcept -&gt; id</div><div class="ttdoc">Returns the identifier associated with the current thread.</div><div class="ttdef"><b>Definition:</b> thread.hpp:270</div></div>
-<div class="ttc" id="aclasscen_1_1thread_html_a881fc4e737932c3111ce870951906d78"><div class="ttname"><a href="classcen_1_1thread.html#a881fc4e737932c3111ce870951906d78">cen::thread::was_joined</a></div><div class="ttdeci">auto was_joined() const noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the thread was joined.</div><div class="ttdef"><b>Definition:</b> thread.hpp:234</div></div>
-<div class="ttc" id="aclasscen_1_1thread_html_ae51158fe06ad0648b363cb7f4eeeecad"><div class="ttname"><a href="classcen_1_1thread.html#ae51158fe06ad0648b363cb7f4eeeecad">cen::thread::thread</a></div><div class="ttdeci">thread(task_type task, not_null&lt; czstring &gt; name=&quot;thread&quot;, void *data=nullptr)</div><div class="ttdoc">Creates a thread and starts executing it.</div><div class="ttdef"><b>Definition:</b> thread.hpp:95</div></div>
-<div class="ttc" id="aclasscen_1_1thread_html_ada9f6ae45b09039d545c0af3c9712272"><div class="ttname"><a href="classcen_1_1thread.html#ada9f6ae45b09039d545c0af3c9712272">cen::thread::name</a></div><div class="ttdeci">auto name() const -&gt; std::string</div><div class="ttdoc">Returns the name of the thread.</div><div class="ttdef"><b>Definition:</b> thread.hpp:284</div></div>
+<div class="ttc" id="aclasscen_1_1thread_html_af15deae32d5a9c245a738f8b4e401dfa"><div class="ttname"><a href="classcen_1_1thread.html#af15deae32d5a9c245a738f8b4e401dfa">cen::thread::current_id</a></div><div class="ttdeci">static auto current_id() noexcept -&gt; id</div><div class="ttdoc">Returns the identifier associated with the current thread.</div><div class="ttdef"><b>Definition:</b> thread.hpp:269</div></div>
+<div class="ttc" id="aclasscen_1_1thread_html_a881fc4e737932c3111ce870951906d78"><div class="ttname"><a href="classcen_1_1thread.html#a881fc4e737932c3111ce870951906d78">cen::thread::was_joined</a></div><div class="ttdeci">auto was_joined() const noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the thread was joined.</div><div class="ttdef"><b>Definition:</b> thread.hpp:233</div></div>
+<div class="ttc" id="aclasscen_1_1thread_html_ae51158fe06ad0648b363cb7f4eeeecad"><div class="ttname"><a href="classcen_1_1thread.html#ae51158fe06ad0648b363cb7f4eeeecad">cen::thread::thread</a></div><div class="ttdeci">thread(task_type task, not_null&lt; czstring &gt; name=&quot;thread&quot;, void *data=nullptr)</div><div class="ttdoc">Creates a thread and starts executing it.</div><div class="ttdef"><b>Definition:</b> thread.hpp:94</div></div>
+<div class="ttc" id="aclasscen_1_1thread_html_ada9f6ae45b09039d545c0af3c9712272"><div class="ttname"><a href="classcen_1_1thread.html#ada9f6ae45b09039d545c0af3c9712272">cen::thread::name</a></div><div class="ttdeci">auto name() const -&gt; std::string</div><div class="ttdoc">Returns the name of the thread.</div><div class="ttdef"><b>Definition:</b> thread.hpp:283</div></div>
 <div class="ttc" id="agroup__core_html_gga5a2bed2933e3748ad2a77961417a102bae44e4612f62d2fb8f8738bab118a9850"><div class="ttname"><a href="group__core.html#gga5a2bed2933e3748ad2a77961417a102bae44e4612f62d2fb8f8738bab118a9850">cen::log_category::assert</a></div><div class="ttdeci">@ assert</div></div>
 <div class="ttc" id="agroup__core_html_gaeabb8896b493294e6781651b0abfbef5"><div class="ttname"><a href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">cen::milliseconds</a></div><div class="ttdeci">std::chrono::duration&lt; T, std::milli &gt; milliseconds</div><div class="ttdoc">Templated alias for durations in milliseconds.</div><div class="ttdef"><b>Definition:</b> time.hpp:31</div></div>
-<div class="ttc" id="aclasscen_1_1thread_html_a14e2e6aaf760dd9dc936811a9a9c4ce5"><div class="ttname"><a href="classcen_1_1thread.html#a14e2e6aaf760dd9dc936811a9a9c4ce5">cen::thread::was_detached</a></div><div class="ttdeci">auto was_detached() const noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the thread was detached.</div><div class="ttdef"><b>Definition:</b> thread.hpp:246</div></div>
-<div class="ttc" id="aclasscen_1_1thread_html_a45feb8da5b3357347f8bb954ac194e6c"><div class="ttname"><a href="classcen_1_1thread.html#a45feb8da5b3357347f8bb954ac194e6c">cen::thread::sleep</a></div><div class="ttdeci">static void sleep(const milliseconds&lt; u32 &gt; ms) noexcept(noexcept(ms.count()))</div><div class="ttdoc">Forces the current thread to halt for at least the specified duration.</div><div class="ttdef"><b>Definition:</b> thread.hpp:135</div></div>
-<div class="ttc" id="aclasscen_1_1thread_html_abdf73f90c6a2a4f3fd03d6e04ddd23d1"><div class="ttname"><a href="classcen_1_1thread.html#abdf73f90c6a2a4f3fd03d6e04ddd23d1">cen::thread::join</a></div><div class="ttdeci">auto join() noexcept -&gt; int</div><div class="ttdoc">Waits for the thread to finish its execution.</div><div class="ttdef"><b>Definition:</b> thread.hpp:190</div></div>
+<div class="ttc" id="aclasscen_1_1thread_html_a14e2e6aaf760dd9dc936811a9a9c4ce5"><div class="ttname"><a href="classcen_1_1thread.html#a14e2e6aaf760dd9dc936811a9a9c4ce5">cen::thread::was_detached</a></div><div class="ttdeci">auto was_detached() const noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the thread was detached.</div><div class="ttdef"><b>Definition:</b> thread.hpp:245</div></div>
+<div class="ttc" id="aclasscen_1_1thread_html_a45feb8da5b3357347f8bb954ac194e6c"><div class="ttname"><a href="classcen_1_1thread.html#a45feb8da5b3357347f8bb954ac194e6c">cen::thread::sleep</a></div><div class="ttdeci">static void sleep(const milliseconds&lt; u32 &gt; ms) noexcept(noexcept(ms.count()))</div><div class="ttdoc">Forces the current thread to halt for at least the specified duration.</div><div class="ttdef"><b>Definition:</b> thread.hpp:134</div></div>
+<div class="ttc" id="aclasscen_1_1thread_html_abdf73f90c6a2a4f3fd03d6e04ddd23d1"><div class="ttname"><a href="classcen_1_1thread.html#abdf73f90c6a2a4f3fd03d6e04ddd23d1">cen::thread::join</a></div><div class="ttdeci">auto join() noexcept -&gt; int</div><div class="ttdoc">Waits for the thread to finish its execution.</div><div class="ttdef"><b>Definition:</b> thread.hpp:189</div></div>
 <div class="ttc" id="agroup__input_html_gga4b83e0b5ab5f145bc58be14c2fe96593a9acb44549b41563697bb490144ec6258"><div class="ttname"><a href="group__input.html#gga4b83e0b5ab5f145bc58be14c2fe96593a9acb44549b41563697bb490144ec6258">cen::haptic_feature::status</a></div><div class="ttdeci">@ status</div></div>
-<div class="ttc" id="aclasscen_1_1sdl__error_html"><div class="ttname"><a href="classcen_1_1sdl__error.html">cen::sdl_error</a></div><div class="ttdoc">Represents an error related to the core SDL2 library.</div><div class="ttdef"><b>Definition:</b> exception.hpp:54</div></div>
+<div class="ttc" id="aclasscen_1_1sdl__error_html"><div class="ttname"><a href="classcen_1_1sdl__error.html">cen::sdl_error</a></div><div class="ttdoc">Represents an error related to the core SDL2 library.</div><div class="ttdef"><b>Definition:</b> exception.hpp:63</div></div>
 <div class="ttc" id="agroup__thread_html_gga7fba1e8c28384518ae94d5f1f998efaeafea087517c26fadd409bd4b9dc642555"><div class="ttname"><a href="group__thread.html#gga7fba1e8c28384518ae94d5f1f998efaeafea087517c26fadd409bd4b9dc642555">cen::thread_priority::normal</a></div><div class="ttdeci">@ normal</div></div>
-<div class="ttc" id="agroup__audio_html_ga322c699fa08098bd801164819d2f4cc8"><div class="ttname"><a href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">cen::operator!=</a></div><div class="ttdeci">constexpr auto operator!=(const fade_status lhs, const Mix_Fading rhs) noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the fading status values represent aren't the same.</div><div class="ttdef"><b>Definition:</b> music.hpp:659</div></div>
-<div class="ttc" id="agroup__audio_html_ga45aa3eac6ffe05fce3966b0e75948d79"><div class="ttname"><a href="group__audio.html#ga45aa3eac6ffe05fce3966b0e75948d79">cen::to_string</a></div><div class="ttdeci">auto to_string(const music &amp;music) -&gt; std::string</div><div class="ttdoc">Returns a textual representation of a music instance.</div><div class="ttdef"><b>Definition:</b> music.hpp:602</div></div>
-<div class="ttc" id="agroup__audio_html_gaf72595df3886dbb34dbcf030d14333d2"><div class="ttname"><a href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">cen::operator==</a></div><div class="ttdeci">constexpr auto operator==(const fade_status lhs, const Mix_Fading rhs) noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the fading status values represent are the same.</div><div class="ttdef"><b>Definition:</b> music.hpp:636</div></div>
-<div class="ttc" id="aclasscen_1_1thread_html_a97cea165187f9a32b6be77c574655aa2"><div class="ttname"><a href="classcen_1_1thread.html#a97cea165187f9a32b6be77c574655aa2">cen::thread::get</a></div><div class="ttdeci">auto get() noexcept -&gt; SDL_Thread *</div><div class="ttdoc">Returns a pointer to the associated SDL thread.</div><div class="ttdef"><b>Definition:</b> thread.hpp:296</div></div>
+<div class="ttc" id="agroup__audio_html_ga322c699fa08098bd801164819d2f4cc8"><div class="ttname"><a href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">cen::operator!=</a></div><div class="ttdeci">constexpr auto operator!=(const fade_status lhs, const Mix_Fading rhs) noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the fading status values represent aren't the same.</div><div class="ttdef"><b>Definition:</b> music.hpp:660</div></div>
+<div class="ttc" id="agroup__audio_html_ga45aa3eac6ffe05fce3966b0e75948d79"><div class="ttname"><a href="group__audio.html#ga45aa3eac6ffe05fce3966b0e75948d79">cen::to_string</a></div><div class="ttdeci">auto to_string(const music &amp;music) -&gt; std::string</div><div class="ttdoc">Returns a textual representation of a music instance.</div><div class="ttdef"><b>Definition:</b> music.hpp:603</div></div>
+<div class="ttc" id="agroup__audio_html_gaf72595df3886dbb34dbcf030d14333d2"><div class="ttname"><a href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">cen::operator==</a></div><div class="ttdeci">constexpr auto operator==(const fade_status lhs, const Mix_Fading rhs) noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the fading status values represent are the same.</div><div class="ttdef"><b>Definition:</b> music.hpp:637</div></div>
+<div class="ttc" id="aclasscen_1_1thread_html_a97cea165187f9a32b6be77c574655aa2"><div class="ttname"><a href="classcen_1_1thread.html#a97cea165187f9a32b6be77c574655aa2">cen::thread::get</a></div><div class="ttdeci">auto get() noexcept -&gt; SDL_Thread *</div><div class="ttdoc">Returns a pointer to the associated SDL thread.</div><div class="ttdef"><b>Definition:</b> thread.hpp:295</div></div>
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
 </div>
