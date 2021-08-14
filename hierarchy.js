@@ -1,24 +1,24 @@
 var hierarchy =
 [
     [ "cen::ball_axis_change", "structcen_1_1ball__axis__change.html", null ],
-    [ "cen::basic_area", "structcen_1_1basic__area.html", null ],
-    [ "cen::gl::basic_context", "classcen_1_1gl_1_1basic__context.html", null ],
-    [ "cen::basic_controller", "classcen_1_1basic__controller.html", null ],
-    [ "cen::basic_cursor", "classcen_1_1basic__cursor.html", null ],
-    [ "cen::basic_haptic", "classcen_1_1basic__haptic.html", null ],
-    [ "cen::basic_joystick", "classcen_1_1basic__joystick.html", null ],
-    [ "cen::basic_pixel_format_info", "classcen_1_1basic__pixel__format__info.html", null ],
-    [ "cen::basic_point", "classcen_1_1basic__point.html", null ],
-    [ "cen::basic_rect", "classcen_1_1basic__rect.html", null ],
+    [ "cen::basic_area< T >", "structcen_1_1basic__area.html", null ],
+    [ "cen::gl::basic_context< T >", "classcen_1_1gl_1_1basic__context.html", null ],
+    [ "cen::basic_controller< T >", "classcen_1_1basic__controller.html", null ],
+    [ "cen::basic_cursor< T >", "classcen_1_1basic__cursor.html", null ],
+    [ "cen::basic_haptic< T >", "classcen_1_1basic__haptic.html", null ],
+    [ "cen::basic_joystick< T >", "classcen_1_1basic__joystick.html", null ],
+    [ "cen::basic_pixel_format_info< B >", "classcen_1_1basic__pixel__format__info.html", null ],
+    [ "cen::basic_point< T >", "classcen_1_1basic__point.html", null ],
+    [ "cen::basic_rect< T >", "classcen_1_1basic__rect.html", null ],
     [ "cen::basic_rect< float >", "classcen_1_1basic__rect.html", null ],
-    [ "cen::basic_renderer", "classcen_1_1basic__renderer.html", null ],
-    [ "cen::basic_sensor", "classcen_1_1basic__sensor.html", null ],
-    [ "cen::basic_sound_effect", "classcen_1_1basic__sound__effect.html", null ],
-    [ "cen::basic_surface", "classcen_1_1basic__surface.html", null ],
-    [ "cen::basic_texture", "classcen_1_1basic__texture.html", null ],
+    [ "cen::basic_renderer< T >", "classcen_1_1basic__renderer.html", null ],
+    [ "cen::basic_sensor< T >", "classcen_1_1basic__sensor.html", null ],
+    [ "cen::basic_sound_effect< T >", "classcen_1_1basic__sound__effect.html", null ],
+    [ "cen::basic_surface< T >", "classcen_1_1basic__surface.html", null ],
+    [ "cen::basic_texture< T >", "classcen_1_1basic__texture.html", null ],
     [ "cen::basic_texture< detail::owning_type >", "classcen_1_1basic__texture.html", null ],
-    [ "cen::basic_window", "classcen_1_1basic__window.html", null ],
-    [ "bool_hint", null, [
+    [ "cen::basic_window< T >", "classcen_1_1basic__window.html", null ],
+    [ "detail::bool_hint", null, [
       [ "cen::hint::accelerometer_as_joystick", "structcen_1_1hint_1_1accelerometer__as__joystick.html", null ],
       [ "cen::hint::allow_screensaver", "structcen_1_1hint_1_1allow__screensaver.html", null ],
       [ "cen::hint::allow_top_most", "structcen_1_1hint_1_1allow__top__most.html", null ],
@@ -189,7 +189,7 @@ var hierarchy =
     [ "cen::event", "classcen_1_1event.html", null ],
     [ "cen::event_dispatcher< E >", "classcen_1_1event__dispatcher.html", null ],
     [ "cen::event_sink< E >", "classcen_1_1event__sink.html", null ],
-    [ "exception", null, [
+    [ "std::exception", null, [
       [ "cen::cen_error", "classcen_1_1cen__error.html", [
         [ "cen::img_error", "classcen_1_1img__error.html", null ],
         [ "cen::mix_error", "classcen_1_1mix__error.html", null ],
@@ -199,7 +199,7 @@ var hierarchy =
     ] ],
     [ "cen::file", "classcen_1_1file.html", null ],
     [ "cen::touch::finger_state", "structcen_1_1touch_1_1finger__state.html", null ],
-    [ "float_hint", null, [
+    [ "detail::float_hint", null, [
       [ "cen::hint::mouse::normal_speed_scale", "structcen_1_1hint_1_1mouse_1_1normal__speed__scale.html", null ],
       [ "cen::hint::mouse::relative_speed_scale", "structcen_1_1hint_1_1mouse_1_1relative__speed__scale.html", null ]
     ] ],
@@ -229,7 +229,7 @@ var hierarchy =
       [ "cen::haptic_ramp", "classcen_1_1haptic__ramp.html", null ]
     ] ],
     [ "cen::hint_callback< Hint, UserData >", "classcen_1_1hint__callback.html", null ],
-    [ "int_hint", null, [
+    [ "detail::int_hint", null, [
       [ "cen::hint::android::apk_expansion_main_file_version", "structcen_1_1hint_1_1android_1_1apk__expansion__main__file__version.html", null ],
       [ "cen::hint::android::apk_expansion_patch_file_version", "structcen_1_1hint_1_1android_1_1apk__expansion__patch__file__version.html", null ],
       [ "cen::hint::event_logging", "structcen_1_1hint_1_1event__logging.html", null ],
@@ -247,9 +247,7 @@ var hierarchy =
     [ "cen::mutex", "classcen_1_1mutex.html", null ],
     [ "cen::palette", "classcen_1_1palette.html", null ],
     [ "cen::point_traits< T, >", "classcen_1_1point__traits.html", null ],
-    [ "cen::point_traits< T >", "classcen_1_1point__traits.html", null ],
     [ "cen::rect_traits< T, >", "classcen_1_1rect__traits.html", null ],
-    [ "cen::rect_traits< T >", "classcen_1_1rect__traits.html", null ],
     [ "cen::renderer_info", "classcen_1_1renderer__info.html", null ],
     [ "cen::result", "classcen_1_1result.html", null ],
     [ "cen::scan_code", "classcen_1_1scan__code.html", null ],
@@ -258,7 +256,7 @@ var hierarchy =
     [ "cen::semaphore", "classcen_1_1semaphore.html", null ],
     [ "cen::shared_object", "classcen_1_1shared__object.html", null ],
     [ "cen::simd_block", "classcen_1_1simd__block.html", null ],
-    [ "string_hint", null, [
+    [ "detail::string_hint", null, [
       [ "cen::hint::audio_device_app_name", "structcen_1_1hint_1_1audio__device__app__name.html", null ],
       [ "cen::hint::audio_device_stream_name", "structcen_1_1hint_1_1audio__device__stream__name.html", null ],
       [ "cen::hint::audio_device_stream_role", "structcen_1_1hint_1_1audio__device__stream__role.html", null ],
@@ -282,7 +280,7 @@ var hierarchy =
     ] ],
     [ "cen::thread", "classcen_1_1thread.html", null ],
     [ "cen::try_lock", "classcen_1_1try__lock.html", null ],
-    [ "uint_hint", null, [
+    [ "detail::uint_hint", null, [
       [ "cen::hint::thread_stack_size", "structcen_1_1hint_1_1thread__stack__size.html", null ],
       [ "cen::hint::timer_resolution", "structcen_1_1hint_1_1timer__resolution.html", null ]
     ] ],

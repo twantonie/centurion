@@ -1,8 +1,5 @@
 var group__system =
 [
-    [ "battery", "namespacecen_1_1battery.html", null ],
-    [ "clipboard", "namespacecen_1_1clipboard.html", null ],
-    [ "ram", "namespacecen_1_1ram.html", null ],
     [ "simd_block", "classcen_1_1simd__block.html", [
       [ "simd_block", "classcen_1_1simd__block.html#ae530e86e53569975096fea94f11c5810", null ],
       [ "cast_data", "classcen_1_1simd__block.html#a88294e0ba5e4b99a5f6a7d53b1397074", null ],

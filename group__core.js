@@ -1,7 +1,5 @@
 var group__core =
 [
-    [ "literals", "namespacecen_1_1literals.html", null ],
-    [ "log", "namespacecen_1_1log.html", null ],
     [ "cen_error", "classcen_1_1cen__error.html", [
       [ "cen_error", "classcen_1_1cen__error.html#a35a9d603c36ef4029a7ee12564f89e4d", null ],
       [ "cen_error", "classcen_1_1cen__error.html#a765106f17167eee7fee4591910ec90f4", null ],

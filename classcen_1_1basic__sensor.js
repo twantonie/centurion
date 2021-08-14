@@ -1,13 +1,13 @@
 var classcen_1_1basic__sensor =
 [
-    [ "basic_sensor", "classcen_1_1basic__sensor.html#a76d07fd7886f33f9f009184f298c03ea", null ],
-    [ "basic_sensor", "classcen_1_1basic__sensor.html#a42aa11952c2fb7ca9496abba49184ceb", null ],
-    [ "basic_sensor", "classcen_1_1basic__sensor.html#a11cf583bf55c1cad1df2a6f6261bf196", null ],
-    [ "data", "classcen_1_1basic__sensor.html#a874787c0d4dab5ef42d26a1222fbfba1", null ],
-    [ "get", "classcen_1_1basic__sensor.html#abcb3a64239c83c84cecfc0c901173b05", null ],
-    [ "id", "classcen_1_1basic__sensor.html#adfee3e541176ef8c9939c55828b4486d", null ],
-    [ "name", "classcen_1_1basic__sensor.html#a0f5a18d6719f955413e1780966b2d668", null ],
-    [ "non_portable_type", "classcen_1_1basic__sensor.html#a59237bb4d92d6ecaae52bac6763157c7", null ],
-    [ "operator bool", "classcen_1_1basic__sensor.html#a1b9ddaa4691b75fb4021bea24714cd8a", null ],
-    [ "type", "classcen_1_1basic__sensor.html#a8e6dcabe3f243dc6f85f9c947c8b21fa", null ]
+    [ "basic_sensor", "classcen_1_1basic__sensor.html#a153f126822bb0584f3f9c8c408d43d06", null ],
+    [ "basic_sensor", "classcen_1_1basic__sensor.html#a87d0009c3f80789d7e6a9b8a383e8660", null ],
+    [ "basic_sensor", "classcen_1_1basic__sensor.html#a0bb3e35e29c404fbdf7622c2e35320c8", null ],
+    [ "data", "classcen_1_1basic__sensor.html#ab571dfa65e117774cffd8902a61ee310", null ],
+    [ "get", "classcen_1_1basic__sensor.html#a591634f59da8a5c5c2942897443e924e", null ],
+    [ "id", "classcen_1_1basic__sensor.html#a5984bca2e8706532bec1ce5cfee22445", null ],
+    [ "name", "classcen_1_1basic__sensor.html#ab7f3bad56c29048343da88fcf721a96c", null ],
+    [ "non_portable_type", "classcen_1_1basic__sensor.html#a836d515a35f0b3299e79a0d264b774cb", null ],
+    [ "operator bool", "classcen_1_1basic__sensor.html#a075358eda58ea5aebe6282ec004e6b14", null ],
+    [ "type", "classcen_1_1basic__sensor.html#a4a8c668c12b3a6be5969f222628aa3a3", null ]
 ];
