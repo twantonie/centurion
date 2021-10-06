@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -330,8 +330,8 @@ Static Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a84661ea10a937d385c5775b60dfdd3f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84661ea10a937d385c5775b60dfdd3f7">&#9670;&nbsp;</a></span>decoder_count()</h2>
+<a id="ad2c0938fa7fe0dc37a6f2e12b108f534"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2c0938fa7fe0dc37a6f2e12b108f534">&#9670;&nbsp;</a></span>play()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -340,10 +340,137 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static auto cen::music::decoder_count </td>
+          <td class="memname">auto cen::music::play </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLoops</em> = <code>0</code></td><td>)</td>
+          <td> -&gt; std::optional&lt;int&gt;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Plays the music associated with this instance. </p>
+<p>Any previously playing music will be halted. However, this function will wait for music that was fading out to complete.</p>
+<dl class="section note"><dt>Note</dt><dd>The term loops is a little bit confusing here, even in the SDL_mixer documentation. A negative value indicates that the music should be played forever. Furthermore, the values 0 and 1 both results in the music being played <em>one time</em>. Except for these "special" values, the function behaves as expected.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nLoops</td><td>the number of times to loop the music, <code><a class="el" href="classcen_1_1music.html#ace74ba51739dd576ddf41e7dcc4df289" title="A constant that indicates that the music should be looped indefinitely.">music::forever</a></code> can be supplied to loop the music indefinitely.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the channel used to play the music; <code>std::nullopt</code> on failure.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1music.html#ace74ba51739dd576ddf41e7dcc4df289" title="A constant that indicates that the music should be looped indefinitely.">music::forever</a></code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a99f715a8b4d652b1b86ae7412b3a6fa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99f715a8b4d652b1b86ae7412b3a6fa1">&#9670;&nbsp;</a></span>resume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void cen::music::resume </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> -&gt; int
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resumes playing the music. </p>
+<p>This function can safely be invoked with halted, paused and even currently playing music.</p>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="acef165f3e3de3e5ca9c9a4fce5f914c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acef165f3e3de3e5ca9c9a4fce5f914c4">&#9670;&nbsp;</a></span>pause()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void cen::music::pause </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pauses any currently playing music. </p>
+<dl class="section note"><dt>Note</dt><dd>This function only affects music that is currently playing, which doesn't include music that is being faded in/out.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a48cee0f510ad73ed3729c40c9018a735"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48cee0f510ad73ed3729c40c9018a735">&#9670;&nbsp;</a></span>halt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void cen::music::halt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stops ALL currently playing and fading music. </p>
+<p>Unlike <code><a class="el" href="classcen_1_1music.html#acef165f3e3de3e5ca9c9a4fce5f914c4" title="Pauses any currently playing music.">pause()</a></code>, this function affects all kinds of music.</p>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a9761959aac07bc7773fcb1353c04ebe2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9761959aac07bc7773fcb1353c04ebe2">&#9670;&nbsp;</a></span>is_playing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto cen::music::is_playing </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
   </td>
         </tr>
       </table>
@@ -354,10 +481,39 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the number of available music decoders. </p>
-<dl class="section return"><dt>Returns</dt><dd>the number of available music decoders.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><code>Mix_GetNumMusicDecoders</code></dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+<p>Indicates whether or not any music is currently playing. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if music is currently being played; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a2f2dd8c92d8234a5a707fb23fc8fd147"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f2dd8c92d8234a5a707fb23fc8fd147">&#9670;&nbsp;</a></span>is_paused()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto cen::music::is_paused </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not any music is paused. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the music is paused; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 
 </div>
 </div>
@@ -452,8 +608,8 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a7eca71c9eb339ab4802f802e76a4cb86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7eca71c9eb339ab4802f802e76a4cb86">&#9670;&nbsp;</a></span>get()</h2>
+<a id="ab92449c0073bcae823b133d87686a8e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab92449c0073bcae823b133d87686a8e4">&#9670;&nbsp;</a></span>is_fading()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -462,42 +618,10 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::music::get </td>
+          <td class="memname">static auto cen::music::is_fading </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; Mix_Music*
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a pointer to the associated <code>Mix_Music</code> instance. </p>
-<dl class="section warning"><dt>Warning</dt><dd>Don't take ownership of the returned pointer!</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the associated <code>Mix_Music</code>.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="aa820176188a69c2590d3c03118764e94"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa820176188a69c2590d3c03118764e94">&#9670;&nbsp;</a></span>get_decoder()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto cen::music::get_decoder </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>index</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a>
+          <td> -&gt; bool
   </td>
         </tr>
       </table>
@@ -508,16 +632,9 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the name of the decoder associated with the specified index. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">index</td><td>the index of the desired decoder.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the name of the decoder associated with the specified index; a null string is returned if the index is invalid.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><code>Mix_GetMusicDecoder</code></dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+<p>Indicates whether or not any music is currently being faded in or out. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if music is currently being faded in or out; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 
 </div>
 </div>
@@ -551,407 +668,6 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a77923e09a126749ff314bc0e2a069c70"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77923e09a126749ff314bc0e2a069c70">&#9670;&nbsp;</a></span>get_hook_data()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto cen::music::get_hook_data </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; void*
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a pointer to the user data associated with the music player. </p>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the music player data, might be null.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a48cee0f510ad73ed3729c40c9018a735"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48cee0f510ad73ed3729c40c9018a735">&#9670;&nbsp;</a></span>halt()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void cen::music::halt </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Stops ALL currently playing and fading music. </p>
-<p>Unlike <code><a class="el" href="classcen_1_1music.html#acef165f3e3de3e5ca9c9a4fce5f914c4" title="Pauses any currently playing music.">pause()</a></code>, this function affects all kinds of music.</p>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a1d45ab1f997bacc920cc5c5503f9e9a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d45ab1f997bacc920cc5c5503f9e9a9">&#9670;&nbsp;</a></span>has_decoder()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto cen::music::has_decoder </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a>&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
-          <td> -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the system has the specified music decoder. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">name</td><td>the name of the decoder to check.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the system has the specified decoder; <code>false</code> otherwise.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><code>Mix_HasMusicDecoder</code></dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ab92449c0073bcae823b133d87686a8e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab92449c0073bcae823b133d87686a8e4">&#9670;&nbsp;</a></span>is_fading()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto cen::music::is_fading </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not any music is currently being faded in or out. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if music is currently being faded in or out; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a2f2dd8c92d8234a5a707fb23fc8fd147"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f2dd8c92d8234a5a707fb23fc8fd147">&#9670;&nbsp;</a></span>is_paused()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto cen::music::is_paused </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not any music is paused. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the music is paused; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a9761959aac07bc7773fcb1353c04ebe2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9761959aac07bc7773fcb1353c04ebe2">&#9670;&nbsp;</a></span>is_playing()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto cen::music::is_playing </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not any music is currently playing. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if music is currently being played; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a4496afadf44bcef4dbb9ba894e8656e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4496afadf44bcef4dbb9ba894e8656e5">&#9670;&nbsp;</a></span>max_volume()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr static auto cen::music::max_volume </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; int
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the maximum possible volume. </p>
-<dl class="section return"><dt>Returns</dt><dd>the maximum possible volume value, equal to <code>MIX_MAX_VOLUME</code>.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a4ee8c5ae9e608d932dad639fc71df148"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ee8c5ae9e608d932dad639fc71df148">&#9670;&nbsp;</a></span>operator const Mix_Music *()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">cen::music::operator const Mix_Music * </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Converts to <code>const Mix_Music*</code>. </p>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the associated <code>Mix_Music</code> instance.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a004ddaaa1b4b27900750bb0e3286e07a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a004ddaaa1b4b27900750bb0e3286e07a">&#9670;&nbsp;</a></span>operator Mix_Music *()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">cen::music::operator Mix_Music * </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Converts to <code>Mix_Music*</code>. </p>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the associated <code>Mix_Music</code> instance.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="acef165f3e3de3e5ca9c9a4fce5f914c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acef165f3e3de3e5ca9c9a4fce5f914c4">&#9670;&nbsp;</a></span>pause()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void cen::music::pause </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Pauses any currently playing music. </p>
-<dl class="section note"><dt>Note</dt><dd>This function only affects music that is currently playing, which doesn't include music that is being faded in/out.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ad2c0938fa7fe0dc37a6f2e12b108f534"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2c0938fa7fe0dc37a6f2e12b108f534">&#9670;&nbsp;</a></span>play()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::music::play </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>nLoops</em> = <code>0</code></td><td>)</td>
-          <td> -&gt; std::optional&lt;int&gt;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Plays the music associated with this instance. </p>
-<p>Any previously playing music will be halted. However, this function will wait for music that was fading out to complete.</p>
-<dl class="section note"><dt>Note</dt><dd>The term loops is a little bit confusing here, even in the SDL_mixer documentation. A negative value indicates that the music should be played forever. Furthermore, the values 0 and 1 both results in the music being played <em>one time</em>. Except for these "special" values, the function behaves as expected.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">nLoops</td><td>the number of times to loop the music, <code><a class="el" href="classcen_1_1music.html#ace74ba51739dd576ddf41e7dcc4df289" title="A constant that indicates that the music should be looped indefinitely.">music::forever</a></code> can be supplied to loop the music indefinitely.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the channel used to play the music; <code>std::nullopt</code> on failure.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1music.html#ace74ba51739dd576ddf41e7dcc4df289" title="A constant that indicates that the music should be looped indefinitely.">music::forever</a></code></dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a7a14cbfe9d2129b6e7c995362cb2d66f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a14cbfe9d2129b6e7c995362cb2d66f">&#9670;&nbsp;</a></span>reset_hook()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void cen::music::reset_hook </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Resets the music player to the default one. </p>
-<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a99f715a8b4d652b1b86ae7412b3a6fa1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99f715a8b4d652b1b86ae7412b3a6fa1">&#9670;&nbsp;</a></span>resume()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void cen::music::resume </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Resumes playing the music. </p>
-<p>This function can safely be invoked with halted, paused and even currently playing music.</p>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
 <a id="acb099879a02d447dec8b7ecec4e4ae29"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acb099879a02d447dec8b7ecec4e4ae29">&#9670;&nbsp;</a></span>rewind()</h2>
 
@@ -977,54 +693,6 @@ Static Public Attributes</h2></td></tr>
 
 <p>Rewinds the music stream to the initial position. </p>
 <dl class="section see"><dt>See also</dt><dd><code>Mix_RewindMusic</code></dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="aa3b1d494c461bc64b195f7ac650b43d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3b1d494c461bc64b195f7ac650b43d2">&#9670;&nbsp;</a></span>set_hook()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T  = void&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void cen::music::set_hook </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classcen_1_1music.html#a246be7360470291a862f7f25cf533ba1">music_hook_callback</a>&#160;</td>
-          <td class="paramname"><em>callback</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T *&#160;</td>
-          <td class="paramname"><em>data</em> = <code>nullptr</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Registers a custom music player or mixer function. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">callback</td><td>the custom callback, can be null to use the default music player. </td></tr>
-    <tr><td class="paramname">data</td><td>optional data that will be supplied to the callback.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
 
 </div>
@@ -1102,6 +770,125 @@ template&lt;typename T  = void&gt; </div>
 
 </div>
 </div>
+<a id="aab9c9410c23f248ea7a8b1135476d965"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab9c9410c23f248ea7a8b1135476d965">&#9670;&nbsp;</a></span>volume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto cen::music::volume </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; int
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the volume of the music. </p>
+<p>The default value is set to <code><a class="el" href="classcen_1_1music.html#a4496afadf44bcef4dbb9ba894e8656e5" title="Returns the maximum possible volume.">music::max_volume()</a></code>.</p>
+<dl class="section return"><dt>Returns</dt><dd>the volume of the music, in the range [0, <code><a class="el" href="classcen_1_1music.html#a4496afadf44bcef4dbb9ba894e8656e5" title="Returns the maximum possible volume.">music::max_volume()</a></code>].</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a4496afadf44bcef4dbb9ba894e8656e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4496afadf44bcef4dbb9ba894e8656e5">&#9670;&nbsp;</a></span>max_volume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr static auto cen::music::max_volume </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; int
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the maximum possible volume. </p>
+<dl class="section return"><dt>Returns</dt><dd>the maximum possible volume value, equal to <code>MIX_MAX_VOLUME</code>.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a004ddaaa1b4b27900750bb0e3286e07a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a004ddaaa1b4b27900750bb0e3286e07a">&#9670;&nbsp;</a></span>operator Mix_Music *()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cen::music::operator Mix_Music * </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts to <code>Mix_Music*</code>. </p>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the associated <code>Mix_Music</code> instance.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a4ee8c5ae9e608d932dad639fc71df148"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ee8c5ae9e608d932dad639fc71df148">&#9670;&nbsp;</a></span>operator const Mix_Music *()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cen::music::operator const Mix_Music * </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts to <code>const Mix_Music*</code>. </p>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the associated <code>Mix_Music</code> instance.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
 <a id="aedc950e2b10f9319702ffee4cb5661b3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aedc950e2b10f9319702ffee4cb5661b3">&#9670;&nbsp;</a></span>type()</h2>
 
@@ -1132,8 +919,8 @@ template&lt;typename T  = void&gt; </div>
 
 </div>
 </div>
-<a id="aab9c9410c23f248ea7a8b1135476d965"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab9c9410c23f248ea7a8b1135476d965">&#9670;&nbsp;</a></span>volume()</h2>
+<a id="a7eca71c9eb339ab4802f802e76a4cb86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7eca71c9eb339ab4802f802e76a4cb86">&#9670;&nbsp;</a></span>get()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1142,7 +929,220 @@ template&lt;typename T  = void&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static auto cen::music::volume </td>
+          <td class="memname">auto cen::music::get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; Mix_Music*
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the associated <code>Mix_Music</code> instance. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Don't take ownership of the returned pointer!</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the associated <code>Mix_Music</code>.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="aa3b1d494c461bc64b195f7ac650b43d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3b1d494c461bc64b195f7ac650b43d2">&#9670;&nbsp;</a></span>set_hook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T  = void&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void cen::music::set_hook </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcen_1_1music.html#a246be7360470291a862f7f25cf533ba1">music_hook_callback</a>&#160;</td>
+          <td class="paramname"><em>callback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>data</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Registers a custom music player or mixer function. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>the custom callback, can be null to use the default music player. </td></tr>
+    <tr><td class="paramname">data</td><td>optional data that will be supplied to the callback.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a7a14cbfe9d2129b6e7c995362cb2d66f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a14cbfe9d2129b6e7c995362cb2d66f">&#9670;&nbsp;</a></span>reset_hook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void cen::music::reset_hook </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resets the music player to the default one. </p>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a77923e09a126749ff314bc0e2a069c70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77923e09a126749ff314bc0e2a069c70">&#9670;&nbsp;</a></span>get_hook_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto cen::music::get_hook_data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; void*
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the user data associated with the music player. </p>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the music player data, might be null.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="aa820176188a69c2590d3c03118764e94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa820176188a69c2590d3c03118764e94">&#9670;&nbsp;</a></span>get_decoder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto cen::music::get_decoder </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the name of the decoder associated with the specified index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the index of the desired decoder.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the name of the decoder associated with the specified index; a null string is returned if the index is invalid.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code>Mix_GetMusicDecoder</code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a1d45ab1f997bacc920cc5c5503f9e9a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d45ab1f997bacc920cc5c5503f9e9a9">&#9670;&nbsp;</a></span>has_decoder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto cen::music::has_decoder </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a>&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the system has the specified music decoder. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>the name of the decoder to check.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the system has the specified decoder; <code>false</code> otherwise.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code>Mix_HasMusicDecoder</code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a84661ea10a937d385c5775b60dfdd3f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84661ea10a937d385c5775b60dfdd3f7">&#9670;&nbsp;</a></span>decoder_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto cen::music::decoder_count </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> -&gt; int
@@ -1156,10 +1156,10 @@ template&lt;typename T  = void&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the volume of the music. </p>
-<p>The default value is set to <code><a class="el" href="classcen_1_1music.html#a4496afadf44bcef4dbb9ba894e8656e5" title="Returns the maximum possible volume.">music::max_volume()</a></code>.</p>
-<dl class="section return"><dt>Returns</dt><dd>the volume of the music, in the range [0, <code><a class="el" href="classcen_1_1music.html#a4496afadf44bcef4dbb9ba894e8656e5" title="Returns the maximum possible volume.">music::max_volume()</a></code>].</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+<p>Returns the number of available music decoders. </p>
+<dl class="section return"><dt>Returns</dt><dd>the number of available music decoders.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code>Mix_GetNumMusicDecoders</code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
 
 </div>
 </div>

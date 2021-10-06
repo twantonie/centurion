@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -170,22 +170,55 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a88294e0ba5e4b99a5f6a7d53b1397074"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88294e0ba5e4b99a5f6a7d53b1397074">&#9670;&nbsp;</a></span>cast_data() <span class="overload">[1/2]</span></h2>
+<a id="a414e66c836363259d2aee78dddf45697"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a414e66c836363259d2aee78dddf45697">&#9670;&nbsp;</a></span>reallocate()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::simd_block::cast_data </td>
+          <td class="memname">void cen::simd_block::reallocate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga2313c92fc18c319ebe1853e2d0579886">usize</a>&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reallocates the associated memory block. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>the size of the new memory block.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a561b46ee1506680a09b7097fbf7906e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a561b46ee1506680a09b7097fbf7906e2">&#9670;&nbsp;</a></span>data() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::simd_block::data </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; const T*
+          <td> -&gt; void*
   </td>
         </tr>
       </table>
@@ -196,21 +229,44 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a reinterpreted pointer to the associated memory block. </p>
-<dl class="section warning"><dt>Warning</dt><dd>It's your responsibility to make sure to avoid any potential undefined behaviour using this function, since it uses <code>reinterpret_cast</code>.</dd></dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>the type used when reinterpreting the internal pointer.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the associated memory block.</dd></dl>
+<p>Returns a pointer to the associated memory block. </p>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the memory block.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a6d95243fcf1fcd5f03f21af4bca1f21a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d95243fcf1fcd5f03f21af4bca1f21a">&#9670;&nbsp;</a></span>data() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::simd_block::data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; const void*
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the associated memory block. </p>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the memory block.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
 
 </div>
 </div>
 <a id="ae9e0102a791a0e4b90d4984414b79fa8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9e0102a791a0e4b90d4984414b79fa8">&#9670;&nbsp;</a></span>cast_data() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9e0102a791a0e4b90d4984414b79fa8">&#9670;&nbsp;</a></span>cast_data() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -248,20 +304,22 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a6d95243fcf1fcd5f03f21af4bca1f21a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d95243fcf1fcd5f03f21af4bca1f21a">&#9670;&nbsp;</a></span>data() <span class="overload">[1/2]</span></h2>
+<a id="a88294e0ba5e4b99a5f6a7d53b1397074"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88294e0ba5e4b99a5f6a7d53b1397074">&#9670;&nbsp;</a></span>cast_data() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::simd_block::data </td>
+          <td class="memname">auto cen::simd_block::cast_data </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; const void*
+          <td> const -&gt; const T*
   </td>
         </tr>
       </table>
@@ -272,38 +330,15 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a pointer to the associated memory block. </p>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the memory block.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a561b46ee1506680a09b7097fbf7906e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a561b46ee1506680a09b7097fbf7906e2">&#9670;&nbsp;</a></span>data() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::simd_block::data </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; void*
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a pointer to the associated memory block. </p>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the memory block.</dd></dl>
+<p>Returns a reinterpreted pointer to the associated memory block. </p>
+<dl class="section warning"><dt>Warning</dt><dd>It's your responsibility to make sure to avoid any potential undefined behaviour using this function, since it uses <code>reinterpret_cast</code>.</dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>the type used when reinterpreting the internal pointer.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the associated memory block.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
 
 </div>
@@ -333,41 +368,6 @@ template&lt;typename T &gt; </div>
 
 <p>Indicates whether or not the internal pointer isn't null. </p>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the internal pointer is non-null; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a414e66c836363259d2aee78dddf45697"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a414e66c836363259d2aee78dddf45697">&#9670;&nbsp;</a></span>reallocate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cen::simd_block::reallocate </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga2313c92fc18c319ebe1853e2d0579886">usize</a>&#160;</td>
-          <td class="paramname"><em>size</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reallocates the associated memory block. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">size</td><td>the size of the new memory block.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
 
 </div>

@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -238,8 +238,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5410120eefa9ac994d018af4631ee64d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5410120eefa9ac994d018af4631ee64d">&#9670;&nbsp;</a></span>axis()</h2>
+<a id="a6e42cc85a13eda8456154f694febdb7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e42cc85a13eda8456154f694febdb7e">&#9670;&nbsp;</a></span>set_which()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -248,11 +248,11 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::joy_axis_event::axis </td>
+          <td class="memname">void cen::joy_axis_event::set_which </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>
-  </td>
+          <td class="paramtype">const SDL_JoystickID&#160;</td>
+          <td class="paramname"><em>which</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -262,8 +262,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the joystick axis index associated with the event. </p>
-<dl class="section return"><dt>Returns</dt><dd>the joystick axis index associated with the event.</dd></dl>
+<p>Sets the joystick instance ID associated with the event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">which</td><td>the joystick instance ID associated with the event.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
@@ -338,8 +343,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a6e42cc85a13eda8456154f694febdb7e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e42cc85a13eda8456154f694febdb7e">&#9670;&nbsp;</a></span>set_which()</h2>
+<a id="a67760ec3d7ebe0252473380f8ace89e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67760ec3d7ebe0252473380f8ace89e9">&#9670;&nbsp;</a></span>which()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -348,11 +353,11 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void cen::joy_axis_event::set_which </td>
+          <td class="memname">auto cen::joy_axis_event::which </td>
           <td>(</td>
-          <td class="paramtype">const SDL_JoystickID&#160;</td>
-          <td class="paramname"><em>which</em></td><td>)</td>
-          <td></td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; SDL_JoystickID
+  </td>
         </tr>
       </table>
   </td>
@@ -362,13 +367,38 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sets the joystick instance ID associated with the event. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">which</td><td>the joystick instance ID associated with the event.</td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Returns the joystick instance ID associated with the event. </p>
+<dl class="section return"><dt>Returns</dt><dd>the joystick instance ID associated with the event.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a5410120eefa9ac994d018af4631ee64d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5410120eefa9ac994d018af4631ee64d">&#9670;&nbsp;</a></span>axis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::joy_axis_event::axis </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the joystick axis index associated with the event. </p>
+<dl class="section return"><dt>Returns</dt><dd>the joystick axis index associated with the event.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
@@ -399,36 +429,6 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Returns the joystick axis value associated with the event. </p>
 <dl class="section return"><dt>Returns</dt><dd>the joystick axis value associated with the event.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a67760ec3d7ebe0252473380f8ace89e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67760ec3d7ebe0252473380f8ace89e9">&#9670;&nbsp;</a></span>which()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::joy_axis_event::which </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; SDL_JoystickID
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the joystick instance ID associated with the event. </p>
-<dl class="section return"><dt>Returns</dt><dd>the joystick instance ID associated with the event.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>

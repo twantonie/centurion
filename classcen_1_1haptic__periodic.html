@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -314,8 +314,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a0901bc3975db95690f46257d66cf6b8b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0901bc3975db95690f46257d66cf6b8b">&#9670;&nbsp;</a></span>magnitude()</h2>
+<a id="a3ab79d8823cd3d74277a87c0fbb4e2e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ab79d8823cd3d74277a87c0fbb4e2e7">&#9670;&nbsp;</a></span>set_type()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -324,11 +324,11 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::haptic_periodic::magnitude </td>
+          <td class="memname">void cen::haptic_periodic::set_type </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__core.html#ga995971102059bcb96d27921ffb7c4916">i16</a>
-  </td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1haptic__periodic.html#afd3c54a92d6e9a78888baedfc6a48dc9">periodic_type</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -338,14 +338,19 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the current magnitude (peak value) of the wave. </p>
-<dl class="section return"><dt>Returns</dt><dd>the magnitude of the wave.</dd></dl>
+<p>Sets the type of the effect. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>the periodic effect type.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
 
 </div>
 </div>
-<a id="ab55da19fa6513710b2db3f1241c93446"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab55da19fa6513710b2db3f1241c93446">&#9670;&nbsp;</a></span>mean()</h2>
+<a id="a32708325377dba83e24e723981b5402a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32708325377dba83e24e723981b5402a">&#9670;&nbsp;</a></span>set_period()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -354,11 +359,11 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::haptic_periodic::mean </td>
+          <td class="memname">void cen::haptic_periodic::set_period </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__core.html#ga995971102059bcb96d27921ffb7c4916">i16</a>
-  </td>
+          <td class="paramtype">const <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a> &gt;&#160;</td>
+          <td class="paramname"><em>period</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -368,128 +373,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the current mean value of the wave. </p>
-<dl class="section return"><dt>Returns</dt><dd>the mean value of the wave.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="adbcc114c2220e85559ec42db8bcf3f2d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adbcc114c2220e85559ec42db8bcf3f2d">&#9670;&nbsp;</a></span>period()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::haptic_periodic::period </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt;<a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&gt;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the current period of the wave. </p>
-<dl class="section return"><dt>Returns</dt><dd>the period of the wave.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="ab1d786b7d9a10731dfa603dd24a1dffe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1d786b7d9a10731dfa603dd24a1dffe">&#9670;&nbsp;</a></span>phase_shift()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::haptic_periodic::phase_shift </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the current positive phase shift of the wave. </p>
-<dl class="section return"><dt>Returns</dt><dd>the positive phase shift of the wave, in hundredths of a degree.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a29803c4b281dce8ac6288b6659252349"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29803c4b281dce8ac6288b6659252349">&#9670;&nbsp;</a></span>representation() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::haptic_periodic::representation </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; const SDL_HapticPeriodic&amp;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the internal representation. </p>
-<dl class="section return"><dt>Returns</dt><dd>the internal representation.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a6e7087745a7effe6904fbe554dcb7277"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e7087745a7effe6904fbe554dcb7277">&#9670;&nbsp;</a></span>representation() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::haptic_periodic::representation </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; SDL_HapticPeriodic&amp;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the internal representation. </p>
-<dl class="section return"><dt>Returns</dt><dd>the internal representation.</dd></dl>
+<p>Sets the period of the wave. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">period</td><td>the period duration of the wave.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
 
 </div>
@@ -565,41 +455,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a32708325377dba83e24e723981b5402a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32708325377dba83e24e723981b5402a">&#9670;&nbsp;</a></span>set_period()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cen::haptic_periodic::set_period </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a> &gt;&#160;</td>
-          <td class="paramname"><em>period</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the period of the wave. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">period</td><td>the period duration of the wave.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
 <a id="a2cd634b2dcf099de3433e0c1eea7d683"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2cd634b2dcf099de3433e0c1eea7d683">&#9670;&nbsp;</a></span>set_phase_shift()</h2>
 
@@ -635,8 +490,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a3ab79d8823cd3d74277a87c0fbb4e2e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ab79d8823cd3d74277a87c0fbb4e2e7">&#9670;&nbsp;</a></span>set_type()</h2>
+<a id="adbcc114c2220e85559ec42db8bcf3f2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbcc114c2220e85559ec42db8bcf3f2d">&#9670;&nbsp;</a></span>period()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -645,11 +500,41 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void cen::haptic_periodic::set_type </td>
+          <td class="memname">auto cen::haptic_periodic::period </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1haptic__periodic.html#afd3c54a92d6e9a78888baedfc6a48dc9">periodic_type</a>&#160;</td>
-          <td class="paramname"><em>type</em></td><td>)</td>
-          <td></td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt;<a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&gt;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the current period of the wave. </p>
+<dl class="section return"><dt>Returns</dt><dd>the period of the wave.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a0901bc3975db95690f46257d66cf6b8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0901bc3975db95690f46257d66cf6b8b">&#9670;&nbsp;</a></span>magnitude()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::haptic_periodic::magnitude </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__core.html#ga995971102059bcb96d27921ffb7c4916">i16</a>
+  </td>
         </tr>
       </table>
   </td>
@@ -659,20 +544,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sets the type of the effect. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">type</td><td>the periodic effect type.</td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Returns the current magnitude (peak value) of the wave. </p>
+<dl class="section return"><dt>Returns</dt><dd>the magnitude of the wave.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="aec3b127179270a2a808f977e2f596544"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec3b127179270a2a808f977e2f596544">&#9670;&nbsp;</a></span>hasDelay</h2>
+<a id="ab55da19fa6513710b2db3f1241c93446"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab55da19fa6513710b2db3f1241c93446">&#9670;&nbsp;</a></span>mean()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -681,18 +560,117 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr static bool cen::haptic_periodic::hasDelay = true</td>
+          <td class="memname">auto cen::haptic_periodic::mean </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__core.html#ga995971102059bcb96d27921ffb7c4916">i16</a>
+  </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the current mean value of the wave. </p>
+<dl class="section return"><dt>Returns</dt><dd>the mean value of the wave.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
 </div>
 </div>
+<a id="ab1d786b7d9a10731dfa603dd24a1dffe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1d786b7d9a10731dfa603dd24a1dffe">&#9670;&nbsp;</a></span>phase_shift()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::haptic_periodic::phase_shift </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the current positive phase shift of the wave. </p>
+<dl class="section return"><dt>Returns</dt><dd>the positive phase shift of the wave, in hundredths of a degree.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a6e7087745a7effe6904fbe554dcb7277"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e7087745a7effe6904fbe554dcb7277">&#9670;&nbsp;</a></span>representation() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::haptic_periodic::representation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; SDL_HapticPeriodic&amp;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the internal representation. </p>
+<dl class="section return"><dt>Returns</dt><dd>the internal representation.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a29803c4b281dce8ac6288b6659252349"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29803c4b281dce8ac6288b6659252349">&#9670;&nbsp;</a></span>representation() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::haptic_periodic::representation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; const SDL_HapticPeriodic&amp;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the internal representation. </p>
+<dl class="section return"><dt>Returns</dt><dd>the internal representation.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
 <a id="a48ef742926f6515f4d190268001de86f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a48ef742926f6515f4d190268001de86f">&#9670;&nbsp;</a></span>hasDirection</h2>
 
@@ -748,6 +726,28 @@ Additional Inherited Members</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">constexpr static bool cen::haptic_periodic::hasTrigger = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aec3b127179270a2a808f977e2f596544"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec3b127179270a2a808f977e2f596544">&#9670;&nbsp;</a></span>hasDelay</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr static bool cen::haptic_periodic::hasDelay = true</td>
         </tr>
       </table>
   </td>

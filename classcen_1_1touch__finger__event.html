@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -268,8 +268,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab0fca2ce7171ecc4257a4cae05578488"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0fca2ce7171ecc4257a4cae05578488">&#9670;&nbsp;</a></span>dx()</h2>
+<a id="aeb5b311735eeff32c60ba4923385263d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb5b311735eeff32c60ba4923385263d">&#9670;&nbsp;</a></span>set_touch_id()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -278,133 +278,10 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::touch_finger_event::dx </td>
+          <td class="memname">void cen::touch_finger_event::set_touch_id </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; float
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the normalized distance moved along the x-axis. </p>
-<p>The returned value will be in the range [-1, 1].</p>
-<dl class="section return"><dt>Returns</dt><dd>the normalized distance moved along the x-axis, in the range [-1, 1].</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a9ea112547d41cc5e13840e6a30d6392c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ea112547d41cc5e13840e6a30d6392c">&#9670;&nbsp;</a></span>dy()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::touch_finger_event::dy </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; float
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the normalized distance moved along the y-axis. </p>
-<p>The returned value will be in the range [-1, 1].</p>
-<dl class="section return"><dt>Returns</dt><dd>the normalized distance moved along the y-axis, in the range [-1, 1].</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="aff7acaa70acff4374da99a9af42b7ee1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff7acaa70acff4374da99a9af42b7ee1">&#9670;&nbsp;</a></span>finger_id()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::touch_finger_event::finger_id </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; SDL_FingerID
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the finger ID associated with the event. </p>
-<dl class="section return"><dt>Returns</dt><dd>the finger ID associated with the event.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="aed311ee6a3491e1d74ff0d6e065892a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed311ee6a3491e1d74ff0d6e065892a6">&#9670;&nbsp;</a></span>pressure()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::touch_finger_event::pressure </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; float
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the normalized pressure associated with the event. </p>
-<p>The returned value will be in the range [0, 1].</p>
-<dl class="section return"><dt>Returns</dt><dd>the normalized pressure associated with the event, in the range [0, 1].</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="af869392e975a7c5f653bbda8a49f79ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af869392e975a7c5f653bbda8a49f79ad">&#9670;&nbsp;</a></span>set_dx()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cen::touch_finger_event::set_dx </td>
-          <td>(</td>
-          <td class="paramtype">const float&#160;</td>
-          <td class="paramname"><em>dx</em></td><td>)</td>
+          <td class="paramtype">const SDL_TouchID&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -415,47 +292,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sets the normalized distance moved along the x-axis. </p>
-<p>The supplied value will be clamped to the range [-1, 1].</p>
+<p>Sets the ID of the associated touch device. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dx</td><td>the normalized distance moved along the x-axis, clamped to the range [-1, 1].</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a03fce07b4a3fea6fd89a4e84d308b097"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03fce07b4a3fea6fd89a4e84d308b097">&#9670;&nbsp;</a></span>set_dy()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cen::touch_finger_event::set_dy </td>
-          <td>(</td>
-          <td class="paramtype">const float&#160;</td>
-          <td class="paramname"><em>dy</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the normalized distance moved along the y-axis. </p>
-<p>The supplied value will be clamped to the range [-1, 1].</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dy</td><td>the normalized distance moved along the y-axis, clamped to the range [-1, 1].</td></tr>
+    <tr><td class="paramname">id</td><td>the ID of the associated touch device.</td></tr>
   </table>
   </dd>
 </dl>
@@ -491,77 +331,6 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>the finger ID associated with the event.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a412dd88c251ab4cdc184ed0829f586f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a412dd88c251ab4cdc184ed0829f586f3">&#9670;&nbsp;</a></span>set_pressure()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cen::touch_finger_event::set_pressure </td>
-          <td>(</td>
-          <td class="paramtype">const float&#160;</td>
-          <td class="paramname"><em>pressure</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the normalized pressure associated with the event. </p>
-<p>The supplied value will be clamped to the range [0, 1].</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pressure</td><td>the normalized pressure associated with the event, clamped in the range [0, 1].</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="aeb5b311735eeff32c60ba4923385263d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb5b311735eeff32c60ba4923385263d">&#9670;&nbsp;</a></span>set_touch_id()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cen::touch_finger_event::set_touch_id </td>
-          <td>(</td>
-          <td class="paramtype">const SDL_TouchID&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the ID of the associated touch device. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">id</td><td>the ID of the associated touch device.</td></tr>
   </table>
   </dd>
 </dl>
@@ -676,6 +445,114 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="af869392e975a7c5f653bbda8a49f79ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af869392e975a7c5f653bbda8a49f79ad">&#9670;&nbsp;</a></span>set_dx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::touch_finger_event::set_dx </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>dx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the normalized distance moved along the x-axis. </p>
+<p>The supplied value will be clamped to the range [-1, 1].</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dx</td><td>the normalized distance moved along the x-axis, clamped to the range [-1, 1].</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a03fce07b4a3fea6fd89a4e84d308b097"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03fce07b4a3fea6fd89a4e84d308b097">&#9670;&nbsp;</a></span>set_dy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::touch_finger_event::set_dy </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>dy</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the normalized distance moved along the y-axis. </p>
+<p>The supplied value will be clamped to the range [-1, 1].</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dy</td><td>the normalized distance moved along the y-axis, clamped to the range [-1, 1].</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a412dd88c251ab4cdc184ed0829f586f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a412dd88c251ab4cdc184ed0829f586f3">&#9670;&nbsp;</a></span>set_pressure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::touch_finger_event::set_pressure </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>pressure</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the normalized pressure associated with the event. </p>
+<p>The supplied value will be clamped to the range [0, 1].</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pressure</td><td>the normalized pressure associated with the event, clamped in the range [0, 1].</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
 <a id="a0a3a9abae0ab98cbf0903e6f9f53d239"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0a3a9abae0ab98cbf0903e6f9f53d239">&#9670;&nbsp;</a></span>touch_id()</h2>
 
@@ -702,6 +579,36 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Returns the touch device ID associated with the event. </p>
 <dl class="section return"><dt>Returns</dt><dd>the touch device ID associated with the event.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="aff7acaa70acff4374da99a9af42b7ee1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff7acaa70acff4374da99a9af42b7ee1">&#9670;&nbsp;</a></span>finger_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::touch_finger_event::finger_id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; SDL_FingerID
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the finger ID associated with the event. </p>
+<dl class="section return"><dt>Returns</dt><dd>the finger ID associated with the event.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
@@ -794,6 +701,99 @@ Additional Inherited Members</h2></td></tr>
 <p>Returns the normalized y-coordinate of the location of the event. </p>
 <p>The returned value will be in the range [0, 1].</p>
 <dl class="section return"><dt>Returns</dt><dd>the normalized y-coordinate of the location of the event, in the range [0, 1].</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ab0fca2ce7171ecc4257a4cae05578488"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0fca2ce7171ecc4257a4cae05578488">&#9670;&nbsp;</a></span>dx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::touch_finger_event::dx </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; float
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the normalized distance moved along the x-axis. </p>
+<p>The returned value will be in the range [-1, 1].</p>
+<dl class="section return"><dt>Returns</dt><dd>the normalized distance moved along the x-axis, in the range [-1, 1].</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a9ea112547d41cc5e13840e6a30d6392c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ea112547d41cc5e13840e6a30d6392c">&#9670;&nbsp;</a></span>dy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::touch_finger_event::dy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; float
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the normalized distance moved along the y-axis. </p>
+<p>The returned value will be in the range [-1, 1].</p>
+<dl class="section return"><dt>Returns</dt><dd>the normalized distance moved along the y-axis, in the range [-1, 1].</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="aed311ee6a3491e1d74ff0d6e065892a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed311ee6a3491e1d74ff0d6e065892a6">&#9670;&nbsp;</a></span>pressure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::touch_finger_event::pressure </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; float
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the normalized pressure associated with the event. </p>
+<p>The returned value will be in the range [0, 1].</p>
+<dl class="section return"><dt>Returns</dt><dd>the normalized pressure associated with the event, in the range [0, 1].</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>

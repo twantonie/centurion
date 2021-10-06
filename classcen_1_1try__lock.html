@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -224,8 +224,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a052bc9ede807a2c7172198661f6a3c0d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a052bc9ede807a2c7172198661f6a3c0d">&#9670;&nbsp;</a></span>error()</h2>
+<a id="a6c0489a86bf80676def2cbc977472df0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c0489a86bf80676def2cbc977472df0">&#9670;&nbsp;</a></span>operator=()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -234,23 +234,19 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::try_lock::error </td>
+          <td class="memname">auto cen::try_lock::operator= </td>
           <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1try__lock.html">try_lock</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
+          <td> -&gt;  <a class="el" href="classcen_1_1try__lock.html">try_lock</a> &amp;=delete</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Indicates whether or not there was an error whilst locking the mutex. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if something went wrong whilst locking the mutex; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
 </div>
@@ -281,61 +277,6 @@ Public Member Functions</h2></td></tr>
 <p>Returns the result of trying to lock the associated mutex. </p>
 <dl class="section return"><dt>Returns</dt><dd>the lock status.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a1e36e61d7206d5e714e9d6a33e7c75af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e36e61d7206d5e714e9d6a33e7c75af">&#9670;&nbsp;</a></span>operator bool()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">cen::try_lock::operator bool </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the mutex was successfully locked. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the mutex was locked; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a6c0489a86bf80676def2cbc977472df0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c0489a86bf80676def2cbc977472df0">&#9670;&nbsp;</a></span>operator=()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::try_lock::operator= </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1try__lock.html">try_lock</a> &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt;  <a class="el" href="classcen_1_1try__lock.html">try_lock</a> &amp;=delete</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -395,6 +336,65 @@ Public Member Functions</h2></td></tr>
 
 <p>Indicates whether or not the lock timed out whilst trying to lock the mutex. </p>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the locking timed out; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a052bc9ede807a2c7172198661f6a3c0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a052bc9ede807a2c7172198661f6a3c0d">&#9670;&nbsp;</a></span>error()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::try_lock::error </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not there was an error whilst locking the mutex. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if something went wrong whilst locking the mutex; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a1e36e61d7206d5e714e9d6a33e7c75af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e36e61d7206d5e714e9d6a33e7c75af">&#9670;&nbsp;</a></span>operator bool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cen::try_lock::operator bool </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the mutex was successfully locked. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the mutex was locked; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>

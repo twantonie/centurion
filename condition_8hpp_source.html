@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -116,58 +116,57 @@ $(document).ready(function(){initNavTree('condition_8hpp_source.html',''); initR
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classcen_1_1condition.html#acab86955d828aabd973280db5419d4e0">   31</a></span>&#160;  <a class="code" href="classcen_1_1condition.html#acab86955d828aabd973280db5419d4e0">condition</a>() : m_cond{SDL_CreateCond()}</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">if</span> (!m_cond)</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1sdl__error.html">sdl_error</a>{};</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classcen_1_1condition.html#a9b2204f4d43f7782712a90a57e7902b7">   46</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1condition.html#a9b2204f4d43f7782712a90a57e7902b7">signal</a>() noexcept -&gt; <a class="code" href="classcen_1_1result.html">result</a></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">return</span> SDL_CondSignal(m_cond.get()) == 0;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classcen_1_1condition.html#ab31f72152027f0a02654f12492d4c623">   58</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1condition.html#ab31f72152027f0a02654f12492d4c623">broadcast</a>() noexcept -&gt; <a class="code" href="classcen_1_1result.html">result</a></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">return</span> SDL_CondBroadcast(m_cond.get()) == 0;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classcen_1_1condition.html#a8ed6513f560b39dd5316dd6bd8d3502f">   74</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1condition.html#a8ed6513f560b39dd5316dd6bd8d3502f">wait</a>(<a class="code" href="classcen_1_1mutex.html">mutex</a>&amp; <a class="code" href="classcen_1_1mutex.html">mutex</a>) noexcept -&gt; <a class="code" href="classcen_1_1result.html">result</a></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">return</span> SDL_CondWait(m_cond.get(), <a class="code" href="classcen_1_1mutex.html">mutex</a>.<a class="code" href="classcen_1_1mutex.html#a67879f779ea892ab51a38a568e61df32">get</a>()) == 0;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classcen_1_1condition.html#ae41089a286b74f95584793f12b5c80d1">   95</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1condition.html#ae41089a286b74f95584793f12b5c80d1">wait</a>(<a class="code" href="classcen_1_1mutex.html">mutex</a>&amp; <a class="code" href="classcen_1_1mutex.html">mutex</a>, <span class="keyword">const</span> <a class="code" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds&lt;u32&gt;</a> ms) noexcept(noexcept(ms.count()))</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      -&gt; <a class="code" href="group__thread.html#ga81e5eda2a43cc39dee8bb8d60cff70d3">lock_status</a></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="group__thread.html#ga81e5eda2a43cc39dee8bb8d60cff70d3">lock_status</a><span class="keyword">&gt;</span>(</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        SDL_CondWaitTimeout(m_cond.get(), <a class="code" href="classcen_1_1mutex.html">mutex</a>.<a class="code" href="classcen_1_1mutex.html#a67879f779ea892ab51a38a568e61df32">get</a>(), ms.count()));</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keyword">struct </span>deleter final</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  {</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">void</span> operator()(SDL_cond* cond) noexcept</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    {</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      SDL_DestroyCond(cond);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    };</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  };</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  std::unique_ptr&lt;SDL_cond, deleter&gt; m_cond;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;};</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}  <span class="comment">// namespace cen</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_CONDITION_HEADER</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">if</span> (!m_cond) {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1sdl__error.html">sdl_error</a>{};</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classcen_1_1condition.html#a9b2204f4d43f7782712a90a57e7902b7">   45</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1condition.html#a9b2204f4d43f7782712a90a57e7902b7">signal</a>() noexcept -&gt; <a class="code" href="classcen_1_1result.html">result</a></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">return</span> SDL_CondSignal(m_cond.get()) == 0;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classcen_1_1condition.html#ab31f72152027f0a02654f12492d4c623">   57</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1condition.html#ab31f72152027f0a02654f12492d4c623">broadcast</a>() noexcept -&gt; <a class="code" href="classcen_1_1result.html">result</a></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">return</span> SDL_CondBroadcast(m_cond.get()) == 0;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classcen_1_1condition.html#a8ed6513f560b39dd5316dd6bd8d3502f">   73</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1condition.html#a8ed6513f560b39dd5316dd6bd8d3502f">wait</a>(<a class="code" href="classcen_1_1mutex.html">mutex</a>&amp; <a class="code" href="classcen_1_1mutex.html">mutex</a>) noexcept -&gt; <a class="code" href="classcen_1_1result.html">result</a></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">return</span> SDL_CondWait(m_cond.get(), <a class="code" href="classcen_1_1mutex.html">mutex</a>.<a class="code" href="classcen_1_1mutex.html#a67879f779ea892ab51a38a568e61df32">get</a>()) == 0;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classcen_1_1condition.html#ae41089a286b74f95584793f12b5c80d1">   94</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1condition.html#ae41089a286b74f95584793f12b5c80d1">wait</a>(<a class="code" href="classcen_1_1mutex.html">mutex</a>&amp; <a class="code" href="classcen_1_1mutex.html">mutex</a>, <span class="keyword">const</span> <a class="code" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds&lt;u32&gt;</a> ms) noexcept(noexcept(ms.count()))</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      -&gt; <a class="code" href="group__thread.html#ga81e5eda2a43cc39dee8bb8d60cff70d3">lock_status</a></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="group__thread.html#ga81e5eda2a43cc39dee8bb8d60cff70d3">lock_status</a><span class="keyword">&gt;</span>(</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        SDL_CondWaitTimeout(m_cond.get(), <a class="code" href="classcen_1_1mutex.html">mutex</a>.<a class="code" href="classcen_1_1mutex.html#a67879f779ea892ab51a38a568e61df32">get</a>(), ms.count()));</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keyword">struct </span>deleter final</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">void</span> operator()(SDL_cond* cond) noexcept</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      SDL_DestroyCond(cond);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    };</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  };</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  std::unique_ptr&lt;SDL_cond, deleter&gt; m_cond;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;};</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}  <span class="comment">// namespace cen</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_CONDITION_HEADER</span></div>
 <div class="ttc" id="aclasscen_1_1condition_html"><div class="ttname"><a href="classcen_1_1condition.html">cen::condition</a></div><div class="ttdoc">Represents a condition variable.</div><div class="ttdef"><b>Definition:</b> condition.hpp:29</div></div>
-<div class="ttc" id="aclasscen_1_1condition_html_a8ed6513f560b39dd5316dd6bd8d3502f"><div class="ttname"><a href="classcen_1_1condition.html#a8ed6513f560b39dd5316dd6bd8d3502f">cen::condition::wait</a></div><div class="ttdeci">auto wait(mutex &amp;mutex) noexcept -&gt; result</div><div class="ttdoc">Waits until the condition variable is signaled.</div><div class="ttdef"><b>Definition:</b> condition.hpp:74</div></div>
-<div class="ttc" id="aclasscen_1_1condition_html_a9b2204f4d43f7782712a90a57e7902b7"><div class="ttname"><a href="classcen_1_1condition.html#a9b2204f4d43f7782712a90a57e7902b7">cen::condition::signal</a></div><div class="ttdeci">auto signal() noexcept -&gt; result</div><div class="ttdoc">Wakes up one of the threads that are waiting on the condition variable.</div><div class="ttdef"><b>Definition:</b> condition.hpp:46</div></div>
-<div class="ttc" id="aclasscen_1_1condition_html_ab31f72152027f0a02654f12492d4c623"><div class="ttname"><a href="classcen_1_1condition.html#ab31f72152027f0a02654f12492d4c623">cen::condition::broadcast</a></div><div class="ttdeci">auto broadcast() noexcept -&gt; result</div><div class="ttdoc">Wakes up all threads that are waiting on the condition variable.</div><div class="ttdef"><b>Definition:</b> condition.hpp:58</div></div>
+<div class="ttc" id="aclasscen_1_1condition_html_a8ed6513f560b39dd5316dd6bd8d3502f"><div class="ttname"><a href="classcen_1_1condition.html#a8ed6513f560b39dd5316dd6bd8d3502f">cen::condition::wait</a></div><div class="ttdeci">auto wait(mutex &amp;mutex) noexcept -&gt; result</div><div class="ttdoc">Waits until the condition variable is signaled.</div><div class="ttdef"><b>Definition:</b> condition.hpp:73</div></div>
+<div class="ttc" id="aclasscen_1_1condition_html_a9b2204f4d43f7782712a90a57e7902b7"><div class="ttname"><a href="classcen_1_1condition.html#a9b2204f4d43f7782712a90a57e7902b7">cen::condition::signal</a></div><div class="ttdeci">auto signal() noexcept -&gt; result</div><div class="ttdoc">Wakes up one of the threads that are waiting on the condition variable.</div><div class="ttdef"><b>Definition:</b> condition.hpp:45</div></div>
+<div class="ttc" id="aclasscen_1_1condition_html_ab31f72152027f0a02654f12492d4c623"><div class="ttname"><a href="classcen_1_1condition.html#ab31f72152027f0a02654f12492d4c623">cen::condition::broadcast</a></div><div class="ttdeci">auto broadcast() noexcept -&gt; result</div><div class="ttdoc">Wakes up all threads that are waiting on the condition variable.</div><div class="ttdef"><b>Definition:</b> condition.hpp:57</div></div>
 <div class="ttc" id="aclasscen_1_1condition_html_acab86955d828aabd973280db5419d4e0"><div class="ttname"><a href="classcen_1_1condition.html#acab86955d828aabd973280db5419d4e0">cen::condition::condition</a></div><div class="ttdeci">condition()</div><div class="ttdef"><b>Definition:</b> condition.hpp:31</div></div>
-<div class="ttc" id="aclasscen_1_1condition_html_ae41089a286b74f95584793f12b5c80d1"><div class="ttname"><a href="classcen_1_1condition.html#ae41089a286b74f95584793f12b5c80d1">cen::condition::wait</a></div><div class="ttdeci">auto wait(mutex &amp;mutex, const milliseconds&lt; u32 &gt; ms) noexcept(noexcept(ms.count())) -&gt; lock_status</div><div class="ttdoc">Waits until the condition variable is signaled or if the specified amount of time has passed.</div><div class="ttdef"><b>Definition:</b> condition.hpp:95</div></div>
+<div class="ttc" id="aclasscen_1_1condition_html_ae41089a286b74f95584793f12b5c80d1"><div class="ttname"><a href="classcen_1_1condition.html#ae41089a286b74f95584793f12b5c80d1">cen::condition::wait</a></div><div class="ttdeci">auto wait(mutex &amp;mutex, const milliseconds&lt; u32 &gt; ms) noexcept(noexcept(ms.count())) -&gt; lock_status</div><div class="ttdoc">Waits until the condition variable is signaled or if the specified amount of time has passed.</div><div class="ttdef"><b>Definition:</b> condition.hpp:94</div></div>
 <div class="ttc" id="aclasscen_1_1mutex_html"><div class="ttname"><a href="classcen_1_1mutex.html">cen::mutex</a></div><div class="ttdoc">Represents a recursive mutex.</div><div class="ttdef"><b>Definition:</b> mutex.hpp:31</div></div>
-<div class="ttc" id="aclasscen_1_1mutex_html_a67879f779ea892ab51a38a568e61df32"><div class="ttname"><a href="classcen_1_1mutex.html#a67879f779ea892ab51a38a568e61df32">cen::mutex::get</a></div><div class="ttdeci">auto get() noexcept -&gt; SDL_mutex *</div><div class="ttdoc">Returns a pointer to the associated SDL mutex.</div><div class="ttdef"><b>Definition:</b> mutex.hpp:91</div></div>
+<div class="ttc" id="aclasscen_1_1mutex_html_a67879f779ea892ab51a38a568e61df32"><div class="ttname"><a href="classcen_1_1mutex.html#a67879f779ea892ab51a38a568e61df32">cen::mutex::get</a></div><div class="ttdeci">auto get() noexcept -&gt; SDL_mutex *</div><div class="ttdoc">Returns a pointer to the associated SDL mutex.</div><div class="ttdef"><b>Definition:</b> mutex.hpp:90</div></div>
 <div class="ttc" id="aclasscen_1_1result_html"><div class="ttname"><a href="classcen_1_1result.html">cen::result</a></div><div class="ttdoc">A simple indicator for the result of different operations.</div><div class="ttdef"><b>Definition:</b> result.hpp:50</div></div>
 <div class="ttc" id="aclasscen_1_1sdl__error_html"><div class="ttname"><a href="classcen_1_1sdl__error.html">cen::sdl_error</a></div><div class="ttdoc">Represents an error related to the core SDL2 library.</div><div class="ttdef"><b>Definition:</b> exception.hpp:64</div></div>
 <div class="ttc" id="agroup__core_html_gaeabb8896b493294e6781651b0abfbef5"><div class="ttname"><a href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">cen::milliseconds</a></div><div class="ttdeci">std::chrono::duration&lt; T, std::milli &gt; milliseconds</div><div class="ttdoc">Templated alias for durations in milliseconds.</div><div class="ttdef"><b>Definition:</b> time.hpp:31</div></div>

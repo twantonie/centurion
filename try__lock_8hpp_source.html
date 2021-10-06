@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -96,84 +96,80 @@ $(document).ready(function(){initNavTree('try__lock_8hpp_source.html',''); initR
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CENTURION_TRY_LOCK_HEADER</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CENTURION_TRY_LOCK_HEADER</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// clang-format off</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../compiler/features.hpp&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// clang-format on</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;SDL.h&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;SDL.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../compiler/features.hpp&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;lock_status.hpp&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;mutex.hpp&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;lock_status.hpp&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;mutex.hpp&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecen.html">cen</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecen.html">cen</a> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classcen_1_1try__lock.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcen_1_1try__lock.html">try_lock</a> final</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classcen_1_1try__lock.html#afbeef694850172b8b16167ea96fc1985">   36</a></span>&#160;  <a class="code" href="group__compiler.html#ga9bad82e58fd112125ce91d50ce59b583">CENTURION_NODISCARD_CTOR</a> <span class="keyword">explicit</span> <a class="code" href="classcen_1_1try__lock.html#afbeef694850172b8b16167ea96fc1985">try_lock</a>(<a class="code" href="classcen_1_1mutex.html">mutex</a>&amp; <a class="code" href="classcen_1_1mutex.html">mutex</a>) noexcept</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      : m_mutex{&amp;<a class="code" href="classcen_1_1mutex.html">mutex</a>}</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      , m_status{<a class="code" href="classcen_1_1mutex.html">mutex</a>.<a class="code" href="classcen_1_1mutex.html#a52c3802386f8a390427fca6f27ca6922">try_lock</a>()}</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  {}</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classcen_1_1try__lock.html#aa796ecf42a73cb4ff229f574d3c706e4">   41</a></span>&#160;  <a class="code" href="classcen_1_1try__lock.html#aa796ecf42a73cb4ff229f574d3c706e4">try_lock</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1try__lock.html">try_lock</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classcen_1_1try__lock.html#a6c0489a86bf80676def2cbc977472df0">   43</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1try__lock.html#a6c0489a86bf80676def2cbc977472df0">operator=</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1try__lock.html">try_lock</a>&amp;) -&gt; <a class="code" href="classcen_1_1try__lock.html">try_lock</a>&amp; = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classcen_1_1try__lock.html#abed4744fe94c14e49b8801300ecea46d">   50</a></span>&#160;  <a class="code" href="classcen_1_1try__lock.html#abed4744fe94c14e49b8801300ecea46d">~try_lock</a>() noexcept</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">if</span> (m_status == <a class="code" href="group__thread.html#gga81e5eda2a43cc39dee8bb8d60cff70d3a260ca9dd8a4577fc00b7bd5810298076">lock_status::success</a>)</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      m_mutex-&gt;<a class="code" href="classcen_1_1mutex.html#a7c44d35e23ca44c8f7ff54da5f209c00">unlock</a>();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classcen_1_1try__lock.html#a755275984d0e08871e87675e459f4ad4">   65</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1try__lock.html#a755275984d0e08871e87675e459f4ad4">get_status</a>() const noexcept -&gt; <a class="code" href="group__thread.html#ga81e5eda2a43cc39dee8bb8d60cff70d3">lock_status</a></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">return</span> m_status;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classcen_1_1try__lock.html#aca59fbfd10054d9ed33a0ec9c96e0a27">   77</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1try__lock.html#aca59fbfd10054d9ed33a0ec9c96e0a27">success</a>() const noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  {</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classcen_1_1try__lock.html#a755275984d0e08871e87675e459f4ad4">get_status</a>() == <a class="code" href="group__thread.html#gga81e5eda2a43cc39dee8bb8d60cff70d3a260ca9dd8a4577fc00b7bd5810298076">lock_status::success</a>;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  }</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classcen_1_1try__lock.html#a2ff0a000566168ab78d93034b5343e8a">   89</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1try__lock.html#a2ff0a000566168ab78d93034b5343e8a">timed_out</a>() const noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classcen_1_1try__lock.html#a755275984d0e08871e87675e459f4ad4">get_status</a>() == <a class="code" href="group__thread.html#gga81e5eda2a43cc39dee8bb8d60cff70d3a56c27b1ab1a5a5a0eae853cabb4dc0c1">lock_status::timed_out</a>;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="classcen_1_1try__lock.html#a052bc9ede807a2c7172198661f6a3c0d">  101</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1try__lock.html#a052bc9ede807a2c7172198661f6a3c0d">error</a>() const noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  {</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classcen_1_1try__lock.html#a755275984d0e08871e87675e459f4ad4">get_status</a>() == <a class="code" href="group__thread.html#gga81e5eda2a43cc39dee8bb8d60cff70d3acb5e100e5a9a3e7f6d1fd97512215282">lock_status::error</a>;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  }</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="classcen_1_1try__lock.html#a1e36e61d7206d5e714e9d6a33e7c75af">  107</a></span>&#160;  [[nodiscard]] <span class="keyword">explicit</span> <span class="keyword">operator</span> bool() const noexcept</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  {</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classcen_1_1try__lock.html#aca59fbfd10054d9ed33a0ec9c96e0a27">success</a>();</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  }</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <a class="code" href="classcen_1_1mutex.html">mutex</a>* m_mutex{};</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <a class="code" href="group__thread.html#ga81e5eda2a43cc39dee8bb8d60cff70d3">lock_status</a> m_status{};</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;};</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classcen_1_1try__lock.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcen_1_1try__lock.html">try_lock</a> final</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classcen_1_1try__lock.html#afbeef694850172b8b16167ea96fc1985">   33</a></span>&#160;  <a class="code" href="group__compiler.html#ga9bad82e58fd112125ce91d50ce59b583">CENTURION_NODISCARD_CTOR</a> <span class="keyword">explicit</span> <a class="code" href="classcen_1_1try__lock.html#afbeef694850172b8b16167ea96fc1985">try_lock</a>(<a class="code" href="classcen_1_1mutex.html">mutex</a>&amp; <a class="code" href="classcen_1_1mutex.html">mutex</a>) noexcept</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      : m_mutex{&amp;<a class="code" href="classcen_1_1mutex.html">mutex</a>}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      , m_status{<a class="code" href="classcen_1_1mutex.html">mutex</a>.<a class="code" href="classcen_1_1mutex.html#a52c3802386f8a390427fca6f27ca6922">try_lock</a>()}</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  {}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classcen_1_1try__lock.html#aa796ecf42a73cb4ff229f574d3c706e4">   38</a></span>&#160;  <a class="code" href="classcen_1_1try__lock.html#aa796ecf42a73cb4ff229f574d3c706e4">try_lock</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1try__lock.html">try_lock</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classcen_1_1try__lock.html#a6c0489a86bf80676def2cbc977472df0">   40</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1try__lock.html#a6c0489a86bf80676def2cbc977472df0">operator=</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1try__lock.html">try_lock</a>&amp;) -&gt; <a class="code" href="classcen_1_1try__lock.html">try_lock</a>&amp; = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classcen_1_1try__lock.html#abed4744fe94c14e49b8801300ecea46d">   47</a></span>&#160;  <a class="code" href="classcen_1_1try__lock.html#abed4744fe94c14e49b8801300ecea46d">~try_lock</a>() noexcept</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">if</span> (m_status == <a class="code" href="group__thread.html#gga81e5eda2a43cc39dee8bb8d60cff70d3a260ca9dd8a4577fc00b7bd5810298076">lock_status::success</a>) {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      m_mutex-&gt;<a class="code" href="classcen_1_1mutex.html#a7c44d35e23ca44c8f7ff54da5f209c00">unlock</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classcen_1_1try__lock.html#a755275984d0e08871e87675e459f4ad4">   61</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1try__lock.html#a755275984d0e08871e87675e459f4ad4">get_status</a>() const noexcept -&gt; <a class="code" href="group__thread.html#ga81e5eda2a43cc39dee8bb8d60cff70d3">lock_status</a></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">return</span> m_status;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classcen_1_1try__lock.html#aca59fbfd10054d9ed33a0ec9c96e0a27">   73</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1try__lock.html#aca59fbfd10054d9ed33a0ec9c96e0a27">success</a>() const noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classcen_1_1try__lock.html#a755275984d0e08871e87675e459f4ad4">get_status</a>() == <a class="code" href="group__thread.html#gga81e5eda2a43cc39dee8bb8d60cff70d3a260ca9dd8a4577fc00b7bd5810298076">lock_status::success</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classcen_1_1try__lock.html#a2ff0a000566168ab78d93034b5343e8a">   85</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1try__lock.html#a2ff0a000566168ab78d93034b5343e8a">timed_out</a>() const noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classcen_1_1try__lock.html#a755275984d0e08871e87675e459f4ad4">get_status</a>() == <a class="code" href="group__thread.html#gga81e5eda2a43cc39dee8bb8d60cff70d3a56c27b1ab1a5a5a0eae853cabb4dc0c1">lock_status::timed_out</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classcen_1_1try__lock.html#a052bc9ede807a2c7172198661f6a3c0d">   97</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1try__lock.html#a052bc9ede807a2c7172198661f6a3c0d">error</a>() const noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classcen_1_1try__lock.html#a755275984d0e08871e87675e459f4ad4">get_status</a>() == <a class="code" href="group__thread.html#gga81e5eda2a43cc39dee8bb8d60cff70d3acb5e100e5a9a3e7f6d1fd97512215282">lock_status::error</a>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classcen_1_1try__lock.html#a1e36e61d7206d5e714e9d6a33e7c75af">  103</a></span>&#160;  [[nodiscard]] <span class="keyword">explicit</span> <span class="keyword">operator</span> bool() const noexcept</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classcen_1_1try__lock.html#aca59fbfd10054d9ed33a0ec9c96e0a27">success</a>();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <a class="code" href="classcen_1_1mutex.html">mutex</a>* m_mutex{};</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <a class="code" href="group__thread.html#ga81e5eda2a43cc39dee8bb8d60cff70d3">lock_status</a> m_status{};</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;};</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}  <span class="comment">// namespace cen</span></div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}  <span class="comment">// namespace cen</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_TRY_LOCK_HEADER</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_TRY_LOCK_HEADER</span></div>
 <div class="ttc" id="aclasscen_1_1mutex_html"><div class="ttname"><a href="classcen_1_1mutex.html">cen::mutex</a></div><div class="ttdoc">Represents a recursive mutex.</div><div class="ttdef"><b>Definition:</b> mutex.hpp:31</div></div>
-<div class="ttc" id="aclasscen_1_1mutex_html_a52c3802386f8a390427fca6f27ca6922"><div class="ttname"><a href="classcen_1_1mutex.html#a52c3802386f8a390427fca6f27ca6922">cen::mutex::try_lock</a></div><div class="ttdeci">auto try_lock() noexcept -&gt; lock_status</div><div class="ttdoc">Attempts to lock the mutex, returns if the mutex isn't available.</div><div class="ttdef"><b>Definition:</b> mutex.hpp:67</div></div>
-<div class="ttc" id="aclasscen_1_1mutex_html_a7c44d35e23ca44c8f7ff54da5f209c00"><div class="ttname"><a href="classcen_1_1mutex.html#a7c44d35e23ca44c8f7ff54da5f209c00">cen::mutex::unlock</a></div><div class="ttdeci">auto unlock() noexcept -&gt; result</div><div class="ttdoc">Attempts to unlock the mutex.</div><div class="ttdef"><b>Definition:</b> mutex.hpp:79</div></div>
-<div class="ttc" id="aclasscen_1_1try__lock_html"><div class="ttname"><a href="classcen_1_1try__lock.html">cen::try_lock</a></div><div class="ttdoc">Represents an RAII-style non-blocking lock that automatically unlocks the associated mutex upon destr...</div><div class="ttdef"><b>Definition:</b> try_lock.hpp:27</div></div>
-<div class="ttc" id="aclasscen_1_1try__lock_html_a052bc9ede807a2c7172198661f6a3c0d"><div class="ttname"><a href="classcen_1_1try__lock.html#a052bc9ede807a2c7172198661f6a3c0d">cen::try_lock::error</a></div><div class="ttdeci">auto error() const noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not there was an error whilst locking the mutex.</div><div class="ttdef"><b>Definition:</b> try_lock.hpp:101</div></div>
-<div class="ttc" id="aclasscen_1_1try__lock_html_a2ff0a000566168ab78d93034b5343e8a"><div class="ttname"><a href="classcen_1_1try__lock.html#a2ff0a000566168ab78d93034b5343e8a">cen::try_lock::timed_out</a></div><div class="ttdeci">auto timed_out() const noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the lock timed out whilst trying to lock the mutex.</div><div class="ttdef"><b>Definition:</b> try_lock.hpp:89</div></div>
+<div class="ttc" id="aclasscen_1_1mutex_html_a52c3802386f8a390427fca6f27ca6922"><div class="ttname"><a href="classcen_1_1mutex.html#a52c3802386f8a390427fca6f27ca6922">cen::mutex::try_lock</a></div><div class="ttdeci">auto try_lock() noexcept -&gt; lock_status</div><div class="ttdoc">Attempts to lock the mutex, returns if the mutex isn't available.</div><div class="ttdef"><b>Definition:</b> mutex.hpp:66</div></div>
+<div class="ttc" id="aclasscen_1_1mutex_html_a7c44d35e23ca44c8f7ff54da5f209c00"><div class="ttname"><a href="classcen_1_1mutex.html#a7c44d35e23ca44c8f7ff54da5f209c00">cen::mutex::unlock</a></div><div class="ttdeci">auto unlock() noexcept -&gt; result</div><div class="ttdoc">Attempts to unlock the mutex.</div><div class="ttdef"><b>Definition:</b> mutex.hpp:78</div></div>
+<div class="ttc" id="aclasscen_1_1try__lock_html"><div class="ttname"><a href="classcen_1_1try__lock.html">cen::try_lock</a></div><div class="ttdoc">Represents an RAII-style non-blocking lock that automatically unlocks the associated mutex upon destr...</div><div class="ttdef"><b>Definition:</b> try_lock.hpp:24</div></div>
+<div class="ttc" id="aclasscen_1_1try__lock_html_a052bc9ede807a2c7172198661f6a3c0d"><div class="ttname"><a href="classcen_1_1try__lock.html#a052bc9ede807a2c7172198661f6a3c0d">cen::try_lock::error</a></div><div class="ttdeci">auto error() const noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not there was an error whilst locking the mutex.</div><div class="ttdef"><b>Definition:</b> try_lock.hpp:97</div></div>
+<div class="ttc" id="aclasscen_1_1try__lock_html_a2ff0a000566168ab78d93034b5343e8a"><div class="ttname"><a href="classcen_1_1try__lock.html#a2ff0a000566168ab78d93034b5343e8a">cen::try_lock::timed_out</a></div><div class="ttdeci">auto timed_out() const noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the lock timed out whilst trying to lock the mutex.</div><div class="ttdef"><b>Definition:</b> try_lock.hpp:85</div></div>
 <div class="ttc" id="aclasscen_1_1try__lock_html_a6c0489a86bf80676def2cbc977472df0"><div class="ttname"><a href="classcen_1_1try__lock.html#a6c0489a86bf80676def2cbc977472df0">cen::try_lock::operator=</a></div><div class="ttdeci">auto operator=(const try_lock &amp;) -&gt; try_lock &amp;=delete</div></div>
-<div class="ttc" id="aclasscen_1_1try__lock_html_a755275984d0e08871e87675e459f4ad4"><div class="ttname"><a href="classcen_1_1try__lock.html#a755275984d0e08871e87675e459f4ad4">cen::try_lock::get_status</a></div><div class="ttdeci">auto get_status() const noexcept -&gt; lock_status</div><div class="ttdoc">Returns the result of trying to lock the associated mutex.</div><div class="ttdef"><b>Definition:</b> try_lock.hpp:65</div></div>
+<div class="ttc" id="aclasscen_1_1try__lock_html_a755275984d0e08871e87675e459f4ad4"><div class="ttname"><a href="classcen_1_1try__lock.html#a755275984d0e08871e87675e459f4ad4">cen::try_lock::get_status</a></div><div class="ttdeci">auto get_status() const noexcept -&gt; lock_status</div><div class="ttdoc">Returns the result of trying to lock the associated mutex.</div><div class="ttdef"><b>Definition:</b> try_lock.hpp:61</div></div>
 <div class="ttc" id="aclasscen_1_1try__lock_html_aa796ecf42a73cb4ff229f574d3c706e4"><div class="ttname"><a href="classcen_1_1try__lock.html#aa796ecf42a73cb4ff229f574d3c706e4">cen::try_lock::try_lock</a></div><div class="ttdeci">try_lock(const try_lock &amp;)=delete</div></div>
-<div class="ttc" id="aclasscen_1_1try__lock_html_abed4744fe94c14e49b8801300ecea46d"><div class="ttname"><a href="classcen_1_1try__lock.html#abed4744fe94c14e49b8801300ecea46d">cen::try_lock::~try_lock</a></div><div class="ttdeci">~try_lock() noexcept</div><div class="ttdoc">Unlocks the associated mutex if it was successfully locked.</div><div class="ttdef"><b>Definition:</b> try_lock.hpp:50</div></div>
-<div class="ttc" id="aclasscen_1_1try__lock_html_aca59fbfd10054d9ed33a0ec9c96e0a27"><div class="ttname"><a href="classcen_1_1try__lock.html#aca59fbfd10054d9ed33a0ec9c96e0a27">cen::try_lock::success</a></div><div class="ttdeci">auto success() const noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the mutex was successfully locked.</div><div class="ttdef"><b>Definition:</b> try_lock.hpp:77</div></div>
-<div class="ttc" id="aclasscen_1_1try__lock_html_afbeef694850172b8b16167ea96fc1985"><div class="ttname"><a href="classcen_1_1try__lock.html#afbeef694850172b8b16167ea96fc1985">cen::try_lock::try_lock</a></div><div class="ttdeci">try_lock(mutex &amp;mutex) noexcept</div><div class="ttdoc">Attempts to lock the supplied mutex.</div><div class="ttdef"><b>Definition:</b> try_lock.hpp:36</div></div>
+<div class="ttc" id="aclasscen_1_1try__lock_html_abed4744fe94c14e49b8801300ecea46d"><div class="ttname"><a href="classcen_1_1try__lock.html#abed4744fe94c14e49b8801300ecea46d">cen::try_lock::~try_lock</a></div><div class="ttdeci">~try_lock() noexcept</div><div class="ttdoc">Unlocks the associated mutex if it was successfully locked.</div><div class="ttdef"><b>Definition:</b> try_lock.hpp:47</div></div>
+<div class="ttc" id="aclasscen_1_1try__lock_html_aca59fbfd10054d9ed33a0ec9c96e0a27"><div class="ttname"><a href="classcen_1_1try__lock.html#aca59fbfd10054d9ed33a0ec9c96e0a27">cen::try_lock::success</a></div><div class="ttdeci">auto success() const noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the mutex was successfully locked.</div><div class="ttdef"><b>Definition:</b> try_lock.hpp:73</div></div>
+<div class="ttc" id="aclasscen_1_1try__lock_html_afbeef694850172b8b16167ea96fc1985"><div class="ttname"><a href="classcen_1_1try__lock.html#afbeef694850172b8b16167ea96fc1985">cen::try_lock::try_lock</a></div><div class="ttdeci">try_lock(mutex &amp;mutex) noexcept</div><div class="ttdoc">Attempts to lock the supplied mutex.</div><div class="ttdef"><b>Definition:</b> try_lock.hpp:33</div></div>
 <div class="ttc" id="agroup__compiler_html_ga9bad82e58fd112125ce91d50ce59b583"><div class="ttname"><a href="group__compiler.html#ga9bad82e58fd112125ce91d50ce59b583">CENTURION_NODISCARD_CTOR</a></div><div class="ttdeci">#define CENTURION_NODISCARD_CTOR</div><div class="ttdef"><b>Definition:</b> features.hpp:18</div></div>
 <div class="ttc" id="agroup__thread_html_ga81e5eda2a43cc39dee8bb8d60cff70d3"><div class="ttname"><a href="group__thread.html#ga81e5eda2a43cc39dee8bb8d60cff70d3">cen::lock_status</a></div><div class="ttdeci">lock_status</div><div class="ttdef"><b>Definition:</b> lock_status.hpp:17</div></div>
 <div class="ttc" id="agroup__thread_html_gga81e5eda2a43cc39dee8bb8d60cff70d3a260ca9dd8a4577fc00b7bd5810298076"><div class="ttname"><a href="group__thread.html#gga81e5eda2a43cc39dee8bb8d60cff70d3a260ca9dd8a4577fc00b7bd5810298076">cen::lock_status::success</a></div><div class="ttdeci">@ success</div></div>

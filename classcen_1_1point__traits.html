@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -139,25 +139,6 @@ class cen::point_traits&lt; T, &gt;</h3>
 <dd>
 <code><a class="el" href="group__math.html#gac8dd351748b0f07b280e685ae4097d40" title="Alias for a float-based point.">fpoint</a></code> </dd></dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="ad6c60a4ce30e239c564dcbb0b51e6f0a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6c60a4ce30e239c564dcbb0b51e6f0a">&#9670;&nbsp;</a></span>point_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , enable_if_convertible_t&lt; T, int, float &gt;  = 0&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classcen_1_1point__traits.html">cen::point_traits</a>&lt; T, &gt;::<a class="el" href="classcen_1_1point__traits.html#ad6c60a4ce30e239c564dcbb0b51e6f0a">point_type</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The SDL point type, i.e. <code>SDL_Point</code> or <code>SDL_FPoint</code>. </p>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
 <a id="a20b5aacf147e2f7ce748358c76f10c12"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a20b5aacf147e2f7ce748358c76f10c12">&#9670;&nbsp;</a></span>value_type</h2>
 
@@ -177,34 +158,26 @@ template&lt;typename T , enable_if_convertible_t&lt; T, int, float &gt;  = 0&gt;
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a6920e169774292518106e2378f298abd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6920e169774292518106e2378f298abd">&#9670;&nbsp;</a></span>isFloating</h2>
+<a id="ad6c60a4ce30e239c564dcbb0b51e6f0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6c60a4ce30e239c564dcbb0b51e6f0a">&#9670;&nbsp;</a></span>point_type</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T , enable_if_convertible_t&lt; T, int, float &gt;  = 0&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classcen_1_1point__traits.html">cen::point_traits</a>&lt; T, &gt;::isFloating = std::is_floating_point_v&lt;T&gt;</td>
+          <td class="memname"><a class="el" href="classcen_1_1point__traits.html">cen::point_traits</a>&lt; T, &gt;::<a class="el" href="classcen_1_1point__traits.html#ad6c60a4ce30e239c564dcbb0b51e6f0a">point_type</a></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Indicates whether or not the point is based on a floating-point type. </p>
+<p>The SDL point type, i.e. <code>SDL_Point</code> or <code>SDL_FPoint</code>. </p>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
 <a id="a91dd0be43f6cf43558db0546b9387cf0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a91dd0be43f6cf43558db0546b9387cf0">&#9670;&nbsp;</a></span>isIntegral</h2>
 
@@ -228,6 +201,33 @@ template&lt;typename T , enable_if_convertible_t&lt; T, int, float &gt;  = 0&gt;
 </div><div class="memdoc">
 
 <p>Indicates whether or not the point is based on an integral type. </p>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a6920e169774292518106e2378f298abd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6920e169774292518106e2378f298abd">&#9670;&nbsp;</a></span>isFloating</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , enable_if_convertible_t&lt; T, int, float &gt;  = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcen_1_1point__traits.html">cen::point_traits</a>&lt; T, &gt;::isFloating = std::is_floating_point_v&lt;T&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the point is based on a floating-point type. </p>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>

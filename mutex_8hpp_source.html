@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -112,43 +112,43 @@ $(document).ready(function(){initNavTree('mutex_8hpp_source.html',''); initResiz
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classcen_1_1mutex.html#a949789ca5e0c981860c6ae023df09177">   40</a></span>&#160;  <a class="code" href="classcen_1_1mutex.html#a949789ca5e0c981860c6ae023df09177">mutex</a>() : m_mutex{SDL_CreateMutex()}</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">if</span> (!m_mutex)</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1sdl__error.html">sdl_error</a>{};</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classcen_1_1mutex.html#a95670d7e536009a3455f71d1bc350ed5">   55</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1mutex.html#a95670d7e536009a3455f71d1bc350ed5">lock</a>() noexcept -&gt; <a class="code" href="classcen_1_1result.html">result</a></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">return</span> SDL_LockMutex(<a class="code" href="classcen_1_1mutex.html#a67879f779ea892ab51a38a568e61df32">get</a>()) == 0;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classcen_1_1mutex.html#a52c3802386f8a390427fca6f27ca6922">   67</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1mutex.html#a52c3802386f8a390427fca6f27ca6922">try_lock</a>() noexcept -&gt; <a class="code" href="group__thread.html#ga81e5eda2a43cc39dee8bb8d60cff70d3">lock_status</a></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="group__thread.html#ga81e5eda2a43cc39dee8bb8d60cff70d3">lock_status</a><span class="keyword">&gt;</span>(SDL_TryLockMutex(<a class="code" href="classcen_1_1mutex.html#a67879f779ea892ab51a38a568e61df32">get</a>()));</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classcen_1_1mutex.html#a7c44d35e23ca44c8f7ff54da5f209c00">   79</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1mutex.html#a7c44d35e23ca44c8f7ff54da5f209c00">unlock</a>() noexcept -&gt; <a class="code" href="classcen_1_1result.html">result</a></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">return</span> SDL_UnlockMutex(<a class="code" href="classcen_1_1mutex.html#a67879f779ea892ab51a38a568e61df32">get</a>()) == 0;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classcen_1_1mutex.html#a67879f779ea892ab51a38a568e61df32">   91</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1mutex.html#a67879f779ea892ab51a38a568e61df32">get</a>() noexcept -&gt; SDL_mutex*</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">return</span> m_mutex.get();</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keyword">struct </span>deleter final</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">void</span> operator()(SDL_mutex* <a class="code" href="classcen_1_1mutex.html">mutex</a>) noexcept</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      SDL_DestroyMutex(<a class="code" href="classcen_1_1mutex.html">mutex</a>);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  };</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  std::unique_ptr&lt;SDL_mutex, deleter&gt; m_mutex;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#ifdef CENTURION_MOCK_FRIENDLY_MODE</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">if</span> (!m_mutex) {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1sdl__error.html">sdl_error</a>{};</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classcen_1_1mutex.html#a95670d7e536009a3455f71d1bc350ed5">   54</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1mutex.html#a95670d7e536009a3455f71d1bc350ed5">lock</a>() noexcept -&gt; <a class="code" href="classcen_1_1result.html">result</a></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">return</span> SDL_LockMutex(<a class="code" href="classcen_1_1mutex.html#a67879f779ea892ab51a38a568e61df32">get</a>()) == 0;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classcen_1_1mutex.html#a52c3802386f8a390427fca6f27ca6922">   66</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1mutex.html#a52c3802386f8a390427fca6f27ca6922">try_lock</a>() noexcept -&gt; <a class="code" href="group__thread.html#ga81e5eda2a43cc39dee8bb8d60cff70d3">lock_status</a></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="group__thread.html#ga81e5eda2a43cc39dee8bb8d60cff70d3">lock_status</a><span class="keyword">&gt;</span>(SDL_TryLockMutex(<a class="code" href="classcen_1_1mutex.html#a67879f779ea892ab51a38a568e61df32">get</a>()));</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classcen_1_1mutex.html#a7c44d35e23ca44c8f7ff54da5f209c00">   78</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1mutex.html#a7c44d35e23ca44c8f7ff54da5f209c00">unlock</a>() noexcept -&gt; <a class="code" href="classcen_1_1result.html">result</a></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">return</span> SDL_UnlockMutex(<a class="code" href="classcen_1_1mutex.html#a67879f779ea892ab51a38a568e61df32">get</a>()) == 0;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classcen_1_1mutex.html#a67879f779ea892ab51a38a568e61df32">   90</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1mutex.html#a67879f779ea892ab51a38a568e61df32">get</a>() noexcept -&gt; SDL_mutex*</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">return</span> m_mutex.get();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keyword">struct </span>deleter final</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">void</span> operator()(SDL_mutex* <a class="code" href="classcen_1_1mutex.html">mutex</a>) noexcept</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      SDL_DestroyMutex(<a class="code" href="classcen_1_1mutex.html">mutex</a>);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  };</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  std::unique_ptr&lt;SDL_mutex, deleter&gt; m_mutex;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#ifdef CENTURION_MOCK_FRIENDLY_MODE</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classcen_1_1mutex.html#a949789ca5e0c981860c6ae023df09177">mutex</a>(<span class="keywordtype">int</span>){};</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_MOCK_FRIENDLY_MODE</span></div>
@@ -159,11 +159,11 @@ $(document).ready(function(){initNavTree('mutex_8hpp_source.html',''); initResiz
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_MUTEX_HEADER</span></div>
 <div class="ttc" id="aclasscen_1_1mutex_html"><div class="ttname"><a href="classcen_1_1mutex.html">cen::mutex</a></div><div class="ttdoc">Represents a recursive mutex.</div><div class="ttdef"><b>Definition:</b> mutex.hpp:31</div></div>
-<div class="ttc" id="aclasscen_1_1mutex_html_a52c3802386f8a390427fca6f27ca6922"><div class="ttname"><a href="classcen_1_1mutex.html#a52c3802386f8a390427fca6f27ca6922">cen::mutex::try_lock</a></div><div class="ttdeci">auto try_lock() noexcept -&gt; lock_status</div><div class="ttdoc">Attempts to lock the mutex, returns if the mutex isn't available.</div><div class="ttdef"><b>Definition:</b> mutex.hpp:67</div></div>
-<div class="ttc" id="aclasscen_1_1mutex_html_a67879f779ea892ab51a38a568e61df32"><div class="ttname"><a href="classcen_1_1mutex.html#a67879f779ea892ab51a38a568e61df32">cen::mutex::get</a></div><div class="ttdeci">auto get() noexcept -&gt; SDL_mutex *</div><div class="ttdoc">Returns a pointer to the associated SDL mutex.</div><div class="ttdef"><b>Definition:</b> mutex.hpp:91</div></div>
-<div class="ttc" id="aclasscen_1_1mutex_html_a7c44d35e23ca44c8f7ff54da5f209c00"><div class="ttname"><a href="classcen_1_1mutex.html#a7c44d35e23ca44c8f7ff54da5f209c00">cen::mutex::unlock</a></div><div class="ttdeci">auto unlock() noexcept -&gt; result</div><div class="ttdoc">Attempts to unlock the mutex.</div><div class="ttdef"><b>Definition:</b> mutex.hpp:79</div></div>
+<div class="ttc" id="aclasscen_1_1mutex_html_a52c3802386f8a390427fca6f27ca6922"><div class="ttname"><a href="classcen_1_1mutex.html#a52c3802386f8a390427fca6f27ca6922">cen::mutex::try_lock</a></div><div class="ttdeci">auto try_lock() noexcept -&gt; lock_status</div><div class="ttdoc">Attempts to lock the mutex, returns if the mutex isn't available.</div><div class="ttdef"><b>Definition:</b> mutex.hpp:66</div></div>
+<div class="ttc" id="aclasscen_1_1mutex_html_a67879f779ea892ab51a38a568e61df32"><div class="ttname"><a href="classcen_1_1mutex.html#a67879f779ea892ab51a38a568e61df32">cen::mutex::get</a></div><div class="ttdeci">auto get() noexcept -&gt; SDL_mutex *</div><div class="ttdoc">Returns a pointer to the associated SDL mutex.</div><div class="ttdef"><b>Definition:</b> mutex.hpp:90</div></div>
+<div class="ttc" id="aclasscen_1_1mutex_html_a7c44d35e23ca44c8f7ff54da5f209c00"><div class="ttname"><a href="classcen_1_1mutex.html#a7c44d35e23ca44c8f7ff54da5f209c00">cen::mutex::unlock</a></div><div class="ttdeci">auto unlock() noexcept -&gt; result</div><div class="ttdoc">Attempts to unlock the mutex.</div><div class="ttdef"><b>Definition:</b> mutex.hpp:78</div></div>
 <div class="ttc" id="aclasscen_1_1mutex_html_a949789ca5e0c981860c6ae023df09177"><div class="ttname"><a href="classcen_1_1mutex.html#a949789ca5e0c981860c6ae023df09177">cen::mutex::mutex</a></div><div class="ttdeci">mutex()</div><div class="ttdoc">Creates an unlocked mutex.</div><div class="ttdef"><b>Definition:</b> mutex.hpp:40</div></div>
-<div class="ttc" id="aclasscen_1_1mutex_html_a95670d7e536009a3455f71d1bc350ed5"><div class="ttname"><a href="classcen_1_1mutex.html#a95670d7e536009a3455f71d1bc350ed5">cen::mutex::lock</a></div><div class="ttdeci">auto lock() noexcept -&gt; result</div><div class="ttdoc">Attempts to lock the mutex, blocks if the mutex isn't available.</div><div class="ttdef"><b>Definition:</b> mutex.hpp:55</div></div>
+<div class="ttc" id="aclasscen_1_1mutex_html_a95670d7e536009a3455f71d1bc350ed5"><div class="ttname"><a href="classcen_1_1mutex.html#a95670d7e536009a3455f71d1bc350ed5">cen::mutex::lock</a></div><div class="ttdeci">auto lock() noexcept -&gt; result</div><div class="ttdoc">Attempts to lock the mutex, blocks if the mutex isn't available.</div><div class="ttdef"><b>Definition:</b> mutex.hpp:54</div></div>
 <div class="ttc" id="aclasscen_1_1result_html"><div class="ttname"><a href="classcen_1_1result.html">cen::result</a></div><div class="ttdoc">A simple indicator for the result of different operations.</div><div class="ttdef"><b>Definition:</b> result.hpp:50</div></div>
 <div class="ttc" id="aclasscen_1_1sdl__error_html"><div class="ttname"><a href="classcen_1_1sdl__error.html">cen::sdl_error</a></div><div class="ttdoc">Represents an error related to the core SDL2 library.</div><div class="ttdef"><b>Definition:</b> exception.hpp:64</div></div>
 <div class="ttc" id="agroup__thread_html_ga81e5eda2a43cc39dee8bb8d60cff70d3"><div class="ttname"><a href="group__thread.html#ga81e5eda2a43cc39dee8bb8d60cff70d3">cen::lock_status</a></div><div class="ttdeci">lock_status</div><div class="ttdef"><b>Definition:</b> lock_status.hpp:17</div></div>

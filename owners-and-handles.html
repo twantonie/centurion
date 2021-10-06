@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -140,8 +140,8 @@ Examples</h1>
 <div class="line">  <span class="comment">// Do stuff...</span></div>
 <div class="line"> </div>
 <div class="line">} <span class="comment">// The window is only destroyed once, since the handle is non-owning</span></div>
-<div class="ttc" id="aclasscen_1_1basic__window_html"><div class="ttname"><a href="classcen_1_1basic__window.html">cen::basic_window</a></div><div class="ttdoc">Represents an operating system window.</div><div class="ttdef"><b>Definition:</b> window.hpp:84</div></div>
-<div class="ttc" id="agroup__video_html_gaf061afd66d5eb42fc564662e1d864828"><div class="ttname"><a href="group__video.html#gaf061afd66d5eb42fc564662e1d864828">cen::window</a></div><div class="ttdeci">basic_window&lt; detail::owning_type &gt; window</div><div class="ttdoc">Represents an owning window.</div><div class="ttdef"><b>Definition:</b> window.hpp:53</div></div>
+<div class="ttc" id="aclasscen_1_1basic__window_html"><div class="ttname"><a href="classcen_1_1basic__window.html">cen::basic_window</a></div><div class="ttdoc">Represents an operating system window.</div><div class="ttdef"><b>Definition:</b> window.hpp:82</div></div>
+<div class="ttc" id="agroup__video_html_gaf061afd66d5eb42fc564662e1d864828"><div class="ttname"><a href="group__video.html#gaf061afd66d5eb42fc564662e1d864828">cen::window</a></div><div class="ttdeci">basic_window&lt; detail::owning_type &gt; window</div><div class="ttdoc">Represents an owning window.</div><div class="ttdef"><b>Definition:</b> window.hpp:51</div></div>
 </div><!-- fragment --><p>So what makes owners and handles so useful? Well, let's imagine a simple function like the following, which takes a non-owning pointer to an SDL struct, such as <code>SDL_Renderer</code>.</p>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> foo(SDL_Renderer* ptr)</div>
 <div class="line">{</div>
@@ -155,8 +155,8 @@ Examples</h1>
 <div class="line">  <span class="comment">// Fancier rendering...</span></div>
 <div class="line"> </div>
 <div class="line">} <span class="comment">// Oops, the renderer is deleted here!</span></div>
-<div class="ttc" id="aclasscen_1_1basic__renderer_html"><div class="ttname"><a href="classcen_1_1basic__renderer.html">cen::basic_renderer</a></div><div class="ttdoc">Provides 2D-rendering that is potentially hardware-accelerated.</div><div class="ttdef"><b>Definition:</b> renderer.hpp:104</div></div>
-<div class="ttc" id="agroup__video_html_gad2d8e020a073e6f7e05af85abbbe0476"><div class="ttname"><a href="group__video.html#gad2d8e020a073e6f7e05af85abbbe0476">cen::renderer</a></div><div class="ttdeci">basic_renderer&lt; detail::owning_type &gt; renderer</div><div class="ttdoc">Represents an owning renderer.</div><div class="ttdef"><b>Definition:</b> renderer.hpp:59</div></div>
+<div class="ttc" id="aclasscen_1_1basic__renderer_html"><div class="ttname"><a href="classcen_1_1basic__renderer.html">cen::basic_renderer</a></div><div class="ttdoc">Provides 2D-rendering that is potentially hardware-accelerated.</div><div class="ttdef"><b>Definition:</b> renderer.hpp:102</div></div>
+<div class="ttc" id="agroup__video_html_gad2d8e020a073e6f7e05af85abbbe0476"><div class="ttname"><a href="group__video.html#gad2d8e020a073e6f7e05af85abbbe0476">cen::renderer</a></div><div class="ttdeci">basic_renderer&lt; detail::owning_type &gt; renderer</div><div class="ttdoc">Represents an owning renderer.</div><div class="ttdef"><b>Definition:</b> renderer.hpp:57</div></div>
 </div><!-- fragment --><p>The problem with the above approach is that <b>we cannot supply a non-owning pointer to an owning Centurion component</b>. This is where handles come to the rescue! Handles are perfect for providing a <em>view</em> into the fancy Centurion APIs, without committing ownership of the associated resources. A correct version of the earlier example would look like the following.</p>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> foo(SDL_Renderer* ptr)</div>
 <div class="line">{</div>

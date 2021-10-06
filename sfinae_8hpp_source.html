@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -114,14 +114,13 @@ $(document).ready(function(){initNavTree('sfinae_8hpp_source.html',''); initResi
 <div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="group__core.html#gafce94e372a958cc90aa690615e81b3e5">   23</a></span>&#160;<span class="keyword">using</span> <a class="code" href="group__core.html#gafce94e372a958cc90aa690615e81b3e5">enable_if_pointer_v</a> = std::enable_if_t&lt;std::is_pointer_v&lt;T&gt;, <span class="keywordtype">int</span>&gt;;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Args&gt;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="group__core.html#ga321b1f0f88fb93fbbb8b527733132330">   27</a></span>&#160;<span class="keyword">using</span> <a class="code" href="group__core.html#ga321b1f0f88fb93fbbb8b527733132330">enable_if_convertible_t</a> =</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    std::enable_if_t&lt;(std::is_convertible_v&lt;T, Args&gt; || ...), <span class="keywordtype">int</span>&gt;;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}  <span class="comment">// namespace cen</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_SFINAE_HEADER</span></div>
-<div class="ttc" id="agroup__core_html_ga321b1f0f88fb93fbbb8b527733132330"><div class="ttname"><a href="group__core.html#ga321b1f0f88fb93fbbb8b527733132330">cen::enable_if_convertible_t</a></div><div class="ttdeci">std::enable_if_t&lt;(std::is_convertible_v&lt; T, Args &gt;||...), int &gt; enable_if_convertible_t</div><div class="ttdoc">Enables a template if T is convertible to any of the specified types.</div><div class="ttdef"><b>Definition:</b> sfinae.hpp:28</div></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="group__core.html#ga321b1f0f88fb93fbbb8b527733132330">   27</a></span>&#160;<span class="keyword">using</span> <a class="code" href="group__core.html#ga321b1f0f88fb93fbbb8b527733132330">enable_if_convertible_t</a> = std::enable_if_t&lt;(std::is_convertible_v&lt;T, Args&gt; || ...), <span class="keywordtype">int</span>&gt;;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}  <span class="comment">// namespace cen</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_SFINAE_HEADER</span></div>
+<div class="ttc" id="agroup__core_html_ga321b1f0f88fb93fbbb8b527733132330"><div class="ttname"><a href="group__core.html#ga321b1f0f88fb93fbbb8b527733132330">cen::enable_if_convertible_t</a></div><div class="ttdeci">std::enable_if_t&lt;(std::is_convertible_v&lt; T, Args &gt;||...), int &gt; enable_if_convertible_t</div><div class="ttdoc">Enables a template if T is convertible to any of the specified types.</div><div class="ttdef"><b>Definition:</b> sfinae.hpp:27</div></div>
 <div class="ttc" id="agroup__core_html_ga7545e3b19148e7aa04c43e8dca24226a"><div class="ttname"><a href="group__core.html#ga7545e3b19148e7aa04c43e8dca24226a">cen::enable_if_number_t</a></div><div class="ttdeci">std::enable_if_t&lt;!std::is_same_v&lt; T, bool &gt; &amp;&amp;(std::is_integral_v&lt; T &gt;||std::is_floating_point_v&lt; T &gt;), int &gt; enable_if_number_t</div><div class="ttdoc">Enables a template if the type is either integral of floating-point, but not a boolean.</div><div class="ttdef"><b>Definition:</b> sfinae.hpp:17</div></div>
 <div class="ttc" id="agroup__core_html_gafce94e372a958cc90aa690615e81b3e5"><div class="ttname"><a href="group__core.html#gafce94e372a958cc90aa690615e81b3e5">cen::enable_if_pointer_v</a></div><div class="ttdeci">std::enable_if_t&lt; std::is_pointer_v&lt; T &gt;, int &gt; enable_if_pointer_v</div><div class="ttdoc">Enables a template if the type is a pointer.</div><div class="ttdef"><b>Definition:</b> sfinae.hpp:23</div></div>
 <div class="ttc" id="anamespacecen_html"><div class="ttname"><a href="namespacecen.html">cen</a></div><div class="ttdoc">The top-level namespace that all components of the library reside in.</div><div class="ttdef"><b>Definition:</b> channels.hpp:14</div></div>

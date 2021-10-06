@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -242,8 +242,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aafe2d2abdd112945c0f9e2d9747e21bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aafe2d2abdd112945c0f9e2d9747e21bf">&#9670;&nbsp;</a></span>length()</h2>
+<a id="ac1e65715d5c708f0c8dcc3d958394e58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1e65715d5c708f0c8dcc3d958394e58">&#9670;&nbsp;</a></span>set_window_id()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -252,41 +252,10 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::text_editing_event::length </td>
+          <td class="memname">void cen::text_editing_event::set_window_id </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__core.html#gaa69ad1561271765c17f77879a492d85b">i32</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the number of characters to edit from the start point. </p>
-<p>The returned value will always be in the range [0, 32].</p>
-<dl class="section return"><dt>Returns</dt><dd>the number of characters to edit from the start point.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a8a852c3755132fb702b2bc3a49bc71cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a852c3755132fb702b2bc3a49bc71cc">&#9670;&nbsp;</a></span>set_length()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cen::text_editing_event::set_length </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#gaa69ad1561271765c17f77879a492d85b">i32</a>&#160;</td>
-          <td class="paramname"><em>length</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -297,11 +266,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sets the number of characters to edit from the start point. </p>
-<p>The supplied value will be clamped to the range [0, 32].</p>
+<p>Sets the window ID associated with the event. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">length</td><td>the number of characters to edit from the start point.</td></tr>
+    <tr><td class="paramname">id</td><td>the window ID associated with the event.</td></tr>
   </table>
   </dd>
 </dl>
@@ -344,8 +312,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ac1e65715d5c708f0c8dcc3d958394e58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1e65715d5c708f0c8dcc3d958394e58">&#9670;&nbsp;</a></span>set_window_id()</h2>
+<a id="a8a852c3755132fb702b2bc3a49bc71cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a852c3755132fb702b2bc3a49bc71cc">&#9670;&nbsp;</a></span>set_length()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -354,10 +322,10 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void cen::text_editing_event::set_window_id </td>
+          <td class="memname">void cen::text_editing_event::set_length </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#gaa69ad1561271765c17f77879a492d85b">i32</a>&#160;</td>
+          <td class="paramname"><em>length</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -368,10 +336,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sets the window ID associated with the event. </p>
+<p>Sets the number of characters to edit from the start point. </p>
+<p>The supplied value will be clamped to the range [0, 32].</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">id</td><td>the window ID associated with the event.</td></tr>
+    <tr><td class="paramname">length</td><td>the number of characters to edit from the start point.</td></tr>
   </table>
   </dd>
 </dl>
@@ -379,8 +348,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a048b58e9766517295c505e75880c7da3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a048b58e9766517295c505e75880c7da3">&#9670;&nbsp;</a></span>start()</h2>
+<a id="ab84a5a511d8f9fbb1a74637316d9f808"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab84a5a511d8f9fbb1a74637316d9f808">&#9670;&nbsp;</a></span>window_id()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -389,10 +358,10 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::text_editing_event::start </td>
+          <td class="memname">auto cen::text_editing_event::window_id </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__core.html#gaa69ad1561271765c17f77879a492d85b">i32</a>
+          <td> const -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>
   </td>
         </tr>
       </table>
@@ -403,8 +372,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the location to begin editing from. </p>
-<dl class="section return"><dt>Returns</dt><dd>the location to begin editing from.</dd></dl>
+<p>Returns the window ID associated with the event. </p>
+<dl class="section return"><dt>Returns</dt><dd>the window ID associated with the event.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
@@ -439,8 +408,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ab84a5a511d8f9fbb1a74637316d9f808"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab84a5a511d8f9fbb1a74637316d9f808">&#9670;&nbsp;</a></span>window_id()</h2>
+<a id="a048b58e9766517295c505e75880c7da3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a048b58e9766517295c505e75880c7da3">&#9670;&nbsp;</a></span>start()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -449,10 +418,10 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::text_editing_event::window_id </td>
+          <td class="memname">auto cen::text_editing_event::start </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>
+          <td> const -&gt; <a class="el" href="group__core.html#gaa69ad1561271765c17f77879a492d85b">i32</a>
   </td>
         </tr>
       </table>
@@ -463,8 +432,39 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the window ID associated with the event. </p>
-<dl class="section return"><dt>Returns</dt><dd>the window ID associated with the event.</dd></dl>
+<p>Returns the location to begin editing from. </p>
+<dl class="section return"><dt>Returns</dt><dd>the location to begin editing from.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="aafe2d2abdd112945c0f9e2d9747e21bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafe2d2abdd112945c0f9e2d9747e21bf">&#9670;&nbsp;</a></span>length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::text_editing_event::length </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__core.html#gaa69ad1561271765c17f77879a492d85b">i32</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the number of characters to edit from the start point. </p>
+<p>The returned value will always be in the range [0, 32].</p>
+<dl class="section return"><dt>Returns</dt><dd>the number of characters to edit from the start point.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>

@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -107,75 +107,78 @@ $(document).ready(function(){initNavTree('joy__hat__position_8hpp_source.html','
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecen.html">cen</a> {</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="group__event.html#ga3014c4847759c6eacbc0f75a90e5caa1">   24</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="group__event.html#ga3014c4847759c6eacbc0f75a90e5caa1">joy_hat_position</a> : <a class="code" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a7bee01317f52e2c54856e73909d487f2">left_up</a> = SDL_HAT_LEFTUP,</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a811882fecd5c7618d7099ebbd39ea254">left</a> = SDL_HAT_LEFT,</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a7e960b9ae88fd5fb46be255328deb430">left_down</a> = SDL_HAT_LEFTDOWN,</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a46c48bec0d282018b9d167eef7711b2c">up</a> = SDL_HAT_UP,</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a15c012757aea2b45f1ea7550869cea02">centered</a> = SDL_HAT_CENTERED,</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a74e8333ad11685ff3bdae589c8f6e34d">down</a> = SDL_HAT_DOWN,</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a09bfc976eaed05de8a55b9f798d3299c">right_up</a> = SDL_HAT_RIGHTUP,</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a7c4f29407893c334a6cb7a87bf045c0d">right</a> = SDL_HAT_RIGHT,</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a13e9aba075fa84cd48dad4426de5d705">right_down</a> = SDL_HAT_RIGHTDOWN</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="group__audio.html#ga4deb9456587e3c78b9434a7ec4ee79fc">   54</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(<span class="keyword">const</span> <a class="code" href="group__event.html#ga3014c4847759c6eacbc0f75a90e5caa1">joy_hat_position</a> position)</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    -&gt; std::string_view</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordflow">switch</span> (position)</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a7bee01317f52e2c54856e73909d487f2">joy_hat_position::left_up</a>:</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;left_up&quot;</span>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a811882fecd5c7618d7099ebbd39ea254">joy_hat_position::left</a>:</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;left&quot;</span>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a7e960b9ae88fd5fb46be255328deb430">joy_hat_position::left_down</a>:</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;left_down&quot;</span>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a46c48bec0d282018b9d167eef7711b2c">joy_hat_position::up</a>:</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;up&quot;</span>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a15c012757aea2b45f1ea7550869cea02">joy_hat_position::centered</a>:</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;centered&quot;</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="group__event.html#ga3014c4847759c6eacbc0f75a90e5caa1">   26</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="group__event.html#ga3014c4847759c6eacbc0f75a90e5caa1">joy_hat_position</a> : <a class="code" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a7bee01317f52e2c54856e73909d487f2">left_up</a> = SDL_HAT_LEFTUP,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a811882fecd5c7618d7099ebbd39ea254">left</a> = SDL_HAT_LEFT,</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a7e960b9ae88fd5fb46be255328deb430">left_down</a> = SDL_HAT_LEFTDOWN,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a46c48bec0d282018b9d167eef7711b2c">up</a> = SDL_HAT_UP,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a15c012757aea2b45f1ea7550869cea02">centered</a> = SDL_HAT_CENTERED,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a74e8333ad11685ff3bdae589c8f6e34d">down</a> = SDL_HAT_DOWN,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a09bfc976eaed05de8a55b9f798d3299c">right_up</a> = SDL_HAT_RIGHTUP,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a7c4f29407893c334a6cb7a87bf045c0d">right</a> = SDL_HAT_RIGHT,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a13e9aba075fa84cd48dad4426de5d705">right_down</a> = SDL_HAT_RIGHTDOWN</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="group__event.html#ga8555e483d8f473ed6b50aea718e810c1">   46</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__event.html#ga8555e483d8f473ed6b50aea718e810c1">joy_hat_position_count</a>() noexcept -&gt; <span class="keywordtype">int</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordflow">return</span> 9;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="group__audio.html#ga4deb9456587e3c78b9434a7ec4ee79fc">   68</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(<span class="keyword">const</span> <a class="code" href="group__event.html#ga3014c4847759c6eacbc0f75a90e5caa1">joy_hat_position</a> position) -&gt; std::string_view</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordflow">switch</span> (position) {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a7bee01317f52e2c54856e73909d487f2">joy_hat_position::left_up</a>:</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;left_up&quot;</span>;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a74e8333ad11685ff3bdae589c8f6e34d">joy_hat_position::down</a>:</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;down&quot;</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a811882fecd5c7618d7099ebbd39ea254">joy_hat_position::left</a>:</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;left&quot;</span>;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a09bfc976eaed05de8a55b9f798d3299c">joy_hat_position::right_up</a>:</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;right_up&quot;</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a7e960b9ae88fd5fb46be255328deb430">joy_hat_position::left_down</a>:</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;left_down&quot;</span>;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a7c4f29407893c334a6cb7a87bf045c0d">joy_hat_position::right</a>:</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;right&quot;</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a46c48bec0d282018b9d167eef7711b2c">joy_hat_position::up</a>:</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;up&quot;</span>;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a13e9aba075fa84cd48dad4426de5d705">joy_hat_position::right_down</a>:</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;right_down&quot;</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a15c012757aea2b45f1ea7550869cea02">joy_hat_position::centered</a>:</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;centered&quot;</span>;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1cen__error.html">cen_error</a>{<span class="stringliteral">&quot;Did not recognize joystick hat position!&quot;</span>};</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="group__audio.html#gac0d263aedf059a7be8dd80cc9aeb072f">  108</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">operator&lt;&lt;</a>(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code" href="group__event.html#ga3014c4847759c6eacbc0f75a90e5caa1">joy_hat_position</a> position)</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    -&gt; std::ostream&amp;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;{</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keywordflow">return</span> stream &lt;&lt; <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(position);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}  <span class="comment">// namespace cen</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_JOY_HAT_POSITION_HEADER</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a74e8333ad11685ff3bdae589c8f6e34d">joy_hat_position::down</a>:</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;down&quot;</span>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a09bfc976eaed05de8a55b9f798d3299c">joy_hat_position::right_up</a>:</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;right_up&quot;</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a7c4f29407893c334a6cb7a87bf045c0d">joy_hat_position::right</a>:</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;right&quot;</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a13e9aba075fa84cd48dad4426de5d705">joy_hat_position::right_down</a>:</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;right_down&quot;</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1cen__error.html">cen_error</a>{<span class="stringliteral">&quot;Did not recognize joystick hat position!&quot;</span>};</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="group__audio.html#gac0d263aedf059a7be8dd80cc9aeb072f">  120</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">operator&lt;&lt;</a>(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code" href="group__event.html#ga3014c4847759c6eacbc0f75a90e5caa1">joy_hat_position</a> position) -&gt; std::ostream&amp;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;{</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keywordflow">return</span> stream &lt;&lt; <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(position);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;}  <span class="comment">// namespace cen</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_JOY_HAT_POSITION_HEADER</span></div>
 <div class="ttc" id="aclasscen_1_1cen__error_html"><div class="ttname"><a href="classcen_1_1cen__error.html">cen::cen_error</a></div><div class="ttdoc">The base of all exceptions explicitly thrown by the library.</div><div class="ttdef"><b>Definition:</b> exception.hpp:35</div></div>
-<div class="ttc" id="agroup__audio_html_ga83f366781618f05bf8bcb60c753e9ced"><div class="ttname"><a href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">cen::operator&lt;&lt;</a></div><div class="ttdeci">auto operator&lt;&lt;(std::ostream &amp;stream, const fade_status status) -&gt; std::ostream &amp;</div><div class="ttdoc">Prints a textual representation of a fade status enumerator.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:86</div></div>
-<div class="ttc" id="agroup__audio_html_ga9ebd3f26fcc0f89398ff473b06e9dcbe"><div class="ttname"><a href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">cen::to_string</a></div><div class="ttdeci">constexpr auto to_string(const fade_status status) -&gt; std::string_view</div><div class="ttdoc">Returns a textual version of the supplied fade status.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:51</div></div>
+<div class="ttc" id="agroup__audio_html_ga83f366781618f05bf8bcb60c753e9ced"><div class="ttname"><a href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">cen::operator&lt;&lt;</a></div><div class="ttdeci">auto operator&lt;&lt;(std::ostream &amp;stream, const fade_status status) -&gt; std::ostream &amp;</div><div class="ttdoc">Prints a textual representation of a fade status enumerator.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:98</div></div>
+<div class="ttc" id="agroup__audio_html_ga9ebd3f26fcc0f89398ff473b06e9dcbe"><div class="ttname"><a href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">cen::to_string</a></div><div class="ttdeci">constexpr auto to_string(const fade_status status) -&gt; std::string_view</div><div class="ttdoc">Returns a textual version of the supplied fade status.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:64</div></div>
 <div class="ttc" id="agroup__core_html_ga89b6da3d8b9fb42c7799b22d6afd1093"><div class="ttname"><a href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">cen::u8</a></div><div class="ttdeci">Uint8 u8</div><div class="ttdoc">Alias for an 8-bit unsigned integer.</div><div class="ttdef"><b>Definition:</b> integers.hpp:34</div></div>
-<div class="ttc" id="agroup__event_html_ga3014c4847759c6eacbc0f75a90e5caa1"><div class="ttname"><a href="group__event.html#ga3014c4847759c6eacbc0f75a90e5caa1">cen::joy_hat_position</a></div><div class="ttdeci">joy_hat_position</div><div class="ttdoc">Serves as a wrapper for the SDL_HAT_x macro values.</div><div class="ttdef"><b>Definition:</b> joy_hat_position.hpp:25</div></div>
+<div class="ttc" id="agroup__event_html_ga3014c4847759c6eacbc0f75a90e5caa1"><div class="ttname"><a href="group__event.html#ga3014c4847759c6eacbc0f75a90e5caa1">cen::joy_hat_position</a></div><div class="ttdeci">joy_hat_position</div><div class="ttdoc">Serves as a wrapper for the SDL_HAT_x macro values.</div><div class="ttdef"><b>Definition:</b> joy_hat_position.hpp:27</div></div>
+<div class="ttc" id="agroup__event_html_ga8555e483d8f473ed6b50aea718e810c1"><div class="ttname"><a href="group__event.html#ga8555e483d8f473ed6b50aea718e810c1">cen::joy_hat_position_count</a></div><div class="ttdeci">constexpr auto joy_hat_position_count() noexcept -&gt; int</div><div class="ttdoc">Returns the number of enumerators for the joy_hat_position enum.</div><div class="ttdef"><b>Definition:</b> joy_hat_position.hpp:46</div></div>
 <div class="ttc" id="agroup__event_html_gga3014c4847759c6eacbc0f75a90e5caa1a09bfc976eaed05de8a55b9f798d3299c"><div class="ttname"><a href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a09bfc976eaed05de8a55b9f798d3299c">cen::joy_hat_position::right_up</a></div><div class="ttdeci">@ right_up</div></div>
 <div class="ttc" id="agroup__event_html_gga3014c4847759c6eacbc0f75a90e5caa1a13e9aba075fa84cd48dad4426de5d705"><div class="ttname"><a href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a13e9aba075fa84cd48dad4426de5d705">cen::joy_hat_position::right_down</a></div><div class="ttdeci">@ right_down</div></div>
 <div class="ttc" id="agroup__event_html_gga3014c4847759c6eacbc0f75a90e5caa1a15c012757aea2b45f1ea7550869cea02"><div class="ttname"><a href="group__event.html#gga3014c4847759c6eacbc0f75a90e5caa1a15c012757aea2b45f1ea7550869cea02">cen::joy_hat_position::centered</a></div><div class="ttdeci">@ centered</div></div>

@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -96,29 +96,27 @@ $(document).ready(function(){initNavTree('lerp_8hpp_source.html',''); initResiza
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CENTURION_DETAIL_LERP_HEADER</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CENTURION_DETAIL_LERP_HEADER</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// clang-format off</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../compiler/features.hpp&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// clang-format on</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span>  <span class="comment">// lerp</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../compiler/features.hpp&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span>  <span class="comment">// lerp</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>cen::detail {</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span>cen::detail {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> lerp(<span class="keyword">const</span> <span class="keywordtype">float</span> a, <span class="keyword">const</span> <span class="keywordtype">float</span> b, <span class="keyword">const</span> <span class="keywordtype">float</span> bias) noexcept</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    -&gt; <span class="keywordtype">float</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#if CENTURION_HAS_FEATURE_LERP</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keywordflow">return</span> std::lerp(a, b, bias);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordflow">return</span> (a * (1.0f - bias)) + (<a class="code" href="group__input.html#ga43d90d19485f70d18d662720f3cd18ea">b</a> * bias);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_HAS_FEATURE_LERP</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> lerp(<span class="keyword">const</span> <span class="keywordtype">float</span> a, <span class="keyword">const</span> <span class="keywordtype">float</span> b, <span class="keyword">const</span> <span class="keywordtype">float</span> bias) noexcept</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    -&gt; <span class="keywordtype">float</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#if CENTURION_HAS_FEATURE_LERP</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keywordflow">return</span> std::lerp(a, b, bias);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keywordflow">return</span> (a * (1.0f - bias)) + (<a class="code" href="group__input.html#ga43d90d19485f70d18d662720f3cd18ea">b</a> * bias);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_HAS_FEATURE_LERP</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}  <span class="comment">// namespace cen::detail</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}  <span class="comment">// namespace cen::detail</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_DETAIL_LERP_HEADER</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_DETAIL_LERP_HEADER</span></div>
 <div class="ttc" id="agroup__input_html_ga43d90d19485f70d18d662720f3cd18ea"><div class="ttname"><a href="group__input.html#ga43d90d19485f70d18d662720f3cd18ea">cen::keycodes::b</a></div><div class="ttdeci">constexpr key_code b</div><div class="ttdoc">Represents the key with the label &quot;B&quot;.</div><div class="ttdef"><b>Definition:</b> keycodes.hpp:47</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

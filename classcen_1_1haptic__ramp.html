@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -255,8 +255,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a919a3c50766b201454ca5bb4b00b37ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a919a3c50766b201454ca5bb4b00b37ce">&#9670;&nbsp;</a></span>end_strength()</h2>
+<a id="aba78728a80e6e39c5e057f68fa27e2b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba78728a80e6e39c5e057f68fa27e2b5">&#9670;&nbsp;</a></span>set_start_strength()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -265,11 +265,11 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::haptic_ramp::end_strength </td>
+          <td class="memname">void cen::haptic_ramp::set_start_strength </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__core.html#ga995971102059bcb96d27921ffb7c4916">i16</a>
-  </td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga995971102059bcb96d27921ffb7c4916">i16</a>&#160;</td>
+          <td class="paramname"><em>start</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -279,68 +279,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the strength level at the end of the effect. </p>
-<dl class="section return"><dt>Returns</dt><dd>the final strength level.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="abd19f9e5d527b25772bbe3d13d5d933a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd19f9e5d527b25772bbe3d13d5d933a">&#9670;&nbsp;</a></span>representation() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::haptic_ramp::representation </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; const SDL_HapticRamp&amp;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the internal representation. </p>
-<dl class="section return"><dt>Returns</dt><dd>the internal representation.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="acd908b751fe747fa43411d2a3053e8c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd908b751fe747fa43411d2a3053e8c9">&#9670;&nbsp;</a></span>representation() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::haptic_ramp::representation </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; SDL_HapticRamp&amp;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the internal representation. </p>
-<dl class="section return"><dt>Returns</dt><dd>the internal representation.</dd></dl>
+<p>Sets the initial strength level. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>the initial strength level.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
 
 </div>
@@ -380,41 +325,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="aba78728a80e6e39c5e057f68fa27e2b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba78728a80e6e39c5e057f68fa27e2b5">&#9670;&nbsp;</a></span>set_start_strength()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cen::haptic_ramp::set_start_strength </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga995971102059bcb96d27921ffb7c4916">i16</a>&#160;</td>
-          <td class="paramname"><em>start</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the initial strength level. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">start</td><td>the initial strength level.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
 <a id="a37c1414ca258c36db323853b52384d69"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a37c1414ca258c36db323853b52384d69">&#9670;&nbsp;</a></span>start_strength()</h2>
 
@@ -445,9 +355,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="ad179133f415c10f435187e6fdbe617e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad179133f415c10f435187e6fdbe617e0">&#9670;&nbsp;</a></span>hasDelay</h2>
+<a id="a919a3c50766b201454ca5bb4b00b37ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a919a3c50766b201454ca5bb4b00b37ce">&#9670;&nbsp;</a></span>end_strength()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -456,18 +365,87 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr static bool cen::haptic_ramp::hasDelay = true</td>
+          <td class="memname">auto cen::haptic_ramp::end_strength </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__core.html#ga995971102059bcb96d27921ffb7c4916">i16</a>
+  </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the strength level at the end of the effect. </p>
+<dl class="section return"><dt>Returns</dt><dd>the final strength level.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
 </div>
 </div>
+<a id="acd908b751fe747fa43411d2a3053e8c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd908b751fe747fa43411d2a3053e8c9">&#9670;&nbsp;</a></span>representation() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::haptic_ramp::representation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; SDL_HapticRamp&amp;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the internal representation. </p>
+<dl class="section return"><dt>Returns</dt><dd>the internal representation.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="abd19f9e5d527b25772bbe3d13d5d933a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd19f9e5d527b25772bbe3d13d5d933a">&#9670;&nbsp;</a></span>representation() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::haptic_ramp::representation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; const SDL_HapticRamp&amp;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the internal representation. </p>
+<dl class="section return"><dt>Returns</dt><dd>the internal representation.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
 <a id="a674833af52f4a413102720dd8aa9fff9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a674833af52f4a413102720dd8aa9fff9">&#9670;&nbsp;</a></span>hasDirection</h2>
 
@@ -523,6 +501,28 @@ Additional Inherited Members</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">constexpr static bool cen::haptic_ramp::hasTrigger = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad179133f415c10f435187e6fdbe617e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad179133f415c10f435187e6fdbe617e0">&#9670;&nbsp;</a></span>hasDelay</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr static bool cen::haptic_ramp::hasDelay = true</td>
         </tr>
       </table>
   </td>

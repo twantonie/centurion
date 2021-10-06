@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -121,34 +121,33 @@ $(document).ready(function(){initNavTree('button__order_8hpp_source.html',''); i
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="group__audio.html#ga20e90c30c7b8c9c239156a26ce72c71b">   54</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(<span class="keyword">const</span> <a class="code" href="group__video.html#ga255b4639aa02a711f7919b0675ed3ee5">button_order</a> order) -&gt; std::string_view</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordflow">switch</span> (order)</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga255b4639aa02a711f7919b0675ed3ee5a1f8f6a66881ca551a945cf0ab4765dc1">button_order::left_to_right</a>:</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;left_to_right&quot;</span>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga255b4639aa02a711f7919b0675ed3ee5a74ecbc5c277e2952aac1ac167699d74c">button_order::right_to_left</a>:</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;right_to_left&quot;</span>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1cen__error.html">cen_error</a>{<span class="stringliteral">&quot;Did not recognize button order!&quot;</span>};</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="group__audio.html#gaad4cdc97a17d08d266c52901c343b460">   86</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">operator&lt;&lt;</a>(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code" href="group__video.html#ga255b4639aa02a711f7919b0675ed3ee5">button_order</a> order) -&gt; std::ostream&amp;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordflow">return</span> stream &lt;&lt; <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(order);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}  <span class="comment">// namespace cen</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_BUTTON_ORDER_HEADER</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordflow">switch</span> (order) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga255b4639aa02a711f7919b0675ed3ee5a1f8f6a66881ca551a945cf0ab4765dc1">button_order::left_to_right</a>:</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;left_to_right&quot;</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga255b4639aa02a711f7919b0675ed3ee5a74ecbc5c277e2952aac1ac167699d74c">button_order::right_to_left</a>:</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;right_to_left&quot;</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1cen__error.html">cen_error</a>{<span class="stringliteral">&quot;Did not recognize button order!&quot;</span>};</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="group__audio.html#gaad4cdc97a17d08d266c52901c343b460">   85</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">operator&lt;&lt;</a>(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code" href="group__video.html#ga255b4639aa02a711f7919b0675ed3ee5">button_order</a> order) -&gt; std::ostream&amp;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordflow">return</span> stream &lt;&lt; <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(order);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}  <span class="comment">// namespace cen</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_BUTTON_ORDER_HEADER</span></div>
 <div class="ttc" id="aclasscen_1_1cen__error_html"><div class="ttname"><a href="classcen_1_1cen__error.html">cen::cen_error</a></div><div class="ttdoc">The base of all exceptions explicitly thrown by the library.</div><div class="ttdef"><b>Definition:</b> exception.hpp:35</div></div>
-<div class="ttc" id="agroup__audio_html_ga83f366781618f05bf8bcb60c753e9ced"><div class="ttname"><a href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">cen::operator&lt;&lt;</a></div><div class="ttdeci">auto operator&lt;&lt;(std::ostream &amp;stream, const fade_status status) -&gt; std::ostream &amp;</div><div class="ttdoc">Prints a textual representation of a fade status enumerator.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:86</div></div>
-<div class="ttc" id="agroup__audio_html_ga9ebd3f26fcc0f89398ff473b06e9dcbe"><div class="ttname"><a href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">cen::to_string</a></div><div class="ttdeci">constexpr auto to_string(const fade_status status) -&gt; std::string_view</div><div class="ttdoc">Returns a textual version of the supplied fade status.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:51</div></div>
+<div class="ttc" id="agroup__audio_html_ga83f366781618f05bf8bcb60c753e9ced"><div class="ttname"><a href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">cen::operator&lt;&lt;</a></div><div class="ttdeci">auto operator&lt;&lt;(std::ostream &amp;stream, const fade_status status) -&gt; std::ostream &amp;</div><div class="ttdoc">Prints a textual representation of a fade status enumerator.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:98</div></div>
+<div class="ttc" id="agroup__audio_html_ga9ebd3f26fcc0f89398ff473b06e9dcbe"><div class="ttname"><a href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">cen::to_string</a></div><div class="ttdeci">constexpr auto to_string(const fade_status status) -&gt; std::string_view</div><div class="ttdoc">Returns a textual version of the supplied fade status.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:64</div></div>
 <div class="ttc" id="agroup__core_html_ga4abd620246f76cc48168dc52a04a62da"><div class="ttname"><a href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">cen::u32</a></div><div class="ttdeci">Uint32 u32</div><div class="ttdoc">Alias for a 32-bit unsigned integer.</div><div class="ttdef"><b>Definition:</b> integers.hpp:28</div></div>
 <div class="ttc" id="agroup__video_html_ga255b4639aa02a711f7919b0675ed3ee5"><div class="ttname"><a href="group__video.html#ga255b4639aa02a711f7919b0675ed3ee5">cen::button_order</a></div><div class="ttdeci">button_order</div><div class="ttdoc">Provides hints for how the buttons in a message box should be aligned.</div><div class="ttdef"><b>Definition:</b> button_order.hpp:27</div></div>
 <div class="ttc" id="agroup__video_html_gga255b4639aa02a711f7919b0675ed3ee5a1f8f6a66881ca551a945cf0ab4765dc1"><div class="ttname"><a href="group__video.html#gga255b4639aa02a711f7919b0675ed3ee5a1f8f6a66881ca551a945cf0ab4765dc1">cen::button_order::left_to_right</a></div><div class="ttdeci">@ left_to_right</div></div>

@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -244,45 +244,6 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a514cca53ee402dfd10b2752fdcbb62cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a514cca53ee402dfd10b2752fdcbb62cc">&#9670;&nbsp;</a></span>address_of()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::gl_library::address_of </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a> &gt;&#160;</td>
-          <td class="paramname"><em>function</em></td><td>)</td>
-          <td> const -&gt; void*
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the address of an OpenGL function. </p>
-<p>This function must be used to retrieve OpenGL functions after loading the library at runtime.</p>
-<dl class="section note"><dt>Note</dt><dd>Be sure to declare your function pointers with <code>APIENTRY</code> to ensure the correct calling convention on different platforms, which avoids stack corruption.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">function</td><td>the name of the function to obtain the address of.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the address of the specified function; null if something went wrong.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
-
-</div>
-</div>
 <a id="a5fe3e20562bfa96f352ccea53421db93"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5fe3e20562bfa96f352ccea53421db93">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
@@ -332,6 +293,45 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a514cca53ee402dfd10b2752fdcbb62cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a514cca53ee402dfd10b2752fdcbb62cc">&#9670;&nbsp;</a></span>address_of()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::gl_library::address_of </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a> &gt;&#160;</td>
+          <td class="paramname"><em>function</em></td><td>)</td>
+          <td> const -&gt; void*
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the address of an OpenGL function. </p>
+<p>This function must be used to retrieve OpenGL functions after loading the library at runtime.</p>
+<dl class="section note"><dt>Note</dt><dd>Be sure to declare your function pointers with <code>APIENTRY</code> to ensure the correct calling convention on different platforms, which avoids stack corruption.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">function</td><td>the name of the function to obtain the address of.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the address of the specified function; null if something went wrong.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
 
 </div>
 </div>

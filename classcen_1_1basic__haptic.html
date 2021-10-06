@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -440,175 +440,6 @@ template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a48c3abcbd8bc8ad91c40e87824bf9d2c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48c3abcbd8bc8ad91c40e87824bf9d2c">&#9670;&nbsp;</a></span>axis_count()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::axis_count </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; int
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the number of axes that the haptic device has. </p>
-<dl class="section return"><dt>Returns</dt><dd>the number of axes that the haptic device has.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a7c766bd9d7237d25a964e1e8bbb6e32b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c766bd9d7237d25a964e1e8bbb6e32b">&#9670;&nbsp;</a></span>concurrent_capacity()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::concurrent_capacity </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; std::optional&lt;int&gt;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the maximum amount of effects that can be played simultaneously. </p>
-<dl class="section note"><dt>Note</dt><dd>This function isn't supported on all platforms.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>the maximum number of effects that can be playing simultaneously; <code>std::nullopt</code> if something goes wrong.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a4fbfbfbf8cccc142931794cb77d833ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4fbfbfbf8cccc142931794cb77d833ab">&#9670;&nbsp;</a></span>count()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::count </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; int
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the number of available haptic devices. </p>
-<dl class="section return"><dt>Returns</dt><dd>the amount of available haptic devices.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="acfc0e46ead9500c8ba151dc990fbb043"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acfc0e46ead9500c8ba151dc990fbb043">&#9670;&nbsp;</a></span>destroy()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::destroy </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1basic__haptic.html#afb671d03a606f1d6216bf82fe9238bb9">effect_id</a>&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Destroys the effect associated with the specified ID. </p>
-<dl class="section note"><dt>Note</dt><dd>This is done automatically when the device is destructed.</dd></dl>
-<p>The effect will be destroyed will be stopped if it is running by the time this function is invoked.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">id</td><td>the ID associated with the effect that will be destroyed.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="ae6e3e0718590e3b0eef5412595bfb1fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae6e3e0718590e3b0eef5412595bfb1fd">&#9670;&nbsp;</a></span>effect_capacity()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::effect_capacity </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; std::optional&lt;int&gt;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the maximum amount of effect the device can store. </p>
-<dl class="section note"><dt>Note</dt><dd>This function isn't supported on all platforms and the returned value should be treated as an approximation.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>the maximum number of effects the the haptic device can store; <code>std::nullopt</code> if something goes wrong.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
 <a id="a6b2c157a5472461afc4d1f19a4c390ad"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6b2c157a5472461afc4d1f19a4c390ad">&#9670;&nbsp;</a></span>from_joystick()</h2>
 
@@ -698,8 +529,8 @@ template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </div>
 
 </div>
 </div>
-<a id="a6c6de9eb42d5e178601107b9688946e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c6de9eb42d5e178601107b9688946e1">&#9670;&nbsp;</a></span>get()</h2>
+<a id="af91f9bc995cce36563433b609851e181"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af91f9bc995cce36563433b609851e181">&#9670;&nbsp;</a></span>init_rumble()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -710,10 +541,10 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::get </td>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::init_rumble </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; SDL_Haptic*
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
   </td>
         </tr>
       </table>
@@ -724,9 +555,610 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a pointer to the internal representation. </p>
-<dl class="section warning"><dt>Warning</dt><dd>Don't claim ownership of the returned pointer!</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the internal representation.</dd></dl>
+<p>Initializes rumble playback for the haptic device. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if rumble playback was successfully initialized; <code>failure</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="aab0d8f488d8aa556869d42d582d730e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab0d8f488d8aa556869d42d582d730e5">&#9670;&nbsp;</a></span>play_rumble()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::play_rumble </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>strength</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a> &gt;&#160;</td>
+          <td class="paramname"><em>duration</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Plays a rumble effect. </p>
+<dl class="section note"><dt>Note</dt><dd>Make sure to call <code><a class="el" href="classcen_1_1basic__haptic.html#af91f9bc995cce36563433b609851e181" title="Initializes rumble playback for the haptic device.">init_rumble()</a></code> before calling this function!</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">strength</td><td>the strength of the rumble effect, clamped to [0, 1]. </td></tr>
+    <tr><td class="paramname">duration</td><td>the duration of the rumble effect.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the rumble was successful; <code>failure</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a52e6046b20b7263637145c0dced4c303"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52e6046b20b7263637145c0dced4c303">&#9670;&nbsp;</a></span>stop_rumble()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::stop_rumble </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stops the current rumble effect. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the rumble was successfully stopped; <code>failure</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a2a880dedbed66903782416392e70772f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a880dedbed66903782416392e70772f">&#9670;&nbsp;</a></span>is_rumble_supported()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::is_rumble_supported </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not rumble playback is supported. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if rumble playback is supported; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="af458023064c79d679591d01713a058d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af458023064c79d679591d01713a058d0">&#9670;&nbsp;</a></span>pause()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::pause </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pauses the device. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>The device must support the <code>pause</code> feature. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>You must call <code><a class="el" href="classcen_1_1basic__haptic.html#ae7c5030d0b1c31fbbe9e18d41bae35a3" title="Unpauses the device.">unpause()</a></code> before calling <code><a class="el" href="classcen_1_1basic__haptic.html#a2fbe9358807e90ea03decf3f1e32a772" title="Uploads an effect to the device.">upload()</a></code> or <code><a class="el" href="classcen_1_1basic__haptic.html#ab928d667d0d9a1d4bad273937d59ea8b" title="Attempts to update the effect associated with the specified ID.">update()</a></code>.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if nothing went wrong; <code>failure</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="ae7c5030d0b1c31fbbe9e18d41bae35a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7c5030d0b1c31fbbe9e18d41bae35a3">&#9670;&nbsp;</a></span>unpause()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::unpause </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unpauses the device. </p>
+<dl class="section pre"><dt>Precondition</dt><dd><code><a class="el" href="classcen_1_1basic__haptic.html#af458023064c79d679591d01713a058d0" title="Pauses the device.">pause()</a></code> must have been called before this function is invoked.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if nothing went wrong; <code>failure</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a2fbe9358807e90ea03decf3f1e32a772"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fbe9358807e90ea03decf3f1e32a772">&#9670;&nbsp;</a></span>upload()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename D &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::upload </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1haptic__effect.html">haptic_effect</a>&lt; D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>effect</em></td><td>)</td>
+          <td> -&gt; std::optional&lt;<a class="el" href="classcen_1_1basic__haptic.html#afb671d03a606f1d6216bf82fe9238bb9">effect_id</a>&gt;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Uploads an effect to the device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">effect</td><td>the effect that will be uploaded to the device.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the ID associated with the uploaded effect; <code>std::nullopt</code> if something went wrong.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="ab928d667d0d9a1d4bad273937d59ea8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab928d667d0d9a1d4bad273937d59ea8b">&#9670;&nbsp;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename D &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::update </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__haptic.html#afb671d03a606f1d6216bf82fe9238bb9">effect_id</a>&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1haptic__effect.html">haptic_effect</a>&lt; D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>effect</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Attempts to update the effect associated with the specified ID. </p>
+<dl class="section note"><dt>Note</dt><dd>It is not possible to change the type of the effect through this function.</dd>
+<dd>
+You might experience strange results if you call this function for an effect that is currently playing, but it is possible.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>the ID associated with the effect that will be updated. </td></tr>
+    <tr><td class="paramname">effect</td><td>the new properties that will be associated with the effect.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if nothing went wrong; <code>failure</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="af6bb64a134bb482c031b465f3a498df9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6bb64a134bb482c031b465f3a498df9">&#9670;&nbsp;</a></span>run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::run </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__haptic.html#afb671d03a606f1d6216bf82fe9238bb9">effect_id</a>&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>&#160;</td>
+          <td class="paramname"><em>iterations</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Runs the specified effect. </p>
+<dl class="section note"><dt>Note</dt><dd>If you want to repeat the effect indefinitely without repeating the attack and fade, see <code><a class="el" href="classcen_1_1haptic__effect.html#a8f9cd09080dd4aa66e40ae609e7178a5" title="Sets the effect to be repeated indefinitely when run.">haptic_effect::set_repeat_forever()</a></code>.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>the ID associated with the effect that will be run. </td></tr>
+    <tr><td class="paramname">iterations</td><td>the number of iterations, can be <code>haptic_infinity</code> to repeat the effect forever (including the attack and fade).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if nothing went wrong; <code>failure</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a85f5018ed3ac7eb8e7435c6c08b5686b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85f5018ed3ac7eb8e7435c6c08b5686b">&#9670;&nbsp;</a></span>stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::stop </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__haptic.html#afb671d03a606f1d6216bf82fe9238bb9">effect_id</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stops a currently running effect. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>the ID associated with the effect that will be stopped.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if nothing went wrong; <code>failure</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a822b15203a62952c60172545d4904b28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a822b15203a62952c60172545d4904b28">&#9670;&nbsp;</a></span>stop_all()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::stop_all </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stops all currently running effects on the device. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if nothing went wrong; <code>failure</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="acfc0e46ead9500c8ba151dc990fbb043"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfc0e46ead9500c8ba151dc990fbb043">&#9670;&nbsp;</a></span>destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::destroy </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__haptic.html#afb671d03a606f1d6216bf82fe9238bb9">effect_id</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destroys the effect associated with the specified ID. </p>
+<dl class="section note"><dt>Note</dt><dd>This is done automatically when the device is destructed.</dd></dl>
+<p>The effect will be destroyed will be stopped if it is running by the time this function is invoked.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>the ID associated with the effect that will be destroyed.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a20de2921410e462791d381e6152f2c47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20de2921410e462791d381e6152f2c47">&#9670;&nbsp;</a></span>set_gain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::set_gain </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>gain</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the gain the is used. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>The device must support the <code>gain</code> feature. </dd>
+<dd>
+<code>gain</code> must be greater or equal to zero. </dd>
+<dd>
+<code>gain</code> must be less than or equal to zero.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gain</td><td>the gain that will be used, in the interval [0, 100].</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if nothing went wrong; <code>failure</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a701661094ce31a9afa3f9650d27a5053"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a701661094ce31a9afa3f9650d27a5053">&#9670;&nbsp;</a></span>set_autocenter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::set_autocenter </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>autocenter</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the autocenter value that will be used. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>The device must support the <code>autocenter</code> feature. </dd>
+<dd>
+<code>autocenter</code> must be greater or equal to zero. </dd>
+<dd>
+<code>autocenter</code> must be less than or equal to zero.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">autocenter</td><td>the value of the autocenter that will be used, in the interval [0, 100]. Autocentering will be disabled if this value is zero.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if nothing went wrong; <code>failure</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="ab7877669de6507633e0b1a6229e09a46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7877669de6507633e0b1a6229e09a46">&#9670;&nbsp;</a></span>is_supported()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename D &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::is_supported </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1haptic__effect.html">haptic_effect</a>&lt; D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>effect</em></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the device can run the specified effect. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">effect</td><td>the effect that will be checked.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the device supports the effect; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="aec5101e12c0b7f0306edc428a89e7b84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec5101e12c0b7f0306edc428a89e7b84">&#9670;&nbsp;</a></span>is_playing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::is_playing </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__haptic.html#afb671d03a606f1d6216bf82fe9238bb9">effect_id</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the specified effect is playing on the device. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>The device must support the <code>status</code> feature.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> on if the effect is playing on the device; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
 
 </div>
@@ -770,39 +1202,6 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a8f0b3dcf39596aa5291b3f66bfb4b58b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f0b3dcf39596aa5291b3f66bfb4b58b">&#9670;&nbsp;</a></span>has_feature_autocenter()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::has_feature_autocenter </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the device has the <code>autocenter</code> feature. </p>
-<dl class="section note"><dt>Note</dt><dd>This is a convenience function that calls <code><a class="el" href="classcen_1_1basic__haptic.html#abeecd27adb41fd09cebce18d0aa432ec" title="Indicates whether or not the device supports the specified feature.">has_feature()</a></code>.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the device has the feature; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
 <a id="a2a626c678167f9ee7267d13365a83dae"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2a626c678167f9ee7267d13365a83dae">&#9670;&nbsp;</a></span>has_feature_constant()</h2>
 
@@ -836,8 +1235,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a1723d4430088bff3da51b51c78b9888d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1723d4430088bff3da51b51c78b9888d">&#9670;&nbsp;</a></span>has_feature_custom()</h2>
+<a id="a1f8ff4a53a746bb480f0b6d7917381c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f8ff4a53a746bb480f0b6d7917381c0">&#9670;&nbsp;</a></span>has_feature_sine()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -848,7 +1247,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::has_feature_custom </td>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::has_feature_sine </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const -&gt; bool
@@ -862,7 +1261,205 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Indicates whether or not the device has the <code>custom</code> feature. </p>
+<p>Indicates whether or not the device has the <code>sine</code> feature. </p>
+<dl class="section note"><dt>Note</dt><dd>This is a convenience function that calls <code><a class="el" href="classcen_1_1basic__haptic.html#abeecd27adb41fd09cebce18d0aa432ec" title="Indicates whether or not the device supports the specified feature.">has_feature()</a></code>.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the device has the feature; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a6828e1cff38c4795d26cde86b304de00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6828e1cff38c4795d26cde86b304de00">&#9670;&nbsp;</a></span>has_feature_left_right()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::has_feature_left_right </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the device has the <code>left_right</code> feature. </p>
+<dl class="section note"><dt>Note</dt><dd>This is a convenience function that calls <code><a class="el" href="classcen_1_1basic__haptic.html#abeecd27adb41fd09cebce18d0aa432ec" title="Indicates whether or not the device supports the specified feature.">has_feature()</a></code>.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the device has the feature; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="ad6ca06082f45c6e158e49d6646df0f9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6ca06082f45c6e158e49d6646df0f9e">&#9670;&nbsp;</a></span>has_feature_triangle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::has_feature_triangle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the device has the <code>triangle</code> feature. </p>
+<dl class="section note"><dt>Note</dt><dd>This is a convenience function that calls <code><a class="el" href="classcen_1_1basic__haptic.html#abeecd27adb41fd09cebce18d0aa432ec" title="Indicates whether or not the device supports the specified feature.">has_feature()</a></code>.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the device has the feature; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="ae4bec1a886c294b885aad673282f7bb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4bec1a886c294b885aad673282f7bb4">&#9670;&nbsp;</a></span>has_feature_sawtooth_up()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::has_feature_sawtooth_up </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the device has the <code>sawtooth_up</code> feature. </p>
+<dl class="section note"><dt>Note</dt><dd>This is a convenience function that calls <code><a class="el" href="classcen_1_1basic__haptic.html#abeecd27adb41fd09cebce18d0aa432ec" title="Indicates whether or not the device supports the specified feature.">has_feature()</a></code>.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the device has the feature; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="ae421351d41e8596488916b88936add3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae421351d41e8596488916b88936add3e">&#9670;&nbsp;</a></span>has_feature_sawtooth_down()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::has_feature_sawtooth_down </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the device has the <code>sawtooth_down</code> feature. </p>
+<dl class="section note"><dt>Note</dt><dd>This is a convenience function that calls <code><a class="el" href="classcen_1_1basic__haptic.html#abeecd27adb41fd09cebce18d0aa432ec" title="Indicates whether or not the device supports the specified feature.">has_feature()</a></code>.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the device has the feature; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="ab542dd70322736e839b311fb564369cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab542dd70322736e839b311fb564369cf">&#9670;&nbsp;</a></span>has_feature_ramp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::has_feature_ramp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the device has the <code>ramp</code> feature. </p>
+<dl class="section note"><dt>Note</dt><dd>This is a convenience function that calls <code><a class="el" href="classcen_1_1basic__haptic.html#abeecd27adb41fd09cebce18d0aa432ec" title="Indicates whether or not the device supports the specified feature.">has_feature()</a></code>.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the device has the feature; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="afc6428d5583f1bb1d6844d288d749cb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc6428d5583f1bb1d6844d288d749cb9">&#9670;&nbsp;</a></span>has_feature_spring()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::has_feature_spring </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the device has the <code>spring</code> feature. </p>
 <dl class="section note"><dt>Note</dt><dd>This is a convenience function that calls <code><a class="el" href="classcen_1_1basic__haptic.html#abeecd27adb41fd09cebce18d0aa432ec" title="Indicates whether or not the device supports the specified feature.">has_feature()</a></code>.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the device has the feature; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
@@ -896,6 +1493,39 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>Indicates whether or not the device has the <code>damper</code> feature. </p>
+<dl class="section note"><dt>Note</dt><dd>This is a convenience function that calls <code><a class="el" href="classcen_1_1basic__haptic.html#abeecd27adb41fd09cebce18d0aa432ec" title="Indicates whether or not the device supports the specified feature.">has_feature()</a></code>.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the device has the feature; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a40fdc5c1171e7a936d9bff4cde637d95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40fdc5c1171e7a936d9bff4cde637d95">&#9670;&nbsp;</a></span>has_feature_inertia()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::has_feature_inertia </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the device has the <code>inertia</code> feature. </p>
 <dl class="section note"><dt>Note</dt><dd>This is a convenience function that calls <code><a class="el" href="classcen_1_1basic__haptic.html#abeecd27adb41fd09cebce18d0aa432ec" title="Indicates whether or not the device supports the specified feature.">has_feature()</a></code>.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the device has the feature; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
@@ -968,8 +1598,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a40fdc5c1171e7a936d9bff4cde637d95"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40fdc5c1171e7a936d9bff4cde637d95">&#9670;&nbsp;</a></span>has_feature_inertia()</h2>
+<a id="a8f0b3dcf39596aa5291b3f66bfb4b58b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f0b3dcf39596aa5291b3f66bfb4b58b">&#9670;&nbsp;</a></span>has_feature_autocenter()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -980,7 +1610,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::has_feature_inertia </td>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::has_feature_autocenter </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const -&gt; bool
@@ -994,238 +1624,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Indicates whether or not the device has the <code>inertia</code> feature. </p>
-<dl class="section note"><dt>Note</dt><dd>This is a convenience function that calls <code><a class="el" href="classcen_1_1basic__haptic.html#abeecd27adb41fd09cebce18d0aa432ec" title="Indicates whether or not the device supports the specified feature.">has_feature()</a></code>.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the device has the feature; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a6828e1cff38c4795d26cde86b304de00"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6828e1cff38c4795d26cde86b304de00">&#9670;&nbsp;</a></span>has_feature_left_right()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::has_feature_left_right </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the device has the <code>left_right</code> feature. </p>
-<dl class="section note"><dt>Note</dt><dd>This is a convenience function that calls <code><a class="el" href="classcen_1_1basic__haptic.html#abeecd27adb41fd09cebce18d0aa432ec" title="Indicates whether or not the device supports the specified feature.">has_feature()</a></code>.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the device has the feature; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="ad684b17a94074861c3cc803dfed810a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad684b17a94074861c3cc803dfed810a8">&#9670;&nbsp;</a></span>has_feature_pause()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::has_feature_pause </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the device has the <code>pause</code> feature. </p>
-<dl class="section note"><dt>Note</dt><dd>This is a convenience function that calls <code><a class="el" href="classcen_1_1basic__haptic.html#abeecd27adb41fd09cebce18d0aa432ec" title="Indicates whether or not the device supports the specified feature.">has_feature()</a></code>.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the device has the feature; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="ab542dd70322736e839b311fb564369cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab542dd70322736e839b311fb564369cf">&#9670;&nbsp;</a></span>has_feature_ramp()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::has_feature_ramp </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the device has the <code>ramp</code> feature. </p>
-<dl class="section note"><dt>Note</dt><dd>This is a convenience function that calls <code><a class="el" href="classcen_1_1basic__haptic.html#abeecd27adb41fd09cebce18d0aa432ec" title="Indicates whether or not the device supports the specified feature.">has_feature()</a></code>.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the device has the feature; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="ae421351d41e8596488916b88936add3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae421351d41e8596488916b88936add3e">&#9670;&nbsp;</a></span>has_feature_sawtooth_down()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::has_feature_sawtooth_down </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the device has the <code>sawtooth_down</code> feature. </p>
-<dl class="section note"><dt>Note</dt><dd>This is a convenience function that calls <code><a class="el" href="classcen_1_1basic__haptic.html#abeecd27adb41fd09cebce18d0aa432ec" title="Indicates whether or not the device supports the specified feature.">has_feature()</a></code>.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the device has the feature; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="ae4bec1a886c294b885aad673282f7bb4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4bec1a886c294b885aad673282f7bb4">&#9670;&nbsp;</a></span>has_feature_sawtooth_up()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::has_feature_sawtooth_up </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the device has the <code>sawtooth_up</code> feature. </p>
-<dl class="section note"><dt>Note</dt><dd>This is a convenience function that calls <code><a class="el" href="classcen_1_1basic__haptic.html#abeecd27adb41fd09cebce18d0aa432ec" title="Indicates whether or not the device supports the specified feature.">has_feature()</a></code>.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the device has the feature; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a1f8ff4a53a746bb480f0b6d7917381c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f8ff4a53a746bb480f0b6d7917381c0">&#9670;&nbsp;</a></span>has_feature_sine()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::has_feature_sine </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the device has the <code>sine</code> feature. </p>
-<dl class="section note"><dt>Note</dt><dd>This is a convenience function that calls <code><a class="el" href="classcen_1_1basic__haptic.html#abeecd27adb41fd09cebce18d0aa432ec" title="Indicates whether or not the device supports the specified feature.">has_feature()</a></code>.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the device has the feature; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="afc6428d5583f1bb1d6844d288d749cb9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc6428d5583f1bb1d6844d288d749cb9">&#9670;&nbsp;</a></span>has_feature_spring()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::has_feature_spring </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the device has the <code>spring</code> feature. </p>
+<p>Indicates whether or not the device has the <code>autocenter</code> feature. </p>
 <dl class="section note"><dt>Note</dt><dd>This is a convenience function that calls <code><a class="el" href="classcen_1_1basic__haptic.html#abeecd27adb41fd09cebce18d0aa432ec" title="Indicates whether or not the device supports the specified feature.">has_feature()</a></code>.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the device has the feature; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
@@ -1265,8 +1664,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="ad6ca06082f45c6e158e49d6646df0f9e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6ca06082f45c6e158e49d6646df0f9e">&#9670;&nbsp;</a></span>has_feature_triangle()</h2>
+<a id="ad684b17a94074861c3cc803dfed810a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad684b17a94074861c3cc803dfed810a8">&#9670;&nbsp;</a></span>has_feature_pause()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1277,7 +1676,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::has_feature_triangle </td>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::has_feature_pause </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const -&gt; bool
@@ -1291,7 +1690,40 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Indicates whether or not the device has the <code>triangle</code> feature. </p>
+<p>Indicates whether or not the device has the <code>pause</code> feature. </p>
+<dl class="section note"><dt>Note</dt><dd>This is a convenience function that calls <code><a class="el" href="classcen_1_1basic__haptic.html#abeecd27adb41fd09cebce18d0aa432ec" title="Indicates whether or not the device supports the specified feature.">has_feature()</a></code>.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the device has the feature; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a1723d4430088bff3da51b51c78b9888d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1723d4430088bff3da51b51c78b9888d">&#9670;&nbsp;</a></span>has_feature_custom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::has_feature_custom </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the device has the <code>custom</code> feature. </p>
 <dl class="section note"><dt>Note</dt><dd>This is a convenience function that calls <code><a class="el" href="classcen_1_1basic__haptic.html#abeecd27adb41fd09cebce18d0aa432ec" title="Indicates whether or not the device supports the specified feature.">has_feature()</a></code>.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the device has the feature; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
@@ -1330,8 +1762,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="af91f9bc995cce36563433b609851e181"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af91f9bc995cce36563433b609851e181">&#9670;&nbsp;</a></span>init_rumble()</h2>
+<a id="adf9ceff1932420ed7800d124e879f21f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf9ceff1932420ed7800d124e879f21f">&#9670;&nbsp;</a></span>name()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1342,10 +1774,10 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::init_rumble </td>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::name </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+          <td> const -&gt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a>
   </td>
         </tr>
       </table>
@@ -1356,8 +1788,138 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Initializes rumble playback for the haptic device. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>success</code> if rumble playback was successfully initialized; <code>failure</code> otherwise.</dd></dl>
+<p>Attempts to return the name associated with the haptic device. </p>
+<dl class="section return"><dt>Returns</dt><dd>the name associated with the haptic device; a null pointer is returned if no name was found.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="ae6e3e0718590e3b0eef5412595bfb1fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6e3e0718590e3b0eef5412595bfb1fd">&#9670;&nbsp;</a></span>effect_capacity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::effect_capacity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; std::optional&lt;int&gt;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the maximum amount of effect the device can store. </p>
+<dl class="section note"><dt>Note</dt><dd>This function isn't supported on all platforms and the returned value should be treated as an approximation.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the maximum number of effects the the haptic device can store; <code>std::nullopt</code> if something goes wrong.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a7c766bd9d7237d25a964e1e8bbb6e32b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c766bd9d7237d25a964e1e8bbb6e32b">&#9670;&nbsp;</a></span>concurrent_capacity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::concurrent_capacity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; std::optional&lt;int&gt;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the maximum amount of effects that can be played simultaneously. </p>
+<dl class="section note"><dt>Note</dt><dd>This function isn't supported on all platforms.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the maximum number of effects that can be playing simultaneously; <code>std::nullopt</code> if something goes wrong.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a48c3abcbd8bc8ad91c40e87824bf9d2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48c3abcbd8bc8ad91c40e87824bf9d2c">&#9670;&nbsp;</a></span>axis_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::axis_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; int
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the number of axes that the haptic device has. </p>
+<dl class="section return"><dt>Returns</dt><dd>the number of axes that the haptic device has.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a4fbfbfbf8cccc142931794cb77d833ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fbfbfbf8cccc142931794cb77d833ab">&#9670;&nbsp;</a></span>count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; int
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the number of available haptic devices. </p>
+<dl class="section return"><dt>Returns</dt><dd>the amount of available haptic devices.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
 
 </div>
@@ -1474,145 +2036,6 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="aec5101e12c0b7f0306edc428a89e7b84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec5101e12c0b7f0306edc428a89e7b84">&#9670;&nbsp;</a></span>is_playing()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::is_playing </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1basic__haptic.html#afb671d03a606f1d6216bf82fe9238bb9">effect_id</a>&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the specified effect is playing on the device. </p>
-<dl class="section pre"><dt>Precondition</dt><dd>The device must support the <code>status</code> feature.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> on if the effect is playing on the device; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a2a880dedbed66903782416392e70772f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a880dedbed66903782416392e70772f">&#9670;&nbsp;</a></span>is_rumble_supported()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::is_rumble_supported </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not rumble playback is supported. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if rumble playback is supported; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="ab7877669de6507633e0b1a6229e09a46"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7877669de6507633e0b1a6229e09a46">&#9670;&nbsp;</a></span>is_supported()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<div class="memtemplate">
-template&lt;typename D &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::is_supported </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1haptic__effect.html">haptic_effect</a>&lt; D &gt; &amp;&#160;</td>
-          <td class="paramname"><em>effect</em></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the device can run the specified effect. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">effect</td><td>the effect that will be checked.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the device supports the effect; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="adf9ceff1932420ed7800d124e879f21f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf9ceff1932420ed7800d124e879f21f">&#9670;&nbsp;</a></span>name()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::name </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Attempts to return the name associated with the haptic device. </p>
-<dl class="section return"><dt>Returns</dt><dd>the name associated with the haptic device; a null pointer is returned if no name was found.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
 <a id="a7e8bf8715a5c04168d5a3929c957d8da"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7e8bf8715a5c04168d5a3929c957d8da">&#9670;&nbsp;</a></span>operator bool()</h2>
 
@@ -1646,8 +2069,8 @@ template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </div>
 
 </div>
 </div>
-<a id="af458023064c79d679591d01713a058d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af458023064c79d679591d01713a058d0">&#9670;&nbsp;</a></span>pause()</h2>
+<a id="a6c6de9eb42d5e178601107b9688946e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c6de9eb42d5e178601107b9688946e1">&#9670;&nbsp;</a></span>get()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1658,10 +2081,10 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::pause </td>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::get </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+          <td> const -&gt; SDL_Haptic*
   </td>
         </tr>
       </table>
@@ -1672,432 +2095,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Pauses the device. </p>
-<dl class="section pre"><dt>Precondition</dt><dd>The device must support the <code>pause</code> feature. </dd></dl>
-<dl class="section post"><dt>Postcondition</dt><dd>You must call <code><a class="el" href="classcen_1_1basic__haptic.html#ae7c5030d0b1c31fbbe9e18d41bae35a3" title="Unpauses the device.">unpause()</a></code> before calling <code><a class="el" href="classcen_1_1basic__haptic.html#a2fbe9358807e90ea03decf3f1e32a772" title="Uploads an effect to the device.">upload()</a></code> or <code><a class="el" href="classcen_1_1basic__haptic.html#ab928d667d0d9a1d4bad273937d59ea8b" title="Attempts to update the effect associated with the specified ID.">update()</a></code>.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd><code>success</code> if nothing went wrong; <code>failure</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="aab0d8f488d8aa556869d42d582d730e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab0d8f488d8aa556869d42d582d730e5">&#9670;&nbsp;</a></span>play_rumble()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::play_rumble </td>
-          <td>(</td>
-          <td class="paramtype">const float&#160;</td>
-          <td class="paramname"><em>strength</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a> &gt;&#160;</td>
-          <td class="paramname"><em>duration</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Plays a rumble effect. </p>
-<dl class="section note"><dt>Note</dt><dd>Make sure to call <code><a class="el" href="classcen_1_1basic__haptic.html#af91f9bc995cce36563433b609851e181" title="Initializes rumble playback for the haptic device.">init_rumble()</a></code> before calling this function!</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">strength</td><td>the strength of the rumble effect, clamped to [0, 1]. </td></tr>
-    <tr><td class="paramname">duration</td><td>the duration of the rumble effect.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the rumble was successful; <code>failure</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="af6bb64a134bb482c031b465f3a498df9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6bb64a134bb482c031b465f3a498df9">&#9670;&nbsp;</a></span>run()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::run </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1basic__haptic.html#afb671d03a606f1d6216bf82fe9238bb9">effect_id</a>&#160;</td>
-          <td class="paramname"><em>id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>&#160;</td>
-          <td class="paramname"><em>iterations</em> = <code>1</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Runs the specified effect. </p>
-<dl class="section note"><dt>Note</dt><dd>If you want to repeat the effect indefinitely without repeating the attack and fade, see <code><a class="el" href="classcen_1_1haptic__effect.html#a8f9cd09080dd4aa66e40ae609e7178a5" title="Sets the effect to be repeated indefinitely when run.">haptic_effect::set_repeat_forever()</a></code>.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">id</td><td>the ID associated with the effect that will be run. </td></tr>
-    <tr><td class="paramname">iterations</td><td>the number of iterations, can be <code>haptic_infinity</code> to repeat the effect forever (including the attack and fade).</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>success</code> if nothing went wrong; <code>failure</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a701661094ce31a9afa3f9650d27a5053"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a701661094ce31a9afa3f9650d27a5053">&#9670;&nbsp;</a></span>set_autocenter()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::set_autocenter </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>autocenter</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the autocenter value that will be used. </p>
-<dl class="section pre"><dt>Precondition</dt><dd>The device must support the <code>autocenter</code> feature. </dd>
-<dd>
-<code>autocenter</code> must be greater or equal to zero. </dd>
-<dd>
-<code>autocenter</code> must be less than or equal to zero.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">autocenter</td><td>the value of the autocenter that will be used, in the interval [0, 100]. Autocentering will be disabled if this value is zero.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>success</code> if nothing went wrong; <code>failure</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a20de2921410e462791d381e6152f2c47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20de2921410e462791d381e6152f2c47">&#9670;&nbsp;</a></span>set_gain()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::set_gain </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>gain</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the gain the is used. </p>
-<dl class="section pre"><dt>Precondition</dt><dd>The device must support the <code>gain</code> feature. </dd>
-<dd>
-<code>gain</code> must be greater or equal to zero. </dd>
-<dd>
-<code>gain</code> must be less than or equal to zero.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">gain</td><td>the gain that will be used, in the interval [0, 100].</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>success</code> if nothing went wrong; <code>failure</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a85f5018ed3ac7eb8e7435c6c08b5686b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a85f5018ed3ac7eb8e7435c6c08b5686b">&#9670;&nbsp;</a></span>stop()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::stop </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1basic__haptic.html#afb671d03a606f1d6216bf82fe9238bb9">effect_id</a>&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Stops a currently running effect. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">id</td><td>the ID associated with the effect that will be stopped.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>success</code> if nothing went wrong; <code>failure</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a822b15203a62952c60172545d4904b28"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a822b15203a62952c60172545d4904b28">&#9670;&nbsp;</a></span>stop_all()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::stop_all </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Stops all currently running effects on the device. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>success</code> if nothing went wrong; <code>failure</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a52e6046b20b7263637145c0dced4c303"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52e6046b20b7263637145c0dced4c303">&#9670;&nbsp;</a></span>stop_rumble()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::stop_rumble </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Stops the current rumble effect. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the rumble was successfully stopped; <code>failure</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="ae7c5030d0b1c31fbbe9e18d41bae35a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7c5030d0b1c31fbbe9e18d41bae35a3">&#9670;&nbsp;</a></span>unpause()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::unpause </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Unpauses the device. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code><a class="el" href="classcen_1_1basic__haptic.html#af458023064c79d679591d01713a058d0" title="Pauses the device.">pause()</a></code> must have been called before this function is invoked.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd><code>success</code> if nothing went wrong; <code>failure</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="ab928d667d0d9a1d4bad273937d59ea8b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab928d667d0d9a1d4bad273937d59ea8b">&#9670;&nbsp;</a></span>update()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<div class="memtemplate">
-template&lt;typename D &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::update </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1basic__haptic.html#afb671d03a606f1d6216bf82fe9238bb9">effect_id</a>&#160;</td>
-          <td class="paramname"><em>id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1haptic__effect.html">haptic_effect</a>&lt; D &gt; &amp;&#160;</td>
-          <td class="paramname"><em>effect</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Attempts to update the effect associated with the specified ID. </p>
-<dl class="section note"><dt>Note</dt><dd>It is not possible to change the type of the effect through this function.</dd>
-<dd>
-You might experience strange results if you call this function for an effect that is currently playing, but it is possible.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">id</td><td>the ID associated with the effect that will be updated. </td></tr>
-    <tr><td class="paramname">effect</td><td>the new properties that will be associated with the effect.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>success</code> if nothing went wrong; <code>failure</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a2fbe9358807e90ea03decf3f1e32a772"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2fbe9358807e90ea03decf3f1e32a772">&#9670;&nbsp;</a></span>upload()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<div class="memtemplate">
-template&lt;typename D &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__haptic.html">cen::basic_haptic</a>&lt; T &gt;::upload </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1haptic__effect.html">haptic_effect</a>&lt; D &gt; &amp;&#160;</td>
-          <td class="paramname"><em>effect</em></td><td>)</td>
-          <td> -&gt; std::optional&lt;<a class="el" href="classcen_1_1basic__haptic.html#afb671d03a606f1d6216bf82fe9238bb9">effect_id</a>&gt;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Uploads an effect to the device. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">effect</td><td>the effect that will be uploaded to the device.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the ID associated with the uploaded effect; <code>std::nullopt</code> if something went wrong.</dd></dl>
+<p>Returns a pointer to the internal representation. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Don't claim ownership of the returned pointer!</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the internal representation.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
 
 </div>

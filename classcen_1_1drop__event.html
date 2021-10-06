@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -270,8 +270,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa4d290709f973b8f03d79197c44e379b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4d290709f973b8f03d79197c44e379b">&#9670;&nbsp;</a></span>file()</h2>
+<a id="a3294bd3c64e47aab17e72367522b2613"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3294bd3c64e47aab17e72367522b2613">&#9670;&nbsp;</a></span>set_will_free_file()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -280,11 +280,11 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::drop_event::file </td>
+          <td class="memname">void cen::drop_event::set_will_free_file </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; char*
-  </td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>freeFile</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -294,10 +294,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a pointer to the associated file. </p>
-<dl class="section warning"><dt>Warning</dt><dd>Do <b>not</b> claim ownership of the returned pointer <em>without</em> setting the <code>will_free_file</code> property to <b>false</b>.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>The returned pointer is always <code>nullptr</code> for <code>drop_begin</code> and <code>drop_complete</code> drop events.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the file associated with the event, might be null.</dd></dl>
+<p>Sets whether or not the associated file will be freed by this event. </p>
+<p>If you set this property to <code>false</code>, you <b>must</b> remember to call <code>SDL_free</code> on the file pointer by yourself. Otherwise, you'll end up with a memory leak!</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">freeFile</td><td><code>true</code> if the associated file should be freed upon the destruction of the event; <code>false</code> otherwise.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
@@ -335,42 +339,6 @@ If the <code>will_free_file</code> property is <code>true</code>, then <b>the pr
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">file</td><td>a pointer to a file, can safely be null.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a3294bd3c64e47aab17e72367522b2613"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3294bd3c64e47aab17e72367522b2613">&#9670;&nbsp;</a></span>set_will_free_file()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cen::drop_event::set_will_free_file </td>
-          <td>(</td>
-          <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>freeFile</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets whether or not the associated file will be freed by this event. </p>
-<p>If you set this property to <code>false</code>, you <b>must</b> remember to call <code>SDL_free</code> on the file pointer by yourself. Otherwise, you'll end up with a memory leak!</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">freeFile</td><td><code>true</code> if the associated file should be freed upon the destruction of the event; <code>false</code> otherwise.</td></tr>
   </table>
   </dd>
 </dl>
@@ -440,6 +408,38 @@ If the <code>will_free_file</code> property is <code>true</code>, then <b>the pr
 <p>Indicates whether or not the associated file will be freed by this event upon destruction. </p>
 <p>By default, this property is set to <b>false</b>.</p>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the associated file will be freed upon destruction; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="aa4d290709f973b8f03d79197c44e379b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4d290709f973b8f03d79197c44e379b">&#9670;&nbsp;</a></span>file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::drop_event::file </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; char*
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the associated file. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Do <b>not</b> claim ownership of the returned pointer <em>without</em> setting the <code>will_free_file</code> property to <b>false</b>.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The returned pointer is always <code>nullptr</code> for <code>drop_begin</code> and <code>drop_complete</code> drop events.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the file associated with the event, might be null.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>

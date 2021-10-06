@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -750,8 +750,8 @@ template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aeed25097b2897e325075c1ddf9e3ed67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeed25097b2897e325075c1ddf9e3ed67">&#9670;&nbsp;</a></span>brightness()</h2>
+<a id="ac60cdfe6f5a5e73c2daff65820fa5434"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac60cdfe6f5a5e73c2daff65820fa5434">&#9670;&nbsp;</a></span>show()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -762,10 +762,190 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::brightness </td>
+          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::show </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; float
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Makes the window visible. </p>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a61fdba55a685ec8b2b26c71c71d86df8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61fdba55a685ec8b2b26c71c71d86df8">&#9670;&nbsp;</a></span>hide()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::hide </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Makes the window invisible. </p>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="aa99644e5a28a7a3f9387c1caf9fba107"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa99644e5a28a7a3f9387c1caf9fba107">&#9670;&nbsp;</a></span>raise()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::raise </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Raises this window above other windows and requests focus. </p>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a4e196ea1ea3f78a2d52588ed33e1bb1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e196ea1ea3f78a2d52588ed33e1bb1e">&#9670;&nbsp;</a></span>maximize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::maximize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Maximizes the window. </p>
+<dl class="section since"><dt>Since</dt><dd>3.1.0 </dd></dl>
+
+</div>
+</div>
+<a id="ad2d7f378a747be9de3d0bceea57f37c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2d7f378a747be9de3d0bceea57f37c8">&#9670;&nbsp;</a></span>minimize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::minimize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Minimizes the window. </p>
+<dl class="section since"><dt>Since</dt><dd>3.1.0 </dd></dl>
+
+</div>
+</div>
+<a id="a70ff67e21dbe73c462797f47f33b225c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70ff67e21dbe73c462797f47f33b225c">&#9670;&nbsp;</a></span>restore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::restore </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Restores the position and size of the window if it's minimized or maximized. </p>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="adc6338735b017e93b846144f4a540d9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc6338735b017e93b846144f4a540d9a">&#9670;&nbsp;</a></span>update_surface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::update_surface </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
   </td>
         </tr>
       </table>
@@ -776,10 +956,547 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the current brightness value of the window. </p>
-<p>The default value of this property is 1.</p>
-<dl class="section return"><dt>Returns</dt><dd>the current brightness of the window, in the range [0, 1].</dd></dl>
+<p>Updates the window surface. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the surface was successfully updated; <code>failure</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a21e0f18e67acbf2355da0d84f77cac1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21e0f18e67acbf2355da0d84f77cac1f">&#9670;&nbsp;</a></span>flash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::flash </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__video.html#gac02ee69c98c764c8a6a1049573765afb">flash_op</a>&#160;</td>
+          <td class="paramname"><em>op</em> = <code><a class="el" href="group__video.html#ggac02ee69c98c764c8a6a1049573765afbaacfad020da3ef3e7d24453f5d25b0ac1">flash_op::briefly</a></code></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Modifies the flash state of the window to acquire attention from the user. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">op</td><td>the flash operation that will be performed.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the operation was successful; <code>failure</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a7e64c71df21c358a63d5ceb41d2add0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e64c71df21c358a63d5ceb41d2add0a">&#9670;&nbsp;</a></span>set_fullscreen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_fullscreen </td>
+          <td>(</td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>enabled</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets whether or not the window is in fullscreen mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enabled</td><td><code>true</code> if the window should be fullscreen; <code>false</code> for windowed mode.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the display mode was changed; <code>failure</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a1dd05fc7a85e7a7f4ec706e375525116"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dd05fc7a85e7a7f4ec706e375525116">&#9670;&nbsp;</a></span>set_fullscreen_desktop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_fullscreen_desktop </td>
+          <td>(</td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>enabled</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets whether or not the window is in fullscreen desktop mode. </p>
+<p>This mode is useful when you want to "fake" fullscreen mode.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enabled</td><td><code>true</code> if the window should be fullscreen desktop; <code>false</code> for windowed mode.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the display mode was changed; <code>failure</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ac2d34a4ff327bff784ea243562035a09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2d34a4ff327bff784ea243562035a09">&#9670;&nbsp;</a></span>set_decorated()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_decorated </td>
+          <td>(</td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>decorated</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets whether or not the window is decorated. </p>
+<p>This is enabled by default.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">decorated</td><td><code>true</code> if the window should be decorated; <code>false</code> otherwise.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="af632c2eb29963f217492c2ec4c42f816"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af632c2eb29963f217492c2ec4c42f816">&#9670;&nbsp;</a></span>set_resizable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_resizable </td>
+          <td>(</td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>resizable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets whether or not the window should be resizable. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resizable</td><td><code>true</code> if the window should be resizable; <code>false</code> otherwise.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a3124b0e2ef6eb551bebf9b3124596e4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3124b0e2ef6eb551bebf9b3124596e4f">&#9670;&nbsp;</a></span>set_icon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_icon </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__video.html#ga8b71461a73c8e75c41923ffa705d67b6">surface</a> &amp;&#160;</td>
+          <td class="paramname"><em>icon</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the icon that will be used by the window. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">icon</td><td>the surface that will serve as the icon of the window.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a9598ea58b33466cae54eb7b199523ac5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9598ea58b33466cae54eb7b199523ac5">&#9670;&nbsp;</a></span>set_title() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_title </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a> &gt;&#160;</td>
+          <td class="paramname"><em>title</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the title of the window. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">title</td><td>the title of the window, can't be null.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a38a159b91cf52640ac5b2aa67add09f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38a159b91cf52640ac5b2aa67add09f3">&#9670;&nbsp;</a></span>set_title() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_title </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>title</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the title of the window. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">title</td><td>the title of the window.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="af1ecb8138a2c6801d59cf7e1b6a5dd57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1ecb8138a2c6801d59cf7e1b6a5dd57">&#9670;&nbsp;</a></span>set_opacity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_opacity </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>opacity</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the opacity of the window. </p>
+<p>The supplied opacity will be clamped to a value in the legal range.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">opacity</td><td>the opacity, in the range [0, 1].</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the opacity was successfully set; <code>failure</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ab2981e52d22e56bd84fb0d450c92081f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2981e52d22e56bd84fb0d450c92081f">&#9670;&nbsp;</a></span>set_grab_mouse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_grab_mouse </td>
+          <td>(</td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>grab</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets whether or not the mouse should be confined within the window. </p>
+<p>This property is disabled by default.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">grab</td><td><code>true</code> if the mouse should be confined within the window; <code>false</code> otherwise.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1basic__window.html#aab01c777783130bcd64d464e9380088a" title="Sets whether or not the keyboard input should be grabbed by the window.">set_grab_keyboard()</a></code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="afd487346790c84680da845bcf7a05241"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd487346790c84680da845bcf7a05241">&#9670;&nbsp;</a></span>set_brightness()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_brightness </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>brightness</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the overall brightness of the window. </p>
+<dl class="section note"><dt>Note</dt><dd>A brightness value outside the legal range will be clamped to the closest valid value.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">brightness</td><td>the brightness value, in the range [0, 1].</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the brightness was successfully set; <code>failure</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="af4d260f9a73eef937bf8703298b61dbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4d260f9a73eef937bf8703298b61dbd">&#9670;&nbsp;</a></span>set_capturing_mouse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_capturing_mouse </td>
+          <td>(</td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>capture</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets whether or not the mouse should be captured. </p>
+<dl class="section note"><dt>Note</dt><dd>A window might have to be visible in order for the mouse to be captured.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">capture</td><td><code>true</code> if the mouse should be captured; <code>false</code> otherwise.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> on the mouse capture was successfully changed; <code>failure</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="aab01c777783130bcd64d464e9380088a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab01c777783130bcd64d464e9380088a">&#9670;&nbsp;</a></span>set_grab_keyboard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_grab_keyboard </td>
+          <td>(</td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>grab</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets whether or not the keyboard input should be grabbed by the window. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">grab</td><td><code>true</code> if the keyboard should be grabbed; <code>false</code> otherwise.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1basic__window.html#ab2981e52d22e56bd84fb0d450c92081f" title="Sets whether or not the mouse should be confined within the window.">set_grab_mouse()</a></code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="ae2f3db8be24ce35b0f2f95d27404f113"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2f3db8be24ce35b0f2f95d27404f113">&#9670;&nbsp;</a></span>set_always_on_top()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_always_on_top </td>
+          <td>(</td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>enabled</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets whether or not a window is always on top of other windows. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enabled</td><td><code>true</code> if the window should be on top of all other windows; <code>false</code> otherwise.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>6.2.0 </dd></dl>
 
 </div>
 </div>
@@ -811,6 +1528,635 @@ template&lt;typename T &gt; </div>
 <p>Centers the window position relative to the screen. </p>
 <dl class="section note"><dt>Note</dt><dd>Windows are centered by default.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ad351c3efa309518e63878fc2698684af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad351c3efa309518e63878fc2698684af">&#9670;&nbsp;</a></span>set_x()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_x </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the x-coordinate of the window. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>the new x-coordinate of the window.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ad9141ed2dd484003cd387ab2bf2dcde9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9141ed2dd484003cd387ab2bf2dcde9">&#9670;&nbsp;</a></span>set_y()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_y </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>y</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the y-coordinate of the window. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">y</td><td>the new y-coordinate of the window.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a3c8bb8b8afb39101c9519a574f5d25d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c8bb8b8afb39101c9519a574f5d25d3">&#9670;&nbsp;</a></span>set_position()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_position </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__math.html#ga482cd24468a5a74647742e69379566c7">ipoint</a>&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the position of the window. </p>
+<dl class="section note"><dt>Note</dt><dd>It's possible to use <code>SDL_WINDOWPOS_CENTERED</code> or <code>SDL_WINDOWPOS_UNDEFINED</code> as any of the components of the point.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>the new position of the window.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a0f8c6bacdff7120f4b875cb5d09994b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f8c6bacdff7120f4b875cb5d09994b1">&#9670;&nbsp;</a></span>x()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::x </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; int
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the x-coordinate of the window position. </p>
+<dl class="section return"><dt>Returns</dt><dd>the x-coordinate of the window position.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ad13e8f53b0f0343e81a0244a395be272"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad13e8f53b0f0343e81a0244a395be272">&#9670;&nbsp;</a></span>y()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::y </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; int
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the y-coordinate of the window position. </p>
+<dl class="section return"><dt>Returns</dt><dd>the y-coordinate of the window position.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a249b79ac0fc93671e70b7719c362dd5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a249b79ac0fc93671e70b7719c362dd5d">&#9670;&nbsp;</a></span>position()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::position </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__math.html#ga482cd24468a5a74647742e69379566c7">ipoint</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the current position of the window. </p>
+<dl class="section note"><dt>Note</dt><dd>Windows are centered by default.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the current position of the window.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a1746ba997503d6ca4abd3af1260a5cf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1746ba997503d6ca4abd3af1260a5cf4">&#9670;&nbsp;</a></span>set_width()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_width </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>width</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the width of the window. </p>
+<p>The supplied width is capped to always be at least 1.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>the new width of the window, must be greater than zero.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a7dd7bf38579ad341a0ee417170b57cbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dd7bf38579ad341a0ee417170b57cbd">&#9670;&nbsp;</a></span>set_height()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_height </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>height</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the height of the window. </p>
+<p>The supplied height is capped to always be at least 1.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">height</td><td>the new height of the window, must be greater than zero.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a09fdcaa2074cd7e8e7bd196d93cc6fd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09fdcaa2074cd7e8e7bd196d93cc6fd0">&#9670;&nbsp;</a></span>set_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_size </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the size of the window. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>The supplied width and height must be greater than zero.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>the new size of the window.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a5f9808a3f5fcae0e1d4796f6a1cf1d8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f9808a3f5fcae0e1d4796f6a1cf1d8c">&#9670;&nbsp;</a></span>set_min_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_min_size </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the minimum size of the window. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>The supplied width and height must be greater than zero.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>the minimum size of the window.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a4f81acc2d4c4908ed60ed45e35a10b1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f81acc2d4c4908ed60ed45e35a10b1e">&#9670;&nbsp;</a></span>set_max_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_max_size </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the maximum size of the window. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>The supplied width and height must be greater than zero.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>the maximum size of the window.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ab4c90f295de8f1ef7cd9f9335d4beb74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4c90f295de8f1ef7cd9f9335d4beb74">&#9670;&nbsp;</a></span>width()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::width </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; int
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the current width of the window. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current width of the window.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a843a131f07e3c73d3157b13c82cbd6de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a843a131f07e3c73d3157b13c82cbd6de">&#9670;&nbsp;</a></span>height()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::height </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; int
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the current height of the window. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current height of the window.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a54a2750491646cd596970133a1fa3205"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54a2750491646cd596970133a1fa3205">&#9670;&nbsp;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the current size of the window. </p>
+<dl class="section note"><dt>Note</dt><dd>Calling this function is slightly faster than calling both <code>width</code> and <code>height</code> to obtain the window size.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the size of the window.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a1a6213d921822b63d11dbaf8d45930bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a6213d921822b63d11dbaf8d45930bc">&#9670;&nbsp;</a></span>min_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::min_size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the minimum size of the window. </p>
+<dl class="section return"><dt>Returns</dt><dd>the minimum size of the window.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ac3357d2b6965823f5d3b49d68cfb8442"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3357d2b6965823f5d3b49d68cfb8442">&#9670;&nbsp;</a></span>max_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::max_size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the maximum size of the window. </p>
+<dl class="section return"><dt>Returns</dt><dd>the maximum size of the window.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="af7350097502df37ae0b451a2d3e1e5fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7350097502df37ae0b451a2d3e1e5fa">&#9670;&nbsp;</a></span>default_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr static auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::default_size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the default size of a window. </p>
+<dl class="section note"><dt>Note</dt><dd>This function is only available for owning windows.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the default size of a window.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a892baa34af0294dd1649d9b266bb5b6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a892baa34af0294dd1649d9b266bb5b6b">&#9670;&nbsp;</a></span>flags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::flags </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a mask that represents the flags associated with the window. </p>
+<p>You can check the returned mask using the <code>SDL_WindowFlags</code> enum.</p>
+<dl class="section return"><dt>Returns</dt><dd>a mask that represents the flags associated with the window.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code>SDL_WindowFlags</code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
 </div>
@@ -891,306 +2237,6 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the flag is set; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a80e06314f15d476b3752606333b12174"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80e06314f15d476b3752606333b12174">&#9670;&nbsp;</a></span>default_flags()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<div class="memtemplate">
-template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr static auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::default_flags </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af7350097502df37ae0b451a2d3e1e5fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7350097502df37ae0b451a2d3e1e5fa">&#9670;&nbsp;</a></span>default_size()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<div class="memtemplate">
-template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr static auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::default_size </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the default size of a window. </p>
-<dl class="section note"><dt>Note</dt><dd>This function is only available for owning windows.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>the default size of a window.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a9168da512a8f23b2d2397e0a87e9d556"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9168da512a8f23b2d2397e0a87e9d556">&#9670;&nbsp;</a></span>display_index()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::display_index </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; std::optional&lt;int&gt;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the display index associated with the window. </p>
-<dl class="section return"><dt>Returns</dt><dd>the display index associated with the window; <code>std::nullopt</code> if the display index cannot be obtained.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.1.0 </dd></dl>
-
-</div>
-</div>
-<a id="a892baa34af0294dd1649d9b266bb5b6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a892baa34af0294dd1649d9b266bb5b6b">&#9670;&nbsp;</a></span>flags()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::flags </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a mask that represents the flags associated with the window. </p>
-<p>You can check the returned mask using the <code>SDL_WindowFlags</code> enum.</p>
-<dl class="section return"><dt>Returns</dt><dd>a mask that represents the flags associated with the window.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><code>SDL_WindowFlags</code></dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a21e0f18e67acbf2355da0d84f77cac1f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a21e0f18e67acbf2355da0d84f77cac1f">&#9670;&nbsp;</a></span>flash()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::flash </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__video.html#gac02ee69c98c764c8a6a1049573765afb">flash_op</a>&#160;</td>
-          <td class="paramname"><em>op</em> = <code><a class="el" href="group__video.html#ggac02ee69c98c764c8a6a1049573765afbaacfad020da3ef3e7d24453f5d25b0ac1">flash_op::briefly</a></code></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Modifies the flash state of the window to acquire attention from the user. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">op</td><td>the flash operation that will be performed.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the operation was successful; <code>failure</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="ac044a90d4252332ea66a7693c271dad3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac044a90d4252332ea66a7693c271dad3">&#9670;&nbsp;</a></span>get()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::get </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; SDL_Window*
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a pointer to the associated SDL window. </p>
-<dl class="section warning"><dt>Warning</dt><dd>Don't take ownership of the returned pointer!</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the associated SDL window.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a7ebece3bd73516a43561948ad80ab78a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ebece3bd73516a43561948ad80ab78a">&#9670;&nbsp;</a></span>get_pixel_format()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::get_pixel_format </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the pixel format of the window. </p>
-<dl class="section return"><dt>Returns</dt><dd>the pixel format used by the window.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="af24ec152ee9602e22882de84f92f77e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af24ec152ee9602e22882de84f92f77e0">&#9670;&nbsp;</a></span>get_surface()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::get_surface </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__video.html#ga3910502561159e34c9a2b83c007e71be">surface_handle</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a handle to the window framebuffer surface. </p>
-<dl class="section warning"><dt>Warning</dt><dd>It is not possible use the framebuffer surface with the 3D or 2D rendering APIs.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>a handle to the window surface, might not contain a valid surface pointer.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a10a189d6793f42cd67af7ea9ae74d1ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10a189d6793f42cd67af7ea9ae74d1ce">&#9670;&nbsp;</a></span>grabbing_mouse()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::grabbing_mouse </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the window is currently grabbing the mouse input. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window is grabbing the mouse; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 
 </div>
 </div>
@@ -1291,132 +2337,6 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a843a131f07e3c73d3157b13c82cbd6de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a843a131f07e3c73d3157b13c82cbd6de">&#9670;&nbsp;</a></span>height()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::height </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; int
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the current height of the window. </p>
-<dl class="section return"><dt>Returns</dt><dd>the current height of the window.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a61fdba55a685ec8b2b26c71c71d86df8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a61fdba55a685ec8b2b26c71c71d86df8">&#9670;&nbsp;</a></span>hide()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::hide </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Makes the window invisible. </p>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a3f3c4a4699b8695649823adbd7f9e683"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f3c4a4699b8695649823adbd7f9e683">&#9670;&nbsp;</a></span>id()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::id </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a numerical ID of the window. </p>
-<dl class="section return"><dt>Returns</dt><dd>a numerical ID of the window.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="aaff1b135e836c3a9c37d61cf16ead1f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaff1b135e836c3a9c37d61cf16ead1f2">&#9670;&nbsp;</a></span>is_always_on_top()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::is_always_on_top </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the window is set to be always on top of other windows. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window is always on top of other windows; false otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
 <a id="a0fe9f3297bfa327fb823f9872a568a48"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0fe9f3297bfa327fb823f9872a568a48">&#9670;&nbsp;</a></span>is_borderless()</h2>
 
@@ -1448,38 +2368,6 @@ template&lt;typename T &gt; </div>
 <p>Windows are not borderless by default.</p>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window is borderless; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a519e140b2f9af3783327f59d81aee66e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a519e140b2f9af3783327f59d81aee66e">&#9670;&nbsp;</a></span>is_capturing_mouse()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::is_capturing_mouse </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the window is capturing the mouse. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window is capturing the mouse; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
 </div>
@@ -1517,8 +2405,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a4bfbbdc6b642df6d3d7792cad653d4f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4bfbbdc6b642df6d3d7792cad653d4f7">&#9670;&nbsp;</a></span>is_excluded_from_taskbar()</h2>
+<a id="afeca2948bc0353af718819bcbd62b1ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afeca2948bc0353af718819bcbd62b1ec">&#9670;&nbsp;</a></span>is_resizable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1529,7 +2417,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::is_excluded_from_taskbar </td>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::is_resizable </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const -&gt; bool
@@ -1543,41 +2431,42 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Indicates whether or not the window is excluded from the taskbar. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window is excluded from the taskbar; <code>false</code> otherwise.</dd></dl>
+<p>Indicates whether or not the window is resizable. </p>
+<p>By default, this property is set to false.</p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window is resizable; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="afffc9bea39b1b566983d9493fe6771ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afffc9bea39b1b566983d9493fe6771ec">&#9670;&nbsp;</a></span>is_high_dpi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::is_high_dpi </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or the window supports high-DPI mode. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window supports high-DPI mode; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a9fd564549cf3d6d9f1a2c3337a25292f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9fd564549cf3d6d9f1a2c3337a25292f">&#9670;&nbsp;</a></span>is_foreign()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::is_foreign </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the window wasn't created by SDL. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window wasn't created by SDL; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
 </div>
@@ -1645,6 +2534,38 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="a5b44eaafa03072e4b131faccb38c9748"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b44eaafa03072e4b131faccb38c9748">&#9670;&nbsp;</a></span>is_visible()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::is_visible </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the window is visible. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window is visible; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
 <a id="a3ea30fd9a76e7f8151a7095c693b81b0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3ea30fd9a76e7f8151a7095c693b81b0">&#9670;&nbsp;</a></span>is_hidden()</h2>
 
@@ -1677,8 +2598,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="afffc9bea39b1b566983d9493fe6771ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afffc9bea39b1b566983d9493fe6771ec">&#9670;&nbsp;</a></span>is_high_dpi()</h2>
+<a id="aa780b8c080044b32ade88c475492387e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa780b8c080044b32ade88c475492387e">&#9670;&nbsp;</a></span>is_opengl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1689,7 +2610,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::is_high_dpi </td>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::is_opengl </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const -&gt; bool
@@ -1703,14 +2624,14 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Indicates whether or the window supports high-DPI mode. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window supports high-DPI mode; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+<p>Indicates whether or not the window is usable with an OpenGL-context. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window is compatible with an OpenGL-context; false otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="af1b79543e5f4528d70b9641994a58759"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1b79543e5f4528d70b9641994a58759">&#9670;&nbsp;</a></span>is_maximized()</h2>
+<a id="ad8e5163c95e9b9ad471857f08b2344d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8e5163c95e9b9ad471857f08b2344d9">&#9670;&nbsp;</a></span>is_vulkan()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1721,7 +2642,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::is_maximized </td>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::is_vulkan </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const -&gt; bool
@@ -1735,8 +2656,8 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Indicates whether or not the window is maximized. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window is maximized; <code>false</code> otherwise.</dd></dl>
+<p>Indicates whether or not the window is usable as a Vulkan surface. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window is is usable as a Vulkan surface; false otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
@@ -1773,6 +2694,70 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="a9fd564549cf3d6d9f1a2c3337a25292f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fd564549cf3d6d9f1a2c3337a25292f">&#9670;&nbsp;</a></span>is_foreign()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::is_foreign </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the window wasn't created by SDL. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window wasn't created by SDL; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a519e140b2f9af3783327f59d81aee66e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a519e140b2f9af3783327f59d81aee66e">&#9670;&nbsp;</a></span>is_capturing_mouse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::is_capturing_mouse </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the window is capturing the mouse. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window is capturing the mouse; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
 <a id="a7c1e3bdbbf7c22e941d6c59277d10938"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7c1e3bdbbf7c22e941d6c59277d10938">&#9670;&nbsp;</a></span>is_minimized()</h2>
 
@@ -1805,8 +2790,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="aa780b8c080044b32ade88c475492387e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa780b8c080044b32ade88c475492387e">&#9670;&nbsp;</a></span>is_opengl()</h2>
+<a id="af1b79543e5f4528d70b9641994a58759"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1b79543e5f4528d70b9641994a58759">&#9670;&nbsp;</a></span>is_maximized()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1817,7 +2802,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::is_opengl </td>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::is_maximized </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const -&gt; bool
@@ -1831,14 +2816,14 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Indicates whether or not the window is usable with an OpenGL-context. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window is compatible with an OpenGL-context; false otherwise.</dd></dl>
+<p>Indicates whether or not the window is maximized. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window is maximized; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="a157f00a50af7e619a7f9c7d931ac661a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a157f00a50af7e619a7f9c7d931ac661a">&#9670;&nbsp;</a></span>is_popup_menu()</h2>
+<a id="aaff1b135e836c3a9c37d61cf16ead1f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaff1b135e836c3a9c37d61cf16ead1f2">&#9670;&nbsp;</a></span>is_always_on_top()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1849,7 +2834,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::is_popup_menu </td>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::is_always_on_top </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const -&gt; bool
@@ -1863,14 +2848,14 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Indicates whether or not the window is a popup menu. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window is a popup menu; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+<p>Indicates whether or not the window is set to be always on top of other windows. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window is always on top of other windows; false otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="afeca2948bc0353af718819bcbd62b1ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afeca2948bc0353af718819bcbd62b1ec">&#9670;&nbsp;</a></span>is_resizable()</h2>
+<a id="a591cccddaf03e33cde3d1248bde45114"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a591cccddaf03e33cde3d1248bde45114">&#9670;&nbsp;</a></span>is_utility()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1881,7 +2866,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::is_resizable </td>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::is_utility </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const -&gt; bool
@@ -1895,41 +2880,8 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Indicates whether or not the window is resizable. </p>
-<p>By default, this property is set to false.</p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window is resizable; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="adb324d76eaee7a0b70dd78d08365fde8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb324d76eaee7a0b70dd78d08365fde8">&#9670;&nbsp;</a></span>is_screen_keyboard_shown()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::is_screen_keyboard_shown </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the screen keyboard is shown for the window. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the screen keyboard is shown for the window; <code>false</code> otherwise.</dd></dl>
+<p>Indicates whether or not the window is a "utility" window. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if window is a "utility" window; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
 
 </div>
@@ -1966,8 +2918,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a591cccddaf03e33cde3d1248bde45114"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a591cccddaf03e33cde3d1248bde45114">&#9670;&nbsp;</a></span>is_utility()</h2>
+<a id="a157f00a50af7e619a7f9c7d931ac661a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a157f00a50af7e619a7f9c7d931ac661a">&#9670;&nbsp;</a></span>is_popup_menu()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1978,7 +2930,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::is_utility </td>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::is_popup_menu </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const -&gt; bool
@@ -1992,14 +2944,14 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Indicates whether or not the window is a "utility" window. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if window is a "utility" window; <code>false</code> otherwise.</dd></dl>
+<p>Indicates whether or not the window is a popup menu. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window is a popup menu; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="a5b44eaafa03072e4b131faccb38c9748"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5b44eaafa03072e4b131faccb38c9748">&#9670;&nbsp;</a></span>is_visible()</h2>
+<a id="a4bfbbdc6b642df6d3d7792cad653d4f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bfbbdc6b642df6d3d7792cad653d4f7">&#9670;&nbsp;</a></span>is_excluded_from_taskbar()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2010,7 +2962,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::is_visible </td>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::is_excluded_from_taskbar </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const -&gt; bool
@@ -2024,14 +2976,76 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Indicates whether or not the window is visible. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window is visible; <code>false</code> otherwise.</dd></dl>
+<p>Indicates whether or not the window is excluded from the taskbar. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window is excluded from the taskbar; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a80e06314f15d476b3752606333b12174"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80e06314f15d476b3752606333b12174">&#9670;&nbsp;</a></span>default_flags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr static auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::default_flags </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3f3c4a4699b8695649823adbd7f9e683"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f3c4a4699b8695649823adbd7f9e683">&#9670;&nbsp;</a></span>id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a numerical ID of the window. </p>
+<dl class="section return"><dt>Returns</dt><dd>a numerical ID of the window.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="ad8e5163c95e9b9ad471857f08b2344d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8e5163c95e9b9ad471857f08b2344d9">&#9670;&nbsp;</a></span>is_vulkan()</h2>
+<a id="a9168da512a8f23b2d2397e0a87e9d556"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9168da512a8f23b2d2397e0a87e9d556">&#9670;&nbsp;</a></span>display_index()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2042,10 +3056,10 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::is_vulkan </td>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::display_index </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
+          <td> const -&gt; std::optional&lt;int&gt;
   </td>
         </tr>
       </table>
@@ -2056,76 +3070,14 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Indicates whether or not the window is usable as a Vulkan surface. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window is is usable as a Vulkan surface; false otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ac3357d2b6965823f5d3b49d68cfb8442"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3357d2b6965823f5d3b49d68cfb8442">&#9670;&nbsp;</a></span>max_size()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::max_size </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the maximum size of the window. </p>
-<dl class="section return"><dt>Returns</dt><dd>the maximum size of the window.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a4e196ea1ea3f78a2d52588ed33e1bb1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e196ea1ea3f78a2d52588ed33e1bb1e">&#9670;&nbsp;</a></span>maximize()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::maximize </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Maximizes the window. </p>
+<p>Returns the display index associated with the window. </p>
+<dl class="section return"><dt>Returns</dt><dd>the display index associated with the window; <code>std::nullopt</code> if the display index cannot be obtained.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.1.0 </dd></dl>
 
 </div>
 </div>
-<a id="a1a6213d921822b63d11dbaf8d45930bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a6213d921822b63d11dbaf8d45930bc">&#9670;&nbsp;</a></span>min_size()</h2>
+<a id="ab93d746582dae1a84b7d9ea0b1ed5ce2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab93d746582dae1a84b7d9ea0b1ed5ce2">&#9670;&nbsp;</a></span>title()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2136,28 +3088,28 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::min_size </td>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::title </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>
+          <td> const -&gt; std::string
   </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the minimum size of the window. </p>
-<dl class="section return"><dt>Returns</dt><dd>the minimum size of the window.</dd></dl>
+<p>Returns the title of the window. </p>
+<dl class="section return"><dt>Returns</dt><dd>the title of the window.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="ad2d7f378a747be9de3d0bceea57f37c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2d7f378a747be9de3d0bceea57f37c8">&#9670;&nbsp;</a></span>minimize()</h2>
+<a id="aeed25097b2897e325075c1ddf9e3ed67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeed25097b2897e325075c1ddf9e3ed67">&#9670;&nbsp;</a></span>brightness()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2168,10 +3120,11 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::minimize </td>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::brightness </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const -&gt; float
+  </td>
         </tr>
       </table>
   </td>
@@ -2181,8 +3134,10 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Minimizes the window. </p>
-<dl class="section since"><dt>Since</dt><dd>3.1.0 </dd></dl>
+<p>Returns the current brightness value of the window. </p>
+<p>The default value of this property is 1.</p>
+<dl class="section return"><dt>Returns</dt><dd>the current brightness of the window, in the range [0, 1].</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 
 </div>
 </div>
@@ -2214,6 +3169,230 @@ template&lt;typename T &gt; </div>
 
 <p>Returns the opacity of the window. </p>
 <dl class="section return"><dt>Returns</dt><dd>the opacity of the window, in the range [0, 1].</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a7ebece3bd73516a43561948ad80ab78a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ebece3bd73516a43561948ad80ab78a">&#9670;&nbsp;</a></span>get_pixel_format()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::get_pixel_format </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the pixel format of the window. </p>
+<dl class="section return"><dt>Returns</dt><dd>the pixel format used by the window.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="af24ec152ee9602e22882de84f92f77e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af24ec152ee9602e22882de84f92f77e0">&#9670;&nbsp;</a></span>get_surface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::get_surface </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__video.html#ga3910502561159e34c9a2b83c007e71be">surface_handle</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a handle to the window framebuffer surface. </p>
+<dl class="section warning"><dt>Warning</dt><dd>It is not possible use the framebuffer surface with the 3D or 2D rendering APIs.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a handle to the window surface, might not contain a valid surface pointer.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a10a189d6793f42cd67af7ea9ae74d1ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10a189d6793f42cd67af7ea9ae74d1ce">&#9670;&nbsp;</a></span>grabbing_mouse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::grabbing_mouse </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the window is currently grabbing the mouse input. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the window is grabbing the mouse; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="adb324d76eaee7a0b70dd78d08365fde8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb324d76eaee7a0b70dd78d08365fde8">&#9670;&nbsp;</a></span>is_screen_keyboard_shown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::is_screen_keyboard_shown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the screen keyboard is shown for the window. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the screen keyboard is shown for the window; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ac044a90d4252332ea66a7693c271dad3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac044a90d4252332ea66a7693c271dad3">&#9670;&nbsp;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; SDL_Window*
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the associated SDL window. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Don't take ownership of the returned pointer!</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the associated SDL window.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a1d52d0bf8626684da038f4f6a53a5542"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d52d0bf8626684da038f4f6a53a5542">&#9670;&nbsp;</a></span>operator SDL_Window *()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::operator SDL_Window * </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts to <code>SDL_Window*</code>. </p>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the associated SDL window.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a6f2a22d4ea9295e61eeb411b2b338a8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f2a22d4ea9295e61eeb411b2b338a8f">&#9670;&nbsp;</a></span>operator const SDL_Window *()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::operator const SDL_Window * </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts to <code>const SDL_Window*</code>. </p>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the associated SDL window.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 
 </div>
@@ -2250,1185 +3429,6 @@ template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </div>
 <dl class="section warning"><dt>Warning</dt><dd>It's undefined behaviour to invoke other member functions that use the internal pointer if this function returns <code>false</code>.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the handle holds a non-null pointer; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a6f2a22d4ea9295e61eeb411b2b338a8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f2a22d4ea9295e61eeb411b2b338a8f">&#9670;&nbsp;</a></span>operator const SDL_Window *()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::operator const SDL_Window * </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Converts to <code>const SDL_Window*</code>. </p>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the associated SDL window.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a1d52d0bf8626684da038f4f6a53a5542"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d52d0bf8626684da038f4f6a53a5542">&#9670;&nbsp;</a></span>operator SDL_Window *()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::operator SDL_Window * </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Converts to <code>SDL_Window*</code>. </p>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the associated SDL window.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a249b79ac0fc93671e70b7719c362dd5d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a249b79ac0fc93671e70b7719c362dd5d">&#9670;&nbsp;</a></span>position()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::position </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__math.html#ga482cd24468a5a74647742e69379566c7">ipoint</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the current position of the window. </p>
-<dl class="section note"><dt>Note</dt><dd>Windows are centered by default.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>the current position of the window.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="aa99644e5a28a7a3f9387c1caf9fba107"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa99644e5a28a7a3f9387c1caf9fba107">&#9670;&nbsp;</a></span>raise()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::raise </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Raises this window above other windows and requests focus. </p>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a70ff67e21dbe73c462797f47f33b225c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70ff67e21dbe73c462797f47f33b225c">&#9670;&nbsp;</a></span>restore()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::restore </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Restores the position and size of the window if it's minimized or maximized. </p>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
-<a id="ae2f3db8be24ce35b0f2f95d27404f113"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae2f3db8be24ce35b0f2f95d27404f113">&#9670;&nbsp;</a></span>set_always_on_top()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_always_on_top </td>
-          <td>(</td>
-          <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>enabled</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets whether or not a window is always on top of other windows. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">enabled</td><td><code>true</code> if the window should be on top of all other windows; <code>false</code> otherwise.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>6.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="afd487346790c84680da845bcf7a05241"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd487346790c84680da845bcf7a05241">&#9670;&nbsp;</a></span>set_brightness()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_brightness </td>
-          <td>(</td>
-          <td class="paramtype">const float&#160;</td>
-          <td class="paramname"><em>brightness</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the overall brightness of the window. </p>
-<dl class="section note"><dt>Note</dt><dd>A brightness value outside the legal range will be clamped to the closest valid value.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">brightness</td><td>the brightness value, in the range [0, 1].</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the brightness was successfully set; <code>failure</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="af4d260f9a73eef937bf8703298b61dbd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4d260f9a73eef937bf8703298b61dbd">&#9670;&nbsp;</a></span>set_capturing_mouse()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_capturing_mouse </td>
-          <td>(</td>
-          <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>capture</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets whether or not the mouse should be captured. </p>
-<dl class="section note"><dt>Note</dt><dd>A window might have to be visible in order for the mouse to be captured.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">capture</td><td><code>true</code> if the mouse should be captured; <code>false</code> otherwise.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>success</code> on the mouse capture was successfully changed; <code>failure</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ac2d34a4ff327bff784ea243562035a09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2d34a4ff327bff784ea243562035a09">&#9670;&nbsp;</a></span>set_decorated()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_decorated </td>
-          <td>(</td>
-          <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>decorated</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets whether or not the window is decorated. </p>
-<p>This is enabled by default.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">decorated</td><td><code>true</code> if the window should be decorated; <code>false</code> otherwise.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a7e64c71df21c358a63d5ceb41d2add0a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e64c71df21c358a63d5ceb41d2add0a">&#9670;&nbsp;</a></span>set_fullscreen()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_fullscreen </td>
-          <td>(</td>
-          <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>enabled</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets whether or not the window is in fullscreen mode. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">enabled</td><td><code>true</code> if the window should be fullscreen; <code>false</code> for windowed mode.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the display mode was changed; <code>failure</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a1dd05fc7a85e7a7f4ec706e375525116"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1dd05fc7a85e7a7f4ec706e375525116">&#9670;&nbsp;</a></span>set_fullscreen_desktop()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_fullscreen_desktop </td>
-          <td>(</td>
-          <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>enabled</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets whether or not the window is in fullscreen desktop mode. </p>
-<p>This mode is useful when you want to "fake" fullscreen mode.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">enabled</td><td><code>true</code> if the window should be fullscreen desktop; <code>false</code> for windowed mode.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the display mode was changed; <code>failure</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="aab01c777783130bcd64d464e9380088a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab01c777783130bcd64d464e9380088a">&#9670;&nbsp;</a></span>set_grab_keyboard()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_grab_keyboard </td>
-          <td>(</td>
-          <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>grab</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets whether or not the keyboard input should be grabbed by the window. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">grab</td><td><code>true</code> if the keyboard should be grabbed; <code>false</code> otherwise.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1basic__window.html#ab2981e52d22e56bd84fb0d450c92081f" title="Sets whether or not the mouse should be confined within the window.">set_grab_mouse()</a></code></dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="ab2981e52d22e56bd84fb0d450c92081f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2981e52d22e56bd84fb0d450c92081f">&#9670;&nbsp;</a></span>set_grab_mouse()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_grab_mouse </td>
-          <td>(</td>
-          <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>grab</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets whether or not the mouse should be confined within the window. </p>
-<p>This property is disabled by default.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">grab</td><td><code>true</code> if the mouse should be confined within the window; <code>false</code> otherwise.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1basic__window.html#aab01c777783130bcd64d464e9380088a" title="Sets whether or not the keyboard input should be grabbed by the window.">set_grab_keyboard()</a></code></dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a7dd7bf38579ad341a0ee417170b57cbd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7dd7bf38579ad341a0ee417170b57cbd">&#9670;&nbsp;</a></span>set_height()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_height </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>height</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the height of the window. </p>
-<p>The supplied height is capped to always be at least 1.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">height</td><td>the new height of the window, must be greater than zero.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a3124b0e2ef6eb551bebf9b3124596e4f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3124b0e2ef6eb551bebf9b3124596e4f">&#9670;&nbsp;</a></span>set_icon()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_icon </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__video.html#ga8b71461a73c8e75c41923ffa705d67b6">surface</a> &amp;&#160;</td>
-          <td class="paramname"><em>icon</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the icon that will be used by the window. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">icon</td><td>the surface that will serve as the icon of the window.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a4f81acc2d4c4908ed60ed45e35a10b1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f81acc2d4c4908ed60ed45e35a10b1e">&#9670;&nbsp;</a></span>set_max_size()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_max_size </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>&#160;</td>
-          <td class="paramname"><em>size</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the maximum size of the window. </p>
-<dl class="section pre"><dt>Precondition</dt><dd>The supplied width and height must be greater than zero.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">size</td><td>the maximum size of the window.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a5f9808a3f5fcae0e1d4796f6a1cf1d8c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f9808a3f5fcae0e1d4796f6a1cf1d8c">&#9670;&nbsp;</a></span>set_min_size()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_min_size </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>&#160;</td>
-          <td class="paramname"><em>size</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the minimum size of the window. </p>
-<dl class="section pre"><dt>Precondition</dt><dd>The supplied width and height must be greater than zero.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">size</td><td>the minimum size of the window.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="af1ecb8138a2c6801d59cf7e1b6a5dd57"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1ecb8138a2c6801d59cf7e1b6a5dd57">&#9670;&nbsp;</a></span>set_opacity()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_opacity </td>
-          <td>(</td>
-          <td class="paramtype">const float&#160;</td>
-          <td class="paramname"><em>opacity</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the opacity of the window. </p>
-<p>The supplied opacity will be clamped to a value in the legal range.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">opacity</td><td>the opacity, in the range [0, 1].</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the opacity was successfully set; <code>failure</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a3c8bb8b8afb39101c9519a574f5d25d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c8bb8b8afb39101c9519a574f5d25d3">&#9670;&nbsp;</a></span>set_position()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_position </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__math.html#ga482cd24468a5a74647742e69379566c7">ipoint</a>&#160;</td>
-          <td class="paramname"><em>position</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the position of the window. </p>
-<dl class="section note"><dt>Note</dt><dd>It's possible to use <code>SDL_WINDOWPOS_CENTERED</code> or <code>SDL_WINDOWPOS_UNDEFINED</code> as any of the components of the point.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">position</td><td>the new position of the window.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="af632c2eb29963f217492c2ec4c42f816"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af632c2eb29963f217492c2ec4c42f816">&#9670;&nbsp;</a></span>set_resizable()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_resizable </td>
-          <td>(</td>
-          <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>resizable</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets whether or not the window should be resizable. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">resizable</td><td><code>true</code> if the window should be resizable; <code>false</code> otherwise.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a09fdcaa2074cd7e8e7bd196d93cc6fd0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09fdcaa2074cd7e8e7bd196d93cc6fd0">&#9670;&nbsp;</a></span>set_size()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_size </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>&#160;</td>
-          <td class="paramname"><em>size</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the size of the window. </p>
-<dl class="section pre"><dt>Precondition</dt><dd>The supplied width and height must be greater than zero.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">size</td><td>the new size of the window.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a9598ea58b33466cae54eb7b199523ac5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9598ea58b33466cae54eb7b199523ac5">&#9670;&nbsp;</a></span>set_title() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_title </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a> &gt;&#160;</td>
-          <td class="paramname"><em>title</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the title of the window. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">title</td><td>the title of the window, can't be null.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a38a159b91cf52640ac5b2aa67add09f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38a159b91cf52640ac5b2aa67add09f3">&#9670;&nbsp;</a></span>set_title() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_title </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>title</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the title of the window. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">title</td><td>the title of the window.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
-<a id="a1746ba997503d6ca4abd3af1260a5cf4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1746ba997503d6ca4abd3af1260a5cf4">&#9670;&nbsp;</a></span>set_width()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_width </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>width</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the width of the window. </p>
-<p>The supplied width is capped to always be at least 1.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">width</td><td>the new width of the window, must be greater than zero.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ad351c3efa309518e63878fc2698684af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad351c3efa309518e63878fc2698684af">&#9670;&nbsp;</a></span>set_x()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_x </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>x</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the x-coordinate of the window. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">x</td><td>the new x-coordinate of the window.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ad9141ed2dd484003cd387ab2bf2dcde9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9141ed2dd484003cd387ab2bf2dcde9">&#9670;&nbsp;</a></span>set_y()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::set_y </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>y</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the y-coordinate of the window. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">y</td><td>the new y-coordinate of the window.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ac60cdfe6f5a5e73c2daff65820fa5434"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac60cdfe6f5a5e73c2daff65820fa5434">&#9670;&nbsp;</a></span>show()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::show </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Makes the window visible. </p>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a54a2750491646cd596970133a1fa3205"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a54a2750491646cd596970133a1fa3205">&#9670;&nbsp;</a></span>size()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::size </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the current size of the window. </p>
-<dl class="section note"><dt>Note</dt><dd>Calling this function is slightly faster than calling both <code>width</code> and <code>height</code> to obtain the window size.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>the size of the window.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ab93d746582dae1a84b7d9ea0b1ed5ce2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab93d746582dae1a84b7d9ea0b1ed5ce2">&#9670;&nbsp;</a></span>title()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::title </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; std::string
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the title of the window. </p>
-<dl class="section return"><dt>Returns</dt><dd>the title of the window.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="adc6338735b017e93b846144f4a540d9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc6338735b017e93b846144f4a540d9a">&#9670;&nbsp;</a></span>update_surface()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::update_surface </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Updates the window surface. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the surface was successfully updated; <code>failure</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ab4c90f295de8f1ef7cd9f9335d4beb74"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4c90f295de8f1ef7cd9f9335d4beb74">&#9670;&nbsp;</a></span>width()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::width </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; int
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the current width of the window. </p>
-<dl class="section return"><dt>Returns</dt><dd>the current width of the window.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a0f8c6bacdff7120f4b875cb5d09994b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f8c6bacdff7120f4b875cb5d09994b1">&#9670;&nbsp;</a></span>x()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::x </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; int
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the x-coordinate of the window position. </p>
-<dl class="section return"><dt>Returns</dt><dd>the x-coordinate of the window position.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ad13e8f53b0f0343e81a0244a395be272"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad13e8f53b0f0343e81a0244a395be272">&#9670;&nbsp;</a></span>y()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__window.html">cen::basic_window</a>&lt; T &gt;::y </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; int
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the y-coordinate of the window position. </p>
-<dl class="section return"><dt>Returns</dt><dd>the y-coordinate of the window position.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 
 </div>
 </div>

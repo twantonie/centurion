@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -140,8 +140,8 @@ class cen::rect_traits&lt; T, &gt;</h3>
 <code><a class="el" href="group__math.html#gaf122d5b3b6ac5e5909ca9a7287c36556" title="Alias for a float-based rectangle.">frect</a></code></dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="ae6a548e1d2ecf083d5b3ec5fb6c11bcc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae6a548e1d2ecf083d5b3ec5fb6c11bcc">&#9670;&nbsp;</a></span>area_type</h2>
+<a id="a10f0fe55e4a5506a249147e2bfe3fc37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10f0fe55e4a5506a249147e2bfe3fc37">&#9670;&nbsp;</a></span>value_type</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -149,7 +149,7 @@ class cen::rect_traits&lt; T, &gt;</h3>
 template&lt;typename T , enable_if_convertible_t&lt; T, int, float &gt;  = 0&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classcen_1_1rect__traits.html">cen::rect_traits</a>&lt; T, &gt;::<a class="el" href="classcen_1_1rect__traits.html#ae6a548e1d2ecf083d5b3ec5fb6c11bcc">area_type</a> =  std::conditional_t&lt;<a class="el" href="classcen_1_1rect__traits.html#ac353d0fe32678e651a3f4736c1c8d036">isIntegral</a>, <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>, <a class="el" href="group__math.html#gafd6913012154925effd164a24d0bdaf1">farea</a>&gt;</td>
+          <td class="memname">using <a class="el" href="classcen_1_1rect__traits.html">cen::rect_traits</a>&lt; T, &gt;::<a class="el" href="classcen_1_1rect__traits.html#a10f0fe55e4a5506a249147e2bfe3fc37">value_type</a> =  std::conditional_t&lt;<a class="el" href="classcen_1_1rect__traits.html#ac353d0fe32678e651a3f4736c1c8d036">isIntegral</a>, int, float&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -172,6 +172,22 @@ template&lt;typename T , enable_if_convertible_t&lt; T, int, float &gt;  = 0&gt;
 
 </div>
 </div>
+<a id="ae6a548e1d2ecf083d5b3ec5fb6c11bcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6a548e1d2ecf083d5b3ec5fb6c11bcc">&#9670;&nbsp;</a></span>area_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , enable_if_convertible_t&lt; T, int, float &gt;  = 0&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classcen_1_1rect__traits.html">cen::rect_traits</a>&lt; T, &gt;::<a class="el" href="classcen_1_1rect__traits.html#ae6a548e1d2ecf083d5b3ec5fb6c11bcc">area_type</a> =  std::conditional_t&lt;<a class="el" href="classcen_1_1rect__traits.html#ac353d0fe32678e651a3f4736c1c8d036">isIntegral</a>, <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>, <a class="el" href="group__math.html#gafd6913012154925effd164a24d0bdaf1">farea</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a216dec431a487124a1c1f676bdd3d628"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a216dec431a487124a1c1f676bdd3d628">&#9670;&nbsp;</a></span>rect_type</h2>
 
@@ -188,47 +204,7 @@ template&lt;typename T , enable_if_convertible_t&lt; T, int, float &gt;  = 0&gt;
 
 </div>
 </div>
-<a id="a10f0fe55e4a5506a249147e2bfe3fc37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10f0fe55e4a5506a249147e2bfe3fc37">&#9670;&nbsp;</a></span>value_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , enable_if_convertible_t&lt; T, int, float &gt;  = 0&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="classcen_1_1rect__traits.html">cen::rect_traits</a>&lt; T, &gt;::<a class="el" href="classcen_1_1rect__traits.html#a10f0fe55e4a5506a249147e2bfe3fc37">value_type</a> =  std::conditional_t&lt;<a class="el" href="classcen_1_1rect__traits.html#ac353d0fe32678e651a3f4736c1c8d036">isIntegral</a>, int, float&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="aa0de4c5d8948e37badb26733ffb26d14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa0de4c5d8948e37badb26733ffb26d14">&#9670;&nbsp;</a></span>isFloating</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , enable_if_convertible_t&lt; T, int, float &gt;  = 0&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr static bool <a class="el" href="classcen_1_1rect__traits.html">cen::rect_traits</a>&lt; T, &gt;::isFloating = std::is_floating_point_v&lt;T&gt;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ac353d0fe32678e651a3f4736c1c8d036"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac353d0fe32678e651a3f4736c1c8d036">&#9670;&nbsp;</a></span>isIntegral</h2>
 
@@ -242,6 +218,30 @@ template&lt;typename T , enable_if_convertible_t&lt; T, int, float &gt;  = 0&gt;
       <table class="memname">
         <tr>
           <td class="memname">constexpr static bool <a class="el" href="classcen_1_1rect__traits.html">cen::rect_traits</a>&lt; T, &gt;::isIntegral = std::is_integral_v&lt;T&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0de4c5d8948e37badb26733ffb26d14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0de4c5d8948e37badb26733ffb26d14">&#9670;&nbsp;</a></span>isFloating</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , enable_if_convertible_t&lt; T, int, float &gt;  = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr static bool <a class="el" href="classcen_1_1rect__traits.html">cen::rect_traits</a>&lt; T, &gt;::isFloating = std::is_floating_point_v&lt;T&gt;</td>
         </tr>
       </table>
   </td>

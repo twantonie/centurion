@@ -46,7 +46,7 @@ var NAVTREE =
       [ "Extensions", "owners-and-handles.html#extensions", null ],
       [ "Examples", "owners-and-handles.html#examples", null ]
     ] ],
-    [ "Configuration", "configuration.html", [
+    [ "Static Configuration", "configuration.html", [
       [ "CENTURION_NO_PRAGMA_ONCE", "configuration.html#no-pragma-once", null ],
       [ "CENTURION_NO_DEBUG_LOG_MACROS", "configuration.html#no-debug-log-macros", null ],
       [ "CENTURION_NO_SDL_IMAGE", "configuration.html#no-sdl-image", null ],
@@ -98,21 +98,22 @@ var NAVTREEINDEX =
 "annotated.html",
 "classcen_1_1basic__renderer.html#a59d671fd6a3ccd33611e02c441e69511",
 "classcen_1_1basic__window.html#ad8e5163c95e9b9ad471857f08b2344d9",
-"classcen_1_1font__cache.html#a7837f2ec2e05bd11e4ad8b42daf99f6b",
-"classcen_1_1keyboard__event.html#ae629aac0441a9120d3459bdeb5ac5e1d",
-"classcen_1_1simd__block.html#ae530e86e53569975096fea94f11c5810",
-"group__audio.html#ga1cc95ae132f67ce638b96ae95a88a3d1",
-"group__audio.html#ga979944c14d58ef2f9913b34e75ba3c37",
-"group__core.html#ga3fbf1d2aa61479ef35657b0416bf07d2",
-"group__event.html#ggaa96233ec6356fc786c810d6aaf5e939ba1849894c975bbbb8093f95207d703f13",
-"group__input.html#ga33ee6605077c9acf89de9043a7ad7f0f",
-"group__input.html#gacd11266fbf2eeee96af5ba74cc6fc0f9",
-"group__input.html#ggac1d40ffbea8aa0c7c17a8325e194ca24a15c012757aea2b45f1ea7550869cea02",
-"group__system.html#gab732367b6099742b4b2d3efcf77001a7",
-"group__video.html#ga5954693e8b15805e4602983656c58490",
-"group__video.html#gad7862922d7259f3981a0cd97ef356d6f",
-"group__video.html#gga453f61f77c1356db822463d49e1c6aa6afec2f1a1a549720b1b4572ac74e4dd33",
-"primer.html#owners-handles-primer"
+"classcen_1_1font.html#a8bbdc38c0d20d5134c2dfda284510f1c",
+"classcen_1_1keyboard.html#a0f5ea0df0c03a11d21e46bdfc159e4db",
+"classcen_1_1sdl__error.html#aac86899f2c5c0c5fcbb582a3e8d84514",
+"group__audio.html#ga105d28e38d848b57dd27f0fa6cdf665e",
+"group__audio.html#ga759253d3ea01d7e559b8da64a75a7a5e",
+"group__audio.html#gga031d8555460da0d56819cb782b4716c3adfff0a7fa1a55c8c1a4966c19f6da452",
+"group__event.html#gab0815d6bb1f5594cee8bbbb2557a240d",
+"group__hints.html#ga072a74d2b5960410afb5c7ea94bc5ba5",
+"group__input.html#ga912a6c8d4b4c6434a91b2b6d0da3689e",
+"group__input.html#gga2101a411ac6025302800a78f9c54fce4a50628fab62b5a54a5f0a7e7c7b4f157b",
+"group__math.html#gafdb630e2a87668b2fd270ec50b0e7c79",
+"group__video.html#ga23eaa3383711079816cd6ee070c8f7f6",
+"group__video.html#ga9afbc60949b8a3bca50aa085afa5b2e0",
+"group__video.html#gga0db193ed41c0f20c9dda2efa20c22d70a8bd0830c3f641a6416ee2b8b9a2a8d15",
+"namespacecen_1_1clipboard.html",
+"structcen_1_1hint_1_1mouse_1_1relative__speed__scale.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -250,8 +250,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad9bfd95b2081a7a54d5fdedc6adca4fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9bfd95b2081a7a54d5fdedc6adca4fa">&#9670;&nbsp;</a></span>direction()</h2>
+<a id="a1cf0d3133fc44fb01a7eaa183c5dc1b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cf0d3133fc44fb01a7eaa183c5dc1b6">&#9670;&nbsp;</a></span>set_window_id()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -260,40 +260,10 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::mouse_wheel_event::direction </td>
+          <td class="memname">void cen::mouse_wheel_event::set_window_id </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__event.html#ga854c0b92c2b3c8277b87d3a99196372d">mouse_wheel_direction</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the mouse wheel direction mode associated with the event. </p>
-<dl class="section return"><dt>Returns</dt><dd>the mouse wheel direction mode associated with the event.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="abcfeb460e8d36a0aa335f06f7a5933ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abcfeb460e8d36a0aa335f06f7a5933ad">&#9670;&nbsp;</a></span>set_direction()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cen::mouse_wheel_event::set_direction </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__event.html#ga854c0b92c2b3c8277b87d3a99196372d">mouse_wheel_direction</a>&#160;</td>
-          <td class="paramname"><em>direction</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -304,10 +274,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sets the mouse wheel direction mode associated with the event. </p>
+<p>Sets the window ID associated with the event. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">direction</td><td>the mouse wheel direction mode associated with the event.</td></tr>
+    <tr><td class="paramname">id</td><td>the window ID associated with the event.</td></tr>
   </table>
   </dd>
 </dl>
@@ -343,41 +313,6 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">which</td><td>the mouse instance ID.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a1cf0d3133fc44fb01a7eaa183c5dc1b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1cf0d3133fc44fb01a7eaa183c5dc1b6">&#9670;&nbsp;</a></span>set_window_id()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cen::mouse_wheel_event::set_window_id </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the window ID associated with the event. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">id</td><td>the window ID associated with the event.</td></tr>
   </table>
   </dd>
 </dl>
@@ -457,8 +392,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a18197dce80d69c5874e6524f82134a2b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a18197dce80d69c5874e6524f82134a2b">&#9670;&nbsp;</a></span>which()</h2>
+<a id="abcfeb460e8d36a0aa335f06f7a5933ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcfeb460e8d36a0aa335f06f7a5933ad">&#9670;&nbsp;</a></span>set_direction()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -467,11 +402,11 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::mouse_wheel_event::which </td>
+          <td class="memname">void cen::mouse_wheel_event::set_direction </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>
-  </td>
+          <td class="paramtype">const <a class="el" href="group__event.html#ga854c0b92c2b3c8277b87d3a99196372d">mouse_wheel_direction</a>&#160;</td>
+          <td class="paramname"><em>direction</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -481,8 +416,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the mouse instance ID, or <code>SDL_TOUCH_MOUSEID</code> if the event was triggered by a touch input device. </p>
-<dl class="section return"><dt>Returns</dt><dd>the mouse instance ID, or <code>SDL_TOUCH_MOUSEID</code>.</dd></dl>
+<p>Sets the mouse wheel direction mode associated with the event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">direction</td><td>the mouse wheel direction mode associated with the event.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
@@ -513,6 +453,36 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Returns the ID of the window associated with the event. </p>
 <dl class="section return"><dt>Returns</dt><dd>the ID of the window associated with the event.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a18197dce80d69c5874e6524f82134a2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18197dce80d69c5874e6524f82134a2b">&#9670;&nbsp;</a></span>which()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::mouse_wheel_event::which </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the mouse instance ID, or <code>SDL_TOUCH_MOUSEID</code> if the event was triggered by a touch input device. </p>
+<dl class="section return"><dt>Returns</dt><dd>the mouse instance ID, or <code>SDL_TOUCH_MOUSEID</code>.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
@@ -575,6 +545,36 @@ Additional Inherited Members</h2></td></tr>
 <p>Returns the vertically scrolled distance. </p>
 <p>A positive value indicates that the user scrolled to the right and a negative value indicates that the user scrolled to the left.</p>
 <dl class="section return"><dt>Returns</dt><dd>the vertically scrolled distance.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ad9bfd95b2081a7a54d5fdedc6adca4fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9bfd95b2081a7a54d5fdedc6adca4fa">&#9670;&nbsp;</a></span>direction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::mouse_wheel_event::direction </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__event.html#ga854c0b92c2b3c8277b87d3a99196372d">mouse_wheel_direction</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the mouse wheel direction mode associated with the event. </p>
+<dl class="section return"><dt>Returns</dt><dd>the mouse wheel direction mode associated with the event.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>

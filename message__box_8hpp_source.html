@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -96,459 +96,441 @@ $(document).ready(function(){initNavTree('message__box_8hpp_source.html',''); in
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CENTURION_MESSAGE_BOX_HEADER</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CENTURION_MESSAGE_BOX_HEADER</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// clang-format off</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../compiler/features.hpp&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// clang-format on</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;SDL.h&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span>    <span class="comment">// max, any_of</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;cstddef&gt;</span>      <span class="comment">// nullptr_t</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;optional&gt;</span>     <span class="comment">// optional</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;ostream&gt;</span>      <span class="comment">// ostream</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span>       <span class="comment">// string</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;string_view&gt;</span>  <span class="comment">// string_view</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span>      <span class="comment">// move</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span>       <span class="comment">// vector</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;../core/exception.hpp&quot;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;../core/integers.hpp&quot;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;../core/to_underlying.hpp&quot;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;../detail/stack_resource.hpp&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;button_order.hpp&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;color.hpp&quot;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;colors.hpp&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;message_box_type.hpp&quot;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;window.hpp&quot;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecen.html">cen</a> {</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;SDL.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span>    <span class="comment">// max, any_of</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;cstddef&gt;</span>      <span class="comment">// nullptr_t</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;optional&gt;</span>     <span class="comment">// optional</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;ostream&gt;</span>      <span class="comment">// ostream</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span>       <span class="comment">// string</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;string_view&gt;</span>  <span class="comment">// string_view</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span>      <span class="comment">// move</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span>       <span class="comment">// vector</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;../compiler/features.hpp&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;../core/exception.hpp&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;../core/integers.hpp&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;../core/to_underlying.hpp&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;../detail/stack_resource.hpp&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;button_order.hpp&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;color.hpp&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;colors.hpp&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;message_box_type.hpp&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;window.hpp&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecen.html">cen</a> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html">   45</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcen_1_1message__box.html">message_box</a> final</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#a30a2562eff592b0dc6e03bb0e54f4b9a">   55</a></span>&#160;  <span class="keyword">using</span> <a class="code" href="classcen_1_1message__box.html#a30a2562eff592b0dc6e03bb0e54f4b9a">button_id</a> = int;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74">   66</a></span>&#160;  <span class="keyword">enum class</span> <a class="code" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74">default_button</a> : <a class="code" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74af5b438232daa2a9532d759b14a36bf57">return_key</a> = SDL_MESSAGEBOX_BUTTON_RETURNKEY_DEFAULT,</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74a70c959720db386eebd9b719e815350fa">escape_key</a> = SDL_MESSAGEBOX_BUTTON_ESCAPEKEY_DEFAULT</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  };</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831">   81</a></span>&#160;  <span class="keyword">enum class</span> <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831">color_id</a> : int</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831ad229bbf31eaeebc7c88897732d8b932d">background</a> = SDL_MESSAGEBOX_COLOR_BACKGROUND,</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831a1cb251ec0d568de6a929b520c4aed8d1">text</a> = SDL_MESSAGEBOX_COLOR_TEXT,</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831a2b895e7c796be8b8f230d906075b27e0">button_border</a> = SDL_MESSAGEBOX_COLOR_BUTTON_BORDER,</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831a1abcb09cbd3f5bd4df4ab2e5fad0a128">button_background</a> = SDL_MESSAGEBOX_COLOR_BUTTON_BACKGROUND,</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831a0c1e80d7777f54e8ddd4127148e71515">button_selected</a> = SDL_MESSAGEBOX_COLOR_BUTTON_SELECTED</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  };</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classcen_1_1message__box_1_1color__scheme.html">   97</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classcen_1_1message__box_1_1color__scheme.html">color_scheme</a> final</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;   <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classcen_1_1message__box_1_1color__scheme.html#a9610980a70885400f3a3753068bc8bc2">  105</a></span>&#160;    <a class="code" href="classcen_1_1message__box_1_1color__scheme.html#a9610980a70885400f3a3753068bc8bc2">color_scheme</a>() noexcept</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    {</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      <a class="code" href="classcen_1_1message__box_1_1color__scheme.html#a943827442f8f61bc90d83d5ab90c612f">set_color</a>(<a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831ad229bbf31eaeebc7c88897732d8b932d">color_id::background</a>, <a class="code" href="group__video.html#ga5a290edf9f37a8877ac92dfd60d7db25">colors::white</a>);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      <a class="code" href="classcen_1_1message__box_1_1color__scheme.html#a943827442f8f61bc90d83d5ab90c612f">set_color</a>(<a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831a1cb251ec0d568de6a929b520c4aed8d1">color_id::text</a>, <a class="code" href="group__video.html#ga5a290edf9f37a8877ac92dfd60d7db25">colors::white</a>);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      <a class="code" href="classcen_1_1message__box_1_1color__scheme.html#a943827442f8f61bc90d83d5ab90c612f">set_color</a>(<a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831a1abcb09cbd3f5bd4df4ab2e5fad0a128">color_id::button_background</a>, <a class="code" href="group__video.html#ga5a290edf9f37a8877ac92dfd60d7db25">colors::white</a>);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      <a class="code" href="classcen_1_1message__box_1_1color__scheme.html#a943827442f8f61bc90d83d5ab90c612f">set_color</a>(<a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831a2b895e7c796be8b8f230d906075b27e0">color_id::button_border</a>, <a class="code" href="group__video.html#ga5a290edf9f37a8877ac92dfd60d7db25">colors::white</a>);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      <a class="code" href="classcen_1_1message__box_1_1color__scheme.html#a943827442f8f61bc90d83d5ab90c612f">set_color</a>(<a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831a0c1e80d7777f54e8ddd4127148e71515">color_id::button_selected</a>, <a class="code" href="group__video.html#ga5a290edf9f37a8877ac92dfd60d7db25">colors::white</a>);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    }</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="classcen_1_1message__box_1_1color__scheme.html#a943827442f8f61bc90d83d5ab90c612f">  122</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcen_1_1message__box_1_1color__scheme.html#a943827442f8f61bc90d83d5ab90c612f">set_color</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831">color_id</a> <span class="keywordtype">id</span>, <span class="keyword">const</span> <a class="code" href="classcen_1_1color.html">color</a>&amp; <a class="code" href="classcen_1_1color.html">color</a>) noexcept</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    {</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      m_scheme.colors[<a class="code" href="group__core.html#ga1b0d65474648eaf9b1bfe720e037eb9c">to_underlying</a>(<span class="keywordtype">id</span>)] = <span class="keyword">static_cast&lt;</span>SDL_MessageBoxColor<span class="keyword">&gt;</span>(<a class="code" href="classcen_1_1color.html">color</a>);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    }</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
-<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classcen_1_1message__box_1_1color__scheme.html#aa55f8e0b4379fe2b96c676f5b2af8220">  134</a></span>&#160;    [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1message__box_1_1color__scheme.html#aa55f8e0b4379fe2b96c676f5b2af8220">get</a>() noexcept -&gt; SDL_MessageBoxColorScheme*</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    {</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;      <span class="keywordflow">return</span> &amp;m_scheme;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    }</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;   <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    SDL_MessageBoxColorScheme m_scheme{};</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  };</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
-<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#a17d78100a146428ada5285db08cea292">  148</a></span>&#160;  <a class="code" href="classcen_1_1message__box.html#a17d78100a146428ada5285db08cea292">message_box</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
-<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#aa2104559e38d862d0f2fbd7e1e287e1d">  158</a></span>&#160;  <a class="code" href="classcen_1_1message__box.html#aa2104559e38d862d0f2fbd7e1e287e1d">message_box</a>(std::string <a class="code" href="classcen_1_1message__box.html#a2aff634c56da01546e40f89641c12abf">title</a>, std::string <a class="code" href="classcen_1_1message__box.html#a41af62f1d653f57e60fe2380ac5834ec">message</a>)</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;      : m_title{std::move(<a class="code" href="classcen_1_1message__box.html#a2aff634c56da01546e40f89641c12abf">title</a>)}</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;      , m_message{std::move(<a class="code" href="classcen_1_1message__box.html#a41af62f1d653f57e60fe2380ac5834ec">message</a>)}</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  {}</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#a1efe5868c428ca135515faf71c09e7b6">  177</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classcen_1_1message__box.html#a1efe5868c428ca135515faf71c09e7b6">show</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1basic__window.html">basic_window&lt;T&gt;</a>&amp; parent,</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                   <span class="keyword">const</span> std::string&amp; <a class="code" href="classcen_1_1message__box.html#a2aff634c56da01546e40f89641c12abf">title</a>,</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                   <span class="keyword">const</span> std::string&amp; <a class="code" href="classcen_1_1message__box.html#a41af62f1d653f57e60fe2380ac5834ec">message</a>,</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                   <span class="keyword">const</span> <a class="code" href="group__video.html#gaad63d73213e62b11edf9533fb7b34597">message_box_type</a> <a class="code" href="classcen_1_1message__box.html#a1ba98b92164a1513139f792513512f8b">type</a> = default_type(),</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                   <span class="keyword">const</span> <a class="code" href="group__video.html#ga255b4639aa02a711f7919b0675ed3ee5">button_order</a> buttonOrder = default_order())</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  {</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <a class="code" href="classcen_1_1message__box.html#a4fecac657854939696771375ffaa2a1b">show</a>(parent.ptr(), <a class="code" href="classcen_1_1message__box.html#a2aff634c56da01546e40f89641c12abf">title</a>, <a class="code" href="classcen_1_1message__box.html#a41af62f1d653f57e60fe2380ac5834ec">message</a>, <a class="code" href="classcen_1_1message__box.html#a1ba98b92164a1513139f792513512f8b">type</a>, buttonOrder);</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  }</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
-<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#a79f52810a957a676ab85bebede94af88">  198</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classcen_1_1message__box.html#a79f52810a957a676ab85bebede94af88">show</a>(<span class="keyword">const</span> std::string&amp; <a class="code" href="classcen_1_1message__box.html#a2aff634c56da01546e40f89641c12abf">title</a>,</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                   <span class="keyword">const</span> std::string&amp; <a class="code" href="classcen_1_1message__box.html#a41af62f1d653f57e60fe2380ac5834ec">message</a>,</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                   <span class="keyword">const</span> <a class="code" href="group__video.html#gaad63d73213e62b11edf9533fb7b34597">message_box_type</a> <a class="code" href="classcen_1_1message__box.html#a1ba98b92164a1513139f792513512f8b">type</a> = default_type(),</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                   <span class="keyword">const</span> <a class="code" href="group__video.html#ga255b4639aa02a711f7919b0675ed3ee5">button_order</a> buttonOrder = default_order())</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  {</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <a class="code" href="classcen_1_1message__box.html#a4fecac657854939696771375ffaa2a1b">show</a>(<span class="keyword">nullptr</span>, <a class="code" href="classcen_1_1message__box.html#a2aff634c56da01546e40f89641c12abf">title</a>, <a class="code" href="classcen_1_1message__box.html#a41af62f1d653f57e60fe2380ac5834ec">message</a>, <a class="code" href="classcen_1_1message__box.html#a1ba98b92164a1513139f792513512f8b">type</a>, buttonOrder);</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  }</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00218"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#ad99bda20b6612c2b18427bf7c3a83086">  218</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1message__box.html#ad99bda20b6612c2b18427bf7c3a83086">show</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1basic__window.html">basic_window&lt;T&gt;</a>&amp; parent) -&gt; std::optional&lt;button_id&gt;</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  {</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classcen_1_1message__box.html#a4fecac657854939696771375ffaa2a1b">show</a>(parent.<a class="code" href="classcen_1_1basic__window.html#ac044a90d4252332ea66a7693c271dad3">get</a>());</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  }</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
-<div class="line"><a name="l00235"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#a4fecac657854939696771375ffaa2a1b">  235</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1message__box.html#a4fecac657854939696771375ffaa2a1b">show</a>() -&gt; std::optional&lt;button_id&gt;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  {</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classcen_1_1message__box.html#a4fecac657854939696771375ffaa2a1b">show</a>(<span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  }</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
-<div class="line"><a name="l00251"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#ab76d9d2cd3b82ce06665bfbdf9a9de37">  251</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcen_1_1message__box.html#ab76d9d2cd3b82ce06665bfbdf9a9de37">add_button</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a30a2562eff592b0dc6e03bb0e54f4b9a">button_id</a> <span class="keywordtype">id</span>,</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                  std::string text,</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                  <span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74">default_button</a> button = <a class="code" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74af5b438232daa2a9532d759b14a36bf57">default_button::return_key</a>)</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  {</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    m_buttons.emplace_back(<span class="keywordtype">id</span>, std::move(text), <a class="code" href="group__input.html#gga2779bd4878fed7a711e390b086f77444ace50a09343724eb82df11390e2c1de18">button</a>);</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  }</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
-<div class="line"><a name="l00258"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#afe3000ce4b42c81344e5237f5af21711">  258</a></span>&#160;  [[maybe_unused]] <span class="keywordtype">void</span> <a class="code" href="classcen_1_1message__box.html#afe3000ce4b42c81344e5237f5af21711">set_title</a>(std::nullptr_t) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
-<div class="line"><a name="l00267"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#a23903be7009d489fb2159f1adcb90ec8">  267</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcen_1_1message__box.html#a23903be7009d489fb2159f1adcb90ec8">set_title</a>(std::string <a class="code" href="classcen_1_1message__box.html#a2aff634c56da01546e40f89641c12abf">title</a>)</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  {</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    m_title = std::move(<a class="code" href="classcen_1_1message__box.html#a2aff634c56da01546e40f89641c12abf">title</a>);</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  }</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160; </div>
-<div class="line"><a name="l00279"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#a452eb1aebfbe12fc224ddea83d080be1">  279</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcen_1_1message__box.html#a452eb1aebfbe12fc224ddea83d080be1">set_message</a>(std::string <a class="code" href="classcen_1_1message__box.html#a41af62f1d653f57e60fe2380ac5834ec">message</a>)</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  {</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    m_message = std::move(<a class="code" href="classcen_1_1message__box.html#a41af62f1d653f57e60fe2380ac5834ec">message</a>);</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;  }</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
-<div class="line"><a name="l00284"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#af2569e9af982bf0d884243ba2b90778c">  284</a></span>&#160;  [[maybe_unused]] <span class="keywordtype">void</span> <a class="code" href="classcen_1_1message__box.html#af2569e9af982bf0d884243ba2b90778c">set_message</a>(std::nullptr_t) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160; </div>
-<div class="line"><a name="l00296"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#a136f364601293cc15dd14d65babb9a14">  296</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcen_1_1message__box.html#a136f364601293cc15dd14d65babb9a14">set_color_scheme</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1message__box_1_1color__scheme.html">color_scheme</a>&amp; scheme) noexcept</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;  {</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    m_colorScheme = scheme;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  }</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
-<div class="line"><a name="l00308"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#a8a393bc0db809c0bd442b2ad855cf069">  308</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcen_1_1message__box.html#a8a393bc0db809c0bd442b2ad855cf069">set_type</a>(<span class="keyword">const</span> <a class="code" href="group__video.html#gaad63d73213e62b11edf9533fb7b34597">message_box_type</a> <a class="code" href="classcen_1_1message__box.html#a1ba98b92164a1513139f792513512f8b">type</a>) noexcept</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  {</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    m_type = <a class="code" href="classcen_1_1message__box.html#a1ba98b92164a1513139f792513512f8b">type</a>;</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  }</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160; </div>
-<div class="line"><a name="l00320"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#a54f0c498760066cd1ade2a2ad37993fc">  320</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcen_1_1message__box.html#a54f0c498760066cd1ade2a2ad37993fc">set_button_order</a>(<span class="keyword">const</span> <a class="code" href="group__video.html#ga255b4639aa02a711f7919b0675ed3ee5">button_order</a> order) noexcept</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  {</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    m_buttonOrder = order;</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;  }</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160; </div>
-<div class="line"><a name="l00336"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#adcbb78d49541511f7e2c747dea47d34e">  336</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1message__box.html#adcbb78d49541511f7e2c747dea47d34e">has_button</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a30a2562eff592b0dc6e03bb0e54f4b9a">button_id</a> <span class="keywordtype">id</span>) <span class="keyword">const</span> -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;  {</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    <span class="keywordflow">return</span> std::any_of(m_buttons.begin(),</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                       m_buttons.end(),</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                       [<span class="keywordtype">id</span>](<span class="keyword">const</span> <a class="code" href="group__input.html#gga2779bd4878fed7a711e390b086f77444ace50a09343724eb82df11390e2c1de18">button</a>&amp; <a class="code" href="group__input.html#gga2779bd4878fed7a711e390b086f77444ace50a09343724eb82df11390e2c1de18">button</a>) noexcept { return button.id() == id; });</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;  }</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160; </div>
-<div class="line"><a name="l00352"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#a2aff634c56da01546e40f89641c12abf">  352</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1message__box.html#a2aff634c56da01546e40f89641c12abf">title</a>() const -&gt; std::string_view</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;  {</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <span class="keywordflow">return</span> m_title;</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;  }</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160; </div>
-<div class="line"><a name="l00366"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#a41af62f1d653f57e60fe2380ac5834ec">  366</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1message__box.html#a41af62f1d653f57e60fe2380ac5834ec">message</a>() const -&gt; std::string_view</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;  {</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="keywordflow">return</span> m_message;</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;  }</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160; </div>
-<div class="line"><a name="l00380"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#a1ba98b92164a1513139f792513512f8b">  380</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1message__box.html#a1ba98b92164a1513139f792513512f8b">type</a>() const noexcept -&gt; <a class="code" href="group__video.html#gaad63d73213e62b11edf9533fb7b34597">message_box_type</a></div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;  {</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    <span class="keywordflow">return</span> m_type;</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;  }</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160; </div>
-<div class="line"><a name="l00394"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#a6dbaf376b885b81280865127d3bd8105">  394</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1message__box.html#a6dbaf376b885b81280865127d3bd8105">get_button_order</a>() const noexcept -&gt; <a class="code" href="group__video.html#ga255b4639aa02a711f7919b0675ed3ee5">button_order</a></div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;  {</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <span class="keywordflow">return</span> m_buttonOrder;</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;  }</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160; </div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;  <span class="keyword">class </span><a class="code" href="group__input.html#gga2779bd4878fed7a711e390b086f77444ace50a09343724eb82df11390e2c1de18">button</a> final</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;  {</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;   <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    <a class="code" href="group__input.html#gga2779bd4878fed7a711e390b086f77444ace50a09343724eb82df11390e2c1de18">button</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a30a2562eff592b0dc6e03bb0e54f4b9a">button_id</a> <span class="keywordtype">id</span>, std::string text, <span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74">default_button</a> defaultButton)</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        : m_id{id}</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        , m_defaultButton{defaultButton}</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        , m_text{std::move(text)}</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    {}</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160; </div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    [[nodiscard]] <span class="keyword">auto</span> id() const noexcept -&gt; <a class="code" href="classcen_1_1message__box.html#a30a2562eff592b0dc6e03bb0e54f4b9a">button_id</a></div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    {</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;      <span class="keywordflow">return</span> m_id;</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    }</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160; </div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    [[nodiscard]] <span class="keyword">auto</span> convert() const noexcept -&gt; SDL_MessageBoxButtonData</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;    {</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;      SDL_MessageBoxButtonData result{};</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160; </div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;      result.flags = <a class="code" href="group__core.html#ga1b0d65474648eaf9b1bfe720e037eb9c">to_underlying</a>(m_defaultButton);</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;      result.buttonid = m_id;</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;      result.text = m_text.c_str();</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html">   42</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcen_1_1message__box.html">message_box</a> final</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#a30a2562eff592b0dc6e03bb0e54f4b9a">   52</a></span>&#160;  <span class="keyword">using</span> <a class="code" href="classcen_1_1message__box.html#a30a2562eff592b0dc6e03bb0e54f4b9a">button_id</a> = int;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74">   63</a></span>&#160;  <span class="keyword">enum class</span> <a class="code" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74">default_button</a> : <a class="code" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74af5b438232daa2a9532d759b14a36bf57">return_key</a> = SDL_MESSAGEBOX_BUTTON_RETURNKEY_DEFAULT,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74a70c959720db386eebd9b719e815350fa">escape_key</a> = SDL_MESSAGEBOX_BUTTON_ESCAPEKEY_DEFAULT</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  };</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831">   78</a></span>&#160;  <span class="keyword">enum class</span> <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831">color_id</a> : int</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831ad229bbf31eaeebc7c88897732d8b932d">background</a> = SDL_MESSAGEBOX_COLOR_BACKGROUND,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831a1cb251ec0d568de6a929b520c4aed8d1">text</a> = SDL_MESSAGEBOX_COLOR_TEXT,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831a2b895e7c796be8b8f230d906075b27e0">button_border</a> = SDL_MESSAGEBOX_COLOR_BUTTON_BORDER,</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831a1abcb09cbd3f5bd4df4ab2e5fad0a128">button_background</a> = SDL_MESSAGEBOX_COLOR_BUTTON_BACKGROUND,</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831a0c1e80d7777f54e8ddd4127148e71515">button_selected</a> = SDL_MESSAGEBOX_COLOR_BUTTON_SELECTED</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  };</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classcen_1_1message__box_1_1color__scheme.html">   94</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classcen_1_1message__box_1_1color__scheme.html">color_scheme</a> final</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;   <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="classcen_1_1message__box_1_1color__scheme.html#a9610980a70885400f3a3753068bc8bc2">  102</a></span>&#160;    <a class="code" href="classcen_1_1message__box_1_1color__scheme.html#a9610980a70885400f3a3753068bc8bc2">color_scheme</a>() noexcept</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      <a class="code" href="classcen_1_1message__box_1_1color__scheme.html#a943827442f8f61bc90d83d5ab90c612f">set_color</a>(<a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831ad229bbf31eaeebc7c88897732d8b932d">color_id::background</a>, <a class="code" href="group__video.html#ga5a290edf9f37a8877ac92dfd60d7db25">colors::white</a>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      <a class="code" href="classcen_1_1message__box_1_1color__scheme.html#a943827442f8f61bc90d83d5ab90c612f">set_color</a>(<a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831a1cb251ec0d568de6a929b520c4aed8d1">color_id::text</a>, <a class="code" href="group__video.html#ga5a290edf9f37a8877ac92dfd60d7db25">colors::white</a>);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      <a class="code" href="classcen_1_1message__box_1_1color__scheme.html#a943827442f8f61bc90d83d5ab90c612f">set_color</a>(<a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831a1abcb09cbd3f5bd4df4ab2e5fad0a128">color_id::button_background</a>, <a class="code" href="group__video.html#ga5a290edf9f37a8877ac92dfd60d7db25">colors::white</a>);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      <a class="code" href="classcen_1_1message__box_1_1color__scheme.html#a943827442f8f61bc90d83d5ab90c612f">set_color</a>(<a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831a2b895e7c796be8b8f230d906075b27e0">color_id::button_border</a>, <a class="code" href="group__video.html#ga5a290edf9f37a8877ac92dfd60d7db25">colors::white</a>);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      <a class="code" href="classcen_1_1message__box_1_1color__scheme.html#a943827442f8f61bc90d83d5ab90c612f">set_color</a>(<a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831a0c1e80d7777f54e8ddd4127148e71515">color_id::button_selected</a>, <a class="code" href="group__video.html#ga5a290edf9f37a8877ac92dfd60d7db25">colors::white</a>);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="classcen_1_1message__box_1_1color__scheme.html#a943827442f8f61bc90d83d5ab90c612f">  119</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcen_1_1message__box_1_1color__scheme.html#a943827442f8f61bc90d83d5ab90c612f">set_color</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831">color_id</a> <span class="keywordtype">id</span>, <span class="keyword">const</span> <a class="code" href="classcen_1_1color.html">color</a>&amp; <a class="code" href="classcen_1_1color.html">color</a>) noexcept</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      m_scheme.colors[<a class="code" href="group__core.html#ga1b0d65474648eaf9b1bfe720e037eb9c">to_underlying</a>(<span class="keywordtype">id</span>)] = <span class="keyword">static_cast&lt;</span>SDL_MessageBoxColor<span class="keyword">&gt;</span>(<a class="code" href="classcen_1_1color.html">color</a>);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="classcen_1_1message__box_1_1color__scheme.html#aa55f8e0b4379fe2b96c676f5b2af8220">  131</a></span>&#160;    [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1message__box_1_1color__scheme.html#aa55f8e0b4379fe2b96c676f5b2af8220">get</a>() noexcept -&gt; SDL_MessageBoxColorScheme*</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    {</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      <span class="keywordflow">return</span> &amp;m_scheme;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    }</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;   <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    SDL_MessageBoxColorScheme m_scheme{};</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  };</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#a17d78100a146428ada5285db08cea292">  145</a></span>&#160;  <a class="code" href="classcen_1_1message__box.html#a17d78100a146428ada5285db08cea292">message_box</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#aa2104559e38d862d0f2fbd7e1e287e1d">  155</a></span>&#160;  <a class="code" href="classcen_1_1message__box.html#aa2104559e38d862d0f2fbd7e1e287e1d">message_box</a>(std::string <a class="code" href="classcen_1_1message__box.html#a2aff634c56da01546e40f89641c12abf">title</a>, std::string <a class="code" href="classcen_1_1message__box.html#a41af62f1d653f57e60fe2380ac5834ec">message</a>)</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;      : m_title{std::move(<a class="code" href="classcen_1_1message__box.html#a2aff634c56da01546e40f89641c12abf">title</a>)}</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;      , m_message{std::move(<a class="code" href="classcen_1_1message__box.html#a41af62f1d653f57e60fe2380ac5834ec">message</a>)}</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  {}</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00174"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#a1efe5868c428ca135515faf71c09e7b6">  174</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classcen_1_1message__box.html#a1efe5868c428ca135515faf71c09e7b6">show</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1basic__window.html">basic_window&lt;T&gt;</a>&amp; parent,</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                   <span class="keyword">const</span> std::string&amp; <a class="code" href="classcen_1_1message__box.html#a2aff634c56da01546e40f89641c12abf">title</a>,</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                   <span class="keyword">const</span> std::string&amp; <a class="code" href="classcen_1_1message__box.html#a41af62f1d653f57e60fe2380ac5834ec">message</a>,</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                   <span class="keyword">const</span> <a class="code" href="group__video.html#gaad63d73213e62b11edf9533fb7b34597">message_box_type</a> <a class="code" href="classcen_1_1message__box.html#a1ba98b92164a1513139f792513512f8b">type</a> = default_type(),</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                   <span class="keyword">const</span> <a class="code" href="group__video.html#ga255b4639aa02a711f7919b0675ed3ee5">button_order</a> buttonOrder = default_order())</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  {</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <a class="code" href="classcen_1_1message__box.html#a4fecac657854939696771375ffaa2a1b">show</a>(parent.ptr(), <a class="code" href="classcen_1_1message__box.html#a2aff634c56da01546e40f89641c12abf">title</a>, <a class="code" href="classcen_1_1message__box.html#a41af62f1d653f57e60fe2380ac5834ec">message</a>, <a class="code" href="classcen_1_1message__box.html#a1ba98b92164a1513139f792513512f8b">type</a>, buttonOrder);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#a79f52810a957a676ab85bebede94af88">  195</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classcen_1_1message__box.html#a79f52810a957a676ab85bebede94af88">show</a>(<span class="keyword">const</span> std::string&amp; <a class="code" href="classcen_1_1message__box.html#a2aff634c56da01546e40f89641c12abf">title</a>,</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                   <span class="keyword">const</span> std::string&amp; <a class="code" href="classcen_1_1message__box.html#a41af62f1d653f57e60fe2380ac5834ec">message</a>,</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                   <span class="keyword">const</span> <a class="code" href="group__video.html#gaad63d73213e62b11edf9533fb7b34597">message_box_type</a> <a class="code" href="classcen_1_1message__box.html#a1ba98b92164a1513139f792513512f8b">type</a> = default_type(),</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                   <span class="keyword">const</span> <a class="code" href="group__video.html#ga255b4639aa02a711f7919b0675ed3ee5">button_order</a> buttonOrder = default_order())</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  {</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <a class="code" href="classcen_1_1message__box.html#a4fecac657854939696771375ffaa2a1b">show</a>(<span class="keyword">nullptr</span>, <a class="code" href="classcen_1_1message__box.html#a2aff634c56da01546e40f89641c12abf">title</a>, <a class="code" href="classcen_1_1message__box.html#a41af62f1d653f57e60fe2380ac5834ec">message</a>, <a class="code" href="classcen_1_1message__box.html#a1ba98b92164a1513139f792513512f8b">type</a>, buttonOrder);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  }</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00215"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#ad99bda20b6612c2b18427bf7c3a83086">  215</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1message__box.html#ad99bda20b6612c2b18427bf7c3a83086">show</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1basic__window.html">basic_window&lt;T&gt;</a>&amp; parent) -&gt; std::optional&lt;button_id&gt;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  {</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classcen_1_1message__box.html#a4fecac657854939696771375ffaa2a1b">show</a>(parent.<a class="code" href="classcen_1_1basic__window.html#ac044a90d4252332ea66a7693c271dad3">get</a>());</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  }</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
+<div class="line"><a name="l00232"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#a4fecac657854939696771375ffaa2a1b">  232</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1message__box.html#a4fecac657854939696771375ffaa2a1b">show</a>() -&gt; std::optional&lt;button_id&gt;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  {</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classcen_1_1message__box.html#a4fecac657854939696771375ffaa2a1b">show</a>(<span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  }</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00248"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#ab76d9d2cd3b82ce06665bfbdf9a9de37">  248</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcen_1_1message__box.html#ab76d9d2cd3b82ce06665bfbdf9a9de37">add_button</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a30a2562eff592b0dc6e03bb0e54f4b9a">button_id</a> <span class="keywordtype">id</span>,</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                  std::string text,</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                  <span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74">default_button</a> button = <a class="code" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74af5b438232daa2a9532d759b14a36bf57">default_button::return_key</a>)</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  {</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    m_buttons.emplace_back(<span class="keywordtype">id</span>, std::move(text), <a class="code" href="group__input.html#gga2779bd4878fed7a711e390b086f77444ace50a09343724eb82df11390e2c1de18">button</a>);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  }</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
+<div class="line"><a name="l00255"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#afe3000ce4b42c81344e5237f5af21711">  255</a></span>&#160;  [[maybe_unused]] <span class="keywordtype">void</span> <a class="code" href="classcen_1_1message__box.html#afe3000ce4b42c81344e5237f5af21711">set_title</a>(std::nullptr_t) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
+<div class="line"><a name="l00264"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#a23903be7009d489fb2159f1adcb90ec8">  264</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcen_1_1message__box.html#a23903be7009d489fb2159f1adcb90ec8">set_title</a>(std::string <a class="code" href="classcen_1_1message__box.html#a2aff634c56da01546e40f89641c12abf">title</a>)</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  {</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    m_title = std::move(<a class="code" href="classcen_1_1message__box.html#a2aff634c56da01546e40f89641c12abf">title</a>);</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  }</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
+<div class="line"><a name="l00276"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#a452eb1aebfbe12fc224ddea83d080be1">  276</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcen_1_1message__box.html#a452eb1aebfbe12fc224ddea83d080be1">set_message</a>(std::string <a class="code" href="classcen_1_1message__box.html#a41af62f1d653f57e60fe2380ac5834ec">message</a>)</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  {</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    m_message = std::move(<a class="code" href="classcen_1_1message__box.html#a41af62f1d653f57e60fe2380ac5834ec">message</a>);</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  }</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
+<div class="line"><a name="l00281"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#af2569e9af982bf0d884243ba2b90778c">  281</a></span>&#160;  [[maybe_unused]] <span class="keywordtype">void</span> <a class="code" href="classcen_1_1message__box.html#af2569e9af982bf0d884243ba2b90778c">set_message</a>(std::nullptr_t) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
+<div class="line"><a name="l00293"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#a136f364601293cc15dd14d65babb9a14">  293</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcen_1_1message__box.html#a136f364601293cc15dd14d65babb9a14">set_color_scheme</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1message__box_1_1color__scheme.html">color_scheme</a>&amp; scheme) noexcept</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  {</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    m_colorScheme = scheme;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;  }</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160; </div>
+<div class="line"><a name="l00305"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#a8a393bc0db809c0bd442b2ad855cf069">  305</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcen_1_1message__box.html#a8a393bc0db809c0bd442b2ad855cf069">set_type</a>(<span class="keyword">const</span> <a class="code" href="group__video.html#gaad63d73213e62b11edf9533fb7b34597">message_box_type</a> <a class="code" href="classcen_1_1message__box.html#a1ba98b92164a1513139f792513512f8b">type</a>) noexcept</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  {</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    m_type = <a class="code" href="classcen_1_1message__box.html#a1ba98b92164a1513139f792513512f8b">type</a>;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  }</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
+<div class="line"><a name="l00317"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#a54f0c498760066cd1ade2a2ad37993fc">  317</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcen_1_1message__box.html#a54f0c498760066cd1ade2a2ad37993fc">set_button_order</a>(<span class="keyword">const</span> <a class="code" href="group__video.html#ga255b4639aa02a711f7919b0675ed3ee5">button_order</a> order) noexcept</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;  {</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    m_buttonOrder = order;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  }</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160; </div>
+<div class="line"><a name="l00333"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#adcbb78d49541511f7e2c747dea47d34e">  333</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1message__box.html#adcbb78d49541511f7e2c747dea47d34e">has_button</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a30a2562eff592b0dc6e03bb0e54f4b9a">button_id</a> <span class="keywordtype">id</span>) <span class="keyword">const</span> -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;  {</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keywordflow">return</span> std::any_of(m_buttons.begin(),</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                       m_buttons.end(),</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                       [<span class="keywordtype">id</span>](<span class="keyword">const</span> <a class="code" href="group__input.html#gga2779bd4878fed7a711e390b086f77444ace50a09343724eb82df11390e2c1de18">button</a>&amp; <a class="code" href="group__input.html#gga2779bd4878fed7a711e390b086f77444ace50a09343724eb82df11390e2c1de18">button</a>) noexcept { return button.id() == id; });</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;  }</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160; </div>
+<div class="line"><a name="l00349"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#a2aff634c56da01546e40f89641c12abf">  349</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1message__box.html#a2aff634c56da01546e40f89641c12abf">title</a>() const -&gt; std::string_view</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;  {</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="keywordflow">return</span> m_title;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;  }</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160; </div>
+<div class="line"><a name="l00363"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#a41af62f1d653f57e60fe2380ac5834ec">  363</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1message__box.html#a41af62f1d653f57e60fe2380ac5834ec">message</a>() const -&gt; std::string_view</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;  {</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <span class="keywordflow">return</span> m_message;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;  }</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160; </div>
+<div class="line"><a name="l00377"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#a1ba98b92164a1513139f792513512f8b">  377</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1message__box.html#a1ba98b92164a1513139f792513512f8b">type</a>() const noexcept -&gt; <a class="code" href="group__video.html#gaad63d73213e62b11edf9533fb7b34597">message_box_type</a></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;  {</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="keywordflow">return</span> m_type;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;  }</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160; </div>
+<div class="line"><a name="l00391"></a><span class="lineno"><a class="line" href="classcen_1_1message__box.html#a6dbaf376b885b81280865127d3bd8105">  391</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1message__box.html#a6dbaf376b885b81280865127d3bd8105">get_button_order</a>() const noexcept -&gt; <a class="code" href="group__video.html#ga255b4639aa02a711f7919b0675ed3ee5">button_order</a></div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;  {</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    <span class="keywordflow">return</span> m_buttonOrder;</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;  }</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160; </div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;  <span class="keyword">class </span><a class="code" href="group__input.html#gga2779bd4878fed7a711e390b086f77444ace50a09343724eb82df11390e2c1de18">button</a> final</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;  {</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;   <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <a class="code" href="group__input.html#gga2779bd4878fed7a711e390b086f77444ace50a09343724eb82df11390e2c1de18">button</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a30a2562eff592b0dc6e03bb0e54f4b9a">button_id</a> <span class="keywordtype">id</span>, std::string text, <span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74">default_button</a> defaultButton)</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        : m_id{id}</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        , m_defaultButton{defaultButton}</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        , m_text{std::move(text)}</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    {}</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160; </div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    [[nodiscard]] <span class="keyword">auto</span> id() const noexcept -&gt; <a class="code" href="classcen_1_1message__box.html#a30a2562eff592b0dc6e03bb0e54f4b9a">button_id</a></div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    {</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;      <span class="keywordflow">return</span> m_id;</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    }</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160; </div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    [[nodiscard]] <span class="keyword">auto</span> convert() const noexcept -&gt; SDL_MessageBoxButtonData</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    {</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;      SDL_MessageBoxButtonData result{};</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160; </div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;      result.flags = <a class="code" href="group__core.html#ga1b0d65474648eaf9b1bfe720e037eb9c">to_underlying</a>(m_defaultButton);</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;      result.buttonid = m_id;</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;      result.text = m_text.c_str();</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160; </div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;      <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    }</div>
 <div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160; </div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;      <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    }</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160; </div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;   <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    <a class="code" href="classcen_1_1message__box.html#a30a2562eff592b0dc6e03bb0e54f4b9a">button_id</a> m_id;</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    <a class="code" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74">default_button</a> m_defaultButton;</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;    std::string m_text;</div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;  };</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160; </div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;  std::vector&lt;button&gt; m_buttons;</div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;  std::string m_title{<span class="stringliteral">&quot;Message box&quot;</span>};</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;  std::string m_message{<span class="stringliteral">&quot;n/a&quot;</span>};</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;  std::optional&lt;color_scheme&gt; m_colorScheme;</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;  <a class="code" href="group__video.html#gaad63d73213e62b11edf9533fb7b34597">message_box_type</a> m_type{default_type()};</div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;  <a class="code" href="group__video.html#ga255b4639aa02a711f7919b0675ed3ee5">button_order</a> m_buttonOrder{default_order()};</div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160; </div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;  [[nodiscard]] constexpr <span class="keyword">static</span> <span class="keyword">auto</span> default_type() noexcept -&gt; <a class="code" href="group__video.html#gaad63d73213e62b11edf9533fb7b34597">message_box_type</a></div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;  {</div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__video.html#ggaad63d73213e62b11edf9533fb7b34597abb3ccd5881d651448ded1dac904054ac">message_box_type::information</a>;</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;  }</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160; </div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;  [[nodiscard]] constexpr <span class="keyword">static</span> <span class="keyword">auto</span> default_order() noexcept -&gt; <a class="code" href="group__video.html#ga255b4639aa02a711f7919b0675ed3ee5">button_order</a></div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;  {</div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__video.html#gga255b4639aa02a711f7919b0675ed3ee5a1f8f6a66881ca551a945cf0ab4765dc1">button_order::left_to_right</a>;</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;  }</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160; </div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;  [[nodiscard]] constexpr <span class="keyword">static</span> <span class="keyword">auto</span> to_flags(<span class="keyword">const</span> <a class="code" href="group__video.html#gaad63d73213e62b11edf9533fb7b34597">message_box_type</a> <a class="code" href="classcen_1_1message__box.html#a1ba98b92164a1513139f792513512f8b">type</a>,</div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;                                               <span class="keyword">const</span> <a class="code" href="group__video.html#ga255b4639aa02a711f7919b0675ed3ee5">button_order</a> buttonOrder) noexcept</div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;      -&gt; <a class="code" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a></div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;  {</div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__core.html#ga1b0d65474648eaf9b1bfe720e037eb9c">to_underlying</a>(<a class="code" href="classcen_1_1message__box.html#a1ba98b92164a1513139f792513512f8b">type</a>) | <a class="code" href="group__core.html#ga1b0d65474648eaf9b1bfe720e037eb9c">to_underlying</a>(buttonOrder);</div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;  }</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160; </div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classcen_1_1message__box.html#a4fecac657854939696771375ffaa2a1b">show</a>(SDL_Window* parent,</div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;                   <span class="keyword">const</span> std::string&amp; <a class="code" href="classcen_1_1message__box.html#a2aff634c56da01546e40f89641c12abf">title</a>,</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;                   <span class="keyword">const</span> std::string&amp; <a class="code" href="classcen_1_1message__box.html#a41af62f1d653f57e60fe2380ac5834ec">message</a>,</div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;                   <span class="keyword">const</span> <a class="code" href="group__video.html#gaad63d73213e62b11edf9533fb7b34597">message_box_type</a> <a class="code" href="classcen_1_1message__box.html#a1ba98b92164a1513139f792513512f8b">type</a>,</div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;                   <span class="keyword">const</span> <a class="code" href="group__video.html#ga255b4639aa02a711f7919b0675ed3ee5">button_order</a> buttonOrder)</div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;  {</div>
-<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;    <span class="keywordflow">if</span> (-1 == SDL_ShowSimpleMessageBox(to_flags(<a class="code" href="classcen_1_1message__box.html#a1ba98b92164a1513139f792513512f8b">type</a>, buttonOrder),</div>
-<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;                                       <a class="code" href="classcen_1_1message__box.html#a2aff634c56da01546e40f89641c12abf">title</a>.c_str(),</div>
-<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;                                       <a class="code" href="classcen_1_1message__box.html#a41af62f1d653f57e60fe2380ac5834ec">message</a>.c_str(),</div>
-<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;                                       parent))</div>
-<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;    {</div>
-<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;      <span class="keywordflow">throw</span> sdl_error{};</div>
-<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;    }</div>
-<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;  }</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;   <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    <a class="code" href="classcen_1_1message__box.html#a30a2562eff592b0dc6e03bb0e54f4b9a">button_id</a> m_id;</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    <a class="code" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74">default_button</a> m_defaultButton;</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    std::string m_text;</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;  };</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160; </div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;  std::vector&lt;button&gt; m_buttons;</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;  std::string m_title{<span class="stringliteral">&quot;Message box&quot;</span>};</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;  std::string m_message{<span class="stringliteral">&quot;n/a&quot;</span>};</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;  std::optional&lt;color_scheme&gt; m_colorScheme;</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;  <a class="code" href="group__video.html#gaad63d73213e62b11edf9533fb7b34597">message_box_type</a> m_type{default_type()};</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;  <a class="code" href="group__video.html#ga255b4639aa02a711f7919b0675ed3ee5">button_order</a> m_buttonOrder{default_order()};</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160; </div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;  [[nodiscard]] constexpr <span class="keyword">static</span> <span class="keyword">auto</span> default_type() noexcept -&gt; <a class="code" href="group__video.html#gaad63d73213e62b11edf9533fb7b34597">message_box_type</a></div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;  {</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__video.html#ggaad63d73213e62b11edf9533fb7b34597abb3ccd5881d651448ded1dac904054ac">message_box_type::information</a>;</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;  }</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160; </div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;  [[nodiscard]] constexpr <span class="keyword">static</span> <span class="keyword">auto</span> default_order() noexcept -&gt; <a class="code" href="group__video.html#ga255b4639aa02a711f7919b0675ed3ee5">button_order</a></div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;  {</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__video.html#gga255b4639aa02a711f7919b0675ed3ee5a1f8f6a66881ca551a945cf0ab4765dc1">button_order::left_to_right</a>;</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;  }</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160; </div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;  [[nodiscard]] constexpr <span class="keyword">static</span> <span class="keyword">auto</span> to_flags(<span class="keyword">const</span> <a class="code" href="group__video.html#gaad63d73213e62b11edf9533fb7b34597">message_box_type</a> <a class="code" href="classcen_1_1message__box.html#a1ba98b92164a1513139f792513512f8b">type</a>,</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;                                               <span class="keyword">const</span> <a class="code" href="group__video.html#ga255b4639aa02a711f7919b0675ed3ee5">button_order</a> buttonOrder) noexcept -&gt; <a class="code" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a></div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;  {</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__core.html#ga1b0d65474648eaf9b1bfe720e037eb9c">to_underlying</a>(<a class="code" href="classcen_1_1message__box.html#a1ba98b92164a1513139f792513512f8b">type</a>) | <a class="code" href="group__core.html#ga1b0d65474648eaf9b1bfe720e037eb9c">to_underlying</a>(buttonOrder);</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;  }</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160; </div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classcen_1_1message__box.html#a4fecac657854939696771375ffaa2a1b">show</a>(SDL_Window* parent,</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;                   <span class="keyword">const</span> std::string&amp; <a class="code" href="classcen_1_1message__box.html#a2aff634c56da01546e40f89641c12abf">title</a>,</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;                   <span class="keyword">const</span> std::string&amp; <a class="code" href="classcen_1_1message__box.html#a41af62f1d653f57e60fe2380ac5834ec">message</a>,</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;                   <span class="keyword">const</span> <a class="code" href="group__video.html#gaad63d73213e62b11edf9533fb7b34597">message_box_type</a> <a class="code" href="classcen_1_1message__box.html#a1ba98b92164a1513139f792513512f8b">type</a>,</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;                   <span class="keyword">const</span> <a class="code" href="group__video.html#ga255b4639aa02a711f7919b0675ed3ee5">button_order</a> buttonOrder)</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;  {</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;    <span class="keywordflow">if</span> (-1 == SDL_ShowSimpleMessageBox(to_flags(<a class="code" href="classcen_1_1message__box.html#a1ba98b92164a1513139f792513512f8b">type</a>, buttonOrder),</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;                                       <a class="code" href="classcen_1_1message__box.html#a2aff634c56da01546e40f89641c12abf">title</a>.c_str(),</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;                                       <a class="code" href="classcen_1_1message__box.html#a41af62f1d653f57e60fe2380ac5834ec">message</a>.c_str(),</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;                                       parent))</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;    {</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;      <span class="keywordflow">throw</span> sdl_error{};</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;    }</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;  }</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160; </div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1message__box.html#a4fecac657854939696771375ffaa2a1b">show</a>(SDL_Window* parent) -&gt; std::optional&lt;button_id&gt;</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;  {</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;    SDL_MessageBoxData data{};</div>
 <div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160; </div>
-<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1message__box.html#a4fecac657854939696771375ffaa2a1b">show</a>(SDL_Window* parent) -&gt; std::optional&lt;button_id&gt;</div>
-<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;  {</div>
-<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;    SDL_MessageBoxData data{};</div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160; </div>
-<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    data.window = parent;</div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    data.title = m_title.c_str();</div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;    data.message = m_message.c_str();</div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;    data.flags = to_flags(m_type, m_buttonOrder);</div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    data.colorScheme = m_colorScheme ? m_colorScheme-&gt;get() : <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160; </div>
-<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;<span class="preprocessor">#if CENTURION_HAS_FEATURE_MEMORY_RESOURCE</span></div>
-<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;    <span class="comment">// Realistically 1-3 buttons, stack buffer for 8 buttons, just in case.</span></div>
-<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;    detail::stack_resource&lt;8 * <span class="keyword">sizeof</span>(SDL_MessageBoxButtonData)&gt; resource;</div>
-<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;    std::pmr::vector&lt;SDL_MessageBoxButtonData&gt; buttonData{resource.get()};</div>
-<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;    std::vector&lt;SDL_MessageBoxButtonData&gt; buttonData;</div>
-<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;    buttonData.reserve(8);</div>
-<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_HAS_STD_MEMORY_RESOURCE</span></div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;    data.window = parent;</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;    data.title = m_title.c_str();</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;    data.message = m_message.c_str();</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    data.flags = to_flags(m_type, m_buttonOrder);</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    data.colorScheme = m_colorScheme ? m_colorScheme-&gt;get() : <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160; </div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;<span class="preprocessor">#if CENTURION_HAS_FEATURE_MEMORY_RESOURCE</span></div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;    <span class="comment">// Realistically 1-3 buttons, stack buffer for 8 buttons, just in case.</span></div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    detail::stack_resource&lt;8 * <span class="keyword">sizeof</span>(SDL_MessageBoxButtonData)&gt; resource;</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;    std::pmr::vector&lt;SDL_MessageBoxButtonData&gt; buttonData{resource.get()};</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;    std::vector&lt;SDL_MessageBoxButtonData&gt; buttonData;</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;    buttonData.reserve(8);</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_HAS_STD_MEMORY_RESOURCE</span></div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160; </div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;    <span class="keywordflow">if</span> (m_buttons.empty()) {</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;      <a class="code" href="classcen_1_1message__box.html#ab76d9d2cd3b82ce06665bfbdf9a9de37">add_button</a>(0, <span class="stringliteral">&quot;OK&quot;</span>, <a class="code" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74af5b438232daa2a9532d759b14a36bf57">default_button::return_key</a>);</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;    }</div>
 <div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160; </div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;    <span class="keywordflow">if</span> (m_buttons.empty())</div>
-<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;    {</div>
-<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;      <a class="code" href="classcen_1_1message__box.html#ab76d9d2cd3b82ce06665bfbdf9a9de37">add_button</a>(0, <span class="stringliteral">&quot;OK&quot;</span>, <a class="code" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74af5b438232daa2a9532d759b14a36bf57">default_button::return_key</a>);</div>
-<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;    }</div>
-<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160; </div>
-<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; button : m_buttons)</div>
-<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    {</div>
-<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;      buttonData.emplace_back(<a class="code" href="group__input.html#gga2779bd4878fed7a711e390b086f77444ace50a09343724eb82df11390e2c1de18">button</a>.convert());</div>
-<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;    }</div>
-<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160; </div>
-<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;    data.buttons = buttonData.data();</div>
-<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;    data.numbuttons = <a class="code" href="group__core.html#ga3764941d9ec9f936c62296ed6490ce70">isize</a>(buttonData);</div>
-<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160; </div>
-<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;    <a class="code" href="classcen_1_1message__box.html#a30a2562eff592b0dc6e03bb0e54f4b9a">button_id</a> <a class="code" href="group__input.html#gga2779bd4878fed7a711e390b086f77444ace50a09343724eb82df11390e2c1de18">button</a>{-1};</div>
-<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;    <span class="keywordflow">if</span> (SDL_ShowMessageBox(&amp;data, &amp;button) == -1)</div>
-<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;    {</div>
-<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;      <span class="keywordflow">throw</span> sdl_error{};</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; button : m_buttons) {</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;      buttonData.emplace_back(<a class="code" href="group__input.html#gga2779bd4878fed7a711e390b086f77444ace50a09343724eb82df11390e2c1de18">button</a>.convert());</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    }</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160; </div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;    data.buttons = buttonData.data();</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;    data.numbuttons = <a class="code" href="group__core.html#ga3764941d9ec9f936c62296ed6490ce70">isize</a>(buttonData);</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160; </div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    <a class="code" href="classcen_1_1message__box.html#a30a2562eff592b0dc6e03bb0e54f4b9a">button_id</a> <a class="code" href="group__input.html#gga2779bd4878fed7a711e390b086f77444ace50a09343724eb82df11390e2c1de18">button</a>{-1};</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;    <span class="keywordflow">if</span> (SDL_ShowMessageBox(&amp;data, &amp;button) == -1) {</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;      <span class="keywordflow">throw</span> sdl_error{};</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;    }</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160; </div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;    <span class="keywordflow">if</span> (button != -1) {</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="group__input.html#gga2779bd4878fed7a711e390b086f77444ace50a09343724eb82df11390e2c1de18">button</a>;</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;    }</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;      <span class="keywordflow">return</span> std::nullopt;</div>
 <div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;    }</div>
-<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160; </div>
-<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;    <span class="keywordflow">if</span> (button != -1)</div>
-<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    {</div>
-<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="group__input.html#gga2779bd4878fed7a711e390b086f77444ace50a09343724eb82df11390e2c1de18">button</a>;</div>
-<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;    }</div>
-<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;    {</div>
-<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;      <span class="keywordflow">return</span> std::nullopt;</div>
-<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    }</div>
-<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;  }</div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;};</div>
-<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160; </div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160; </div>
-<div class="line"><a name="l00554"></a><span class="lineno"><a class="line" href="group__audio.html#gad99e0c84ee05e0ac03bde96cab40874a">  554</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74">message_box::default_button</a> button)</div>
-<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;    -&gt; std::string_view</div>
-<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;{</div>
-<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;  <span class="keywordflow">switch</span> (<a class="code" href="group__input.html#gga2779bd4878fed7a711e390b086f77444ace50a09343724eb82df11390e2c1de18">button</a>)</div>
-<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;  {</div>
-<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74af5b438232daa2a9532d759b14a36bf57">message_box::default_button::return_key</a>:</div>
-<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;return_key&quot;</span>;</div>
-<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160; </div>
-<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74a70c959720db386eebd9b719e815350fa">message_box::default_button::escape_key</a>:</div>
-<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;escape_key&quot;</span>;</div>
-<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160; </div>
-<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1cen__error.html">cen_error</a>{<span class="stringliteral">&quot;Did not recognize message box default button!&quot;</span>};</div>
-<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;  }</div>
-<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;}</div>
-<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160; </div>
-<div class="line"><a name="l00584"></a><span class="lineno"><a class="line" href="group__audio.html#gac1d5b9db507ae1673da149e4dab281db">  584</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831">message_box::color_id</a> <span class="keywordtype">id</span>) -&gt; std::string_view</div>
-<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;{</div>
-<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;  <span class="keywordflow">switch</span> (<span class="keywordtype">id</span>)</div>
-<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;  {</div>
-<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831ad229bbf31eaeebc7c88897732d8b932d">message_box::color_id::background</a>:</div>
-<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;background&quot;</span>;</div>
-<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160; </div>
-<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831a1cb251ec0d568de6a929b520c4aed8d1">message_box::color_id::text</a>:</div>
-<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;text&quot;</span>;</div>
-<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160; </div>
-<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831a2b895e7c796be8b8f230d906075b27e0">message_box::color_id::button_border</a>:</div>
-<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;button_border&quot;</span>;</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;  }</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;};</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160; </div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160; </div>
+<div class="line"><a name="l00545"></a><span class="lineno"><a class="line" href="group__audio.html#gad99e0c84ee05e0ac03bde96cab40874a">  545</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74">message_box::default_button</a> button)</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;    -&gt; std::string_view</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;{</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;  <span class="keywordflow">switch</span> (<a class="code" href="group__input.html#gga2779bd4878fed7a711e390b086f77444ace50a09343724eb82df11390e2c1de18">button</a>) {</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74af5b438232daa2a9532d759b14a36bf57">message_box::default_button::return_key</a>:</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;return_key&quot;</span>;</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160; </div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74a70c959720db386eebd9b719e815350fa">message_box::default_button::escape_key</a>:</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;escape_key&quot;</span>;</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160; </div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1cen__error.html">cen_error</a>{<span class="stringliteral">&quot;Did not recognize message box default button!&quot;</span>};</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;  }</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;}</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160; </div>
+<div class="line"><a name="l00574"></a><span class="lineno"><a class="line" href="group__audio.html#gac1d5b9db507ae1673da149e4dab281db">  574</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831">message_box::color_id</a> <span class="keywordtype">id</span>) -&gt; std::string_view</div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;{</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;  <span class="keywordflow">switch</span> (<span class="keywordtype">id</span>) {</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831ad229bbf31eaeebc7c88897732d8b932d">message_box::color_id::background</a>:</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;background&quot;</span>;</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160; </div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831a1cb251ec0d568de6a929b520c4aed8d1">message_box::color_id::text</a>:</div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;text&quot;</span>;</div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160; </div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831a2b895e7c796be8b8f230d906075b27e0">message_box::color_id::button_border</a>:</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;button_border&quot;</span>;</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160; </div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831a1abcb09cbd3f5bd4df4ab2e5fad0a128">message_box::color_id::button_background</a>:</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;button_background&quot;</span>;</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160; </div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831a0c1e80d7777f54e8ddd4127148e71515">message_box::color_id::button_selected</a>:</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;button_selected&quot;</span>;</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160; </div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1cen__error.html">cen_error</a>{<span class="stringliteral">&quot;Did not recognize message box color ID!&quot;</span>};</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;  }</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;}</div>
 <div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160; </div>
-<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831a1abcb09cbd3f5bd4df4ab2e5fad0a128">message_box::color_id::button_background</a>:</div>
-<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;button_background&quot;</span>;</div>
-<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160; </div>
-<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831a0c1e80d7777f54e8ddd4127148e71515">message_box::color_id::button_selected</a>:</div>
-<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;button_selected&quot;</span>;</div>
-<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160; </div>
-<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1cen__error.html">cen_error</a>{<span class="stringliteral">&quot;Did not recognize message box color ID!&quot;</span>};</div>
-<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;  }</div>
-<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;}</div>
-<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160; </div>
-<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160; </div>
-<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160; </div>
-<div class="line"><a name="l00625"></a><span class="lineno"><a class="line" href="group__audio.html#ga250cb708aaca787d392470b497312a04">  625</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">operator&lt;&lt;</a>(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74">message_box::default_button</a> button)</div>
-<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;    -&gt; std::ostream&amp;</div>
-<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;{</div>
-<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;  <span class="keywordflow">return</span> stream &lt;&lt; <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(<a class="code" href="group__input.html#gga2779bd4878fed7a711e390b086f77444ace50a09343724eb82df11390e2c1de18">button</a>);</div>
-<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;}</div>
-<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160; </div>
-<div class="line"><a name="l00643"></a><span class="lineno"><a class="line" href="group__audio.html#ga24c3561576d38557a5621c3956145349">  643</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">operator&lt;&lt;</a>(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831">message_box::color_id</a> <span class="keywordtype">id</span>)</div>
-<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;    -&gt; std::ostream&amp;</div>
-<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;{</div>
-<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;  <span class="keywordflow">return</span> stream &lt;&lt; <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;}</div>
-<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160; </div>
-<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160; </div>
-<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160; </div>
-<div class="line"><a name="l00664"></a><span class="lineno"><a class="line" href="group__video.html#gaadd57e88e3517fd9d0a19ac361c30ff9">  664</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74">message_box::default_button</a> lhs,</div>
-<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;                                        <span class="keyword">const</span> SDL_MessageBoxButtonFlags rhs) noexcept</div>
-<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;    -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;{</div>
-<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>SDL_MessageBoxButtonFlags<span class="keyword">&gt;</span>(lhs) == rhs;</div>
-<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;}</div>
-<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160; </div>
-<div class="line"><a name="l00672"></a><span class="lineno"><a class="line" href="group__video.html#gaebc51f7a0b533f600df9352c81c00fb3">  672</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> SDL_MessageBoxButtonFlags lhs,</div>
-<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74">message_box::default_button</a> rhs) noexcept</div>
-<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;    -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;{</div>
-<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;  <span class="keywordflow">return</span> rhs == lhs;</div>
-<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;}</div>
-<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160; </div>
-<div class="line"><a name="l00689"></a><span class="lineno"><a class="line" href="group__video.html#ga8ad4117c7657cacd9347fc0ba8ad8a45">  689</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74">message_box::default_button</a> lhs,</div>
-<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;                                        <span class="keyword">const</span> SDL_MessageBoxButtonFlags rhs) noexcept</div>
-<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;    -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;{</div>
-<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
-<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;}</div>
-<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160; </div>
-<div class="line"><a name="l00697"></a><span class="lineno"><a class="line" href="group__video.html#ga5ea0d08837b4327fc3b15758daa42528">  697</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> SDL_MessageBoxButtonFlags lhs,</div>
-<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74">message_box::default_button</a> rhs) noexcept</div>
-<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;    -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;{</div>
-<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
-<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;}</div>
-<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160; </div>
-<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160; </div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160; </div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160; </div>
+<div class="line"><a name="l00614"></a><span class="lineno"><a class="line" href="group__audio.html#ga250cb708aaca787d392470b497312a04">  614</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">operator&lt;&lt;</a>(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74">message_box::default_button</a> button)</div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;    -&gt; std::ostream&amp;</div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;{</div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;  <span class="keywordflow">return</span> stream &lt;&lt; <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(<a class="code" href="group__input.html#gga2779bd4878fed7a711e390b086f77444ace50a09343724eb82df11390e2c1de18">button</a>);</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;}</div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160; </div>
+<div class="line"><a name="l00632"></a><span class="lineno"><a class="line" href="group__audio.html#ga24c3561576d38557a5621c3956145349">  632</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">operator&lt;&lt;</a>(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831">message_box::color_id</a> <span class="keywordtype">id</span>) -&gt; std::ostream&amp;</div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;{</div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;  <span class="keywordflow">return</span> stream &lt;&lt; <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;}</div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160; </div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160; </div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160; </div>
+<div class="line"><a name="l00652"></a><span class="lineno"><a class="line" href="group__video.html#gaadd57e88e3517fd9d0a19ac361c30ff9">  652</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74">message_box::default_button</a> lhs,</div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;                                        <span class="keyword">const</span> SDL_MessageBoxButtonFlags rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;{</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>SDL_MessageBoxButtonFlags<span class="keyword">&gt;</span>(lhs) == rhs;</div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;}</div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160; </div>
+<div class="line"><a name="l00659"></a><span class="lineno"><a class="line" href="group__video.html#gaebc51f7a0b533f600df9352c81c00fb3">  659</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> SDL_MessageBoxButtonFlags lhs,</div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74">message_box::default_button</a> rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;{</div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;  <span class="keywordflow">return</span> rhs == lhs;</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;}</div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160; </div>
+<div class="line"><a name="l00675"></a><span class="lineno"><a class="line" href="group__video.html#ga8ad4117c7657cacd9347fc0ba8ad8a45">  675</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74">message_box::default_button</a> lhs,</div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;                                        <span class="keyword">const</span> SDL_MessageBoxButtonFlags rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;{</div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;}</div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160; </div>
+<div class="line"><a name="l00682"></a><span class="lineno"><a class="line" href="group__video.html#ga5ea0d08837b4327fc3b15758daa42528">  682</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> SDL_MessageBoxButtonFlags lhs,</div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74">message_box::default_button</a> rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;{</div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;}</div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160; </div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160; </div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160; </div>
+<div class="line"><a name="l00703"></a><span class="lineno"><a class="line" href="group__video.html#ga3adc63dfc89101781f852f79050e98f1">  703</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> SDL_MessageBoxColorType lhs,</div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831">message_box::color_id</a> rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;{</div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;  <span class="keywordflow">return</span> lhs == <span class="keyword">static_cast&lt;</span>SDL_MessageBoxColorType<span class="keyword">&gt;</span>(rhs);</div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;}</div>
 <div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160; </div>
-<div class="line"><a name="l00719"></a><span class="lineno"><a class="line" href="group__video.html#ga3adc63dfc89101781f852f79050e98f1">  719</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> SDL_MessageBoxColorType lhs,</div>
-<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831">message_box::color_id</a> rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;{</div>
-<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;  <span class="keywordflow">return</span> lhs == <span class="keyword">static_cast&lt;</span>SDL_MessageBoxColorType<span class="keyword">&gt;</span>(rhs);</div>
-<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;}</div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160; </div>
-<div class="line"><a name="l00726"></a><span class="lineno"><a class="line" href="group__video.html#gad624f6c79e404f6912e7ae36b53489b8">  726</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831">message_box::color_id</a> lhs,</div>
-<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;                                        <span class="keyword">const</span> SDL_MessageBoxColorType rhs) noexcept</div>
-<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;    -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;{</div>
-<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;  <span class="keywordflow">return</span> rhs == lhs;</div>
-<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;}</div>
-<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160; </div>
-<div class="line"><a name="l00743"></a><span class="lineno"><a class="line" href="group__video.html#ga6fe80a6dc281f4cec91966e39740196a">  743</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> SDL_MessageBoxColorType lhs,</div>
-<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831">message_box::color_id</a> rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;{</div>
-<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
-<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;}</div>
-<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160; </div>
-<div class="line"><a name="l00750"></a><span class="lineno"><a class="line" href="group__video.html#gaf98e7d159e1b56811518ed30ba5f3470">  750</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831">message_box::color_id</a> lhs,</div>
-<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;                                        <span class="keyword">const</span> SDL_MessageBoxColorType rhs) noexcept</div>
-<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;    -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;{</div>
-<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
-<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;}</div>
-<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160; </div>
-<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160; </div>
-<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160; </div>
-<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;}  <span class="comment">// namespace cen</span></div>
-<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160; </div>
-<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_MESSAGE_BOX_HEADER</span></div>
-<div class="ttc" id="aclasscen_1_1basic__window_html"><div class="ttname"><a href="classcen_1_1basic__window.html">cen::basic_window</a></div><div class="ttdoc">Represents an operating system window.</div><div class="ttdef"><b>Definition:</b> window.hpp:84</div></div>
-<div class="ttc" id="aclasscen_1_1basic__window_html_ac044a90d4252332ea66a7693c271dad3"><div class="ttname"><a href="classcen_1_1basic__window.html#ac044a90d4252332ea66a7693c271dad3">cen::basic_window::get</a></div><div class="ttdeci">auto get() const noexcept -&gt; SDL_Window *</div><div class="ttdoc">Returns a pointer to the associated SDL window.</div><div class="ttdef"><b>Definition:</b> window.hpp:1293</div></div>
+<div class="line"><a name="l00710"></a><span class="lineno"><a class="line" href="group__video.html#gad624f6c79e404f6912e7ae36b53489b8">  710</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831">message_box::color_id</a> lhs,</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;                                        <span class="keyword">const</span> SDL_MessageBoxColorType rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;{</div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;  <span class="keywordflow">return</span> rhs == lhs;</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;}</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160; </div>
+<div class="line"><a name="l00726"></a><span class="lineno"><a class="line" href="group__video.html#ga6fe80a6dc281f4cec91966e39740196a">  726</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> SDL_MessageBoxColorType lhs,</div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831">message_box::color_id</a> rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;{</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;}</div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160; </div>
+<div class="line"><a name="l00733"></a><span class="lineno"><a class="line" href="group__video.html#gaf98e7d159e1b56811518ed30ba5f3470">  733</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831">message_box::color_id</a> lhs,</div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;                                        <span class="keyword">const</span> SDL_MessageBoxColorType rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;{</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;}</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160; </div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160; </div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160; </div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;}  <span class="comment">// namespace cen</span></div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160; </div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_MESSAGE_BOX_HEADER</span></div>
+<div class="ttc" id="aclasscen_1_1basic__window_html"><div class="ttname"><a href="classcen_1_1basic__window.html">cen::basic_window</a></div><div class="ttdoc">Represents an operating system window.</div><div class="ttdef"><b>Definition:</b> window.hpp:82</div></div>
+<div class="ttc" id="aclasscen_1_1basic__window_html_ac044a90d4252332ea66a7693c271dad3"><div class="ttname"><a href="classcen_1_1basic__window.html#ac044a90d4252332ea66a7693c271dad3">cen::basic_window::get</a></div><div class="ttdeci">auto get() const noexcept -&gt; SDL_Window *</div><div class="ttdoc">Returns a pointer to the associated SDL window.</div><div class="ttdef"><b>Definition:</b> window.hpp:1284</div></div>
 <div class="ttc" id="aclasscen_1_1cen__error_html"><div class="ttname"><a href="classcen_1_1cen__error.html">cen::cen_error</a></div><div class="ttdoc">The base of all exceptions explicitly thrown by the library.</div><div class="ttdef"><b>Definition:</b> exception.hpp:35</div></div>
-<div class="ttc" id="aclasscen_1_1color_html"><div class="ttname"><a href="classcen_1_1color.html">cen::color</a></div><div class="ttdoc">An 8-bit accuracy RGBA color.</div><div class="ttdef"><b>Definition:</b> color.hpp:52</div></div>
-<div class="ttc" id="aclasscen_1_1message__box_1_1color__scheme_html"><div class="ttname"><a href="classcen_1_1message__box_1_1color__scheme.html">cen::message_box::color_scheme</a></div><div class="ttdoc">A simple wrapper around a SDL_MessageBoxColorScheme instance.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:98</div></div>
-<div class="ttc" id="aclasscen_1_1message__box_1_1color__scheme_html_a943827442f8f61bc90d83d5ab90c612f"><div class="ttname"><a href="classcen_1_1message__box_1_1color__scheme.html#a943827442f8f61bc90d83d5ab90c612f">cen::message_box::color_scheme::set_color</a></div><div class="ttdeci">void set_color(const color_id id, const color &amp;color) noexcept</div><div class="ttdoc">Sets the color associated with the specified ID.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:122</div></div>
-<div class="ttc" id="aclasscen_1_1message__box_1_1color__scheme_html_a9610980a70885400f3a3753068bc8bc2"><div class="ttname"><a href="classcen_1_1message__box_1_1color__scheme.html#a9610980a70885400f3a3753068bc8bc2">cen::message_box::color_scheme::color_scheme</a></div><div class="ttdeci">color_scheme() noexcept</div><div class="ttdoc">Creates a color scheme that uses white for all colors.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:105</div></div>
-<div class="ttc" id="aclasscen_1_1message__box_1_1color__scheme_html_aa55f8e0b4379fe2b96c676f5b2af8220"><div class="ttname"><a href="classcen_1_1message__box_1_1color__scheme.html#aa55f8e0b4379fe2b96c676f5b2af8220">cen::message_box::color_scheme::get</a></div><div class="ttdeci">auto get() noexcept -&gt; SDL_MessageBoxColorScheme *</div><div class="ttdoc">Returns a pointer to the internal SDL_MessageBoxColorScheme.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:134</div></div>
-<div class="ttc" id="aclasscen_1_1message__box_html"><div class="ttname"><a href="classcen_1_1message__box.html">cen::message_box</a></div><div class="ttdoc">Represents a modal message box that can be used display information, warnings and errors.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:46</div></div>
-<div class="ttc" id="aclasscen_1_1message__box_html_a136f364601293cc15dd14d65babb9a14"><div class="ttname"><a href="classcen_1_1message__box.html#a136f364601293cc15dd14d65babb9a14">cen::message_box::set_color_scheme</a></div><div class="ttdeci">void set_color_scheme(const color_scheme &amp;scheme) noexcept</div><div class="ttdoc">Sets the color scheme that will be used by the message box.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:296</div></div>
+<div class="ttc" id="aclasscen_1_1color_html"><div class="ttname"><a href="classcen_1_1color.html">cen::color</a></div><div class="ttdoc">An 8-bit accuracy RGBA color.</div><div class="ttdef"><b>Definition:</b> color.hpp:50</div></div>
+<div class="ttc" id="aclasscen_1_1message__box_1_1color__scheme_html"><div class="ttname"><a href="classcen_1_1message__box_1_1color__scheme.html">cen::message_box::color_scheme</a></div><div class="ttdoc">A simple wrapper around a SDL_MessageBoxColorScheme instance.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:95</div></div>
+<div class="ttc" id="aclasscen_1_1message__box_1_1color__scheme_html_a943827442f8f61bc90d83d5ab90c612f"><div class="ttname"><a href="classcen_1_1message__box_1_1color__scheme.html#a943827442f8f61bc90d83d5ab90c612f">cen::message_box::color_scheme::set_color</a></div><div class="ttdeci">void set_color(const color_id id, const color &amp;color) noexcept</div><div class="ttdoc">Sets the color associated with the specified ID.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:119</div></div>
+<div class="ttc" id="aclasscen_1_1message__box_1_1color__scheme_html_a9610980a70885400f3a3753068bc8bc2"><div class="ttname"><a href="classcen_1_1message__box_1_1color__scheme.html#a9610980a70885400f3a3753068bc8bc2">cen::message_box::color_scheme::color_scheme</a></div><div class="ttdeci">color_scheme() noexcept</div><div class="ttdoc">Creates a color scheme that uses white for all colors.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:102</div></div>
+<div class="ttc" id="aclasscen_1_1message__box_1_1color__scheme_html_aa55f8e0b4379fe2b96c676f5b2af8220"><div class="ttname"><a href="classcen_1_1message__box_1_1color__scheme.html#aa55f8e0b4379fe2b96c676f5b2af8220">cen::message_box::color_scheme::get</a></div><div class="ttdeci">auto get() noexcept -&gt; SDL_MessageBoxColorScheme *</div><div class="ttdoc">Returns a pointer to the internal SDL_MessageBoxColorScheme.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:131</div></div>
+<div class="ttc" id="aclasscen_1_1message__box_html"><div class="ttname"><a href="classcen_1_1message__box.html">cen::message_box</a></div><div class="ttdoc">Represents a modal message box that can be used display information, warnings and errors.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:43</div></div>
+<div class="ttc" id="aclasscen_1_1message__box_html_a136f364601293cc15dd14d65babb9a14"><div class="ttname"><a href="classcen_1_1message__box.html#a136f364601293cc15dd14d65babb9a14">cen::message_box::set_color_scheme</a></div><div class="ttdeci">void set_color_scheme(const color_scheme &amp;scheme) noexcept</div><div class="ttdoc">Sets the color scheme that will be used by the message box.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:293</div></div>
 <div class="ttc" id="aclasscen_1_1message__box_html_a17d78100a146428ada5285db08cea292"><div class="ttname"><a href="classcen_1_1message__box.html#a17d78100a146428ada5285db08cea292">cen::message_box::message_box</a></div><div class="ttdeci">message_box()=default</div><div class="ttdoc">Creates a default-initialized message box.</div></div>
-<div class="ttc" id="aclasscen_1_1message__box_html_a1ba98b92164a1513139f792513512f8b"><div class="ttname"><a href="classcen_1_1message__box.html#a1ba98b92164a1513139f792513512f8b">cen::message_box::type</a></div><div class="ttdeci">auto type() const noexcept -&gt; message_box_type</div><div class="ttdoc">Returns the type of the message box.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:380</div></div>
-<div class="ttc" id="aclasscen_1_1message__box_html_a1efe5868c428ca135515faf71c09e7b6"><div class="ttname"><a href="classcen_1_1message__box.html#a1efe5868c428ca135515faf71c09e7b6">cen::message_box::show</a></div><div class="ttdeci">static void show(const basic_window&lt; T &gt; &amp;parent, const std::string &amp;title, const std::string &amp;message, const message_box_type type=default_type(), const button_order buttonOrder=default_order())</div><div class="ttdoc">Displays a message box.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:177</div></div>
-<div class="ttc" id="aclasscen_1_1message__box_html_a23903be7009d489fb2159f1adcb90ec8"><div class="ttname"><a href="classcen_1_1message__box.html#a23903be7009d489fb2159f1adcb90ec8">cen::message_box::set_title</a></div><div class="ttdeci">void set_title(std::string title)</div><div class="ttdoc">Sets the title of the message box.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:267</div></div>
-<div class="ttc" id="aclasscen_1_1message__box_html_a2aff634c56da01546e40f89641c12abf"><div class="ttname"><a href="classcen_1_1message__box.html#a2aff634c56da01546e40f89641c12abf">cen::message_box::title</a></div><div class="ttdeci">auto title() const -&gt; std::string_view</div><div class="ttdoc">Returns the title of the message box.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:352</div></div>
-<div class="ttc" id="aclasscen_1_1message__box_html_a30a2562eff592b0dc6e03bb0e54f4b9a"><div class="ttname"><a href="classcen_1_1message__box.html#a30a2562eff592b0dc6e03bb0e54f4b9a">cen::message_box::button_id</a></div><div class="ttdeci">int button_id</div><div class="ttdoc">Used for message box button identifiers.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:55</div></div>
-<div class="ttc" id="aclasscen_1_1message__box_html_a41af62f1d653f57e60fe2380ac5834ec"><div class="ttname"><a href="classcen_1_1message__box.html#a41af62f1d653f57e60fe2380ac5834ec">cen::message_box::message</a></div><div class="ttdeci">auto message() const -&gt; std::string_view</div><div class="ttdoc">Returns the message of the message box.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:366</div></div>
-<div class="ttc" id="aclasscen_1_1message__box_html_a42a17a92b248a1caf10e2fc3e6d2bf74"><div class="ttname"><a href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74">cen::message_box::default_button</a></div><div class="ttdeci">default_button</div><div class="ttdoc">Provides identifiers that represent default buttons of message boxes.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:67</div></div>
+<div class="ttc" id="aclasscen_1_1message__box_html_a1ba98b92164a1513139f792513512f8b"><div class="ttname"><a href="classcen_1_1message__box.html#a1ba98b92164a1513139f792513512f8b">cen::message_box::type</a></div><div class="ttdeci">auto type() const noexcept -&gt; message_box_type</div><div class="ttdoc">Returns the type of the message box.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:377</div></div>
+<div class="ttc" id="aclasscen_1_1message__box_html_a1efe5868c428ca135515faf71c09e7b6"><div class="ttname"><a href="classcen_1_1message__box.html#a1efe5868c428ca135515faf71c09e7b6">cen::message_box::show</a></div><div class="ttdeci">static void show(const basic_window&lt; T &gt; &amp;parent, const std::string &amp;title, const std::string &amp;message, const message_box_type type=default_type(), const button_order buttonOrder=default_order())</div><div class="ttdoc">Displays a message box.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:174</div></div>
+<div class="ttc" id="aclasscen_1_1message__box_html_a23903be7009d489fb2159f1adcb90ec8"><div class="ttname"><a href="classcen_1_1message__box.html#a23903be7009d489fb2159f1adcb90ec8">cen::message_box::set_title</a></div><div class="ttdeci">void set_title(std::string title)</div><div class="ttdoc">Sets the title of the message box.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:264</div></div>
+<div class="ttc" id="aclasscen_1_1message__box_html_a2aff634c56da01546e40f89641c12abf"><div class="ttname"><a href="classcen_1_1message__box.html#a2aff634c56da01546e40f89641c12abf">cen::message_box::title</a></div><div class="ttdeci">auto title() const -&gt; std::string_view</div><div class="ttdoc">Returns the title of the message box.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:349</div></div>
+<div class="ttc" id="aclasscen_1_1message__box_html_a30a2562eff592b0dc6e03bb0e54f4b9a"><div class="ttname"><a href="classcen_1_1message__box.html#a30a2562eff592b0dc6e03bb0e54f4b9a">cen::message_box::button_id</a></div><div class="ttdeci">int button_id</div><div class="ttdoc">Used for message box button identifiers.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:52</div></div>
+<div class="ttc" id="aclasscen_1_1message__box_html_a41af62f1d653f57e60fe2380ac5834ec"><div class="ttname"><a href="classcen_1_1message__box.html#a41af62f1d653f57e60fe2380ac5834ec">cen::message_box::message</a></div><div class="ttdeci">auto message() const -&gt; std::string_view</div><div class="ttdoc">Returns the message of the message box.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:363</div></div>
+<div class="ttc" id="aclasscen_1_1message__box_html_a42a17a92b248a1caf10e2fc3e6d2bf74"><div class="ttname"><a href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74">cen::message_box::default_button</a></div><div class="ttdeci">default_button</div><div class="ttdoc">Provides identifiers that represent default buttons of message boxes.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:64</div></div>
 <div class="ttc" id="aclasscen_1_1message__box_html_a42a17a92b248a1caf10e2fc3e6d2bf74a70c959720db386eebd9b719e815350fa"><div class="ttname"><a href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74a70c959720db386eebd9b719e815350fa">cen::message_box::default_button::escape_key</a></div><div class="ttdeci">@ escape_key</div></div>
 <div class="ttc" id="aclasscen_1_1message__box_html_a42a17a92b248a1caf10e2fc3e6d2bf74af5b438232daa2a9532d759b14a36bf57"><div class="ttname"><a href="classcen_1_1message__box.html#a42a17a92b248a1caf10e2fc3e6d2bf74af5b438232daa2a9532d759b14a36bf57">cen::message_box::default_button::return_key</a></div><div class="ttdeci">@ return_key</div></div>
-<div class="ttc" id="aclasscen_1_1message__box_html_a452eb1aebfbe12fc224ddea83d080be1"><div class="ttname"><a href="classcen_1_1message__box.html#a452eb1aebfbe12fc224ddea83d080be1">cen::message_box::set_message</a></div><div class="ttdeci">void set_message(std::string message)</div><div class="ttdoc">Sets the message of the message box.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:279</div></div>
-<div class="ttc" id="aclasscen_1_1message__box_html_a4fecac657854939696771375ffaa2a1b"><div class="ttname"><a href="classcen_1_1message__box.html#a4fecac657854939696771375ffaa2a1b">cen::message_box::show</a></div><div class="ttdeci">auto show() -&gt; std::optional&lt; button_id &gt;</div><div class="ttdoc">Displays a message box.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:235</div></div>
-<div class="ttc" id="aclasscen_1_1message__box_html_a54f0c498760066cd1ade2a2ad37993fc"><div class="ttname"><a href="classcen_1_1message__box.html#a54f0c498760066cd1ade2a2ad37993fc">cen::message_box::set_button_order</a></div><div class="ttdeci">void set_button_order(const button_order order) noexcept</div><div class="ttdoc">Sets the button order of the message box.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:320</div></div>
-<div class="ttc" id="aclasscen_1_1message__box_html_a6a1776fd526f8e07ff631bf115261831"><div class="ttname"><a href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831">cen::message_box::color_id</a></div><div class="ttdeci">color_id</div><div class="ttdoc">Represents different message box aspects that can be colored.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:82</div></div>
+<div class="ttc" id="aclasscen_1_1message__box_html_a452eb1aebfbe12fc224ddea83d080be1"><div class="ttname"><a href="classcen_1_1message__box.html#a452eb1aebfbe12fc224ddea83d080be1">cen::message_box::set_message</a></div><div class="ttdeci">void set_message(std::string message)</div><div class="ttdoc">Sets the message of the message box.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:276</div></div>
+<div class="ttc" id="aclasscen_1_1message__box_html_a4fecac657854939696771375ffaa2a1b"><div class="ttname"><a href="classcen_1_1message__box.html#a4fecac657854939696771375ffaa2a1b">cen::message_box::show</a></div><div class="ttdeci">auto show() -&gt; std::optional&lt; button_id &gt;</div><div class="ttdoc">Displays a message box.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:232</div></div>
+<div class="ttc" id="aclasscen_1_1message__box_html_a54f0c498760066cd1ade2a2ad37993fc"><div class="ttname"><a href="classcen_1_1message__box.html#a54f0c498760066cd1ade2a2ad37993fc">cen::message_box::set_button_order</a></div><div class="ttdeci">void set_button_order(const button_order order) noexcept</div><div class="ttdoc">Sets the button order of the message box.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:317</div></div>
+<div class="ttc" id="aclasscen_1_1message__box_html_a6a1776fd526f8e07ff631bf115261831"><div class="ttname"><a href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831">cen::message_box::color_id</a></div><div class="ttdeci">color_id</div><div class="ttdoc">Represents different message box aspects that can be colored.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:79</div></div>
 <div class="ttc" id="aclasscen_1_1message__box_html_a6a1776fd526f8e07ff631bf115261831a0c1e80d7777f54e8ddd4127148e71515"><div class="ttname"><a href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831a0c1e80d7777f54e8ddd4127148e71515">cen::message_box::color_id::button_selected</a></div><div class="ttdeci">@ button_selected</div></div>
 <div class="ttc" id="aclasscen_1_1message__box_html_a6a1776fd526f8e07ff631bf115261831a1abcb09cbd3f5bd4df4ab2e5fad0a128"><div class="ttname"><a href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831a1abcb09cbd3f5bd4df4ab2e5fad0a128">cen::message_box::color_id::button_background</a></div><div class="ttdeci">@ button_background</div></div>
 <div class="ttc" id="aclasscen_1_1message__box_html_a6a1776fd526f8e07ff631bf115261831a1cb251ec0d568de6a929b520c4aed8d1"><div class="ttname"><a href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831a1cb251ec0d568de6a929b520c4aed8d1">cen::message_box::color_id::text</a></div><div class="ttdeci">@ text</div></div>
 <div class="ttc" id="aclasscen_1_1message__box_html_a6a1776fd526f8e07ff631bf115261831a2b895e7c796be8b8f230d906075b27e0"><div class="ttname"><a href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831a2b895e7c796be8b8f230d906075b27e0">cen::message_box::color_id::button_border</a></div><div class="ttdeci">@ button_border</div></div>
 <div class="ttc" id="aclasscen_1_1message__box_html_a6a1776fd526f8e07ff631bf115261831ad229bbf31eaeebc7c88897732d8b932d"><div class="ttname"><a href="classcen_1_1message__box.html#a6a1776fd526f8e07ff631bf115261831ad229bbf31eaeebc7c88897732d8b932d">cen::message_box::color_id::background</a></div><div class="ttdeci">@ background</div></div>
-<div class="ttc" id="aclasscen_1_1message__box_html_a6dbaf376b885b81280865127d3bd8105"><div class="ttname"><a href="classcen_1_1message__box.html#a6dbaf376b885b81280865127d3bd8105">cen::message_box::get_button_order</a></div><div class="ttdeci">auto get_button_order() const noexcept -&gt; button_order</div><div class="ttdoc">Returns the button order of the message box.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:394</div></div>
-<div class="ttc" id="aclasscen_1_1message__box_html_a79f52810a957a676ab85bebede94af88"><div class="ttname"><a href="classcen_1_1message__box.html#a79f52810a957a676ab85bebede94af88">cen::message_box::show</a></div><div class="ttdeci">static void show(const std::string &amp;title, const std::string &amp;message, const message_box_type type=default_type(), const button_order buttonOrder=default_order())</div><div class="ttdoc">Displays a message box.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:198</div></div>
-<div class="ttc" id="aclasscen_1_1message__box_html_a8a393bc0db809c0bd442b2ad855cf069"><div class="ttname"><a href="classcen_1_1message__box.html#a8a393bc0db809c0bd442b2ad855cf069">cen::message_box::set_type</a></div><div class="ttdeci">void set_type(const message_box_type type) noexcept</div><div class="ttdoc">Sets the type of the message box.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:308</div></div>
-<div class="ttc" id="aclasscen_1_1message__box_html_aa2104559e38d862d0f2fbd7e1e287e1d"><div class="ttname"><a href="classcen_1_1message__box.html#aa2104559e38d862d0f2fbd7e1e287e1d">cen::message_box::message_box</a></div><div class="ttdeci">message_box(std::string title, std::string message)</div><div class="ttdoc">Creates a message box with the specified title and message.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:158</div></div>
-<div class="ttc" id="aclasscen_1_1message__box_html_ab76d9d2cd3b82ce06665bfbdf9a9de37"><div class="ttname"><a href="classcen_1_1message__box.html#ab76d9d2cd3b82ce06665bfbdf9a9de37">cen::message_box::add_button</a></div><div class="ttdeci">void add_button(const button_id id, std::string text, const default_button button=default_button::return_key)</div><div class="ttdoc">Adds a button to the message box.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:251</div></div>
-<div class="ttc" id="aclasscen_1_1message__box_html_ad99bda20b6612c2b18427bf7c3a83086"><div class="ttname"><a href="classcen_1_1message__box.html#ad99bda20b6612c2b18427bf7c3a83086">cen::message_box::show</a></div><div class="ttdeci">auto show(const basic_window&lt; T &gt; &amp;parent) -&gt; std::optional&lt; button_id &gt;</div><div class="ttdoc">Displays a message box.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:218</div></div>
-<div class="ttc" id="aclasscen_1_1message__box_html_adcbb78d49541511f7e2c747dea47d34e"><div class="ttname"><a href="classcen_1_1message__box.html#adcbb78d49541511f7e2c747dea47d34e">cen::message_box::has_button</a></div><div class="ttdeci">auto has_button(const button_id id) const -&gt; bool</div><div class="ttdoc">Indicates whether or not the message box has a button associated with the specified ID.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:336</div></div>
+<div class="ttc" id="aclasscen_1_1message__box_html_a6dbaf376b885b81280865127d3bd8105"><div class="ttname"><a href="classcen_1_1message__box.html#a6dbaf376b885b81280865127d3bd8105">cen::message_box::get_button_order</a></div><div class="ttdeci">auto get_button_order() const noexcept -&gt; button_order</div><div class="ttdoc">Returns the button order of the message box.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:391</div></div>
+<div class="ttc" id="aclasscen_1_1message__box_html_a79f52810a957a676ab85bebede94af88"><div class="ttname"><a href="classcen_1_1message__box.html#a79f52810a957a676ab85bebede94af88">cen::message_box::show</a></div><div class="ttdeci">static void show(const std::string &amp;title, const std::string &amp;message, const message_box_type type=default_type(), const button_order buttonOrder=default_order())</div><div class="ttdoc">Displays a message box.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:195</div></div>
+<div class="ttc" id="aclasscen_1_1message__box_html_a8a393bc0db809c0bd442b2ad855cf069"><div class="ttname"><a href="classcen_1_1message__box.html#a8a393bc0db809c0bd442b2ad855cf069">cen::message_box::set_type</a></div><div class="ttdeci">void set_type(const message_box_type type) noexcept</div><div class="ttdoc">Sets the type of the message box.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:305</div></div>
+<div class="ttc" id="aclasscen_1_1message__box_html_aa2104559e38d862d0f2fbd7e1e287e1d"><div class="ttname"><a href="classcen_1_1message__box.html#aa2104559e38d862d0f2fbd7e1e287e1d">cen::message_box::message_box</a></div><div class="ttdeci">message_box(std::string title, std::string message)</div><div class="ttdoc">Creates a message box with the specified title and message.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:155</div></div>
+<div class="ttc" id="aclasscen_1_1message__box_html_ab76d9d2cd3b82ce06665bfbdf9a9de37"><div class="ttname"><a href="classcen_1_1message__box.html#ab76d9d2cd3b82ce06665bfbdf9a9de37">cen::message_box::add_button</a></div><div class="ttdeci">void add_button(const button_id id, std::string text, const default_button button=default_button::return_key)</div><div class="ttdoc">Adds a button to the message box.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:248</div></div>
+<div class="ttc" id="aclasscen_1_1message__box_html_ad99bda20b6612c2b18427bf7c3a83086"><div class="ttname"><a href="classcen_1_1message__box.html#ad99bda20b6612c2b18427bf7c3a83086">cen::message_box::show</a></div><div class="ttdeci">auto show(const basic_window&lt; T &gt; &amp;parent) -&gt; std::optional&lt; button_id &gt;</div><div class="ttdoc">Displays a message box.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:215</div></div>
+<div class="ttc" id="aclasscen_1_1message__box_html_adcbb78d49541511f7e2c747dea47d34e"><div class="ttname"><a href="classcen_1_1message__box.html#adcbb78d49541511f7e2c747dea47d34e">cen::message_box::has_button</a></div><div class="ttdeci">auto has_button(const button_id id) const -&gt; bool</div><div class="ttdoc">Indicates whether or not the message box has a button associated with the specified ID.</div><div class="ttdef"><b>Definition:</b> message_box.hpp:333</div></div>
 <div class="ttc" id="aclasscen_1_1message__box_html_af2569e9af982bf0d884243ba2b90778c"><div class="ttname"><a href="classcen_1_1message__box.html#af2569e9af982bf0d884243ba2b90778c">cen::message_box::set_message</a></div><div class="ttdeci">void set_message(std::nullptr_t)=delete</div></div>
 <div class="ttc" id="aclasscen_1_1message__box_html_afe3000ce4b42c81344e5237f5af21711"><div class="ttname"><a href="classcen_1_1message__box.html#afe3000ce4b42c81344e5237f5af21711">cen::message_box::set_title</a></div><div class="ttdeci">void set_title(std::nullptr_t)=delete</div></div>
-<div class="ttc" id="agroup__audio_html_ga322c699fa08098bd801164819d2f4cc8"><div class="ttname"><a href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">cen::operator!=</a></div><div class="ttdeci">constexpr auto operator!=(const fade_status lhs, const Mix_Fading rhs) noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the fading status values represent aren't the same.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:129</div></div>
-<div class="ttc" id="agroup__audio_html_ga83f366781618f05bf8bcb60c753e9ced"><div class="ttname"><a href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">cen::operator&lt;&lt;</a></div><div class="ttdeci">auto operator&lt;&lt;(std::ostream &amp;stream, const fade_status status) -&gt; std::ostream &amp;</div><div class="ttdoc">Prints a textual representation of a fade status enumerator.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:86</div></div>
-<div class="ttc" id="agroup__audio_html_ga9ebd3f26fcc0f89398ff473b06e9dcbe"><div class="ttname"><a href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">cen::to_string</a></div><div class="ttdeci">constexpr auto to_string(const fade_status status) -&gt; std::string_view</div><div class="ttdoc">Returns a textual version of the supplied fade status.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:51</div></div>
-<div class="ttc" id="agroup__audio_html_gaf72595df3886dbb34dbcf030d14333d2"><div class="ttname"><a href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">cen::operator==</a></div><div class="ttdeci">constexpr auto operator==(const fade_status lhs, const Mix_Fading rhs) noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the fading status values represent are the same.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:106</div></div>
+<div class="ttc" id="agroup__audio_html_ga322c699fa08098bd801164819d2f4cc8"><div class="ttname"><a href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">cen::operator!=</a></div><div class="ttdeci">constexpr auto operator!=(const fade_status lhs, const Mix_Fading rhs) noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the fading status values represent aren't the same.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:141</div></div>
+<div class="ttc" id="agroup__audio_html_ga83f366781618f05bf8bcb60c753e9ced"><div class="ttname"><a href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">cen::operator&lt;&lt;</a></div><div class="ttdeci">auto operator&lt;&lt;(std::ostream &amp;stream, const fade_status status) -&gt; std::ostream &amp;</div><div class="ttdoc">Prints a textual representation of a fade status enumerator.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:98</div></div>
+<div class="ttc" id="agroup__audio_html_ga9ebd3f26fcc0f89398ff473b06e9dcbe"><div class="ttname"><a href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">cen::to_string</a></div><div class="ttdeci">constexpr auto to_string(const fade_status status) -&gt; std::string_view</div><div class="ttdoc">Returns a textual version of the supplied fade status.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:64</div></div>
+<div class="ttc" id="agroup__audio_html_gaf72595df3886dbb34dbcf030d14333d2"><div class="ttname"><a href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">cen::operator==</a></div><div class="ttdeci">constexpr auto operator==(const fade_status lhs, const Mix_Fading rhs) noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the fading status values represent are the same.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:118</div></div>
 <div class="ttc" id="agroup__core_html_ga1b0d65474648eaf9b1bfe720e037eb9c"><div class="ttname"><a href="group__core.html#ga1b0d65474648eaf9b1bfe720e037eb9c">cen::to_underlying</a></div><div class="ttdeci">constexpr auto to_underlying(const Enum value) noexcept -&gt; std::underlying_type_t&lt; Enum &gt;</div><div class="ttdoc">Converts an enum value to an integral value using the underlying type.</div><div class="ttdef"><b>Definition:</b> to_underlying.hpp:24</div></div>
 <div class="ttc" id="agroup__core_html_ga3764941d9ec9f936c62296ed6490ce70"><div class="ttname"><a href="group__core.html#ga3764941d9ec9f936c62296ed6490ce70">cen::isize</a></div><div class="ttdeci">constexpr auto isize(const T &amp;container) noexcept(noexcept(container.size())) -&gt; int</div><div class="ttdoc">Obtains the size of a container as an int.</div><div class="ttdef"><b>Definition:</b> integers.hpp:64</div></div>
 <div class="ttc" id="agroup__core_html_ga4abd620246f76cc48168dc52a04a62da"><div class="ttname"><a href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">cen::u32</a></div><div class="ttdeci">Uint32 u32</div><div class="ttdoc">Alias for a 32-bit unsigned integer.</div><div class="ttdef"><b>Definition:</b> integers.hpp:28</div></div>

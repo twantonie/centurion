@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -298,137 +298,6 @@ template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = 0&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab9e4213c4ac28723ac992df4349a081e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab9e4213c4ac28723ac992df4349a081e">&#9670;&nbsp;</a></span>format()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename B &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__pixel__format__info.html">cen::basic_pixel_format_info</a>&lt; B &gt;::format </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the associated pixel format. </p>
-<dl class="section return"><dt>Returns</dt><dd>the associated pixel format.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a2c6dee52dac7323f052329cdc9ebcd80"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c6dee52dac7323f052329cdc9ebcd80">&#9670;&nbsp;</a></span>get()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename B &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__pixel__format__info.html">cen::basic_pixel_format_info</a>&lt; B &gt;::get </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; SDL_PixelFormat*
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a pointer to the associated pixel format instance. </p>
-<dl class="section warning"><dt>Warning</dt><dd>Do not claim ownership of the returned pointer.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the internal pixel format.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a12e526fb899b8b7c0214d3768cc2bafa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12e526fb899b8b7c0214d3768cc2bafa">&#9670;&nbsp;</a></span>name()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename B &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__pixel__format__info.html">cen::basic_pixel_format_info</a>&lt; B &gt;::name </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt;<a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a>&gt;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a human-readable name associated with the format. </p>
-<p>This function never returns a null-pointer, instead it returns "SDL_PIXELFORMAT_UNKNOWN" if the format is ill-formed.</p>
-<dl class="section return"><dt>Returns</dt><dd>a human-readable name associated with the format.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a979a89b18c4bfc320e32f60e902d05fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a979a89b18c4bfc320e32f60e902d05fa">&#9670;&nbsp;</a></span>operator bool()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename B &gt; </div>
-<div class="memtemplate">
-template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = 0&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classcen_1_1basic__pixel__format__info.html">cen::basic_pixel_format_info</a>&lt; B &gt;::operator bool </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not a handle holds a non-null pointer. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the handle holds a non-null pointer; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
 <a id="a891e09ff64b3e5217dbcfc2c20cee9be"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a891e09ff64b3e5217dbcfc2c20cee9be">&#9670;&nbsp;</a></span>pixel_to_rgb()</h2>
 
@@ -582,6 +451,137 @@ template&lt;typename B &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a masked pixel color value, based on the pixel format.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="ab9e4213c4ac28723ac992df4349a081e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9e4213c4ac28723ac992df4349a081e">&#9670;&nbsp;</a></span>format()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename B &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__pixel__format__info.html">cen::basic_pixel_format_info</a>&lt; B &gt;::format </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the associated pixel format. </p>
+<dl class="section return"><dt>Returns</dt><dd>the associated pixel format.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a12e526fb899b8b7c0214d3768cc2bafa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12e526fb899b8b7c0214d3768cc2bafa">&#9670;&nbsp;</a></span>name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename B &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__pixel__format__info.html">cen::basic_pixel_format_info</a>&lt; B &gt;::name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt;<a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a>&gt;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a human-readable name associated with the format. </p>
+<p>This function never returns a null-pointer, instead it returns "SDL_PIXELFORMAT_UNKNOWN" if the format is ill-formed.</p>
+<dl class="section return"><dt>Returns</dt><dd>a human-readable name associated with the format.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a2c6dee52dac7323f052329cdc9ebcd80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c6dee52dac7323f052329cdc9ebcd80">&#9670;&nbsp;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename B &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__pixel__format__info.html">cen::basic_pixel_format_info</a>&lt; B &gt;::get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; SDL_PixelFormat*
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the associated pixel format instance. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Do not claim ownership of the returned pointer.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the internal pixel format.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a979a89b18c4bfc320e32f60e902d05fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a979a89b18c4bfc320e32f60e902d05fa">&#9670;&nbsp;</a></span>operator bool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename B &gt; </div>
+<div class="memtemplate">
+template&lt;typename BB  = B, detail::is_handle&lt; BB &gt;  = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcen_1_1basic__pixel__format__info.html">cen::basic_pixel_format_info</a>&lt; B &gt;::operator bool </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not a handle holds a non-null pointer. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the handle holds a non-null pointer; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
 
 </div>

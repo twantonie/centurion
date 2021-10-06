@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -178,25 +178,23 @@ $(document).ready(function(){initNavTree('owner__handle__api_8hpp_source.html','
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="group__video.html#ga563e02365f9bb8c8c8c5a9871f12bd43">get</a>() const noexcept -&gt; Type*</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">if</span> constexpr (B::value)</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      <span class="keywordflow">return</span> m_ptr.get();</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      <span class="keywordflow">return</span> m_ptr;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  pointer_type m_ptr{};</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;};</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}  <span class="comment">// namespace cen::detail</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_DETAIL_OWNER_HANDLE_API_HEADER</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">if</span> constexpr (B::value) {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <span class="keywordflow">return</span> m_ptr.get();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      <span class="keywordflow">return</span> m_ptr;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  pointer_type m_ptr{};</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;};</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}  <span class="comment">// namespace cen::detail</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_DETAIL_OWNER_HANDLE_API_HEADER</span></div>
 <div class="ttc" id="agroup__core_html_gga5a2bed2933e3748ad2a77961417a102bae44e4612f62d2fb8f8738bab118a9850"><div class="ttname"><a href="group__core.html#gga5a2bed2933e3748ad2a77961417a102bae44e4612f62d2fb8f8738bab118a9850">cen::log_category::assert</a></div><div class="ttdeci">@ assert</div></div>
-<div class="ttc" id="agroup__video_html_ga563e02365f9bb8c8c8c5a9871f12bd43"><div class="ttname"><a href="group__video.html#ga563e02365f9bb8c8c8c5a9871f12bd43">cen::gl::get</a></div><div class="ttdeci">auto get(const gl_attribute attr) noexcept -&gt; std::optional&lt; int &gt;</div><div class="ttdoc">Returns the current value of an OpenGL context attribute.</div><div class="ttdef"><b>Definition:</b> gl_core.hpp:207</div></div>
+<div class="ttc" id="agroup__video_html_ga563e02365f9bb8c8c8c5a9871f12bd43"><div class="ttname"><a href="group__video.html#ga563e02365f9bb8c8c8c5a9871f12bd43">cen::gl::get</a></div><div class="ttdeci">auto get(const gl_attribute attr) noexcept -&gt; std::optional&lt; int &gt;</div><div class="ttdoc">Returns the current value of an OpenGL context attribute.</div><div class="ttdef"><b>Definition:</b> gl_core.hpp:203</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->

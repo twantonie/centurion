@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -124,74 +124,73 @@ $(document).ready(function(){initNavTree('log__priority_8hpp_source.html',''); i
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
 <div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="group__audio.html#ga89b09833a5ee2548f6459b71cbb00ce2">   64</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(<span class="keyword">const</span> <a class="code" href="group__core.html#ga910862a214870faa7b625862de858c52">log_priority</a> priority) -&gt; std::string_view</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordflow">switch</span> (priority)</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__core.html#gga910862a214870faa7b625862de858c52a2c7aea4237e25b4f8ee3b0bf77d6fed0">log_priority::verbose</a>:</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;verbose&quot;</span>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__core.html#gga910862a214870faa7b625862de858c52aad42f6697b035b7580e4fef93be20b4d">log_priority::debug</a>:</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;debug&quot;</span>;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__core.html#gga910862a214870faa7b625862de858c52acaf9b6b99962bf5c2264824231d7a40c">log_priority::info</a>:</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;info&quot;</span>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__core.html#gga910862a214870faa7b625862de858c52a1ea4c3ab05ee0c6d4de30740443769cb">log_priority::warn</a>:</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;warn&quot;</span>;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__core.html#gga910862a214870faa7b625862de858c52acb5e100e5a9a3e7f6d1fd97512215282">log_priority::error</a>:</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;error&quot;</span>;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__core.html#gga910862a214870faa7b625862de858c52a7e85bcb66fb9a809d5ab4f62a8b8bea8">log_priority::critical</a>:</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;critical&quot;</span>;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1cen__error.html">cen_error</a>{<span class="stringliteral">&quot;Did not recognize log priority!&quot;</span>};</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="group__audio.html#ga287754dc3b061659402513a3c2ab055c">  108</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">operator&lt;&lt;</a>(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code" href="group__core.html#ga910862a214870faa7b625862de858c52">log_priority</a> priority) -&gt; std::ostream&amp;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;{</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordflow">return</span> stream &lt;&lt; <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(priority);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="group__core.html#gaf6e461d22ae78238e801b9367b8b4a2c">  128</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> <a class="code" href="group__core.html#ga910862a214870faa7b625862de858c52">log_priority</a> lhs,</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                                        <span class="keyword">const</span> SDL_LogPriority rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;{</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>SDL_LogPriority<span class="keyword">&gt;</span>(lhs) == rhs;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
-<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="group__core.html#ga343e7daaacd57073420d714796291393">  135</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> SDL_LogPriority lhs,</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="group__core.html#ga910862a214870faa7b625862de858c52">log_priority</a> rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;{</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <span class="keywordflow">return</span> rhs == lhs;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;}</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
-<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="group__core.html#ga2aa32fcee319fe760f0c24c936a48230">  151</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> <a class="code" href="group__core.html#ga910862a214870faa7b625862de858c52">log_priority</a> lhs,</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                                        <span class="keyword">const</span> SDL_LogPriority rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;{</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;}</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
-<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="group__core.html#ga99b6c84f5e3b19b1bfc1ceaa62fd17da">  158</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> SDL_LogPriority lhs,</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="group__core.html#ga910862a214870faa7b625862de858c52">log_priority</a> rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;{</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;}</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;}  <span class="comment">// namespace cen</span></div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_LOG_PRIORITY_HEADER</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordflow">switch</span> (priority) {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__core.html#gga910862a214870faa7b625862de858c52a2c7aea4237e25b4f8ee3b0bf77d6fed0">log_priority::verbose</a>:</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;verbose&quot;</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__core.html#gga910862a214870faa7b625862de858c52aad42f6697b035b7580e4fef93be20b4d">log_priority::debug</a>:</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;debug&quot;</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__core.html#gga910862a214870faa7b625862de858c52acaf9b6b99962bf5c2264824231d7a40c">log_priority::info</a>:</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;info&quot;</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__core.html#gga910862a214870faa7b625862de858c52a1ea4c3ab05ee0c6d4de30740443769cb">log_priority::warn</a>:</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;warn&quot;</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__core.html#gga910862a214870faa7b625862de858c52acb5e100e5a9a3e7f6d1fd97512215282">log_priority::error</a>:</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;error&quot;</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__core.html#gga910862a214870faa7b625862de858c52a7e85bcb66fb9a809d5ab4f62a8b8bea8">log_priority::critical</a>:</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;critical&quot;</span>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1cen__error.html">cen_error</a>{<span class="stringliteral">&quot;Did not recognize log priority!&quot;</span>};</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="group__audio.html#ga287754dc3b061659402513a3c2ab055c">  107</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">operator&lt;&lt;</a>(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code" href="group__core.html#ga910862a214870faa7b625862de858c52">log_priority</a> priority) -&gt; std::ostream&amp;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;{</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keywordflow">return</span> stream &lt;&lt; <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(priority);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="group__core.html#gaf6e461d22ae78238e801b9367b8b4a2c">  127</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> <a class="code" href="group__core.html#ga910862a214870faa7b625862de858c52">log_priority</a> lhs,</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                                        <span class="keyword">const</span> SDL_LogPriority rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;{</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>SDL_LogPriority<span class="keyword">&gt;</span>(lhs) == rhs;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;}</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="group__core.html#ga343e7daaacd57073420d714796291393">  134</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> SDL_LogPriority lhs,</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="group__core.html#ga910862a214870faa7b625862de858c52">log_priority</a> rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;{</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <span class="keywordflow">return</span> rhs == lhs;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="group__core.html#ga2aa32fcee319fe760f0c24c936a48230">  150</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> <a class="code" href="group__core.html#ga910862a214870faa7b625862de858c52">log_priority</a> lhs,</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                                        <span class="keyword">const</span> SDL_LogPriority rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;{</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;}</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="group__core.html#ga99b6c84f5e3b19b1bfc1ceaa62fd17da">  157</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> SDL_LogPriority lhs,</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="group__core.html#ga910862a214870faa7b625862de858c52">log_priority</a> rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;{</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;}</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;}  <span class="comment">// namespace cen</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_LOG_PRIORITY_HEADER</span></div>
 <div class="ttc" id="aclasscen_1_1cen__error_html"><div class="ttname"><a href="classcen_1_1cen__error.html">cen::cen_error</a></div><div class="ttdoc">The base of all exceptions explicitly thrown by the library.</div><div class="ttdef"><b>Definition:</b> exception.hpp:35</div></div>
-<div class="ttc" id="agroup__audio_html_ga322c699fa08098bd801164819d2f4cc8"><div class="ttname"><a href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">cen::operator!=</a></div><div class="ttdeci">constexpr auto operator!=(const fade_status lhs, const Mix_Fading rhs) noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the fading status values represent aren't the same.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:129</div></div>
-<div class="ttc" id="agroup__audio_html_ga83f366781618f05bf8bcb60c753e9ced"><div class="ttname"><a href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">cen::operator&lt;&lt;</a></div><div class="ttdeci">auto operator&lt;&lt;(std::ostream &amp;stream, const fade_status status) -&gt; std::ostream &amp;</div><div class="ttdoc">Prints a textual representation of a fade status enumerator.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:86</div></div>
-<div class="ttc" id="agroup__audio_html_ga9ebd3f26fcc0f89398ff473b06e9dcbe"><div class="ttname"><a href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">cen::to_string</a></div><div class="ttdeci">constexpr auto to_string(const fade_status status) -&gt; std::string_view</div><div class="ttdoc">Returns a textual version of the supplied fade status.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:51</div></div>
-<div class="ttc" id="agroup__audio_html_gaf72595df3886dbb34dbcf030d14333d2"><div class="ttname"><a href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">cen::operator==</a></div><div class="ttdeci">constexpr auto operator==(const fade_status lhs, const Mix_Fading rhs) noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the fading status values represent are the same.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:106</div></div>
+<div class="ttc" id="agroup__audio_html_ga322c699fa08098bd801164819d2f4cc8"><div class="ttname"><a href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">cen::operator!=</a></div><div class="ttdeci">constexpr auto operator!=(const fade_status lhs, const Mix_Fading rhs) noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the fading status values represent aren't the same.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:141</div></div>
+<div class="ttc" id="agroup__audio_html_ga83f366781618f05bf8bcb60c753e9ced"><div class="ttname"><a href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">cen::operator&lt;&lt;</a></div><div class="ttdeci">auto operator&lt;&lt;(std::ostream &amp;stream, const fade_status status) -&gt; std::ostream &amp;</div><div class="ttdoc">Prints a textual representation of a fade status enumerator.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:98</div></div>
+<div class="ttc" id="agroup__audio_html_ga9ebd3f26fcc0f89398ff473b06e9dcbe"><div class="ttname"><a href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">cen::to_string</a></div><div class="ttdeci">constexpr auto to_string(const fade_status status) -&gt; std::string_view</div><div class="ttdoc">Returns a textual version of the supplied fade status.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:64</div></div>
+<div class="ttc" id="agroup__audio_html_gaf72595df3886dbb34dbcf030d14333d2"><div class="ttname"><a href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">cen::operator==</a></div><div class="ttdeci">constexpr auto operator==(const fade_status lhs, const Mix_Fading rhs) noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the fading status values represent are the same.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:118</div></div>
 <div class="ttc" id="agroup__core_html_ga910862a214870faa7b625862de858c52"><div class="ttname"><a href="group__core.html#ga910862a214870faa7b625862de858c52">cen::log_priority</a></div><div class="ttdeci">log_priority</div><div class="ttdoc">Provides values that represent different logging priorities.</div><div class="ttdef"><b>Definition:</b> log_priority.hpp:26</div></div>
 <div class="ttc" id="agroup__core_html_gaf437ee8642b67d77965e8ca6ec4e6770"><div class="ttname"><a href="group__core.html#gaf437ee8642b67d77965e8ca6ec4e6770">cen::log_priority_count</a></div><div class="ttdeci">constexpr auto log_priority_count() noexcept -&gt; int</div><div class="ttdoc">Returns the number of available log priorities.</div><div class="ttdef"><b>Definition:</b> log_priority.hpp:42</div></div>
 <div class="ttc" id="agroup__core_html_gga910862a214870faa7b625862de858c52a1ea4c3ab05ee0c6d4de30740443769cb"><div class="ttname"><a href="group__core.html#gga910862a214870faa7b625862de858c52a1ea4c3ab05ee0c6d4de30740443769cb">cen::log_priority::warn</a></div><div class="ttdeci">@ warn</div></div>

@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -119,9 +119,8 @@ $(document).ready(function(){initNavTree('page-event-dispatcher.html',''); initR
 <div class="line">    m_dispatcher.bind&lt;<a class="code" href="classcen_1_1window__event.html">cen::window_event</a>&gt;().to&lt;&amp;Game::on_window_event&gt;(<span class="keyword">this</span>);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Lambda handler</span></div>
-<div class="line">    m_dispatcher.bind&lt;<a class="code" href="classcen_1_1keyboard__event.html">cen::keyboard_event</a>&gt;().to([](<span class="keyword">const</span> <a class="code" href="classcen_1_1keyboard__event.html">cen::keyboard_event</a>&amp; event) {</div>
-<div class="line">      cen::log::info(<span class="stringliteral">&quot;keyboard_event&quot;</span>);</div>
-<div class="line">    });</div>
+<div class="line">    m_dispatcher.bind&lt;<a class="code" href="classcen_1_1keyboard__event.html">cen::keyboard_event</a>&gt;().to(</div>
+<div class="line">        [](<span class="keyword">const</span> <a class="code" href="classcen_1_1keyboard__event.html">cen::keyboard_event</a>&amp; event) { cen::log::info(<span class="stringliteral">&quot;keyboard_event&quot;</span>); });</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Free function handler</span></div>
 <div class="line">    m_dispatcher.bind&lt;<a class="code" href="classcen_1_1mouse__button__event.html">cen::mouse_button_event</a>&gt;().to&lt;&amp;on_mouse_button_event&gt;();</div>
@@ -131,12 +130,11 @@ $(document).ready(function(){initNavTree('page-event-dispatcher.html',''); initR
 <div class="line">  {</div>
 <div class="line">    m_window.show();</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordflow">while</span> (m_running)</div>
-<div class="line">    {</div>
+<div class="line">    <span class="keywordflow">while</span> (m_running) {</div>
 <div class="line">      <span class="comment">// All we need to do each frame to handle events is to poll the event dispatcher</span></div>
 <div class="line">      m_dispatcher.poll();</div>
 <div class="line"> </div>
-<div class="line">      <span class="comment">// More game stuff...</span></div>
+<div class="line">      <span class="comment">// Game logic goes here...</span></div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    m_window.hide();</div>
@@ -151,6 +149,7 @@ $(document).ready(function(){initNavTree('page-event-dispatcher.html',''); initR
 <div class="line">  <span class="comment">// Invoked for each quit event</span></div>
 <div class="line">  <span class="keywordtype">void</span> on_quit_event(<span class="keyword">const</span> <a class="code" href="classcen_1_1quit__event.html">cen::quit_event</a>&amp; event)</div>
 <div class="line">  {</div>
+<div class="line">    cen::log::info(<span class="stringliteral">&quot;quit_event&quot;</span>);</div>
 <div class="line">    m_running = <span class="keyword">false</span>;</div>
 <div class="line">  }</div>
 <div class="line"> </div>
@@ -166,14 +165,13 @@ $(document).ready(function(){initNavTree('page-event-dispatcher.html',''); initR
 <div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span>, <span class="keywordtype">char</span>**)</div>
 <div class="line">{</div>
 <div class="line">  <a class="code" href="classcen_1_1library.html">cen::library</a> centurion;</div>
-<div class="line"> </div>
 <div class="line">  Game game;</div>
 <div class="line">  <span class="keywordflow">return</span> game.run();</div>
 <div class="line">}</div>
-<div class="ttc" id="aclasscen_1_1basic__window_html"><div class="ttname"><a href="classcen_1_1basic__window.html">cen::basic_window</a></div><div class="ttdoc">Represents an operating system window.</div><div class="ttdef"><b>Definition:</b> window.hpp:84</div></div>
+<div class="ttc" id="aclasscen_1_1basic__window_html"><div class="ttname"><a href="classcen_1_1basic__window.html">cen::basic_window</a></div><div class="ttdoc">Represents an operating system window.</div><div class="ttdef"><b>Definition:</b> window.hpp:82</div></div>
 <div class="ttc" id="aclasscen_1_1event__dispatcher_html"><div class="ttname"><a href="classcen_1_1event__dispatcher.html">cen::event_dispatcher</a></div><div class="ttdoc">An event dispatcher wrapper around a cen::event instance.</div><div class="ttdef"><b>Definition:</b> event_dispatcher.hpp:167</div></div>
 <div class="ttc" id="aclasscen_1_1keyboard__event_html"><div class="ttname"><a href="classcen_1_1keyboard__event.html">cen::keyboard_event</a></div><div class="ttdoc">Represents an event associated with some sort of key action, such as the release or pressing of a key...</div><div class="ttdef"><b>Definition:</b> keyboard_event.hpp:30</div></div>
-<div class="ttc" id="aclasscen_1_1library_html"><div class="ttname"><a href="classcen_1_1library.html">cen::library</a></div><div class="ttdoc">Used to initialize and de-initialize the library.</div><div class="ttdef"><b>Definition:</b> library.hpp:174</div></div>
+<div class="ttc" id="aclasscen_1_1library_html"><div class="ttname"><a href="classcen_1_1library.html">cen::library</a></div><div class="ttdoc">Used to initialize and de-initialize the library.</div><div class="ttdef"><b>Definition:</b> library.hpp:172</div></div>
 <div class="ttc" id="aclasscen_1_1mouse__button__event_html"><div class="ttname"><a href="classcen_1_1mouse__button__event.html">cen::mouse_button_event</a></div><div class="ttdoc">Represents an event triggered by mouse button presses or releases.</div><div class="ttdef"><b>Definition:</b> mouse_button_event.hpp:27</div></div>
 <div class="ttc" id="aclasscen_1_1quit__event_html"><div class="ttname"><a href="classcen_1_1quit__event.html">cen::quit_event</a></div><div class="ttdoc">Represents the event of the user wanting to close the application, usually by pressing the &quot;X&quot;-button...</div><div class="ttdef"><b>Definition:</b> quit_event.hpp:24</div></div>
 <div class="ttc" id="aclasscen_1_1window__event_html"><div class="ttname"><a href="classcen_1_1window__event.html">cen::window_event</a></div><div class="ttdoc">Represents an event that is associated with an action related to a window.</div><div class="ttdef"><b>Definition:</b> window_event.hpp:25</div></div>

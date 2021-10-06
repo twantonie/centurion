@@ -120,12 +120,12 @@ var group__hints =
       [ "normal", "group__hints.html#gga93afe9d42c61a18b1380d377bba1f3a8afea087517c26fadd409bd4b9dc642555", null ],
       [ "override", "group__hints.html#gga93afe9d42c61a18b1380d377bba1f3a8ae3b3f56615d1e5f2608d2f1130a7ef54", null ]
     ] ],
-    [ "add_hint_callback", "group__hints.html#ga31d85004eca73fd0a2ed048c014460b8", null ],
-    [ "add_hint_callback_ex", "group__hints.html#gac4c1198078134628b3b1ad34050bb870", null ],
-    [ "clear_hints", "group__hints.html#ga072a74d2b5960410afb5c7ea94bc5ba5", null ],
-    [ "get_hint", "group__hints.html#ga123fb2d0e903ce69aa94c598d8e2a3a4", null ],
+    [ "to_string", "group__audio.html#ga4016262e0af2e83118015dd5cb2da85b", null ],
     [ "operator<<", "group__audio.html#ga690218dd4774f11f3d913c0f0b824161", null ],
     [ "set_hint", "group__hints.html#ga4100fa3edf68a86d07b4da9daee5500f", null ],
-    [ "to_string", "group__audio.html#ga4016262e0af2e83118015dd5cb2da85b", null ],
+    [ "get_hint", "group__hints.html#ga123fb2d0e903ce69aa94c598d8e2a3a4", null ],
+    [ "add_hint_callback", "group__hints.html#ga31d85004eca73fd0a2ed048c014460b8", null ],
+    [ "add_hint_callback_ex", "group__hints.html#gadc1ff4eec8603c6fff6f703ffa6a170d", null ],
+    [ "clear_hints", "group__hints.html#ga072a74d2b5960410afb5c7ea94bc5ba5", null ],
     [ "is_hint_callback", "group__hints.html#ga879348dc8806ffaaf3fabb860d95bb27", null ]
 ];

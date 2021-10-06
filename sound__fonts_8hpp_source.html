@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -120,17 +120,16 @@ $(document).ready(function(){initNavTree('sound__fonts_8hpp_source.html',''); in
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T = <span class="keywordtype">void</span>&gt;</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="group__audio.html#ga8bacc7d13fa419c32ee44ff15fe361eb">   64</a></span>&#160;<span class="keyword">auto</span> <a class="code" href="group__audio.html#ga8bacc7d13fa419c32ee44ff15fe361eb">each_sound_font</a>(<a class="code" href="group__audio.html#gaa9caae05325bb854436c66c54642b480">sound_font_visit_callback</a> callable, T* data = <span class="keyword">nullptr</span>) noexcept</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    -&gt; <a class="code" href="classcen_1_1result.html">result</a></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordflow">return</span> Mix_EachSoundFont(callable, <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(data)) != 0;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}  <span class="comment">// namespace cen</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_NO_SDL_MIXER</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_SOUND_FONTS_HEADER</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="group__audio.html#ga8bacc7d13fa419c32ee44ff15fe361eb">   64</a></span>&#160;<span class="keyword">auto</span> <a class="code" href="group__audio.html#ga8bacc7d13fa419c32ee44ff15fe361eb">each_sound_font</a>(<a class="code" href="group__audio.html#gaa9caae05325bb854436c66c54642b480">sound_font_visit_callback</a> callable, T* data = <span class="keyword">nullptr</span>) noexcept -&gt; <a class="code" href="classcen_1_1result.html">result</a></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordflow">return</span> Mix_EachSoundFont(callable, <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(data)) != 0;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}  <span class="comment">// namespace cen</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_NO_SDL_MIXER</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_SOUND_FONTS_HEADER</span></div>
 <div class="ttc" id="aclasscen_1_1result_html"><div class="ttname"><a href="classcen_1_1result.html">cen::result</a></div><div class="ttdoc">A simple indicator for the result of different operations.</div><div class="ttdef"><b>Definition:</b> result.hpp:50</div></div>
 <div class="ttc" id="agroup__audio_html_ga308c1b7800f5ce7c03dc90737cc2ee27"><div class="ttname"><a href="group__audio.html#ga308c1b7800f5ce7c03dc90737cc2ee27">cen::get_sound_fonts</a></div><div class="ttdeci">auto get_sound_fonts() noexcept -&gt; str</div><div class="ttdoc">Returns a path to a SoundFont file.</div><div class="ttdef"><b>Definition:</b> sound_fonts.hpp:44</div></div>
 <div class="ttc" id="agroup__audio_html_ga8bacc7d13fa419c32ee44ff15fe361eb"><div class="ttname"><a href="group__audio.html#ga8bacc7d13fa419c32ee44ff15fe361eb">cen::each_sound_font</a></div><div class="ttdeci">auto each_sound_font(sound_font_visit_callback callable, T *data=nullptr) noexcept -&gt; result</div><div class="ttdoc">Visits each available SoundFont path.</div><div class="ttdef"><b>Definition:</b> sound_fonts.hpp:64</div></div>

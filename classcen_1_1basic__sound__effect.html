@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -390,8 +390,8 @@ template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a1a5f776a75c8ca9519f966352fc5a76f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a5f776a75c8ca9519f966352fc5a76f">&#9670;&nbsp;</a></span>channel()</h2>
+<a id="a0e34a8199dfa94d8c5354861d31166c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e34a8199dfa94d8c5354861d31166c8">&#9670;&nbsp;</a></span>play()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -402,10 +402,11 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__sound__effect.html">cen::basic_sound_effect</a>&lt; T &gt;::channel </td>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__sound__effect.html">cen::basic_sound_effect</a>&lt; T &gt;::play </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; std::optional&lt;int&gt;
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nLoops</em> = <code>0</code></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
   </td>
         </tr>
       </table>
@@ -416,15 +417,84 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the channel associated with the sound effect, if any. </p>
-<dl class="section note"><dt>Note</dt><dd>Channels are not associated with sound effects for long, and might change in between playbacks.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>the channel currently associated with the sound effect; <code>std::nullopt</code> if there is none.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
+<p>Plays the sound effect. </p>
+<dl class="section note"><dt>Note</dt><dd>A negative value indicates that the sound effect should be looped forever.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nLoops</td><td>the amount of loops, <code><a class="el" href="classcen_1_1basic__sound__effect.html#a93105663b399eec471a363d5fa60ee41" title="Indicates that an audio snippet should be looped indefinitely.">sound_effect::forever</a></code> can be used to loop the sound effect indefinitely.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the sound was played successfully; <code>failure</code> otherwise.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1basic__sound__effect.html#a93105663b399eec471a363d5fa60ee41" title="Indicates that an audio snippet should be looped indefinitely.">sound_effect::forever</a></code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="a6f3f119bf95f03e0c6ee40be9af7fdcf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f3f119bf95f03e0c6ee40be9af7fdcf">&#9670;&nbsp;</a></span>decoder_count()</h2>
+<a id="a912e2e9eea0437fda61946527a8bdbd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a912e2e9eea0437fda61946527a8bdbd4">&#9670;&nbsp;</a></span>stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1basic__sound__effect.html">cen::basic_sound_effect</a>&lt; T &gt;::stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stops the sound effect from playing. </p>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a0dd5b356b70124f34b01aff8471880d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dd5b356b70124f34b01aff8471880d0">&#9670;&nbsp;</a></span>is_playing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__sound__effect.html">cen::basic_sound_effect</a>&lt; T &gt;::is_playing </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the sound effect is currently playing. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the sound effect is playing; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ac176f6ffb1096fda18acab91d5d8b94d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac176f6ffb1096fda18acab91d5d8b94d">&#9670;&nbsp;</a></span>is_any_playing()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -437,10 +507,10 @@ template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static auto <a class="el" href="classcen_1_1basic__sound__effect.html">cen::basic_sound_effect</a>&lt; T &gt;::decoder_count </td>
+          <td class="memname">static auto <a class="el" href="classcen_1_1basic__sound__effect.html">cen::basic_sound_effect</a>&lt; T &gt;::is_any_playing </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> -&gt; int
+          <td> -&gt; bool
   </td>
         </tr>
       </table>
@@ -451,10 +521,9 @@ template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the number of available sound effect decoders. </p>
-<dl class="section return"><dt>Returns</dt><dd>the number of available sound effect decoders.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><code>Mix_GetNumChunkDecoders</code></dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+<p>Indicates whether or not any sound effects are currently playing. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if any sound effect is playing on some channel; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
 
 </div>
 </div>
@@ -536,8 +605,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="acd4940905357031b4f0a8e2798ddc3a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd4940905357031b4f0a8e2798ddc3a9">&#9670;&nbsp;</a></span>get()</h2>
+<a id="ac44d7b91396c6c45a3b1896d7b632ed6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac44d7b91396c6c45a3b1896d7b632ed6">&#9670;&nbsp;</a></span>is_fading()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -548,10 +617,10 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__sound__effect.html">cen::basic_sound_effect</a>&lt; T &gt;::get </td>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__sound__effect.html">cen::basic_sound_effect</a>&lt; T &gt;::is_fading </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; Mix_Chunk*
+          <td> const -&gt; bool
   </td>
         </tr>
       </table>
@@ -562,9 +631,174 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a pointer to the associated <code>Mix_Chunk</code> instance. </p>
-<dl class="section warning"><dt>Warning</dt><dd>Don't take ownership of the returned pointer!</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the associated <code>Mix_Chunk</code>.</dd></dl>
+<p>Indicates whether or not the sound effect is being faded. </p>
+<dl class="section note"><dt>Note</dt><dd>If the sound effect is being faded, it's also playing so <code><a class="el" href="classcen_1_1basic__sound__effect.html#a0dd5b356b70124f34b01aff8471880d0" title="Indicates whether or not the sound effect is currently playing.">is_playing()</a></code> will also return <code>true</code>. Keep this in mind if you want to differentiate between the two.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the sound effect is being faded; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ac0d5d2be74fd58d674af919276242b9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0d5d2be74fd58d674af919276242b9e">&#9670;&nbsp;</a></span>set_volume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1basic__sound__effect.html">cen::basic_sound_effect</a>&lt; T &gt;::set_volume </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>volume</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the volume of the sound effect. </p>
+<p>This function will adjust input values outside the legal range to the closest legal value.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">volume</td><td>the volume of the sound effect, in the range [0, <code><a class="el" href="classcen_1_1basic__sound__effect.html#af4f8f6bd0681250cd61fa39227cd3ee0" title="Returns the maximum possible volume value.">sound_effect::max_volume()</a></code>].</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ac1d8b943299a2de82f68d4355baa03e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1d8b943299a2de82f68d4355baa03e1">&#9670;&nbsp;</a></span>volume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__sound__effect.html">cen::basic_sound_effect</a>&lt; T &gt;::volume </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; int
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the current volume of the sound effect. </p>
+<p>By default, this property is set to 128.</p>
+<dl class="section return"><dt>Returns</dt><dd>the current volume of the sound effect.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="af4f8f6bd0681250cd61fa39227cd3ee0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4f8f6bd0681250cd61fa39227cd3ee0">&#9670;&nbsp;</a></span>max_volume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr static auto <a class="el" href="classcen_1_1basic__sound__effect.html">cen::basic_sound_effect</a>&lt; T &gt;::max_volume </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; int
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the maximum possible volume value. </p>
+<dl class="section return"><dt>Returns</dt><dd>the maximum possible volume value.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.1.0 </dd></dl>
+
+</div>
+</div>
+<a id="af6c3ed57751a7d655f6510b36577c123"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6c3ed57751a7d655f6510b36577c123">&#9670;&nbsp;</a></span>operator Mix_Chunk *()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcen_1_1basic__sound__effect.html">cen::basic_sound_effect</a>&lt; T &gt;::operator Mix_Chunk * </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts to <code>Mix_Chunk*</code>. </p>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the associated <code>Mix_Chunk</code> instance.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ad8ab1c699f3d492abae198a16d9df5b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8ab1c699f3d492abae198a16d9df5b3">&#9670;&nbsp;</a></span>operator const Mix_Chunk *()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcen_1_1basic__sound__effect.html">cen::basic_sound_effect</a>&lt; T &gt;::operator const Mix_Chunk * </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts to <code>const Mix_Chunk*</code>. </p>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the associated <code>Mix_Chunk</code> instance.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
@@ -653,8 +887,8 @@ template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </div>
 
 </div>
 </div>
-<a id="ac176f6ffb1096fda18acab91d5d8b94d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac176f6ffb1096fda18acab91d5d8b94d">&#9670;&nbsp;</a></span>is_any_playing()</h2>
+<a id="a6f3f119bf95f03e0c6ee40be9af7fdcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f3f119bf95f03e0c6ee40be9af7fdcf">&#9670;&nbsp;</a></span>decoder_count()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -667,10 +901,10 @@ template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static auto <a class="el" href="classcen_1_1basic__sound__effect.html">cen::basic_sound_effect</a>&lt; T &gt;::is_any_playing </td>
+          <td class="memname">static auto <a class="el" href="classcen_1_1basic__sound__effect.html">cen::basic_sound_effect</a>&lt; T &gt;::decoder_count </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> -&gt; bool
+          <td> -&gt; int
   </td>
         </tr>
       </table>
@@ -681,14 +915,48 @@ template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Indicates whether or not any sound effects are currently playing. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if any sound effect is playing on some channel; <code>false</code> otherwise.</dd></dl>
+<p>Returns the number of available sound effect decoders. </p>
+<dl class="section return"><dt>Returns</dt><dd>the number of available sound effect decoders.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code>Mix_GetNumChunkDecoders</code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a1a5f776a75c8ca9519f966352fc5a76f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a5f776a75c8ca9519f966352fc5a76f">&#9670;&nbsp;</a></span>channel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__sound__effect.html">cen::basic_sound_effect</a>&lt; T &gt;::channel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; std::optional&lt;int&gt;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the channel associated with the sound effect, if any. </p>
+<dl class="section note"><dt>Note</dt><dd>Channels are not associated with sound effects for long, and might change in between playbacks.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the channel currently associated with the sound effect; <code>std::nullopt</code> if there is none.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
 
 </div>
 </div>
-<a id="ac44d7b91396c6c45a3b1896d7b632ed6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac44d7b91396c6c45a3b1896d7b632ed6">&#9670;&nbsp;</a></span>is_fading()</h2>
+<a id="acd4940905357031b4f0a8e2798ddc3a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd4940905357031b4f0a8e2798ddc3a9">&#9670;&nbsp;</a></span>get()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -699,10 +967,10 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__sound__effect.html">cen::basic_sound_effect</a>&lt; T &gt;::is_fading </td>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__sound__effect.html">cen::basic_sound_effect</a>&lt; T &gt;::get </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
+          <td> const -&gt; Mix_Chunk*
   </td>
         </tr>
       </table>
@@ -713,278 +981,10 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Indicates whether or not the sound effect is being faded. </p>
-<dl class="section note"><dt>Note</dt><dd>If the sound effect is being faded, it's also playing so <code><a class="el" href="classcen_1_1basic__sound__effect.html#a0dd5b356b70124f34b01aff8471880d0" title="Indicates whether or not the sound effect is currently playing.">is_playing()</a></code> will also return <code>true</code>. Keep this in mind if you want to differentiate between the two.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the sound effect is being faded; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a0dd5b356b70124f34b01aff8471880d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0dd5b356b70124f34b01aff8471880d0">&#9670;&nbsp;</a></span>is_playing()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__sound__effect.html">cen::basic_sound_effect</a>&lt; T &gt;::is_playing </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the sound effect is currently playing. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the sound effect is playing; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="af4f8f6bd0681250cd61fa39227cd3ee0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4f8f6bd0681250cd61fa39227cd3ee0">&#9670;&nbsp;</a></span>max_volume()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr static auto <a class="el" href="classcen_1_1basic__sound__effect.html">cen::basic_sound_effect</a>&lt; T &gt;::max_volume </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; int
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the maximum possible volume value. </p>
-<dl class="section return"><dt>Returns</dt><dd>the maximum possible volume value.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.1.0 </dd></dl>
-
-</div>
-</div>
-<a id="ad8ab1c699f3d492abae198a16d9df5b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8ab1c699f3d492abae198a16d9df5b3">&#9670;&nbsp;</a></span>operator const Mix_Chunk *()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classcen_1_1basic__sound__effect.html">cen::basic_sound_effect</a>&lt; T &gt;::operator const Mix_Chunk * </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Converts to <code>const Mix_Chunk*</code>. </p>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the associated <code>Mix_Chunk</code> instance.</dd></dl>
+<p>Returns a pointer to the associated <code>Mix_Chunk</code> instance. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Don't take ownership of the returned pointer!</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the associated <code>Mix_Chunk</code>.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="af6c3ed57751a7d655f6510b36577c123"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6c3ed57751a7d655f6510b36577c123">&#9670;&nbsp;</a></span>operator Mix_Chunk *()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classcen_1_1basic__sound__effect.html">cen::basic_sound_effect</a>&lt; T &gt;::operator Mix_Chunk * </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Converts to <code>Mix_Chunk*</code>. </p>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the associated <code>Mix_Chunk</code> instance.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a0e34a8199dfa94d8c5354861d31166c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e34a8199dfa94d8c5354861d31166c8">&#9670;&nbsp;</a></span>play()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__sound__effect.html">cen::basic_sound_effect</a>&lt; T &gt;::play </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>nLoops</em> = <code>0</code></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Plays the sound effect. </p>
-<dl class="section note"><dt>Note</dt><dd>A negative value indicates that the sound effect should be looped forever.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">nLoops</td><td>the amount of loops, <code><a class="el" href="classcen_1_1basic__sound__effect.html#a93105663b399eec471a363d5fa60ee41" title="Indicates that an audio snippet should be looped indefinitely.">sound_effect::forever</a></code> can be used to loop the sound effect indefinitely.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the sound was played successfully; <code>failure</code> otherwise.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1basic__sound__effect.html#a93105663b399eec471a363d5fa60ee41" title="Indicates that an audio snippet should be looped indefinitely.">sound_effect::forever</a></code></dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ac0d5d2be74fd58d674af919276242b9e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0d5d2be74fd58d674af919276242b9e">&#9670;&nbsp;</a></span>set_volume()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1basic__sound__effect.html">cen::basic_sound_effect</a>&lt; T &gt;::set_volume </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>volume</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the volume of the sound effect. </p>
-<p>This function will adjust input values outside the legal range to the closest legal value.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">volume</td><td>the volume of the sound effect, in the range [0, <code><a class="el" href="classcen_1_1basic__sound__effect.html#af4f8f6bd0681250cd61fa39227cd3ee0" title="Returns the maximum possible volume value.">sound_effect::max_volume()</a></code>].</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a912e2e9eea0437fda61946527a8bdbd4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a912e2e9eea0437fda61946527a8bdbd4">&#9670;&nbsp;</a></span>stop()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1basic__sound__effect.html">cen::basic_sound_effect</a>&lt; T &gt;::stop </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Stops the sound effect from playing. </p>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ac1d8b943299a2de82f68d4355baa03e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1d8b943299a2de82f68d4355baa03e1">&#9670;&nbsp;</a></span>volume()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__sound__effect.html">cen::basic_sound_effect</a>&lt; T &gt;::volume </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; int
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the current volume of the sound effect. </p>
-<p>By default, this property is set to 128.</p>
-<dl class="section return"><dt>Returns</dt><dd>the current volume of the sound effect.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 
 </div>
 </div>

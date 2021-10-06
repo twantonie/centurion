@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -164,36 +164,6 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a67879f779ea892ab51a38a568e61df32"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67879f779ea892ab51a38a568e61df32">&#9670;&nbsp;</a></span>get()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::mutex::get </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; SDL_mutex*
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a pointer to the associated SDL mutex. </p>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the internal mutex.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
 <a id="a95670d7e536009a3455f71d1bc350ed5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a95670d7e536009a3455f71d1bc350ed5">&#9670;&nbsp;</a></span>lock()</h2>
 
@@ -280,6 +250,36 @@ Public Member Functions</h2></td></tr>
 
 <p>Attempts to unlock the mutex. </p>
 <dl class="section return"><dt>Returns</dt><dd><code>success</code> if the mutex was successfully unlocked; <code>failure</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a67879f779ea892ab51a38a568e61df32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67879f779ea892ab51a38a568e61df32">&#9670;&nbsp;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::mutex::get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; SDL_mutex*
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the associated SDL mutex. </p>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the internal mutex.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>

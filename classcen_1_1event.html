@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -271,8 +271,8 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a3ca67f228e34ce15c0c1e274fbf9e7f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ca67f228e34ce15c0c1e274fbf9e7f6">&#9670;&nbsp;</a></span>data()</h2>
+<a id="af39d50653ddb58f518017855d94e6e4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af39d50653ddb58f518017855d94e6e4c">&#9670;&nbsp;</a></span>update()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -281,23 +281,103 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::event::data </td>
+          <td class="memname">static void cen::event::update </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; const SDL_Event*
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Updates the event loop, gathering events from the input devices. </p>
+<dl class="section note"><dt>Note</dt><dd>You might not have to call this function by yourself.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code>SDL_PumpEvents</code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.1.0 </dd></dl>
+
+</div>
+</div>
+<a id="a3680b4e366673d4aa80206165c70f8f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3680b4e366673d4aa80206165c70f8f4">&#9670;&nbsp;</a></span>push() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void cen::event::push </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcen_1_1event.html">event</a> &amp;&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pushes an event onto the event queue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>the event that will be added to the event queue.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>3.1.0 </dd></dl>
+
+</div>
+</div>
+<a id="afcecae5b35febee0db7c7d9ddc09d231"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcecae5b35febee0db7c7d9ddc09d231">&#9670;&nbsp;</a></span>push() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto cen::event::push </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1common__event.html">common_event</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
   </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a pointer to the internal event representation. </p>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the internal event instance.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.1.0 </dd></dl>
+<p>Pushes an event onto the event queue. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>the SDL event type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>the event that will be pushed onto the event queue.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the event was successfully added; <code>failure</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
 
 </div>
 </div>
@@ -354,6 +434,213 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>Flushes all of the current events from the event queue, including pending events.</p>
 <dl class="section since"><dt>Since</dt><dd>3.1.0 </dd></dl>
+
+</div>
+</div>
+<a id="ae36b6fcbe804388a3cc3520fb1b0e239"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae36b6fcbe804388a3cc3520fb1b0e239">&#9670;&nbsp;</a></span>poll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::event::poll </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Polls the next available event, if there is one. </p>
+<p>This is meant to be called inside a while-loop.</p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if there are any pending events; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.1.0 </dd></dl>
+
+</div>
+</div>
+<a id="ad4439deae61ff506fbf5326a2b6bbbc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4439deae61ff506fbf5326a2b6bbbc9">&#9670;&nbsp;</a></span>type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::event::type </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; std::optional&lt;<a class="el" href="group__event.html#gaa96233ec6356fc786c810d6aaf5e939b">event_type</a>&gt;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the type of the event. </p>
+<dl class="section return"><dt>Returns</dt><dd>the type of the event; <code>std::nullopt</code> if there is no internal event.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.1.0 </dd></dl>
+
+</div>
+</div>
+<a id="a4d8447d82ef7419b9b7a44e5ed2fea45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d8447d82ef7419b9b7a44e5ed2fea45">&#9670;&nbsp;</a></span>queue_count() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto cen::event::queue_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; std::optional&lt;int&gt;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the current amount of events in the event queue. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current number of events in the event queue; <code>std::nullopt</code> if something goes wrong.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="ada720651687715b02050b7a56b5438e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada720651687715b02050b7a56b5438e0">&#9670;&nbsp;</a></span>queue_count() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto cen::event::queue_count </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__event.html#gaa96233ec6356fc786c810d6aaf5e939b">event_type</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td> -&gt; std::optional&lt;int&gt;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the number of events of a particular type that are in the event queue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>the type of event to count.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the current number of events of the specified type that are in the event queue; <code>std::nullopt</code> if something goes wrong.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="afd59159df05f82b0e4e2d90a003be062"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd59159df05f82b0e4e2d90a003be062">&#9670;&nbsp;</a></span>in_queue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto cen::event::in_queue </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__event.html#gaa96233ec6356fc786c810d6aaf5e939b">event_type</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td> -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not any events of the specified type is in the event queue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>the event type to look for in the event queue.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if there are events of the specified type in the event queue; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="a5c03445b9ef6770b15a8a1f8d3106ac5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c03445b9ef6770b15a8a1f8d3106ac5">&#9670;&nbsp;</a></span>is()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::event::is </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the event is of a particular type. </p>
+<p>This function is useful for checking the event type before calling <code>get&lt;T&gt;</code>, to avoid exceptions being thrown.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>the event type that will be checked, e.g. <code><a class="el" href="classcen_1_1window__event.html" title="Represents an event that is associated with an action related to a window.">window_event</a></code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the event is of the specified type; <code>false</code> otherwise.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1event.html#ae8e01038e32af7a7367e37c82ea66d7e" title="Attempts to return the internal event instance.">get</a></code> </dd>
+<dd>
+<code><a class="el" href="classcen_1_1event.html#abceee5f153d5b33d3827e20de83b098f" title="Attempts to return the internal event instance.">try_get</a></code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
 </div>
@@ -455,337 +742,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="afd59159df05f82b0e4e2d90a003be062"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd59159df05f82b0e4e2d90a003be062">&#9670;&nbsp;</a></span>in_queue()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto cen::event::in_queue </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__event.html#gaa96233ec6356fc786c810d6aaf5e939b">event_type</a>&#160;</td>
-          <td class="paramname"><em>type</em></td><td>)</td>
-          <td> -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not any events of the specified type is in the event queue. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">type</td><td>the event type to look for in the event queue.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if there are events of the specified type in the event queue; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
-<a id="a5c03445b9ef6770b15a8a1f8d3106ac5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c03445b9ef6770b15a8a1f8d3106ac5">&#9670;&nbsp;</a></span>is()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::event::is </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the event is of a particular type. </p>
-<p>This function is useful for checking the event type before calling <code>get&lt;T&gt;</code>, to avoid exceptions being thrown.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>the event type that will be checked, e.g. <code><a class="el" href="classcen_1_1window__event.html" title="Represents an event that is associated with an action related to a window.">window_event</a></code>.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the event is of the specified type; <code>false</code> otherwise.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1event.html#ae8e01038e32af7a7367e37c82ea66d7e" title="Attempts to return the internal event instance.">get</a></code> </dd>
-<dd>
-<code><a class="el" href="classcen_1_1event.html#abceee5f153d5b33d3827e20de83b098f" title="Attempts to return the internal event instance.">try_get</a></code></dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="afe6945897cee5857f1bf6588e60a3fe7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe6945897cee5857f1bf6588e60a3fe7">&#9670;&nbsp;</a></span>is_empty()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::event::is_empty </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not there is an internal event stored in the instance. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if there is no internal event; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
-
-</div>
-</div>
-<a id="ae36b6fcbe804388a3cc3520fb1b0e239"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae36b6fcbe804388a3cc3520fb1b0e239">&#9670;&nbsp;</a></span>poll()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::event::poll </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Polls the next available event, if there is one. </p>
-<p>This is meant to be called inside a while-loop.</p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if there are any pending events; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.1.0 </dd></dl>
-
-</div>
-</div>
-<a id="afcecae5b35febee0db7c7d9ddc09d231"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afcecae5b35febee0db7c7d9ddc09d231">&#9670;&nbsp;</a></span>push() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto cen::event::push </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1common__event.html">common_event</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>event</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Pushes an event onto the event queue. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>the SDL event type.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">event</td><td>the event that will be pushed onto the event queue.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the event was successfully added; <code>failure</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
-
-</div>
-</div>
-<a id="a3680b4e366673d4aa80206165c70f8f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3680b4e366673d4aa80206165c70f8f4">&#9670;&nbsp;</a></span>push() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void cen::event::push </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classcen_1_1event.html">event</a> &amp;&#160;</td>
-          <td class="paramname"><em>event</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Pushes an event onto the event queue. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">event</td><td>the event that will be added to the event queue.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>3.1.0 </dd></dl>
-
-</div>
-</div>
-<a id="a4d8447d82ef7419b9b7a44e5ed2fea45"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d8447d82ef7419b9b7a44e5ed2fea45">&#9670;&nbsp;</a></span>queue_count() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto cen::event::queue_count </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; std::optional&lt;int&gt;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the current amount of events in the event queue. </p>
-<dl class="section return"><dt>Returns</dt><dd>the current number of events in the event queue; <code>std::nullopt</code> if something goes wrong.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
-<a id="ada720651687715b02050b7a56b5438e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada720651687715b02050b7a56b5438e0">&#9670;&nbsp;</a></span>queue_count() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto cen::event::queue_count </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__event.html#gaa96233ec6356fc786c810d6aaf5e939b">event_type</a>&#160;</td>
-          <td class="paramname"><em>type</em></td><td>)</td>
-          <td> -&gt; std::optional&lt;int&gt;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the number of events of a particular type that are in the event queue. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">type</td><td>the type of event to count.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the current number of events of the specified type that are in the event queue; <code>std::nullopt</code> if something goes wrong.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
-<a id="a93f6a1a4d2d969bd7f364bf8cd08e3ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93f6a1a4d2d969bd7f364bf8cd08e3ec">&#9670;&nbsp;</a></span>try_get() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::event::try_get </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; const T*
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Attempts to return the internal event instance. </p>
-<p>This function returns a null pointer if the internal event doesn't match the specified type.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>the event type to obtain.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the internal event type, might be null.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1event.html#a5c03445b9ef6770b15a8a1f8d3106ac5" title="Indicates whether or not the event is of a particular type.">is</a></code> </dd>
-<dd>
-<code><a class="el" href="classcen_1_1event.html#ae8e01038e32af7a7367e37c82ea66d7e" title="Attempts to return the internal event instance.">get</a></code></dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
 <a id="abceee5f153d5b33d3827e20de83b098f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abceee5f153d5b33d3827e20de83b098f">&#9670;&nbsp;</a></span>try_get() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abceee5f153d5b33d3827e20de83b098f">&#9670;&nbsp;</a></span>try_get() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -826,20 +784,22 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="ad4439deae61ff506fbf5326a2b6bbbc9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4439deae61ff506fbf5326a2b6bbbc9">&#9670;&nbsp;</a></span>type()</h2>
+<a id="a93f6a1a4d2d969bd7f364bf8cd08e3ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93f6a1a4d2d969bd7f364bf8cd08e3ec">&#9670;&nbsp;</a></span>try_get() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::event::type </td>
+          <td class="memname">auto cen::event::try_get </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; std::optional&lt;<a class="el" href="group__event.html#gaa96233ec6356fc786c810d6aaf5e939b">event_type</a>&gt;
+          <td> const -&gt; const T*
   </td>
         </tr>
       </table>
@@ -850,14 +810,24 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the type of the event. </p>
-<dl class="section return"><dt>Returns</dt><dd>the type of the event; <code>std::nullopt</code> if there is no internal event.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.1.0 </dd></dl>
+<p>Attempts to return the internal event instance. </p>
+<p>This function returns a null pointer if the internal event doesn't match the specified type.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>the event type to obtain.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the internal event type, might be null.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1event.html#a5c03445b9ef6770b15a8a1f8d3106ac5" title="Indicates whether or not the event is of a particular type.">is</a></code> </dd>
+<dd>
+<code><a class="el" href="classcen_1_1event.html#ae8e01038e32af7a7367e37c82ea66d7e" title="Attempts to return the internal event instance.">get</a></code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="af39d50653ddb58f518017855d94e6e4c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af39d50653ddb58f518017855d94e6e4c">&#9670;&nbsp;</a></span>update()</h2>
+<a id="a3ca67f228e34ce15c0c1e274fbf9e7f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ca67f228e34ce15c0c1e274fbf9e7f6">&#9670;&nbsp;</a></span>data()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -866,23 +836,53 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void cen::event::update </td>
+          <td class="memname">auto cen::event::data </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const -&gt; const SDL_Event*
+  </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Updates the event loop, gathering events from the input devices. </p>
-<dl class="section note"><dt>Note</dt><dd>You might not have to call this function by yourself.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><code>SDL_PumpEvents</code></dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.1.0 </dd></dl>
+<p>Returns a pointer to the internal event representation. </p>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the internal event instance.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.1.0 </dd></dl>
+
+</div>
+</div>
+<a id="afe6945897cee5857f1bf6588e60a3fe7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe6945897cee5857f1bf6588e60a3fe7">&#9670;&nbsp;</a></span>is_empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::event::is_empty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not there is an internal event stored in the instance. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if there is no internal event; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
 
 </div>
 </div>

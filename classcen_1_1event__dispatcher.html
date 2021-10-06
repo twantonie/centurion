@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -166,8 +166,8 @@ template&lt;typename... E&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a7c1c31f9df3341e929dc0c1017c59302"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c1c31f9df3341e929dc0c1017c59302">&#9670;&nbsp;</a></span>active_count()</h2>
+<a id="ab651ab9256952ecec5a284e92fdcdbc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab651ab9256952ecec5a284e92fdcdbc2">&#9670;&nbsp;</a></span>poll()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -178,11 +178,10 @@ template&lt;typename... E&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1event__dispatcher.html">cen::event_dispatcher</a>&lt; E &gt;::active_count </td>
+          <td class="memname">void <a class="el" href="classcen_1_1event__dispatcher.html">cen::event_dispatcher</a>&lt; E &gt;::poll </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="classcen_1_1event__dispatcher.html#a9426475c5dedc6de2917c4be7fcb575a">size_type</a>
-  </td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -192,8 +191,8 @@ template&lt;typename... E&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the amount of set event handlers. </p>
-<dl class="section return"><dt>Returns</dt><dd>the amount of set event handlers.</dd></dl>
+<p>Polls all events, checking for subscribed events. </p>
+<p>This function corresponds to the usual inner event <code>while</code>-loop used to manage events. You should call this function once for every iteration in your game loop.</p>
 <dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
 
 </div>
@@ -238,37 +237,6 @@ template&lt;typename Event &gt; </div>
 
 </div>
 </div>
-<a id="ab651ab9256952ecec5a284e92fdcdbc2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab651ab9256952ecec5a284e92fdcdbc2">&#9670;&nbsp;</a></span>poll()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename... E&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1event__dispatcher.html">cen::event_dispatcher</a>&lt; E &gt;::poll </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Polls all events, checking for subscribed events. </p>
-<p>This function corresponds to the usual inner event <code>while</code>-loop used to manage events. You should call this function once for every iteration in your game loop.</p>
-<dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
-
-</div>
-</div>
 <a id="a30061121c7cd76f91ece0eab1f8c6b3f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a30061121c7cd76f91ece0eab1f8c6b3f">&#9670;&nbsp;</a></span>reset()</h2>
 
@@ -295,6 +263,38 @@ template&lt;typename... E&gt; </div>
 </div><div class="memdoc">
 
 <p>Removes all set handlers from all of the subscribed events. </p>
+<dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
+
+</div>
+</div>
+<a id="a7c1c31f9df3341e929dc0c1017c59302"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c1c31f9df3341e929dc0c1017c59302">&#9670;&nbsp;</a></span>active_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... E&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1event__dispatcher.html">cen::event_dispatcher</a>&lt; E &gt;::active_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="classcen_1_1event__dispatcher.html#a9426475c5dedc6de2917c4be7fcb575a">size_type</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the amount of set event handlers. </p>
+<dl class="section return"><dt>Returns</dt><dd>the amount of set event handlers.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
 
 </div>

@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -191,185 +191,184 @@ $(document).ready(function(){initNavTree('pixel__format_8hpp_source.html',''); i
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
 <div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="group__audio.html#ga634d031621b194f60bcb0e4da56b152e">  124</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(<span class="keyword">const</span> <a class="code" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a> format) -&gt; std::string_view</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;{</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keywordflow">switch</span> (format)</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  {</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6aad921d60486366258809553a3db49a4a">pixel_format::unknown</a>:</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;unknown&quot;</span>;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a38d15ffe1915670659d11bda8a0b8610">pixel_format::index1lsb</a>:</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;index1lsb&quot;</span>;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a04b9b9f98386662d8447cca662cbe3ab">pixel_format::index1msb</a>:</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;index1msb&quot;</span>;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6af23c604aaf277bcfcf52157cb578de85">pixel_format::index4lsb</a>:</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;index4lsb&quot;</span>;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a8ca291d9e9a7ef8920d3110e169b0c91">pixel_format::index4msb</a>:</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;index4msb&quot;</span>;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a247d75c2a036099d5d19692e7ffb0848">pixel_format::index8</a>:</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;index8&quot;</span>;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6aa03384869087ca82c3142a39d9d951cd">pixel_format::rgb332</a>:</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;rgb332&quot;</span>;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6ad9e8f42afb65cdfca674636f196ff74e">pixel_format::argb4444</a>:</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;argb4444&quot;</span>;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6adae6ecd398af876862380a5f528bae1b">pixel_format::rgba4444</a>:</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;rgba4444&quot;</span>;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a516298ac1f479a1722a594ccc67cfd57">pixel_format::abgr4444</a>:</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;abgr4444&quot;</span>;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a40b3a6c67e8a91ab6196f5fe7da913fc">pixel_format::bgra4444</a>:</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;bgra4444&quot;</span>;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a2d7c3077a68f10ac7aec794ecec1e9dc">pixel_format::argb1555</a>:</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;argb1555&quot;</span>;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6ac1a76885dc42e8f61e30e87df281abda">pixel_format::rgba5551</a>:</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;rgba5551&quot;</span>;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a9536e5526d0df13c53187629d77e535e">pixel_format::abgr1555</a>:</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;abgr1555&quot;</span>;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a23b489264f470bbb58648c63fb4dbf80">pixel_format::bgra5551</a>:</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;bgra5551&quot;</span>;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a73e8b6aa5476482b861d7bb388b1b671">pixel_format::rgb565</a>:</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;rgb565&quot;</span>;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a638c3964c5debf76fbd2c01a21a4bd41">pixel_format::bgr565</a>:</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;bgr565&quot;</span>;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6adb89a9da565723ef77473ec650a05b0a">pixel_format::rgb24</a>:</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;rgb24&quot;</span>;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a2367746c39220becb1fc6e82a647d606">pixel_format::bgr24</a>:</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;bgr24&quot;</span>;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6aa83447b573a3b39d79ce487b5aa0735b">pixel_format::rgbx8888</a>:</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;rgbx8888&quot;</span>;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6ad290f9d3fc1643c71e13917d45baaea8">pixel_format::bgrx8888</a>:</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;bgrx8888&quot;</span>;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a91a869c00dd90d332a9d7d40fcfe77ab">pixel_format::argb8888</a>:</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;argb8888&quot;</span>;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a0c8d98da242f2a8be4bf20520936e407">pixel_format::rgba8888</a>:</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;rgba8888&quot;</span>;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6ad6cbc98968b7b00170b11d2e7ccbf953">pixel_format::abgr8888</a>:</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;abgr8888&quot;</span>;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a9fcf11cedcb88b7ff10a38a461ea927b">pixel_format::bgra8888</a>:</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;bgra8888&quot;</span>;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6ab9770b9bb3613be076ff52c399026764">pixel_format::argb2101010</a>:</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;argb2101010&quot;</span>;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a47d4166342343301d8b3be76247574e9">pixel_format::yv12</a>:</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;yv12&quot;</span>;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a5cc1dab5c47611f61763c674354398bb">pixel_format::iyuv</a>:</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;iyuv&quot;</span>;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a8c6219bba76e24b3b1cf8d7032e138bd">pixel_format::yuy2</a>:</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;yuy2&quot;</span>;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6afec2f1a1a549720b1b4572ac74e4dd33">pixel_format::uyvy</a>:</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;uyvy&quot;</span>;</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a08329f4cc3ea2272803f49edfe442c4f">pixel_format::yvyu</a>:</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;yvyu&quot;</span>;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160; </div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a70d831c8685ddf61857a6d0e41eb5889">pixel_format::nv12</a>:</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;nv12&quot;</span>;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6ae036dc0b987fb14c9952bb1a12f0173a">pixel_format::nv21</a>:</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;nv21&quot;</span>;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6adb01cd6d2fc7e923c507db5d53bf4c1b">pixel_format::external_oes</a>:</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;external_oes&quot;</span>;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="preprocessor">#if SDL_VERSION_ATLEAST(2, 0, 14)</span></div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6ac1eda86fdb75243ad0cecb46660aef1b">pixel_format::xrgb4444</a>:</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;xrgb4444&quot;</span>;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a9f0d3b39848d7c2bbe377d0e570d5c27">pixel_format::xbgr4444</a>:</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;xbgr4444&quot;</span>;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a357c7b4bbf83b8141795cd147e7e9645">pixel_format::xrgb1555</a>:</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;xrgb1555&quot;</span>;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6ad5d9f6fa63af9c2314e48fe3710848bf">pixel_format::xbgr1555</a>:</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;xbgr1555&quot;</span>;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a5be685b55415e43ff4b8c045f86a65ed">pixel_format::xrgb8888</a>:</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;xrgb8888&quot;</span>;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6ade62da9128482058b4755e8c3b60c452">pixel_format::xbgr8888</a>:</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;xbgr8888&quot;</span>;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="preprocessor">#elif SDL_VERSION_ATLEAST(2, 0, 12)</span></div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a8c0217d454551016ecf255bbf04de76a">pixel_format::bgr444</a>:  <span class="comment">// Equal to xbgr4444</span></div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;bgr444&quot;</span>;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// SDL_VERSION_ATLEAST(2, 0, 12)</span></div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1cen__error.html">cen_error</a>{<span class="stringliteral">&quot;Did not recognize pixel format mode!&quot;</span>};</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  }</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;}</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
-<div class="line"><a name="l00279"></a><span class="lineno"><a class="line" href="group__audio.html#ga53471ca42280ea4bb5ffc17a97391497">  279</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">operator&lt;&lt;</a>(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a> format) -&gt; std::ostream&amp;</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;{</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <span class="keywordflow">return</span> stream &lt;&lt; <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(format);</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;}</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160; </div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160; </div>
-<div class="line"><a name="l00299"></a><span class="lineno"><a class="line" href="group__video.html#gab9bba93bcba7a8f96addf9a4e64137be">  299</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> <a class="code" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a> lhs,</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                                        <span class="keyword">const</span> SDL_PixelFormatEnum rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;{</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>SDL_PixelFormatEnum<span class="keyword">&gt;</span>(lhs) == rhs;</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;}</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160; </div>
-<div class="line"><a name="l00306"></a><span class="lineno"><a class="line" href="group__video.html#gae3e7c9b6c95e11d8228767981e473530">  306</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> SDL_PixelFormatEnum lhs,</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a> rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;{</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  <span class="keywordflow">return</span> rhs == lhs;</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;}</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160; </div>
-<div class="line"><a name="l00322"></a><span class="lineno"><a class="line" href="group__video.html#ga23eaa3383711079816cd6ee070c8f7f6">  322</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> <a class="code" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a> lhs,</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                                        <span class="keyword">const</span> SDL_PixelFormatEnum rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;{</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;}</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160; </div>
-<div class="line"><a name="l00329"></a><span class="lineno"><a class="line" href="group__video.html#gaf1e1f5ee9adc37708d17c69d41525985">  329</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> SDL_PixelFormatEnum lhs,</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a> rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;{</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;}</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160; </div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160; </div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160; </div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;}  <span class="comment">// namespace cen</span></div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160; </div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_PIXEL_FORMAT_HEADER</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keywordflow">switch</span> (format) {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6aad921d60486366258809553a3db49a4a">pixel_format::unknown</a>:</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;unknown&quot;</span>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a38d15ffe1915670659d11bda8a0b8610">pixel_format::index1lsb</a>:</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;index1lsb&quot;</span>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a04b9b9f98386662d8447cca662cbe3ab">pixel_format::index1msb</a>:</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;index1msb&quot;</span>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6af23c604aaf277bcfcf52157cb578de85">pixel_format::index4lsb</a>:</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;index4lsb&quot;</span>;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a8ca291d9e9a7ef8920d3110e169b0c91">pixel_format::index4msb</a>:</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;index4msb&quot;</span>;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a247d75c2a036099d5d19692e7ffb0848">pixel_format::index8</a>:</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;index8&quot;</span>;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6aa03384869087ca82c3142a39d9d951cd">pixel_format::rgb332</a>:</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;rgb332&quot;</span>;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6ad9e8f42afb65cdfca674636f196ff74e">pixel_format::argb4444</a>:</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;argb4444&quot;</span>;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6adae6ecd398af876862380a5f528bae1b">pixel_format::rgba4444</a>:</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;rgba4444&quot;</span>;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a516298ac1f479a1722a594ccc67cfd57">pixel_format::abgr4444</a>:</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;abgr4444&quot;</span>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a40b3a6c67e8a91ab6196f5fe7da913fc">pixel_format::bgra4444</a>:</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;bgra4444&quot;</span>;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a2d7c3077a68f10ac7aec794ecec1e9dc">pixel_format::argb1555</a>:</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;argb1555&quot;</span>;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6ac1a76885dc42e8f61e30e87df281abda">pixel_format::rgba5551</a>:</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;rgba5551&quot;</span>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a9536e5526d0df13c53187629d77e535e">pixel_format::abgr1555</a>:</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;abgr1555&quot;</span>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a23b489264f470bbb58648c63fb4dbf80">pixel_format::bgra5551</a>:</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;bgra5551&quot;</span>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a73e8b6aa5476482b861d7bb388b1b671">pixel_format::rgb565</a>:</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;rgb565&quot;</span>;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a638c3964c5debf76fbd2c01a21a4bd41">pixel_format::bgr565</a>:</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;bgr565&quot;</span>;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6adb89a9da565723ef77473ec650a05b0a">pixel_format::rgb24</a>:</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;rgb24&quot;</span>;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a2367746c39220becb1fc6e82a647d606">pixel_format::bgr24</a>:</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;bgr24&quot;</span>;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6aa83447b573a3b39d79ce487b5aa0735b">pixel_format::rgbx8888</a>:</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;rgbx8888&quot;</span>;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6ad290f9d3fc1643c71e13917d45baaea8">pixel_format::bgrx8888</a>:</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;bgrx8888&quot;</span>;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a91a869c00dd90d332a9d7d40fcfe77ab">pixel_format::argb8888</a>:</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;argb8888&quot;</span>;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a0c8d98da242f2a8be4bf20520936e407">pixel_format::rgba8888</a>:</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;rgba8888&quot;</span>;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6ad6cbc98968b7b00170b11d2e7ccbf953">pixel_format::abgr8888</a>:</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;abgr8888&quot;</span>;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a9fcf11cedcb88b7ff10a38a461ea927b">pixel_format::bgra8888</a>:</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;bgra8888&quot;</span>;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6ab9770b9bb3613be076ff52c399026764">pixel_format::argb2101010</a>:</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;argb2101010&quot;</span>;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a47d4166342343301d8b3be76247574e9">pixel_format::yv12</a>:</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;yv12&quot;</span>;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a5cc1dab5c47611f61763c674354398bb">pixel_format::iyuv</a>:</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;iyuv&quot;</span>;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a8c6219bba76e24b3b1cf8d7032e138bd">pixel_format::yuy2</a>:</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;yuy2&quot;</span>;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6afec2f1a1a549720b1b4572ac74e4dd33">pixel_format::uyvy</a>:</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;uyvy&quot;</span>;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a08329f4cc3ea2272803f49edfe442c4f">pixel_format::yvyu</a>:</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;yvyu&quot;</span>;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a70d831c8685ddf61857a6d0e41eb5889">pixel_format::nv12</a>:</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;nv12&quot;</span>;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6ae036dc0b987fb14c9952bb1a12f0173a">pixel_format::nv21</a>:</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;nv21&quot;</span>;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6adb01cd6d2fc7e923c507db5d53bf4c1b">pixel_format::external_oes</a>:</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;external_oes&quot;</span>;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="preprocessor">#if SDL_VERSION_ATLEAST(2, 0, 14)</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6ac1eda86fdb75243ad0cecb46660aef1b">pixel_format::xrgb4444</a>:</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;xrgb4444&quot;</span>;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a9f0d3b39848d7c2bbe377d0e570d5c27">pixel_format::xbgr4444</a>:</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;xbgr4444&quot;</span>;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a357c7b4bbf83b8141795cd147e7e9645">pixel_format::xrgb1555</a>:</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;xrgb1555&quot;</span>;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6ad5d9f6fa63af9c2314e48fe3710848bf">pixel_format::xbgr1555</a>:</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;xbgr1555&quot;</span>;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a5be685b55415e43ff4b8c045f86a65ed">pixel_format::xrgb8888</a>:</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;xrgb8888&quot;</span>;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6ade62da9128482058b4755e8c3b60c452">pixel_format::xbgr8888</a>:</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;xbgr8888&quot;</span>;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="preprocessor">#elif SDL_VERSION_ATLEAST(2, 0, 12)</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a8c0217d454551016ecf255bbf04de76a">pixel_format::bgr444</a>:  <span class="comment">// Equal to xbgr4444</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;bgr444&quot;</span>;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// SDL_VERSION_ATLEAST(2, 0, 12)</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1cen__error.html">cen_error</a>{<span class="stringliteral">&quot;Did not recognize pixel format mode!&quot;</span>};</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  }</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;}</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160; </div>
+<div class="line"><a name="l00278"></a><span class="lineno"><a class="line" href="group__audio.html#ga53471ca42280ea4bb5ffc17a97391497">  278</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">operator&lt;&lt;</a>(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a> format) -&gt; std::ostream&amp;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;{</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  <span class="keywordflow">return</span> stream &lt;&lt; <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(format);</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;}</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160; </div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
+<div class="line"><a name="l00298"></a><span class="lineno"><a class="line" href="group__video.html#gab9bba93bcba7a8f96addf9a4e64137be">  298</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> <a class="code" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a> lhs,</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                                        <span class="keyword">const</span> SDL_PixelFormatEnum rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;{</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>SDL_PixelFormatEnum<span class="keyword">&gt;</span>(lhs) == rhs;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;}</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160; </div>
+<div class="line"><a name="l00305"></a><span class="lineno"><a class="line" href="group__video.html#gae3e7c9b6c95e11d8228767981e473530">  305</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> SDL_PixelFormatEnum lhs,</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a> rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;{</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  <span class="keywordflow">return</span> rhs == lhs;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;}</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
+<div class="line"><a name="l00321"></a><span class="lineno"><a class="line" href="group__video.html#ga23eaa3383711079816cd6ee070c8f7f6">  321</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> <a class="code" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a> lhs,</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                                        <span class="keyword">const</span> SDL_PixelFormatEnum rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;{</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;}</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160; </div>
+<div class="line"><a name="l00328"></a><span class="lineno"><a class="line" href="group__video.html#gaf1e1f5ee9adc37708d17c69d41525985">  328</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> SDL_PixelFormatEnum lhs,</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a> rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;{</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;}</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160; </div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160; </div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160; </div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;}  <span class="comment">// namespace cen</span></div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160; </div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_PIXEL_FORMAT_HEADER</span></div>
 <div class="ttc" id="aclasscen_1_1cen__error_html"><div class="ttname"><a href="classcen_1_1cen__error.html">cen::cen_error</a></div><div class="ttdoc">The base of all exceptions explicitly thrown by the library.</div><div class="ttdef"><b>Definition:</b> exception.hpp:35</div></div>
-<div class="ttc" id="agroup__audio_html_ga322c699fa08098bd801164819d2f4cc8"><div class="ttname"><a href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">cen::operator!=</a></div><div class="ttdeci">constexpr auto operator!=(const fade_status lhs, const Mix_Fading rhs) noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the fading status values represent aren't the same.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:129</div></div>
-<div class="ttc" id="agroup__audio_html_ga83f366781618f05bf8bcb60c753e9ced"><div class="ttname"><a href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">cen::operator&lt;&lt;</a></div><div class="ttdeci">auto operator&lt;&lt;(std::ostream &amp;stream, const fade_status status) -&gt; std::ostream &amp;</div><div class="ttdoc">Prints a textual representation of a fade status enumerator.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:86</div></div>
-<div class="ttc" id="agroup__audio_html_ga9ebd3f26fcc0f89398ff473b06e9dcbe"><div class="ttname"><a href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">cen::to_string</a></div><div class="ttdeci">constexpr auto to_string(const fade_status status) -&gt; std::string_view</div><div class="ttdoc">Returns a textual version of the supplied fade status.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:51</div></div>
-<div class="ttc" id="agroup__audio_html_gaf72595df3886dbb34dbcf030d14333d2"><div class="ttname"><a href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">cen::operator==</a></div><div class="ttdeci">constexpr auto operator==(const fade_status lhs, const Mix_Fading rhs) noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the fading status values represent are the same.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:106</div></div>
+<div class="ttc" id="agroup__audio_html_ga322c699fa08098bd801164819d2f4cc8"><div class="ttname"><a href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">cen::operator!=</a></div><div class="ttdeci">constexpr auto operator!=(const fade_status lhs, const Mix_Fading rhs) noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the fading status values represent aren't the same.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:141</div></div>
+<div class="ttc" id="agroup__audio_html_ga83f366781618f05bf8bcb60c753e9ced"><div class="ttname"><a href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">cen::operator&lt;&lt;</a></div><div class="ttdeci">auto operator&lt;&lt;(std::ostream &amp;stream, const fade_status status) -&gt; std::ostream &amp;</div><div class="ttdoc">Prints a textual representation of a fade status enumerator.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:98</div></div>
+<div class="ttc" id="agroup__audio_html_ga9ebd3f26fcc0f89398ff473b06e9dcbe"><div class="ttname"><a href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">cen::to_string</a></div><div class="ttdeci">constexpr auto to_string(const fade_status status) -&gt; std::string_view</div><div class="ttdoc">Returns a textual version of the supplied fade status.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:64</div></div>
+<div class="ttc" id="agroup__audio_html_gaf72595df3886dbb34dbcf030d14333d2"><div class="ttname"><a href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">cen::operator==</a></div><div class="ttdeci">constexpr auto operator==(const fade_status lhs, const Mix_Fading rhs) noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the fading status values represent are the same.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:118</div></div>
 <div class="ttc" id="agroup__core_html_ga4abd620246f76cc48168dc52a04a62da"><div class="ttname"><a href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">cen::u32</a></div><div class="ttdeci">Uint32 u32</div><div class="ttdoc">Alias for a 32-bit unsigned integer.</div><div class="ttdef"><b>Definition:</b> integers.hpp:28</div></div>
 <div class="ttc" id="agroup__video_html_ga453f61f77c1356db822463d49e1c6aa6"><div class="ttname"><a href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">cen::pixel_format</a></div><div class="ttdeci">pixel_format</div><div class="ttdoc">Represents different pixel formats.</div><div class="ttdef"><b>Definition:</b> pixel_format.hpp:27</div></div>
 <div class="ttc" id="agroup__video_html_gga453f61f77c1356db822463d49e1c6aa6a04b9b9f98386662d8447cca662cbe3ab"><div class="ttname"><a href="group__video.html#gga453f61f77c1356db822463d49e1c6aa6a04b9b9f98386662d8447cca662cbe3ab">cen::pixel_format::index1msb</a></div><div class="ttdeci">@ index1msb</div></div>

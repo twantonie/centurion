@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -128,64 +128,63 @@ $(document).ready(function(){initNavTree('file__mode_8hpp_source.html',''); init
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="group__audio.html#ga4d4827385986d640f8d5698fc7a6da0d">   62</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(<span class="keyword">const</span> <a class="code" href="group__filesystem.html#gad4d6d000bfcb17dc8b889d735a346564">file_mode</a> mode) -&gt; std::string_view</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordflow">switch</span> (<a class="code" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4a15d61712450a686a7f365adf4fef581f">mode</a>)</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__filesystem.html#ggad4d6d000bfcb17dc8b889d735a346564afd9e83d5ed037a7425483cc0d07d873d">file_mode::read_existing</a>:</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;read_existing&quot;</span>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__filesystem.html#ggad4d6d000bfcb17dc8b889d735a346564a98660d667bdacb727b106a62fd293157">file_mode::read_existing_binary</a>:</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;read_existing_binary&quot;</span>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__filesystem.html#ggad4d6d000bfcb17dc8b889d735a346564aefb2a684e4afb7d55e6147fbe5a332ee">file_mode::write</a>:</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;write&quot;</span>;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__filesystem.html#ggad4d6d000bfcb17dc8b889d735a346564ad7f908279362502e2e9334e7d893e6b6">file_mode::write_binary</a>:</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;write_binary&quot;</span>;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__filesystem.html#ggad4d6d000bfcb17dc8b889d735a346564ab9f1bf14a12a8b2d1a685e48dfd54aae">file_mode::append_or_create</a>:</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;append_or_create&quot;</span>;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__filesystem.html#ggad4d6d000bfcb17dc8b889d735a346564abf1bc47a384475eb8e5e5008534ee2e1">file_mode::append_or_create_binary</a>:</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;append_or_create_binary&quot;</span>;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__filesystem.html#ggad4d6d000bfcb17dc8b889d735a346564aa9021151637e32441651382707a3ac20">file_mode::read_write_existing</a>:</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;read_write_existing&quot;</span>;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__filesystem.html#ggad4d6d000bfcb17dc8b889d735a346564a0756a8da5274d94a13fea604818b2ba3">file_mode::read_write_existing_binary</a>:</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;read_write_existing_binary&quot;</span>;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__filesystem.html#ggad4d6d000bfcb17dc8b889d735a346564a1ee63b6e431260679bea5f1a478948c2">file_mode::read_write_replace</a>:</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;read_write_replace&quot;</span>;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__filesystem.html#ggad4d6d000bfcb17dc8b889d735a346564a10d85f44087294f34d83ec07a8c5d6eb">file_mode::read_write_replace_binary</a>:</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;read_write_replace_binary&quot;</span>;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__filesystem.html#ggad4d6d000bfcb17dc8b889d735a346564adf2ff05197b3c274aa7ae3ffbd8ee975">file_mode::read_append</a>:</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;read_append&quot;</span>;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__filesystem.html#ggad4d6d000bfcb17dc8b889d735a346564a5de70b83c7ed5afe85486e533efa4f0b">file_mode::read_append_binary</a>:</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;read_append_binary&quot;</span>;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1cen__error.html">cen_error</a>{<span class="stringliteral">&quot;Did not recognize file mode!&quot;</span>};</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  }</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="group__audio.html#gafcb8df6f5f14f0bf20524f68f4ffaa4c">  124</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">operator&lt;&lt;</a>(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code" href="group__filesystem.html#gad4d6d000bfcb17dc8b889d735a346564">file_mode</a> mode) -&gt; std::ostream&amp;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;{</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keywordflow">return</span> stream &lt;&lt; <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(<a class="code" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4a15d61712450a686a7f365adf4fef581f">mode</a>);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;}  <span class="comment">// namespace cen</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_FILE_MODE_HEADER</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordflow">switch</span> (<a class="code" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4a15d61712450a686a7f365adf4fef581f">mode</a>) {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__filesystem.html#ggad4d6d000bfcb17dc8b889d735a346564afd9e83d5ed037a7425483cc0d07d873d">file_mode::read_existing</a>:</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;read_existing&quot;</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__filesystem.html#ggad4d6d000bfcb17dc8b889d735a346564a98660d667bdacb727b106a62fd293157">file_mode::read_existing_binary</a>:</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;read_existing_binary&quot;</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__filesystem.html#ggad4d6d000bfcb17dc8b889d735a346564aefb2a684e4afb7d55e6147fbe5a332ee">file_mode::write</a>:</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;write&quot;</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__filesystem.html#ggad4d6d000bfcb17dc8b889d735a346564ad7f908279362502e2e9334e7d893e6b6">file_mode::write_binary</a>:</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;write_binary&quot;</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__filesystem.html#ggad4d6d000bfcb17dc8b889d735a346564ab9f1bf14a12a8b2d1a685e48dfd54aae">file_mode::append_or_create</a>:</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;append_or_create&quot;</span>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__filesystem.html#ggad4d6d000bfcb17dc8b889d735a346564abf1bc47a384475eb8e5e5008534ee2e1">file_mode::append_or_create_binary</a>:</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;append_or_create_binary&quot;</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__filesystem.html#ggad4d6d000bfcb17dc8b889d735a346564aa9021151637e32441651382707a3ac20">file_mode::read_write_existing</a>:</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;read_write_existing&quot;</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__filesystem.html#ggad4d6d000bfcb17dc8b889d735a346564a0756a8da5274d94a13fea604818b2ba3">file_mode::read_write_existing_binary</a>:</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;read_write_existing_binary&quot;</span>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__filesystem.html#ggad4d6d000bfcb17dc8b889d735a346564a1ee63b6e431260679bea5f1a478948c2">file_mode::read_write_replace</a>:</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;read_write_replace&quot;</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__filesystem.html#ggad4d6d000bfcb17dc8b889d735a346564a10d85f44087294f34d83ec07a8c5d6eb">file_mode::read_write_replace_binary</a>:</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;read_write_replace_binary&quot;</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__filesystem.html#ggad4d6d000bfcb17dc8b889d735a346564adf2ff05197b3c274aa7ae3ffbd8ee975">file_mode::read_append</a>:</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;read_append&quot;</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__filesystem.html#ggad4d6d000bfcb17dc8b889d735a346564a5de70b83c7ed5afe85486e533efa4f0b">file_mode::read_append_binary</a>:</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;read_append_binary&quot;</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1cen__error.html">cen_error</a>{<span class="stringliteral">&quot;Did not recognize file mode!&quot;</span>};</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="group__audio.html#gafcb8df6f5f14f0bf20524f68f4ffaa4c">  123</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">operator&lt;&lt;</a>(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code" href="group__filesystem.html#gad4d6d000bfcb17dc8b889d735a346564">file_mode</a> mode) -&gt; std::ostream&amp;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;{</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="keywordflow">return</span> stream &lt;&lt; <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(<a class="code" href="group__input.html#gga2101a411ac6025302800a78f9c54fce4a15d61712450a686a7f365adf4fef581f">mode</a>);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}  <span class="comment">// namespace cen</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_FILE_MODE_HEADER</span></div>
 <div class="ttc" id="aclasscen_1_1cen__error_html"><div class="ttname"><a href="classcen_1_1cen__error.html">cen::cen_error</a></div><div class="ttdoc">The base of all exceptions explicitly thrown by the library.</div><div class="ttdef"><b>Definition:</b> exception.hpp:35</div></div>
-<div class="ttc" id="agroup__audio_html_ga83f366781618f05bf8bcb60c753e9ced"><div class="ttname"><a href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">cen::operator&lt;&lt;</a></div><div class="ttdeci">auto operator&lt;&lt;(std::ostream &amp;stream, const fade_status status) -&gt; std::ostream &amp;</div><div class="ttdoc">Prints a textual representation of a fade status enumerator.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:86</div></div>
-<div class="ttc" id="agroup__audio_html_ga9ebd3f26fcc0f89398ff473b06e9dcbe"><div class="ttname"><a href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">cen::to_string</a></div><div class="ttdeci">constexpr auto to_string(const fade_status status) -&gt; std::string_view</div><div class="ttdoc">Returns a textual version of the supplied fade status.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:51</div></div>
+<div class="ttc" id="agroup__audio_html_ga83f366781618f05bf8bcb60c753e9ced"><div class="ttname"><a href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">cen::operator&lt;&lt;</a></div><div class="ttdeci">auto operator&lt;&lt;(std::ostream &amp;stream, const fade_status status) -&gt; std::ostream &amp;</div><div class="ttdoc">Prints a textual representation of a fade status enumerator.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:98</div></div>
+<div class="ttc" id="agroup__audio_html_ga9ebd3f26fcc0f89398ff473b06e9dcbe"><div class="ttname"><a href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">cen::to_string</a></div><div class="ttdeci">constexpr auto to_string(const fade_status status) -&gt; std::string_view</div><div class="ttdoc">Returns a textual version of the supplied fade status.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:64</div></div>
 <div class="ttc" id="agroup__filesystem_html_gad4d6d000bfcb17dc8b889d735a346564"><div class="ttname"><a href="group__filesystem.html#gad4d6d000bfcb17dc8b889d735a346564">cen::file_mode</a></div><div class="ttdeci">file_mode</div><div class="ttdoc">Provides values that represent different file modes.</div><div class="ttdef"><b>Definition:</b> file_mode.hpp:25</div></div>
 <div class="ttc" id="agroup__filesystem_html_ggad4d6d000bfcb17dc8b889d735a346564a0756a8da5274d94a13fea604818b2ba3"><div class="ttname"><a href="group__filesystem.html#ggad4d6d000bfcb17dc8b889d735a346564a0756a8da5274d94a13fea604818b2ba3">cen::file_mode::read_write_existing_binary</a></div><div class="ttdeci">@ read_write_existing_binary</div><div class="ttdoc">&quot;rb+&quot;</div></div>
 <div class="ttc" id="agroup__filesystem_html_ggad4d6d000bfcb17dc8b889d735a346564a10d85f44087294f34d83ec07a8c5d6eb"><div class="ttname"><a href="group__filesystem.html#ggad4d6d000bfcb17dc8b889d735a346564a10d85f44087294f34d83ec07a8c5d6eb">cen::file_mode::read_write_replace_binary</a></div><div class="ttdeci">@ read_write_replace_binary</div><div class="ttdoc">&quot;wb+&quot;</div></div>

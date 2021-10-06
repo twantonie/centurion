@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -153,20 +153,6 @@ Public Member Functions</h2></td></tr>
 <dl class="section see"><dt>See also</dt><dd><code>SDL_Palette</code></dd></dl>
 <dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a7b1fcc9ac96e3c2c223a28d884fe93ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b1fcc9ac96e3c2c223a28d884fe93ca">&#9670;&nbsp;</a></span>const_iterator</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="classcen_1_1palette.html#a7b1fcc9ac96e3c2c223a28d884fe93ca">cen::palette::const_iterator</a> =  const SDL_Color*</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a274f15dd20f32a4e1eb2cdeccd704fec"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a274f15dd20f32a4e1eb2cdeccd704fec">&#9670;&nbsp;</a></span>iterator</h2>
 
@@ -175,6 +161,20 @@ Public Member Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="classcen_1_1palette.html#a274f15dd20f32a4e1eb2cdeccd704fec">cen::palette::iterator</a> =  SDL_Color*</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7b1fcc9ac96e3c2c223a28d884fe93ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b1fcc9ac96e3c2c223a28d884fe93ca">&#9670;&nbsp;</a></span>const_iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classcen_1_1palette.html#a7b1fcc9ac96e3c2c223a28d884fe93ca">cen::palette::const_iterator</a> =  const SDL_Color*</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -224,227 +224,6 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a828e8740dda56b0f65096335d2829d03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a828e8740dda56b0f65096335d2829d03">&#9670;&nbsp;</a></span>at()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::palette::at </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>index</em></td><td>)</td>
-          <td> const -&gt; <a class="el" href="classcen_1_1color.html">cen::color</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the color in the palette at the specified index. </p>
-<dl class="section note"><dt>Note</dt><dd>This function returns a copy of the color, not a reference!</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">index</td><td>the index of color in the palette.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classcen_1_1cen__error.html" title="The base of all exceptions explicitly thrown by the library.">cen_error</a></td><td>if the supplied index is out of bounds.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>a copy of the color at the specified index in the palette.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a8bd662087e2fc52e927c95de80506bed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8bd662087e2fc52e927c95de80506bed">&#9670;&nbsp;</a></span>begin() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::palette::begin </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="classcen_1_1palette.html#a7b1fcc9ac96e3c2c223a28d884fe93ca">const_iterator</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa1317131201d97633a53074980ed8b94"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa1317131201d97633a53074980ed8b94">&#9670;&nbsp;</a></span>begin() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::palette::begin </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1palette.html#a274f15dd20f32a4e1eb2cdeccd704fec">iterator</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="adaf0900bcf56dbf04f9583cce386d180"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adaf0900bcf56dbf04f9583cce386d180">&#9670;&nbsp;</a></span>end() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::palette::end </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="classcen_1_1palette.html#a7b1fcc9ac96e3c2c223a28d884fe93ca">const_iterator</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2a108de57898149aa459526e0cbc0e4b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a108de57898149aa459526e0cbc0e4b">&#9670;&nbsp;</a></span>end() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::palette::end </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1palette.html#a274f15dd20f32a4e1eb2cdeccd704fec">iterator</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a984a68a80423049bd4d67d186199cf49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a984a68a80423049bd4d67d186199cf49">&#9670;&nbsp;</a></span>get()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::palette::get </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; SDL_Palette*
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a pointer to the associated SDL palette. </p>
-<dl class="section warning"><dt>Warning</dt><dd>Do not claim ownership of the returned pointer!</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the associated SDL palette</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a715c053372da1a8b33f84e8495e82a67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a715c053372da1a8b33f84e8495e82a67">&#9670;&nbsp;</a></span>operator[]()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::palette::operator[] </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>index</em></td><td>)</td>
-          <td> const -&gt; <a class="el" href="classcen_1_1color.html">cen::color</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the color in the palette at the specified index. </p>
-<dl class="section warning"><dt>Warning</dt><dd>This function performs no bounds checking, see <code><a class="el" href="classcen_1_1palette.html#a828e8740dda56b0f65096335d2829d03" title="Returns the color in the palette at the specified index.">at()</a></code> for a bounds checked version of this function.</dd></dl>
-<dl class="section pre"><dt>Precondition</dt><dd><code>index</code> must not be negative. </dd>
-<dd>
-<code>index</code> must be less than the size of the palette.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This function returns a copy of the color, not a reference!</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">index</td><td>the index of color in the palette.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>a copy of the color at the specified index in the palette.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
-
-</div>
-</div>
 <a id="a5f637ae29af8db5827c93d01d622e239"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5f637ae29af8db5827c93d01d622e239">&#9670;&nbsp;</a></span>set_color()</h2>
 
@@ -491,6 +270,92 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a828e8740dda56b0f65096335d2829d03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a828e8740dda56b0f65096335d2829d03">&#9670;&nbsp;</a></span>at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::palette::at </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const -&gt; <a class="el" href="classcen_1_1color.html">cen::color</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the color in the palette at the specified index. </p>
+<dl class="section note"><dt>Note</dt><dd>This function returns a copy of the color, not a reference!</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the index of color in the palette.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classcen_1_1cen__error.html" title="The base of all exceptions explicitly thrown by the library.">cen_error</a></td><td>if the supplied index is out of bounds.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a copy of the color at the specified index in the palette.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a715c053372da1a8b33f84e8495e82a67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a715c053372da1a8b33f84e8495e82a67">&#9670;&nbsp;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::palette::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const -&gt; <a class="el" href="classcen_1_1color.html">cen::color</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the color in the palette at the specified index. </p>
+<dl class="section warning"><dt>Warning</dt><dd>This function performs no bounds checking, see <code><a class="el" href="classcen_1_1palette.html#a828e8740dda56b0f65096335d2829d03" title="Returns the color in the palette at the specified index.">at()</a></code> for a bounds checked version of this function.</dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code>index</code> must not be negative. </dd>
+<dd>
+<code>index</code> must be less than the size of the palette.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function returns a copy of the color, not a reference!</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the index of color in the palette.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a copy of the color at the specified index in the palette.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
 
 </div>
@@ -553,6 +418,141 @@ Public Member Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>This value can be incremented by <code><a class="el" href="classcen_1_1palette.html#a5f637ae29af8db5827c93d01d622e239" title="Sets a color in the palette.">set_color()</a></code>.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>the current version of the palette.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a984a68a80423049bd4d67d186199cf49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a984a68a80423049bd4d67d186199cf49">&#9670;&nbsp;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::palette::get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; SDL_Palette*
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the associated SDL palette. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Do not claim ownership of the returned pointer!</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the associated SDL palette</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="aa1317131201d97633a53074980ed8b94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1317131201d97633a53074980ed8b94">&#9670;&nbsp;</a></span>begin() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::palette::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1palette.html#a274f15dd20f32a4e1eb2cdeccd704fec">iterator</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8bd662087e2fc52e927c95de80506bed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bd662087e2fc52e927c95de80506bed">&#9670;&nbsp;</a></span>begin() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::palette::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="classcen_1_1palette.html#a7b1fcc9ac96e3c2c223a28d884fe93ca">const_iterator</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a108de57898149aa459526e0cbc0e4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a108de57898149aa459526e0cbc0e4b">&#9670;&nbsp;</a></span>end() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::palette::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1palette.html#a274f15dd20f32a4e1eb2cdeccd704fec">iterator</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adaf0900bcf56dbf04f9583cce386d180"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaf0900bcf56dbf04f9583cce386d180">&#9670;&nbsp;</a></span>end() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::palette::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="classcen_1_1palette.html#a7b1fcc9ac96e3c2c223a28d884fe93ca">const_iterator</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

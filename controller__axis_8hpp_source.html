@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -121,80 +121,79 @@ $(document).ready(function(){initNavTree('controller__axis_8hpp_source.html','')
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="group__audio.html#gaf0d3d1dee1bc64f62f309d4e56c7e727">   54</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(<span class="keyword">const</span> <a class="code" href="group__input.html#ga1e58560c3414740db4b3f78929e9ddc3">controller_axis</a> axis) -&gt; std::string_view</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordflow">switch</span> (<a class="code" href="group__input.html#gga2779bd4878fed7a711e390b086f77444a433169d5d9bcbb6d43f0d288e68f0cad">axis</a>)</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga1e58560c3414740db4b3f78929e9ddc3afedb2d84cafe20862cb4399751a8a7e3">controller_axis::invalid</a>:</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;invalid&quot;</span>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga1e58560c3414740db4b3f78929e9ddc3a817a2f18cd1f2c56178502b6a3256ba2">controller_axis::left_x</a>:</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;left_x&quot;</span>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga1e58560c3414740db4b3f78929e9ddc3a860707ea997c720e867a34a8100d4dba">controller_axis::left_y</a>:</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;left_y&quot;</span>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga1e58560c3414740db4b3f78929e9ddc3a4c2a935bc845cc368e6a12aa8a705a9c">controller_axis::right_x</a>:</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;right_x&quot;</span>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga1e58560c3414740db4b3f78929e9ddc3a2a4c0d09ede80536c51ea468309791bf">controller_axis::right_y</a>:</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;right_y&quot;</span>;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga1e58560c3414740db4b3f78929e9ddc3a7d448cca9f8235488fcc258cf3cd6d64">controller_axis::trigger_left</a>:</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;trigger_left&quot;</span>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga1e58560c3414740db4b3f78929e9ddc3abdd5d0f18082f3fef586b7cd59784e0b">controller_axis::trigger_right</a>:</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;trigger_right&quot;</span>;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga1e58560c3414740db4b3f78929e9ddc3a2ffe4e77325d9a7152f7086ea7aa5114">controller_axis::max</a>:</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;max&quot;</span>;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1cen__error.html">cen_error</a>{<span class="stringliteral">&quot;Did not recognize controller axis!&quot;</span>};</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  }</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="group__audio.html#ga26bfa0b567f678f47c4cff9052d41f61">  104</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">operator&lt;&lt;</a>(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code" href="group__input.html#ga1e58560c3414740db4b3f78929e9ddc3">controller_axis</a> axis) -&gt; std::ostream&amp;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;{</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keywordflow">return</span> stream &lt;&lt; <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(<a class="code" href="group__input.html#gga2779bd4878fed7a711e390b086f77444a433169d5d9bcbb6d43f0d288e68f0cad">axis</a>);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="group__input.html#ga5bb7ee9a16135d02afd273d952314201">  124</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> <a class="code" href="group__input.html#ga1e58560c3414740db4b3f78929e9ddc3">controller_axis</a> lhs,</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                                        <span class="keyword">const</span> SDL_GameControllerAxis rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;{</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>SDL_GameControllerAxis<span class="keyword">&gt;</span>(lhs) == rhs;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="group__input.html#gaa963060c5af7fa371f32dfdc54052a40">  131</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> SDL_GameControllerAxis lhs,</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="group__input.html#ga1e58560c3414740db4b3f78929e9ddc3">controller_axis</a> rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;{</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keywordflow">return</span> rhs == lhs;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
-<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="group__input.html#ga912a6c8d4b4c6434a91b2b6d0da3689e">  148</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> <a class="code" href="group__input.html#ga1e58560c3414740db4b3f78929e9ddc3">controller_axis</a> lhs,</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                                        <span class="keyword">const</span> SDL_GameControllerAxis rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;{</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;}</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
-<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="group__input.html#ga2941f23908ff1b402dae564c3d66cd39">  155</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> SDL_GameControllerAxis lhs,</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="group__input.html#ga1e58560c3414740db4b3f78929e9ddc3">controller_axis</a> rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;{</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;}</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;}  <span class="comment">// namespace cen</span></div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_CONTROLLER_AXIS_HEADER</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordflow">switch</span> (<a class="code" href="group__input.html#gga2779bd4878fed7a711e390b086f77444a433169d5d9bcbb6d43f0d288e68f0cad">axis</a>) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga1e58560c3414740db4b3f78929e9ddc3afedb2d84cafe20862cb4399751a8a7e3">controller_axis::invalid</a>:</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;invalid&quot;</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga1e58560c3414740db4b3f78929e9ddc3a817a2f18cd1f2c56178502b6a3256ba2">controller_axis::left_x</a>:</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;left_x&quot;</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga1e58560c3414740db4b3f78929e9ddc3a860707ea997c720e867a34a8100d4dba">controller_axis::left_y</a>:</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;left_y&quot;</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga1e58560c3414740db4b3f78929e9ddc3a4c2a935bc845cc368e6a12aa8a705a9c">controller_axis::right_x</a>:</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;right_x&quot;</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga1e58560c3414740db4b3f78929e9ddc3a2a4c0d09ede80536c51ea468309791bf">controller_axis::right_y</a>:</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;right_y&quot;</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga1e58560c3414740db4b3f78929e9ddc3a7d448cca9f8235488fcc258cf3cd6d64">controller_axis::trigger_left</a>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;trigger_left&quot;</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga1e58560c3414740db4b3f78929e9ddc3abdd5d0f18082f3fef586b7cd59784e0b">controller_axis::trigger_right</a>:</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;trigger_right&quot;</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga1e58560c3414740db4b3f78929e9ddc3a2ffe4e77325d9a7152f7086ea7aa5114">controller_axis::max</a>:</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;max&quot;</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1cen__error.html">cen_error</a>{<span class="stringliteral">&quot;Did not recognize controller axis!&quot;</span>};</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="group__audio.html#ga26bfa0b567f678f47c4cff9052d41f61">  103</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">operator&lt;&lt;</a>(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code" href="group__input.html#ga1e58560c3414740db4b3f78929e9ddc3">controller_axis</a> axis) -&gt; std::ostream&amp;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;{</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keywordflow">return</span> stream &lt;&lt; <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(<a class="code" href="group__input.html#gga2779bd4878fed7a711e390b086f77444a433169d5d9bcbb6d43f0d288e68f0cad">axis</a>);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="group__input.html#ga5bb7ee9a16135d02afd273d952314201">  123</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> <a class="code" href="group__input.html#ga1e58560c3414740db4b3f78929e9ddc3">controller_axis</a> lhs,</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                                        <span class="keyword">const</span> SDL_GameControllerAxis rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;{</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>SDL_GameControllerAxis<span class="keyword">&gt;</span>(lhs) == rhs;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="group__input.html#gaa963060c5af7fa371f32dfdc54052a40">  130</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> SDL_GameControllerAxis lhs,</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="group__input.html#ga1e58560c3414740db4b3f78929e9ddc3">controller_axis</a> rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;{</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keywordflow">return</span> rhs == lhs;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="group__input.html#ga912a6c8d4b4c6434a91b2b6d0da3689e">  147</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> <a class="code" href="group__input.html#ga1e58560c3414740db4b3f78929e9ddc3">controller_axis</a> lhs,</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                                        <span class="keyword">const</span> SDL_GameControllerAxis rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;{</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;}</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno"><a class="line" href="group__input.html#ga2941f23908ff1b402dae564c3d66cd39">  154</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> SDL_GameControllerAxis lhs,</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="group__input.html#ga1e58560c3414740db4b3f78929e9ddc3">controller_axis</a> rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;{</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;}</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;}  <span class="comment">// namespace cen</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_CONTROLLER_AXIS_HEADER</span></div>
 <div class="ttc" id="aclasscen_1_1cen__error_html"><div class="ttname"><a href="classcen_1_1cen__error.html">cen::cen_error</a></div><div class="ttdoc">The base of all exceptions explicitly thrown by the library.</div><div class="ttdef"><b>Definition:</b> exception.hpp:35</div></div>
-<div class="ttc" id="agroup__audio_html_ga322c699fa08098bd801164819d2f4cc8"><div class="ttname"><a href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">cen::operator!=</a></div><div class="ttdeci">constexpr auto operator!=(const fade_status lhs, const Mix_Fading rhs) noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the fading status values represent aren't the same.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:129</div></div>
-<div class="ttc" id="agroup__audio_html_ga83f366781618f05bf8bcb60c753e9ced"><div class="ttname"><a href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">cen::operator&lt;&lt;</a></div><div class="ttdeci">auto operator&lt;&lt;(std::ostream &amp;stream, const fade_status status) -&gt; std::ostream &amp;</div><div class="ttdoc">Prints a textual representation of a fade status enumerator.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:86</div></div>
-<div class="ttc" id="agroup__audio_html_ga9ebd3f26fcc0f89398ff473b06e9dcbe"><div class="ttname"><a href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">cen::to_string</a></div><div class="ttdeci">constexpr auto to_string(const fade_status status) -&gt; std::string_view</div><div class="ttdoc">Returns a textual version of the supplied fade status.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:51</div></div>
-<div class="ttc" id="agroup__audio_html_gaf72595df3886dbb34dbcf030d14333d2"><div class="ttname"><a href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">cen::operator==</a></div><div class="ttdeci">constexpr auto operator==(const fade_status lhs, const Mix_Fading rhs) noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the fading status values represent are the same.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:106</div></div>
+<div class="ttc" id="agroup__audio_html_ga322c699fa08098bd801164819d2f4cc8"><div class="ttname"><a href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">cen::operator!=</a></div><div class="ttdeci">constexpr auto operator!=(const fade_status lhs, const Mix_Fading rhs) noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the fading status values represent aren't the same.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:141</div></div>
+<div class="ttc" id="agroup__audio_html_ga83f366781618f05bf8bcb60c753e9ced"><div class="ttname"><a href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">cen::operator&lt;&lt;</a></div><div class="ttdeci">auto operator&lt;&lt;(std::ostream &amp;stream, const fade_status status) -&gt; std::ostream &amp;</div><div class="ttdoc">Prints a textual representation of a fade status enumerator.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:98</div></div>
+<div class="ttc" id="agroup__audio_html_ga9ebd3f26fcc0f89398ff473b06e9dcbe"><div class="ttname"><a href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">cen::to_string</a></div><div class="ttdeci">constexpr auto to_string(const fade_status status) -&gt; std::string_view</div><div class="ttdoc">Returns a textual version of the supplied fade status.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:64</div></div>
+<div class="ttc" id="agroup__audio_html_gaf72595df3886dbb34dbcf030d14333d2"><div class="ttname"><a href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">cen::operator==</a></div><div class="ttdeci">constexpr auto operator==(const fade_status lhs, const Mix_Fading rhs) noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the fading status values represent are the same.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:118</div></div>
 <div class="ttc" id="agroup__input_html_ga1e58560c3414740db4b3f78929e9ddc3"><div class="ttname"><a href="group__input.html#ga1e58560c3414740db4b3f78929e9ddc3">cen::controller_axis</a></div><div class="ttdeci">controller_axis</div><div class="ttdoc">Represents different game controller axes.</div><div class="ttdef"><b>Definition:</b> controller_axis.hpp:26</div></div>
 <div class="ttc" id="agroup__input_html_gga1e58560c3414740db4b3f78929e9ddc3a2a4c0d09ede80536c51ea468309791bf"><div class="ttname"><a href="group__input.html#gga1e58560c3414740db4b3f78929e9ddc3a2a4c0d09ede80536c51ea468309791bf">cen::controller_axis::right_y</a></div><div class="ttdeci">@ right_y</div></div>
 <div class="ttc" id="agroup__input_html_gga1e58560c3414740db4b3f78929e9ddc3a2ffe4e77325d9a7152f7086ea7aa5114"><div class="ttname"><a href="group__input.html#gga1e58560c3414740db4b3f78929e9ddc3a2ffe4e77325d9a7152f7086ea7aa5114">cen::controller_axis::max</a></div><div class="ttdeci">@ max</div></div>

@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -151,8 +151,8 @@ Friends</h2></td></tr>
 <dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1renderer__info.html#a0ba4c26e40aa801169e80a83f8be21ff" title="Returns information about a renderer.">get_info()</a></code></dd></dl>
 <dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5ecab1eb8647b1dd3321bceffe23b802"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ecab1eb8647b1dd3321bceffe23b802">&#9670;&nbsp;</a></span>format()</h2>
+<a id="a3651d91c5a57febd15cdcb7a752d882f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3651d91c5a57febd15cdcb7a752d882f">&#9670;&nbsp;</a></span>supported_flags()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -161,45 +161,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::renderer_info::format </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga2313c92fc18c319ebe1853e2d0579886">usize</a>&#160;</td>
-          <td class="paramname"><em>index</em></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the supported pixel format at the specified index. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>index</code> must be must be smaller than <code>pixel_format_count()</code>.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">index</td><td>the index of the desired pixel format.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the supported pixel format at the specified index.,</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="aee177169a882940f6140c2a604b782f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee177169a882940f6140c2a604b782f8">&#9670;&nbsp;</a></span>format_count()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::renderer_info::format_count </td>
+          <td class="memname">auto cen::renderer_info::supported_flags </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>
@@ -213,8 +175,69 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the number of supported pixel formats. </p>
-<dl class="section return"><dt>Returns</dt><dd>the amount of available pixel formats.</dd></dl>
+<p>Returns a mask of all of the supported renderer flags. </p>
+<dl class="section return"><dt>Returns</dt><dd>a mask of the supported renderer flags.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1basic__renderer.html#a10b3ec2f2dfe62c988243e94f1c30241" title="Represents different renderer features.">basic_renderer::renderer_flags</a></code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a39d9ac37e89392a5ab78a609be0a32db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39d9ac37e89392a5ab78a609be0a32db">&#9670;&nbsp;</a></span>has_vsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::renderer_info::has_vsync </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the renderer supports VSync. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the renderer has VSync support; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ab6224164cc6aa8481bd0f0b31745b1d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6224164cc6aa8481bd0f0b31745b1d2">&#9670;&nbsp;</a></span>has_target_textures()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::renderer_info::has_target_textures </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the renderer supports target textures. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the renderer has target texture support; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
 
 </div>
@@ -279,8 +302,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="ab6224164cc6aa8481bd0f0b31745b1d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6224164cc6aa8481bd0f0b31745b1d2">&#9670;&nbsp;</a></span>has_target_textures()</h2>
+<a id="a4e27fa5e86583c907903a4d61c8f104f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e27fa5e86583c907903a4d61c8f104f">&#9670;&nbsp;</a></span>name()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -289,10 +312,10 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::renderer_info::has_target_textures </td>
+          <td class="memname">auto cen::renderer_info::name </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
+          <td> const -&gt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a>
   </td>
         </tr>
       </table>
@@ -303,14 +326,14 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Indicates whether or not the renderer supports target textures. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the renderer has target texture support; <code>false</code> otherwise.</dd></dl>
+<p>Returns the name associated with the renderer. </p>
+<dl class="section return"><dt>Returns</dt><dd>the name of the renderer.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="a39d9ac37e89392a5ab78a609be0a32db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39d9ac37e89392a5ab78a609be0a32db">&#9670;&nbsp;</a></span>has_vsync()</h2>
+<a id="aee177169a882940f6140c2a604b782f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee177169a882940f6140c2a604b782f8">&#9670;&nbsp;</a></span>format_count()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -319,10 +342,10 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::renderer_info::has_vsync </td>
+          <td class="memname">auto cen::renderer_info::format_count </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
+          <td> const -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>
   </td>
         </tr>
       </table>
@@ -333,8 +356,76 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Indicates whether or not the renderer supports VSync. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the renderer has VSync support; <code>false</code> otherwise.</dd></dl>
+<p>Returns the number of supported pixel formats. </p>
+<dl class="section return"><dt>Returns</dt><dd>the amount of available pixel formats.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a5ecab1eb8647b1dd3321bceffe23b802"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ecab1eb8647b1dd3321bceffe23b802">&#9670;&nbsp;</a></span>format()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::renderer_info::format </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga2313c92fc18c319ebe1853e2d0579886">usize</a>&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the supported pixel format at the specified index. </p>
+<dl class="section pre"><dt>Precondition</dt><dd><code>index</code> must be must be smaller than <code>pixel_format_count()</code>.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the index of the desired pixel format.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the supported pixel format at the specified index.,</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ae312f4c962865e924a4ce4edec2cae81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae312f4c962865e924a4ce4edec2cae81">&#9670;&nbsp;</a></span>max_texture_width()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::renderer_info::max_texture_width </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; int
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the maximum supported width of textures. </p>
+<dl class="section return"><dt>Returns</dt><dd>the maximum texture width.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
 
 </div>
@@ -395,97 +486,6 @@ Friends</h2></td></tr>
 
 <p>Returns the maximum supported size of textures. </p>
 <dl class="section return"><dt>Returns</dt><dd>the maximum texture size.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ae312f4c962865e924a4ce4edec2cae81"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae312f4c962865e924a4ce4edec2cae81">&#9670;&nbsp;</a></span>max_texture_width()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::renderer_info::max_texture_width </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; int
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the maximum supported width of textures. </p>
-<dl class="section return"><dt>Returns</dt><dd>the maximum texture width.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a4e27fa5e86583c907903a4d61c8f104f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e27fa5e86583c907903a4d61c8f104f">&#9670;&nbsp;</a></span>name()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::renderer_info::name </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the name associated with the renderer. </p>
-<dl class="section return"><dt>Returns</dt><dd>the name of the renderer.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a3651d91c5a57febd15cdcb7a752d882f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3651d91c5a57febd15cdcb7a752d882f">&#9670;&nbsp;</a></span>supported_flags()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::renderer_info::supported_flags </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a mask of all of the supported renderer flags. </p>
-<dl class="section return"><dt>Returns</dt><dd>a mask of the supported renderer flags.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1basic__renderer.html#a10b3ec2f2dfe62c988243e94f1c30241" title="Represents different renderer features.">basic_renderer::renderer_flags</a></code></dd></dl>
 <dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
 
 </div>

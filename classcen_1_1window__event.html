@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -229,6 +229,37 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa25b6fee2e32fbb503322dca35d1571c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa25b6fee2e32fbb503322dca35d1571c">&#9670;&nbsp;</a></span>event_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::window_event::event_id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__event.html#ga117be29d4e5afcc206640c1a2ee69f29">window_event_id</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the event ID of this window event. </p>
+<p>There are many different kinds of window events, use this function to check what kind of action that triggered this event.</p>
+<dl class="section return"><dt>Returns</dt><dd>the event ID of this window event.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
 <a id="a76fab68f8da985490b69f9fd956e7a37"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a76fab68f8da985490b69f9fd956e7a37">&#9670;&nbsp;</a></span>data_1()</h2>
 
@@ -289,37 +320,6 @@ Additional Inherited Members</h2></td></tr>
 <p>The meaning of this value is dependent on the window event ID of this window event.</p>
 <p>For instance, if the event ID is <code><a class="el" href="group__event.html#gga117be29d4e5afcc206640c1a2ee69f29a3f5b9a528e6eb123e1b0b291e651da7e">window_event_id::size_changed</a></code>, then data1 and data2 represent the new width and height of the window respectively. See the <code>window_event_id</code> documentation for more details about whether the value returned from this function is meaningful in regard to the window event ID.</p>
 <dl class="section return"><dt>Returns</dt><dd>the value of the second data value.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="aa25b6fee2e32fbb503322dca35d1571c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa25b6fee2e32fbb503322dca35d1571c">&#9670;&nbsp;</a></span>event_id()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::window_event::event_id </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__event.html#ga117be29d4e5afcc206640c1a2ee69f29">window_event_id</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the event ID of this window event. </p>
-<p>There are many different kinds of window events, use this function to check what kind of action that triggered this event.</p>
-<dl class="section return"><dt>Returns</dt><dd>the event ID of this window event.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>

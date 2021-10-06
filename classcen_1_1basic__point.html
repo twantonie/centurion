@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -200,25 +200,6 @@ class cen::basic_point&lt; T &gt;</h3>
 <dd>
 <code><a class="el" href="group__math.html#ga5cba142ae2503f97ea86063aefb6a816" title="Returns the distance between two points.">distance()</a></code> </dd></dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="ae057e24111cf79575a281f118cf911cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae057e24111cf79575a281f118cf911cb">&#9670;&nbsp;</a></span>point_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::<a class="el" href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">point_type</a> =  typename <a class="el" href="classcen_1_1point__traits.html">point_traits</a>&lt;T&gt;::<a class="el" href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">point_type</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The SDL point type, i.e. <code>SDL_Point</code> or <code>SDL_FPoint</code>. </p>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
 <a id="adc21c54b6267e1ce2fdd124a922e250e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adc21c54b6267e1ce2fdd124a922e250e">&#9670;&nbsp;</a></span>value_type</h2>
 
@@ -234,6 +215,25 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>The actual representation type, i.e. <code>int</code> or <code>float</code>. </p>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ae057e24111cf79575a281f118cf911cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae057e24111cf79575a281f118cf911cb">&#9670;&nbsp;</a></span>point_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::<a class="el" href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">point_type</a> =  typename <a class="el" href="classcen_1_1point__traits.html">point_traits</a>&lt;T&gt;::<a class="el" href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">point_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The SDL point type, i.e. <code>SDL_Point</code> or <code>SDL_FPoint</code>. </p>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
@@ -318,278 +318,6 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5f74984e2402af869d4ba4785ac9fb0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f74984e2402af869d4ba4785ac9fb0e">&#9670;&nbsp;</a></span>data() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::data </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; const <a class="el" href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">point_type</a>*
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a pointer to the internal point representation. </p>
-<dl class="section note"><dt>Note</dt><dd>Don't cache the returned pointer.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the point representation.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="ab98350d485dc9d8df9002fee7d9b39e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab98350d485dc9d8df9002fee7d9b39e2">&#9670;&nbsp;</a></span>data() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::data </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">point_type</a>*
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a pointer to the internal point representation. </p>
-<dl class="section note"><dt>Note</dt><dd>Don't cache the returned pointer.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the point representation.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a44e113899b52e696f919aa2413446817"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44e113899b52e696f919aa2413446817">&#9670;&nbsp;</a></span>get() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto <a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::get </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; const <a class="el" href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">point_type</a>&amp;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the internal point representation. </p>
-<dl class="section return"><dt>Returns</dt><dd>a reference to the internal representation.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="acfe3176a65578ec0bbfb19fe5d077b20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acfe3176a65578ec0bbfb19fe5d077b20">&#9670;&nbsp;</a></span>get() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto <a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::get </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">point_type</a>&amp;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the internal point representation. </p>
-<dl class="section return"><dt>Returns</dt><dd>a reference to the internal representation.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ac5cbceae5a53e23faeb4a186403d76be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5cbceae5a53e23faeb4a186403d76be">&#9670;&nbsp;</a></span>operator const point_type *()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::operator const <a class="el" href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">point_type</a> * </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a pointer to the internal point representation. </p>
-<dl class="section note"><dt>Note</dt><dd>Don't cache the returned pointer.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the point representation.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="af8b2c5692d4d47e2dd0e8b9ddb45703e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8b2c5692d4d47e2dd0e8b9ddb45703e">&#9670;&nbsp;</a></span>operator point_type()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr <a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::operator <a class="el" href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">point_type</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Converts to the internal representation. </p>
-<dl class="section return"><dt>Returns</dt><dd>a copy of the internal point.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="group__core.html#ga10fbba7e12ccd2e8cee2d661d629a1da" title="Casts a value to a value of another type.">cen::cast</a></code></dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a2df0ec5864e348b840da761499e5a8c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2df0ec5864e348b840da761499e5a8c2">&#9670;&nbsp;</a></span>operator point_type *()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::operator <a class="el" href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">point_type</a> * </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a pointer to the internal point representation. </p>
-<dl class="section note"><dt>Note</dt><dd>Don't cache the returned pointer.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the point representation.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a2662928096822b6792887cbbff00bfa5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2662928096822b6792887cbbff00bfa5">&#9670;&nbsp;</a></span>serialize()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<div class="memtemplate">
-template&lt;typename Archive &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::serialize </td>
-          <td>(</td>
-          <td class="paramtype">Archive &amp;&#160;</td>
-          <td class="paramname"><em>archive</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Serializes the point. </p>
-<p>This function expects that the archive provides an overloaded <code>operator()</code>, used for serializing data. This API is based on the Cereal serialization library.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Archive</td><td>the type of the archive.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">archive</td><td>the archive used to serialize the point.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
 <a id="a6cedc4e1f77ba8cec3fd05816a4555f5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6cedc4e1f77ba8cec3fd05816a4555f5">&#9670;&nbsp;</a></span>set_x()</h2>
 
@@ -728,9 +456,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a99ac24319da114936a5016b1ef031778"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99ac24319da114936a5016b1ef031778">&#9670;&nbsp;</a></span>isFloating</h2>
+<a id="acfe3176a65578ec0bbfb19fe5d077b20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfe3176a65578ec0bbfb19fe5d077b20">&#9670;&nbsp;</a></span>get() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -741,21 +468,267 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr static bool <a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::isFloating = <a class="el" href="classcen_1_1point__traits.html">point_traits</a>&lt;T&gt;::isFloating</td>
+          <td class="memname">constexpr auto <a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">point_type</a>&amp;
+  </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Indicates whether or not the point is based on a floating-point type. </p>
+<p>Returns the internal point representation. </p>
+<dl class="section return"><dt>Returns</dt><dd>a reference to the internal representation.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
 </div>
+<a id="a44e113899b52e696f919aa2413446817"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44e113899b52e696f919aa2413446817">&#9670;&nbsp;</a></span>get() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto <a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; const <a class="el" href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">point_type</a>&amp;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the internal point representation. </p>
+<dl class="section return"><dt>Returns</dt><dd>a reference to the internal representation.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ab98350d485dc9d8df9002fee7d9b39e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab98350d485dc9d8df9002fee7d9b39e2">&#9670;&nbsp;</a></span>data() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">point_type</a>*
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the internal point representation. </p>
+<dl class="section note"><dt>Note</dt><dd>Don't cache the returned pointer.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the point representation.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a5f74984e2402af869d4ba4785ac9fb0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f74984e2402af869d4ba4785ac9fb0e">&#9670;&nbsp;</a></span>data() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; const <a class="el" href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">point_type</a>*
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the internal point representation. </p>
+<dl class="section note"><dt>Note</dt><dd>Don't cache the returned pointer.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the point representation.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="af8b2c5692d4d47e2dd0e8b9ddb45703e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8b2c5692d4d47e2dd0e8b9ddb45703e">&#9670;&nbsp;</a></span>operator point_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::operator <a class="el" href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">point_type</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts to the internal representation. </p>
+<dl class="section return"><dt>Returns</dt><dd>a copy of the internal point.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="group__core.html#ga10fbba7e12ccd2e8cee2d661d629a1da" title="Casts a value to a value of another type.">cen::cast</a></code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a2df0ec5864e348b840da761499e5a8c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2df0ec5864e348b840da761499e5a8c2">&#9670;&nbsp;</a></span>operator point_type *()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::operator <a class="el" href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">point_type</a> * </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the internal point representation. </p>
+<dl class="section note"><dt>Note</dt><dd>Don't cache the returned pointer.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the point representation.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="ac5cbceae5a53e23faeb4a186403d76be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5cbceae5a53e23faeb4a186403d76be">&#9670;&nbsp;</a></span>operator const point_type *()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::operator const <a class="el" href="classcen_1_1basic__point.html#ae057e24111cf79575a281f118cf911cb">point_type</a> * </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the internal point representation. </p>
+<dl class="section note"><dt>Note</dt><dd>Don't cache the returned pointer.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the point representation.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a2662928096822b6792887cbbff00bfa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2662928096822b6792887cbbff00bfa5">&#9670;&nbsp;</a></span>serialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename Archive &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::serialize </td>
+          <td>(</td>
+          <td class="paramtype">Archive &amp;&#160;</td>
+          <td class="paramname"><em>archive</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Serializes the point. </p>
+<p>This function expects that the archive provides an overloaded <code>operator()</code>, used for serializing data. This API is based on the Cereal serialization library.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Archive</td><td>the type of the archive.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">archive</td><td>the archive used to serialize the point.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
 <a id="a24c7a35f206fd07a03f912a0f430c4ae"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a24c7a35f206fd07a03f912a0f430c4ae">&#9670;&nbsp;</a></span>isIntegral</h2>
 
@@ -779,6 +752,33 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>Indicates whether or not the point is based on an integral type. </p>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a99ac24319da114936a5016b1ef031778"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99ac24319da114936a5016b1ef031778">&#9670;&nbsp;</a></span>isFloating</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr static bool <a class="el" href="classcen_1_1basic__point.html">cen::basic_point</a>&lt; T &gt;::isFloating = <a class="el" href="classcen_1_1point__traits.html">point_traits</a>&lt;T&gt;::isFloating</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the point is based on a floating-point type. </p>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>

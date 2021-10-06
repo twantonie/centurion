@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -546,1329 +546,6 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="acce9a80a2fca412f348d836f4916aa8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acce9a80a2fca412f348d836f4916aa8e">&#9670;&nbsp;</a></span>alpha()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::alpha </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the alpha component modulation of the surface. </p>
-<dl class="section return"><dt>Returns</dt><dd>the alpha modulation value, in the range [0, 255].</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a9c69cbc4fc9e47ecd2ed13010e8dcae0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c69cbc4fc9e47ecd2ed13010e8dcae0">&#9670;&nbsp;</a></span>clip()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::clip </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__math.html#gac693dcf48436f48e7aa257db423e1bdc">irect</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the clipping information associated with the surface. </p>
-<dl class="section return"><dt>Returns</dt><dd>the clipping information associated with the surface.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a4569e0ebb116ee55b086c6cfe09a6485"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4569e0ebb116ee55b086c6cfe09a6485">&#9670;&nbsp;</a></span>color_mod()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::color_mod </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="classcen_1_1color.html">color</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the color modulation of the surface. </p>
-<dl class="section return"><dt>Returns</dt><dd>a color that represents the color modulation of the surface.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a3e0c9fec8abc8432cf8b21e7658205a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e0c9fec8abc8432cf8b21e7658205a1">&#9670;&nbsp;</a></span>convert()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::convert </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a>&#160;</td>
-          <td class="paramname"><em>format</em></td><td>)</td>
-          <td> const -&gt; <a class="el" href="classcen_1_1basic__surface.html">basic_surface</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Creates and returns a surface based on this surface with the specified pixel format. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">format</td><td>the pixel format that will be used by the new surface.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>a surface based on this surface with the specified pixel format.</dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classcen_1_1sdl__error.html" title="Represents an error related to the core SDL2 library.">sdl_error</a></td><td>if the surface cannot be created.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a07bcc0b9a1cfa1c1daee39770b151706"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07bcc0b9a1cfa1c1daee39770b151706">&#9670;&nbsp;</a></span>data() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::data </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; const void*
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a pointer to the pixel data of the surface. </p>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the pixel data of the surface.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
-<a id="aa6a73306752b361c572e92c01632d27d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6a73306752b361c572e92c01632d27d">&#9670;&nbsp;</a></span>data() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::data </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; void*
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a pointer to the pixel data of the surface. </p>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the pixel data of the surface.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
-<a id="a708a932081ba9743861ca06799b74828"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a708a932081ba9743861ca06799b74828">&#9670;&nbsp;</a></span>format_info()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::format_info </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__video.html#ga586e518042ab187767897265d8162693">pixel_format_info_handle</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the pixel format info associated with the surface. </p>
-<dl class="section return"><dt>Returns</dt><dd>the associated pixel format info.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="ac891312b7f0f5d0de7b4ca240695c77e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac891312b7f0f5d0de7b4ca240695c77e">&#9670;&nbsp;</a></span>from_bmp() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<div class="memtemplate">
-template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::from_bmp </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a> &gt;&#160;</td>
-          <td class="paramname"><em>file</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1basic__surface.html">basic_surface</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Creates and returns a surface based on a BMP file. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">BB</td><td>dummy parameter for SFINAE.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">file</td><td>the path to the BMP file that contains the surface data.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the created surface.</dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classcen_1_1sdl__error.html" title="Represents an error related to the core SDL2 library.">sdl_error</a></td><td>if the surface couldn't be loaded.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
-<a id="afe6eeed5bd255166cdeeeb259bad2a87"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe6eeed5bd255166cdeeeb259bad2a87">&#9670;&nbsp;</a></span>from_bmp() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<div class="memtemplate">
-template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::from_bmp </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>file</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1basic__surface.html">basic_surface</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classcen_1_1basic__surface.html#ac891312b7f0f5d0de7b4ca240695c77e" title="Creates and returns a surface based on a BMP file.">from_bmp()</a> </dd></dl>
-
-</div>
-</div>
-<a id="ac2ce725baa7378a8f0adfffd4a9741d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2ce725baa7378a8f0adfffd4a9741d7">&#9670;&nbsp;</a></span>get()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::get </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; SDL_Surface*
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a pointer to the associated <code>SDL_Surface</code>. </p>
-<dl class="section warning"><dt>Warning</dt><dd>Don't take ownership of the returned pointer!</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the associated <code>SDL_Surface</code>.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="adbf654894b673deba047222085e60ef0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adbf654894b673deba047222085e60ef0">&#9670;&nbsp;</a></span>get_blend_mode()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::get_blend_mode </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__video.html#ga98236ba30ab70fd25e54bf8c5c70dd8f">blend_mode</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the blend mode that is being used by the surface. </p>
-<dl class="section return"><dt>Returns</dt><dd>the blend mode that the surface uses.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a886977164cfce9bd7d02a5e7c5cc1d91"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a886977164cfce9bd7d02a5e7c5cc1d91">&#9670;&nbsp;</a></span>height()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::height </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; int
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the height of the surface. </p>
-<dl class="section return"><dt>Returns</dt><dd>the height of the surface.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a22c6de2ac4c30d71e0473aee926baf49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22c6de2ac4c30d71e0473aee926baf49">&#9670;&nbsp;</a></span>is_rle_enabled()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::is_rle_enabled </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the surface is RLE-enabled. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the surface is RLE-enabled; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="aed9fe1bc18cd01a3f4b601e33e330ae9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed9fe1bc18cd01a3f4b601e33e330ae9">&#9670;&nbsp;</a></span>lock()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::lock </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Attempts to lock the surface, so that the associated pixel data can be modified. </p>
-<p>This function has no effect if <code><a class="el" href="classcen_1_1basic__surface.html#a6eb977f39a3c02f96f2b374065e2fa4a" title="Indicates whether or not the surface must be locked before modifying the pixel data associated with t...">must_lock()</a></code> returns <code>false</code>.</p>
-<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the locking of the surface was successful or if locking isn't required for modifying the surface; <code>failure</code> if something went wrong.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a6eb977f39a3c02f96f2b374065e2fa4a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6eb977f39a3c02f96f2b374065e2fa4a">&#9670;&nbsp;</a></span>must_lock()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::must_lock </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the surface must be locked before modifying the pixel data associated with the surface. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the surface must be locked before modification; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a993392c9e604905e384e27e4b5ae16a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a993392c9e604905e384e27e4b5ae16a8">&#9670;&nbsp;</a></span>operator bool()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<div class="memtemplate">
-template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::operator bool </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not a surface handle holds a non-null pointer. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">BB</td><td>dummy parameter for SFINAE.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the surface handle holds a non-null pointer; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a4a3be76a4bfc4d77704ed784764a92c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a3be76a4bfc4d77704ed784764a92c6">&#9670;&nbsp;</a></span>operator const SDL_Surface *()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::operator const SDL_Surface * </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Converts to <code>const SDL_Surface*</code>. </p>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the associated <code>SDL_Surface</code>.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="aa3d042fbffbc6528350876f96f54c50f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3d042fbffbc6528350876f96f54c50f">&#9670;&nbsp;</a></span>operator SDL_Surface *()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::operator SDL_Surface * </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Converts to <code>SDL_Surface*</code>. </p>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the associated <code>SDL_Surface</code>.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ac8e73b79d8c2b66873d70ccac522e163"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8e73b79d8c2b66873d70ccac522e163">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::operator= </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classcen_1_1basic__surface.html">basic_surface</a>&lt; T &gt; &amp;&amp;&#160;</td>
-          <td class="paramname"><em>other</em></td><td>)</td>
-          <td> -&gt;  <a class="el" href="classcen_1_1basic__surface.html">basic_surface</a> &amp;=default</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Moves the supplied surface into this surface. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">other</td><td>the surface that will be moved.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the surface that claimed the supplied surface.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a83a5f8b302ac085ad1444f9a5698e25b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83a5f8b302ac085ad1444f9a5698e25b">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::operator= </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1basic__surface.html">basic_surface</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>other</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1basic__surface.html">basic_surface</a>&amp;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Copies the supplied surface. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">other</td><td>the surface that will be copied.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classcen_1_1sdl__error.html" title="Represents an error related to the core SDL2 library.">sdl_error</a></td><td>if the supplied surface couldn't be copied.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="acdc01c4b71c058488b05b6212115650b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acdc01c4b71c058488b05b6212115650b">&#9670;&nbsp;</a></span>pitch()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::pitch </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; int
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the pitch (the length of a row of pixels in bytes) of the surface. </p>
-<dl class="section return"><dt>Returns</dt><dd>the pitch of the surface.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a6c4ff44c8f442f02dc54e54fe6ba13db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c4ff44c8f442f02dc54e54fe6ba13db">&#9670;&nbsp;</a></span>pixels() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::pixels </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; const void*
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a pointer to the pixel data of the surface. </p>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the pixel data of the surface.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a6ec59fc5cb6bc49d56d31f9197e12d3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ec59fc5cb6bc49d56d31f9197e12d3c">&#9670;&nbsp;</a></span>pixels() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::pixels </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; void*
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a pointer to the pixel data of the surface. </p>
-<p>It's possible to modify the surface through the returned pointer.</p>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the pixel data of the surface.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a30f01d43222ce67b00631afdb3db56cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30f01d43222ce67b00631afdb3db56cf">&#9670;&nbsp;</a></span>save_as_bmp() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::save_as_bmp </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a> &gt;&#160;</td>
-          <td class="paramname"><em>file</em></td><td>)</td>
-          <td> const -&gt; <a class="el" href="classcen_1_1result.html">result</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Saves the surface as a BMP image. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">file</td><td>the file path that the surface data will be saved at.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>success</code> if nothing went wrong; <code>failure</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
-<a id="a5db8b0659eefa31d6fe8cf7573d3e1ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5db8b0659eefa31d6fe8cf7573d3e1ca">&#9670;&nbsp;</a></span>save_as_bmp() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::save_as_bmp </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>file</em></td><td>)</td>
-          <td> const -&gt; <a class="el" href="classcen_1_1result.html">result</a>  
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classcen_1_1basic__surface.html#a30f01d43222ce67b00631afdb3db56cf" title="Saves the surface as a BMP image.">save_as_bmp()</a> </dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a3e808da863e8ec2749c2ac6cee64f553"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e808da863e8ec2749c2ac6cee64f553">&#9670;&nbsp;</a></span>save_as_jpg() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::save_as_jpg </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a> &gt;&#160;</td>
-          <td class="paramname"><em>file</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>quality</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const -&gt; <a class="el" href="classcen_1_1result.html">result</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Saves the surface as a JPG image. </p>
-<dl class="section note"><dt>Note</dt><dd>The quality parameter is supplied to libjpeg in the SDL implementation, but the limitations on its values are unknown at the time of writing.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">file</td><td>the file path that the surface data will be saved at. </td></tr>
-    <tr><td class="paramname">quality</td><td>the quality of the JPG image.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>success</code> if nothing went wrong; <code>failure</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a5a7fdf9044883bed688c6b34adcc39b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a7fdf9044883bed688c6b34adcc39b3">&#9670;&nbsp;</a></span>save_as_jpg() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::save_as_jpg </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>file</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>quality</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const -&gt; <a class="el" href="classcen_1_1result.html">result</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classcen_1_1basic__surface.html#a3e808da863e8ec2749c2ac6cee64f553" title="Saves the surface as a JPG image.">save_as_jpg()</a> </dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a9540fc1e9d8d0c5d8f5e775678b3c29b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9540fc1e9d8d0c5d8f5e775678b3c29b">&#9670;&nbsp;</a></span>save_as_png() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::save_as_png </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a> &gt;&#160;</td>
-          <td class="paramname"><em>file</em></td><td>)</td>
-          <td> const -&gt; <a class="el" href="classcen_1_1result.html">result</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Saves the surface as a PNG image. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">file</td><td>the file path that the surface data will be saved at.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>success</code> if nothing went wrong; <code>failure</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a720e99a23e10b66eb1a2389dff14be0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a720e99a23e10b66eb1a2389dff14be0b">&#9670;&nbsp;</a></span>save_as_png() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::save_as_png </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>file</em></td><td>)</td>
-          <td> const -&gt; <a class="el" href="classcen_1_1result.html">result</a>  
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classcen_1_1basic__surface.html#a9540fc1e9d8d0c5d8f5e775678b3c29b" title="Saves the surface as a PNG image.">save_as_png()</a> </dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="aac9d34835c6e22763b96613f9bd106f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac9d34835c6e22763b96613f9bd106f7">&#9670;&nbsp;</a></span>set_alpha()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::set_alpha </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>&#160;</td>
-          <td class="paramname"><em>alpha</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the alpha component modulation value. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">alpha</td><td>the new alpha component value, in the range [0, 255].</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a5df7abc1164e8b87cdfb7012536afb3f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5df7abc1164e8b87cdfb7012536afb3f">&#9670;&nbsp;</a></span>set_blend_mode()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::set_blend_mode </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__video.html#ga98236ba30ab70fd25e54bf8c5c70dd8f">blend_mode</a>&#160;</td>
-          <td class="paramname"><em>mode</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the blend mode that will be used by the surface. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">mode</td><td>the blend mode that will be used.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="aa80a728b37ae7d5b62aa2c76968c5170"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa80a728b37ae7d5b62aa2c76968c5170">&#9670;&nbsp;</a></span>set_color_mod()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::set_color_mod </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1color.html">color</a> &amp;&#160;</td>
-          <td class="paramname"><em>color</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the color modulation that will be used by the surface. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">color</td><td>the color that represents the color modulation that will be used.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a77799830079209541a217ccae7caed60"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77799830079209541a217ccae7caed60">&#9670;&nbsp;</a></span>set_pixel()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::set_pixel </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__math.html#ga482cd24468a5a74647742e69379566c7">ipoint</a>&#160;</td>
-          <td class="paramname"><em>pixel</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1color.html">color</a> &amp;&#160;</td>
-          <td class="paramname"><em>color</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the color of the pixel at the specified coordinate. </p>
-<p>This function has no effect if the coordinate is out-of-bounds or if something goes wrong when attempting to modify the pixel data.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pixel</td><td>the pixel that will be changed. </td></tr>
-    <tr><td class="paramname">color</td><td>the new color of the pixel.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a09e5d79f2a9adac5509c9cb3a87ae6ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09e5d79f2a9adac5509c9cb3a87ae6ea">&#9670;&nbsp;</a></span>set_rle_hint()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::set_rle_hint </td>
-          <td>(</td>
-          <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>enabled</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the value of the RLE acceleration hint. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">enabled</td><td><code>true</code> if the RLE optimization hint should be enabled; <code>false</code> otherwise.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>success</code> if nothing went wrong; <code>failure</code> otherwise.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classcen_1_1basic__surface.html#a22c6de2ac4c30d71e0473aee926baf49" title="Indicates whether or not the surface is RLE-enabled.">is_rle_enabled()</a></dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a07d6865a081e277e1ef58ec034f58110"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07d6865a081e277e1ef58ec034f58110">&#9670;&nbsp;</a></span>size()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::size </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the size of the surface. </p>
-<dl class="section return"><dt>Returns</dt><dd>the size of the surface.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a24a53c525e00a96fe784a9604143ccd3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24a53c525e00a96fe784a9604143ccd3">&#9670;&nbsp;</a></span>unlock()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::unlock </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Unlocks the surface. </p>
-<p>This function has no effect if <code><a class="el" href="classcen_1_1basic__surface.html#a6eb977f39a3c02f96f2b374065e2fa4a" title="Indicates whether or not the surface must be locked before modifying the pixel data associated with t...">must_lock()</a></code> returns <code>false</code>.</p>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="af512bdb5f9c502f7a36a82c71daee4f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af512bdb5f9c502f7a36a82c71daee4f5">&#9670;&nbsp;</a></span>width()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::width </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; int
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the width of the surface. </p>
-<dl class="section return"><dt>Returns</dt><dd>the width of the surface.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
 <a id="ac9e2fff1264e8409cbb27f1073286bfa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac9e2fff1264e8409cbb27f1073286bfa">&#9670;&nbsp;</a></span>with_format() <span class="overload">[1/2]</span></h2>
 
@@ -1979,6 +656,1329 @@ template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </div>
 </table>
 </div><div class="memdoc">
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classcen_1_1basic__surface.html#ac9e2fff1264e8409cbb27f1073286bfa" title="Creates and returns a surface with the specified characteristics.">with_format()</a> </dd></dl>
+
+</div>
+</div>
+<a id="ac891312b7f0f5d0de7b4ca240695c77e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac891312b7f0f5d0de7b4ca240695c77e">&#9670;&nbsp;</a></span>from_bmp() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::from_bmp </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a> &gt;&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1basic__surface.html">basic_surface</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates and returns a surface based on a BMP file. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">BB</td><td>dummy parameter for SFINAE.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>the path to the BMP file that contains the surface data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the created surface.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classcen_1_1sdl__error.html" title="Represents an error related to the core SDL2 library.">sdl_error</a></td><td>if the surface couldn't be loaded.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="afe6eeed5bd255166cdeeeb259bad2a87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe6eeed5bd255166cdeeeb259bad2a87">&#9670;&nbsp;</a></span>from_bmp() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename TT  = T, detail::is_owner&lt; TT &gt;  = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::from_bmp </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1basic__surface.html">basic_surface</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classcen_1_1basic__surface.html#ac891312b7f0f5d0de7b4ca240695c77e" title="Creates and returns a surface based on a BMP file.">from_bmp()</a> </dd></dl>
+
+</div>
+</div>
+<a id="a83a5f8b302ac085ad1444f9a5698e25b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83a5f8b302ac085ad1444f9a5698e25b">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1basic__surface.html">basic_surface</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1basic__surface.html">basic_surface</a>&amp;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copies the supplied surface. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>the surface that will be copied.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classcen_1_1sdl__error.html" title="Represents an error related to the core SDL2 library.">sdl_error</a></td><td>if the supplied surface couldn't be copied.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ac8e73b79d8c2b66873d70ccac522e163"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8e73b79d8c2b66873d70ccac522e163">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcen_1_1basic__surface.html">basic_surface</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> -&gt;  <a class="el" href="classcen_1_1basic__surface.html">basic_surface</a> &amp;=default</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Moves the supplied surface into this surface. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>the surface that will be moved.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the surface that claimed the supplied surface.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a30f01d43222ce67b00631afdb3db56cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30f01d43222ce67b00631afdb3db56cf">&#9670;&nbsp;</a></span>save_as_bmp() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::save_as_bmp </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a> &gt;&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td> const -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Saves the surface as a BMP image. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>the file path that the surface data will be saved at.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if nothing went wrong; <code>failure</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="a5db8b0659eefa31d6fe8cf7573d3e1ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5db8b0659eefa31d6fe8cf7573d3e1ca">&#9670;&nbsp;</a></span>save_as_bmp() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::save_as_bmp </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td> const -&gt; <a class="el" href="classcen_1_1result.html">result</a>  
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classcen_1_1basic__surface.html#a30f01d43222ce67b00631afdb3db56cf" title="Saves the surface as a BMP image.">save_as_bmp()</a> </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a9540fc1e9d8d0c5d8f5e775678b3c29b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9540fc1e9d8d0c5d8f5e775678b3c29b">&#9670;&nbsp;</a></span>save_as_png() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::save_as_png </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a> &gt;&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td> const -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Saves the surface as a PNG image. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>the file path that the surface data will be saved at.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if nothing went wrong; <code>failure</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a720e99a23e10b66eb1a2389dff14be0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a720e99a23e10b66eb1a2389dff14be0b">&#9670;&nbsp;</a></span>save_as_png() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::save_as_png </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td> const -&gt; <a class="el" href="classcen_1_1result.html">result</a>  
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classcen_1_1basic__surface.html#a9540fc1e9d8d0c5d8f5e775678b3c29b" title="Saves the surface as a PNG image.">save_as_png()</a> </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a3e808da863e8ec2749c2ac6cee64f553"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e808da863e8ec2749c2ac6cee64f553">&#9670;&nbsp;</a></span>save_as_jpg() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::save_as_jpg </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a> &gt;&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>quality</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Saves the surface as a JPG image. </p>
+<dl class="section note"><dt>Note</dt><dd>The quality parameter is supplied to libjpeg in the SDL implementation, but the limitations on its values are unknown at the time of writing.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>the file path that the surface data will be saved at. </td></tr>
+    <tr><td class="paramname">quality</td><td>the quality of the JPG image.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if nothing went wrong; <code>failure</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a5a7fdf9044883bed688c6b34adcc39b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a7fdf9044883bed688c6b34adcc39b3">&#9670;&nbsp;</a></span>save_as_jpg() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::save_as_jpg </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>quality</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classcen_1_1basic__surface.html#a3e808da863e8ec2749c2ac6cee64f553" title="Saves the surface as a JPG image.">save_as_jpg()</a> </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="aed9fe1bc18cd01a3f4b601e33e330ae9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed9fe1bc18cd01a3f4b601e33e330ae9">&#9670;&nbsp;</a></span>lock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::lock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Attempts to lock the surface, so that the associated pixel data can be modified. </p>
+<p>This function has no effect if <code><a class="el" href="classcen_1_1basic__surface.html#a6eb977f39a3c02f96f2b374065e2fa4a" title="Indicates whether or not the surface must be locked before modifying the pixel data associated with t...">must_lock()</a></code> returns <code>false</code>.</p>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the locking of the surface was successful or if locking isn't required for modifying the surface; <code>failure</code> if something went wrong.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a24a53c525e00a96fe784a9604143ccd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24a53c525e00a96fe784a9604143ccd3">&#9670;&nbsp;</a></span>unlock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::unlock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unlocks the surface. </p>
+<p>This function has no effect if <code><a class="el" href="classcen_1_1basic__surface.html#a6eb977f39a3c02f96f2b374065e2fa4a" title="Indicates whether or not the surface must be locked before modifying the pixel data associated with t...">must_lock()</a></code> returns <code>false</code>.</p>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a6eb977f39a3c02f96f2b374065e2fa4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6eb977f39a3c02f96f2b374065e2fa4a">&#9670;&nbsp;</a></span>must_lock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::must_lock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the surface must be locked before modifying the pixel data associated with the surface. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the surface must be locked before modification; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a77799830079209541a217ccae7caed60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77799830079209541a217ccae7caed60">&#9670;&nbsp;</a></span>set_pixel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::set_pixel </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__math.html#ga482cd24468a5a74647742e69379566c7">ipoint</a>&#160;</td>
+          <td class="paramname"><em>pixel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1color.html">color</a> &amp;&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the color of the pixel at the specified coordinate. </p>
+<p>This function has no effect if the coordinate is out-of-bounds or if something goes wrong when attempting to modify the pixel data.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pixel</td><td>the pixel that will be changed. </td></tr>
+    <tr><td class="paramname">color</td><td>the new color of the pixel.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="aac9d34835c6e22763b96613f9bd106f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac9d34835c6e22763b96613f9bd106f7">&#9670;&nbsp;</a></span>set_alpha()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::set_alpha </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>&#160;</td>
+          <td class="paramname"><em>alpha</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the alpha component modulation value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alpha</td><td>the new alpha component value, in the range [0, 255].</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="aa80a728b37ae7d5b62aa2c76968c5170"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa80a728b37ae7d5b62aa2c76968c5170">&#9670;&nbsp;</a></span>set_color_mod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::set_color_mod </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1color.html">color</a> &amp;&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the color modulation that will be used by the surface. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>the color that represents the color modulation that will be used.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a5df7abc1164e8b87cdfb7012536afb3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5df7abc1164e8b87cdfb7012536afb3f">&#9670;&nbsp;</a></span>set_blend_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::set_blend_mode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__video.html#ga98236ba30ab70fd25e54bf8c5c70dd8f">blend_mode</a>&#160;</td>
+          <td class="paramname"><em>mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the blend mode that will be used by the surface. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>the blend mode that will be used.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a09e5d79f2a9adac5509c9cb3a87ae6ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09e5d79f2a9adac5509c9cb3a87ae6ea">&#9670;&nbsp;</a></span>set_rle_hint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::set_rle_hint </td>
+          <td>(</td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>enabled</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the value of the RLE acceleration hint. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enabled</td><td><code>true</code> if the RLE optimization hint should be enabled; <code>false</code> otherwise.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if nothing went wrong; <code>failure</code> otherwise.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classcen_1_1basic__surface.html#a22c6de2ac4c30d71e0473aee926baf49" title="Indicates whether or not the surface is RLE-enabled.">is_rle_enabled()</a></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="acce9a80a2fca412f348d836f4916aa8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acce9a80a2fca412f348d836f4916aa8e">&#9670;&nbsp;</a></span>alpha()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::alpha </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the alpha component modulation of the surface. </p>
+<dl class="section return"><dt>Returns</dt><dd>the alpha modulation value, in the range [0, 255].</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a4569e0ebb116ee55b086c6cfe09a6485"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4569e0ebb116ee55b086c6cfe09a6485">&#9670;&nbsp;</a></span>color_mod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::color_mod </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="classcen_1_1color.html">color</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the color modulation of the surface. </p>
+<dl class="section return"><dt>Returns</dt><dd>a color that represents the color modulation of the surface.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="adbf654894b673deba047222085e60ef0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbf654894b673deba047222085e60ef0">&#9670;&nbsp;</a></span>get_blend_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::get_blend_mode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__video.html#ga98236ba30ab70fd25e54bf8c5c70dd8f">blend_mode</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the blend mode that is being used by the surface. </p>
+<dl class="section return"><dt>Returns</dt><dd>the blend mode that the surface uses.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a3e0c9fec8abc8432cf8b21e7658205a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e0c9fec8abc8432cf8b21e7658205a1">&#9670;&nbsp;</a></span>convert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::convert </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a>&#160;</td>
+          <td class="paramname"><em>format</em></td><td>)</td>
+          <td> const -&gt; <a class="el" href="classcen_1_1basic__surface.html">basic_surface</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates and returns a surface based on this surface with the specified pixel format. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>the pixel format that will be used by the new surface.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a surface based on this surface with the specified pixel format.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classcen_1_1sdl__error.html" title="Represents an error related to the core SDL2 library.">sdl_error</a></td><td>if the surface cannot be created.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="af512bdb5f9c502f7a36a82c71daee4f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af512bdb5f9c502f7a36a82c71daee4f5">&#9670;&nbsp;</a></span>width()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::width </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; int
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the width of the surface. </p>
+<dl class="section return"><dt>Returns</dt><dd>the width of the surface.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a886977164cfce9bd7d02a5e7c5cc1d91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a886977164cfce9bd7d02a5e7c5cc1d91">&#9670;&nbsp;</a></span>height()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::height </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; int
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the height of the surface. </p>
+<dl class="section return"><dt>Returns</dt><dd>the height of the surface.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a07d6865a081e277e1ef58ec034f58110"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07d6865a081e277e1ef58ec034f58110">&#9670;&nbsp;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the size of the surface. </p>
+<dl class="section return"><dt>Returns</dt><dd>the size of the surface.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="acdc01c4b71c058488b05b6212115650b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdc01c4b71c058488b05b6212115650b">&#9670;&nbsp;</a></span>pitch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::pitch </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; int
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the pitch (the length of a row of pixels in bytes) of the surface. </p>
+<dl class="section return"><dt>Returns</dt><dd>the pitch of the surface.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a6ec59fc5cb6bc49d56d31f9197e12d3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ec59fc5cb6bc49d56d31f9197e12d3c">&#9670;&nbsp;</a></span>pixels() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::pixels </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; void*
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the pixel data of the surface. </p>
+<p>It's possible to modify the surface through the returned pointer.</p>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the pixel data of the surface.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a6c4ff44c8f442f02dc54e54fe6ba13db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c4ff44c8f442f02dc54e54fe6ba13db">&#9670;&nbsp;</a></span>pixels() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::pixels </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; const void*
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the pixel data of the surface. </p>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the pixel data of the surface.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="aa6a73306752b361c572e92c01632d27d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6a73306752b361c572e92c01632d27d">&#9670;&nbsp;</a></span>data() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; void*
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the pixel data of the surface. </p>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the pixel data of the surface.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="a07bcc0b9a1cfa1c1daee39770b151706"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07bcc0b9a1cfa1c1daee39770b151706">&#9670;&nbsp;</a></span>data() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; const void*
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the pixel data of the surface. </p>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the pixel data of the surface.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="a708a932081ba9743861ca06799b74828"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a708a932081ba9743861ca06799b74828">&#9670;&nbsp;</a></span>format_info()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::format_info </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__video.html#ga586e518042ab187767897265d8162693">pixel_format_info_handle</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the pixel format info associated with the surface. </p>
+<dl class="section return"><dt>Returns</dt><dd>the associated pixel format info.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a9c69cbc4fc9e47ecd2ed13010e8dcae0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c69cbc4fc9e47ecd2ed13010e8dcae0">&#9670;&nbsp;</a></span>clip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::clip </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__math.html#gac693dcf48436f48e7aa257db423e1bdc">irect</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the clipping information associated with the surface. </p>
+<dl class="section return"><dt>Returns</dt><dd>the clipping information associated with the surface.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a22c6de2ac4c30d71e0473aee926baf49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22c6de2ac4c30d71e0473aee926baf49">&#9670;&nbsp;</a></span>is_rle_enabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::is_rle_enabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the surface is RLE-enabled. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the surface is RLE-enabled; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="ac2ce725baa7378a8f0adfffd4a9741d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2ce725baa7378a8f0adfffd4a9741d7">&#9670;&nbsp;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; SDL_Surface*
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the associated <code>SDL_Surface</code>. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Don't take ownership of the returned pointer!</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the associated <code>SDL_Surface</code>.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a993392c9e604905e384e27e4b5ae16a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a993392c9e604905e384e27e4b5ae16a8">&#9670;&nbsp;</a></span>operator bool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::operator bool </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not a surface handle holds a non-null pointer. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">BB</td><td>dummy parameter for SFINAE.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the surface handle holds a non-null pointer; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="aa3d042fbffbc6528350876f96f54c50f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3d042fbffbc6528350876f96f54c50f">&#9670;&nbsp;</a></span>operator SDL_Surface *()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::operator SDL_Surface * </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts to <code>SDL_Surface*</code>. </p>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the associated <code>SDL_Surface</code>.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a4a3be76a4bfc4d77704ed784764a92c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a3be76a4bfc4d77704ed784764a92c6">&#9670;&nbsp;</a></span>operator const SDL_Surface *()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcen_1_1basic__surface.html">cen::basic_surface</a>&lt; T &gt;::operator const SDL_Surface * </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts to <code>const SDL_Surface*</code>. </p>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the associated <code>SDL_Surface</code>.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
 </div>

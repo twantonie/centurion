@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -149,133 +149,122 @@ $(document).ready(function(){initNavTree('key__modifier_8hpp_source.html',''); i
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a><span class="keyword">&gt;</span>(~<a class="code" href="group__core.html#ga1b0d65474648eaf9b1bfe720e037eb9c">to_underlying</a>(mods));</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
-<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="group__input.html#ga657b842232d087c20d3aede0e6054dc0">  125</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__input.html#ga657b842232d087c20d3aede0e6054dc0">operator|</a>(<span class="keyword">const</span> <a class="code" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a> a, <span class="keyword">const</span> <a class="code" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a> b) noexcept</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    -&gt; <a class="code" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;{</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a><span class="keyword">&gt;</span>(<a class="code" href="group__core.html#ga1b0d65474648eaf9b1bfe720e037eb9c">to_underlying</a>(a) | <a class="code" href="group__core.html#ga1b0d65474648eaf9b1bfe720e037eb9c">to_underlying</a>(b));</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;}</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="group__input.html#gab851306c400a905d06b818c564687684">  141</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__input.html#gab851306c400a905d06b818c564687684">operator&amp;</a>(<span class="keyword">const</span> <a class="code" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a> a, <span class="keyword">const</span> <a class="code" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a> b) noexcept</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    -&gt; <a class="code" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;{</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a><span class="keyword">&gt;</span>(<a class="code" href="group__core.html#ga1b0d65474648eaf9b1bfe720e037eb9c">to_underlying</a>(a) &amp; <a class="code" href="group__core.html#ga1b0d65474648eaf9b1bfe720e037eb9c">to_underlying</a>(b));</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;}</div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="group__input.html#ga657b842232d087c20d3aede0e6054dc0">  125</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__input.html#ga657b842232d087c20d3aede0e6054dc0">operator|</a>(<span class="keyword">const</span> <a class="code" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a> a, <span class="keyword">const</span> <a class="code" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a> b) noexcept -&gt; <a class="code" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;{</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a><span class="keyword">&gt;</span>(<a class="code" href="group__core.html#ga1b0d65474648eaf9b1bfe720e037eb9c">to_underlying</a>(a) | <a class="code" href="group__core.html#ga1b0d65474648eaf9b1bfe720e037eb9c">to_underlying</a>(b));</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="group__input.html#gab851306c400a905d06b818c564687684">  140</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__input.html#gab851306c400a905d06b818c564687684">operator&amp;</a>(<span class="keyword">const</span> <a class="code" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a> a, <span class="keyword">const</span> <a class="code" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a> b) noexcept -&gt; <a class="code" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;{</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a><span class="keyword">&gt;</span>(<a class="code" href="group__core.html#ga1b0d65474648eaf9b1bfe720e037eb9c">to_underlying</a>(a) &amp; <a class="code" href="group__core.html#ga1b0d65474648eaf9b1bfe720e037eb9c">to_underlying</a>(b));</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;}</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
-<div class="line"><a name="l00175"></a><span class="lineno"><a class="line" href="group__audio.html#ga537dee2b6afe2477af4030b44f9dc071">  175</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(<span class="keyword">const</span> <a class="code" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a> mods) -&gt; std::string</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;{</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  <span class="keywordflow">if</span> (mods == key_mod::none)</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  {</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;none&quot;</span>;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  }</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno"><a class="line" href="group__audio.html#ga537dee2b6afe2477af4030b44f9dc071">  173</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(<span class="keyword">const</span> <a class="code" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a> mods) -&gt; std::string</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;{</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  <span class="keywordflow">if</span> (mods == key_mod::none) {</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;none&quot;</span>;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> mask = <a class="code" href="group__core.html#ga1b0d65474648eaf9b1bfe720e037eb9c">to_underlying</a>(mods);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  std::stringstream stream;</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> mask = <a class="code" href="group__core.html#ga1b0d65474648eaf9b1bfe720e037eb9c">to_underlying</a>(mods);</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  std::stringstream stream;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  <span class="keyword">auto</span> check = [&amp;stream, mask, count = 0](<span class="keyword">const</span> <a class="code" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a> <a class="code" href="group__audio.html#gga031d8555460da0d56819cb782b4716c3aad148a3ca8bd0ef3b48c52454c493ec5">mod</a>, <span class="keyword">const</span> <a class="code" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a> name) <span class="keyword">mutable</span> {</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordflow">if</span> (mask &amp; <a class="code" href="group__core.html#ga1b0d65474648eaf9b1bfe720e037eb9c">to_underlying</a>(<a class="code" href="group__audio.html#gga031d8555460da0d56819cb782b4716c3aad148a3ca8bd0ef3b48c52454c493ec5">mod</a>))</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    {</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;      <span class="keywordflow">if</span> (count != 0)</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;      {</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        stream &lt;&lt; <span class="charliteral">&#39;,&#39;</span>;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;      }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <span class="keyword">auto</span> check = [&amp;stream, mask, count = 0](<span class="keyword">const</span> <a class="code" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a> <a class="code" href="group__audio.html#gga031d8555460da0d56819cb782b4716c3aad148a3ca8bd0ef3b48c52454c493ec5">mod</a>, <span class="keyword">const</span> <a class="code" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a> name) <span class="keyword">mutable</span> {</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordflow">if</span> (mask &amp; <a class="code" href="group__core.html#ga1b0d65474648eaf9b1bfe720e037eb9c">to_underlying</a>(<a class="code" href="group__audio.html#gga031d8555460da0d56819cb782b4716c3aad148a3ca8bd0ef3b48c52454c493ec5">mod</a>)) {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;      <span class="keywordflow">if</span> (count != 0) {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        stream &lt;&lt; <span class="charliteral">&#39;,&#39;</span>;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;      }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;      stream &lt;&lt; name;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;      ++count;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  };</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      stream &lt;&lt; name;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;      ++count;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    }</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  };</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  check(<a class="code" href="group__input.html#ga510a3e12aaa1da461a1a346c771ac86a">key_mod::left_shift</a>, <span class="stringliteral">&quot;left_shift&quot;</span>);</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  check(<a class="code" href="group__input.html#gadb1dac060f2e1f2016b93ca9b49f91d7">key_mod::right_shift</a>, <span class="stringliteral">&quot;right_shift&quot;</span>);</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  check(<a class="code" href="group__input.html#ga955d68090ec2525341e89eccf2e449e5">key_mod::left_ctrl</a>, <span class="stringliteral">&quot;left_ctrl&quot;</span>);</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  check(<a class="code" href="group__input.html#gad2dbef8681b9562261eec0fc514c65bb">key_mod::right_ctrl</a>, <span class="stringliteral">&quot;right_ctrl&quot;</span>);</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  check(<a class="code" href="group__input.html#ga131acc5ef72101e291e776a13095fbf1">key_mod::left_alt</a>, <span class="stringliteral">&quot;left_alt&quot;</span>);</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  check(<a class="code" href="group__input.html#ga2df22e8baa923f7db0c4ba3dcb99e9cc">key_mod::right_alt</a>, <span class="stringliteral">&quot;right_alt&quot;</span>);</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  check(<a class="code" href="group__input.html#ga3773bd64fd692fa1ba48b429a1f80985">key_mod::left_gui</a>, <span class="stringliteral">&quot;left_gui&quot;</span>);</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  check(<a class="code" href="group__input.html#gae981533c9089c2dc25611dbbe95740d5">key_mod::right_gui</a>, <span class="stringliteral">&quot;right_gui&quot;</span>);</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  check(key_mod::num, <span class="stringliteral">&quot;num&quot;</span>);</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  check(key_mod::caps, <span class="stringliteral">&quot;caps&quot;</span>);</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  check(key_mod::mode, <span class="stringliteral">&quot;mode&quot;</span>);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  check(<a class="code" href="group__input.html#ga510a3e12aaa1da461a1a346c771ac86a">key_mod::left_shift</a>, <span class="stringliteral">&quot;left_shift&quot;</span>);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  check(<a class="code" href="group__input.html#gadb1dac060f2e1f2016b93ca9b49f91d7">key_mod::right_shift</a>, <span class="stringliteral">&quot;right_shift&quot;</span>);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  check(<a class="code" href="group__input.html#ga955d68090ec2525341e89eccf2e449e5">key_mod::left_ctrl</a>, <span class="stringliteral">&quot;left_ctrl&quot;</span>);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  check(<a class="code" href="group__input.html#gad2dbef8681b9562261eec0fc514c65bb">key_mod::right_ctrl</a>, <span class="stringliteral">&quot;right_ctrl&quot;</span>);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  check(<a class="code" href="group__input.html#ga131acc5ef72101e291e776a13095fbf1">key_mod::left_alt</a>, <span class="stringliteral">&quot;left_alt&quot;</span>);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  check(<a class="code" href="group__input.html#ga2df22e8baa923f7db0c4ba3dcb99e9cc">key_mod::right_alt</a>, <span class="stringliteral">&quot;right_alt&quot;</span>);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  check(<a class="code" href="group__input.html#ga3773bd64fd692fa1ba48b429a1f80985">key_mod::left_gui</a>, <span class="stringliteral">&quot;left_gui&quot;</span>);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  check(<a class="code" href="group__input.html#gae981533c9089c2dc25611dbbe95740d5">key_mod::right_gui</a>, <span class="stringliteral">&quot;right_gui&quot;</span>);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  check(key_mod::num, <span class="stringliteral">&quot;num&quot;</span>);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  check(key_mod::caps, <span class="stringliteral">&quot;caps&quot;</span>);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  check(key_mod::mode, <span class="stringliteral">&quot;mode&quot;</span>);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  <span class="keywordflow">return</span> stream.str();</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;}</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  <span class="keywordflow">return</span> stream.str();</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;}</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
-<div class="line"><a name="l00234"></a><span class="lineno"><a class="line" href="group__audio.html#gae6515695d9a49e65a83666ed9abeeb8d">  234</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">operator&lt;&lt;</a>(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a> mods) -&gt; std::ostream&amp;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;{</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <span class="keywordflow">return</span> stream &lt;&lt; <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(mods);</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;}</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="keyword">namespace </span>detail {</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> is_active(<span class="keyword">const</span> <a class="code" href="group__input.html#ga1e670ac17f14b9de2ee7391e1c5630c2">key_mod</a> modifiers,</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                                    <span class="keyword">const</span> <a class="code" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a> currentMask) noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;{</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  <span class="keywordflow">if</span> (modifiers == key_mod::none)</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  {</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keywordflow">return</span> !currentMask;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  }</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;  {</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordflow">return</span> currentMask &amp; <a class="code" href="group__core.html#ga1b0d65474648eaf9b1bfe720e037eb9c">to_underlying</a>(modifiers);</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  }</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;}</div>
+<div class="line"><a name="l00229"></a><span class="lineno"><a class="line" href="group__audio.html#gae6515695d9a49e65a83666ed9abeeb8d">  229</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">operator&lt;&lt;</a>(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code" href="group__input.html#ga2101a411ac6025302800a78f9c54fce4">key_mod</a> mods) -&gt; std::ostream&amp;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;{</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  <span class="keywordflow">return</span> stream &lt;&lt; <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(mods);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;}</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="keyword">namespace </span>detail {</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> is_active(<span class="keyword">const</span> <a class="code" href="group__input.html#ga1e670ac17f14b9de2ee7391e1c5630c2">key_mod</a> modifiers, <span class="keyword">const</span> <a class="code" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a> currentMask) noexcept</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;{</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  <span class="keywordflow">if</span> (modifiers == key_mod::none) {</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordflow">return</span> !currentMask;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  }</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordflow">return</span> currentMask &amp; <a class="code" href="group__core.html#ga1b0d65474648eaf9b1bfe720e037eb9c">to_underlying</a>(modifiers);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  }</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;}</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> is_only_active(<span class="keyword">const</span> <a class="code" href="group__input.html#ga1e670ac17f14b9de2ee7391e1c5630c2">key_mod</a> modifiers,</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                                         <span class="keyword">const</span> <a class="code" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a> currentMask) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;{</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  <span class="keywordflow">if</span> (modifiers == key_mod::none) {</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keywordflow">return</span> !currentMask;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  }</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> is_only_active(<span class="keyword">const</span> <a class="code" href="group__input.html#ga1e670ac17f14b9de2ee7391e1c5630c2">key_mod</a> modifiers,</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                                         <span class="keyword">const</span> <a class="code" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a> currentMask) noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;{</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  <span class="keywordflow">if</span> (modifiers == key_mod::none)</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  {</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keywordflow">return</span> !currentMask;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  }</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> mask = <a class="code" href="group__core.html#ga1b0d65474648eaf9b1bfe720e037eb9c">to_underlying</a>(modifiers);</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> hits = currentMask &amp; mask;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160; </div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  <span class="keywordflow">if</span> (hits != mask)</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  {</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;  <span class="comment">// The specified modifiers were a combo that wasn&#39;t fully active</span></div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  }</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  {</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> others = currentMask &amp; ~hits;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordflow">return</span> hits &amp;&amp; !others;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  }</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;}</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160; </div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> is_only_any_of_active(<span class="keyword">const</span> <a class="code" href="group__input.html#ga1e670ac17f14b9de2ee7391e1c5630c2">key_mod</a> modifiers,</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                                                <span class="keyword">const</span> <a class="code" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a> currentMask) noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;{</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;  <span class="keywordflow">if</span> (modifiers == key_mod::none)</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  {</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="keywordflow">return</span> !currentMask;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;  }</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> mask = <a class="code" href="group__core.html#ga1b0d65474648eaf9b1bfe720e037eb9c">to_underlying</a>(modifiers);</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> hits = currentMask &amp; mask;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> others = currentMask &amp; ~hits;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;  <span class="keywordflow">return</span> hits &amp;&amp; !others;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;}</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160; </div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;}  <span class="comment">// namespace detail</span></div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160; </div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;}  <span class="comment">// namespace cen</span></div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160; </div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_KEY_MODIFIER_HEADER</span></div>
-<div class="ttc" id="agroup__audio_html_ga83f366781618f05bf8bcb60c753e9ced"><div class="ttname"><a href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">cen::operator&lt;&lt;</a></div><div class="ttdeci">auto operator&lt;&lt;(std::ostream &amp;stream, const fade_status status) -&gt; std::ostream &amp;</div><div class="ttdoc">Prints a textual representation of a fade status enumerator.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:86</div></div>
-<div class="ttc" id="agroup__audio_html_ga9ebd3f26fcc0f89398ff473b06e9dcbe"><div class="ttname"><a href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">cen::to_string</a></div><div class="ttdeci">constexpr auto to_string(const fade_status status) -&gt; std::string_view</div><div class="ttdoc">Returns a textual version of the supplied fade status.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:51</div></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> mask = <a class="code" href="group__core.html#ga1b0d65474648eaf9b1bfe720e037eb9c">to_underlying</a>(modifiers);</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> hits = currentMask &amp; mask;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  <span class="keywordflow">if</span> (hits != mask) {</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;  <span class="comment">// The specified modifiers were a combo that wasn&#39;t fully active</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  }</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> others = currentMask &amp; ~hits;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordflow">return</span> hits &amp;&amp; !others;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;  }</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;}</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160; </div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> is_only_any_of_active(<span class="keyword">const</span> <a class="code" href="group__input.html#ga1e670ac17f14b9de2ee7391e1c5630c2">key_mod</a> modifiers,</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                                                <span class="keyword">const</span> <a class="code" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a> currentMask) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;{</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  <span class="keywordflow">if</span> (modifiers == key_mod::none) {</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordflow">return</span> !currentMask;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  }</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> mask = <a class="code" href="group__core.html#ga1b0d65474648eaf9b1bfe720e037eb9c">to_underlying</a>(modifiers);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> hits = currentMask &amp; mask;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> others = currentMask &amp; ~hits;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  <span class="keywordflow">return</span> hits &amp;&amp; !others;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;}</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;}  <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160; </div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160; </div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;}  <span class="comment">// namespace cen</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_KEY_MODIFIER_HEADER</span></div>
+<div class="ttc" id="agroup__audio_html_ga83f366781618f05bf8bcb60c753e9ced"><div class="ttname"><a href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">cen::operator&lt;&lt;</a></div><div class="ttdeci">auto operator&lt;&lt;(std::ostream &amp;stream, const fade_status status) -&gt; std::ostream &amp;</div><div class="ttdoc">Prints a textual representation of a fade status enumerator.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:98</div></div>
+<div class="ttc" id="agroup__audio_html_ga9ebd3f26fcc0f89398ff473b06e9dcbe"><div class="ttname"><a href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">cen::to_string</a></div><div class="ttdeci">constexpr auto to_string(const fade_status status) -&gt; std::string_view</div><div class="ttdoc">Returns a textual version of the supplied fade status.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:64</div></div>
 <div class="ttc" id="agroup__audio_html_gga031d8555460da0d56819cb782b4716c3aad148a3ca8bd0ef3b48c52454c493ec5"><div class="ttname"><a href="group__audio.html#gga031d8555460da0d56819cb782b4716c3aad148a3ca8bd0ef3b48c52454c493ec5">cen::music_type::mod</a></div><div class="ttdeci">@ mod</div></div>
 <div class="ttc" id="agroup__core_html_ga1b0d65474648eaf9b1bfe720e037eb9c"><div class="ttname"><a href="group__core.html#ga1b0d65474648eaf9b1bfe720e037eb9c">cen::to_underlying</a></div><div class="ttdeci">constexpr auto to_underlying(const Enum value) noexcept -&gt; std::underlying_type_t&lt; Enum &gt;</div><div class="ttdoc">Converts an enum value to an integral value using the underlying type.</div><div class="ttdef"><b>Definition:</b> to_underlying.hpp:24</div></div>
 <div class="ttc" id="agroup__core_html_ga4c6f8bc4ac32726f877ba95d65e5f67f"><div class="ttname"><a href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">cen::u16</a></div><div class="ttdeci">Uint16 u16</div><div class="ttdoc">Alias for a 16-bit unsigned integer.</div><div class="ttdef"><b>Definition:</b> integers.hpp:31</div></div>
@@ -289,7 +278,7 @@ $(document).ready(function(){initNavTree('key__modifier_8hpp_source.html',''); i
 <div class="ttc" id="agroup__input_html_ga657b842232d087c20d3aede0e6054dc0"><div class="ttname"><a href="group__input.html#ga657b842232d087c20d3aede0e6054dc0">cen::operator|</a></div><div class="ttdeci">constexpr auto operator|(const key_mod a, const key_mod b) noexcept -&gt; key_mod</div><div class="ttdoc">Combines two groups of modifiers by applying bitwise OR.</div><div class="ttdef"><b>Definition:</b> key_modifier.hpp:125</div></div>
 <div class="ttc" id="agroup__input_html_ga955d68090ec2525341e89eccf2e449e5"><div class="ttname"><a href="group__input.html#ga955d68090ec2525341e89eccf2e449e5">cen::keycodes::left_ctrl</a></div><div class="ttdeci">constexpr key_code left_ctrl</div><div class="ttdoc">Represents the left &quot;CTRL&quot; key.</div><div class="ttdef"><b>Definition:</b> keycodes.hpp:482</div></div>
 <div class="ttc" id="agroup__input_html_gaaf5856158fec3d182a61f9a121e8b996"><div class="ttname"><a href="group__input.html#gaaf5856158fec3d182a61f9a121e8b996">cen::operator~</a></div><div class="ttdeci">constexpr auto operator~(const key_mod mods) noexcept -&gt; key_mod</div><div class="ttdoc">Returns the bitwise negation of the supplied modifiers.</div><div class="ttdef"><b>Definition:</b> key_modifier.hpp:110</div></div>
-<div class="ttc" id="agroup__input_html_gab851306c400a905d06b818c564687684"><div class="ttname"><a href="group__input.html#gab851306c400a905d06b818c564687684">cen::operator&amp;</a></div><div class="ttdeci">constexpr auto operator&amp;(const key_mod a, const key_mod b) noexcept -&gt; key_mod</div><div class="ttdoc">Combines two groups of modifiers by applying bitwise AND.</div><div class="ttdef"><b>Definition:</b> key_modifier.hpp:141</div></div>
+<div class="ttc" id="agroup__input_html_gab851306c400a905d06b818c564687684"><div class="ttname"><a href="group__input.html#gab851306c400a905d06b818c564687684">cen::operator&amp;</a></div><div class="ttdeci">constexpr auto operator&amp;(const key_mod a, const key_mod b) noexcept -&gt; key_mod</div><div class="ttdoc">Combines two groups of modifiers by applying bitwise AND.</div><div class="ttdef"><b>Definition:</b> key_modifier.hpp:140</div></div>
 <div class="ttc" id="agroup__input_html_gac1775a18fee2f57d0d884a3672622157"><div class="ttname"><a href="group__input.html#gac1775a18fee2f57d0d884a3672622157">cen::set_modifiers</a></div><div class="ttdeci">void set_modifiers(const key_mod mods) noexcept</div><div class="ttdoc">Sets the current key modifier flags.</div><div class="ttdef"><b>Definition:</b> key_modifier.hpp:79</div></div>
 <div class="ttc" id="agroup__input_html_gad2dbef8681b9562261eec0fc514c65bb"><div class="ttname"><a href="group__input.html#gad2dbef8681b9562261eec0fc514c65bb">cen::keycodes::right_ctrl</a></div><div class="ttdeci">constexpr key_code right_ctrl</div><div class="ttdoc">Represents the right &quot;CTRL&quot; key.</div><div class="ttdef"><b>Definition:</b> keycodes.hpp:489</div></div>
 <div class="ttc" id="agroup__input_html_gadb1dac060f2e1f2016b93ca9b49f91d7"><div class="ttname"><a href="group__input.html#gadb1dac060f2e1f2016b93ca9b49f91d7">cen::keycodes::right_shift</a></div><div class="ttdeci">constexpr key_code right_shift</div><div class="ttdoc">Represents the right &quot;Shift&quot; key.</div><div class="ttdef"><b>Definition:</b> keycodes.hpp:475</div></div>

@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -238,6 +238,36 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="aa45ac77da17eea46a8cb0c058be5a633"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa45ac77da17eea46a8cb0c058be5a633">&#9670;&nbsp;</a></span>try_acquire()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::semaphore::try_acquire </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__thread.html#ga81e5eda2a43cc39dee8bb8d60cff70d3">lock_status</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Attempts to acquire a token from the semaphore. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if a token was acquired; <code>timed_out</code> if the thread would've been blocked; <code>error</code> if something goes wrong.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
 <a id="a3170445f1a0b5f6cbf6094e924f169d8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3170445f1a0b5f6cbf6094e924f169d8">&#9670;&nbsp;</a></span>release()</h2>
 
@@ -294,36 +324,6 @@ Public Member Functions</h2></td></tr>
 
 <p>Returns the amount of available tokens. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current amount of available tokens.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="aa45ac77da17eea46a8cb0c058be5a633"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa45ac77da17eea46a8cb0c058be5a633">&#9670;&nbsp;</a></span>try_acquire()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::semaphore::try_acquire </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__thread.html#ga81e5eda2a43cc39dee8bb8d60cff70d3">lock_status</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Attempts to acquire a token from the semaphore. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>success</code> if a token was acquired; <code>timed_out</code> if the thread would've been blocked; <code>error</code> if something goes wrong.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>

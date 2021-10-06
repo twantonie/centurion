@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -346,10 +346,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ga31d85004eca73fd0a2ed048c014460b8"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__hints.html#ga31d85004eca73fd0a2ed048c014460b8">cen::add_hint_callback</a> (SDL_HintCallback fun, UserData *userData=nullptr) noexcept -&gt; <a class="el" href="classcen_1_1hint__callback.html">hint_callback</a>&lt; Hint, UserData &gt;</td></tr>
 <tr class="memdesc:ga31d85004eca73fd0a2ed048c014460b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a callback to observe changes of the value of the specified hint.  <a href="group__hints.html#ga31d85004eca73fd0a2ed048c014460b8">More...</a><br /></td></tr>
 <tr class="separator:ga31d85004eca73fd0a2ed048c014460b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac4c1198078134628b3b1ad34050bb870"><td class="memTemplParams" colspan="2">template&lt;typename Hint , typename UserData  = void, is_hint_callback&lt; Hint, UserData &gt; Callable&gt; </td></tr>
-<tr class="memitem:gac4c1198078134628b3b1ad34050bb870"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__hints.html#gac4c1198078134628b3b1ad34050bb870">cen::add_hint_callback_ex</a> (Callable fun, UserData *data=nullptr) -&gt; <a class="el" href="classcen_1_1hint__callback.html">hint_callback</a>&lt; Hint, UserData &gt;</td></tr>
-<tr class="memdesc:gac4c1198078134628b3b1ad34050bb870"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a callback to observe changes of the value of the specified hint.  <a href="group__hints.html#gac4c1198078134628b3b1ad34050bb870">More...</a><br /></td></tr>
-<tr class="separator:gac4c1198078134628b3b1ad34050bb870"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadc1ff4eec8603c6fff6f703ffa6a170d"><td class="memTemplParams" colspan="2">template&lt;typename Hint , typename UserData  = void, is_hint_callback&lt; Hint, UserData &gt; Callable&gt; </td></tr>
+<tr class="memitem:gadc1ff4eec8603c6fff6f703ffa6a170d"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__hints.html#gadc1ff4eec8603c6fff6f703ffa6a170d">cen::add_hint_callback_ex</a> ([[maybe_unused]] Callable fun, UserData *data=nullptr) -&gt; <a class="el" href="classcen_1_1hint__callback.html">hint_callback</a>&lt; Hint, UserData &gt;</td></tr>
+<tr class="memdesc:gadc1ff4eec8603c6fff6f703ffa6a170d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a callback to observe changes of the value of the specified hint.  <a href="group__hints.html#gadc1ff4eec8603c6fff6f703ffa6a170d">More...</a><br /></td></tr>
+<tr class="separator:gadc1ff4eec8603c6fff6f703ffa6a170d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga072a74d2b5960410afb5c7ea94bc5ba5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__hints.html#ga072a74d2b5960410afb5c7ea94bc5ba5">cen::clear_hints</a> () noexcept</td></tr>
 <tr class="memdesc:ga072a74d2b5960410afb5c7ea94bc5ba5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears all stored hints.  <a href="group__hints.html#ga072a74d2b5960410afb5c7ea94bc5ba5">More...</a><br /></td></tr>
 <tr class="separator:ga072a74d2b5960410afb5c7ea94bc5ba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -410,189 +410,47 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga31d85004eca73fd0a2ed048c014460b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga31d85004eca73fd0a2ed048c014460b8">&#9670;&nbsp;</a></span>add_hint_callback()</h2>
+<a id="ga4016262e0af2e83118015dd5cb2da85b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4016262e0af2e83118015dd5cb2da85b">&#9670;&nbsp;</a></span>to_string()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename Hint , typename UserData  = void&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::add_hint_callback </td>
+          <td class="memname">constexpr auto cen::to_string </td>
           <td>(</td>
-          <td class="paramtype">SDL_HintCallback&#160;</td>
-          <td class="paramname"><em>fun</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">UserData *&#160;</td>
-          <td class="paramname"><em>userData</em> = <code>nullptr</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; <a class="el" href="classcen_1_1hint__callback.html">hint_callback</a>&lt;Hint, UserData&gt;
+          <td class="paramtype">const <a class="el" href="group__hints.html#ga93afe9d42c61a18b1380d377bba1f3a8">hint_priority</a>&#160;</td>
+          <td class="paramname"><em>priority</em></td><td>)</td>
+          <td> -&gt; std::string_view
 </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Adds a callback to observe changes of the value of the specified hint. </p>
-<p>A callback handle object is returned, which can be used to easily disconnect the callback later. This function can be used with any function object that is stateless, such as traditional function pointers and lambdas. The simplest way to add a callback is with a lambda and no explicit user data.</p>
-<dl class="section note"><dt>Note</dt><dd>The callback will be immediately invoked with the current value of the hint.</dd></dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Hint</td><td>should one of the many hint types defined in this header. However, all it requires is that the type provides a static function that returns a <code>str</code>. </td></tr>
-    <tr><td class="paramname">UserData</td><td>the type of the user data, defaults to void.</td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Returns a textual version of the supplied hint priority. </p>
+<p>This function returns a string that mirrors the name of the enumerator, e.g. <code>to_string(hint_priority::low) == "low"</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fun</td><td>the function object that will be invoked when the hint is updated. The signature should be <code>void(void*, str, str, str)</code>. </td></tr>
-    <tr><td class="paramname">userData</td><td>the user data to associate with the callback.</td></tr>
+    <tr><td class="paramname">priority</td><td>the enumerator that will be converted.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>a handle to the added callback.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="group__hints.html#gac4c1198078134628b3b1ad34050bb870" title="Adds a callback to observe changes of the value of the specified hint.">add_hint_callback_ex()</a></code></dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.1.0 </dd></dl>
-
-</div>
-</div>
-<a id="gac4c1198078134628b3b1ad34050bb870"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac4c1198078134628b3b1ad34050bb870">&#9670;&nbsp;</a></span>add_hint_callback_ex()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Hint , typename UserData  = void, is_hint_callback&lt; Hint, UserData &gt; Callable&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::add_hint_callback_ex </td>
-          <td>(</td>
-          <td class="paramtype">Callable&#160;</td>
-          <td class="paramname"><em>fun</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">UserData *&#160;</td>
-          <td class="paramname"><em>data</em> = <code>nullptr</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; <a class="el" href="classcen_1_1hint__callback.html">hint_callback</a>&lt;Hint, UserData&gt;
-</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Adds a callback to observe changes of the value of the specified hint. </p>
-<p>This function returns a callback handle object, which can be used to easily disconnect the callback at a later time.</p>
-<p>The signature of the callable should be equivalent to <code>void(UserData*, str, Hint::value_type, Hint::value_type)</code>.</p>
-<dl class="section note"><dt>Note</dt><dd>This function can be used with any function object that is stateless, such as traditional function pointers or non-capturing lambdas.</dd></dl>
-<p>The following is an example of how usage of this function might look. </p><div class="fragment"><div class="line"><span class="keyword">auto</span> callable = [](<span class="keywordtype">int</span>* data,</div>
-<div class="line">                   <a class="code" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">cen::str</a> <a class="code" href="namespacecen_1_1screen.html#acf04f476cf206af9f10ff01f1190521b">name</a>,</div>
-<div class="line">                   <a class="code" href="classcen_1_1hint_1_1enum__hint.html#a1a78f3a4da740037eeecd6f6c8c36de4">cen::hint::render_driver::value_type</a> previous,</div>
-<div class="line">                   <a class="code" href="classcen_1_1hint_1_1enum__hint.html#a1a78f3a4da740037eeecd6f6c8c36de4">cen::hint::render_driver::value_type</a> current) {</div>
-<div class="line">  <span class="comment">// Do stuff when the value of the hint is updated...</span></div>
-<div class="line">};</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> foo = 42;</div>
-<div class="line"><span class="keyword">auto</span> handle = cen::add_hint_callback_ex&lt;render_driver&gt;(callable, &amp;foo);</div>
-<div class="ttc" id="aclasscen_1_1hint_1_1enum__hint_html_a1a78f3a4da740037eeecd6f6c8c36de4"><div class="ttname"><a href="classcen_1_1hint_1_1enum__hint.html#a1a78f3a4da740037eeecd6f6c8c36de4">cen::hint::enum_hint&lt; render_driver &gt;::value_type</a></div><div class="ttdeci">value value_type</div><div class="ttdef"><b>Definition:</b> enum_hint.hpp:185</div></div>
-<div class="ttc" id="agroup__core_html_ga4e8103830e67a437b6c50dce918d0d8a"><div class="ttname"><a href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">cen::str</a></div><div class="ttdeci">const char * str</div><div class="ttdoc">Alias for a C-style string.</div><div class="ttdef"><b>Definition:</b> str.hpp:16</div></div>
-<div class="ttc" id="anamespacecen_1_1screen_html_acf04f476cf206af9f10ff01f1190521b"><div class="ttname"><a href="namespacecen_1_1screen.html#acf04f476cf206af9f10ff01f1190521b">cen::screen::name</a></div><div class="ttdeci">auto name(const int index=0) noexcept -&gt; str</div><div class="ttdoc">Returns the name of a display.</div><div class="ttdef"><b>Definition:</b> screen.hpp:193</div></div>
-</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Hint</td><td>the hint type, i.e. one of the types defined in the <code><a class="el" href="namespacecen_1_1hint.html">cen::hint</a></code> namespace. </td></tr>
-    <tr><td class="paramname">UserData</td><td>the type of the optional user data. </td></tr>
-    <tr><td class="paramname">Callable</td><td>the type of the callable.</td></tr>
+<dl class="section return"><dt>Returns</dt><dd>a string that mirrors the name of the enumerator.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classcen_1_1cen__error.html" title="The base of all exceptions explicitly thrown by the library.">cen_error</a></td><td>if the enumerator is not recognized.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">fun</td><td>the function object that will be invoked when the hint is updated. </td></tr>
-    <tr><td class="paramname">data</td><td>optional user data, can safely be null.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>a callback handle.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="group__hints.html#ga31d85004eca73fd0a2ed048c014460b8" title="Adds a callback to observe changes of the value of the specified hint.">add_hint_callback()</a></code></dd></dl>
 <dl class="section since"><dt>Since</dt><dd>6.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga072a74d2b5960410afb5c7ea94bc5ba5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga072a74d2b5960410afb5c7ea94bc5ba5">&#9670;&nbsp;</a></span>clear_hints()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cen::clear_hints </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Clears all stored hints. </p>
-<dl class="section see"><dt>See also</dt><dd><code>SDL_ClearHints</code></dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.1.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga123fb2d0e903ce69aa94c598d8e2a3a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga123fb2d0e903ce69aa94c598d8e2a3a4">&#9670;&nbsp;</a></span>get_hint()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Hint &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::get_hint </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; std::optional&lt;typename Hint::value_type&gt;
-</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the current value of the specified hint. </p>
-<dl class="section note"><dt>Note</dt><dd>Many hints aren't actually set by default.</dd></dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Hint</td><td>the type of the Hint to obtain the value of.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the current value of the specified hint; <code>std::nullopt</code> if there is no value set for the hint.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.1.0 </dd></dl>
 
 </div>
 </div>
@@ -685,8 +543,165 @@ template&lt;typename Hint , hint_priority priority = hint_priority::normal, type
 
 </div>
 </div>
-<a id="ga4016262e0af2e83118015dd5cb2da85b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4016262e0af2e83118015dd5cb2da85b">&#9670;&nbsp;</a></span>to_string()</h2>
+<a id="ga123fb2d0e903ce69aa94c598d8e2a3a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga123fb2d0e903ce69aa94c598d8e2a3a4">&#9670;&nbsp;</a></span>get_hint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Hint &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::get_hint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; std::optional&lt;typename Hint::value_type&gt;
+</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the current value of the specified hint. </p>
+<dl class="section note"><dt>Note</dt><dd>Many hints aren't actually set by default.</dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Hint</td><td>the type of the Hint to obtain the value of.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the current value of the specified hint; <code>std::nullopt</code> if there is no value set for the hint.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.1.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga31d85004eca73fd0a2ed048c014460b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga31d85004eca73fd0a2ed048c014460b8">&#9670;&nbsp;</a></span>add_hint_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Hint , typename UserData  = void&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::add_hint_callback </td>
+          <td>(</td>
+          <td class="paramtype">SDL_HintCallback&#160;</td>
+          <td class="paramname"><em>fun</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UserData *&#160;</td>
+          <td class="paramname"><em>userData</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; <a class="el" href="classcen_1_1hint__callback.html">hint_callback</a>&lt;Hint, UserData&gt;
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds a callback to observe changes of the value of the specified hint. </p>
+<p>A callback handle object is returned, which can be used to easily disconnect the callback later. This function can be used with any function object that is stateless, such as traditional function pointers and lambdas. The simplest way to add a callback is with a lambda and no explicit user data.</p>
+<dl class="section note"><dt>Note</dt><dd>The callback will be immediately invoked with the current value of the hint.</dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Hint</td><td>should one of the many hint types defined in this header. However, all it requires is that the type provides a static function that returns a <code>str</code>. </td></tr>
+    <tr><td class="paramname">UserData</td><td>the type of the user data, defaults to void.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fun</td><td>the function object that will be invoked when the hint is updated. The signature should be <code>void(void*, str, str, str)</code>. </td></tr>
+    <tr><td class="paramname">userData</td><td>the user data to associate with the callback.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a handle to the added callback.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="group__hints.html#gadc1ff4eec8603c6fff6f703ffa6a170d" title="Adds a callback to observe changes of the value of the specified hint.">add_hint_callback_ex()</a></code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.1.0 </dd></dl>
+
+</div>
+</div>
+<a id="gadc1ff4eec8603c6fff6f703ffa6a170d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadc1ff4eec8603c6fff6f703ffa6a170d">&#9670;&nbsp;</a></span>add_hint_callback_ex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Hint , typename UserData  = void, is_hint_callback&lt; Hint, UserData &gt; Callable&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::add_hint_callback_ex </td>
+          <td>(</td>
+          <td class="paramtype">[[maybe_unused] ] Callable&#160;</td>
+          <td class="paramname"><em>fun</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UserData *&#160;</td>
+          <td class="paramname"><em>data</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; <a class="el" href="classcen_1_1hint__callback.html">hint_callback</a>&lt;Hint, UserData&gt;
+</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a callback to observe changes of the value of the specified hint. </p>
+<p>This function returns a callback handle object, which can be used to easily disconnect the callback at a later time.</p>
+<p>The signature of the callable should be equivalent to <code>void(UserData*, str, Hint::value_type, Hint::value_type)</code>.</p>
+<dl class="section note"><dt>Note</dt><dd>This function can be used with any function object that is stateless, such as traditional function pointers or non-capturing lambdas.</dd></dl>
+<p>The following is an example of how usage of this function might look. </p><div class="fragment"><div class="line"><span class="keyword">auto</span> callable = [](<span class="keywordtype">int</span>* data,</div>
+<div class="line">                   <a class="code" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">cen::str</a> <a class="code" href="namespacecen_1_1screen.html#acf04f476cf206af9f10ff01f1190521b">name</a>,</div>
+<div class="line">                   <a class="code" href="classcen_1_1hint_1_1enum__hint.html#a1a78f3a4da740037eeecd6f6c8c36de4">cen::hint::render_driver::value_type</a> previous,</div>
+<div class="line">                   <a class="code" href="classcen_1_1hint_1_1enum__hint.html#a1a78f3a4da740037eeecd6f6c8c36de4">cen::hint::render_driver::value_type</a> current) {</div>
+<div class="line">  <span class="comment">// Do stuff when the value of the hint is updated...</span></div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> foo = 42;</div>
+<div class="line"><span class="keyword">auto</span> handle = cen::add_hint_callback_ex&lt;render_driver&gt;(callable, &amp;foo);</div>
+<div class="ttc" id="aclasscen_1_1hint_1_1enum__hint_html_a1a78f3a4da740037eeecd6f6c8c36de4"><div class="ttname"><a href="classcen_1_1hint_1_1enum__hint.html#a1a78f3a4da740037eeecd6f6c8c36de4">cen::hint::enum_hint&lt; render_driver &gt;::value_type</a></div><div class="ttdeci">value value_type</div><div class="ttdef"><b>Definition:</b> enum_hint.hpp:185</div></div>
+<div class="ttc" id="agroup__core_html_ga4e8103830e67a437b6c50dce918d0d8a"><div class="ttname"><a href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">cen::str</a></div><div class="ttdeci">const char * str</div><div class="ttdoc">Alias for a C-style string.</div><div class="ttdef"><b>Definition:</b> str.hpp:16</div></div>
+<div class="ttc" id="anamespacecen_1_1screen_html_acf04f476cf206af9f10ff01f1190521b"><div class="ttname"><a href="namespacecen_1_1screen.html#acf04f476cf206af9f10ff01f1190521b">cen::screen::name</a></div><div class="ttdeci">auto name(const int index=0) noexcept -&gt; str</div><div class="ttdoc">Returns the name of a display.</div><div class="ttdef"><b>Definition:</b> screen.hpp:190</div></div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Hint</td><td>the hint type, i.e. one of the types defined in the <code><a class="el" href="namespacecen_1_1hint.html">cen::hint</a></code> namespace. </td></tr>
+    <tr><td class="paramname">UserData</td><td>the type of the optional user data. </td></tr>
+    <tr><td class="paramname">Callable</td><td>the type of the callable.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fun</td><td>the function object that will be invoked when the hint is updated. </td></tr>
+    <tr><td class="paramname">data</td><td>optional user data, can safely be null.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a callback handle.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="group__hints.html#ga31d85004eca73fd0a2ed048c014460b8" title="Adds a callback to observe changes of the value of the specified hint.">add_hint_callback()</a></code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga072a74d2b5960410afb5c7ea94bc5ba5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga072a74d2b5960410afb5c7ea94bc5ba5">&#9670;&nbsp;</a></span>clear_hints()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -695,37 +710,22 @@ template&lt;typename Hint , hint_priority priority = hint_priority::normal, type
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr auto cen::to_string </td>
+          <td class="memname">void cen::clear_hints </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__hints.html#ga93afe9d42c61a18b1380d377bba1f3a8">hint_priority</a>&#160;</td>
-          <td class="paramname"><em>priority</em></td><td>)</td>
-          <td> -&gt; std::string_view
-</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a textual version of the supplied hint priority. </p>
-<p>This function returns a string that mirrors the name of the enumerator, e.g. <code>to_string(hint_priority::low) == "low"</code>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">priority</td><td>the enumerator that will be converted.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>a string that mirrors the name of the enumerator.</dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classcen_1_1cen__error.html" title="The base of all exceptions explicitly thrown by the library.">cen_error</a></td><td>if the enumerator is not recognized.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>6.2.0 </dd></dl>
+<p>Clears all stored hints. </p>
+<dl class="section see"><dt>See also</dt><dd><code>SDL_ClearHints</code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.1.0 </dd></dl>
 
 </div>
 </div>
@@ -748,7 +748,7 @@ template&lt;typename T , typename Hint , typename UserData &gt; </div>
 <div class="line">                                                 <a class="code" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a>,</div>
 <div class="line">                                                 <span class="keyword">typename</span> Hint::value_type,</div>
 <div class="line">                                                 <span class="keyword">typename</span> Hint::value_type&gt;</div>
-<div class="ttc" id="agroup__core_html_gac33ac821a021a41d90284d479eb47386"><div class="ttname"><a href="group__core.html#gac33ac821a021a41d90284d479eb47386">cen::is_stateless_callable</a></div><div class="ttdeci">concept is_stateless_callable</div><div class="ttdef"><b>Definition:</b> is_stateless_callable.hpp:18</div></div>
+<div class="ttc" id="agroup__core_html_gac33ac821a021a41d90284d479eb47386"><div class="ttname"><a href="group__core.html#gac33ac821a021a41d90284d479eb47386">cen::is_stateless_callable</a></div><div class="ttdeci">concept is_stateless_callable</div><div class="ttdef"><b>Definition:</b> is_stateless_callable.hpp:16</div></div>
 </div><!-- fragment --><dl class="section since"><dt>Since</dt><dd>6.2.0 </dd></dl>
 
 </div>

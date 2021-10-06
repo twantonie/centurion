@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -107,77 +107,78 @@ $(document).ready(function(){initNavTree('mouse__wheel__direction_8hpp_source.ht
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecen.html">cen</a> {</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="group__event.html#ga854c0b92c2b3c8277b87d3a99196372d">   26</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="group__event.html#ga854c0b92c2b3c8277b87d3a99196372d">mouse_wheel_direction</a> : <a class="code" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <a class="code" href="group__event.html#gga854c0b92c2b3c8277b87d3a99196372dafea087517c26fadd409bd4b9dc642555">normal</a> = SDL_MOUSEWHEEL_NORMAL,   </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <a class="code" href="group__event.html#gga854c0b92c2b3c8277b87d3a99196372da5bef9da31993fe26a832c7d4b9630147">flipped</a> = SDL_MOUSEWHEEL_FLIPPED  </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="group__audio.html#gaf01bac9c7ce52ec39593b6a1f4c229ff">   49</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(<span class="keyword">const</span> <a class="code" href="group__event.html#ga854c0b92c2b3c8277b87d3a99196372d">mouse_wheel_direction</a> dir)</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    -&gt; std::string_view</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordflow">switch</span> (dir)</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__event.html#gga854c0b92c2b3c8277b87d3a99196372dafea087517c26fadd409bd4b9dc642555">mouse_wheel_direction::normal</a>:</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;normal&quot;</span>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__event.html#gga854c0b92c2b3c8277b87d3a99196372da5bef9da31993fe26a832c7d4b9630147">mouse_wheel_direction::flipped</a>:</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;flipped&quot;</span>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1cen__error.html">cen_error</a>{<span class="stringliteral">&quot;Did not recognize mouse wheel direction!&quot;</span>};</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="group__audio.html#gaf4f03ce007fd2078183e0592ca7d5d19">   82</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">operator&lt;&lt;</a>(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code" href="group__event.html#ga854c0b92c2b3c8277b87d3a99196372d">mouse_wheel_direction</a> dir)</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    -&gt; std::ostream&amp;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordflow">return</span> stream &lt;&lt; <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(dir);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="group__event.html#ga34864d369c41764576e222a5b483296a">  103</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> <a class="code" href="group__event.html#ga854c0b92c2b3c8277b87d3a99196372d">mouse_wheel_direction</a> lhs,</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                                        <span class="keyword">const</span> SDL_MouseWheelDirection rhs) noexcept</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;{</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordflow">return</span> lhs == <span class="keyword">static_cast&lt;</span><a class="code" href="group__event.html#ga854c0b92c2b3c8277b87d3a99196372d">mouse_wheel_direction</a><span class="keyword">&gt;</span>(rhs);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="group__event.html#gaa3b46049e9005646d38bdcdcb8b81324">  111</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> SDL_MouseWheelDirection lhs,</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="group__event.html#ga854c0b92c2b3c8277b87d3a99196372d">mouse_wheel_direction</a> rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;{</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keywordflow">return</span> rhs == lhs;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="group__event.html#gaa3c28269c8511161040352a58c2be600">  128</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> <a class="code" href="group__event.html#ga854c0b92c2b3c8277b87d3a99196372d">mouse_wheel_direction</a> lhs,</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                                        <span class="keyword">const</span> SDL_MouseWheelDirection rhs) noexcept</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;{</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;}</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
-<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="group__event.html#ga9a06650658613782076a2039e7a0999f">  136</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> SDL_MouseWheelDirection lhs,</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="group__event.html#ga854c0b92c2b3c8277b87d3a99196372d">mouse_wheel_direction</a> rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;{</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;}</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;}  <span class="comment">// namespace cen</span></div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_MOUSE_WHEEL_DIRECTION_HEADER</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="group__event.html#ga854c0b92c2b3c8277b87d3a99196372d">   27</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="group__event.html#ga854c0b92c2b3c8277b87d3a99196372d">mouse_wheel_direction</a> : <a class="code" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <a class="code" href="group__event.html#gga854c0b92c2b3c8277b87d3a99196372dafea087517c26fadd409bd4b9dc642555">normal</a> = SDL_MOUSEWHEEL_NORMAL,   </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="group__event.html#gga854c0b92c2b3c8277b87d3a99196372da5bef9da31993fe26a832c7d4b9630147">flipped</a> = SDL_MOUSEWHEEL_FLIPPED  </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="group__event.html#gab6be4db0255937ca3fa35b497e1fa6ed">   40</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__event.html#gab6be4db0255937ca3fa35b497e1fa6ed">mouse_wheel_direction_count</a>() noexcept -&gt; <span class="keywordtype">int</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordflow">return</span> 2;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="group__audio.html#gaf01bac9c7ce52ec39593b6a1f4c229ff">   62</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(<span class="keyword">const</span> <a class="code" href="group__event.html#ga854c0b92c2b3c8277b87d3a99196372d">mouse_wheel_direction</a> dir) -&gt; std::string_view</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordflow">switch</span> (dir) {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__event.html#gga854c0b92c2b3c8277b87d3a99196372dafea087517c26fadd409bd4b9dc642555">mouse_wheel_direction::normal</a>:</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;normal&quot;</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__event.html#gga854c0b92c2b3c8277b87d3a99196372da5bef9da31993fe26a832c7d4b9630147">mouse_wheel_direction::flipped</a>:</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;flipped&quot;</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1cen__error.html">cen_error</a>{<span class="stringliteral">&quot;Did not recognize mouse wheel direction!&quot;</span>};</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="group__audio.html#gaf4f03ce007fd2078183e0592ca7d5d19">   93</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">operator&lt;&lt;</a>(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code" href="group__event.html#ga854c0b92c2b3c8277b87d3a99196372d">mouse_wheel_direction</a> dir) -&gt; std::ostream&amp;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;{</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keywordflow">return</span> stream &lt;&lt; <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(dir);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="group__event.html#ga34864d369c41764576e222a5b483296a">  113</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> <a class="code" href="group__event.html#ga854c0b92c2b3c8277b87d3a99196372d">mouse_wheel_direction</a> lhs,</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                                        <span class="keyword">const</span> SDL_MouseWheelDirection rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;{</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keywordflow">return</span> lhs == <span class="keyword">static_cast&lt;</span><a class="code" href="group__event.html#ga854c0b92c2b3c8277b87d3a99196372d">mouse_wheel_direction</a><span class="keyword">&gt;</span>(rhs);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="group__event.html#gaa3b46049e9005646d38bdcdcb8b81324">  120</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> SDL_MouseWheelDirection lhs,</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="group__event.html#ga854c0b92c2b3c8277b87d3a99196372d">mouse_wheel_direction</a> rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;{</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keywordflow">return</span> rhs == lhs;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="group__event.html#gaa3c28269c8511161040352a58c2be600">  137</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> <a class="code" href="group__event.html#ga854c0b92c2b3c8277b87d3a99196372d">mouse_wheel_direction</a> lhs,</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                                        <span class="keyword">const</span> SDL_MouseWheelDirection rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;{</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;}</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="group__event.html#ga9a06650658613782076a2039e7a0999f">  144</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> SDL_MouseWheelDirection lhs,</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="group__event.html#ga854c0b92c2b3c8277b87d3a99196372d">mouse_wheel_direction</a> rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;{</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;}</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;}  <span class="comment">// namespace cen</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_MOUSE_WHEEL_DIRECTION_HEADER</span></div>
 <div class="ttc" id="aclasscen_1_1cen__error_html"><div class="ttname"><a href="classcen_1_1cen__error.html">cen::cen_error</a></div><div class="ttdoc">The base of all exceptions explicitly thrown by the library.</div><div class="ttdef"><b>Definition:</b> exception.hpp:35</div></div>
-<div class="ttc" id="agroup__audio_html_ga322c699fa08098bd801164819d2f4cc8"><div class="ttname"><a href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">cen::operator!=</a></div><div class="ttdeci">constexpr auto operator!=(const fade_status lhs, const Mix_Fading rhs) noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the fading status values represent aren't the same.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:129</div></div>
-<div class="ttc" id="agroup__audio_html_ga83f366781618f05bf8bcb60c753e9ced"><div class="ttname"><a href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">cen::operator&lt;&lt;</a></div><div class="ttdeci">auto operator&lt;&lt;(std::ostream &amp;stream, const fade_status status) -&gt; std::ostream &amp;</div><div class="ttdoc">Prints a textual representation of a fade status enumerator.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:86</div></div>
-<div class="ttc" id="agroup__audio_html_ga9ebd3f26fcc0f89398ff473b06e9dcbe"><div class="ttname"><a href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">cen::to_string</a></div><div class="ttdeci">constexpr auto to_string(const fade_status status) -&gt; std::string_view</div><div class="ttdoc">Returns a textual version of the supplied fade status.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:51</div></div>
-<div class="ttc" id="agroup__audio_html_gaf72595df3886dbb34dbcf030d14333d2"><div class="ttname"><a href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">cen::operator==</a></div><div class="ttdeci">constexpr auto operator==(const fade_status lhs, const Mix_Fading rhs) noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the fading status values represent are the same.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:106</div></div>
+<div class="ttc" id="agroup__audio_html_ga322c699fa08098bd801164819d2f4cc8"><div class="ttname"><a href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">cen::operator!=</a></div><div class="ttdeci">constexpr auto operator!=(const fade_status lhs, const Mix_Fading rhs) noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the fading status values represent aren't the same.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:141</div></div>
+<div class="ttc" id="agroup__audio_html_ga83f366781618f05bf8bcb60c753e9ced"><div class="ttname"><a href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">cen::operator&lt;&lt;</a></div><div class="ttdeci">auto operator&lt;&lt;(std::ostream &amp;stream, const fade_status status) -&gt; std::ostream &amp;</div><div class="ttdoc">Prints a textual representation of a fade status enumerator.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:98</div></div>
+<div class="ttc" id="agroup__audio_html_ga9ebd3f26fcc0f89398ff473b06e9dcbe"><div class="ttname"><a href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">cen::to_string</a></div><div class="ttdeci">constexpr auto to_string(const fade_status status) -&gt; std::string_view</div><div class="ttdoc">Returns a textual version of the supplied fade status.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:64</div></div>
+<div class="ttc" id="agroup__audio_html_gaf72595df3886dbb34dbcf030d14333d2"><div class="ttname"><a href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">cen::operator==</a></div><div class="ttdeci">constexpr auto operator==(const fade_status lhs, const Mix_Fading rhs) noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the fading status values represent are the same.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:118</div></div>
 <div class="ttc" id="agroup__core_html_ga4abd620246f76cc48168dc52a04a62da"><div class="ttname"><a href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">cen::u32</a></div><div class="ttdeci">Uint32 u32</div><div class="ttdoc">Alias for a 32-bit unsigned integer.</div><div class="ttdef"><b>Definition:</b> integers.hpp:28</div></div>
-<div class="ttc" id="agroup__event_html_ga854c0b92c2b3c8277b87d3a99196372d"><div class="ttname"><a href="group__event.html#ga854c0b92c2b3c8277b87d3a99196372d">cen::mouse_wheel_direction</a></div><div class="ttdeci">mouse_wheel_direction</div><div class="ttdoc">Represents mouse wheel directions.</div><div class="ttdef"><b>Definition:</b> mouse_wheel_direction.hpp:27</div></div>
+<div class="ttc" id="agroup__event_html_ga854c0b92c2b3c8277b87d3a99196372d"><div class="ttname"><a href="group__event.html#ga854c0b92c2b3c8277b87d3a99196372d">cen::mouse_wheel_direction</a></div><div class="ttdeci">mouse_wheel_direction</div><div class="ttdoc">Represents mouse wheel directions.</div><div class="ttdef"><b>Definition:</b> mouse_wheel_direction.hpp:28</div></div>
+<div class="ttc" id="agroup__event_html_gab6be4db0255937ca3fa35b497e1fa6ed"><div class="ttname"><a href="group__event.html#gab6be4db0255937ca3fa35b497e1fa6ed">cen::mouse_wheel_direction_count</a></div><div class="ttdeci">constexpr auto mouse_wheel_direction_count() noexcept -&gt; int</div><div class="ttdoc">Returns the number of enumerators for the mouse_wheel_direction enum.</div><div class="ttdef"><b>Definition:</b> mouse_wheel_direction.hpp:40</div></div>
 <div class="ttc" id="agroup__event_html_gga854c0b92c2b3c8277b87d3a99196372da5bef9da31993fe26a832c7d4b9630147"><div class="ttname"><a href="group__event.html#gga854c0b92c2b3c8277b87d3a99196372da5bef9da31993fe26a832c7d4b9630147">cen::mouse_wheel_direction::flipped</a></div><div class="ttdeci">@ flipped</div><div class="ttdoc">The scroll direction is flipped natural.</div></div>
 <div class="ttc" id="agroup__event_html_gga854c0b92c2b3c8277b87d3a99196372dafea087517c26fadd409bd4b9dc642555"><div class="ttname"><a href="group__event.html#gga854c0b92c2b3c8277b87d3a99196372dafea087517c26fadd409bd4b9dc642555">cen::mouse_wheel_direction::normal</a></div><div class="ttdeci">@ normal</div><div class="ttdoc">The scroll direction is normal.</div></div>
 <div class="ttc" id="anamespacecen_html"><div class="ttname"><a href="namespacecen.html">cen</a></div><div class="ttdoc">The top-level namespace that all components of the library reside in.</div><div class="ttdef"><b>Definition:</b> channels.hpp:14</div></div>

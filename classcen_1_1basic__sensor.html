@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -312,6 +312,101 @@ template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="aca249a9569df1e84f67ac595ad83ddc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca249a9569df1e84f67ac595ad83ddc3">&#9670;&nbsp;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="classcen_1_1basic__sensor.html">cen::basic_sensor</a>&lt; T &gt;::update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Updates the state of all open sensors. </p>
+<dl class="section note"><dt>Note</dt><dd>This is done automatically by the event loop if sensor events are enabled.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="ad6308f7288931b0f7e6f87b99f2f007f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6308f7288931b0f7e6f87b99f2f007f">&#9670;&nbsp;</a></span>lock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="classcen_1_1basic__sensor.html">cen::basic_sensor</a>&lt; T &gt;::lock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Locks access to the sensors for multi-threading. </p>
+<dl class="section note"><dt>Note</dt><dd>Refer to the SDL documentation for more details regarding this.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd>SDL_LockSensors</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a2106f25a7942a29bd8f76d47cd9a79d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2106f25a7942a29bd8f76d47cd9a79d1">&#9670;&nbsp;</a></span>unlock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="classcen_1_1basic__sensor.html">cen::basic_sensor</a>&lt; T &gt;::unlock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unlocks access to the sensors. </p>
+<dl class="section note"><dt>Note</dt><dd>Refer to the SDL documentation for more details regarding this.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd>SDL_UnlockSensors</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
 <a id="a5ed9e7a2b1c8d36cf7a07b864d43dd7a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5ed9e7a2b1c8d36cf7a07b864d43dd7a">&#9670;&nbsp;</a></span>count()</h2>
 
@@ -340,6 +435,134 @@ template&lt;typename T &gt; </div>
 
 <p>Returns the amount of sensors currently attached to the system. </p>
 <dl class="section return"><dt>Returns</dt><dd>the current amount of system sensors.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a5984bca2e8706532bec1ce5cfee22445"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5984bca2e8706532bec1ce5cfee22445">&#9670;&nbsp;</a></span>id() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__sensor.html">cen::basic_sensor</a>&lt; T &gt;::id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__input.html#gaaea522cb383852e269dcd89a74248835">sensor_id</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the unique identifier associated with the sensor instance. </p>
+<dl class="section return"><dt>Returns</dt><dd>a unique instance ID.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="ab7f3bad56c29048343da88fcf721a96c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7f3bad56c29048343da88fcf721a96c">&#9670;&nbsp;</a></span>name() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__sensor.html">cen::basic_sensor</a>&lt; T &gt;::name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the name associated with the sensor device. </p>
+<dl class="section return"><dt>Returns</dt><dd>the name of the sensor device; a null pointer is returned if the name isn't available.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a4a8c668c12b3a6be5969f222628aa3a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a8c668c12b3a6be5969f222628aa3a3">&#9670;&nbsp;</a></span>type() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__sensor.html">cen::basic_sensor</a>&lt; T &gt;::type </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__input.html#ga1ce8d8b900d2910ff3605c9cef4b2c3a">sensor_type</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the type associated with the sensor device. </p>
+<dl class="section return"><dt>Returns</dt><dd>the type of the sensor device.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a836d515a35f0b3299e79a0d264b774cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a836d515a35f0b3299e79a0d264b774cb">&#9670;&nbsp;</a></span>non_portable_type() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__sensor.html">cen::basic_sensor</a>&lt; T &gt;::non_portable_type </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; int
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the non-portable type associated with the sensor. </p>
+<dl class="section return"><dt>Returns</dt><dd>a non-portable sensor type value.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
 
 </div>
@@ -417,38 +640,6 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a5984bca2e8706532bec1ce5cfee22445"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5984bca2e8706532bec1ce5cfee22445">&#9670;&nbsp;</a></span>id() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__sensor.html">cen::basic_sensor</a>&lt; T &gt;::id </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__input.html#gaaea522cb383852e269dcd89a74248835">sensor_id</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the unique identifier associated with the sensor instance. </p>
-<dl class="section return"><dt>Returns</dt><dd>a unique instance ID.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
 <a id="ac862bffb99de624ae115d3dfcb0cb27e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac862bffb99de624ae115d3dfcb0cb27e">&#9670;&nbsp;</a></span>id() <span class="overload">[2/2]</span></h2>
 
@@ -484,70 +675,6 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the unique instance ID associated with a sensor; <code>std::nullopt</code> if the index is invalid.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="ad6308f7288931b0f7e6f87b99f2f007f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6308f7288931b0f7e6f87b99f2f007f">&#9670;&nbsp;</a></span>lock()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void <a class="el" href="classcen_1_1basic__sensor.html">cen::basic_sensor</a>&lt; T &gt;::lock </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Locks access to the sensors for multi-threading. </p>
-<dl class="section note"><dt>Note</dt><dd>Refer to the SDL documentation for more details regarding this.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd>SDL_LockSensors</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="ab7f3bad56c29048343da88fcf721a96c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7f3bad56c29048343da88fcf721a96c">&#9670;&nbsp;</a></span>name() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__sensor.html">cen::basic_sensor</a>&lt; T &gt;::name </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the name associated with the sensor device. </p>
-<dl class="section return"><dt>Returns</dt><dd>the name of the sensor device; a null pointer is returned if the name isn't available.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
 
 </div>
@@ -591,8 +718,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a836d515a35f0b3299e79a0d264b774cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a836d515a35f0b3299e79a0d264b774cb">&#9670;&nbsp;</a></span>non_portable_type() <span class="overload">[1/2]</span></h2>
+<a id="a569aae3c4d788fde61277d842f503ef4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a569aae3c4d788fde61277d842f503ef4">&#9670;&nbsp;</a></span>type() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -603,22 +730,29 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__sensor.html">cen::basic_sensor</a>&lt; T &gt;::non_portable_type </td>
+          <td class="memname">static auto <a class="el" href="classcen_1_1basic__sensor.html">cen::basic_sensor</a>&lt; T &gt;::type </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; int
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__input.html#ga1ce8d8b900d2910ff3605c9cef4b2c3a">sensor_type</a>
   </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the non-portable type associated with the sensor. </p>
-<dl class="section return"><dt>Returns</dt><dd>a non-portable sensor type value.</dd></dl>
+<p>Returns the type associated with a sensor device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the index of the sensor device that will be queried.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the type of the sensor device.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
 
 </div>
@@ -691,140 +825,6 @@ template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </div>
 
 <p>Indicates whether or not the handle holds a non-null pointer. </p>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the handle holds a non-null pointer; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a4a8c668c12b3a6be5969f222628aa3a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a8c668c12b3a6be5969f222628aa3a3">&#9670;&nbsp;</a></span>type() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__sensor.html">cen::basic_sensor</a>&lt; T &gt;::type </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__input.html#ga1ce8d8b900d2910ff3605c9cef4b2c3a">sensor_type</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the type associated with the sensor device. </p>
-<dl class="section return"><dt>Returns</dt><dd>the type of the sensor device.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a569aae3c4d788fde61277d842f503ef4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a569aae3c4d788fde61277d842f503ef4">&#9670;&nbsp;</a></span>type() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto <a class="el" href="classcen_1_1basic__sensor.html">cen::basic_sensor</a>&lt; T &gt;::type </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>index</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__input.html#ga1ce8d8b900d2910ff3605c9cef4b2c3a">sensor_type</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the type associated with a sensor device. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">index</td><td>the index of the sensor device that will be queried.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the type of the sensor device.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a2106f25a7942a29bd8f76d47cd9a79d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2106f25a7942a29bd8f76d47cd9a79d1">&#9670;&nbsp;</a></span>unlock()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void <a class="el" href="classcen_1_1basic__sensor.html">cen::basic_sensor</a>&lt; T &gt;::unlock </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Unlocks access to the sensors. </p>
-<dl class="section note"><dt>Note</dt><dd>Refer to the SDL documentation for more details regarding this.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd>SDL_UnlockSensors</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="aca249a9569df1e84f67ac595ad83ddc3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca249a9569df1e84f67ac595ad83ddc3">&#9670;&nbsp;</a></span>update()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void <a class="el" href="classcen_1_1basic__sensor.html">cen::basic_sensor</a>&lt; T &gt;::update </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Updates the state of all open sensors. </p>
-<dl class="section note"><dt>Note</dt><dd>This is done automatically by the event loop if sensor events are enabled.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
 
 </div>

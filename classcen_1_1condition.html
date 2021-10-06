@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -150,36 +150,6 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab31f72152027f0a02654f12492d4c623"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab31f72152027f0a02654f12492d4c623">&#9670;&nbsp;</a></span>broadcast()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::condition::broadcast </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Wakes up all threads that are waiting on the condition variable. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>success</code> if nothing went wrong; <code>failure</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
 <a id="a9b2204f4d43f7782712a90a57e7902b7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9b2204f4d43f7782712a90a57e7902b7">&#9670;&nbsp;</a></span>signal()</h2>
 
@@ -205,6 +175,36 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Wakes up one of the threads that are waiting on the condition variable. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if nothing went wrong; <code>failure</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ab31f72152027f0a02654f12492d4c623"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab31f72152027f0a02654f12492d4c623">&#9670;&nbsp;</a></span>broadcast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::condition::broadcast </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Wakes up all threads that are waiting on the condition variable. </p>
 <dl class="section return"><dt>Returns</dt><dd><code>success</code> if nothing went wrong; <code>failure</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 

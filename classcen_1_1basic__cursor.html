@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -352,6 +352,199 @@ template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="aeea0122b3613a9fc1cf89fe7915026cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeea0122b3613a9fc1cf89fe7915026cb">&#9670;&nbsp;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="classcen_1_1basic__cursor.html">cen::basic_cursor</a>&lt; T &gt;::reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resets the active cursor to the system default. </p>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a7f1583af2a6d357ea830e7dcedb3a51f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f1583af2a6d357ea830e7dcedb3a51f">&#9670;&nbsp;</a></span>force_redraw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="classcen_1_1basic__cursor.html">cen::basic_cursor</a>&lt; T &gt;::force_redraw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Forces a cursor redraw. </p>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a6258b291c5f3926e645aa41285992d7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6258b291c5f3926e645aa41285992d7d">&#9670;&nbsp;</a></span>set_visible()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="classcen_1_1basic__cursor.html">cen::basic_cursor</a>&lt; T &gt;::set_visible </td>
+          <td>(</td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>visible</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets whether or not any mouse cursor is visible. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">visible</td><td><code>true</code> if cursors should be visible; <code>false</code> otherwise.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a5079e75112b562ac021ae3581ea4eab9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5079e75112b562ac021ae3581ea4eab9">&#9670;&nbsp;</a></span>get_default()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto <a class="el" href="classcen_1_1basic__cursor.html">cen::basic_cursor</a>&lt; T &gt;::get_default </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__video.html#ga569144087c06cf7afecce394d1102fac">cursor_handle</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a handle to the default cursor for the system. </p>
+<dl class="section return"><dt>Returns</dt><dd>a handle to the default cursor for the system; might not be present.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="adc56910a4426b3b770c530d264fb0601"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc56910a4426b3b770c530d264fb0601">&#9670;&nbsp;</a></span>get_current()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto <a class="el" href="classcen_1_1basic__cursor.html">cen::basic_cursor</a>&lt; T &gt;::get_current </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__video.html#ga569144087c06cf7afecce394d1102fac">cursor_handle</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a handle to the currently active cursor. </p>
+<dl class="section return"><dt>Returns</dt><dd>a handle to the currently active cursor; might not be present.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a46946afa880d2168bd5b27710d8d4008"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46946afa880d2168bd5b27710d8d4008">&#9670;&nbsp;</a></span>visible()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto <a class="el" href="classcen_1_1basic__cursor.html">cen::basic_cursor</a>&lt; T &gt;::visible </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not cursors are visible. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if cursors are visible; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
 <a id="ab23a56e608f34e9255474b4ff3f682fe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab23a56e608f34e9255474b4ff3f682fe">&#9670;&nbsp;</a></span>count()</h2>
 
@@ -414,8 +607,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a7f1583af2a6d357ea830e7dcedb3a51f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f1583af2a6d357ea830e7dcedb3a51f">&#9670;&nbsp;</a></span>force_redraw()</h2>
+<a id="ae94679ae5e79bb596a80e87f5eaad272"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae94679ae5e79bb596a80e87f5eaad272">&#9670;&nbsp;</a></span>is_enabled()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -426,20 +619,23 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void <a class="el" href="classcen_1_1basic__cursor.html">cen::basic_cursor</a>&lt; T &gt;::force_redraw </td>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__cursor.html">cen::basic_cursor</a>&lt; T &gt;::is_enabled </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const -&gt; bool
+  </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Forces a cursor redraw. </p>
+<p>Indicates whether or not this cursor is currently active. </p>
+<dl class="section note"><dt>Note</dt><dd>This function checks whether or not the associated cursor is active by comparing the pointer obtained from <code>SDL_GetCursor</code> with the internal pointer.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the cursor is currently enabled; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
@@ -477,103 +673,6 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="adc56910a4426b3b770c530d264fb0601"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc56910a4426b3b770c530d264fb0601">&#9670;&nbsp;</a></span>get_current()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto <a class="el" href="classcen_1_1basic__cursor.html">cen::basic_cursor</a>&lt; T &gt;::get_current </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__video.html#ga569144087c06cf7afecce394d1102fac">cursor_handle</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a handle to the currently active cursor. </p>
-<dl class="section return"><dt>Returns</dt><dd>a handle to the currently active cursor; might not be present.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a5079e75112b562ac021ae3581ea4eab9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5079e75112b562ac021ae3581ea4eab9">&#9670;&nbsp;</a></span>get_default()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto <a class="el" href="classcen_1_1basic__cursor.html">cen::basic_cursor</a>&lt; T &gt;::get_default </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__video.html#ga569144087c06cf7afecce394d1102fac">cursor_handle</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a handle to the default cursor for the system. </p>
-<dl class="section return"><dt>Returns</dt><dd>a handle to the default cursor for the system; might not be present.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ae94679ae5e79bb596a80e87f5eaad272"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae94679ae5e79bb596a80e87f5eaad272">&#9670;&nbsp;</a></span>is_enabled()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__cursor.html">cen::basic_cursor</a>&lt; T &gt;::is_enabled </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not this cursor is currently active. </p>
-<dl class="section note"><dt>Note</dt><dd>This function checks whether or not the associated cursor is active by comparing the pointer obtained from <code>SDL_GetCursor</code> with the internal pointer.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the cursor is currently enabled; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
 <a id="abe93ecd517c36044c79f7128ff9ab15f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abe93ecd517c36044c79f7128ff9ab15f">&#9670;&nbsp;</a></span>operator bool()</h2>
 
@@ -604,105 +703,6 @@ template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </div>
 <p>Indicates whether or not the cursor handle holds a non-null pointer. </p>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the internal pointer is not null; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="aeea0122b3613a9fc1cf89fe7915026cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeea0122b3613a9fc1cf89fe7915026cb">&#9670;&nbsp;</a></span>reset()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void <a class="el" href="classcen_1_1basic__cursor.html">cen::basic_cursor</a>&lt; T &gt;::reset </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Resets the active cursor to the system default. </p>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a6258b291c5f3926e645aa41285992d7d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6258b291c5f3926e645aa41285992d7d">&#9670;&nbsp;</a></span>set_visible()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void <a class="el" href="classcen_1_1basic__cursor.html">cen::basic_cursor</a>&lt; T &gt;::set_visible </td>
-          <td>(</td>
-          <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>visible</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets whether or not any mouse cursor is visible. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">visible</td><td><code>true</code> if cursors should be visible; <code>false</code> otherwise.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a46946afa880d2168bd5b27710d8d4008"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a46946afa880d2168bd5b27710d8d4008">&#9670;&nbsp;</a></span>visible()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto <a class="el" href="classcen_1_1basic__cursor.html">cen::basic_cursor</a>&lt; T &gt;::visible </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not cursors are visible. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if cursors are visible; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
 </div>

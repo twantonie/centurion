@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -470,8 +470,8 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga11a249314a4eff6ee6a66804263875e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga11a249314a4eff6ee6a66804263875e6">&#9670;&nbsp;</a></span>amount_gb()</h2>
+<a id="gac7b98bb966c7172036d8901e6f7fe68d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac7b98bb966c7172036d8901e6f7fe68d">&#9670;&nbsp;</a></span>seconds_left()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -480,28 +480,28 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::ram::amount_gb </td>
+          <td class="memname">auto cen::battery::seconds_left </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> -&gt; int
+          <td> -&gt; std::optional&lt;<a class="el" href="group__core.html#ga826ec294a3b6962454d669b9c277537b">seconds</a>&lt;int&gt;&gt;
 </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the total amount of system RAM in gigabytes. </p>
-<dl class="section return"><dt>Returns</dt><dd>the total amount of system RAM in gigabytes.</dd></dl>
+<p>Returns the seconds of battery life that is remaining. </p>
+<dl class="section return"><dt>Returns</dt><dd>seconds of remaining battery life; <code>std::nullopt</code> if the value cannot be computed.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="ga080c5a1d6fcedd5300ab84ab3718ac23"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga080c5a1d6fcedd5300ab84ab3718ac23">&#9670;&nbsp;</a></span>amount_mb()</h2>
+<a id="gaa09886ca03dbb2f6306324459812ac52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa09886ca03dbb2f6306324459812ac52">&#9670;&nbsp;</a></span>minutes_left()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -510,10 +510,40 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::ram::amount_mb </td>
+          <td class="memname">auto cen::battery::minutes_left </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> -&gt; int
+          <td> -&gt; std::optional&lt;<a class="el" href="group__core.html#ga188e11bfe67eb564ec1c9afa24a204db">minutes</a>&lt;int&gt;&gt;
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the amount of minutes of battery life that is remaining. </p>
+<dl class="section return"><dt>Returns</dt><dd>minutes of remaining battery life; <code>std::nullopt</code> if the value cannot be computed.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="gad923b189924d4471260c87d83559bd30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad923b189924d4471260c87d83559bd30">&#9670;&nbsp;</a></span>percentage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::battery::percentage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; std::optional&lt;int&gt;
 </td>
         </tr>
       </table>
@@ -524,8 +554,871 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the total amount of system RAM in megabytes. </p>
-<dl class="section return"><dt>Returns</dt><dd>the total amount of system RAM in megabytes.</dd></dl>
+<p>Returns the percentage of battery life that is currently left. </p>
+<dl class="section return"><dt>Returns</dt><dd>percentage of remaining battery life, in the range [0, 100]; <code>std::nullopt</code> if the battery percentage isn't available.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="gaf8300293e48dcaec2e412bd58b33d153"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf8300293e48dcaec2e412bd58b33d153">&#9670;&nbsp;</a></span>state()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::battery::state </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__system.html#ga4dda00faf11166cb0201cba7f35bb1af">power_state</a>
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the current power state. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current power state.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga0080173146eba8655792695d333c1170"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0080173146eba8655792695d333c1170">&#9670;&nbsp;</a></span>exists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::battery::exists </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the system is running on a battery. </p>
+<p>This function is simply a convenience function that is based on the <code><a class="el" href="group__system.html#gaf8300293e48dcaec2e412bd58b33d153" title="Returns the current power state.">battery::state()</a></code> function.</p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the system is running on a battery; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga1addb9148cb6e8ca78d998d5226b4a84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1addb9148cb6e8ca78d998d5226b4a84">&#9670;&nbsp;</a></span>is_charging()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::battery::is_charging </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicate whether or not the battery is being charged. </p>
+<p>This convenience function is equivalent to checking if <code><a class="el" href="group__system.html#gaf8300293e48dcaec2e412bd58b33d153" title="Returns the current power state.">battery::state()</a></code> is equal to <code><a class="el" href="group__system.html#gga4dda00faf11166cb0201cba7f35bb1afa05a0c26d8e746429c786c8e53378b9c9" title="Currently charging the battery.">power_state::charging</a></code>.</p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the battery is charging; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga128edfb3b768b77cce3d859851c51876"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga128edfb3b768b77cce3d859851c51876">&#9670;&nbsp;</a></span>is_charged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::battery::is_charged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicate whether or not the battery is charged. </p>
+<p>This convenience function is equivalent to checking if <code><a class="el" href="group__system.html#gaf8300293e48dcaec2e412bd58b33d153" title="Returns the current power state.">battery::state()</a></code> is equal to <code><a class="el" href="group__system.html#gga4dda00faf11166cb0201cba7f35bb1afa48aee20d947736a18c6e9d09b526f75a" title="Currently plugged in and charged.">power_state::charged</a></code>.</p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the battery is charged; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga3445ed5750e0e407b5a300d333b3203f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3445ed5750e0e407b5a300d333b3203f">&#9670;&nbsp;</a></span>is_available()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::battery::is_available </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicate whether or not a battery is available. </p>
+<p>This convenience function considers a battery available if the state returned from <code><a class="el" href="group__system.html#gaf8300293e48dcaec2e412bd58b33d153" title="Returns the current power state.">battery::state()</a></code> is neither <code>no_battery</code> nor <code>unknown</code>.</p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if a battery is available; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga4b01268e9ad4aa3c8214dc976279aa56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4b01268e9ad4aa3c8214dc976279aa56">&#9670;&nbsp;</a></span>swap_byte_order() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::swap_byte_order </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Swaps the byte order of the specified value and returns the result. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>the value to swap the byte order of.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the swapped byte order value.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga21c2298dd24a8fba4b74fef018e3140d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga21c2298dd24a8fba4b74fef018e3140d">&#9670;&nbsp;</a></span>swap_byte_order() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::swap_byte_order </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Swaps the byte order of the specified value and returns the result. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>the value to swap the byte order of.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the swapped byte order value.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga9eccc4c7c1241b5c0ace4b928fbc1148"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9eccc4c7c1241b5c0ace4b928fbc1148">&#9670;&nbsp;</a></span>swap_byte_order() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::swap_byte_order </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga23844aa05b9b994328870cca9e5a7808">u64</a>&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__core.html#ga23844aa05b9b994328870cca9e5a7808">u64</a>
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Swaps the byte order of the specified value and returns the result. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>the value to swap the byte order of.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the swapped byte order value.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga3b2416a77ba92ae39946505dfe63b9c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3b2416a77ba92ae39946505dfe63b9c5">&#9670;&nbsp;</a></span>swap_byte_order() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::swap_byte_order </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td> -&gt; float
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Swaps the byte order of the specified value and returns the result. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>the value to swap the byte order of.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the swapped byte order value.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="gae91330ba1142e46fb8b06d9f05571c38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae91330ba1142e46fb8b06d9f05571c38">&#9670;&nbsp;</a></span>swap_big_endian() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::swap_big_endian </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Swaps the big endian value to a little endian value and returns it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>the big endian value that will be swapped.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the resulting little endian value.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga0580942750d0fb543244f17f97531f2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0580942750d0fb543244f17f97531f2e">&#9670;&nbsp;</a></span>swap_big_endian() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::swap_big_endian </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Swaps the big endian value to a little endian value and returns it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>the big endian value that will be swapped.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the resulting little endian value.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga4e473e29de4dbf2826f38dbbc7d1d4f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4e473e29de4dbf2826f38dbbc7d1d4f1">&#9670;&nbsp;</a></span>swap_big_endian() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::swap_big_endian </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga23844aa05b9b994328870cca9e5a7808">u64</a>&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__core.html#ga23844aa05b9b994328870cca9e5a7808">u64</a>
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Swaps the big endian value to a little endian value and returns it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>the big endian value that will be swapped.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the resulting little endian value.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga55fdfbb7b9a5ecb837459522f983fb0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga55fdfbb7b9a5ecb837459522f983fb0c">&#9670;&nbsp;</a></span>swap_big_endian() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::swap_big_endian </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td> -&gt; float
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Swaps the big endian value to a little endian value and returns it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>the big endian value that will be swapped.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the resulting little endian value.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga81e8e5c946f45ce4aa1f4b1e1853aefa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga81e8e5c946f45ce4aa1f4b1e1853aefa">&#9670;&nbsp;</a></span>swap_little_endian() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::swap_little_endian </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Swaps the little endian value to a big endian value and returns it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>the little endian value that will be swapped.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the resulting big endian value.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga77b21a5c326530db4174cb3c4a1294bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga77b21a5c326530db4174cb3c4a1294bd">&#9670;&nbsp;</a></span>swap_little_endian() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::swap_little_endian </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Swaps the little endian value to a big endian value and returns it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>the little endian value that will be swapped.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the resulting big endian value.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="gaece5ce58137eb1b1a697fa79a3e762c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaece5ce58137eb1b1a697fa79a3e762c8">&#9670;&nbsp;</a></span>swap_little_endian() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::swap_little_endian </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga23844aa05b9b994328870cca9e5a7808">u64</a>&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__core.html#ga23844aa05b9b994328870cca9e5a7808">u64</a>
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Swaps the little endian value to a big endian value and returns it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>the little endian value that will be swapped.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the resulting big endian value.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga533cdf120a0bc29fdabbf77867d94b12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga533cdf120a0bc29fdabbf77867d94b12">&#9670;&nbsp;</a></span>swap_little_endian() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::swap_little_endian </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td> -&gt; float
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Swaps the little endian value to a big endian value and returns it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>the little endian value that will be swapped.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the resulting big endian value.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="gae9981e5ba925b620ef4d4df63b6149de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae9981e5ba925b620ef4d4df63b6149de">&#9670;&nbsp;</a></span>has_text()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::clipboard::has_text </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not there is a clipboard exists and that it contains non-empty text. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if there is a clipboard that contains non-empty text; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga2f672f94adfa3bd1039cbbcba949b59e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2f672f94adfa3bd1039cbbcba949b59e">&#9670;&nbsp;</a></span>get_text()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::clipboard::get_text </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; std::string
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the current text in the clipboard. </p>
+<dl class="section note"><dt>Note</dt><dd>If the clipboard cannot be obtained, this function returns the empty string.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the current clipboard text.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="gac3b84af1b87a611897903ded385a87aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac3b84af1b87a611897903ded385a87aa">&#9670;&nbsp;</a></span>set_text() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::clipboard::set_text </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a> &gt;&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the current clipboard text. </p>
+<dl class="section pre"><dt>Precondition</dt><dd><code>text</code> cannot be null.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>the text that will be stored in the clipboard.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the clipboard text was successfully set; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="gad3b88fa68cbf70e49fffa92585596a5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad3b88fa68cbf70e49fffa92585596a5d">&#9670;&nbsp;</a></span>set_text() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::clipboard::set_text </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the current clipboard text. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>the text that will be stored in the clipboard.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the clipboard text was successfully set; <code>failure</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga86a526aed5b7ca4c5ecb38a7dcd5d45d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga86a526aed5b7ca4c5ecb38a7dcd5d45d">&#9670;&nbsp;</a></span>frequency()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::counter::frequency </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__core.html#ga23844aa05b9b994328870cca9e5a7808">u64</a>
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the frequency of the system high-performance counter. </p>
+<dl class="section return"><dt>Returns</dt><dd>the frequency of the system high-performance counter.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga8a3954964160a527a3c11befc42c60c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8a3954964160a527a3c11befc42c60c0">&#9670;&nbsp;</a></span>now()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::counter::now </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__core.html#ga23844aa05b9b994328870cca9e5a7808">u64</a>
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the current raw value of the system high-performance counter. </p>
+<dl class="section note"><dt>Note</dt><dd>The unit of the returned value is platform dependent.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the current value of the system high-performance counter.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga0635e1cfd7b3bbed55e54f2245d42dba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0635e1cfd7b3bbed55e54f2245d42dba">&#9670;&nbsp;</a></span>now_in_seconds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::counter::now_in_seconds </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__core.html#ga826ec294a3b6962454d669b9c277537b">seconds</a>&lt;T&gt;
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the value of the system high-performance counter in seconds. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>the representation type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the value of the system high-performance counter, in seconds.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="gaaa378627cdab42895b4580deac4347d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaa378627cdab42895b4580deac4347d6">&#9670;&nbsp;</a></span>ticks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::counter::ticks </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt;<a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>&gt;
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the amount of milliseconds since the library was initialized. </p>
+<dl class="section return"><dt>Returns</dt><dd>the amount of milliseconds since the library was initialized.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 
 </div>
@@ -590,8 +1483,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga6742b3a4939d9d04f6ef50d5a7f0f1ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6742b3a4939d9d04f6ef50d5a7f0f1ee">&#9670;&nbsp;</a></span>current_platform()</h2>
+<a id="gab90bcbe4b10fda10f02032e3e351286a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab90bcbe4b10fda10f02032e3e351286a">&#9670;&nbsp;</a></span>has_rdtsc()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -600,37 +1493,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::current_platform </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__system.html#gaf5df2e2d6f7f4da0f006d54c4372890f">platform_id</a>
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the value that represents the current platform. </p>
-<dl class="section return"><dt>Returns</dt><dd>the value that represents the current platform.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga0080173146eba8655792695d333c1170"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0080173146eba8655792695d333c1170">&#9670;&nbsp;</a></span>exists()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::battery::exists </td>
+          <td class="memname">auto cen::cpu::has_rdtsc </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> -&gt; bool
@@ -644,100 +1507,8 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Indicates whether or not the system is running on a battery. </p>
-<p>This function is simply a convenience function that is based on the <code><a class="el" href="group__system.html#gaf8300293e48dcaec2e412bd58b33d153" title="Returns the current power state.">battery::state()</a></code> function.</p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the system is running on a battery; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga86a526aed5b7ca4c5ecb38a7dcd5d45d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga86a526aed5b7ca4c5ecb38a7dcd5d45d">&#9670;&nbsp;</a></span>frequency()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::counter::frequency </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__core.html#ga23844aa05b9b994328870cca9e5a7808">u64</a>
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the frequency of the system high-performance counter. </p>
-<dl class="section return"><dt>Returns</dt><dd>the frequency of the system high-performance counter.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga2f672f94adfa3bd1039cbbcba949b59e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2f672f94adfa3bd1039cbbcba949b59e">&#9670;&nbsp;</a></span>get_text()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::clipboard::get_text </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; std::string
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the current text in the clipboard. </p>
-<dl class="section note"><dt>Note</dt><dd>If the clipboard cannot be obtained, this function returns the empty string.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>the current clipboard text.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga5408e7f2d63dc976dd49b30fd8df7d84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5408e7f2d63dc976dd49b30fd8df7d84">&#9670;&nbsp;</a></span>has_3dnow()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::cpu::has_3dnow </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; bool
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the CPU has 3DNow! features. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the CPU has 3DNow! features; <code>false</code> otherwise.</dd></dl>
+<p>Indicates whether or not the CPU has the RDTSC instruction. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the CPU has the RDTSC instruction; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
@@ -772,126 +1543,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gac7f87188bd9f3ecad3d4da62db6a6a4c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac7f87188bd9f3ecad3d4da62db6a6a4c">&#9670;&nbsp;</a></span>has_arm_simd()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::cpu::has_arm_simd </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; bool
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the CPU has ARM SIMD (ARMv6+) features. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the CPU has ARM SIMD (ARMv6+) features; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga2d4ba33c65aefcccbe257ed303dfc5eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2d4ba33c65aefcccbe257ed303dfc5eb">&#9670;&nbsp;</a></span>has_avx()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::cpu::has_avx </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; bool
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the CPU has AVX features. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the CPU has AVX features; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga0892a4c29f3b0796f0b675661ed42406"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0892a4c29f3b0796f0b675661ed42406">&#9670;&nbsp;</a></span>has_avx2()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::cpu::has_avx2 </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; bool
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the CPU has AVX2 features. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the CPU has AVX2 features; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="gaa6181356061e735b340a0fcff2ea4774"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa6181356061e735b340a0fcff2ea4774">&#9670;&nbsp;</a></span>has_avx512f()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::cpu::has_avx512f </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; bool
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the CPU has AVX-512F (foundation) features. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the CPU has AVX-512F (foundation) features; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
 <a id="ga03d03ba3b82ada97c557851a909e11f5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga03d03ba3b82ada97c557851a909e11f5">&#9670;&nbsp;</a></span>has_mmx()</h2>
 
@@ -922,8 +1573,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga4fbc240011c35a5ab44b2640494e1ad8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4fbc240011c35a5ab44b2640494e1ad8">&#9670;&nbsp;</a></span>has_neon()</h2>
+<a id="ga5408e7f2d63dc976dd49b30fd8df7d84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5408e7f2d63dc976dd49b30fd8df7d84">&#9670;&nbsp;</a></span>has_3dnow()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -932,7 +1583,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::cpu::has_neon </td>
+          <td class="memname">auto cen::cpu::has_3dnow </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> -&gt; bool
@@ -946,38 +1597,8 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Indicates whether or not the CPU has NEON (ARM SIMD) features. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the CPU has NEON (ARM SIMD) features; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="gab90bcbe4b10fda10f02032e3e351286a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab90bcbe4b10fda10f02032e3e351286a">&#9670;&nbsp;</a></span>has_rdtsc()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::cpu::has_rdtsc </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; bool
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the CPU has the RDTSC instruction. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the CPU has the RDTSC instruction; <code>false</code> otherwise.</dd></dl>
+<p>Indicates whether or not the CPU has 3DNow! features. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the CPU has 3DNow! features; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
@@ -1132,8 +1753,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gae9981e5ba925b620ef4d4df63b6149de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae9981e5ba925b620ef4d4df63b6149de">&#9670;&nbsp;</a></span>has_text()</h2>
+<a id="ga2d4ba33c65aefcccbe257ed303dfc5eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2d4ba33c65aefcccbe257ed303dfc5eb">&#9670;&nbsp;</a></span>has_avx()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1142,7 +1763,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::clipboard::has_text </td>
+          <td class="memname">auto cen::cpu::has_avx </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> -&gt; bool
@@ -1156,14 +1777,14 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Indicates whether or not there is a clipboard exists and that it contains non-empty text. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if there is a clipboard that contains non-empty text; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+<p>Indicates whether or not the CPU has AVX features. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the CPU has AVX features; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="ga28dd9eb2a03def1dd91bc58d07f93cc5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga28dd9eb2a03def1dd91bc58d07f93cc5">&#9670;&nbsp;</a></span>ifdef_android()</h2>
+<a id="ga0892a4c29f3b0796f0b675661ed42406"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0892a4c29f3b0796f0b675661ed42406">&#9670;&nbsp;</a></span>has_avx2()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1172,158 +1793,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr auto cen::ifdef_android </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; bool
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the current OS is Android. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the current OS is Android; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga89c4431613a1c6020c9bc69bb7144853"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga89c4431613a1c6020c9bc69bb7144853">&#9670;&nbsp;</a></span>ifdef_apple()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto cen::ifdef_apple </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; bool
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the current OS is either MacOS or iOS. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the current OS is Android; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga906e2d76c817a65e95b2bdc5ae0f7b40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga906e2d76c817a65e95b2bdc5ae0f7b40">&#9670;&nbsp;</a></span>ifdef_linux()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto cen::ifdef_linux </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; bool
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the current OS is derived from Linux. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the current OS is derived from Linux; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga17742e9e970cb8233592afe3dd362051"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga17742e9e970cb8233592afe3dd362051">&#9670;&nbsp;</a></span>ifdef_win32()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto cen::ifdef_win32 </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; bool
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the current OS is 32-bit Windows. </p>
-<dl class="section note"><dt>Note</dt><dd>This function should return <code>true</code> on 64-bit Windows as well.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the current OS is 32-bit Windows; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga85849d2df4e81e1c0423c62adf2d85c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga85849d2df4e81e1c0423c62adf2d85c0">&#9670;&nbsp;</a></span>ifdef_win64()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto cen::ifdef_win64 </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; bool
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the current OS is 64-bit Windows. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the current OS is 64-bit Windows; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga583b188ad41383435f28aa2932b03fdb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga583b188ad41383435f28aa2932b03fdb">&#9670;&nbsp;</a></span>is_android()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::is_android </td>
+          <td class="memname">auto cen::cpu::has_avx2 </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> -&gt; bool
@@ -1337,14 +1807,14 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Indicates whether or not the current platform is Android. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the current platform is Android; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+<p>Indicates whether or not the CPU has AVX2 features. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the CPU has AVX2 features; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="ga3445ed5750e0e407b5a300d333b3203f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3445ed5750e0e407b5a300d333b3203f">&#9670;&nbsp;</a></span>is_available()</h2>
+<a id="gaa6181356061e735b340a0fcff2ea4774"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa6181356061e735b340a0fcff2ea4774">&#9670;&nbsp;</a></span>has_avx512f()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1353,7 +1823,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::battery::is_available </td>
+          <td class="memname">auto cen::cpu::has_avx512f </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> -&gt; bool
@@ -1367,10 +1837,99 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Indicate whether or not a battery is available. </p>
-<p>This convenience function considers a battery available if the state returned from <code><a class="el" href="group__system.html#gaf8300293e48dcaec2e412bd58b33d153" title="Returns the current power state.">battery::state()</a></code> is neither <code>no_battery</code> nor <code>unknown</code>.</p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if a battery is available; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
+<p>Indicates whether or not the CPU has AVX-512F (foundation) features. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the CPU has AVX-512F (foundation) features; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga4fbc240011c35a5ab44b2640494e1ad8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4fbc240011c35a5ab44b2640494e1ad8">&#9670;&nbsp;</a></span>has_neon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::cpu::has_neon </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the CPU has NEON (ARM SIMD) features. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the CPU has NEON (ARM SIMD) features; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="gac7f87188bd9f3ecad3d4da62db6a6a4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac7f87188bd9f3ecad3d4da62db6a6a4c">&#9670;&nbsp;</a></span>has_arm_simd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::cpu::has_arm_simd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the CPU has ARM SIMD (ARMv6+) features. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the CPU has ARM SIMD (ARMv6+) features; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga59b415c2b5dbf07e0874ac474f48d854"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga59b415c2b5dbf07e0874ac474f48d854">&#9670;&nbsp;</a></span>simd_alignment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::cpu::simd_alignment </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__core.html#ga2313c92fc18c319ebe1853e2d0579886">usize</a>
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the minimum number of bytes to which a pointer must be aligned to be compatible with SIMD instructions on the current CPU. </p>
+<dl class="section return"><dt>Returns</dt><dd>the minimum number of bytes to which a pointer must be aligned to be compatible with SIMD instructions.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
 </div>
@@ -1404,128 +1963,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga128edfb3b768b77cce3d859851c51876"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga128edfb3b768b77cce3d859851c51876">&#9670;&nbsp;</a></span>is_charged()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::battery::is_charged </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; bool
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicate whether or not the battery is charged. </p>
-<p>This convenience function is equivalent to checking if <code><a class="el" href="group__system.html#gaf8300293e48dcaec2e412bd58b33d153" title="Returns the current power state.">battery::state()</a></code> is equal to <code><a class="el" href="group__system.html#gga4dda00faf11166cb0201cba7f35bb1afa48aee20d947736a18c6e9d09b526f75a" title="Currently plugged in and charged.">power_state::charged</a></code>.</p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the battery is charged; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga1addb9148cb6e8ca78d998d5226b4a84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1addb9148cb6e8ca78d998d5226b4a84">&#9670;&nbsp;</a></span>is_charging()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::battery::is_charging </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; bool
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicate whether or not the battery is being charged. </p>
-<p>This convenience function is equivalent to checking if <code><a class="el" href="group__system.html#gaf8300293e48dcaec2e412bd58b33d153" title="Returns the current power state.">battery::state()</a></code> is equal to <code><a class="el" href="group__system.html#gga4dda00faf11166cb0201cba7f35bb1afa05a0c26d8e746429c786c8e53378b9c9" title="Currently charging the battery.">power_state::charging</a></code>.</p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the battery is charging; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
-
-</div>
-</div>
-<a id="gaf9c16e67ca0f07609cd00fe216e0f56e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf9c16e67ca0f07609cd00fe216e0f56e">&#9670;&nbsp;</a></span>is_ios()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::is_ios </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; bool
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the current platform is iOS. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the current platform is iOS; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga806019d8c666151c57a54dc827a6d92c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga806019d8c666151c57a54dc827a6d92c">&#9670;&nbsp;</a></span>is_linux()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::is_linux </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; bool
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the current platform is Linux. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the current platform is Linux; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
 <a id="ga66597a0c9ed986e5591ddc558a783727"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga66597a0c9ed986e5591ddc558a783727">&#9670;&nbsp;</a></span>is_little_endian()</h2>
 
@@ -1553,195 +1990,6 @@ Functions</h2></td></tr>
 <p>Indicates whether or not the CPU uses little-endian byte ordering. </p>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the CPU uses little-endian byte ordering; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.1.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga3e62afc353e7b2eb357eb49642edd436"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3e62afc353e7b2eb357eb49642edd436">&#9670;&nbsp;</a></span>is_mac_osx()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::is_mac_osx </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; bool
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the current platform is Mac OSX. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the current platform is Mac OSX; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="gaa5277fc7afca40870fce31af77372051"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa5277fc7afca40870fce31af77372051">&#9670;&nbsp;</a></span>is_tablet()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::is_tablet </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; bool
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the current system is a tablet. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the current system is a tablet; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga51ecaf5e3af6e68038ca21a3be28f477"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga51ecaf5e3af6e68038ca21a3be28f477">&#9670;&nbsp;</a></span>is_windows()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::is_windows </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; bool
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the current platform is Windows. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the current platform is Windows; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="gaa09886ca03dbb2f6306324459812ac52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa09886ca03dbb2f6306324459812ac52">&#9670;&nbsp;</a></span>minutes_left()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::battery::minutes_left </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; std::optional&lt;<a class="el" href="group__core.html#ga188e11bfe67eb564ec1c9afa24a204db">minutes</a>&lt;int&gt;&gt;
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the amount of minutes of battery life that is remaining. </p>
-<dl class="section return"><dt>Returns</dt><dd>minutes of remaining battery life; <code>std::nullopt</code> if the value cannot be computed.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga8a3954964160a527a3c11befc42c60c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga8a3954964160a527a3c11befc42c60c0">&#9670;&nbsp;</a></span>now()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::counter::now </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__core.html#ga23844aa05b9b994328870cca9e5a7808">u64</a>
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the current raw value of the system high-performance counter. </p>
-<dl class="section note"><dt>Note</dt><dd>The unit of the returned value is platform dependent.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>the current value of the system high-performance counter.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga0635e1cfd7b3bbed55e54f2245d42dba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0635e1cfd7b3bbed55e54f2245d42dba">&#9670;&nbsp;</a></span>now_in_seconds()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::counter::now_in_seconds </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__core.html#ga826ec294a3b6962454d669b9c277537b">seconds</a>&lt;T&gt;
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the value of the system high-performance counter in seconds. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>the representation type.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the value of the system high-performance counter, in seconds.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
 </div>
@@ -1813,8 +2061,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="gae902bb2700376a54b9579caac64648c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae902bb2700376a54b9579caac64648c8">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[1/2]</span></h2>
+<a id="gac8a36913bbfb465a93661f2bb1964e64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac8a36913bbfb465a93661f2bb1964e64">&#9670;&nbsp;</a></span>to_string() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1823,89 +2071,37 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr auto cen::operator!= </td>
+          <td class="memname">auto cen::to_string </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__system.html#ga4dda00faf11166cb0201cba7f35bb1af">power_state</a>&#160;</td>
-          <td class="paramname"><em>lhs</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const SDL_PowerState&#160;</td>
-          <td class="paramname"><em>rhs</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; bool
+          <td class="paramtype">const <a class="el" href="group__system.html#gaf5df2e2d6f7f4da0f006d54c4372890f">platform_id</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> -&gt; std::string_view
 </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Indicates whether or not two power states values aren't the same. </p>
+<p>Returns a textual version of the supplied platform ID. </p>
+<p>This function returns a string that mirrors the name of the enumerator, e.g. <code>to_string(platform_id::windows) == "windows"</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">lhs</td><td>the left-hand side power state value. </td></tr>
-    <tr><td class="paramname">rhs</td><td>the right-hand side power state value.</td></tr>
+    <tr><td class="paramname">id</td><td>the enumerator that will be converted.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the power states aren't the same; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="gaaea8658689e80c452cff29708cd4089e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaaea8658689e80c452cff29708cd4089e">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto cen::operator!= </td>
-          <td>(</td>
-          <td class="paramtype">const SDL_PowerState&#160;</td>
-          <td class="paramname"><em>lhs</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="group__system.html#ga4dda00faf11166cb0201cba7f35bb1af">power_state</a>&#160;</td>
-          <td class="paramname"><em>rhs</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; bool
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not two power states values aren't the same. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">lhs</td><td>the left-hand side power state value. </td></tr>
-    <tr><td class="paramname">rhs</td><td>the right-hand side power state value.</td></tr>
+<dl class="section return"><dt>Returns</dt><dd>a string that mirrors the name of the enumerator.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classcen_1_1cen__error.html" title="The base of all exceptions explicitly thrown by the library.">cen_error</a></td><td>if the enumerator is not recognized.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the power states aren't the same; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.2.0 </dd></dl>
 
 </div>
 </div>
@@ -1954,6 +2150,441 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><code><a class="el" href="group__audio.html#gac8a36913bbfb465a93661f2bb1964e64" title="Returns a textual version of the supplied platform ID.">to_string(platform_id)</a></code></dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>the used stream.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga6742b3a4939d9d04f6ef50d5a7f0f1ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6742b3a4939d9d04f6ef50d5a7f0f1ee">&#9670;&nbsp;</a></span>current_platform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::current_platform </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__system.html#gaf5df2e2d6f7f4da0f006d54c4372890f">platform_id</a>
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the value that represents the current platform. </p>
+<dl class="section return"><dt>Returns</dt><dd>the value that represents the current platform.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga51ecaf5e3af6e68038ca21a3be28f477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga51ecaf5e3af6e68038ca21a3be28f477">&#9670;&nbsp;</a></span>is_windows()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::is_windows </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the current platform is Windows. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the current platform is Windows; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga3e62afc353e7b2eb357eb49642edd436"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3e62afc353e7b2eb357eb49642edd436">&#9670;&nbsp;</a></span>is_mac_osx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::is_mac_osx </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the current platform is Mac OSX. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the current platform is Mac OSX; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga806019d8c666151c57a54dc827a6d92c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga806019d8c666151c57a54dc827a6d92c">&#9670;&nbsp;</a></span>is_linux()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::is_linux </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the current platform is Linux. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the current platform is Linux; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="gaf9c16e67ca0f07609cd00fe216e0f56e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf9c16e67ca0f07609cd00fe216e0f56e">&#9670;&nbsp;</a></span>is_ios()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::is_ios </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the current platform is iOS. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the current platform is iOS; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga583b188ad41383435f28aa2932b03fdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga583b188ad41383435f28aa2932b03fdb">&#9670;&nbsp;</a></span>is_android()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::is_android </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the current platform is Android. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the current platform is Android; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga6ffb9e970d0c91c7e73b5522073a157a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6ffb9e970d0c91c7e73b5522073a157a">&#9670;&nbsp;</a></span>platform_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::platform_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; std::optional&lt;std::string&gt;
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the name of the current platform. </p>
+<dl class="section return"><dt>Returns</dt><dd>the name of the current platform; <code>std::nullopt</code> if the name cannot be deduced.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="gaa5277fc7afca40870fce31af77372051"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa5277fc7afca40870fce31af77372051">&#9670;&nbsp;</a></span>is_tablet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::is_tablet </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the current system is a tablet. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the current system is a tablet; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga17742e9e970cb8233592afe3dd362051"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga17742e9e970cb8233592afe3dd362051">&#9670;&nbsp;</a></span>ifdef_win32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::ifdef_win32 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the current OS is 32-bit Windows. </p>
+<dl class="section note"><dt>Note</dt><dd>This function should return <code>true</code> on 64-bit Windows as well.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the current OS is 32-bit Windows; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga85849d2df4e81e1c0423c62adf2d85c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga85849d2df4e81e1c0423c62adf2d85c0">&#9670;&nbsp;</a></span>ifdef_win64()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::ifdef_win64 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the current OS is 64-bit Windows. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the current OS is 64-bit Windows; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga906e2d76c817a65e95b2bdc5ae0f7b40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga906e2d76c817a65e95b2bdc5ae0f7b40">&#9670;&nbsp;</a></span>ifdef_linux()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::ifdef_linux </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the current OS is derived from Linux. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the current OS is derived from Linux; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga28dd9eb2a03def1dd91bc58d07f93cc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga28dd9eb2a03def1dd91bc58d07f93cc5">&#9670;&nbsp;</a></span>ifdef_android()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::ifdef_android </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the current OS is Android. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the current OS is Android; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga89c4431613a1c6020c9bc69bb7144853"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga89c4431613a1c6020c9bc69bb7144853">&#9670;&nbsp;</a></span>ifdef_apple()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::ifdef_apple </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the current OS is either MacOS or iOS. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the current OS is Android; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="gac185488e2726381ad6a3f0c115840abb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac185488e2726381ad6a3f0c115840abb">&#9670;&nbsp;</a></span>to_string() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::to_string </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__system.html#ga4dda00faf11166cb0201cba7f35bb1af">power_state</a>&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td> -&gt; std::string_view
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a textual version of the supplied power state. </p>
+<p>This function returns a string that mirrors the name of the enumerator, e.g. <code>to_string(power_state::on_battery) == "on_battery"</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>the enumerator that will be converted.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a string that mirrors the name of the enumerator.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classcen_1_1cen__error.html" title="The base of all exceptions explicitly thrown by the library.">cen_error</a></td><td>if the enumerator is not recognized.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section since"><dt>Since</dt><dd>6.2.0 </dd></dl>
 
 </div>
@@ -2103,8 +2734,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="gad923b189924d4471260c87d83559bd30"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad923b189924d4471260c87d83559bd30">&#9670;&nbsp;</a></span>percentage()</h2>
+<a id="gae902bb2700376a54b9579caac64648c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae902bb2700376a54b9579caac64648c8">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2113,126 +2744,46 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::battery::percentage </td>
+          <td class="memname">constexpr auto cen::operator!= </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; std::optional&lt;int&gt;
-</td>
+          <td class="paramtype">const <a class="el" href="group__system.html#ga4dda00faf11166cb0201cba7f35bb1af">power_state</a>&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the percentage of battery life that is currently left. </p>
-<dl class="section return"><dt>Returns</dt><dd>percentage of remaining battery life, in the range [0, 100]; <code>std::nullopt</code> if the battery percentage isn't available.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga6ffb9e970d0c91c7e73b5522073a157a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6ffb9e970d0c91c7e73b5522073a157a">&#9670;&nbsp;</a></span>platform_name()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
         <tr>
-          <td class="memname">auto cen::platform_name </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; std::optional&lt;std::string&gt;
-</td>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const SDL_PowerState&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the name of the current platform. </p>
-<dl class="section return"><dt>Returns</dt><dd>the name of the current platform; <code>std::nullopt</code> if the name cannot be deduced.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="gac7b98bb966c7172036d8901e6f7fe68d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac7b98bb966c7172036d8901e6f7fe68d">&#9670;&nbsp;</a></span>seconds_left()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
         <tr>
-          <td class="memname">auto cen::battery::seconds_left </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; std::optional&lt;<a class="el" href="group__core.html#ga826ec294a3b6962454d669b9c277537b">seconds</a>&lt;int&gt;&gt;
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; bool
 </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the seconds of battery life that is remaining. </p>
-<dl class="section return"><dt>Returns</dt><dd>seconds of remaining battery life; <code>std::nullopt</code> if the value cannot be computed.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="gac3b84af1b87a611897903ded385a87aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac3b84af1b87a611897903ded385a87aa">&#9670;&nbsp;</a></span>set_text() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::clipboard::set_text </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a> &gt;&#160;</td>
-          <td class="paramname"><em>text</em></td><td>)</td>
-          <td> -&gt; bool
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the current clipboard text. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>text</code> cannot be null.</dd></dl>
+<p>Indicates whether or not two power states values aren't the same. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">text</td><td>the text that will be stored in the clipboard.</td></tr>
+    <tr><td class="paramname">lhs</td><td>the left-hand side power state value. </td></tr>
+    <tr><td class="paramname">rhs</td><td>the right-hand side power state value.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the clipboard text was successfully set; <code>false</code> otherwise.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the power states aren't the same; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="gad3b88fa68cbf70e49fffa92585596a5d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad3b88fa68cbf70e49fffa92585596a5d">&#9670;&nbsp;</a></span>set_text() <span class="overload">[2/2]</span></h2>
+<a id="gaaea8658689e80c452cff29708cd4089e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaea8658689e80c452cff29708cd4089e">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2241,652 +2792,101 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::clipboard::set_text </td>
+          <td class="memname">constexpr auto cen::operator!= </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>text</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
-</td>
+          <td class="paramtype">const SDL_PowerState&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the current clipboard text. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">text</td><td>the text that will be stored in the clipboard.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the clipboard text was successfully set; <code>failure</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga59b415c2b5dbf07e0874ac474f48d854"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga59b415c2b5dbf07e0874ac474f48d854">&#9670;&nbsp;</a></span>simd_alignment()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
         <tr>
-          <td class="memname">auto cen::cpu::simd_alignment </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__core.html#ga2313c92fc18c319ebe1853e2d0579886">usize</a>
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the minimum number of bytes to which a pointer must be aligned to be compatible with SIMD instructions on the current CPU. </p>
-<dl class="section return"><dt>Returns</dt><dd>the minimum number of bytes to which a pointer must be aligned to be compatible with SIMD instructions.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="gaf8300293e48dcaec2e412bd58b33d153"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf8300293e48dcaec2e412bd58b33d153">&#9670;&nbsp;</a></span>state()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::battery::state </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__system.html#ga4dda00faf11166cb0201cba7f35bb1af">power_state</a>
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the current power state. </p>
-<dl class="section return"><dt>Returns</dt><dd>the current power state.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga55fdfbb7b9a5ecb837459522f983fb0c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga55fdfbb7b9a5ecb837459522f983fb0c">&#9670;&nbsp;</a></span>swap_big_endian() <span class="overload">[1/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::swap_big_endian </td>
-          <td>(</td>
-          <td class="paramtype">const float&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td> -&gt; float
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Swaps the big endian value to a little endian value and returns it. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">value</td><td>the big endian value that will be swapped.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the resulting little endian value.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
-<a id="gae91330ba1142e46fb8b06d9f05571c38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae91330ba1142e46fb8b06d9f05571c38">&#9670;&nbsp;</a></span>swap_big_endian() <span class="overload">[2/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::swap_big_endian </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Swaps the big endian value to a little endian value and returns it. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">value</td><td>the big endian value that will be swapped.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the resulting little endian value.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga0580942750d0fb543244f17f97531f2e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0580942750d0fb543244f17f97531f2e">&#9670;&nbsp;</a></span>swap_big_endian() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::swap_big_endian </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Swaps the big endian value to a little endian value and returns it. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">value</td><td>the big endian value that will be swapped.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the resulting little endian value.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga4e473e29de4dbf2826f38dbbc7d1d4f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4e473e29de4dbf2826f38dbbc7d1d4f1">&#9670;&nbsp;</a></span>swap_big_endian() <span class="overload">[4/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::swap_big_endian </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga23844aa05b9b994328870cca9e5a7808">u64</a>&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__core.html#ga23844aa05b9b994328870cca9e5a7808">u64</a>
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Swaps the big endian value to a little endian value and returns it. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">value</td><td>the big endian value that will be swapped.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the resulting little endian value.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga3b2416a77ba92ae39946505dfe63b9c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3b2416a77ba92ae39946505dfe63b9c5">&#9670;&nbsp;</a></span>swap_byte_order() <span class="overload">[1/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::swap_byte_order </td>
-          <td>(</td>
-          <td class="paramtype">const float&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td> -&gt; float
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Swaps the byte order of the specified value and returns the result. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">value</td><td>the value to swap the byte order of.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the swapped byte order value.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga4b01268e9ad4aa3c8214dc976279aa56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4b01268e9ad4aa3c8214dc976279aa56">&#9670;&nbsp;</a></span>swap_byte_order() <span class="overload">[2/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::swap_byte_order </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Swaps the byte order of the specified value and returns the result. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">value</td><td>the value to swap the byte order of.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the swapped byte order value.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga21c2298dd24a8fba4b74fef018e3140d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga21c2298dd24a8fba4b74fef018e3140d">&#9670;&nbsp;</a></span>swap_byte_order() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::swap_byte_order </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Swaps the byte order of the specified value and returns the result. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">value</td><td>the value to swap the byte order of.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the swapped byte order value.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga9eccc4c7c1241b5c0ace4b928fbc1148"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9eccc4c7c1241b5c0ace4b928fbc1148">&#9670;&nbsp;</a></span>swap_byte_order() <span class="overload">[4/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::swap_byte_order </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga23844aa05b9b994328870cca9e5a7808">u64</a>&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__core.html#ga23844aa05b9b994328870cca9e5a7808">u64</a>
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Swaps the byte order of the specified value and returns the result. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">value</td><td>the value to swap the byte order of.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the swapped byte order value.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga533cdf120a0bc29fdabbf77867d94b12"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga533cdf120a0bc29fdabbf77867d94b12">&#9670;&nbsp;</a></span>swap_little_endian() <span class="overload">[1/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::swap_little_endian </td>
-          <td>(</td>
-          <td class="paramtype">const float&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td> -&gt; float
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Swaps the little endian value to a big endian value and returns it. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">value</td><td>the little endian value that will be swapped.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the resulting big endian value.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga81e8e5c946f45ce4aa1f4b1e1853aefa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga81e8e5c946f45ce4aa1f4b1e1853aefa">&#9670;&nbsp;</a></span>swap_little_endian() <span class="overload">[2/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::swap_little_endian </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Swaps the little endian value to a big endian value and returns it. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">value</td><td>the little endian value that will be swapped.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the resulting big endian value.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga77b21a5c326530db4174cb3c4a1294bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga77b21a5c326530db4174cb3c4a1294bd">&#9670;&nbsp;</a></span>swap_little_endian() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::swap_little_endian </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Swaps the little endian value to a big endian value and returns it. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">value</td><td>the little endian value that will be swapped.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the resulting big endian value.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
-<a id="gaece5ce58137eb1b1a697fa79a3e762c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaece5ce58137eb1b1a697fa79a3e762c8">&#9670;&nbsp;</a></span>swap_little_endian() <span class="overload">[4/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::swap_little_endian </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga23844aa05b9b994328870cca9e5a7808">u64</a>&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__core.html#ga23844aa05b9b994328870cca9e5a7808">u64</a>
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Swaps the little endian value to a big endian value and returns it. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">value</td><td>the little endian value that will be swapped.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the resulting big endian value.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
-<a id="gaaa378627cdab42895b4580deac4347d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaaa378627cdab42895b4580deac4347d6">&#9670;&nbsp;</a></span>ticks()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::counter::ticks </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__core.html#gaeabb8896b493294e6781651b0abfbef5">milliseconds</a>&lt;<a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>&gt;
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the amount of milliseconds since the library was initialized. </p>
-<dl class="section return"><dt>Returns</dt><dd>the amount of milliseconds since the library was initialized.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="gac8a36913bbfb465a93661f2bb1964e64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac8a36913bbfb465a93661f2bb1964e64">&#9670;&nbsp;</a></span>to_string() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::to_string </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__system.html#gaf5df2e2d6f7f4da0f006d54c4372890f">platform_id</a>&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
-          <td> -&gt; std::string_view
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a textual version of the supplied platform ID. </p>
-<p>This function returns a string that mirrors the name of the enumerator, e.g. <code>to_string(platform_id::windows) == "windows"</code>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">id</td><td>the enumerator that will be converted.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>a string that mirrors the name of the enumerator.</dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classcen_1_1cen__error.html" title="The base of all exceptions explicitly thrown by the library.">cen_error</a></td><td>if the enumerator is not recognized.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>6.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="gac185488e2726381ad6a3f0c115840abb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac185488e2726381ad6a3f0c115840abb">&#9670;&nbsp;</a></span>to_string() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto cen::to_string </td>
-          <td>(</td>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const <a class="el" href="group__system.html#ga4dda00faf11166cb0201cba7f35bb1af">power_state</a>&#160;</td>
-          <td class="paramname"><em>state</em></td><td>)</td>
-          <td> -&gt; std::string_view
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; bool
 </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a textual version of the supplied power state. </p>
-<p>This function returns a string that mirrors the name of the enumerator, e.g. <code>to_string(power_state::on_battery) == "on_battery"</code>.</p>
+<p>Indicates whether or not two power states values aren't the same. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">state</td><td>the enumerator that will be converted.</td></tr>
+    <tr><td class="paramname">lhs</td><td>the left-hand side power state value. </td></tr>
+    <tr><td class="paramname">rhs</td><td>the right-hand side power state value.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>a string that mirrors the name of the enumerator.</dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classcen_1_1cen__error.html" title="The base of all exceptions explicitly thrown by the library.">cen_error</a></td><td>if the enumerator is not recognized.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>6.2.0 </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the power states aren't the same; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga080c5a1d6fcedd5300ab84ab3718ac23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga080c5a1d6fcedd5300ab84ab3718ac23">&#9670;&nbsp;</a></span>amount_mb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::ram::amount_mb </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; int
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the total amount of system RAM in megabytes. </p>
+<dl class="section return"><dt>Returns</dt><dd>the total amount of system RAM in megabytes.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga11a249314a4eff6ee6a66804263875e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga11a249314a4eff6ee6a66804263875e6">&#9670;&nbsp;</a></span>amount_gb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::ram::amount_gb </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; int
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the total amount of system RAM in gigabytes. </p>
+<dl class="section return"><dt>Returns</dt><dd>the total amount of system RAM in gigabytes.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 
 </div>
 </div>

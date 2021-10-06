@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -244,8 +244,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a517fe0a38c85a3d0fbbb96932ee94de3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a517fe0a38c85a3d0fbbb96932ee94de3">&#9670;&nbsp;</a></span>ball()</h2>
+<a id="a1e0f5d57911a2fd5e825d19111583061"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e0f5d57911a2fd5e825d19111583061">&#9670;&nbsp;</a></span>set_which()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -254,11 +254,11 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::joy_ball_event::ball </td>
+          <td class="memname">void cen::joy_ball_event::set_which </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>
-  </td>
+          <td class="paramtype">const SDL_JoystickID&#160;</td>
+          <td class="paramname"><em>which</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -268,70 +268,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the joystick trackball index associated with the event. </p>
-<dl class="section return"><dt>Returns</dt><dd>the joystick trackball index associated with the event.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a6fd45658f6d392c25adef480a8a4216d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6fd45658f6d392c25adef480a8a4216d">&#9670;&nbsp;</a></span>dx()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::joy_ball_event::dx </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__core.html#ga995971102059bcb96d27921ffb7c4916">i16</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the relative motion along the x-axis. </p>
-<dl class="section note"><dt>Note</dt><dd>Trackballs only return relative motion, i.e this is the change in position of the ball along the x-axis since it was last updated.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>the relative motion along the x-axis.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a5f3cfecdf6e7e474edbf94c177b439cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f3cfecdf6e7e474edbf94c177b439cd">&#9670;&nbsp;</a></span>dy()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::joy_ball_event::dy </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__core.html#ga995971102059bcb96d27921ffb7c4916">i16</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the relative motion along the y-axis. </p>
-<dl class="section note"><dt>Note</dt><dd>Trackballs only return relative motion, i.e this is the change in position of the ball along the y-axis since it was last updated.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>the relative motion along the y-axis.</dd></dl>
+<p>Sets the joystick instance ID associated with the event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">which</td><td>the joystick instance ID.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
@@ -441,41 +384,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a1e0f5d57911a2fd5e825d19111583061"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e0f5d57911a2fd5e825d19111583061">&#9670;&nbsp;</a></span>set_which()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cen::joy_ball_event::set_which </td>
-          <td>(</td>
-          <td class="paramtype">const SDL_JoystickID&#160;</td>
-          <td class="paramname"><em>which</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the joystick instance ID associated with the event. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">which</td><td>the joystick instance ID.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
 <a id="a78ac7f2ad4528f6c1a3551d230f72a91"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a78ac7f2ad4528f6c1a3551d230f72a91">&#9670;&nbsp;</a></span>which()</h2>
 
@@ -502,6 +410,98 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Returns the joystick instance ID associated with the event. </p>
 <dl class="section return"><dt>Returns</dt><dd>the joystick instance ID associated with the event.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a517fe0a38c85a3d0fbbb96932ee94de3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a517fe0a38c85a3d0fbbb96932ee94de3">&#9670;&nbsp;</a></span>ball()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::joy_ball_event::ball </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the joystick trackball index associated with the event. </p>
+<dl class="section return"><dt>Returns</dt><dd>the joystick trackball index associated with the event.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a6fd45658f6d392c25adef480a8a4216d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fd45658f6d392c25adef480a8a4216d">&#9670;&nbsp;</a></span>dx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::joy_ball_event::dx </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__core.html#ga995971102059bcb96d27921ffb7c4916">i16</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the relative motion along the x-axis. </p>
+<dl class="section note"><dt>Note</dt><dd>Trackballs only return relative motion, i.e this is the change in position of the ball along the x-axis since it was last updated.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the relative motion along the x-axis.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a5f3cfecdf6e7e474edbf94c177b439cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f3cfecdf6e7e474edbf94c177b439cd">&#9670;&nbsp;</a></span>dy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::joy_ball_event::dy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__core.html#ga995971102059bcb96d27921ffb7c4916">i16</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the relative motion along the y-axis. </p>
+<dl class="section note"><dt>Note</dt><dd>Trackballs only return relative motion, i.e this is the change in position of the ball along the y-axis since it was last updated.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the relative motion along the y-axis.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>

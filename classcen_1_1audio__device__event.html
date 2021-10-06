@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -235,8 +235,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a68692260b573281b24000e21dcc06c86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68692260b573281b24000e21dcc06c86">&#9670;&nbsp;</a></span>capture()</h2>
+<a id="a16973152eddd34368d0fef9f06753d28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16973152eddd34368d0fef9f06753d28">&#9670;&nbsp;</a></span>set_which()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -245,11 +245,11 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::audio_device_event::capture </td>
+          <td class="memname">void cen::audio_device_event::set_which </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>&#160;</td>
+          <td class="paramname"><em>which</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -259,38 +259,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Indicates whether or not the audio device event is associated with an audio capture device. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the event is associated with a capture device; false otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ad98f74eca9b17f845120bab737001357"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad98f74eca9b17f845120bab737001357">&#9670;&nbsp;</a></span>output()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::audio_device_event::output </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the audio device event is associated with an audio output device. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the event is associated with an output device; false otherwise.</dd></dl>
+<p>Sets the audio device ID that is associated with the event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">which</td><td>the audio device ID that is associated with the event.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
@@ -330,41 +305,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a16973152eddd34368d0fef9f06753d28"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16973152eddd34368d0fef9f06753d28">&#9670;&nbsp;</a></span>set_which()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cen::audio_device_event::set_which </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>&#160;</td>
-          <td class="paramname"><em>which</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the audio device ID that is associated with the event. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">which</td><td>the audio device ID that is associated with the event.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
 <a id="a689b7c6414d0087e1e6ba351dbc627fb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a689b7c6414d0087e1e6ba351dbc627fb">&#9670;&nbsp;</a></span>which()</h2>
 
@@ -391,6 +331,66 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Returns the audio device ID associated with the event. </p>
 <dl class="section return"><dt>Returns</dt><dd>the audio device ID associated with the event.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ad98f74eca9b17f845120bab737001357"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad98f74eca9b17f845120bab737001357">&#9670;&nbsp;</a></span>output()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::audio_device_event::output </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the audio device event is associated with an audio output device. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the event is associated with an output device; false otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a68692260b573281b24000e21dcc06c86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68692260b573281b24000e21dcc06c86">&#9670;&nbsp;</a></span>capture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::audio_device_event::capture </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the audio device event is associated with an audio capture device. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the event is associated with a capture device; false otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>

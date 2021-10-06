@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -113,85 +113,79 @@ $(document).ready(function(){initNavTree('battery_8hpp_source.html',''); initRes
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordtype">int</span> secondsLeft{-1};</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  SDL_GetPowerInfo(&amp;secondsLeft, <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordflow">if</span> (secondsLeft != -1)</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__core.html#ga826ec294a3b6962454d669b9c277537b">seconds&lt;int&gt;</a>{secondsLeft};</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">return</span> std::nullopt;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="group__system.html#gaa09886ca03dbb2f6306324459812ac52">   60</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#gaa09886ca03dbb2f6306324459812ac52">minutes_left</a>() -&gt; std::optional&lt;minutes&lt;int&gt;&gt;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> secondsLeft = <a class="code" href="group__system.html#gac7b98bb966c7172036d8901e6f7fe68d">seconds_left</a>())</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span> std::chrono::duration_cast&lt;minutes&lt;int&gt;&gt;(*secondsLeft);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordflow">if</span> (secondsLeft != -1) {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__core.html#ga826ec294a3b6962454d669b9c277537b">seconds&lt;int&gt;</a>{secondsLeft};</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="group__system.html#gaa09886ca03dbb2f6306324459812ac52">   58</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#gaa09886ca03dbb2f6306324459812ac52">minutes_left</a>() -&gt; std::optional&lt;minutes&lt;int&gt;&gt;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> secondsLeft = <a class="code" href="group__system.html#gac7b98bb966c7172036d8901e6f7fe68d">seconds_left</a>()) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">return</span> std::chrono::duration_cast&lt;minutes&lt;int&gt;&gt;(*secondsLeft);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span> std::nullopt;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">return</span> std::nullopt;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="group__system.html#gad923b189924d4471260c87d83559bd30">   80</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#gad923b189924d4471260c87d83559bd30">percentage</a>() noexcept -&gt; std::optional&lt;<span class="keywordtype">int</span>&gt;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordtype">int</span> percentageLeft{-1};</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  SDL_GetPowerInfo(<span class="keyword">nullptr</span>, &amp;percentageLeft);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordflow">if</span> (percentageLeft != -1)</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">return</span> percentageLeft;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  }</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">return</span> std::nullopt;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  }</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="group__system.html#gaf8300293e48dcaec2e412bd58b33d153">  101</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#gaf8300293e48dcaec2e412bd58b33d153">state</a>() noexcept -&gt; <a class="code" href="group__system.html#ga4dda00faf11166cb0201cba7f35bb1af">power_state</a></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;{</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="group__system.html#ga4dda00faf11166cb0201cba7f35bb1af">power_state</a><span class="keyword">&gt;</span>(SDL_GetPowerInfo(<span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>));</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="group__system.html#ga0080173146eba8655792695d333c1170">  116</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#ga0080173146eba8655792695d333c1170">exists</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;{</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordflow">return</span> detail::any_eq(<a class="code" href="group__system.html#gaf8300293e48dcaec2e412bd58b33d153">state</a>(),</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                        <a class="code" href="group__system.html#gga4dda00faf11166cb0201cba7f35bb1afae0c6b97d642863feb21ed192e6945fa9">power_state::on_battery</a>,</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                        <a class="code" href="group__system.html#gga4dda00faf11166cb0201cba7f35bb1afa48aee20d947736a18c6e9d09b526f75a">power_state::charged</a>,</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                        <a class="code" href="group__system.html#gga4dda00faf11166cb0201cba7f35bb1afa05a0c26d8e746429c786c8e53378b9c9">power_state::charging</a>);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="group__system.html#ga1addb9148cb6e8ca78d998d5226b4a84">  134</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#ga1addb9148cb6e8ca78d998d5226b4a84">is_charging</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;{</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="group__system.html#gaf8300293e48dcaec2e412bd58b33d153">state</a>() == <a class="code" href="group__system.html#gga4dda00faf11166cb0201cba7f35bb1afa05a0c26d8e746429c786c8e53378b9c9">power_state::charging</a>;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
-<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="group__system.html#ga128edfb3b768b77cce3d859851c51876">  149</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#ga128edfb3b768b77cce3d859851c51876">is_charged</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;{</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="group__system.html#gaf8300293e48dcaec2e412bd58b33d153">state</a>() == <a class="code" href="group__system.html#gga4dda00faf11166cb0201cba7f35bb1afa48aee20d947736a18c6e9d09b526f75a">power_state::charged</a>;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;}</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
-<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="group__system.html#ga3445ed5750e0e407b5a300d333b3203f">  164</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#ga3445ed5750e0e407b5a300d333b3203f">is_available</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;{</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keywordflow">return</span> !detail::any_eq(<a class="code" href="group__system.html#gaf8300293e48dcaec2e412bd58b33d153">state</a>(), <a class="code" href="group__system.html#gga4dda00faf11166cb0201cba7f35bb1afa1009b81e098d9d62e1ac074bbf1a7f71">power_state::no_battery</a>, <a class="code" href="group__system.html#gga4dda00faf11166cb0201cba7f35bb1afaad921d60486366258809553a3db49a4a">power_state::unknown</a>);</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;}</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="group__system.html#gad923b189924d4471260c87d83559bd30">   76</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#gad923b189924d4471260c87d83559bd30">percentage</a>() noexcept -&gt; std::optional&lt;<span class="keywordtype">int</span>&gt;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordtype">int</span> percentageLeft{-1};</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  SDL_GetPowerInfo(<span class="keyword">nullptr</span>, &amp;percentageLeft);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordflow">if</span> (percentageLeft != -1) {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">return</span> percentageLeft;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="group__system.html#gaf8300293e48dcaec2e412bd58b33d153">   95</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#gaf8300293e48dcaec2e412bd58b33d153">state</a>() noexcept -&gt; <a class="code" href="group__system.html#ga4dda00faf11166cb0201cba7f35bb1af">power_state</a></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;{</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="group__system.html#ga4dda00faf11166cb0201cba7f35bb1af">power_state</a><span class="keyword">&gt;</span>(SDL_GetPowerInfo(<span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>));</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="group__system.html#ga0080173146eba8655792695d333c1170">  110</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#ga0080173146eba8655792695d333c1170">exists</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;{</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keywordflow">return</span> detail::any_eq(<a class="code" href="group__system.html#gaf8300293e48dcaec2e412bd58b33d153">state</a>(),</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                        <a class="code" href="group__system.html#gga4dda00faf11166cb0201cba7f35bb1afae0c6b97d642863feb21ed192e6945fa9">power_state::on_battery</a>,</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                        <a class="code" href="group__system.html#gga4dda00faf11166cb0201cba7f35bb1afa48aee20d947736a18c6e9d09b526f75a">power_state::charged</a>,</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                        <a class="code" href="group__system.html#gga4dda00faf11166cb0201cba7f35bb1afa05a0c26d8e746429c786c8e53378b9c9">power_state::charging</a>);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="group__system.html#ga1addb9148cb6e8ca78d998d5226b4a84">  128</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#ga1addb9148cb6e8ca78d998d5226b4a84">is_charging</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;{</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="group__system.html#gaf8300293e48dcaec2e412bd58b33d153">state</a>() == <a class="code" href="group__system.html#gga4dda00faf11166cb0201cba7f35bb1afa05a0c26d8e746429c786c8e53378b9c9">power_state::charging</a>;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;}</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="group__system.html#ga128edfb3b768b77cce3d859851c51876">  143</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#ga128edfb3b768b77cce3d859851c51876">is_charged</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;{</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="group__system.html#gaf8300293e48dcaec2e412bd58b33d153">state</a>() == <a class="code" href="group__system.html#gga4dda00faf11166cb0201cba7f35bb1afa48aee20d947736a18c6e9d09b526f75a">power_state::charged</a>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;}</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="group__system.html#ga3445ed5750e0e407b5a300d333b3203f">  158</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__system.html#ga3445ed5750e0e407b5a300d333b3203f">is_available</a>() noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;{</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  <span class="keywordflow">return</span> !detail::any_eq(<a class="code" href="group__system.html#gaf8300293e48dcaec2e412bd58b33d153">state</a>(), <a class="code" href="group__system.html#gga4dda00faf11166cb0201cba7f35bb1afa1009b81e098d9d62e1ac074bbf1a7f71">power_state::no_battery</a>, <a class="code" href="group__system.html#gga4dda00faf11166cb0201cba7f35bb1afaad921d60486366258809553a3db49a4a">power_state::unknown</a>);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;}</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;}  <span class="comment">// namespace cen::battery</span></div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;}  <span class="comment">// namespace cen::battery</span></div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_BATTERY_HEADER</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_BATTERY_HEADER</span></div>
 <div class="ttc" id="agroup__core_html_ga826ec294a3b6962454d669b9c277537b"><div class="ttname"><a href="group__core.html#ga826ec294a3b6962454d669b9c277537b">cen::seconds</a></div><div class="ttdeci">std::chrono::duration&lt; T &gt; seconds</div><div class="ttdoc">Templated alias for durations in seconds.</div><div class="ttdef"><b>Definition:</b> time.hpp:23</div></div>
-<div class="ttc" id="agroup__system_html_ga0080173146eba8655792695d333c1170"><div class="ttname"><a href="group__system.html#ga0080173146eba8655792695d333c1170">cen::battery::exists</a></div><div class="ttdeci">auto exists() noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the system is running on a battery.</div><div class="ttdef"><b>Definition:</b> battery.hpp:116</div></div>
-<div class="ttc" id="agroup__system_html_ga128edfb3b768b77cce3d859851c51876"><div class="ttname"><a href="group__system.html#ga128edfb3b768b77cce3d859851c51876">cen::battery::is_charged</a></div><div class="ttdeci">auto is_charged() noexcept -&gt; bool</div><div class="ttdoc">Indicate whether or not the battery is charged.</div><div class="ttdef"><b>Definition:</b> battery.hpp:149</div></div>
-<div class="ttc" id="agroup__system_html_ga1addb9148cb6e8ca78d998d5226b4a84"><div class="ttname"><a href="group__system.html#ga1addb9148cb6e8ca78d998d5226b4a84">cen::battery::is_charging</a></div><div class="ttdeci">auto is_charging() noexcept -&gt; bool</div><div class="ttdoc">Indicate whether or not the battery is being charged.</div><div class="ttdef"><b>Definition:</b> battery.hpp:134</div></div>
-<div class="ttc" id="agroup__system_html_ga3445ed5750e0e407b5a300d333b3203f"><div class="ttname"><a href="group__system.html#ga3445ed5750e0e407b5a300d333b3203f">cen::battery::is_available</a></div><div class="ttdeci">auto is_available() noexcept -&gt; bool</div><div class="ttdoc">Indicate whether or not a battery is available.</div><div class="ttdef"><b>Definition:</b> battery.hpp:164</div></div>
+<div class="ttc" id="agroup__system_html_ga0080173146eba8655792695d333c1170"><div class="ttname"><a href="group__system.html#ga0080173146eba8655792695d333c1170">cen::battery::exists</a></div><div class="ttdeci">auto exists() noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the system is running on a battery.</div><div class="ttdef"><b>Definition:</b> battery.hpp:110</div></div>
+<div class="ttc" id="agroup__system_html_ga128edfb3b768b77cce3d859851c51876"><div class="ttname"><a href="group__system.html#ga128edfb3b768b77cce3d859851c51876">cen::battery::is_charged</a></div><div class="ttdeci">auto is_charged() noexcept -&gt; bool</div><div class="ttdoc">Indicate whether or not the battery is charged.</div><div class="ttdef"><b>Definition:</b> battery.hpp:143</div></div>
+<div class="ttc" id="agroup__system_html_ga1addb9148cb6e8ca78d998d5226b4a84"><div class="ttname"><a href="group__system.html#ga1addb9148cb6e8ca78d998d5226b4a84">cen::battery::is_charging</a></div><div class="ttdeci">auto is_charging() noexcept -&gt; bool</div><div class="ttdoc">Indicate whether or not the battery is being charged.</div><div class="ttdef"><b>Definition:</b> battery.hpp:128</div></div>
+<div class="ttc" id="agroup__system_html_ga3445ed5750e0e407b5a300d333b3203f"><div class="ttname"><a href="group__system.html#ga3445ed5750e0e407b5a300d333b3203f">cen::battery::is_available</a></div><div class="ttdeci">auto is_available() noexcept -&gt; bool</div><div class="ttdoc">Indicate whether or not a battery is available.</div><div class="ttdef"><b>Definition:</b> battery.hpp:158</div></div>
 <div class="ttc" id="agroup__system_html_ga4dda00faf11166cb0201cba7f35bb1af"><div class="ttname"><a href="group__system.html#ga4dda00faf11166cb0201cba7f35bb1af">cen::power_state</a></div><div class="ttdeci">power_state</div><div class="ttdoc">Represents different battery power states.</div><div class="ttdef"><b>Definition:</b> power_state.hpp:26</div></div>
-<div class="ttc" id="agroup__system_html_gaa09886ca03dbb2f6306324459812ac52"><div class="ttname"><a href="group__system.html#gaa09886ca03dbb2f6306324459812ac52">cen::battery::minutes_left</a></div><div class="ttdeci">auto minutes_left() -&gt; std::optional&lt; minutes&lt; int &gt;&gt;</div><div class="ttdoc">Returns the amount of minutes of battery life that is remaining.</div><div class="ttdef"><b>Definition:</b> battery.hpp:60</div></div>
+<div class="ttc" id="agroup__system_html_gaa09886ca03dbb2f6306324459812ac52"><div class="ttname"><a href="group__system.html#gaa09886ca03dbb2f6306324459812ac52">cen::battery::minutes_left</a></div><div class="ttdeci">auto minutes_left() -&gt; std::optional&lt; minutes&lt; int &gt;&gt;</div><div class="ttdoc">Returns the amount of minutes of battery life that is remaining.</div><div class="ttdef"><b>Definition:</b> battery.hpp:58</div></div>
 <div class="ttc" id="agroup__system_html_gac7b98bb966c7172036d8901e6f7fe68d"><div class="ttname"><a href="group__system.html#gac7b98bb966c7172036d8901e6f7fe68d">cen::battery::seconds_left</a></div><div class="ttdeci">auto seconds_left() -&gt; std::optional&lt; seconds&lt; int &gt;&gt;</div><div class="ttdoc">Returns the seconds of battery life that is remaining.</div><div class="ttdef"><b>Definition:</b> battery.hpp:38</div></div>
-<div class="ttc" id="agroup__system_html_gad923b189924d4471260c87d83559bd30"><div class="ttname"><a href="group__system.html#gad923b189924d4471260c87d83559bd30">cen::battery::percentage</a></div><div class="ttdeci">auto percentage() noexcept -&gt; std::optional&lt; int &gt;</div><div class="ttdoc">Returns the percentage of battery life that is currently left.</div><div class="ttdef"><b>Definition:</b> battery.hpp:80</div></div>
-<div class="ttc" id="agroup__system_html_gaf8300293e48dcaec2e412bd58b33d153"><div class="ttname"><a href="group__system.html#gaf8300293e48dcaec2e412bd58b33d153">cen::battery::state</a></div><div class="ttdeci">auto state() noexcept -&gt; power_state</div><div class="ttdoc">Returns the current power state.</div><div class="ttdef"><b>Definition:</b> battery.hpp:101</div></div>
+<div class="ttc" id="agroup__system_html_gad923b189924d4471260c87d83559bd30"><div class="ttname"><a href="group__system.html#gad923b189924d4471260c87d83559bd30">cen::battery::percentage</a></div><div class="ttdeci">auto percentage() noexcept -&gt; std::optional&lt; int &gt;</div><div class="ttdoc">Returns the percentage of battery life that is currently left.</div><div class="ttdef"><b>Definition:</b> battery.hpp:76</div></div>
+<div class="ttc" id="agroup__system_html_gaf8300293e48dcaec2e412bd58b33d153"><div class="ttname"><a href="group__system.html#gaf8300293e48dcaec2e412bd58b33d153">cen::battery::state</a></div><div class="ttdeci">auto state() noexcept -&gt; power_state</div><div class="ttdoc">Returns the current power state.</div><div class="ttdef"><b>Definition:</b> battery.hpp:95</div></div>
 <div class="ttc" id="agroup__system_html_gga4dda00faf11166cb0201cba7f35bb1afa05a0c26d8e746429c786c8e53378b9c9"><div class="ttname"><a href="group__system.html#gga4dda00faf11166cb0201cba7f35bb1afa05a0c26d8e746429c786c8e53378b9c9">cen::power_state::charging</a></div><div class="ttdeci">@ charging</div><div class="ttdoc">Currently charging the battery.</div></div>
 <div class="ttc" id="agroup__system_html_gga4dda00faf11166cb0201cba7f35bb1afa1009b81e098d9d62e1ac074bbf1a7f71"><div class="ttname"><a href="group__system.html#gga4dda00faf11166cb0201cba7f35bb1afa1009b81e098d9d62e1ac074bbf1a7f71">cen::power_state::no_battery</a></div><div class="ttdeci">@ no_battery</div><div class="ttdoc">No battery available.</div></div>
 <div class="ttc" id="agroup__system_html_gga4dda00faf11166cb0201cba7f35bb1afa48aee20d947736a18c6e9d09b526f75a"><div class="ttname"><a href="group__system.html#gga4dda00faf11166cb0201cba7f35bb1afa48aee20d947736a18c6e9d09b526f75a">cen::power_state::charged</a></div><div class="ttdeci">@ charged</div><div class="ttdoc">Currently plugged in and charged.</div></div>

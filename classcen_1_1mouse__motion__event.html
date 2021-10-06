@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -265,8 +265,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a8d9eaa92036900d72d5c2d61ef684446"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d9eaa92036900d72d5c2d61ef684446">&#9670;&nbsp;</a></span>dx()</h2>
+<a id="a2c1e1a81b7c7a18266ac0410ef977c5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c1e1a81b7c7a18266ac0410ef977c5b">&#9670;&nbsp;</a></span>set_window_id()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -275,177 +275,10 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::mouse_motion_event::dx </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__core.html#gaa69ad1561271765c17f77879a492d85b">i32</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the relative motion of the mouse along the x-axis. </p>
-<dl class="section return"><dt>Returns</dt><dd>the relative motion of the mouse along the x-axis.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a09eedbc0b38f75b31405482d9f1412a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09eedbc0b38f75b31405482d9f1412a0">&#9670;&nbsp;</a></span>dy()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::mouse_motion_event::dy </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__core.html#gaa69ad1561271765c17f77879a492d85b">i32</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the relative motion of the mouse along the y-axis. </p>
-<dl class="section return"><dt>Returns</dt><dd>the relative motion of the mouse along the y-axis.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ad576eca6eaeb068363a9d471cb773255"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad576eca6eaeb068363a9d471cb773255">&#9670;&nbsp;</a></span>pressed()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::mouse_motion_event::pressed </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__input.html#ga2783619b1566fca313d4a8e7835c91a0">mouse_button</a>&#160;</td>
-          <td class="paramname"><em>button</em></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not a mouse button is pressed. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">button</td><td>the mouse button that will be checked.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the specified mouse button is pressed; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a90d5acb2acdbb5946f230a1b0e222476"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90d5acb2acdbb5946f230a1b0e222476">&#9670;&nbsp;</a></span>set_dx()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cen::mouse_motion_event::set_dx </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#gaa69ad1561271765c17f77879a492d85b">i32</a>&#160;</td>
-          <td class="paramname"><em>dx</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the value of the relative motion of the mouse along the x-axis. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dx</td><td>the value of the relative motion of the mouse along the x-axis.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a5fef78bb401b4404dd906ab0b179daa0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5fef78bb401b4404dd906ab0b179daa0">&#9670;&nbsp;</a></span>set_dy()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cen::mouse_motion_event::set_dy </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#gaa69ad1561271765c17f77879a492d85b">i32</a>&#160;</td>
-          <td class="paramname"><em>dy</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the value of the relative motion of the mouse along the y-axis. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dy</td><td>the value of the relative motion of the mouse along the y-axis.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="aaf290e4a2d09ad2cbdd91138f97160aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf290e4a2d09ad2cbdd91138f97160aa">&#9670;&nbsp;</a></span>set_state()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cen::mouse_motion_event::set_state </td>
+          <td class="memname">void cen::mouse_motion_event::set_window_id </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>&#160;</td>
-          <td class="paramname"><em>state</em></td><td>)</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -456,11 +289,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sets the mouse button state associated with the event. </p>
-<p>The state could be any of <code>SDL_BUTTON_LMASK</code>, <code>SDL_BUTTON_MMASK</code>, <code>SDL_BUTTON_RMASK</code>, <code>SDL_BUTTON_X1MASK</code> and <code>SDL_BUTTON_X2MASK</code> OR'd together.</p>
+<p>Sets the window ID associated with the event. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">state</td><td>the mouse button state associated with the event.</td></tr>
+    <tr><td class="paramname">id</td><td>the window ID associated with the event.</td></tr>
   </table>
   </dd>
 </dl>
@@ -503,8 +335,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a2c1e1a81b7c7a18266ac0410ef977c5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c1e1a81b7c7a18266ac0410ef977c5b">&#9670;&nbsp;</a></span>set_window_id()</h2>
+<a id="aaf290e4a2d09ad2cbdd91138f97160aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf290e4a2d09ad2cbdd91138f97160aa">&#9670;&nbsp;</a></span>set_state()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -513,10 +345,10 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void cen::mouse_motion_event::set_window_id </td>
+          <td class="memname">void cen::mouse_motion_event::set_state </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -527,10 +359,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sets the window ID associated with the event. </p>
+<p>Sets the mouse button state associated with the event. </p>
+<p>The state could be any of <code>SDL_BUTTON_LMASK</code>, <code>SDL_BUTTON_MMASK</code>, <code>SDL_BUTTON_RMASK</code>, <code>SDL_BUTTON_X1MASK</code> and <code>SDL_BUTTON_X2MASK</code> OR'd together.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">id</td><td>the window ID associated with the event.</td></tr>
+    <tr><td class="paramname">state</td><td>the mouse button state associated with the event.</td></tr>
   </table>
   </dd>
 </dl>
@@ -608,8 +441,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a90ff58bb8db0f301225ced1ea5a6c217"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90ff58bb8db0f301225ced1ea5a6c217">&#9670;&nbsp;</a></span>state()</h2>
+<a id="a90d5acb2acdbb5946f230a1b0e222476"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90d5acb2acdbb5946f230a1b0e222476">&#9670;&nbsp;</a></span>set_dx()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -618,7 +451,77 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::mouse_motion_event::state </td>
+          <td class="memname">void cen::mouse_motion_event::set_dx </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#gaa69ad1561271765c17f77879a492d85b">i32</a>&#160;</td>
+          <td class="paramname"><em>dx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the value of the relative motion of the mouse along the x-axis. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dx</td><td>the value of the relative motion of the mouse along the x-axis.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a5fef78bb401b4404dd906ab0b179daa0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fef78bb401b4404dd906ab0b179daa0">&#9670;&nbsp;</a></span>set_dy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::mouse_motion_event::set_dy </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#gaa69ad1561271765c17f77879a492d85b">i32</a>&#160;</td>
+          <td class="paramname"><em>dy</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the value of the relative motion of the mouse along the y-axis. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dy</td><td>the value of the relative motion of the mouse along the y-axis.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a2f74f61602636235273d0a26f2b4cc17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f74f61602636235273d0a26f2b4cc17">&#9670;&nbsp;</a></span>window_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::mouse_motion_event::window_id </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>
@@ -632,9 +535,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a bitmask for the current mouse button state. </p>
-<dl class="section remark"><dt>Remarks</dt><dd>If you want to check if a specific mouse button is pressed or released, a better alternative would be to use the <code><a class="el" href="classcen_1_1mouse__motion__event.html#ad576eca6eaeb068363a9d471cb773255" title="Indicates whether or not a mouse button is pressed.">pressed()</a></code> function.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>a bitmask for the current mouse button state.</dd></dl>
+<p>Returns the window ID associated with the event. </p>
+<dl class="section return"><dt>Returns</dt><dd>the window ID associated with the event.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
@@ -670,8 +572,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a2f74f61602636235273d0a26f2b4cc17"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f74f61602636235273d0a26f2b4cc17">&#9670;&nbsp;</a></span>window_id()</h2>
+<a id="a90ff58bb8db0f301225ced1ea5a6c217"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90ff58bb8db0f301225ced1ea5a6c217">&#9670;&nbsp;</a></span>state()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -680,7 +582,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::mouse_motion_event::window_id </td>
+          <td class="memname">auto cen::mouse_motion_event::state </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const -&gt; <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>
@@ -694,8 +596,46 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the window ID associated with the event. </p>
-<dl class="section return"><dt>Returns</dt><dd>the window ID associated with the event.</dd></dl>
+<p>Returns a bitmask for the current mouse button state. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>If you want to check if a specific mouse button is pressed or released, a better alternative would be to use the <code><a class="el" href="classcen_1_1mouse__motion__event.html#ad576eca6eaeb068363a9d471cb773255" title="Indicates whether or not a mouse button is pressed.">pressed()</a></code> function.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a bitmask for the current mouse button state.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ad576eca6eaeb068363a9d471cb773255"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad576eca6eaeb068363a9d471cb773255">&#9670;&nbsp;</a></span>pressed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::mouse_motion_event::pressed </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__input.html#ga2783619b1566fca313d4a8e7835c91a0">mouse_button</a>&#160;</td>
+          <td class="paramname"><em>button</em></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not a mouse button is pressed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button</td><td>the mouse button that will be checked.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the specified mouse button is pressed; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
@@ -756,6 +696,66 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Returns the y-coordinate of the mouse relative to the window. </p>
 <dl class="section return"><dt>Returns</dt><dd>the y-coordinate of the mouse relative to the window.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a8d9eaa92036900d72d5c2d61ef684446"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d9eaa92036900d72d5c2d61ef684446">&#9670;&nbsp;</a></span>dx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::mouse_motion_event::dx </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__core.html#gaa69ad1561271765c17f77879a492d85b">i32</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the relative motion of the mouse along the x-axis. </p>
+<dl class="section return"><dt>Returns</dt><dd>the relative motion of the mouse along the x-axis.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a09eedbc0b38f75b31405482d9f1412a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09eedbc0b38f75b31405482d9f1412a0">&#9670;&nbsp;</a></span>dy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::mouse_motion_event::dy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__core.html#gaa69ad1561271765c17f77879a492d85b">i32</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the relative motion of the mouse along the y-axis. </p>
+<dl class="section return"><dt>Returns</dt><dd>the relative motion of the mouse along the y-axis.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>

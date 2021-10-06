@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -432,349 +432,6 @@ template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae6dd1f69b1f9a2ee1f4672d1465f0861"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae6dd1f69b1f9a2ee1f4672d1465f0861">&#9670;&nbsp;</a></span>attach_virtual()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::attach_virtual </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__input.html#ga0fdb54f2d315bb56f64ed18410c0e9cf">joystick_type</a>&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>nAxes</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>nButtons</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>nHats</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; std::optional&lt;int&gt;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Attaches a new virtual joystick. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">type</td><td>the type of the virtual joystick. </td></tr>
-    <tr><td class="paramname">nAxes</td><td>the number of axes. </td></tr>
-    <tr><td class="paramname">nButtons</td><td>the number of buttons. </td></tr>
-    <tr><td class="paramname">nHats</td><td>the number of joystick hats.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the device index of the virtual joystick; <code>std::nullopt</code> if something went wrong.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="af6909dc17f7f68bbe62fafc617aa871d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6909dc17f7f68bbe62fafc617aa871d">&#9670;&nbsp;</a></span>axis_count()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::axis_count </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; int
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the amount of general axis controls on the joystick. </p>
-<dl class="section return"><dt>Returns</dt><dd>the amount of general axis controls on the joystick.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="afab25d04059f3820a9bdfd4de21a8c3f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afab25d04059f3820a9bdfd4de21a8c3f">&#9670;&nbsp;</a></span>axis_initial_state()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::axis_initial_state </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>axis</em></td><td>)</td>
-          <td> const -&gt; std::optional&lt;<a class="el" href="group__core.html#ga995971102059bcb96d27921ffb7c4916">i16</a>&gt;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the initial state of the specified axis on the joystick. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">axis</td><td>the axis that will be queried. Starts at 0.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the initial state of the axis; <code>std::nullopt</code> if the axis doesn't have an initial state.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="af6a5b625898de77c5b2e3bdeed27b0bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6a5b625898de77c5b2e3bdeed27b0bc">&#9670;&nbsp;</a></span>axis_max()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr static auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::axis_max </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__core.html#ga995971102059bcb96d27921ffb7c4916">i16</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the maximum possible value of an axis control on a joystick. </p>
-<dl class="section return"><dt>Returns</dt><dd>the maximum possible value of an axis control.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="ac46eb3efe45bd0ae9e4695f06a2f56cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac46eb3efe45bd0ae9e4695f06a2f56cf">&#9670;&nbsp;</a></span>axis_min()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr static auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::axis_min </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__core.html#ga995971102059bcb96d27921ffb7c4916">i16</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the minimum possible value of an axis control on a joystick. </p>
-<dl class="section return"><dt>Returns</dt><dd>the minimum possible value of an axis control.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="ae38bd30dba5da928d013391e34196bbe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae38bd30dba5da928d013391e34196bbe">&#9670;&nbsp;</a></span>axis_pos()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::axis_pos </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>axis</em></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__core.html#ga995971102059bcb96d27921ffb7c4916">i16</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the current position of the specified axis. </p>
-<p>Most modern joysticks let the X-axis be represented by 0 and the Y-axis by 1. To account for jitter, it may be necessary to impose some kind of tolerance on the returned value.</p>
-<dl class="section note"><dt>Note</dt><dd>Some joysticks use axes 2 and 3 for extra buttons.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">axis</td><td>the ID of the axis to query.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the position of the specified axis.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a6f8af6fc19bda8473f6dfd015314fe9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f8af6fc19bda8473f6dfd015314fe9a">&#9670;&nbsp;</a></span>button_count()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::button_count </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; int
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the amount of buttons on the joystick. </p>
-<dl class="section return"><dt>Returns</dt><dd>the amount of buttons on the joystick.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="ace8a0549668bb8303c59e460715cee15"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace8a0549668bb8303c59e460715cee15">&#9670;&nbsp;</a></span>count()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::count </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; std::optional&lt;int&gt;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the amount of currently available joysticks. </p>
-<dl class="section return"><dt>Returns</dt><dd>the current amount of available joysticks; <code>std::nullopt</code> if something goes wrong.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
-
-</div>
-</div>
-<a id="aee871c0c77f7220eeaf3c4f325665587"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee871c0c77f7220eeaf3c4f325665587">&#9670;&nbsp;</a></span>detach_virtual()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::detach_virtual </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>index</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Detaches a virtual joystick. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">index</td><td>the device index of the virtual joystick.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the joystick was successfully disconnected; <code>failure</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
 <a id="a543576adcf643a326cb1c5823a86a83c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a543576adcf643a326cb1c5823a86a83c">&#9670;&nbsp;</a></span>from_instance_id()</h2>
 
@@ -854,931 +511,6 @@ template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a handle to the associated joystick, which might be empty.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ae62770e9dbb477f424cad6fdd94c556b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae62770e9dbb477f424cad6fdd94c556b">&#9670;&nbsp;</a></span>get()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::get </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; SDL_Joystick*
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a pointer to the associated <code>SDL_Joystick</code>. </p>
-<dl class="section warning"><dt>Warning</dt><dd>Don't take ownership of the returned pointer!</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the associated <code>SDL_Joystick</code>.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a63c68384287753ef234fff1e19fa613c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63c68384287753ef234fff1e19fa613c">&#9670;&nbsp;</a></span>get_ball_axis_change()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::get_ball_axis_change </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>ball</em></td><td>)</td>
-          <td> const -&gt; std::optional&lt;<a class="el" href="structcen_1_1ball__axis__change.html">ball_axis_change</a>&gt;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the ball axis change since the last poll. </p>
-<dl class="section note"><dt>Note</dt><dd>Trackballs can only return relative motion since the last call, these motion deltas are placed into the <code>BallAxisChange</code> struct.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ball</td><td>the ball index to check, start at 0.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>a <code>JoystickBallAxisChange</code> instance or <code>std::nullopt</code> if something goes wrong.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a6d680f1989366c2891ffe05c615a07c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d680f1989366c2891ffe05c615a07c4">&#9670;&nbsp;</a></span>get_button_state()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::get_button_state </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>button</em></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__input.html#ga5dd9bd35570eae0280744201b0d862cf">button_state</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the button state of the button associated with the index. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">button</td><td>the button index to get the state from, starting at 0.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the state of the button.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a4a176f23bca9f0ea899120075a682f58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a176f23bca9f0ea899120075a682f58">&#9670;&nbsp;</a></span>get_hat_state()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::get_hat_state </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>hat</em></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__input.html#gac1d40ffbea8aa0c7c17a8325e194ca24">hat_state</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the state of a specific joystick hat. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">hat</td><td>the index of the hat to query, indices start at 0.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the current state of the hat.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="ab013811d81e8d4cdec02a457b2afb928"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab013811d81e8d4cdec02a457b2afb928">&#9670;&nbsp;</a></span>get_power()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::get_power </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__input.html#gaacdee637148c269e0eb2cbedaa0076a4">joystick_power</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the current power level of the joystick. </p>
-<dl class="section return"><dt>Returns</dt><dd>the current power level.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a24822dc058f8a7785475e6c2f0d5846b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24822dc058f8a7785475e6c2f0d5846b">&#9670;&nbsp;</a></span>guid() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::guid </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; SDL_JoystickGUID
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the GUID associated with the joystick. </p>
-<dl class="section note"><dt>Note</dt><dd>The GUID is implementation-dependent.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>the GUID associated with the joystick.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="abcb50e0b4d487c618f293686746f278c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abcb50e0b4d487c618f293686746f278c">&#9670;&nbsp;</a></span>guid() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::guid </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>deviceIndex</em></td><td>)</td>
-          <td> -&gt; SDL_JoystickGUID
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the GUID for the joystick associated with the specified device index. </p>
-<dl class="section note"><dt>Note</dt><dd>The GUID is implementation-dependent. </dd>
-<dd>
-This function can be called before any joysticks are opened.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">deviceIndex</td><td>refers to the N'th joystick that is currently recognized by SDL.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the GUID of the joystick associated with the device index.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a9edb3854996d14549129f2434fd93773"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9edb3854996d14549129f2434fd93773">&#9670;&nbsp;</a></span>guid_from_string() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::guid_from_string </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a> &gt;&#160;</td>
-          <td class="paramname"><em>str</em></td><td>)</td>
-          <td> -&gt; SDL_JoystickGUID
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a joystick GUID based on the supplied string. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">str</td><td>the string used to obtain the GUID, can't be null.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the obtained GUID.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="abb00c312ebabe6f0479d5c4465fb7544"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb00c312ebabe6f0479d5c4465fb7544">&#9670;&nbsp;</a></span>guid_from_string() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::guid_from_string </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>str</em></td><td>)</td>
-          <td> -&gt; SDL_JoystickGUID
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a joystick GUID based on the supplied string. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">str</td><td>the string used to obtain the GUID.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the obtained GUID.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
-<a id="a84dfddc8a6c4d694791ef89b2e9e353a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84dfddc8a6c4d694791ef89b2e9e353a">&#9670;&nbsp;</a></span>has_led()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::has_led </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the joystick features a LED light. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the joystick features a LED light; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="aa18bfa999b4dda1059dfd2ae90c25560"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa18bfa999b4dda1059dfd2ae90c25560">&#9670;&nbsp;</a></span>hat_count()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::hat_count </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; int
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the amount of hats on the joystick. </p>
-<dl class="section return"><dt>Returns</dt><dd>the amount of hats on the joystick.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a8ba71b7f12284cbfef186e40367a1851"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ba71b7f12284cbfef186e40367a1851">&#9670;&nbsp;</a></span>instance_id() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::instance_id </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; SDL_JoystickID
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the instance ID associated with the joystick. </p>
-<dl class="section return"><dt>Returns</dt><dd>the instance ID associated with the joystick.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a8f6fbfbe18fdf80ce85e14dc9926dfbf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f6fbfbe18fdf80ce85e14dc9926dfbf">&#9670;&nbsp;</a></span>instance_id() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::instance_id </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>deviceIndex</em></td><td>)</td>
-          <td> -&gt; std::optional&lt;SDL_JoystickID&gt;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the instance ID for the joystick associated with the specified device index. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">deviceIndex</td><td>the device index of the joystick that will be queried.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the instance ID of the desired joystick; <code>std::nullopt</code> if it can't be obtained.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a76e255dc1feac68d1f3f71fcbfde7618"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76e255dc1feac68d1f3f71fcbfde7618">&#9670;&nbsp;</a></span>is_attached()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::is_attached </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the joystick is attached to the system. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the joystick is attached to the system; false otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a9821b84f924a1b15ffbff4665c2539ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9821b84f924a1b15ffbff4665c2539ec">&#9670;&nbsp;</a></span>is_polling()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::is_polling </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not joystick event polling is enabled. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if joystick event polling is enabled; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a6cb29ce290f7a58caabf8d0443bcae5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6cb29ce290f7a58caabf8d0443bcae5e">&#9670;&nbsp;</a></span>is_virtual()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::is_virtual </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>index</em></td><td>)</td>
-          <td> -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not a joystick is virtual. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">index</td><td>the device index of the joystick that will be queried.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the specified joystick is virtual; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a7be18b0bf2edd1b976635bb4943bc694"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7be18b0bf2edd1b976635bb4943bc694">&#9670;&nbsp;</a></span>lock()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::lock </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Locks the access to all joysticks. </p>
-<p>If you are using the joystick API from multiple threads you should use this function to restrict access to the joysticks.</p>
-<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a77578531748996025b506b9f24899abd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77578531748996025b506b9f24899abd">&#9670;&nbsp;</a></span>name() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::name </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the name associated with the joystick. </p>
-<dl class="section note"><dt>Note</dt><dd>If no name can be found, this function returns a null string.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>the name of the joystick; a null pointer if no name is found.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="acb22489da35e316913345013027fa923"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb22489da35e316913345013027fa923">&#9670;&nbsp;</a></span>name() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::name </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>deviceIndex</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the associated with the joystick with the specified device index. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">deviceIndex</td><td>refers to the N'th joystick that is currently recognized by SDL.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the name associated with the joystick; a null string is returned if no name is found.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a09b46e727319e6a34877a125ba78cdcc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09b46e727319e6a34877a125ba78cdcc">&#9670;&nbsp;</a></span>operator bool()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<div class="memtemplate">
-template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::operator bool </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not a handle holds a non-null pointer. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the handle holds a non-null pointer; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ad2f6b03a304e8391ae2db98bd2a5642b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2f6b03a304e8391ae2db98bd2a5642b">&#9670;&nbsp;</a></span>player_index() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::player_index </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; std::optional&lt;int&gt;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the player index of the joystick, if available. </p>
-<p>For XInput controllers this returns the XInput user index.</p>
-<dl class="section return"><dt>Returns</dt><dd>the player index associated with the joystick; <code>std::nullopt</code> if it can't be obtained</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a0c76e8bff4baa19994d37f08f24f6c82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c76e8bff4baa19994d37f08f24f6c82">&#9670;&nbsp;</a></span>player_index() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::player_index </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>deviceIndex</em></td><td>)</td>
-          <td> -&gt; std::optional&lt;int&gt;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the player index of the joystick associated with the specified device index. </p>
-<dl class="section note"><dt>Note</dt><dd>This function can be called before any joysticks are opened.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">deviceIndex</td><td>the device index of the joystick that will be queried.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the player index of the desired joystick; <code>std::nullopt</code> if it can't be obtained.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="ac1c95c6dbe03e4ad77d7f4b2762b1653"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1c95c6dbe03e4ad77d7f4b2762b1653">&#9670;&nbsp;</a></span>product() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::product </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; std::optional&lt;<a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&gt;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the USB product ID of the joystick. </p>
-<dl class="section return"><dt>Returns</dt><dd>the USB product ID associated with the joystick; <code>std::nullopt</code> if it isn't available.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a35a2ab83d3e750977e05e8fbabe7af8b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35a2ab83d3e750977e05e8fbabe7af8b">&#9670;&nbsp;</a></span>product() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::product </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>deviceIndex</em></td><td>)</td>
-          <td> -&gt; std::optional&lt;<a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&gt;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the USB product ID for the joystick associated with the specified device index. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">deviceIndex</td><td>the device index of the joystick that will be queried.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the USB product ID of the desired joystick; <code>std::nullopt</code> if it can't be obtained.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a9c383c52f62cada290c03cf589c96083"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c383c52f62cada290c03cf589c96083">&#9670;&nbsp;</a></span>product_version() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::product_version </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; std::optional&lt;<a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&gt;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the product version of the joystick, if available. </p>
-<dl class="section return"><dt>Returns</dt><dd>the product version of the joystick; <code>std::nullopt</code> if it isn't available.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a608b5d8b10272328ef248eb5f11864a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a608b5d8b10272328ef248eb5f11864a3">&#9670;&nbsp;</a></span>product_version() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::product_version </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>deviceIndex</em></td><td>)</td>
-          <td> -&gt; std::optional&lt;<a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&gt;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the product version for the joystick associated with the specified device index. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">deviceIndex</td><td>the device index of the joystick that will be queried.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the product version of the desired joystick; <code>std::nullopt</code> if it can't be obtained.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
 
 </div>
 </div>
@@ -1898,88 +630,6 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="afca250eecb01f9996c6bd3c1b9a9027b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afca250eecb01f9996c6bd3c1b9a9027b">&#9670;&nbsp;</a></span>send_effect()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::send_effect </td>
-          <td>(</td>
-          <td class="paramtype">const void *&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sends a packet of joystick specific data. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">data</td><td>the data that will be sent. </td></tr>
-    <tr><td class="paramname">size</td><td>the size of the data.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the data was sent successfully; <code>failure</code> if the joystick or driver doesn't support effect packets.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a8f67dc4d5ffa3752e2964754c77cb744"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f67dc4d5ffa3752e2964754c77cb744">&#9670;&nbsp;</a></span>serial()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::serial </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the serial number associated with the joystick. </p>
-<dl class="section return"><dt>Returns</dt><dd>the serial number of the joystick; a null pointer is returned if the serial number isn't available.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
-
-</div>
-</div>
 <a id="ab68e817f57c68fe0dc1938a5eb27216b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab68e817f57c68fe0dc1938a5eb27216b">&#9670;&nbsp;</a></span>set_led()</h2>
 
@@ -2056,8 +706,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a5c8b345443be8f54da8363ff3f68a542"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c8b345443be8f54da8363ff3f68a542">&#9670;&nbsp;</a></span>set_polling()</h2>
+<a id="afca250eecb01f9996c6bd3c1b9a9027b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afca250eecb01f9996c6bd3c1b9a9027b">&#9670;&nbsp;</a></span>send_effect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2068,11 +718,84 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::set_polling </td>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::send_effect </td>
           <td>(</td>
-          <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>enabled</em></td><td>)</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sends a packet of joystick specific data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>the data that will be sent. </td></tr>
+    <tr><td class="paramname">size</td><td>the size of the data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the data was sent successfully; <code>failure</code> if the joystick or driver doesn't support effect packets.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="ae6dd1f69b1f9a2ee1f4672d1465f0861"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6dd1f69b1f9a2ee1f4672d1465f0861">&#9670;&nbsp;</a></span>attach_virtual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::attach_virtual </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__input.html#ga0fdb54f2d315bb56f64ed18410c0e9cf">joystick_type</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nAxes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nButtons</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nHats</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; std::optional&lt;int&gt;
+  </td>
         </tr>
       </table>
   </td>
@@ -2082,17 +805,57 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Specifies whether or not joystick event polling is enabled. </p>
-<p>If joystick event polling is disabled, then you must manually call <code><a class="el" href="classcen_1_1basic__joystick.html#a72125bc3fe0c2c4a0ff5b82953df7e47" title="Updates the state of all open joysticks.">basic_joystick::update()</a></code> in order to update the joystick state.</p>
-<dl class="section note"><dt>Note</dt><dd>It's recommended to leave joystick event polling enabled.</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Calling this function might cause all events currently in the event queue to be deleted.</dd></dl>
+<p>Attaches a new virtual joystick. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">enabled</td><td><code>true</code> if joystick event polling should be enabled; <code>false</code> otherwise.</td></tr>
+    <tr><td class="paramname">type</td><td>the type of the virtual joystick. </td></tr>
+    <tr><td class="paramname">nAxes</td><td>the number of axes. </td></tr>
+    <tr><td class="paramname">nButtons</td><td>the number of buttons. </td></tr>
+    <tr><td class="paramname">nHats</td><td>the number of joystick hats.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the device index of the virtual joystick; <code>std::nullopt</code> if something went wrong.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="aee871c0c77f7220eeaf3c4f325665587"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee871c0c77f7220eeaf3c4f325665587">&#9670;&nbsp;</a></span>detach_virtual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::detach_virtual </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1result.html">result</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Detaches a virtual joystick. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the device index of the virtual joystick.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>success</code> if the joystick was successfully disconnected; <code>failure</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
 
 </div>
 </div>
@@ -2246,8 +1009,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a3a863867e4e6a32dc73bacfd5d727329"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a863867e4e6a32dc73bacfd5d727329">&#9670;&nbsp;</a></span>trackball_count()</h2>
+<a id="a6cb29ce290f7a58caabf8d0443bcae5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cb29ce290f7a58caabf8d0443bcae5e">&#9670;&nbsp;</a></span>is_virtual()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2258,10 +1021,49 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::trackball_count </td>
+          <td class="memname">static auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::is_virtual </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not a joystick is virtual. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the device index of the joystick that will be queried.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the specified joystick is virtual; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="ad2f6b03a304e8391ae2db98bd2a5642b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2f6b03a304e8391ae2db98bd2a5642b">&#9670;&nbsp;</a></span>player_index() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::player_index </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; int
+          <td> const -&gt; std::optional&lt;int&gt;
   </td>
         </tr>
       </table>
@@ -2272,9 +1074,10 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the amount of trackballs on the joystick. </p>
-<dl class="section return"><dt>Returns</dt><dd>the amount of trackballs on the joystick.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+<p>Returns the player index of the joystick, if available. </p>
+<p>For XInput controllers this returns the XInput user index.</p>
+<dl class="section return"><dt>Returns</dt><dd>the player index associated with the joystick; <code>std::nullopt</code> if it can't be obtained</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
 
 </div>
 </div>
@@ -2306,6 +1109,304 @@ template&lt;typename T &gt; </div>
 
 <p>Returns the type associated with the joystick. </p>
 <dl class="section return"><dt>Returns</dt><dd>the type of the joystick.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a5cac67ca458ea368697a0309d61663ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cac67ca458ea368697a0309d61663ac">&#9670;&nbsp;</a></span>vendor() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::vendor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; std::optional&lt;<a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&gt;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the USB vendor ID of the joystick. </p>
+<dl class="section return"><dt>Returns</dt><dd>the USB vendor ID associated with the joystick; <code>std::nullopt</code> if it isn't available.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="ac1c95c6dbe03e4ad77d7f4b2762b1653"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1c95c6dbe03e4ad77d7f4b2762b1653">&#9670;&nbsp;</a></span>product() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::product </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; std::optional&lt;<a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&gt;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the USB product ID of the joystick. </p>
+<dl class="section return"><dt>Returns</dt><dd>the USB product ID associated with the joystick; <code>std::nullopt</code> if it isn't available.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a9c383c52f62cada290c03cf589c96083"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c383c52f62cada290c03cf589c96083">&#9670;&nbsp;</a></span>product_version() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::product_version </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; std::optional&lt;<a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&gt;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the product version of the joystick, if available. </p>
+<dl class="section return"><dt>Returns</dt><dd>the product version of the joystick; <code>std::nullopt</code> if it isn't available.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a24822dc058f8a7785475e6c2f0d5846b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24822dc058f8a7785475e6c2f0d5846b">&#9670;&nbsp;</a></span>guid() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::guid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; SDL_JoystickGUID
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the GUID associated with the joystick. </p>
+<dl class="section note"><dt>Note</dt><dd>The GUID is implementation-dependent.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the GUID associated with the joystick.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a77578531748996025b506b9f24899abd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77578531748996025b506b9f24899abd">&#9670;&nbsp;</a></span>name() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the name associated with the joystick. </p>
+<dl class="section note"><dt>Note</dt><dd>If no name can be found, this function returns a null string.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the name of the joystick; a null pointer if no name is found.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a8ba71b7f12284cbfef186e40367a1851"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ba71b7f12284cbfef186e40367a1851">&#9670;&nbsp;</a></span>instance_id() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::instance_id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; SDL_JoystickID
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the instance ID associated with the joystick. </p>
+<dl class="section return"><dt>Returns</dt><dd>the instance ID associated with the joystick.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a8f67dc4d5ffa3752e2964754c77cb744"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f67dc4d5ffa3752e2964754c77cb744">&#9670;&nbsp;</a></span>serial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::serial </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the serial number associated with the joystick. </p>
+<dl class="section return"><dt>Returns</dt><dd>the serial number of the joystick; a null pointer is returned if the serial number isn't available.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a84dfddc8a6c4d694791ef89b2e9e353a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84dfddc8a6c4d694791ef89b2e9e353a">&#9670;&nbsp;</a></span>has_led()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::has_led </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the joystick features a LED light. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the joystick features a LED light; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a0c76e8bff4baa19994d37f08f24f6c82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c76e8bff4baa19994d37f08f24f6c82">&#9670;&nbsp;</a></span>player_index() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::player_index </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>deviceIndex</em></td><td>)</td>
+          <td> -&gt; std::optional&lt;int&gt;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the player index of the joystick associated with the specified device index. </p>
+<dl class="section note"><dt>Note</dt><dd>This function can be called before any joysticks are opened.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deviceIndex</td><td>the device index of the joystick that will be queried.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the player index of the desired joystick; <code>std::nullopt</code> if it can't be obtained.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
 
 </div>
@@ -2349,99 +1450,6 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="aae1b1611bfdf06804ff2cb694de687f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae1b1611bfdf06804ff2cb694de687f3">&#9670;&nbsp;</a></span>unlock()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::unlock </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Unlocks the access to all joysticks. </p>
-<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a72125bc3fe0c2c4a0ff5b82953df7e47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72125bc3fe0c2c4a0ff5b82953df7e47">&#9670;&nbsp;</a></span>update()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::update </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Updates the state of all open joysticks. </p>
-<dl class="section note"><dt>Note</dt><dd>This is done automatically by the event loop if any joystick events are enabled.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="a5cac67ca458ea368697a0309d61663ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5cac67ca458ea368697a0309d61663ac">&#9670;&nbsp;</a></span>vendor() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::vendor </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; std::optional&lt;<a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&gt;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the USB vendor ID of the joystick. </p>
-<dl class="section return"><dt>Returns</dt><dd>the USB vendor ID associated with the joystick; <code>std::nullopt</code> if it isn't available.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
-
-</div>
-</div>
 <a id="a0bce10e6116c4d018cd3cfd5f158b454"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0bce10e6116c4d018cd3cfd5f158b454">&#9670;&nbsp;</a></span>vendor() <span class="overload">[2/2]</span></h2>
 
@@ -2477,6 +1485,998 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the USB vendor ID of the desired joystick; <code>std::nullopt</code> if it can't be obtained.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a35a2ab83d3e750977e05e8fbabe7af8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35a2ab83d3e750977e05e8fbabe7af8b">&#9670;&nbsp;</a></span>product() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::product </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>deviceIndex</em></td><td>)</td>
+          <td> -&gt; std::optional&lt;<a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&gt;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the USB product ID for the joystick associated with the specified device index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deviceIndex</td><td>the device index of the joystick that will be queried.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the USB product ID of the desired joystick; <code>std::nullopt</code> if it can't be obtained.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a608b5d8b10272328ef248eb5f11864a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a608b5d8b10272328ef248eb5f11864a3">&#9670;&nbsp;</a></span>product_version() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::product_version </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>deviceIndex</em></td><td>)</td>
+          <td> -&gt; std::optional&lt;<a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">u16</a>&gt;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the product version for the joystick associated with the specified device index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deviceIndex</td><td>the device index of the joystick that will be queried.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the product version of the desired joystick; <code>std::nullopt</code> if it can't be obtained.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="abcb50e0b4d487c618f293686746f278c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcb50e0b4d487c618f293686746f278c">&#9670;&nbsp;</a></span>guid() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::guid </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>deviceIndex</em></td><td>)</td>
+          <td> -&gt; SDL_JoystickGUID
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the GUID for the joystick associated with the specified device index. </p>
+<dl class="section note"><dt>Note</dt><dd>The GUID is implementation-dependent. </dd>
+<dd>
+This function can be called before any joysticks are opened.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deviceIndex</td><td>refers to the N'th joystick that is currently recognized by SDL.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the GUID of the joystick associated with the device index.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="acb22489da35e316913345013027fa923"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb22489da35e316913345013027fa923">&#9670;&nbsp;</a></span>name() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::name </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>deviceIndex</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the associated with the joystick with the specified device index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deviceIndex</td><td>refers to the N'th joystick that is currently recognized by SDL.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the name associated with the joystick; a null string is returned if no name is found.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a8f6fbfbe18fdf80ce85e14dc9926dfbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f6fbfbe18fdf80ce85e14dc9926dfbf">&#9670;&nbsp;</a></span>instance_id() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::instance_id </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>deviceIndex</em></td><td>)</td>
+          <td> -&gt; std::optional&lt;SDL_JoystickID&gt;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the instance ID for the joystick associated with the specified device index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deviceIndex</td><td>the device index of the joystick that will be queried.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the instance ID of the desired joystick; <code>std::nullopt</code> if it can't be obtained.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a63c68384287753ef234fff1e19fa613c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63c68384287753ef234fff1e19fa613c">&#9670;&nbsp;</a></span>get_ball_axis_change()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::get_ball_axis_change </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>ball</em></td><td>)</td>
+          <td> const -&gt; std::optional&lt;<a class="el" href="structcen_1_1ball__axis__change.html">ball_axis_change</a>&gt;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the ball axis change since the last poll. </p>
+<dl class="section note"><dt>Note</dt><dd>Trackballs can only return relative motion since the last call, these motion deltas are placed into the <code>BallAxisChange</code> struct.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ball</td><td>the ball index to check, start at 0.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a <code>JoystickBallAxisChange</code> instance or <code>std::nullopt</code> if something goes wrong.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="ae38bd30dba5da928d013391e34196bbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae38bd30dba5da928d013391e34196bbe">&#9670;&nbsp;</a></span>axis_pos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::axis_pos </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>axis</em></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__core.html#ga995971102059bcb96d27921ffb7c4916">i16</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the current position of the specified axis. </p>
+<p>Most modern joysticks let the X-axis be represented by 0 and the Y-axis by 1. To account for jitter, it may be necessary to impose some kind of tolerance on the returned value.</p>
+<dl class="section note"><dt>Note</dt><dd>Some joysticks use axes 2 and 3 for extra buttons.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">axis</td><td>the ID of the axis to query.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the position of the specified axis.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="afab25d04059f3820a9bdfd4de21a8c3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afab25d04059f3820a9bdfd4de21a8c3f">&#9670;&nbsp;</a></span>axis_initial_state()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::axis_initial_state </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>axis</em></td><td>)</td>
+          <td> const -&gt; std::optional&lt;<a class="el" href="group__core.html#ga995971102059bcb96d27921ffb7c4916">i16</a>&gt;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the initial state of the specified axis on the joystick. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">axis</td><td>the axis that will be queried. Starts at 0.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the initial state of the axis; <code>std::nullopt</code> if the axis doesn't have an initial state.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a76e255dc1feac68d1f3f71fcbfde7618"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76e255dc1feac68d1f3f71fcbfde7618">&#9670;&nbsp;</a></span>is_attached()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::is_attached </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the joystick is attached to the system. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the joystick is attached to the system; false otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="aa18bfa999b4dda1059dfd2ae90c25560"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa18bfa999b4dda1059dfd2ae90c25560">&#9670;&nbsp;</a></span>hat_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::hat_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; int
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the amount of hats on the joystick. </p>
+<dl class="section return"><dt>Returns</dt><dd>the amount of hats on the joystick.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="af6909dc17f7f68bbe62fafc617aa871d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6909dc17f7f68bbe62fafc617aa871d">&#9670;&nbsp;</a></span>axis_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::axis_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; int
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the amount of general axis controls on the joystick. </p>
+<dl class="section return"><dt>Returns</dt><dd>the amount of general axis controls on the joystick.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a3a863867e4e6a32dc73bacfd5d727329"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a863867e4e6a32dc73bacfd5d727329">&#9670;&nbsp;</a></span>trackball_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::trackball_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; int
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the amount of trackballs on the joystick. </p>
+<dl class="section return"><dt>Returns</dt><dd>the amount of trackballs on the joystick.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a6f8af6fc19bda8473f6dfd015314fe9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f8af6fc19bda8473f6dfd015314fe9a">&#9670;&nbsp;</a></span>button_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::button_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; int
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the amount of buttons on the joystick. </p>
+<dl class="section return"><dt>Returns</dt><dd>the amount of buttons on the joystick.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="ab013811d81e8d4cdec02a457b2afb928"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab013811d81e8d4cdec02a457b2afb928">&#9670;&nbsp;</a></span>get_power()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::get_power </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__input.html#gaacdee637148c269e0eb2cbedaa0076a4">joystick_power</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the current power level of the joystick. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current power level.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a6d680f1989366c2891ffe05c615a07c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d680f1989366c2891ffe05c615a07c4">&#9670;&nbsp;</a></span>get_button_state()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::get_button_state </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>button</em></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__input.html#ga5dd9bd35570eae0280744201b0d862cf">button_state</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the button state of the button associated with the index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button</td><td>the button index to get the state from, starting at 0.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the state of the button.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a4a176f23bca9f0ea899120075a682f58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a176f23bca9f0ea899120075a682f58">&#9670;&nbsp;</a></span>get_hat_state()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::get_hat_state </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>hat</em></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__input.html#gac1d40ffbea8aa0c7c17a8325e194ca24">hat_state</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the state of a specific joystick hat. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hat</td><td>the index of the hat to query, indices start at 0.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the current state of the hat.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a72125bc3fe0c2c4a0ff5b82953df7e47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72125bc3fe0c2c4a0ff5b82953df7e47">&#9670;&nbsp;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Updates the state of all open joysticks. </p>
+<dl class="section note"><dt>Note</dt><dd>This is done automatically by the event loop if any joystick events are enabled.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a7be18b0bf2edd1b976635bb4943bc694"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7be18b0bf2edd1b976635bb4943bc694">&#9670;&nbsp;</a></span>lock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::lock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Locks the access to all joysticks. </p>
+<p>If you are using the joystick API from multiple threads you should use this function to restrict access to the joysticks.</p>
+<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="aae1b1611bfdf06804ff2cb694de687f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae1b1611bfdf06804ff2cb694de687f3">&#9670;&nbsp;</a></span>unlock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::unlock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unlocks the access to all joysticks. </p>
+<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a5c8b345443be8f54da8363ff3f68a542"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c8b345443be8f54da8363ff3f68a542">&#9670;&nbsp;</a></span>set_polling()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::set_polling </td>
+          <td>(</td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>enabled</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Specifies whether or not joystick event polling is enabled. </p>
+<p>If joystick event polling is disabled, then you must manually call <code><a class="el" href="classcen_1_1basic__joystick.html#a72125bc3fe0c2c4a0ff5b82953df7e47" title="Updates the state of all open joysticks.">basic_joystick::update()</a></code> in order to update the joystick state.</p>
+<dl class="section note"><dt>Note</dt><dd>It's recommended to leave joystick event polling enabled.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Calling this function might cause all events currently in the event queue to be deleted.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enabled</td><td><code>true</code> if joystick event polling should be enabled; <code>false</code> otherwise.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a9821b84f924a1b15ffbff4665c2539ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9821b84f924a1b15ffbff4665c2539ec">&#9670;&nbsp;</a></span>is_polling()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::is_polling </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not joystick event polling is enabled. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if joystick event polling is enabled; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="ace8a0549668bb8303c59e460715cee15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace8a0549668bb8303c59e460715cee15">&#9670;&nbsp;</a></span>count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; std::optional&lt;int&gt;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the amount of currently available joysticks. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current amount of available joysticks; <code>std::nullopt</code> if something goes wrong.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
+
+</div>
+</div>
+<a id="a9edb3854996d14549129f2434fd93773"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9edb3854996d14549129f2434fd93773">&#9670;&nbsp;</a></span>guid_from_string() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::guid_from_string </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a> &gt;&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td> -&gt; SDL_JoystickGUID
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a joystick GUID based on the supplied string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>the string used to obtain the GUID, can't be null.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the obtained GUID.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="abb00c312ebabe6f0479d5c4465fb7544"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb00c312ebabe6f0479d5c4465fb7544">&#9670;&nbsp;</a></span>guid_from_string() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::guid_from_string </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td> -&gt; SDL_JoystickGUID
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a joystick GUID based on the supplied string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>the string used to obtain the GUID.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the obtained GUID.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="af6a5b625898de77c5b2e3bdeed27b0bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6a5b625898de77c5b2e3bdeed27b0bc">&#9670;&nbsp;</a></span>axis_max()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr static auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::axis_max </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__core.html#ga995971102059bcb96d27921ffb7c4916">i16</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the maximum possible value of an axis control on a joystick. </p>
+<dl class="section return"><dt>Returns</dt><dd>the maximum possible value of an axis control.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="ac46eb3efe45bd0ae9e4695f06a2f56cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac46eb3efe45bd0ae9e4695f06a2f56cf">&#9670;&nbsp;</a></span>axis_min()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr static auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::axis_min </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__core.html#ga995971102059bcb96d27921ffb7c4916">i16</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the minimum possible value of an axis control on a joystick. </p>
+<dl class="section return"><dt>Returns</dt><dd>the minimum possible value of an axis control.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="a09b46e727319e6a34877a125ba78cdcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09b46e727319e6a34877a125ba78cdcc">&#9670;&nbsp;</a></span>operator bool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename TT  = T, detail::is_handle&lt; TT &gt;  = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::operator bool </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not a handle holds a non-null pointer. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the handle holds a non-null pointer; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ae62770e9dbb477f424cad6fdd94c556b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae62770e9dbb477f424cad6fdd94c556b">&#9670;&nbsp;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classcen_1_1basic__joystick.html">cen::basic_joystick</a>&lt; T &gt;::get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; SDL_Joystick*
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the associated <code>SDL_Joystick</code>. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Don't take ownership of the returned pointer!</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the associated <code>SDL_Joystick</code>.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.2.0 </dd></dl>
 
 </div>

@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -159,6 +159,36 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac4af8249ff526b51ae17879db2bac291"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4af8249ff526b51ae17879db2bac291">&#9670;&nbsp;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::sdl_string::get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the internal string, which might be null. </p>
+<dl class="section return"><dt>Returns</dt><dd>the internal string; <code>nullptr</code> if there is none.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
 <a id="a9bfb6d532fa925f7c814dccb093690c4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9bfb6d532fa925f7c814dccb093690c4">&#9670;&nbsp;</a></span>copy()</h2>
 
@@ -186,36 +216,6 @@ Public Member Functions</h2></td></tr>
 <p>Returns a copy of the internal string. </p>
 <p>This function returns the empty string if the internal string is a null pointer.</p>
 <dl class="section return"><dt>Returns</dt><dd>a copy of the internal string.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ac4af8249ff526b51ae17879db2bac291"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4af8249ff526b51ae17879db2bac291">&#9670;&nbsp;</a></span>get()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::sdl_string::get </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the internal string, which might be null. </p>
-<dl class="section return"><dt>Returns</dt><dd>the internal string; <code>nullptr</code> if there is none.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>

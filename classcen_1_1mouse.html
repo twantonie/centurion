@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -193,8 +193,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a46226ebf96637a3d4dc44a917fd52f2f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a46226ebf96637a3d4dc44a917fd52f2f">&#9670;&nbsp;</a></span>is_left_button_pressed()</h2>
+<a id="a2499651fd1704d9aeefd9be234523f7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2499651fd1704d9aeefd9be234523f7a">&#9670;&nbsp;</a></span>update() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -203,11 +203,21 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::mouse::is_left_button_pressed </td>
+          <td class="memname">void cen::mouse::update </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>windowWidth</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>windowHeight</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -217,14 +227,20 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Indicates whether or not the left mouse button is currently pressed. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the left mouse button is pressed; <code>false</code> otherwise.</dd></dl>
+<p>Updates the mouse state. The window width and height will be adjusted to be at least 1. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">windowWidth</td><td>the current window width, set to 1 by default. </td></tr>
+    <tr><td class="paramname">windowHeight</td><td>the current window height, set to 1 by default.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="ae2a99e9b1ad2c2f7ee9cf9219f2dfbfd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae2a99e9b1ad2c2f7ee9cf9219f2dfbfd">&#9670;&nbsp;</a></span>is_right_button_pressed()</h2>
+<a id="a2c8d22c70d949e44684bb0aa2b0d1355"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c8d22c70d949e44684bb0aa2b0d1355">&#9670;&nbsp;</a></span>update() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -233,11 +249,11 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::mouse::is_right_button_pressed </td>
+          <td class="memname">void cen::mouse::update </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
+          <td class="paramtype">const <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -247,129 +263,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Indicates whether or not the right mouse button is currently pressed. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the right mouse button is pressed; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="af4b40539e8bd02ba6a94eab51fbcf7ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4b40539e8bd02ba6a94eab51fbcf7ee">&#9670;&nbsp;</a></span>logical_height()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::mouse::logical_height </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; int
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the logical height used by the mouse state instance. </p>
-<dl class="section return"><dt>Returns</dt><dd>the logical height used by the mouse state instance, 1 is used by default.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="aa11a99b3ba1c368af3647fe3e12c9661"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa11a99b3ba1c368af3647fe3e12c9661">&#9670;&nbsp;</a></span>logical_size()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::mouse::logical_size </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the logical size used by the mouse state instance. </p>
-<dl class="section return"><dt>Returns</dt><dd>the logical size used.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a610cad73125fb4127cab97afbc59ea59"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a610cad73125fb4127cab97afbc59ea59">&#9670;&nbsp;</a></span>logical_width()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::mouse::logical_width </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; int
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the logical width used by the mouse state instance. </p>
-<dl class="section return"><dt>Returns</dt><dd>the logical width used by the mouse state instance, 1 is used by default.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="abed9e65162b933812ade303fa7698425"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abed9e65162b933812ade303fa7698425">&#9670;&nbsp;</a></span>position()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::mouse::position </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__math.html#ga482cd24468a5a74647742e69379566c7">ipoint</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the position of the mouse. </p>
-<dl class="section return"><dt>Returns</dt><dd>the current position of the mouse cursor.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+<p>Updates the mouse state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>the size of the window.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
 
 </div>
 </div>
@@ -397,6 +298,42 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Resets the screen and logical dimensions of the mouse state instance. </p>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="afe1cc65aaf142197503242c159d85ec0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe1cc65aaf142197503242c159d85ec0">&#9670;&nbsp;</a></span>set_logical_width()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::mouse::set_logical_width </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>logicalWidth</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the logical width that will be used to determine the mouse position. </p>
+<p>The supplied value will be adjusted to be at least 1.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logicalWidth</td><td>the logical width that will be used to determine the mouse position.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 
 </div>
@@ -472,123 +409,6 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="afe1cc65aaf142197503242c159d85ec0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe1cc65aaf142197503242c159d85ec0">&#9670;&nbsp;</a></span>set_logical_width()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cen::mouse::set_logical_width </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>logicalWidth</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the logical width that will be used to determine the mouse position. </p>
-<p>The supplied value will be adjusted to be at least 1.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">logicalWidth</td><td>the logical width that will be used to determine the mouse position.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a2c8d22c70d949e44684bb0aa2b0d1355"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c8d22c70d949e44684bb0aa2b0d1355">&#9670;&nbsp;</a></span>update() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cen::mouse::update </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>&#160;</td>
-          <td class="paramname"><em>size</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Updates the mouse state. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">size</td><td>the size of the window.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
-<a id="a2499651fd1704d9aeefd9be234523f7a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2499651fd1704d9aeefd9be234523f7a">&#9670;&nbsp;</a></span>update() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cen::mouse::update </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>windowWidth</em> = <code>1</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>windowHeight</em> = <code>1</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Updates the mouse state. The window width and height will be adjusted to be at least 1. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">windowWidth</td><td>the current window width, set to 1 by default. </td></tr>
-    <tr><td class="paramname">windowHeight</td><td>the current window height, set to 1 by default.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
 <a id="a80de5a5d2ec7a07141d7d8e8320dd925"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a80de5a5d2ec7a07141d7d8e8320dd925">&#9670;&nbsp;</a></span>was_left_button_released()</h2>
 
@@ -619,36 +439,6 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a555d0edf5981270753a99be954667816"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a555d0edf5981270753a99be954667816">&#9670;&nbsp;</a></span>was_moved()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::mouse::was_moved </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the mouse was moved. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the mouse was moved; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
 <a id="a3ad7594f36a9859877044abb642374c2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3ad7594f36a9859877044abb642374c2">&#9670;&nbsp;</a></span>was_right_button_released()</h2>
 
@@ -675,6 +465,36 @@ Public Member Functions</h2></td></tr>
 
 <p>Indicates whether or not the right mouse button was released. </p>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the right mouse button was released; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a555d0edf5981270753a99be954667816"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a555d0edf5981270753a99be954667816">&#9670;&nbsp;</a></span>was_moved()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::mouse::was_moved </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the mouse was moved. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the mouse was moved; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 
 </div>
@@ -735,6 +555,186 @@ Public Member Functions</h2></td></tr>
 
 <p>Returns the y-coordinate of the mouse. </p>
 <dl class="section return"><dt>Returns</dt><dd>the y-coordinate of the mouse.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="abed9e65162b933812ade303fa7698425"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abed9e65162b933812ade303fa7698425">&#9670;&nbsp;</a></span>position()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::mouse::position </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__math.html#ga482cd24468a5a74647742e69379566c7">ipoint</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the position of the mouse. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current position of the mouse cursor.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a610cad73125fb4127cab97afbc59ea59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a610cad73125fb4127cab97afbc59ea59">&#9670;&nbsp;</a></span>logical_width()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::mouse::logical_width </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; int
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the logical width used by the mouse state instance. </p>
+<dl class="section return"><dt>Returns</dt><dd>the logical width used by the mouse state instance, 1 is used by default.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="af4b40539e8bd02ba6a94eab51fbcf7ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4b40539e8bd02ba6a94eab51fbcf7ee">&#9670;&nbsp;</a></span>logical_height()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::mouse::logical_height </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; int
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the logical height used by the mouse state instance. </p>
+<dl class="section return"><dt>Returns</dt><dd>the logical height used by the mouse state instance, 1 is used by default.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="aa11a99b3ba1c368af3647fe3e12c9661"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa11a99b3ba1c368af3647fe3e12c9661">&#9670;&nbsp;</a></span>logical_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::mouse::logical_size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__math.html#gac34681d6cc8018e07938793d4c420369">iarea</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the logical size used by the mouse state instance. </p>
+<dl class="section return"><dt>Returns</dt><dd>the logical size used.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a46226ebf96637a3d4dc44a917fd52f2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46226ebf96637a3d4dc44a917fd52f2f">&#9670;&nbsp;</a></span>is_left_button_pressed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::mouse::is_left_button_pressed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the left mouse button is currently pressed. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the left mouse button is pressed; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ae2a99e9b1ad2c2f7ee9cf9219f2dfbfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2a99e9b1ad2c2f7ee9cf9219f2dfbfd">&#9670;&nbsp;</a></span>is_right_button_pressed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::mouse::is_right_button_pressed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the right mouse button is currently pressed. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the right mouse button is pressed; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 
 </div>

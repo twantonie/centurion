@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -109,39 +109,37 @@ $(document).ready(function(){initNavTree('page-responsive-window.html',''); init
 <div class="line"> </div>
 <div class="line">  <a class="code" href="classcen_1_1event.html">cen::event</a> event;</div>
 <div class="line">  <span class="keywordtype">bool</span> running = <span class="keyword">true</span>;</div>
-<div class="line">  <span class="keywordflow">while</span> (running)</div>
-<div class="line">  {</div>
-<div class="line">    <span class="keywordflow">while</span> (event.<a class="code" href="classcen_1_1event.html#ae36b6fcbe804388a3cc3520fb1b0e239">poll</a>())</div>
-<div class="line">    {</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">while</span> (running) {</div>
+<div class="line">    <span class="keywordflow">while</span> (event.<a class="code" href="classcen_1_1event.html#ae36b6fcbe804388a3cc3520fb1b0e239">poll</a>()) {</div>
 <div class="line">      <span class="comment">// Check if the user wants to quit the application</span></div>
-<div class="line">      <span class="keywordflow">if</span> (event.<a class="code" href="classcen_1_1event.html#a5c03445b9ef6770b15a8a1f8d3106ac5">is</a>&lt;<a class="code" href="classcen_1_1quit__event.html">cen::quit_event</a>&gt;())</div>
-<div class="line">      {</div>
+<div class="line">      <span class="keywordflow">if</span> (event.<a class="code" href="classcen_1_1event.html#a5c03445b9ef6770b15a8a1f8d3106ac5">is</a>&lt;<a class="code" href="classcen_1_1quit__event.html">cen::quit_event</a>&gt;()) {</div>
 <div class="line">        running = <span class="keyword">false</span>;</div>
 <div class="line">        <span class="keywordflow">break</span>;</div>
 <div class="line">      }</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <a class="code" href="group__video.html#gad2d8e020a073e6f7e05af85abbbe0476">renderer</a>.clear_with(<a class="code" href="group__video.html#gaf1997eea41dd9324b23428262548a2f5">cen::colors::black</a>);</div>
+<div class="line">    <a class="code" href="group__video.html#gad2d8e020a073e6f7e05af85abbbe0476">renderer</a>.clear_with(<a class="code" href="group__video.html#ga832f22b7348010a260c7e3d230ae5062">cen::colors::coral</a>);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Miscellaneous rendering code goes here...</span></div>
 <div class="line"> </div>
 <div class="line">    <a class="code" href="group__video.html#gad2d8e020a073e6f7e05af85abbbe0476">renderer</a>.present();</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <span class="comment">// Make the window invisible again, this might not be necessary but it doesn&#39;t hurt</span></div>
+<div class="line">  <span class="comment">// Make the window invisible again, this might not be necessary, but it doesn&#39;t hurt</span></div>
 <div class="line">  <a class="code" href="group__video.html#gaf061afd66d5eb42fc564662e1d864828">window</a>.hide();</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aclasscen_1_1event_html"><div class="ttname"><a href="classcen_1_1event.html">cen::event</a></div><div class="ttdoc">Serves as the main interface for dealing with events.</div><div class="ttdef"><b>Definition:</b> event.hpp:51</div></div>
-<div class="ttc" id="aclasscen_1_1event_html_a5c03445b9ef6770b15a8a1f8d3106ac5"><div class="ttname"><a href="classcen_1_1event.html#a5c03445b9ef6770b15a8a1f8d3106ac5">cen::event::is</a></div><div class="ttdeci">auto is() const noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the event is of a particular type.</div><div class="ttdef"><b>Definition:</b> event.hpp:272</div></div>
-<div class="ttc" id="aclasscen_1_1event_html_ae36b6fcbe804388a3cc3520fb1b0e239"><div class="ttname"><a href="classcen_1_1event.html#ae36b6fcbe804388a3cc3520fb1b0e239">cen::event::poll</a></div><div class="ttdeci">auto poll() noexcept -&gt; bool</div><div class="ttdoc">Polls the next available event, if there is one.</div><div class="ttdef"><b>Definition:</b> event.hpp:156</div></div>
-<div class="ttc" id="aclasscen_1_1library_html"><div class="ttname"><a href="classcen_1_1library.html">cen::library</a></div><div class="ttdoc">Used to initialize and de-initialize the library.</div><div class="ttdef"><b>Definition:</b> library.hpp:174</div></div>
+<div class="ttc" id="aclasscen_1_1event_html"><div class="ttname"><a href="classcen_1_1event.html">cen::event</a></div><div class="ttdoc">Serves as the main interface for dealing with events.</div><div class="ttdef"><b>Definition:</b> event.hpp:56</div></div>
+<div class="ttc" id="aclasscen_1_1event_html_a5c03445b9ef6770b15a8a1f8d3106ac5"><div class="ttname"><a href="classcen_1_1event.html#a5c03445b9ef6770b15a8a1f8d3106ac5">cen::event::is</a></div><div class="ttdeci">auto is() const noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the event is of a particular type.</div><div class="ttdef"><b>Definition:</b> event.hpp:267</div></div>
+<div class="ttc" id="aclasscen_1_1event_html_ae36b6fcbe804388a3cc3520fb1b0e239"><div class="ttname"><a href="classcen_1_1event.html#ae36b6fcbe804388a3cc3520fb1b0e239">cen::event::poll</a></div><div class="ttdeci">auto poll() noexcept -&gt; bool</div><div class="ttdoc">Polls the next available event, if there is one.</div><div class="ttdef"><b>Definition:</b> event.hpp:161</div></div>
+<div class="ttc" id="aclasscen_1_1library_html"><div class="ttname"><a href="classcen_1_1library.html">cen::library</a></div><div class="ttdoc">Used to initialize and de-initialize the library.</div><div class="ttdef"><b>Definition:</b> library.hpp:172</div></div>
 <div class="ttc" id="aclasscen_1_1quit__event_html"><div class="ttname"><a href="classcen_1_1quit__event.html">cen::quit_event</a></div><div class="ttdoc">Represents the event of the user wanting to close the application, usually by pressing the &quot;X&quot;-button...</div><div class="ttdef"><b>Definition:</b> quit_event.hpp:24</div></div>
 <div class="ttc" id="agroup__video_html_ga48b3a90cfba05493c695d79084809e53"><div class="ttname"><a href="group__video.html#ga48b3a90cfba05493c695d79084809e53">cen::make_window_and_renderer</a></div><div class="ttdeci">auto make_window_and_renderer(const iarea size=window::default_size(), const u32 flags=window::default_flags()) -&gt; std::pair&lt; window, renderer &gt;</div><div class="ttdoc">Creates a window and an associated renderer.</div><div class="ttdef"><b>Definition:</b> window_utils.hpp:113</div></div>
-<div class="ttc" id="agroup__video_html_gad2d8e020a073e6f7e05af85abbbe0476"><div class="ttname"><a href="group__video.html#gad2d8e020a073e6f7e05af85abbbe0476">cen::renderer</a></div><div class="ttdeci">basic_renderer&lt; detail::owning_type &gt; renderer</div><div class="ttdoc">Represents an owning renderer.</div><div class="ttdef"><b>Definition:</b> renderer.hpp:59</div></div>
-<div class="ttc" id="agroup__video_html_gaf061afd66d5eb42fc564662e1d864828"><div class="ttname"><a href="group__video.html#gaf061afd66d5eb42fc564662e1d864828">cen::window</a></div><div class="ttdeci">basic_window&lt; detail::owning_type &gt; window</div><div class="ttdoc">Represents an owning window.</div><div class="ttdef"><b>Definition:</b> window.hpp:53</div></div>
-<div class="ttc" id="agroup__video_html_gaf1997eea41dd9324b23428262548a2f5"><div class="ttname"><a href="group__video.html#gaf1997eea41dd9324b23428262548a2f5">cen::colors::black</a></div><div class="ttdeci">constexpr color black</div><div class="ttdoc">Hex: 000000.</div><div class="ttdef"><b>Definition:</b> colors.hpp:37</div></div>
+<div class="ttc" id="agroup__video_html_ga832f22b7348010a260c7e3d230ae5062"><div class="ttname"><a href="group__video.html#ga832f22b7348010a260c7e3d230ae5062">cen::colors::coral</a></div><div class="ttdeci">constexpr color coral</div><div class="ttdoc">Hex: FF7F50.</div><div class="ttdef"><b>Definition:</b> colors.hpp:149</div></div>
+<div class="ttc" id="agroup__video_html_gad2d8e020a073e6f7e05af85abbbe0476"><div class="ttname"><a href="group__video.html#gad2d8e020a073e6f7e05af85abbbe0476">cen::renderer</a></div><div class="ttdeci">basic_renderer&lt; detail::owning_type &gt; renderer</div><div class="ttdoc">Represents an owning renderer.</div><div class="ttdef"><b>Definition:</b> renderer.hpp:57</div></div>
+<div class="ttc" id="agroup__video_html_gaf061afd66d5eb42fc564662e1d864828"><div class="ttname"><a href="group__video.html#gaf061afd66d5eb42fc564662e1d864828">cen::window</a></div><div class="ttdeci">basic_window&lt; detail::owning_type &gt; window</div><div class="ttdoc">Represents an owning window.</div><div class="ttdef"><b>Definition:</b> window.hpp:51</div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

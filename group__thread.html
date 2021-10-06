@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -269,8 +269,8 @@ Enumerations</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gacfe5442100d0a39e4a8b27961d7c8a18"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gacfe5442100d0a39e4a8b27961d7c8a18">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[1/2]</span></h2>
+<a id="gafe053b56fe08083b482515611dc9ccc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafe053b56fe08083b482515611dc9ccc3">&#9670;&nbsp;</a></span>to_string() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -279,89 +279,37 @@ Enumerations</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr auto cen::operator!= </td>
+          <td class="memname">constexpr auto cen::to_string </td>
           <td>(</td>
-          <td class="paramtype">const SDL_ThreadPriority&#160;</td>
-          <td class="paramname"><em>lhs</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="group__thread.html#ga7fba1e8c28384518ae94d5f1f998efae">thread_priority</a>&#160;</td>
-          <td class="paramname"><em>rhs</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; bool
+          <td class="paramtype">const <a class="el" href="group__thread.html#ga81e5eda2a43cc39dee8bb8d60cff70d3">lock_status</a>&#160;</td>
+          <td class="paramname"><em>status</em></td><td>)</td>
+          <td> -&gt; std::string_view
 </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Indicates whether or not two thread priorities aren't the same. </p>
+<p>Returns a textual version of the supplied lock status. </p>
+<p>This function returns a string that mirrors the name of the enumerator, e.g. <code>to_string(lock_status::success) == "success"</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">lhs</td><td>the left-hand side thread priority. </td></tr>
-    <tr><td class="paramname">rhs</td><td>the right-hand side thread priority.</td></tr>
+    <tr><td class="paramname">status</td><td>the enumerator that will be converted.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the priorities aren't the same; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="gab2670e85adeaa79763b719817f170caf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab2670e85adeaa79763b719817f170caf">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto cen::operator!= </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__thread.html#ga7fba1e8c28384518ae94d5f1f998efae">thread_priority</a>&#160;</td>
-          <td class="paramname"><em>lhs</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const SDL_ThreadPriority&#160;</td>
-          <td class="paramname"><em>rhs</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; bool
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not two thread priorities aren't the same. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">lhs</td><td>the left-hand side thread priority. </td></tr>
-    <tr><td class="paramname">rhs</td><td>the right-hand side thread priority.</td></tr>
+<dl class="section return"><dt>Returns</dt><dd>a string that mirrors the name of the enumerator.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classcen_1_1cen__error.html" title="The base of all exceptions explicitly thrown by the library.">cen_error</a></td><td>if the enumerator is not recognized.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the priorities aren't the same; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.2.0 </dd></dl>
 
 </div>
 </div>
@@ -414,6 +362,43 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
+<a id="ga6468d958bfe91e1cb693fed9adf43536"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6468d958bfe91e1cb693fed9adf43536">&#9670;&nbsp;</a></span>to_string() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::to_string </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1thread.html">thread</a> &amp;&#160;</td>
+          <td class="paramname"><em>thread</em></td><td>)</td>
+          <td> -&gt; std::string
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a textual representation of a thread. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thread</td><td>the thread that will be converted.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a string that represents a thread.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
 <a id="ga2eff3ea27c959d4127d11bf4f3a22340"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga2eff3ea27c959d4127d11bf4f3a22340">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[2/3]</span></h2>
 
@@ -459,6 +444,50 @@ Enumerations</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the used stream.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga43e7696621d881b79185b9cbb3ff2b98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga43e7696621d881b79185b9cbb3ff2b98">&#9670;&nbsp;</a></span>to_string() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::to_string </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__thread.html#ga7fba1e8c28384518ae94d5f1f998efae">thread_priority</a>&#160;</td>
+          <td class="paramname"><em>priority</em></td><td>)</td>
+          <td> -&gt; std::string_view
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a textual version of the supplied thread priority. </p>
+<p>This function returns a string that mirrors the name of the enumerator, e.g. <code>to_string(thread_priority::high) == "high"</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">priority</td><td>the enumerator that will be converted.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a string that mirrors the name of the enumerator.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classcen_1_1cen__error.html" title="The base of all exceptions explicitly thrown by the library.">cen_error</a></td><td>if the enumerator is not recognized.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>6.2.0 </dd></dl>
 
 </div>
 </div>
@@ -511,56 +540,8 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
-<a id="ga070c15b86ba28fa92ff6eddaae270168"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga070c15b86ba28fa92ff6eddaae270168">&#9670;&nbsp;</a></span>operator==() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto cen::operator== </td>
-          <td>(</td>
-          <td class="paramtype">const SDL_ThreadPriority&#160;</td>
-          <td class="paramname"><em>lhs</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="group__thread.html#ga7fba1e8c28384518ae94d5f1f998efae">thread_priority</a>&#160;</td>
-          <td class="paramname"><em>rhs</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; bool
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not two thread priorities are the same. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">lhs</td><td>the left-hand side thread priority. </td></tr>
-    <tr><td class="paramname">rhs</td><td>the right-hand side thread priority.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the priorities are the same; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
 <a id="gada683df0a6b46b41e7acf635544901ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gada683df0a6b46b41e7acf635544901ad">&#9670;&nbsp;</a></span>operator==() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gada683df0a6b46b41e7acf635544901ad">&#9670;&nbsp;</a></span>operator==() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -607,8 +588,8 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
-<a id="gafe053b56fe08083b482515611dc9ccc3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gafe053b56fe08083b482515611dc9ccc3">&#9670;&nbsp;</a></span>to_string() <span class="overload">[1/3]</span></h2>
+<a id="ga070c15b86ba28fa92ff6eddaae270168"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga070c15b86ba28fa92ff6eddaae270168">&#9670;&nbsp;</a></span>operator==() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -617,79 +598,46 @@ Enumerations</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr auto cen::to_string </td>
+          <td class="memname">constexpr auto cen::operator== </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__thread.html#ga81e5eda2a43cc39dee8bb8d60cff70d3">lock_status</a>&#160;</td>
-          <td class="paramname"><em>status</em></td><td>)</td>
-          <td> -&gt; std::string_view
-</td>
+          <td class="paramtype">const SDL_ThreadPriority&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a textual version of the supplied lock status. </p>
-<p>This function returns a string that mirrors the name of the enumerator, e.g. <code>to_string(lock_status::success) == "success"</code>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">status</td><td>the enumerator that will be converted.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>a string that mirrors the name of the enumerator.</dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classcen_1_1cen__error.html" title="The base of all exceptions explicitly thrown by the library.">cen_error</a></td><td>if the enumerator is not recognized.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>6.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga6468d958bfe91e1cb693fed9adf43536"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6468d958bfe91e1cb693fed9adf43536">&#9670;&nbsp;</a></span>to_string() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
         <tr>
-          <td class="memname">auto cen::to_string </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1thread.html">thread</a> &amp;&#160;</td>
-          <td class="paramname"><em>thread</em></td><td>)</td>
-          <td> -&gt; std::string
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__thread.html#ga7fba1e8c28384518ae94d5f1f998efae">thread_priority</a>&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; bool
 </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a textual representation of a thread. </p>
+<p>Indicates whether or not two thread priorities are the same. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">thread</td><td>the thread that will be converted.</td></tr>
+    <tr><td class="paramname">lhs</td><td>the left-hand side thread priority. </td></tr>
+    <tr><td class="paramname">rhs</td><td>the right-hand side thread priority.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>a string that represents a thread.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the priorities are the same; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="ga43e7696621d881b79185b9cbb3ff2b98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga43e7696621d881b79185b9cbb3ff2b98">&#9670;&nbsp;</a></span>to_string() <span class="overload">[3/3]</span></h2>
+<a id="gab2670e85adeaa79763b719817f170caf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab2670e85adeaa79763b719817f170caf">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -698,37 +646,89 @@ Enumerations</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr auto cen::to_string </td>
+          <td class="memname">constexpr auto cen::operator!= </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="group__thread.html#ga7fba1e8c28384518ae94d5f1f998efae">thread_priority</a>&#160;</td>
-          <td class="paramname"><em>priority</em></td><td>)</td>
-          <td> -&gt; std::string_view
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const SDL_ThreadPriority&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; bool
 </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a textual version of the supplied thread priority. </p>
-<p>This function returns a string that mirrors the name of the enumerator, e.g. <code>to_string(thread_priority::high) == "high"</code>.</p>
+<p>Indicates whether or not two thread priorities aren't the same. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">priority</td><td>the enumerator that will be converted.</td></tr>
+    <tr><td class="paramname">lhs</td><td>the left-hand side thread priority. </td></tr>
+    <tr><td class="paramname">rhs</td><td>the right-hand side thread priority.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>a string that mirrors the name of the enumerator.</dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classcen_1_1cen__error.html" title="The base of all exceptions explicitly thrown by the library.">cen_error</a></td><td>if the enumerator is not recognized.</td></tr>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the priorities aren't the same; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="gacfe5442100d0a39e4a8b27961d7c8a18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacfe5442100d0a39e4a8b27961d7c8a18">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const SDL_ThreadPriority&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__thread.html#ga7fba1e8c28384518ae94d5f1f998efae">thread_priority</a>&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not two thread priorities aren't the same. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>the left-hand side thread priority. </td></tr>
+    <tr><td class="paramname">rhs</td><td>the right-hand side thread priority.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section since"><dt>Since</dt><dd>6.2.0 </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the priorities aren't the same; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
 </div>

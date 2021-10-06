@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Centurion: Custom Configuration</title>
+<title>Centurion: Dynamic Configuration</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -90,10 +90,10 @@ $(document).ready(function(){initNavTree('page-custom-configuration.html',''); i
 
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Custom Configuration </div>  </div>
+<div class="title">Dynamic Configuration </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>This example demonstrates how to tell Centurion how the SDL libraries should be initialized. The example will show how to initialize SDL without any audio support, but the basic principles are the same no matter what you want to disable.</p>
+<div class="textblock"><p>This example demonstrates how to dynamically tell Centurion how the SDL libraries should be initialized. The example will show how to initialize SDL without any audio support, but the basic principles are the same no matter what you want to disable.</p>
 <p>In order to tell Centurion to use a custom configuration, you need to supply an instance of the <code>config</code> class to the constructor of <code>library</code>. Remember, when disabling SDL subsystems, it's your responsibility to make sure that you don't then actually make use of any APIs that rely on said subsystem.</p>
 <dl class="section note"><dt>Note</dt><dd>It's also possible to exclude extension libraries and components that rely on them at compile-time by defining any of the <code>CENTURION_NO_SDL_IMAGE</code>, <code>CENTURION_NO_SDL_MIXER</code> or <code>CENTURION_NO_SDL_TTF</code> macros.</dd></dl>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;centurion.hpp&gt;</span></div>
@@ -107,14 +107,14 @@ $(document).ready(function(){initNavTree('page-custom-configuration.html',''); i
 <div class="line"> </div>
 <div class="line">  <a class="code" href="classcen_1_1library.html">cen::library</a> centurion{cfg};</div>
 <div class="line"> </div>
-<div class="line">  <span class="comment">// Initialized SDL with no audio support along with SDL_image and SDL_ttf</span></div>
+<div class="line">  <span class="comment">// Initialized SDL with no audio support along with no SDL_image nor SDL_ttf</span></div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aclasscen_1_1library_html"><div class="ttname"><a href="classcen_1_1library.html">cen::library</a></div><div class="ttdoc">Used to initialize and de-initialize the library.</div><div class="ttdef"><b>Definition:</b> library.hpp:174</div></div>
-<div class="ttc" id="agroup__core_html_ga1ed86a26cf1d09208a65a195932f5ba8"><div class="ttname"><a href="group__core.html#ga1ed86a26cf1d09208a65a195932f5ba8">cen::config::coreFlags</a></div><div class="ttdeci">u32 coreFlags</div><div class="ttdef"><b>Definition:</b> library.hpp:133</div></div>
-<div class="ttc" id="agroup__core_html_ga30f339c061ef087db37efadf76f44e94"><div class="ttname"><a href="group__core.html#ga30f339c061ef087db37efadf76f44e94">cen::config::initMixer</a></div><div class="ttdeci">bool initMixer</div><div class="ttdef"><b>Definition:</b> library.hpp:130</div></div>
-<div class="ttc" id="astructcen_1_1config_html"><div class="ttname"><a href="structcen_1_1config.html">cen::config</a></div><div class="ttdoc">Used to specify how the library is initialized.</div><div class="ttdef"><b>Definition:</b> library.hpp:127</div></div>
+<div class="ttc" id="aclasscen_1_1library_html"><div class="ttname"><a href="classcen_1_1library.html">cen::library</a></div><div class="ttdoc">Used to initialize and de-initialize the library.</div><div class="ttdef"><b>Definition:</b> library.hpp:172</div></div>
+<div class="ttc" id="agroup__core_html_ga1ed86a26cf1d09208a65a195932f5ba8"><div class="ttname"><a href="group__core.html#ga1ed86a26cf1d09208a65a195932f5ba8">cen::config::coreFlags</a></div><div class="ttdeci">u32 coreFlags</div><div class="ttdef"><b>Definition:</b> library.hpp:131</div></div>
+<div class="ttc" id="agroup__core_html_ga30f339c061ef087db37efadf76f44e94"><div class="ttname"><a href="group__core.html#ga30f339c061ef087db37efadf76f44e94">cen::config::initMixer</a></div><div class="ttdeci">bool initMixer</div><div class="ttdef"><b>Definition:</b> library.hpp:128</div></div>
+<div class="ttc" id="astructcen_1_1config_html"><div class="ttname"><a href="structcen_1_1config.html">cen::config</a></div><div class="ttdoc">Used to specify how the library is initialized.</div><div class="ttdef"><b>Definition:</b> library.hpp:125</div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

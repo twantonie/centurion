@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -170,22 +170,6 @@ template&lt;typename E &gt; </div>
 
 </div>
 </div>
-<a id="a31ae9cbc9914ef018d6004bdcb766648"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a31ae9cbc9914ef018d6004bdcb766648">&#9670;&nbsp;</a></span>function_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename E &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="classcen_1_1event__sink.html">cen::event_sink</a>&lt; E &gt;::<a class="el" href="classcen_1_1event__sink.html#a31ae9cbc9914ef018d6004bdcb766648">function_type</a> =  std::function&lt;<a class="el" href="classcen_1_1event__sink.html#a4f86e5841f4c14061fb962fef132aa7f">signature_type</a>&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a4f86e5841f4c14061fb962fef132aa7f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4f86e5841f4c14061fb962fef132aa7f">&#9670;&nbsp;</a></span>signature_type</h2>
 
@@ -204,7 +188,187 @@ template&lt;typename E &gt; </div>
 
 </div>
 </div>
+<a id="a31ae9cbc9914ef018d6004bdcb766648"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31ae9cbc9914ef018d6004bdcb766648">&#9670;&nbsp;</a></span>function_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename E &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classcen_1_1event__sink.html">cen::event_sink</a>&lt; E &gt;::<a class="el" href="classcen_1_1event__sink.html#a31ae9cbc9914ef018d6004bdcb766648">function_type</a> =  std::function&lt;<a class="el" href="classcen_1_1event__sink.html#a4f86e5841f4c14061fb962fef132aa7f">signature_type</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa93275336c110d5ef0fa335e753ae133"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa93275336c110d5ef0fa335e753ae133">&#9670;&nbsp;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename E &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1event__sink.html">cen::event_sink</a>&lt; E &gt;::reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resets the event sink, removing any associated handler. </p>
+<dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
+
+</div>
+</div>
+<a id="a2c22fc4680d2294913c7b60cf0d9f887"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c22fc4680d2294913c7b60cf0d9f887">&#9670;&nbsp;</a></span>to() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename E &gt; </div>
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1event__sink.html">cen::event_sink</a>&lt; E &gt;::to </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&amp;&#160;</td>
+          <td class="paramname"><em>callable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Connects to a function object. </p>
+<dl class="section note"><dt>Note</dt><dd>This function will overwrite any previously set handler.</dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>the type of the function object.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callable</td><td>the callable that will be invoked when an event is received.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
+
+</div>
+</div>
+<a id="a3f88f2de817a4120005e1ecc9e89d911"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f88f2de817a4120005e1ecc9e89d911">&#9670;&nbsp;</a></span>to() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename E &gt; </div>
+<div class="memtemplate">
+template&lt;auto memberFunc, typename Self &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1event__sink.html">cen::event_sink</a>&lt; E &gt;::to </td>
+          <td>(</td>
+          <td class="paramtype">Self *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Connects to a member function. </p>
+<dl class="section note"><dt>Note</dt><dd>The event sink does <em>not</em> take ownership of the supplied pointer.</dd>
+<dd>
+This function will overwrite any previously set handler.</dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">memberFunction</td><td>a pointer to a member function. </td></tr>
+    <tr><td class="paramname">Self</td><td>the type of the object that owns the function.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>a pointer to the object that will handle the event.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
+
+</div>
+</div>
+<a id="a49daf3a434ec8d3d3c846f8031228a7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49daf3a434ec8d3d3c846f8031228a7c">&#9670;&nbsp;</a></span>to() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename E &gt; </div>
+<div class="memtemplate">
+template&lt;auto function&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcen_1_1event__sink.html">cen::event_sink</a>&lt; E &gt;::to </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Connects to a free function. </p>
+<dl class="section note"><dt>Note</dt><dd>This function will overwrite any previously set handler.</dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">function</td><td>a function pointer.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
+
+</div>
+</div>
 <a id="a12f6dc9d47f0d64f2ab01bf3585e9738"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a12f6dc9d47f0d64f2ab01bf3585e9738">&#9670;&nbsp;</a></span>function() <span class="overload">[1/2]</span></h2>
 
@@ -262,170 +426,6 @@ template&lt;typename E &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa93275336c110d5ef0fa335e753ae133"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa93275336c110d5ef0fa335e753ae133">&#9670;&nbsp;</a></span>reset()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename E &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1event__sink.html">cen::event_sink</a>&lt; E &gt;::reset </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Resets the event sink, removing any associated handler. </p>
-<dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
-
-</div>
-</div>
-<a id="a49daf3a434ec8d3d3c846f8031228a7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49daf3a434ec8d3d3c846f8031228a7c">&#9670;&nbsp;</a></span>to() <span class="overload">[1/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename E &gt; </div>
-<div class="memtemplate">
-template&lt;auto function&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1event__sink.html">cen::event_sink</a>&lt; E &gt;::to </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Connects to a free function. </p>
-<dl class="section note"><dt>Note</dt><dd>This function will overwrite any previously set handler.</dd></dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">function</td><td>a function pointer.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
-
-</div>
-</div>
-<a id="a3f88f2de817a4120005e1ecc9e89d911"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f88f2de817a4120005e1ecc9e89d911">&#9670;&nbsp;</a></span>to() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename E &gt; </div>
-<div class="memtemplate">
-template&lt;auto memberFunc, typename Self &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1event__sink.html">cen::event_sink</a>&lt; E &gt;::to </td>
-          <td>(</td>
-          <td class="paramtype">Self *&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Connects to a member function. </p>
-<dl class="section note"><dt>Note</dt><dd>The event sink does <em>not</em> take ownership of the supplied pointer.</dd>
-<dd>
-This function will overwrite any previously set handler.</dd></dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">memberFunction</td><td>a pointer to a member function. </td></tr>
-    <tr><td class="paramname">Self</td><td>the type of the object that owns the function.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">self</td><td>a pointer to the object that will handle the event.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
-
-</div>
-</div>
-<a id="a2c22fc4680d2294913c7b60cf0d9f887"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c22fc4680d2294913c7b60cf0d9f887">&#9670;&nbsp;</a></span>to() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename E &gt; </div>
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classcen_1_1event__sink.html">cen::event_sink</a>&lt; E &gt;::to </td>
-          <td>(</td>
-          <td class="paramtype">T &amp;&amp;&#160;</td>
-          <td class="paramname"><em>callable</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Connects to a function object. </p>
-<dl class="section note"><dt>Note</dt><dd>This function will overwrite any previously set handler.</dd></dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>the type of the function object.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">callable</td><td>the callable that will be invoked when an event is received.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
 
 </div>
 </div>

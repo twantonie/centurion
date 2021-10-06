@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -353,8 +353,8 @@ template&lt;typename... Args&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5fe72ee829fd72bd21d64a6354d66941"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5fe72ee829fd72bd21d64a6354d66941">&#9670;&nbsp;</a></span>add_basic_latin()</h2>
+<a id="a62b911c8b5ee2b513a45aa1ab209cc8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62b911c8b5ee2b513a45aa1ab209cc8d">&#9670;&nbsp;</a></span>store_blended_utf8() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -365,60 +365,22 @@ template&lt;typename Renderer &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void cen::font_cache::add_basic_latin </td>
+          <td class="memname">void cen::font_cache::store_blended_utf8 </td>
           <td>(</td>
-          <td class="paramtype">Renderer &amp;&#160;</td>
-          <td class="paramname"><em>renderer</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Attempts to cache all printable basic latin characters. </p>
-<p>The basic latin set provides the most common characters, such as upper- and lower-case latin letters, numbers and symbols. This function might throw if something goes wrong when creating the textures.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Renderer</td><td>the type of the renderer.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">renderer</td><td>the renderer that will be used to create the glyph textures.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a0dc3d9e5548d17a0f385b0da3b84e58e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0dc3d9e5548d17a0f385b0da3b84e58e">&#9670;&nbsp;</a></span>add_glyph()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Renderer &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cen::font_cache::add_glyph </td>
-          <td>(</td>
-          <td class="paramtype">Renderer &amp;&#160;</td>
-          <td class="paramname"><em>renderer</em>, </td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1font__cache.html#a7fa87895f51d3bb5c331d79e4ae2dfac">id_type</a>&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="group__video.html#gaf3098f6170a7917381990e5abaf025e9">unicode</a>&#160;</td>
-          <td class="paramname"><em>glyph</em>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a> &gt;&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Renderer &amp;&#160;</td>
+          <td class="paramname"><em>renderer</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -433,27 +395,29 @@ template&lt;typename Renderer &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Adds a glyph to the font cache. </p>
-<p>This function has no effect if the supplied glyph isn't provided by the associated font, or if the supplied glyph has already been cached.</p>
+<p>Caches the supplied string by rendering it to a texture. </p>
+<p>This function respects the kerning of the font. Any previous cached string associated with the supplied ID will be overwritten.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">Renderer</td><td>the type of the renderer.</td></tr>
+    <tr><td class="paramname">Renderer</td><td>the type of the renderer that will be used.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">renderer</td><td>the renderer that will be used to create the glyph texture. </td></tr>
-    <tr><td class="paramname">glyph</td><td>the glyph that will be cached.</td></tr>
+    <tr><td class="paramname">id</td><td>the identifier that will be associated with the texture. </td></tr>
+    <tr><td class="paramname">string</td><td>the string that will be cached. </td></tr>
+    <tr><td class="paramname">renderer</td><td>the renderer that will be used to create the string texture.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1basic__renderer.html#ae372467eac82905dec03309e10e87b9e" title="Creates and returns a texture of blended UTF-8 text.">basic_renderer::render_blended_utf8()</a></code></dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="a6577320857f74355f9daf890c054628b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6577320857f74355f9daf890c054628b">&#9670;&nbsp;</a></span>add_latin1()</h2>
+<a id="a5488ba24438364024f558ecc4d55d57a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5488ba24438364024f558ecc4d55d57a">&#9670;&nbsp;</a></span>store_blended_utf8() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -464,11 +428,27 @@ template&lt;typename Renderer &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void cen::font_cache::add_latin1 </td>
+          <td class="memname">void cen::font_cache::store_blended_utf8 </td>
           <td>(</td>
-          <td class="paramtype">Renderer &amp;&#160;</td>
-          <td class="paramname"><em>renderer</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1font__cache.html#a7fa87895f51d3bb5c331d79e4ae2dfac">id_type</a>&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Renderer &amp;&#160;</td>
+          <td class="paramname"><em>renderer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -477,27 +457,13 @@ template&lt;typename Renderer &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Attempts to cache all printable Latin-1 characters. </p>
-<dl class="section note"><dt>Note</dt><dd>This function is effectively equivalent to calling both <code>add_basic_latin</code> and <code>add_latin1_supplement</code>.</dd></dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Renderer</td><td>the type of the renderer.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">renderer</td><td>the renderer that will be used to create the glyph textures.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classcen_1_1font__cache.html#a62b911c8b5ee2b513a45aa1ab209cc8d" title="Caches the supplied string by rendering it to a texture.">store_blended_utf8()</a> </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
 
 </div>
 </div>
-<a id="ae5341b5be76c40158cf6689798b17308"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5341b5be76c40158cf6689798b17308">&#9670;&nbsp;</a></span>add_latin1_supplement()</h2>
+<a id="ad14ca9a859e48cdd5c418cdaf72ff13c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad14ca9a859e48cdd5c418cdaf72ff13c">&#9670;&nbsp;</a></span>store_blended_wrapped_utf8() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -508,65 +474,28 @@ template&lt;typename Renderer &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void cen::font_cache::add_latin1_supplement </td>
+          <td class="memname">void cen::font_cache::store_blended_wrapped_utf8 </td>
           <td>(</td>
-          <td class="paramtype">Renderer &amp;&#160;</td>
-          <td class="paramname"><em>renderer</em></td><td>)</td>
-          <td></td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1font__cache.html#a7fa87895f51d3bb5c331d79e4ae2dfac">id_type</a>&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Attempts to cache all printable Latin-1 supplement characters. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Renderer</td><td>the type of the renderer.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">renderer</td><td>the renderer that will be used to create the glyph textures.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a17342c366ab313bdb5857b27a5358b36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a17342c366ab313bdb5857b27a5358b36">&#9670;&nbsp;</a></span>add_range()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Renderer &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
         <tr>
-          <td class="memname">void cen::font_cache::add_range </td>
-          <td>(</td>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a> &gt;&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">Renderer &amp;&#160;</td>
           <td class="paramname"><em>renderer</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="group__video.html#gaf3098f6170a7917381990e5abaf025e9">unicode</a>&#160;</td>
-          <td class="paramname"><em>begin</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="group__video.html#gaf3098f6170a7917381990e5abaf025e9">unicode</a>&#160;</td>
-          <td class="paramname"><em>end</em>&#160;</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>&#160;</td>
+          <td class="paramname"><em>wrap</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -581,141 +510,67 @@ template&lt;typename Renderer &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Caches the glyphs in the specified range. </p>
-<p>The range is interpreted as [min, max), i.e. the the <code>min</code> value is included, and <code>max</code> is excluded.</p>
-<dl class="section remark"><dt>Remarks</dt><dd>For an overview of the various Unicode blocks, see <a href="https://unicode-table.com/en/blocks/">this</a>.</dd></dl>
+<p>Caches the supplied string by rendering it to a texture. </p>
+<p>This function respects the kerning of the font. Any previous cached string associated with the supplied ID will be overwritten.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">Renderer</td><td>the type of the renderer.</td></tr>
+    <tr><td class="paramname">Renderer</td><td>the type of the renderer that will be used.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">renderer</td><td>the renderer that will be used to create the glyph textures. </td></tr>
-    <tr><td class="paramname">begin</td><td>the first glyph that will be included. </td></tr>
-    <tr><td class="paramname">end</td><td>the "end" glyph in the range, will not be included.</td></tr>
+    <tr><td class="paramname">id</td><td>the identifier that will be associated with the texture. </td></tr>
+    <tr><td class="paramname">string</td><td>the string that will be cached. </td></tr>
+    <tr><td class="paramname">renderer</td><td>the renderer that will be used to create the string texture. </td></tr>
+    <tr><td class="paramname">wrap</td><td>the width in pixels after which the text will be wrapped.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1basic__renderer.html#af22722c1e2ccb97f6effe1b31b28e5ff" title="Creates and returns a texture of blended and wrapped UTF-8 text.">basic_renderer::render_blended_wrapped_utf8()</a></code></dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="ad459c41a33b66e46805fc20a0da9f3ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad459c41a33b66e46805fc20a0da9f3ad">&#9670;&nbsp;</a></span>at()</h2>
+<a id="ae34f3d88f3c428b92ff3d07b47c3abc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae34f3d88f3c428b92ff3d07b47c3abc6">&#9670;&nbsp;</a></span>store_blended_wrapped_utf8() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Renderer &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::font_cache::at </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__video.html#gaf3098f6170a7917381990e5abaf025e9">unicode</a>&#160;</td>
-          <td class="paramname"><em>glyph</em></td><td>)</td>
-          <td> const -&gt; const <a class="el" href="structcen_1_1font__cache_1_1glyph__data.html">glyph_data</a>&amp;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the data associated with the specified glyph. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>glyph</code> <b>must</b> have been previously cached.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">glyph</td><td>the desired glyph to lookup the data for.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the cached texture and metrics associated with the glyph.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a8267e5c45382e30d81aa22850ac3e8ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8267e5c45382e30d81aa22850ac3e8ad">&#9670;&nbsp;</a></span>get_font() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::font_cache::get_font </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; const <a class="el" href="classcen_1_1font.html">font</a>&amp;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the font used by the cache. </p>
-<dl class="section return"><dt>Returns</dt><dd>a reference to the internal font.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ac707774cf330482dee02db702fd661bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac707774cf330482dee02db702fd661bc">&#9670;&nbsp;</a></span>get_font() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::font_cache::get_font </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1font.html">font</a>&amp;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the font used by the cache. </p>
-<dl class="section return"><dt>Returns</dt><dd>a reference to the internal font.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a801d46236b2987c8b620124060862184"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a801d46236b2987c8b620124060862184">&#9670;&nbsp;</a></span>get_stored()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::font_cache::get_stored </td>
+          <td class="memname">void cen::font_cache::store_blended_wrapped_utf8 </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classcen_1_1font__cache.html#a7fa87895f51d3bb5c331d79e4ae2dfac">id_type</a>&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
-          <td> const -&gt; const <a class="el" href="group__video.html#gab199243ff6286f54d79df8a207b07678">texture</a>&amp;
-  </td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Renderer &amp;&#160;</td>
+          <td class="paramname"><em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>&#160;</td>
+          <td class="paramname"><em>wrap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -724,110 +579,50 @@ template&lt;typename Renderer &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Returns the cached texture associated with the specified ID. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>id</code> <b>must</b> be associated with a cached string texture.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">id</td><td>the key of the cached texture to obtain.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the cached texture associated with the key.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classcen_1_1font__cache.html#ad14ca9a859e48cdd5c418cdaf72ff13c" title="Caches the supplied string by rendering it to a texture.">store_blended_wrapped_utf8()</a> </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
 
 </div>
 </div>
-<a id="aff4d7a6102dfd3bba86f6d85a832c18f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff4d7a6102dfd3bba86f6d85a832c18f">&#9670;&nbsp;</a></span>has()</h2>
+<a id="ad090ec347b2c28133adcf95c6e325d8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad090ec347b2c28133adcf95c6e325d8d">&#9670;&nbsp;</a></span>store_shaded_utf8() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Renderer &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::font_cache::has </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__video.html#gaf3098f6170a7917381990e5abaf025e9">unicode</a>&#160;</td>
-          <td class="paramname"><em>glyph</em></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the specified glyph has been cached. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">glyph</td><td>the glyph to check.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the specified glyph has been cached; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ae39990e1643059a8751b80ad0b83f89d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae39990e1643059a8751b80ad0b83f89d">&#9670;&nbsp;</a></span>has_stored()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::font_cache::has_stored </td>
+          <td class="memname">void cen::font_cache::store_shaded_utf8 </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classcen_1_1font__cache.html#a7fa87895f51d3bb5c331d79e4ae2dfac">id_type</a>&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
+          <td class="paramname"><em>id</em>, </td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not there is a cached string texture associated with the specified key. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">id</td><td>the key that will be checked.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if there is a cached texture associated with the key; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a4efcb3d00c2cd189ef97cf29d4ff6422"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4efcb3d00c2cd189ef97cf29d4ff6422">&#9670;&nbsp;</a></span>operator[]()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
         <tr>
-          <td class="memname">auto cen::font_cache::operator[] </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="group__video.html#gaf3098f6170a7917381990e5abaf025e9">unicode</a>&#160;</td>
-          <td class="paramname"><em>glyph</em></td><td>)</td>
-          <td> const -&gt; const <a class="el" href="structcen_1_1font__cache_1_1glyph__data.html">glyph_data</a>&amp;
-  </td>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a> &gt;&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Renderer &amp;&#160;</td>
+          <td class="paramname"><em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1color.html">color</a> &amp;&#160;</td>
+          <td class="paramname"><em>background</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -837,17 +632,186 @@ template&lt;typename Renderer &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the data associated with the specified glyph. </p>
-<dl class="section note"><dt>Note</dt><dd>This function is equivalent to calling <code>at</code>.</dd></dl>
-<dl class="section pre"><dt>Precondition</dt><dd><code>glyph</code> <b>must</b> have been previously cached.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">glyph</td><td>the desired glyph to lookup the data for.</td></tr>
+<p>Caches the supplied string by rendering it to a texture. </p>
+<p>This function respects the kerning of the font. Any previous cached string associated with the supplied ID will be overwritten.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Renderer</td><td>the type of the renderer that will be used.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the cached texture and metrics associated with the glyph.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>the identifier that will be associated with the texture. </td></tr>
+    <tr><td class="paramname">string</td><td>the string that will be cached. </td></tr>
+    <tr><td class="paramname">renderer</td><td>the renderer that will be used to create the string texture. </td></tr>
+    <tr><td class="paramname">background</td><td>the color used for the background box.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1basic__renderer.html#a164559056a599de3fff580145ba0005a" title="Creates and returns a texture of shaded UTF-8 text.">basic_renderer::render_shaded_utf8()</a></code></dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a216ed428a8902d9d9c2914fde91144e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a216ed428a8902d9d9c2914fde91144e7">&#9670;&nbsp;</a></span>store_shaded_utf8() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Renderer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::font_cache::store_shaded_utf8 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1font__cache.html#a7fa87895f51d3bb5c331d79e4ae2dfac">id_type</a>&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Renderer &amp;&#160;</td>
+          <td class="paramname"><em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1color.html">color</a> &amp;&#160;</td>
+          <td class="paramname"><em>background</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classcen_1_1font__cache.html#ad090ec347b2c28133adcf95c6e325d8d" title="Caches the supplied string by rendering it to a texture.">store_shaded_utf8()</a> </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="ae1dabe0a51135ab32fa8ae40d1c7e6cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1dabe0a51135ab32fa8ae40d1c7e6cd">&#9670;&nbsp;</a></span>store_solid_utf8() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Renderer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::font_cache::store_solid_utf8 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1font__cache.html#a7fa87895f51d3bb5c331d79e4ae2dfac">id_type</a>&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a> &gt;&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Renderer &amp;&#160;</td>
+          <td class="paramname"><em>renderer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Caches the supplied string by rendering it to a texture. </p>
+<p>This function respects the kerning of the font. Any previous cached string associated with the supplied ID will be overwritten.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Renderer</td><td>the type of the renderer that will be used.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>the identifier that will be associated with the texture. </td></tr>
+    <tr><td class="paramname">string</td><td>the string that will be cached. </td></tr>
+    <tr><td class="paramname">renderer</td><td>the renderer that will be used to create the string texture.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1basic__renderer.html#ade5abb977172ead59f146a7b332968c1" title="Creates and returns a texture of solid UTF-8 text.">basic_renderer::render_solid_utf8()</a></code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a7d13116836e6dbfa86266c79102b481a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d13116836e6dbfa86266c79102b481a">&#9670;&nbsp;</a></span>store_solid_utf8() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Renderer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::font_cache::store_solid_utf8 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1font__cache.html#a7fa87895f51d3bb5c331d79e4ae2dfac">id_type</a>&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Renderer &amp;&#160;</td>
+          <td class="paramname"><em>renderer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classcen_1_1font__cache.html#ae1dabe0a51135ab32fa8ae40d1c7e6cd" title="Caches the supplied string by rendering it to a texture.">store_solid_utf8()</a> </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
 
 </div>
 </div>
@@ -956,178 +920,6 @@ template&lt;typename Renderer &gt; </div>
 </table>
 </div><div class="memdoc">
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classcen_1_1font__cache.html#a538f329e803c1c0bb07aef5c145b87a6" title="Caches the supplied string by rendering it to a texture.">store_blended_latin1()</a> </dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
-<a id="a4eededff858d6f36b5e1ded4c80578d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4eededff858d6f36b5e1ded4c80578d4">&#9670;&nbsp;</a></span>store_blended_unicode()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Renderer &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cen::font_cache::store_blended_unicode </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1font__cache.html#a7fa87895f51d3bb5c331d79e4ae2dfac">id_type</a>&#160;</td>
-          <td class="paramname"><em>id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1unicode__string.html">unicode_string</a> &amp;&#160;</td>
-          <td class="paramname"><em>string</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Renderer &amp;&#160;</td>
-          <td class="paramname"><em>renderer</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Caches the supplied string by rendering it to a texture. </p>
-<p>This function respects the kerning of the font. Any previous cached string associated with the supplied ID will be overwritten.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Renderer</td><td>the type of the renderer that will be used.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">id</td><td>the identifier that will be associated with the texture. </td></tr>
-    <tr><td class="paramname">string</td><td>the string that will be cached. </td></tr>
-    <tr><td class="paramname">renderer</td><td>the renderer that will be used to create the string texture.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1basic__renderer.html#a830a8601fa25ba5a0bbacc5a6e620153" title="Creates and returns a texture of blended Unicode text.">basic_renderer::render_blended_unicode()</a></code></dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a62b911c8b5ee2b513a45aa1ab209cc8d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a62b911c8b5ee2b513a45aa1ab209cc8d">&#9670;&nbsp;</a></span>store_blended_utf8() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Renderer &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cen::font_cache::store_blended_utf8 </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1font__cache.html#a7fa87895f51d3bb5c331d79e4ae2dfac">id_type</a>&#160;</td>
-          <td class="paramname"><em>id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a> &gt;&#160;</td>
-          <td class="paramname"><em>string</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Renderer &amp;&#160;</td>
-          <td class="paramname"><em>renderer</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Caches the supplied string by rendering it to a texture. </p>
-<p>This function respects the kerning of the font. Any previous cached string associated with the supplied ID will be overwritten.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Renderer</td><td>the type of the renderer that will be used.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">id</td><td>the identifier that will be associated with the texture. </td></tr>
-    <tr><td class="paramname">string</td><td>the string that will be cached. </td></tr>
-    <tr><td class="paramname">renderer</td><td>the renderer that will be used to create the string texture.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1basic__renderer.html#ae372467eac82905dec03309e10e87b9e" title="Creates and returns a texture of blended UTF-8 text.">basic_renderer::render_blended_utf8()</a></code></dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a5488ba24438364024f558ecc4d55d57a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5488ba24438364024f558ecc4d55d57a">&#9670;&nbsp;</a></span>store_blended_utf8() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Renderer &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cen::font_cache::store_blended_utf8 </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1font__cache.html#a7fa87895f51d3bb5c331d79e4ae2dfac">id_type</a>&#160;</td>
-          <td class="paramname"><em>id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>string</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Renderer &amp;&#160;</td>
-          <td class="paramname"><em>renderer</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classcen_1_1font__cache.html#a62b911c8b5ee2b513a45aa1ab209cc8d" title="Caches the supplied string by rendering it to a texture.">store_blended_utf8()</a> </dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
 
 </div>
@@ -1254,198 +1046,6 @@ template&lt;typename Renderer &gt; </div>
 
 </div>
 </div>
-<a id="af61ce625966bd3bf30bd0a3055abb423"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af61ce625966bd3bf30bd0a3055abb423">&#9670;&nbsp;</a></span>store_blended_wrapped_unicode()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Renderer &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cen::font_cache::store_blended_wrapped_unicode </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1font__cache.html#a7fa87895f51d3bb5c331d79e4ae2dfac">id_type</a>&#160;</td>
-          <td class="paramname"><em>id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1unicode__string.html">unicode_string</a> &amp;&#160;</td>
-          <td class="paramname"><em>string</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Renderer &amp;&#160;</td>
-          <td class="paramname"><em>renderer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>&#160;</td>
-          <td class="paramname"><em>wrap</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Caches the supplied string by rendering it to a texture. </p>
-<p>This function respects the kerning of the font. Any previous cached string associated with the supplied ID will be overwritten.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Renderer</td><td>the type of the renderer that will be used.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">id</td><td>the identifier that will be associated with the texture. </td></tr>
-    <tr><td class="paramname">string</td><td>the string that will be cached. </td></tr>
-    <tr><td class="paramname">renderer</td><td>the renderer that will be used to create the string texture. </td></tr>
-    <tr><td class="paramname">wrap</td><td>the width in pixels after which the text will be wrapped.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1basic__renderer.html#a45e9056a6be5e7ca5564c8c30b8e391a" title="Creates and returns a texture of blended and wrapped Unicode text.">basic_renderer::render_blended_wrapped_unicode()</a></code></dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ad14ca9a859e48cdd5c418cdaf72ff13c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad14ca9a859e48cdd5c418cdaf72ff13c">&#9670;&nbsp;</a></span>store_blended_wrapped_utf8() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Renderer &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cen::font_cache::store_blended_wrapped_utf8 </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1font__cache.html#a7fa87895f51d3bb5c331d79e4ae2dfac">id_type</a>&#160;</td>
-          <td class="paramname"><em>id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a> &gt;&#160;</td>
-          <td class="paramname"><em>string</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Renderer &amp;&#160;</td>
-          <td class="paramname"><em>renderer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>&#160;</td>
-          <td class="paramname"><em>wrap</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Caches the supplied string by rendering it to a texture. </p>
-<p>This function respects the kerning of the font. Any previous cached string associated with the supplied ID will be overwritten.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Renderer</td><td>the type of the renderer that will be used.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">id</td><td>the identifier that will be associated with the texture. </td></tr>
-    <tr><td class="paramname">string</td><td>the string that will be cached. </td></tr>
-    <tr><td class="paramname">renderer</td><td>the renderer that will be used to create the string texture. </td></tr>
-    <tr><td class="paramname">wrap</td><td>the width in pixels after which the text will be wrapped.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1basic__renderer.html#af22722c1e2ccb97f6effe1b31b28e5ff" title="Creates and returns a texture of blended and wrapped UTF-8 text.">basic_renderer::render_blended_wrapped_utf8()</a></code></dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ae34f3d88f3c428b92ff3d07b47c3abc6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae34f3d88f3c428b92ff3d07b47c3abc6">&#9670;&nbsp;</a></span>store_blended_wrapped_utf8() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Renderer &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cen::font_cache::store_blended_wrapped_utf8 </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1font__cache.html#a7fa87895f51d3bb5c331d79e4ae2dfac">id_type</a>&#160;</td>
-          <td class="paramname"><em>id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>string</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Renderer &amp;&#160;</td>
-          <td class="paramname"><em>renderer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>&#160;</td>
-          <td class="paramname"><em>wrap</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classcen_1_1font__cache.html#ad14ca9a859e48cdd5c418cdaf72ff13c" title="Caches the supplied string by rendering it to a texture.">store_blended_wrapped_utf8()</a> </dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
 <a id="a2604c8898172c0eaec508d01c4ba2d37"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2604c8898172c0eaec508d01c4ba2d37">&#9670;&nbsp;</a></span>store_shaded_latin1() <span class="overload">[1/2]</span></h2>
 
@@ -1568,198 +1168,6 @@ template&lt;typename Renderer &gt; </div>
 
 </div>
 </div>
-<a id="a61c40468b9e1672cb870198e74ed3de3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a61c40468b9e1672cb870198e74ed3de3">&#9670;&nbsp;</a></span>store_shaded_unicode()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Renderer &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cen::font_cache::store_shaded_unicode </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1font__cache.html#a7fa87895f51d3bb5c331d79e4ae2dfac">id_type</a>&#160;</td>
-          <td class="paramname"><em>id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1unicode__string.html">unicode_string</a> &amp;&#160;</td>
-          <td class="paramname"><em>string</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Renderer &amp;&#160;</td>
-          <td class="paramname"><em>renderer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1color.html">color</a> &amp;&#160;</td>
-          <td class="paramname"><em>background</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Caches the supplied string by rendering it to a texture. </p>
-<p>This function respects the kerning of the font. Any previous cached string associated with the supplied ID will be overwritten.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Renderer</td><td>the type of the renderer that will be used.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">id</td><td>the identifier that will be associated with the texture. </td></tr>
-    <tr><td class="paramname">string</td><td>the string that will be cached. </td></tr>
-    <tr><td class="paramname">renderer</td><td>the renderer that will be used to create the string texture. </td></tr>
-    <tr><td class="paramname">background</td><td>the color used for the background box.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1basic__renderer.html#ad4fb8c85434f5a0228bdaca6c6a78f17" title="Creates and returns a texture of shaded Unicode text.">basic_renderer::render_shaded_unicode()</a></code></dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ad090ec347b2c28133adcf95c6e325d8d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad090ec347b2c28133adcf95c6e325d8d">&#9670;&nbsp;</a></span>store_shaded_utf8() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Renderer &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cen::font_cache::store_shaded_utf8 </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1font__cache.html#a7fa87895f51d3bb5c331d79e4ae2dfac">id_type</a>&#160;</td>
-          <td class="paramname"><em>id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a> &gt;&#160;</td>
-          <td class="paramname"><em>string</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Renderer &amp;&#160;</td>
-          <td class="paramname"><em>renderer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1color.html">color</a> &amp;&#160;</td>
-          <td class="paramname"><em>background</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Caches the supplied string by rendering it to a texture. </p>
-<p>This function respects the kerning of the font. Any previous cached string associated with the supplied ID will be overwritten.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Renderer</td><td>the type of the renderer that will be used.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">id</td><td>the identifier that will be associated with the texture. </td></tr>
-    <tr><td class="paramname">string</td><td>the string that will be cached. </td></tr>
-    <tr><td class="paramname">renderer</td><td>the renderer that will be used to create the string texture. </td></tr>
-    <tr><td class="paramname">background</td><td>the color used for the background box.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1basic__renderer.html#a164559056a599de3fff580145ba0005a" title="Creates and returns a texture of shaded UTF-8 text.">basic_renderer::render_shaded_utf8()</a></code></dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a216ed428a8902d9d9c2914fde91144e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a216ed428a8902d9d9c2914fde91144e7">&#9670;&nbsp;</a></span>store_shaded_utf8() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Renderer &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cen::font_cache::store_shaded_utf8 </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1font__cache.html#a7fa87895f51d3bb5c331d79e4ae2dfac">id_type</a>&#160;</td>
-          <td class="paramname"><em>id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>string</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Renderer &amp;&#160;</td>
-          <td class="paramname"><em>renderer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1color.html">color</a> &amp;&#160;</td>
-          <td class="paramname"><em>background</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classcen_1_1font__cache.html#ad090ec347b2c28133adcf95c6e325d8d" title="Caches the supplied string by rendering it to a texture.">store_shaded_utf8()</a> </dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
 <a id="af489a713a393dc15b495450395cbdc60"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af489a713a393dc15b495450395cbdc60">&#9670;&nbsp;</a></span>store_solid_latin1() <span class="overload">[1/2]</span></h2>
 
@@ -1869,6 +1277,209 @@ template&lt;typename Renderer &gt; </div>
 
 </div>
 </div>
+<a id="a4eededff858d6f36b5e1ded4c80578d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4eededff858d6f36b5e1ded4c80578d4">&#9670;&nbsp;</a></span>store_blended_unicode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Renderer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::font_cache::store_blended_unicode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1font__cache.html#a7fa87895f51d3bb5c331d79e4ae2dfac">id_type</a>&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1unicode__string.html">unicode_string</a> &amp;&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Renderer &amp;&#160;</td>
+          <td class="paramname"><em>renderer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Caches the supplied string by rendering it to a texture. </p>
+<p>This function respects the kerning of the font. Any previous cached string associated with the supplied ID will be overwritten.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Renderer</td><td>the type of the renderer that will be used.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>the identifier that will be associated with the texture. </td></tr>
+    <tr><td class="paramname">string</td><td>the string that will be cached. </td></tr>
+    <tr><td class="paramname">renderer</td><td>the renderer that will be used to create the string texture.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1basic__renderer.html#a830a8601fa25ba5a0bbacc5a6e620153" title="Creates and returns a texture of blended Unicode text.">basic_renderer::render_blended_unicode()</a></code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="af61ce625966bd3bf30bd0a3055abb423"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af61ce625966bd3bf30bd0a3055abb423">&#9670;&nbsp;</a></span>store_blended_wrapped_unicode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Renderer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::font_cache::store_blended_wrapped_unicode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1font__cache.html#a7fa87895f51d3bb5c331d79e4ae2dfac">id_type</a>&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1unicode__string.html">unicode_string</a> &amp;&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Renderer &amp;&#160;</td>
+          <td class="paramname"><em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">u32</a>&#160;</td>
+          <td class="paramname"><em>wrap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Caches the supplied string by rendering it to a texture. </p>
+<p>This function respects the kerning of the font. Any previous cached string associated with the supplied ID will be overwritten.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Renderer</td><td>the type of the renderer that will be used.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>the identifier that will be associated with the texture. </td></tr>
+    <tr><td class="paramname">string</td><td>the string that will be cached. </td></tr>
+    <tr><td class="paramname">renderer</td><td>the renderer that will be used to create the string texture. </td></tr>
+    <tr><td class="paramname">wrap</td><td>the width in pixels after which the text will be wrapped.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1basic__renderer.html#a45e9056a6be5e7ca5564c8c30b8e391a" title="Creates and returns a texture of blended and wrapped Unicode text.">basic_renderer::render_blended_wrapped_unicode()</a></code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a61c40468b9e1672cb870198e74ed3de3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61c40468b9e1672cb870198e74ed3de3">&#9670;&nbsp;</a></span>store_shaded_unicode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Renderer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::font_cache::store_shaded_unicode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1font__cache.html#a7fa87895f51d3bb5c331d79e4ae2dfac">id_type</a>&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1unicode__string.html">unicode_string</a> &amp;&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Renderer &amp;&#160;</td>
+          <td class="paramname"><em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1color.html">color</a> &amp;&#160;</td>
+          <td class="paramname"><em>background</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Caches the supplied string by rendering it to a texture. </p>
+<p>This function respects the kerning of the font. Any previous cached string associated with the supplied ID will be overwritten.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Renderer</td><td>the type of the renderer that will be used.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>the identifier that will be associated with the texture. </td></tr>
+    <tr><td class="paramname">string</td><td>the string that will be cached. </td></tr>
+    <tr><td class="paramname">renderer</td><td>the renderer that will be used to create the string texture. </td></tr>
+    <tr><td class="paramname">background</td><td>the color used for the background box.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1basic__renderer.html#ad4fb8c85434f5a0228bdaca6c6a78f17" title="Creates and returns a texture of shaded Unicode text.">basic_renderer::render_shaded_unicode()</a></code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
 <a id="a74fdfbd17f4a0aba8324f3c78d1507e4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a74fdfbd17f4a0aba8324f3c78d1507e4">&#9670;&nbsp;</a></span>store_solid_unicode()</h2>
 
@@ -1932,8 +1543,121 @@ template&lt;typename Renderer &gt; </div>
 
 </div>
 </div>
-<a id="ae1dabe0a51135ab32fa8ae40d1c7e6cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1dabe0a51135ab32fa8ae40d1c7e6cd">&#9670;&nbsp;</a></span>store_solid_utf8() <span class="overload">[1/2]</span></h2>
+<a id="ae39990e1643059a8751b80ad0b83f89d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae39990e1643059a8751b80ad0b83f89d">&#9670;&nbsp;</a></span>has_stored()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::font_cache::has_stored </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1font__cache.html#a7fa87895f51d3bb5c331d79e4ae2dfac">id_type</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not there is a cached string texture associated with the specified key. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>the key that will be checked.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if there is a cached texture associated with the key; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a801d46236b2987c8b620124060862184"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a801d46236b2987c8b620124060862184">&#9670;&nbsp;</a></span>get_stored()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::font_cache::get_stored </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1font__cache.html#a7fa87895f51d3bb5c331d79e4ae2dfac">id_type</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const -&gt; const <a class="el" href="group__video.html#gab199243ff6286f54d79df8a207b07678">texture</a>&amp;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the cached texture associated with the specified ID. </p>
+<dl class="section pre"><dt>Precondition</dt><dd><code>id</code> <b>must</b> be associated with a cached string texture.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>the key of the cached texture to obtain.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the cached texture associated with the key.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="aba944ac6a827003041143afc26b6f4d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba944ac6a827003041143afc26b6f4d7">&#9670;&nbsp;</a></span>try_get_stored()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::font_cache::try_get_stored </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1font__cache.html#a7fa87895f51d3bb5c331d79e4ae2dfac">id_type</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const -&gt; const <a class="el" href="group__video.html#gab199243ff6286f54d79df8a207b07678">texture</a>*
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the texture associated with the specified key. </p>
+<dl class="section note"><dt>Note</dt><dd>The returned pointer is not suitable for storing for longer than absolutely necessary, as it might get invalidated by modifications of the font cache.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>the key of the desired texture.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the texture associated with the specified key; <code>nullptr</code> if no texture is found.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a0dc3d9e5548d17a0f385b0da3b84e58e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dc3d9e5548d17a0f385b0da3b84e58e">&#9670;&nbsp;</a></span>add_glyph()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1944,22 +1668,16 @@ template&lt;typename Renderer &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void cen::font_cache::store_solid_utf8 </td>
+          <td class="memname">void cen::font_cache::add_glyph </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1font__cache.html#a7fa87895f51d3bb5c331d79e4ae2dfac">id_type</a>&#160;</td>
-          <td class="paramname"><em>id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt; <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a> &gt;&#160;</td>
-          <td class="paramname"><em>string</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">Renderer &amp;&#160;</td>
-          <td class="paramname"><em>renderer</em>&#160;</td>
+          <td class="paramname"><em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__video.html#gaf3098f6170a7917381990e5abaf025e9">unicode</a>&#160;</td>
+          <td class="paramname"><em>glyph</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1974,29 +1692,27 @@ template&lt;typename Renderer &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Caches the supplied string by rendering it to a texture. </p>
-<p>This function respects the kerning of the font. Any previous cached string associated with the supplied ID will be overwritten.</p>
+<p>Adds a glyph to the font cache. </p>
+<p>This function has no effect if the supplied glyph isn't provided by the associated font, or if the supplied glyph has already been cached.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">Renderer</td><td>the type of the renderer that will be used.</td></tr>
+    <tr><td class="paramname">Renderer</td><td>the type of the renderer.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">id</td><td>the identifier that will be associated with the texture. </td></tr>
-    <tr><td class="paramname">string</td><td>the string that will be cached. </td></tr>
-    <tr><td class="paramname">renderer</td><td>the renderer that will be used to create the string texture.</td></tr>
+    <tr><td class="paramname">renderer</td><td>the renderer that will be used to create the glyph texture. </td></tr>
+    <tr><td class="paramname">glyph</td><td>the glyph that will be cached.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1basic__renderer.html#ade5abb977172ead59f146a7b332968c1" title="Creates and returns a texture of solid UTF-8 text.">basic_renderer::render_solid_utf8()</a></code></dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="a7d13116836e6dbfa86266c79102b481a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d13116836e6dbfa86266c79102b481a">&#9670;&nbsp;</a></span>store_solid_utf8() <span class="overload">[2/2]</span></h2>
+<a id="a17342c366ab313bdb5857b27a5358b36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17342c366ab313bdb5857b27a5358b36">&#9670;&nbsp;</a></span>add_range()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2007,22 +1723,22 @@ template&lt;typename Renderer &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void cen::font_cache::store_solid_utf8 </td>
+          <td class="memname">void cen::font_cache::add_range </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1font__cache.html#a7fa87895f51d3bb5c331d79e4ae2dfac">id_type</a>&#160;</td>
-          <td class="paramname"><em>id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>string</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">Renderer &amp;&#160;</td>
-          <td class="paramname"><em>renderer</em>&#160;</td>
+          <td class="paramname"><em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__video.html#gaf3098f6170a7917381990e5abaf025e9">unicode</a>&#160;</td>
+          <td class="paramname"><em>begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__video.html#gaf3098f6170a7917381990e5abaf025e9">unicode</a>&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2036,8 +1752,270 @@ template&lt;typename Renderer &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classcen_1_1font__cache.html#ae1dabe0a51135ab32fa8ae40d1c7e6cd" title="Caches the supplied string by rendering it to a texture.">store_solid_utf8()</a> </dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
+
+<p>Caches the glyphs in the specified range. </p>
+<p>The range is interpreted as [min, max), i.e. the the <code>min</code> value is included, and <code>max</code> is excluded.</p>
+<dl class="section remark"><dt>Remarks</dt><dd>For an overview of the various Unicode blocks, see <a href="https://unicode-table.com/en/blocks/">this</a>.</dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Renderer</td><td>the type of the renderer.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td>the renderer that will be used to create the glyph textures. </td></tr>
+    <tr><td class="paramname">begin</td><td>the first glyph that will be included. </td></tr>
+    <tr><td class="paramname">end</td><td>the "end" glyph in the range, will not be included.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a5fe72ee829fd72bd21d64a6354d66941"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fe72ee829fd72bd21d64a6354d66941">&#9670;&nbsp;</a></span>add_basic_latin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Renderer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::font_cache::add_basic_latin </td>
+          <td>(</td>
+          <td class="paramtype">Renderer &amp;&#160;</td>
+          <td class="paramname"><em>renderer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Attempts to cache all printable basic latin characters. </p>
+<p>The basic latin set provides the most common characters, such as upper- and lower-case latin letters, numbers and symbols. This function might throw if something goes wrong when creating the textures.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Renderer</td><td>the type of the renderer.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td>the renderer that will be used to create the glyph textures.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ae5341b5be76c40158cf6689798b17308"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5341b5be76c40158cf6689798b17308">&#9670;&nbsp;</a></span>add_latin1_supplement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Renderer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::font_cache::add_latin1_supplement </td>
+          <td>(</td>
+          <td class="paramtype">Renderer &amp;&#160;</td>
+          <td class="paramname"><em>renderer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Attempts to cache all printable Latin-1 supplement characters. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Renderer</td><td>the type of the renderer.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td>the renderer that will be used to create the glyph textures.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a6577320857f74355f9daf890c054628b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6577320857f74355f9daf890c054628b">&#9670;&nbsp;</a></span>add_latin1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Renderer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cen::font_cache::add_latin1 </td>
+          <td>(</td>
+          <td class="paramtype">Renderer &amp;&#160;</td>
+          <td class="paramname"><em>renderer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Attempts to cache all printable Latin-1 characters. </p>
+<dl class="section note"><dt>Note</dt><dd>This function is effectively equivalent to calling both <code>add_basic_latin</code> and <code>add_latin1_supplement</code>.</dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Renderer</td><td>the type of the renderer.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td>the renderer that will be used to create the glyph textures.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="aff4d7a6102dfd3bba86f6d85a832c18f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff4d7a6102dfd3bba86f6d85a832c18f">&#9670;&nbsp;</a></span>has()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::font_cache::has </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__video.html#gaf3098f6170a7917381990e5abaf025e9">unicode</a>&#160;</td>
+          <td class="paramname"><em>glyph</em></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the specified glyph has been cached. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">glyph</td><td>the glyph to check.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the specified glyph has been cached; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ad459c41a33b66e46805fc20a0da9f3ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad459c41a33b66e46805fc20a0da9f3ad">&#9670;&nbsp;</a></span>at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::font_cache::at </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__video.html#gaf3098f6170a7917381990e5abaf025e9">unicode</a>&#160;</td>
+          <td class="paramname"><em>glyph</em></td><td>)</td>
+          <td> const -&gt; const <a class="el" href="structcen_1_1font__cache_1_1glyph__data.html">glyph_data</a>&amp;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the data associated with the specified glyph. </p>
+<dl class="section pre"><dt>Precondition</dt><dd><code>glyph</code> <b>must</b> have been previously cached.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">glyph</td><td>the desired glyph to lookup the data for.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the cached texture and metrics associated with the glyph.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a4efcb3d00c2cd189ef97cf29d4ff6422"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4efcb3d00c2cd189ef97cf29d4ff6422">&#9670;&nbsp;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::font_cache::operator[] </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__video.html#gaf3098f6170a7917381990e5abaf025e9">unicode</a>&#160;</td>
+          <td class="paramname"><em>glyph</em></td><td>)</td>
+          <td> const -&gt; const <a class="el" href="structcen_1_1font__cache_1_1glyph__data.html">glyph_data</a>&amp;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the data associated with the specified glyph. </p>
+<dl class="section note"><dt>Note</dt><dd>This function is equivalent to calling <code>at</code>.</dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code>glyph</code> <b>must</b> have been previously cached.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">glyph</td><td>the desired glyph to lookup the data for.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the cached texture and metrics associated with the glyph.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
 </div>
@@ -2080,8 +2058,8 @@ template&lt;typename Renderer &gt; </div>
 
 </div>
 </div>
-<a id="aba944ac6a827003041143afc26b6f4d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba944ac6a827003041143afc26b6f4d7">&#9670;&nbsp;</a></span>try_get_stored()</h2>
+<a id="ac707774cf330482dee02db702fd661bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac707774cf330482dee02db702fd661bc">&#9670;&nbsp;</a></span>get_font() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2090,11 +2068,10 @@ template&lt;typename Renderer &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::font_cache::try_get_stored </td>
+          <td class="memname">auto cen::font_cache::get_font </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1font__cache.html#a7fa87895f51d3bb5c331d79e4ae2dfac">id_type</a>&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
-          <td> const -&gt; const <a class="el" href="group__video.html#gab199243ff6286f54d79df8a207b07678">texture</a>*
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1font.html">font</a>&amp;
   </td>
         </tr>
       </table>
@@ -2105,15 +2082,38 @@ template&lt;typename Renderer &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a pointer to the texture associated with the specified key. </p>
-<dl class="section note"><dt>Note</dt><dd>The returned pointer is not suitable for storing for longer than absolutely necessary, as it might get invalidated by modifications of the font cache.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">id</td><td>the key of the desired texture.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the texture associated with the specified key; <code>nullptr</code> if no texture is found.</dd></dl>
+<p>Returns the font used by the cache. </p>
+<dl class="section return"><dt>Returns</dt><dd>a reference to the internal font.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a8267e5c45382e30d81aa22850ac3e8ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8267e5c45382e30d81aa22850ac3e8ad">&#9670;&nbsp;</a></span>get_font() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::font_cache::get_font </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; const <a class="el" href="classcen_1_1font.html">font</a>&amp;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the font used by the cache. </p>
+<dl class="section return"><dt>Returns</dt><dd>a reference to the internal font.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>

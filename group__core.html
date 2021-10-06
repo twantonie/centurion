@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -144,7 +144,7 @@ Macros</h2></td></tr>
 <tr class="memitem:gabb128f43d118774119abcfc1b6850969"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#gabb128f43d118774119abcfc1b6850969">CENTURION_VERSION_MAJOR</a>&#160;&#160;&#160;6</td></tr>
 <tr class="memdesc:gabb128f43d118774119abcfc1b6850969"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expands into the current major version of the library.  <a href="group__core.html#gabb128f43d118774119abcfc1b6850969">More...</a><br /></td></tr>
 <tr class="separator:gabb128f43d118774119abcfc1b6850969"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8b16108dc2167d553f75de238ef34585"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga8b16108dc2167d553f75de238ef34585">CENTURION_VERSION_MINOR</a>&#160;&#160;&#160;2</td></tr>
+<tr class="memitem:ga8b16108dc2167d553f75de238ef34585"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga8b16108dc2167d553f75de238ef34585">CENTURION_VERSION_MINOR</a>&#160;&#160;&#160;3</td></tr>
 <tr class="memdesc:ga8b16108dc2167d553f75de238ef34585"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expands into the current minor version of the library.  <a href="group__core.html#ga8b16108dc2167d553f75de238ef34585">More...</a><br /></td></tr>
 <tr class="separator:ga8b16108dc2167d553f75de238ef34585"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga96273196c331e9525ac52c5e3f457ac9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga96273196c331e9525ac52c5e3f457ac9">CENTURION_VERSION_PATCH</a>&#160;&#160;&#160;0</td></tr>
@@ -251,6 +251,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga3764941d9ec9f936c62296ed6490ce70"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#ga3764941d9ec9f936c62296ed6490ce70">cen::isize</a> (const T &amp;container) noexcept(noexcept(container.size())) -&gt; int</td></tr>
 <tr class="memdesc:ga3764941d9ec9f936c62296ed6490ce70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtains the size of a container as an <code>int</code>.  <a href="group__core.html#ga3764941d9ec9f936c62296ed6490ce70">More...</a><br /></td></tr>
 <tr class="separator:ga3764941d9ec9f936c62296ed6490ce70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafaa0e8822d9d0651fa959dbb7ccf30ab"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#gafaa0e8822d9d0651fa959dbb7ccf30ab">cen::log_category_count</a> () noexcept -&gt; int</td></tr>
+<tr class="memdesc:gafaa0e8822d9d0651fa959dbb7ccf30ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of enumerators for the <code>log_category</code> enum.  <a href="group__core.html#gafaa0e8822d9d0651fa959dbb7ccf30ab">More...</a><br /></td></tr>
+<tr class="separator:gafaa0e8822d9d0651fa959dbb7ccf30ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf437ee8642b67d77965e8ca6ec4e6770"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#gaf437ee8642b67d77965e8ca6ec4e6770">cen::log_priority_count</a> () noexcept -&gt; int</td></tr>
 <tr class="memdesc:gaf437ee8642b67d77965e8ca6ec4e6770"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of available log priorities.  <a href="group__core.html#gaf437ee8642b67d77965e8ca6ec4e6770">More...</a><br /></td></tr>
 <tr class="separator:gaf437ee8642b67d77965e8ca6ec4e6770"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -265,7 +268,7 @@ Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:gac33ac821a021a41d90284d479eb47386"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Args&gt; </td></tr>
-<tr class="memitem:gac33ac821a021a41d90284d479eb47386"><td class="memTemplItemLeft" align="right" valign="top">concept&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#gac33ac821a021a41d90284d479eb47386">cen::is_stateless_callable</a></td></tr>
+<tr class="memitem:gac33ac821a021a41d90284d479eb47386"><td class="memTemplItemLeft" align="right" valign="top">concept&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core.html#gac33ac821a021a41d90284d479eb47386">cen::is_stateless_callable</a> = std::default_initializable&lt;T&gt; &amp;&amp; std::invocable&lt;T, Args...&gt;</td></tr>
 <tr class="separator:gac33ac821a021a41d90284d479eb47386"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga00bb6bb52f4cb3888d1e10e9efc6c853"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classcen_1_1result.html">result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core.html#ga00bb6bb52f4cb3888d1e10e9efc6c853">cen::success</a> {true}</td></tr>
 <tr class="separator:ga00bb6bb52f4cb3888d1e10e9efc6c853"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -419,20 +422,53 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ga72ac086ecf3b266a17145e696fbceacf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga72ac086ecf3b266a17145e696fbceacf">&#9670;&nbsp;</a></span>CENTURION_MAKE_VERSION_NUMBER</h2>
+<a id="gabb128f43d118774119abcfc1b6850969"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabb128f43d118774119abcfc1b6850969">&#9670;&nbsp;</a></span>CENTURION_VERSION_MAJOR</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define CENTURION_MAKE_VERSION_NUMBER</td>
+          <td class="memname">#define CENTURION_VERSION_MAJOR&#160;&#160;&#160;6</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Helper macro for creating version numbers from a set of major/minor/patch numbers. </p>
-<p>For example, if the version is 8.4.2, the resulting version number would be 8402.</p>
+<p>Expands into the current major version of the library. </p>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga8b16108dc2167d553f75de238ef34585"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8b16108dc2167d553f75de238ef34585">&#9670;&nbsp;</a></span>CENTURION_VERSION_MINOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CENTURION_VERSION_MINOR&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Expands into the current minor version of the library. </p>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga96273196c331e9525ac52c5e3f457ac9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga96273196c331e9525ac52c5e3f457ac9">&#9670;&nbsp;</a></span>CENTURION_VERSION_PATCH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CENTURION_VERSION_PATCH&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Expands into the current patch version of the library. </p>
 <dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
 
 </div>
@@ -474,54 +510,20 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="gab494819e16afcec9f847c66edb679cd4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab494819e16afcec9f847c66edb679cd4">&#9670;&nbsp;</a></span>CENTURION_VERSION_AT_LEAST</h2>
+<a id="ga72ac086ecf3b266a17145e696fbceacf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga72ac086ecf3b266a17145e696fbceacf">&#9670;&nbsp;</a></span>CENTURION_MAKE_VERSION_NUMBER</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define CENTURION_VERSION_AT_LEAST</td>
+          <td class="memname">#define CENTURION_MAKE_VERSION_NUMBER</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>This macro is intended to be used for conditional compilation, based on the Centurion version. </p>
-<p>This macro is used in the same way as the <code>SDL_VERSION_ATLEAST</code>, where you use it as the condition with <code>#if</code> statements.</p>
-<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="gabb128f43d118774119abcfc1b6850969"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gabb128f43d118774119abcfc1b6850969">&#9670;&nbsp;</a></span>CENTURION_VERSION_MAJOR</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define CENTURION_VERSION_MAJOR&#160;&#160;&#160;6</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Expands into the current major version of the library. </p>
-<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga8b16108dc2167d553f75de238ef34585"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga8b16108dc2167d553f75de238ef34585">&#9670;&nbsp;</a></span>CENTURION_VERSION_MINOR</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define CENTURION_VERSION_MINOR&#160;&#160;&#160;2</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Expands into the current minor version of the library. </p>
+<p>Helper macro for creating version numbers from a set of major/minor/patch numbers. </p>
+<p>For example, if the version is 8.4.2, the resulting version number would be 8402.</p>
 <dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
 
 </div>
@@ -543,56 +545,196 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ga96273196c331e9525ac52c5e3f457ac9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga96273196c331e9525ac52c5e3f457ac9">&#9670;&nbsp;</a></span>CENTURION_VERSION_PATCH</h2>
+<a id="gab494819e16afcec9f847c66edb679cd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab494819e16afcec9f847c66edb679cd4">&#9670;&nbsp;</a></span>CENTURION_VERSION_AT_LEAST</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define CENTURION_VERSION_PATCH&#160;&#160;&#160;0</td>
+          <td class="memname">#define CENTURION_VERSION_AT_LEAST</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Expands into the current patch version of the library. </p>
+<p>This macro is intended to be used for conditional compilation, based on the Centurion version. </p>
+<p>This macro is used in the same way as the <code>SDL_VERSION_ATLEAST</code>, where you use it as the condition with <code>#if</code> statements.</p>
 <dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Typedef Documentation</h2>
-<a id="ga24997ff418228ddb51ae13e2805288a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga24997ff418228ddb51ae13e2805288a4">&#9670;&nbsp;</a></span>czstring</h2>
+<a id="ga2313c92fc18c319ebe1853e2d0579886"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2313c92fc18c319ebe1853e2d0579886">&#9670;&nbsp;</a></span>usize</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">cen::czstring</a></td>
+          <td class="memname">using <a class="el" href="group__core.html#ga2313c92fc18c319ebe1853e2d0579886">cen::usize</a> = typedef std::size_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Alias for a const C-style null-terminated string. </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd>Since 6.2.0, use <code>str</code> instead. </dd></dl>
-
 </div>
 </div>
-<a id="ga321b1f0f88fb93fbbb8b527733132330"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga321b1f0f88fb93fbbb8b527733132330">&#9670;&nbsp;</a></span>enable_if_convertible_t</h2>
+<a id="gaf548af65ed935a05b3fbbccc0c708481"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf548af65ed935a05b3fbbccc0c708481">&#9670;&nbsp;</a></span>uint</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , typename... Args&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="group__core.html#ga321b1f0f88fb93fbbb8b527733132330">cen::enable_if_convertible_t</a> = typedef std::enable_if_t&lt;(std::is_convertible_v&lt;T, Args&gt; || ...), int&gt;</td>
+          <td class="memname">using <a class="el" href="group__core.html#gaf548af65ed935a05b3fbbccc0c708481">cen::uint</a> = typedef unsigned int</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Enables a template if T is convertible to any of the specified types. </p>
+<p>Alias for an unsigned integer. </p>
+
+</div>
+</div>
+<a id="ga208b5a60b996ef99b54adea25fc1a9a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga208b5a60b996ef99b54adea25fc1a9a6">&#9670;&nbsp;</a></span>ulonglong</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group__core.html#ga208b5a60b996ef99b54adea25fc1a9a6">cen::ulonglong</a> = typedef unsigned long long</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alias for the type used for integer literal operators. </p>
+
+</div>
+</div>
+<a id="ga23844aa05b9b994328870cca9e5a7808"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga23844aa05b9b994328870cca9e5a7808">&#9670;&nbsp;</a></span>u64</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group__core.html#ga23844aa05b9b994328870cca9e5a7808">cen::u64</a> = typedef Uint64</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alias for a 64-bit unsigned integer. </p>
+
+</div>
+</div>
+<a id="ga4abd620246f76cc48168dc52a04a62da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4abd620246f76cc48168dc52a04a62da">&#9670;&nbsp;</a></span>u32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">cen::u32</a> = typedef Uint32</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alias for a 32-bit unsigned integer. </p>
+
+</div>
+</div>
+<a id="ga4c6f8bc4ac32726f877ba95d65e5f67f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4c6f8bc4ac32726f877ba95d65e5f67f">&#9670;&nbsp;</a></span>u16</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">cen::u16</a> = typedef Uint16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alias for a 16-bit unsigned integer. </p>
+
+</div>
+</div>
+<a id="ga89b6da3d8b9fb42c7799b22d6afd1093"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga89b6da3d8b9fb42c7799b22d6afd1093">&#9670;&nbsp;</a></span>u8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">cen::u8</a> = typedef Uint8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alias for an 8-bit unsigned integer. </p>
+
+</div>
+</div>
+<a id="gaf1410adff3afd80e0c07d477cd8b1f43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf1410adff3afd80e0c07d477cd8b1f43">&#9670;&nbsp;</a></span>i64</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group__core.html#gaf1410adff3afd80e0c07d477cd8b1f43">cen::i64</a> = typedef Sint64</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alias for a 64-bit signed integer. </p>
+
+</div>
+</div>
+<a id="gaa69ad1561271765c17f77879a492d85b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa69ad1561271765c17f77879a492d85b">&#9670;&nbsp;</a></span>i32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group__core.html#gaa69ad1561271765c17f77879a492d85b">cen::i32</a> = typedef Sint32</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alias for a 32-bit signed integer. </p>
+
+</div>
+</div>
+<a id="ga995971102059bcb96d27921ffb7c4916"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga995971102059bcb96d27921ffb7c4916">&#9670;&nbsp;</a></span>i16</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group__core.html#ga995971102059bcb96d27921ffb7c4916">cen::i16</a> = typedef Sint16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alias for a 16-bit signed integer. </p>
+
+</div>
+</div>
+<a id="ga071f405c0d96991bfc59d01f99562f96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga071f405c0d96991bfc59d01f99562f96">&#9670;&nbsp;</a></span>i8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group__core.html#ga071f405c0d96991bfc59d01f99562f96">cen::i8</a> = typedef Sint8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alias for an 8-bit signed integer. </p>
 
 </div>
 </div>
@@ -632,92 +774,75 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="ga995971102059bcb96d27921ffb7c4916"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga995971102059bcb96d27921ffb7c4916">&#9670;&nbsp;</a></span>i16</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="group__core.html#ga995971102059bcb96d27921ffb7c4916">cen::i16</a> = typedef Sint16</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Alias for a 16-bit signed integer. </p>
-
-</div>
-</div>
-<a id="gaa69ad1561271765c17f77879a492d85b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa69ad1561271765c17f77879a492d85b">&#9670;&nbsp;</a></span>i32</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="group__core.html#gaa69ad1561271765c17f77879a492d85b">cen::i32</a> = typedef Sint32</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Alias for a 32-bit signed integer. </p>
-
-</div>
-</div>
-<a id="gaf1410adff3afd80e0c07d477cd8b1f43"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf1410adff3afd80e0c07d477cd8b1f43">&#9670;&nbsp;</a></span>i64</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="group__core.html#gaf1410adff3afd80e0c07d477cd8b1f43">cen::i64</a> = typedef Sint64</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Alias for a 64-bit signed integer. </p>
-
-</div>
-</div>
-<a id="ga071f405c0d96991bfc59d01f99562f96"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga071f405c0d96991bfc59d01f99562f96">&#9670;&nbsp;</a></span>i8</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="group__core.html#ga071f405c0d96991bfc59d01f99562f96">cen::i8</a> = typedef Sint8</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Alias for an 8-bit signed integer. </p>
-
-</div>
-</div>
-<a id="ga00614d944c81543b03c7f2cb202fdc50"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga00614d944c81543b03c7f2cb202fdc50">&#9670;&nbsp;</a></span>maybe_owner</h2>
+<a id="ga321b1f0f88fb93fbbb8b527733132330"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga321b1f0f88fb93fbbb8b527733132330">&#9670;&nbsp;</a></span>enable_if_convertible_t</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , enable_if_pointer_v&lt; T &gt;  = 0&gt; </div>
+template&lt;typename T , typename... Args&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group__core.html#ga00614d944c81543b03c7f2cb202fdc50">cen::maybe_owner</a></td>
+          <td class="memname">using <a class="el" href="group__core.html#ga321b1f0f88fb93fbbb8b527733132330">cen::enable_if_convertible_t</a> = typedef std::enable_if_t&lt;(std::is_convertible_v&lt;T, Args&gt; || ...), int&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Tag used to denote conditional ownership of raw pointers directly in code. </p>
-<p>This is primarily used in constructors of owner/handle classes, where the owner version will claim ownership of the pointer, whilst the handle does not.</p>
-<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+<p>Enables a template if T is convertible to any of the specified types. </p>
 
 </div>
 </div>
-<a id="gada2bad74550597b858800bc27a1b3bd2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gada2bad74550597b858800bc27a1b3bd2">&#9670;&nbsp;</a></span>microseconds</h2>
+<a id="ga4e8103830e67a437b6c50dce918d0d8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4e8103830e67a437b6c50dce918d0d8a">&#9670;&nbsp;</a></span>str</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">cen::str</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alias for a C-style string. </p>
+<dl class="section since"><dt>Since</dt><dd>6.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga24997ff418228ddb51ae13e2805288a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga24997ff418228ddb51ae13e2805288a4">&#9670;&nbsp;</a></span>czstring</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core.html#ga24997ff418228ddb51ae13e2805288a4">cen::czstring</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alias for a const C-style null-terminated string. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd>Since 6.2.0, use <code>str</code> instead. </dd></dl>
+
+</div>
+</div>
+<a id="ga68051bcb1a6cd89543bb13afb6cdd0a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga68051bcb1a6cd89543bb13afb6cdd0a2">&#9670;&nbsp;</a></span>zstring</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core.html#ga68051bcb1a6cd89543bb13afb6cdd0a2">cen::zstring</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd>Since 6.2.0. </dd></dl>
+
+</div>
+</div>
+<a id="ga826ec294a3b6962454d669b9c277537b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga826ec294a3b6962454d669b9c277537b">&#9670;&nbsp;</a></span>seconds</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -725,12 +850,12 @@ template&lt;typename T , enable_if_pointer_v&lt; T &gt;  = 0&gt; </div>
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group__core.html#gada2bad74550597b858800bc27a1b3bd2">cen::microseconds</a></td>
+          <td class="memname"><a class="el" href="group__core.html#ga826ec294a3b6962454d669b9c277537b">cen::seconds</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Templated alias for durations in microseconds. </p>
+<p>Templated alias for durations in seconds. </p>
 
 </div>
 </div>
@@ -752,8 +877,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="ga188e11bfe67eb564ec1c9afa24a204db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga188e11bfe67eb564ec1c9afa24a204db">&#9670;&nbsp;</a></span>minutes</h2>
+<a id="gada2bad74550597b858800bc27a1b3bd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gada2bad74550597b858800bc27a1b3bd2">&#9670;&nbsp;</a></span>microseconds</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -761,12 +886,12 @@ template&lt;typename T &gt; </div>
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group__core.html#ga188e11bfe67eb564ec1c9afa24a204db">cen::minutes</a></td>
+          <td class="memname"><a class="el" href="group__core.html#gada2bad74550597b858800bc27a1b3bd2">cen::microseconds</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Templated alias for durations in minutes. </p>
+<p>Templated alias for durations in microseconds. </p>
 
 </div>
 </div>
@@ -785,6 +910,24 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>Templated alias for durations in nanoseconds. </p>
+
+</div>
+</div>
+<a id="ga188e11bfe67eb564ec1c9afa24a204db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga188e11bfe67eb564ec1c9afa24a204db">&#9670;&nbsp;</a></span>minutes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core.html#ga188e11bfe67eb564ec1c9afa24a204db">cen::minutes</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Templated alias for durations in minutes. </p>
 
 </div>
 </div>
@@ -827,163 +970,23 @@ template&lt;typename T , enable_if_pointer_v&lt; T &gt;  = 0&gt; </div>
 
 </div>
 </div>
-<a id="ga826ec294a3b6962454d669b9c277537b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga826ec294a3b6962454d669b9c277537b">&#9670;&nbsp;</a></span>seconds</h2>
+<a id="ga00614d944c81543b03c7f2cb202fdc50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga00614d944c81543b03c7f2cb202fdc50">&#9670;&nbsp;</a></span>maybe_owner</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T , enable_if_pointer_v&lt; T &gt;  = 0&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group__core.html#ga826ec294a3b6962454d669b9c277537b">cen::seconds</a></td>
+          <td class="memname"><a class="el" href="group__core.html#ga00614d944c81543b03c7f2cb202fdc50">cen::maybe_owner</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Templated alias for durations in seconds. </p>
-
-</div>
-</div>
-<a id="ga4e8103830e67a437b6c50dce918d0d8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4e8103830e67a437b6c50dce918d0d8a">&#9670;&nbsp;</a></span>str</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">cen::str</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Alias for a C-style string. </p>
-<dl class="section since"><dt>Since</dt><dd>6.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga4c6f8bc4ac32726f877ba95d65e5f67f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4c6f8bc4ac32726f877ba95d65e5f67f">&#9670;&nbsp;</a></span>u16</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="group__core.html#ga4c6f8bc4ac32726f877ba95d65e5f67f">cen::u16</a> = typedef Uint16</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Alias for a 16-bit unsigned integer. </p>
-
-</div>
-</div>
-<a id="ga4abd620246f76cc48168dc52a04a62da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4abd620246f76cc48168dc52a04a62da">&#9670;&nbsp;</a></span>u32</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="group__core.html#ga4abd620246f76cc48168dc52a04a62da">cen::u32</a> = typedef Uint32</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Alias for a 32-bit unsigned integer. </p>
-
-</div>
-</div>
-<a id="ga23844aa05b9b994328870cca9e5a7808"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga23844aa05b9b994328870cca9e5a7808">&#9670;&nbsp;</a></span>u64</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="group__core.html#ga23844aa05b9b994328870cca9e5a7808">cen::u64</a> = typedef Uint64</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Alias for a 64-bit unsigned integer. </p>
-
-</div>
-</div>
-<a id="ga89b6da3d8b9fb42c7799b22d6afd1093"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga89b6da3d8b9fb42c7799b22d6afd1093">&#9670;&nbsp;</a></span>u8</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">cen::u8</a> = typedef Uint8</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Alias for an 8-bit unsigned integer. </p>
-
-</div>
-</div>
-<a id="gaf548af65ed935a05b3fbbccc0c708481"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf548af65ed935a05b3fbbccc0c708481">&#9670;&nbsp;</a></span>uint</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="group__core.html#gaf548af65ed935a05b3fbbccc0c708481">cen::uint</a> = typedef unsigned int</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Alias for an unsigned integer. </p>
-
-</div>
-</div>
-<a id="ga208b5a60b996ef99b54adea25fc1a9a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga208b5a60b996ef99b54adea25fc1a9a6">&#9670;&nbsp;</a></span>ulonglong</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="group__core.html#ga208b5a60b996ef99b54adea25fc1a9a6">cen::ulonglong</a> = typedef unsigned long long</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Alias for the type used for integer literal operators. </p>
-
-</div>
-</div>
-<a id="ga2313c92fc18c319ebe1853e2d0579886"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2313c92fc18c319ebe1853e2d0579886">&#9670;&nbsp;</a></span>usize</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="group__core.html#ga2313c92fc18c319ebe1853e2d0579886">cen::usize</a> = typedef std::size_t</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ga68051bcb1a6cd89543bb13afb6cdd0a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga68051bcb1a6cd89543bb13afb6cdd0a2">&#9670;&nbsp;</a></span>zstring</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__core.html#ga68051bcb1a6cd89543bb13afb6cdd0a2">cen::zstring</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd>Since 6.2.0. </dd></dl>
+<p>Tag used to denote conditional ownership of raw pointers directly in code. </p>
+<p>This is primarily used in constructors of owner/handle classes, where the owner version will claim ownership of the pointer, whilst the handle does not.</p>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
 
 </div>
 </div>
@@ -1009,7 +1012,10 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>Represents different logging categories. </p>
-<dl class="section see"><dt>See also</dt><dd><code>SDL_LogCategory</code></dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code>SDL_LogCategory</code> </dd>
+<dd>
+<code><a class="el" href="group__core.html#gafaa0e8822d9d0651fa959dbb7ccf30ab" title="Returns the number of enumerators for the log_category enum.">log_category_count()</a></code></dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>Centurion 7: rename <code>misc</code> enumerator to <code>custom</code>.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga5a2bed2933e3748ad2a77961417a102bad2a57dc1d883fd21fb9951699df71cc7"></a>app&#160;</td><td class="fielddoc"></td></tr>
@@ -1153,8 +1159,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="gaf437ee8642b67d77965e8ca6ec4e6770"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf437ee8642b67d77965e8ca6ec4e6770">&#9670;&nbsp;</a></span>log_priority_count()</h2>
+<a id="gafaa0e8822d9d0651fa959dbb7ccf30ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafaa0e8822d9d0651fa959dbb7ccf30ab">&#9670;&nbsp;</a></span>log_category_count()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1163,7 +1169,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr auto cen::log_priority_count </td>
+          <td class="memname">constexpr auto cen::log_category_count </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> -&gt; int
@@ -1177,9 +1183,198 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the number of available log priorities. </p>
-<dl class="section return"><dt>Returns</dt><dd>the number of log priorities.</dd></dl>
+<p>Returns the number of enumerators for the <code>log_category</code> enum. </p>
+<dl class="section return"><dt>Returns</dt><dd>the number of enumerators.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.3.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga759253d3ea01d7e559b8da64a75a7a5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga759253d3ea01d7e559b8da64a75a7a5e">&#9670;&nbsp;</a></span>to_string() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::to_string </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a>&#160;</td>
+          <td class="paramname"><em>category</em></td><td>)</td>
+          <td> -&gt; std::string_view
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a textual version of the supplied log category. </p>
+<p>This function returns a string that mirrors the name of the enumerator, e.g. <code>to_string(log_category::app) == "app"</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">category</td><td>the enumerator that will be converted.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a string that mirrors the name of the enumerator.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classcen_1_1cen__error.html" title="The base of all exceptions explicitly thrown by the library.">cen_error</a></td><td>if the enumerator is not recognized.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section since"><dt>Since</dt><dd>6.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="gac302c63cae8ff892a35f1243d3c2cbb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac302c63cae8ff892a35f1243d3c2cbb8">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a>&#160;</td>
+          <td class="paramname"><em>category</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; std::ostream&amp;
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prints a textual representation of a log category enumerator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream</td><td>the output stream that will be used. </td></tr>
+    <tr><td class="paramname">priority</td><td>the enumerator that will be printed.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="group__audio.html#ga759253d3ea01d7e559b8da64a75a7a5e" title="Returns a textual version of the supplied log category.">to_string(log_category)</a></code></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the used stream.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.2.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga982f1cbb4e415a203e6ebfd308e70771"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga982f1cbb4e415a203e6ebfd308e70771">&#9670;&nbsp;</a></span>operator==() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a>&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const SDL_LogCategory&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the two log category values are the same. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>the left-hand side log category value. </td></tr>
+    <tr><td class="paramname">rhs</td><td>the right-hand side log category value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the categories are the same; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="gaeb23156280d35536a6130f09762407a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeb23156280d35536a6130f09762407a5">&#9670;&nbsp;</a></span>operator==() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const SDL_LogCategory&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a>&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the two log category values are the same. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>the left-hand side log category value. </td></tr>
+    <tr><td class="paramname">rhs</td><td>the right-hand side log category value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the categories are the same; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
 </div>
@@ -1231,56 +1426,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="ga2aa32fcee319fe760f0c24c936a48230"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2aa32fcee319fe760f0c24c936a48230">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[2/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto cen::operator!= </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga910862a214870faa7b625862de858c52">log_priority</a>&#160;</td>
-          <td class="paramname"><em>lhs</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const SDL_LogPriority&#160;</td>
-          <td class="paramname"><em>rhs</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; bool
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the two log priorities values aren't the same. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">lhs</td><td>the left-hand side log priority value. </td></tr>
-    <tr><td class="paramname">rhs</td><td>the right-hand side log priority value.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the priorities aren't the same; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
 <a id="ga07f0a68789800cfd82da0eea92257101"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga07f0a68789800cfd82da0eea92257101">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga07f0a68789800cfd82da0eea92257101">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1327,8 +1474,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="ga99b6c84f5e3b19b1bfc1ceaa62fd17da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga99b6c84f5e3b19b1bfc1ceaa62fd17da">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[4/4]</span></h2>
+<a id="gaf437ee8642b67d77965e8ca6ec4e6770"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf437ee8642b67d77965e8ca6ec4e6770">&#9670;&nbsp;</a></span>log_priority_count()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1337,21 +1484,10 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr auto cen::operator!= </td>
+          <td class="memname">constexpr auto cen::log_priority_count </td>
           <td>(</td>
-          <td class="paramtype">const SDL_LogPriority&#160;</td>
-          <td class="paramname"><em>lhs</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga910862a214870faa7b625862de858c52">log_priority</a>&#160;</td>
-          <td class="paramname"><em>rhs</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; bool
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; int
 </td>
         </tr>
       </table>
@@ -1362,21 +1498,14 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Indicates whether or not the two log priorities values aren't the same. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">lhs</td><td>the left-hand side log priority value. </td></tr>
-    <tr><td class="paramname">rhs</td><td>the right-hand side log priority value.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the priorities aren't the same; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+<p>Returns the number of available log priorities. </p>
+<dl class="section return"><dt>Returns</dt><dd>the number of log priorities.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.2.0 </dd></dl>
 
 </div>
 </div>
-<a id="gac302c63cae8ff892a35f1243d3c2cbb8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac302c63cae8ff892a35f1243d3c2cbb8">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[1/3]</span></h2>
+<a id="ga89b09833a5ee2548f6459b71cbb00ce2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga89b09833a5ee2548f6459b71cbb00ce2">&#9670;&nbsp;</a></span>to_string() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1385,41 +1514,36 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::operator&lt;&lt; </td>
+          <td class="memname">constexpr auto cen::to_string </td>
           <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>stream</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a>&#160;</td>
-          <td class="paramname"><em>category</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; std::ostream&amp;
+          <td class="paramtype">const <a class="el" href="group__core.html#ga910862a214870faa7b625862de858c52">log_priority</a>&#160;</td>
+          <td class="paramname"><em>priority</em></td><td>)</td>
+          <td> -&gt; std::string_view
 </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Prints a textual representation of a log category enumerator. </p>
+<p>Returns a textual version of the supplied log priority. </p>
+<p>This function returns a string that mirrors the name of the enumerator, e.g. <code>to_string(log_priority::debug) == "debug"</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">stream</td><td>the output stream that will be used. </td></tr>
-    <tr><td class="paramname">priority</td><td>the enumerator that will be printed.</td></tr>
+    <tr><td class="paramname">priority</td><td>the enumerator that will be converted.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="group__audio.html#ga759253d3ea01d7e559b8da64a75a7a5e" title="Returns a textual version of the supplied log category.">to_string(log_category)</a></code></dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>the used stream.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a string that mirrors the name of the enumerator.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classcen_1_1cen__error.html" title="The base of all exceptions explicitly thrown by the library.">cen_error</a></td><td>if the enumerator is not recognized.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section since"><dt>Since</dt><dd>6.2.0 </dd></dl>
 
 </div>
@@ -1473,104 +1597,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="ga1d5c4e3cc81ce35f02e8fc0700387a97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1d5c4e3cc81ce35f02e8fc0700387a97">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>stream</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1result.html">result</a>&#160;</td>
-          <td class="paramname"><em>result</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; std::ostream&amp;
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Prints a textual representation of a result value using a stream. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">stream</td><td>the stream that will be used. </td></tr>
-    <tr><td class="paramname">result</td><td>the result value that will be printed.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the used stream.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga982f1cbb4e415a203e6ebfd308e70771"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga982f1cbb4e415a203e6ebfd308e70771">&#9670;&nbsp;</a></span>operator==() <span class="overload">[1/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto cen::operator== </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a>&#160;</td>
-          <td class="paramname"><em>lhs</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const SDL_LogCategory&#160;</td>
-          <td class="paramname"><em>rhs</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; bool
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the two log category values are the same. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">lhs</td><td>the left-hand side log category value. </td></tr>
-    <tr><td class="paramname">rhs</td><td>the right-hand side log category value.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the categories are the same; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
 <a id="gaf6e461d22ae78238e801b9367b8b4a2c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf6e461d22ae78238e801b9367b8b4a2c">&#9670;&nbsp;</a></span>operator==() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf6e461d22ae78238e801b9367b8b4a2c">&#9670;&nbsp;</a></span>operator==() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1614,54 +1642,6 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the priorities are the same; <code>false</code> otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="gaeb23156280d35536a6130f09762407a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaeb23156280d35536a6130f09762407a5">&#9670;&nbsp;</a></span>operator==() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto cen::operator== </td>
-          <td>(</td>
-          <td class="paramtype">const SDL_LogCategory&#160;</td>
-          <td class="paramname"><em>lhs</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a>&#160;</td>
-          <td class="paramname"><em>rhs</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; bool
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the two log category values are the same. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">lhs</td><td>the left-hand side log category value. </td></tr>
-    <tr><td class="paramname">rhs</td><td>the right-hand side log category value.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the categories are the same; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
 </div>
@@ -1713,8 +1693,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="ga0594fc53a493e57928b828609aa44bfa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0594fc53a493e57928b828609aa44bfa">&#9670;&nbsp;</a></span>str_or_na()</h2>
+<a id="ga2aa32fcee319fe760f0c24c936a48230"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2aa32fcee319fe760f0c24c936a48230">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1723,119 +1703,89 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::str_or_na </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a>&#160;</td>
-          <td class="paramname"><em>string</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt;<a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a>&gt;
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Simply returns the string if it isn't null, returning a placeholder otherwise. </p>
-<dl class="section note"><dt>Note</dt><dd>This is mainly used in <code><a class="el" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe" title="Returns a textual version of the supplied fade status.">to_string()</a></code> overloads.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">string</td><td>the string that will be checked.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the supplied string if it isn't null; "n/a" otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga759253d3ea01d7e559b8da64a75a7a5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga759253d3ea01d7e559b8da64a75a7a5e">&#9670;&nbsp;</a></span>to_string() <span class="overload">[1/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto cen::to_string </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga5a2bed2933e3748ad2a77961417a102b">log_category</a>&#160;</td>
-          <td class="paramname"><em>category</em></td><td>)</td>
-          <td> -&gt; std::string_view
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a textual version of the supplied log category. </p>
-<p>This function returns a string that mirrors the name of the enumerator, e.g. <code>to_string(log_category::app) == "app"</code>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">category</td><td>the enumerator that will be converted.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>a string that mirrors the name of the enumerator.</dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classcen_1_1cen__error.html" title="The base of all exceptions explicitly thrown by the library.">cen_error</a></td><td>if the enumerator is not recognized.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>6.2.0 </dd></dl>
-
-</div>
-</div>
-<a id="ga89b09833a5ee2548f6459b71cbb00ce2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga89b09833a5ee2548f6459b71cbb00ce2">&#9670;&nbsp;</a></span>to_string() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto cen::to_string </td>
+          <td class="memname">constexpr auto cen::operator!= </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="group__core.html#ga910862a214870faa7b625862de858c52">log_priority</a>&#160;</td>
-          <td class="paramname"><em>priority</em></td><td>)</td>
-          <td> -&gt; std::string_view
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const SDL_LogPriority&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; bool
 </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a textual version of the supplied log priority. </p>
-<p>This function returns a string that mirrors the name of the enumerator, e.g. <code>to_string(log_priority::debug) == "debug"</code>.</p>
+<p>Indicates whether or not the two log priorities values aren't the same. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">priority</td><td>the enumerator that will be converted.</td></tr>
+    <tr><td class="paramname">lhs</td><td>the left-hand side log priority value. </td></tr>
+    <tr><td class="paramname">rhs</td><td>the right-hand side log priority value.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>a string that mirrors the name of the enumerator.</dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classcen_1_1cen__error.html" title="The base of all exceptions explicitly thrown by the library.">cen_error</a></td><td>if the enumerator is not recognized.</td></tr>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the priorities aren't the same; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga99b6c84f5e3b19b1bfc1ceaa62fd17da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga99b6c84f5e3b19b1bfc1ceaa62fd17da">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const SDL_LogPriority&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga910862a214870faa7b625862de858c52">log_priority</a>&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; bool
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the two log priorities values aren't the same. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>the left-hand side log priority value. </td></tr>
+    <tr><td class="paramname">rhs</td><td>the right-hand side log priority value.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section since"><dt>Since</dt><dd>6.2.0 </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the priorities aren't the same; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 
 </div>
 </div>
@@ -1873,6 +1823,92 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>"success"</code> for a successful result; <code>"failure"</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga1d5c4e3cc81ce35f02e8fc0700387a97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1d5c4e3cc81ce35f02e8fc0700387a97">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1result.html">result</a>&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; std::ostream&amp;
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prints a textual representation of a result value using a stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream</td><td>the stream that will be used. </td></tr>
+    <tr><td class="paramname">result</td><td>the result value that will be printed.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the used stream.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ga0594fc53a493e57928b828609aa44bfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0594fc53a493e57928b828609aa44bfa">&#9670;&nbsp;</a></span>str_or_na()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::str_or_na </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a>&#160;</td>
+          <td class="paramname"><em>string</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null</a>&lt;<a class="el" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a>&gt;
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Simply returns the string if it isn't null, returning a placeholder otherwise. </p>
+<dl class="section note"><dt>Note</dt><dd>This is mainly used in <code><a class="el" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe" title="Returns a textual version of the supplied fade status.">to_string()</a></code> overloads.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>the string that will be checked.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the supplied string if it isn't null; "n/a" otherwise.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
 
 </div>
@@ -1924,18 +1960,42 @@ template&lt;typename Enum , std::enable_if_t&lt; std::is_enum_v&lt; Enum &gt;, i
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="ga1ed86a26cf1d09208a65a195932f5ba8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1ed86a26cf1d09208a65a195932f5ba8">&#9670;&nbsp;</a></span>coreFlags</h2>
+<a id="gac33ac821a021a41d90284d479eb47386"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac33ac821a021a41d90284d479eb47386">&#9670;&nbsp;</a></span>is_stateless_callable</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename... Args&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">cen::config::coreFlags {SDL_INIT_EVERYTHING}</td>
+          <td class="memname">concept cen::is_stateless_callable = std::default_initializable&lt;T&gt; &amp;&amp; std::invocable&lt;T, Args...&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Flags passed on to <code>SDL_Init()</code>, if <a class="el" href="group__core.html#gae48f08d6dc9254716d0072deef2ac967">config::initCore</a> is <code>true</code>. </p>
+
+</div>
+</div>
+<a id="ga00bb6bb52f4cb3888d1e10e9efc6c853"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga00bb6bb52f4cb3888d1e10e9efc6c853">&#9670;&nbsp;</a></span>success</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classcen_1_1result.html">result</a> cen::success {true}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Represents a successful result. </p><dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
 
 </div>
 </div>
@@ -1959,21 +2019,6 @@ template&lt;typename Enum , std::enable_if_t&lt; std::is_enum_v&lt; Enum &gt;, i
 </table>
 </div><div class="memdoc">
 <p>Represents a failure of some kind. </p><dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="gab3404e40113ea6808ea85d8b32d358ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab3404e40113ea6808ea85d8b32d358ab">&#9670;&nbsp;</a></span>imageFlags</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">cen::config::imageFlags {IMG_INIT_PNG | IMG_INIT_JPG | IMG_INIT_TIF | IMG_INIT_WEBP}</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Flags passed on to <code>IMG_Init()</code>, if <a class="el" href="group__core.html#ga512355a8e23f2b3a8b9c1af042f3a9f3">config::initImage</a> is <code>true</code>. </p>
 
 </div>
 </div>
@@ -2037,22 +2082,81 @@ template&lt;typename Enum , std::enable_if_t&lt; std::is_enum_v&lt; Enum &gt;, i
 
 </div>
 </div>
-<a id="gac33ac821a021a41d90284d479eb47386"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac33ac821a021a41d90284d479eb47386">&#9670;&nbsp;</a></span>is_stateless_callable</h2>
+<a id="ga1ed86a26cf1d09208a65a195932f5ba8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1ed86a26cf1d09208a65a195932f5ba8">&#9670;&nbsp;</a></span>coreFlags</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , typename... Args&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">concept cen::is_stateless_callable</td>
+          <td class="memname">cen::config::coreFlags {SDL_INIT_EVERYTHING}</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">=</div>
-<div class="line">    std::default_initializable&lt;T&gt; &amp;&amp; std::invocable&lt;T, Args...&gt;</div>
-</div><!-- fragment -->
+<p>Flags passed on to <code>SDL_Init()</code>, if <a class="el" href="group__core.html#gae48f08d6dc9254716d0072deef2ac967">config::initCore</a> is <code>true</code>. </p>
+
+</div>
+</div>
+<a id="gab3404e40113ea6808ea85d8b32d358ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab3404e40113ea6808ea85d8b32d358ab">&#9670;&nbsp;</a></span>imageFlags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cen::config::imageFlags {IMG_INIT_PNG | IMG_INIT_JPG | IMG_INIT_TIF | IMG_INIT_WEBP}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Flags passed on to <code>IMG_Init()</code>, if <a class="el" href="group__core.html#ga512355a8e23f2b3a8b9c1af042f3a9f3">config::initImage</a> is <code>true</code>. </p>
+
+</div>
+</div>
+<a id="ga43c0880388c8fe4eedca64951e9c432e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga43c0880388c8fe4eedca64951e9c432e">&#9670;&nbsp;</a></span>mixerFlags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cen::config::mixerFlags</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{MIX_INIT_MP3 | MIX_INIT_OGG | MIX_INIT_FLAC | MIX_INIT_MID | MIX_INIT_MOD |</div>
+<div class="line">                 MIX_INIT_OPUS}</div>
+</div><!-- fragment --><p>Flags passed on to <code>Mix_Init()</code>, if <a class="el" href="group__core.html#ga30f339c061ef087db37efadf76f44e94">config::initMixer</a> is <code>true</code>. </p>
+
+</div>
+</div>
+<a id="ga9ec403126d3c7b97ca99b3d446a13ccf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9ec403126d3c7b97ca99b3d446a13ccf">&#9670;&nbsp;</a></span>mixerFreq</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cen::config::mixerFreq {MIX_DEFAULT_FREQUENCY}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The frequency used by SDL2_mixer, if <a class="el" href="group__core.html#ga30f339c061ef087db37efadf76f44e94">config::initMixer</a> is <code>true</code>. </p>
+
+</div>
+</div>
+<a id="ga3fbf1d2aa61479ef35657b0416bf07d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3fbf1d2aa61479ef35657b0416bf07d2">&#9670;&nbsp;</a></span>mixerFormat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cen::config::mixerFormat {MIX_DEFAULT_FORMAT}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The format used by SDL2_mixer, if <a class="el" href="group__core.html#ga30f339c061ef087db37efadf76f44e94">config::initMixer</a> is <code>true</code>. </p>
+
 </div>
 </div>
 <a id="ga2e48c48e6ada5af983e078f2ef3c9d78"></a>
@@ -2082,76 +2186,6 @@ template&lt;typename T , typename... Args&gt; </div>
       </table>
 </div><div class="memdoc">
 <p>The chunk size used by SDL2_mixer, if <a class="el" href="group__core.html#ga30f339c061ef087db37efadf76f44e94">config::initMixer</a> is <code>true</code>. </p>
-
-</div>
-</div>
-<a id="ga43c0880388c8fe4eedca64951e9c432e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga43c0880388c8fe4eedca64951e9c432e">&#9670;&nbsp;</a></span>mixerFlags</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">cen::config::mixerFlags</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">{MIX_INIT_MP3 | MIX_INIT_OGG | MIX_INIT_FLAC | MIX_INIT_MID |</div>
-<div class="line">                 MIX_INIT_MOD | MIX_INIT_OPUS}</div>
-</div><!-- fragment --><p>Flags passed on to <code>Mix_Init()</code>, if <a class="el" href="group__core.html#ga30f339c061ef087db37efadf76f44e94">config::initMixer</a> is <code>true</code>. </p>
-
-</div>
-</div>
-<a id="ga3fbf1d2aa61479ef35657b0416bf07d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3fbf1d2aa61479ef35657b0416bf07d2">&#9670;&nbsp;</a></span>mixerFormat</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">cen::config::mixerFormat {MIX_DEFAULT_FORMAT}</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>The format used by SDL2_mixer, if <a class="el" href="group__core.html#ga30f339c061ef087db37efadf76f44e94">config::initMixer</a> is <code>true</code>. </p>
-
-</div>
-</div>
-<a id="ga9ec403126d3c7b97ca99b3d446a13ccf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9ec403126d3c7b97ca99b3d446a13ccf">&#9670;&nbsp;</a></span>mixerFreq</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">cen::config::mixerFreq {MIX_DEFAULT_FREQUENCY}</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>The frequency used by SDL2_mixer, if <a class="el" href="group__core.html#ga30f339c061ef087db37efadf76f44e94">config::initMixer</a> is <code>true</code>. </p>
-
-</div>
-</div>
-<a id="ga00bb6bb52f4cb3888d1e10e9efc6c853"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga00bb6bb52f4cb3888d1e10e9efc6c853">&#9670;&nbsp;</a></span>success</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr <a class="el" href="classcen_1_1result.html">result</a> cen::success {true}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Represents a successful result. </p><dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
 
 </div>
 </div>

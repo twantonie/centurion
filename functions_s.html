@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -120,7 +120,7 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 : <a class="el" href="classcen_1_1keyboard__event.html#a29b01b45785db7b7e2edee2ae5c327f2">cen::keyboard_event</a>
 </li>
 <li>scan_code()
-: <a class="el" href="classcen_1_1scan__code.html#a225734a4eb7c1acf8f2bbcad197a1ddb">cen::scan_code</a>
+: <a class="el" href="classcen_1_1scan__code.html#a6aa8610fb39eba5d255b6c28ff4fc09f">cen::scan_code</a>
 </li>
 <li>scoped_lock()
 : <a class="el" href="classcen_1_1scoped__lock.html#a0974f4cfb7aa90b51fda2585d57cc2b8">cen::scoped_lock</a>
@@ -140,6 +140,12 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 <li>send_effect()
 : <a class="el" href="classcen_1_1basic__controller.html#a7ad97ad97585c64bbcb12546ec242992">cen::basic_controller&lt; T &gt;</a>
 , <a class="el" href="classcen_1_1basic__joystick.html#afca250eecb01f9996c6bd3c1b9a9027b">cen::basic_joystick&lt; T &gt;</a>
+</li>
+<li>sensor()
+: <a class="el" href="classcen_1_1controller__sensor__event.html#ade94ef70f3e49133c2a3e93cb6222108">cen::controller_sensor_event</a>
+</li>
+<li>sensor_event()
+: <a class="el" href="classcen_1_1sensor__event.html#a412c2eb620e54864892f59bb488cacb8">cen::sensor_event</a>
 </li>
 <li>serial()
 : <a class="el" href="classcen_1_1basic__controller.html#a042fb5f8cd9ef858ac6cea8095c479a4">cen::basic_controller&lt; T &gt;</a>
@@ -227,6 +233,9 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 <li>set_clip()
 : <a class="el" href="classcen_1_1basic__renderer.html#ae4c13cf1f157bb6eaafc4fb6ad8496da">cen::basic_renderer&lt; T &gt;</a>
 </li>
+<li>set_code()
+: <a class="el" href="classcen_1_1user__event.html#a6124ca62d230ff6f240fc5bee05912ec">cen::user_event</a>
+</li>
 <li>set_color()
 : <a class="el" href="classcen_1_1basic__renderer.html#a765c2b23661f0b97422e7b3b63670847">cen::basic_renderer&lt; T &gt;</a>
 , <a class="el" href="classcen_1_1message__box_1_1color__scheme.html#a943827442f8f61bc90d83d5ab90c612f">cen::message_box::color_scheme</a>
@@ -240,7 +249,16 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 : <a class="el" href="classcen_1_1message__box.html#a136f364601293cc15dd14d65babb9a14">cen::message_box</a>
 </li>
 <li>set_data()
-: <a class="el" href="classcen_1_1haptic__custom.html#a696739affd99de432bf38332dbcbe3f6">cen::haptic_custom</a>
+: <a class="el" href="classcen_1_1controller__sensor__event.html#ad596f4c4b38e3b451839d66f9c0274ff">cen::controller_sensor_event</a>
+, <a class="el" href="classcen_1_1haptic__custom.html#a696739affd99de432bf38332dbcbe3f6">cen::haptic_custom</a>
+, <a class="el" href="classcen_1_1sensor__event.html#a15141311d750974e1fff8197f1ac5425">cen::sensor_event</a>
+</li>
+<li>set_data_1()
+: <a class="el" href="classcen_1_1display__event.html#aa22c1ff0877555c528121bbbe934a4dd">cen::display_event</a>
+, <a class="el" href="classcen_1_1user__event.html#a5ab6cc9c712cdfd79cea86cd06c55386">cen::user_event</a>
+</li>
+<li>set_data_2()
+: <a class="el" href="classcen_1_1user__event.html#a03938b3ca7741cf8bd1f267add76e232">cen::user_event</a>
 </li>
 <li>set_deadband()
 : <a class="el" href="classcen_1_1haptic__condition.html#a38402ad3b134e0b258137db78bbbc5cb">cen::haptic_condition</a>
@@ -280,6 +298,9 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 <li>set_error()
 : <a class="el" href="classcen_1_1dollar__gesture__event.html#a720d055a74df6cf3fe7a9cf32631d5f7">cen::dollar_gesture_event</a>
 </li>
+<li>set_event_id()
+: <a class="el" href="classcen_1_1display__event.html#af40cc9c0d7a42491aa558a4c624a28b9">cen::display_event</a>
+</li>
 <li>set_fade_duration()
 : <a class="el" href="classcen_1_1haptic__effect.html#a7bd61b9cf409c2b87f0359ac0d415663">cen::haptic_effect&lt; Derived &gt;</a>
 </li>
@@ -295,9 +316,11 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 <li>set_finger_id()
 : <a class="el" href="classcen_1_1touch__finger__event.html#a73e452080637b930bbffb1fbd4ca6b4b">cen::touch_finger_event</a>
 </li>
+<li>set_finger_index()
+: <a class="el" href="classcen_1_1controller__touchpad__event.html#a900d17bdb03b04735c3578e522c50413">cen::controller_touchpad_event</a>
+</li>
 <li>set_fingers()
 : <a class="el" href="classcen_1_1dollar__gesture__event.html#abd842d32ef61557dbf525ed129d7930f">cen::dollar_gesture_event</a>
-, <a class="el" href="classcen_1_1multi__gesture__event.html#acdd1e26eedef27082a0685723c4a92fa">cen::multi_gesture_event</a>
 </li>
 <li>set_font_hinting()
 : <a class="el" href="classcen_1_1font.html#afecf75f31085cdf42b20985b71f9c13c">cen::font</a>
@@ -341,6 +364,9 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 </li>
 <li>set_icon()
 : <a class="el" href="classcen_1_1basic__window.html#a3124b0e2ef6eb551bebf9b3124596e4f">cen::basic_window&lt; T &gt;</a>
+</li>
+<li>set_index()
+: <a class="el" href="classcen_1_1display__event.html#a5930b0c1af294e333f5834c9fa1d460d">cen::display_event</a>
 </li>
 <li>set_interval()
 : <a class="el" href="classcen_1_1haptic__effect.html#a046589e1a480c0acc63ea4e2e3b35f70">cen::haptic_effect&lt; Derived &gt;</a>
@@ -438,7 +464,8 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 , <a class="el" href="classcen_1_1music.html#ad4e4da393848cf5878f05842cb725455">cen::music</a>
 </li>
 <li>set_pressure()
-: <a class="el" href="classcen_1_1touch__finger__event.html#a412dd88c251ab4cdc184ed0829f586f3">cen::touch_finger_event</a>
+: <a class="el" href="classcen_1_1controller__touchpad__event.html#ada9a39c84bcd1dac519d3b144d7f3343">cen::controller_touchpad_event</a>
+, <a class="el" href="classcen_1_1touch__finger__event.html#a412dd88c251ab4cdc184ed0829f586f3">cen::touch_finger_event</a>
 </li>
 <li>set_priority()
 : <a class="el" href="classcen_1_1thread.html#af9f31a05a50805c3a39e60a0d3462784">cen::thread</a>
@@ -473,6 +500,9 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 <li>set_scan_code()
 : <a class="el" href="classcen_1_1keyboard__event.html#a0913491c288c289e713ce135900fea0d">cen::keyboard_event</a>
 </li>
+<li>set_sensor()
+: <a class="el" href="classcen_1_1controller__sensor__event.html#a1e70ead60a0411112f7bb8fdd0e3bae6">cen::controller_sensor_event</a>
+</li>
 <li>set_sensor_enabled()
 : <a class="el" href="classcen_1_1basic__controller.html#aebb219c44c17fde32585e59de08a7b47">cen::basic_controller&lt; T &gt;</a>
 </li>
@@ -505,13 +535,16 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 : <a class="el" href="classcen_1_1common__event.html#a5c81096fa55e2fa2393a82afde369b58">cen::common_event&lt; T &gt;</a>
 </li>
 <li>set_title()
-: <a class="el" href="classcen_1_1basic__window.html#a38a159b91cf52640ac5b2aa67add09f3">cen::basic_window&lt; T &gt;</a>
-, <a class="el" href="classcen_1_1message__box.html#afe3000ce4b42c81344e5237f5af21711">cen::message_box</a>
+: <a class="el" href="classcen_1_1basic__window.html#a9598ea58b33466cae54eb7b199523ac5">cen::basic_window&lt; T &gt;</a>
+, <a class="el" href="classcen_1_1message__box.html#a23903be7009d489fb2159f1adcb90ec8">cen::message_box</a>
 </li>
 <li>set_touch_id()
 : <a class="el" href="classcen_1_1dollar__gesture__event.html#a9b0eec9fbd0be3a2be5fbd92b37148bd">cen::dollar_gesture_event</a>
 , <a class="el" href="classcen_1_1multi__gesture__event.html#a89616bb0bff68caf77ebdfb8e2ac84d7">cen::multi_gesture_event</a>
 , <a class="el" href="classcen_1_1touch__finger__event.html#aeb5b311735eeff32c60ba4923385263d">cen::touch_finger_event</a>
+</li>
+<li>set_touchpad_index()
+: <a class="el" href="classcen_1_1controller__touchpad__event.html#ab657b160c1d2f5a461928b5fa71eaa3d">cen::controller_touchpad_event</a>
 </li>
 <li>set_translation_viewport()
 : <a class="el" href="classcen_1_1basic__renderer.html#a6e7f52f569301ceadced3824f78924b3">cen::basic_renderer&lt; T &gt;</a>
@@ -555,6 +588,8 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 , <a class="el" href="classcen_1_1controller__axis__event.html#af762277c17dd0b3c2453d893015de3b9">cen::controller_axis_event</a>
 , <a class="el" href="classcen_1_1controller__button__event.html#af25044e99747b2406b03f9a114235a43">cen::controller_button_event</a>
 , <a class="el" href="classcen_1_1controller__device__event.html#aef0d2d78ace8b0ba697a12960abc0be2">cen::controller_device_event</a>
+, <a class="el" href="classcen_1_1controller__sensor__event.html#acd2d6d7f31ecb6a539d50549ed10461f">cen::controller_sensor_event</a>
+, <a class="el" href="classcen_1_1controller__touchpad__event.html#aa79f19006d04633764ef119501c34555">cen::controller_touchpad_event</a>
 , <a class="el" href="classcen_1_1joy__axis__event.html#a6e42cc85a13eda8456154f694febdb7e">cen::joy_axis_event</a>
 , <a class="el" href="classcen_1_1joy__ball__event.html#a1e0f5d57911a2fd5e825d19111583061">cen::joy_ball_event</a>
 , <a class="el" href="classcen_1_1joy__button__event.html#a6eff82ac9634053ca1149bcc7cc35b3a">cen::joy_button_event</a>
@@ -562,6 +597,7 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 , <a class="el" href="classcen_1_1mouse__button__event.html#a6ef1f1200f780973e025a9ffc37de383">cen::mouse_button_event</a>
 , <a class="el" href="classcen_1_1mouse__motion__event.html#a2c469c258bd6a9e810d61b900b01f0df">cen::mouse_motion_event</a>
 , <a class="el" href="classcen_1_1mouse__wheel__event.html#a9d4c7c9227b9346c22ee3b3cbf3c43d6">cen::mouse_wheel_event</a>
+, <a class="el" href="classcen_1_1sensor__event.html#ab83c9fdf2631b9b77c36f97ec82937a1">cen::sensor_event</a>
 </li>
 <li>set_width()
 : <a class="el" href="classcen_1_1basic__rect.html#a236d27dfea2b77a0fb04f08a5c0af346">cen::basic_rect&lt; T &gt;</a>
@@ -579,11 +615,13 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 , <a class="el" href="classcen_1_1text__editing__event.html#ac1e65715d5c708f0c8dcc3d958394e58">cen::text_editing_event</a>
 , <a class="el" href="classcen_1_1text__input__event.html#a06248bf73a49fcfadbff5a9d5fcf7b15">cen::text_input_event</a>
 , <a class="el" href="classcen_1_1touch__finger__event.html#a5c484ab6f5af1cc8e8bbfbe9b0e6817b">cen::touch_finger_event</a>
+, <a class="el" href="classcen_1_1user__event.html#a666007de3aee3b934c8130406c7eb024">cen::user_event</a>
 </li>
 <li>set_x()
 : <a class="el" href="classcen_1_1basic__point.html#a6cedc4e1f77ba8cec3fd05816a4555f5">cen::basic_point&lt; T &gt;</a>
 , <a class="el" href="classcen_1_1basic__rect.html#af1ba971c28f4357eaa21dac0844ae428">cen::basic_rect&lt; T &gt;</a>
 , <a class="el" href="classcen_1_1basic__window.html#ad351c3efa309518e63878fc2698684af">cen::basic_window&lt; T &gt;</a>
+, <a class="el" href="classcen_1_1controller__touchpad__event.html#a8539d61bbe47ba8af60beb709afed0c8">cen::controller_touchpad_event</a>
 , <a class="el" href="classcen_1_1dollar__gesture__event.html#af13b872176201fe6fc542503f78ee5a6">cen::dollar_gesture_event</a>
 , <a class="el" href="classcen_1_1mouse__button__event.html#a3f43e0d8f1ac68d53f5f8f5f1f0bd437">cen::mouse_button_event</a>
 , <a class="el" href="classcen_1_1mouse__motion__event.html#a9c8bfd93ac3bffbb6064172d8006c0b4">cen::mouse_motion_event</a>
@@ -596,6 +634,7 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 : <a class="el" href="classcen_1_1basic__point.html#ad448db7dbb580318ef9ebf45224ee110">cen::basic_point&lt; T &gt;</a>
 , <a class="el" href="classcen_1_1basic__rect.html#ae409a01ca03e94b554311ab185bb204e">cen::basic_rect&lt; T &gt;</a>
 , <a class="el" href="classcen_1_1basic__window.html#ad9141ed2dd484003cd387ab2bf2dcde9">cen::basic_window&lt; T &gt;</a>
+, <a class="el" href="classcen_1_1controller__touchpad__event.html#a542ebaed3ea270d1b13c29245051e5af">cen::controller_touchpad_event</a>
 , <a class="el" href="classcen_1_1dollar__gesture__event.html#adefa588887e900326d163cfd46f96628">cen::dollar_gesture_event</a>
 , <a class="el" href="classcen_1_1mouse__button__event.html#a9434b8a95e793663ba34a763a5f49048">cen::mouse_button_event</a>
 , <a class="el" href="classcen_1_1mouse__motion__event.html#a51763f7ced89fdf39eb8485bcc2a19ce">cen::mouse_motion_event</a>
@@ -606,9 +645,6 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 </li>
 <li>shared_object()
 : <a class="el" href="classcen_1_1shared__object.html#a3aa603ca2707e871ea095209e1998ea3">cen::shared_object</a>
-</li>
-<li>shift_active()
-: <a class="el" href="classcen_1_1keyboard__event.html#a8086a5abccdd8976be05dcc83552b801">cen::keyboard_event</a>
 </li>
 <li>show()
 : <a class="el" href="classcen_1_1basic__window.html#ac60cdfe6f5a5e73c2daff65820fa5434">cen::basic_window&lt; T &gt;</a>
@@ -660,6 +696,9 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 <li>spring
 : <a class="el" href="classcen_1_1haptic__condition.html#ace742819ca88e29d895a28ed2b520758a49af9c3aef6ace089a81bfece54a961a">cen::haptic_condition</a>
 </li>
+<li>src
+: <a class="el" href="structcen_1_1blend__task.html#a1880aaa0b5e8b7f56e6e7901c1372a6f">cen::blend_task</a>
+</li>
 <li>start()
 : <a class="el" href="classcen_1_1text__editing__event.html#a048b58e9766517295c505e75880c7da3">cen::text_editing_event</a>
 </li>
@@ -710,7 +749,7 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 : <a class="el" href="classcen_1_1font__cache.html#a61c40468b9e1672cb870198e74ed3de3">cen::font_cache</a>
 </li>
 <li>store_shaded_utf8()
-: <a class="el" href="classcen_1_1font__cache.html#a216ed428a8902d9d9c2914fde91144e7">cen::font_cache</a>
+: <a class="el" href="classcen_1_1font__cache.html#ad090ec347b2c28133adcf95c6e325d8d">cen::font_cache</a>
 </li>
 <li>store_solid_latin1()
 : <a class="el" href="classcen_1_1font__cache.html#af489a713a393dc15b495450395cbdc60">cen::font_cache</a>

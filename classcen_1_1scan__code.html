@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -410,8 +410,8 @@ pressed the Q key as it would be on a US QWERTY keyboard" regardless of whether 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5e8a60c74de2a8789c582b307fd8c3c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e8a60c74de2a8789c582b307fd8c3c8">&#9670;&nbsp;</a></span>count()</h2>
+<a id="a369fd6603cf25998be47715e2bd9e2a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a369fd6603cf25998be47715e2bd9e2a0">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -420,28 +420,24 @@ pressed the Q key as it would be on a US QWERTY keyboard" regardless of whether 
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr static auto cen::scan_code::count </td>
+          <td class="memname">constexpr auto cen::scan_code::operator= </td>
           <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcen_1_1scan__code.html">scan_code</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
-          <td> -&gt; int
-  </td>
+          <td> -&gt;  <a class="el" href="classcen_1_1scan__code.html">scan_code</a> &amp;=default</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the total amount of scan codes. </p>
-<dl class="section return"><dt>Returns</dt><dd>the amount of scan codes.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
-
 </div>
 </div>
-<a id="a090be44050062ffcb2b0751acb8f1af4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a090be44050062ffcb2b0751acb8f1af4">&#9670;&nbsp;</a></span>get()</h2>
+<a id="a572a6b2a300608c1c11688b6edbf33b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a572a6b2a300608c1c11688b6edbf33b3">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -450,10 +446,37 @@ pressed the Q key as it would be on a US QWERTY keyboard" regardless of whether 
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr auto cen::scan_code::get </td>
+          <td class="memname">constexpr auto cen::scan_code::operator= </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="classcen_1_1scan__code.html">scan_code</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; SDL_Scancode
+          <td> -&gt;  <a class="el" href="classcen_1_1scan__code.html">scan_code</a> &amp;=default</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a47fd037da29861229abdbb4934b28272"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47fd037da29861229abdbb4934b28272">&#9670;&nbsp;</a></span>operator=() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::scan_code::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const SDL_Scancode&#160;</td>
+          <td class="paramname"><em>code</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1scan__code.html">scan_code</a>&amp;
   </td>
         </tr>
       </table>
@@ -464,14 +487,20 @@ pressed the Q key as it would be on a US QWERTY keyboard" regardless of whether 
 </table>
 </div><div class="memdoc">
 
-<p>Returns the internal scan code. </p>
-<dl class="section return"><dt>Returns</dt><dd>the internal scan code.</dd></dl>
+<p>Sets the scan code used to the specified scan code. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">code</td><td>the scan code that will be used.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the <code><a class="el" href="classcen_1_1scan__code.html" title="Represents a scan code.">scan_code</a></code> instance.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="a02a64861e3216258615b98acf2984e89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02a64861e3216258615b98acf2984e89">&#9670;&nbsp;</a></span>name()</h2>
+<a id="adcd1d518397f677faef3528d62544af8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcd1d518397f677faef3528d62544af8">&#9670;&nbsp;</a></span>operator=() <span class="overload">[4/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -480,87 +509,35 @@ pressed the Q key as it would be on a US QWERTY keyboard" regardless of whether 
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::scan_code::name </td>
+          <td class="memname">auto cen::scan_code::operator= </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; std::string
+          <td class="paramtype">const SDL_Keycode&#160;</td>
+          <td class="paramname"><em>keycode</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="classcen_1_1scan__code.html">scan_code</a>&amp;
   </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the name associated with the scan code. </p>
-<dl class="section return"><dt>Returns</dt><dd>the name associated with the scan code.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a276513e44c09627c3ab8973657404732"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a276513e44c09627c3ab8973657404732">&#9670;&nbsp;</a></span>operator SDL_KeyCode()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">cen::scan_code::operator SDL_KeyCode </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Converts to <code>SDL_KeyCode</code>. </p>
-<dl class="section return"><dt>Returns</dt><dd>the key code associated with the internal scan code.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><code>SDL_GetKeyFromScancode</code></dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a9f8b1f4474c216a744c8fefebc75b878"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f8b1f4474c216a744c8fefebc75b878">&#9670;&nbsp;</a></span>operator SDL_Scancode()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr cen::scan_code::operator SDL_Scancode </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Converts to <code>SDL_Scancode</code>. </p>
-<dl class="section return"><dt>Returns</dt><dd>the internal scan code.</dd></dl>
+<p>Sets the scan code used to be the converted version of the supplied key code. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keycode</td><td>the key code that will be converted and used.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the <code><a class="el" href="classcen_1_1scan__code.html" title="Represents a scan code.">scan_code</a></code> instance.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
 </div>
 <a id="aa49f37adb924cb22bf45a46f64c569c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa49f37adb924cb22bf45a46f64c569c4">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa49f37adb924cb22bf45a46f64c569c4">&#9670;&nbsp;</a></span>operator=() <span class="overload">[5/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -597,108 +574,8 @@ pressed the Q key as it would be on a US QWERTY keyboard" regardless of whether 
 
 </div>
 </div>
-<a id="a369fd6603cf25998be47715e2bd9e2a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a369fd6603cf25998be47715e2bd9e2a0">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto cen::scan_code::operator= </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcen_1_1scan__code.html">scan_code</a> &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt;  <a class="el" href="classcen_1_1scan__code.html">scan_code</a> &amp;=default</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="adcd1d518397f677faef3528d62544af8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adcd1d518397f677faef3528d62544af8">&#9670;&nbsp;</a></span>operator=() <span class="overload">[3/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::scan_code::operator= </td>
-          <td>(</td>
-          <td class="paramtype">const SDL_Keycode&#160;</td>
-          <td class="paramname"><em>keycode</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1scan__code.html">scan_code</a>&amp;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the scan code used to be the converted version of the supplied key code. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">keycode</td><td>the key code that will be converted and used.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the <code><a class="el" href="classcen_1_1scan__code.html" title="Represents a scan code.">scan_code</a></code> instance.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a47fd037da29861229abdbb4934b28272"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47fd037da29861229abdbb4934b28272">&#9670;&nbsp;</a></span>operator=() <span class="overload">[4/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto cen::scan_code::operator= </td>
-          <td>(</td>
-          <td class="paramtype">const SDL_Scancode&#160;</td>
-          <td class="paramname"><em>code</em></td><td>)</td>
-          <td> -&gt; <a class="el" href="classcen_1_1scan__code.html">scan_code</a>&amp;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the scan code used to the specified scan code. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">code</td><td>the scan code that will be used.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the <code><a class="el" href="classcen_1_1scan__code.html" title="Represents a scan code.">scan_code</a></code> instance.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
 <a id="a4fd38273ed544859ab89ea2a6e19ce56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4fd38273ed544859ab89ea2a6e19ce56">&#9670;&nbsp;</a></span>operator=() <span class="overload">[5/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fd38273ed544859ab89ea2a6e19ce56">&#9670;&nbsp;</a></span>operator=() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -735,8 +612,8 @@ pressed the Q key as it would be on a US QWERTY keyboard" regardless of whether 
 
 </div>
 </div>
-<a id="a572a6b2a300608c1c11688b6edbf33b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a572a6b2a300608c1c11688b6edbf33b3">&#9670;&nbsp;</a></span>operator=() <span class="overload">[6/6]</span></h2>
+<a id="a5e8a60c74de2a8789c582b307fd8c3c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e8a60c74de2a8789c582b307fd8c3c8">&#9670;&nbsp;</a></span>count()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -745,19 +622,203 @@ pressed the Q key as it would be on a US QWERTY keyboard" regardless of whether 
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr auto cen::scan_code::operator= </td>
+          <td class="memname">constexpr static auto cen::scan_code::count </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classcen_1_1scan__code.html">scan_code</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
-          <td> -&gt;  <a class="el" href="classcen_1_1scan__code.html">scan_code</a> &amp;=default</td>
+          <td> -&gt; int
+  </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the total amount of scan codes. </p>
+<dl class="section return"><dt>Returns</dt><dd>the amount of scan codes.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
+
+</div>
+</div>
+<a id="af530d0597d8a0957f028ce23be08d747"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af530d0597d8a0957f028ce23be08d747">&#9670;&nbsp;</a></span>unknown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::scan_code::unknown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the stored scan code is <code>SDL_SCANCODE_UNKNOWN</code>. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the internal scan code is <code>SDL_SCANCODE_UNKNOWN</code>; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a02a64861e3216258615b98acf2984e89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02a64861e3216258615b98acf2984e89">&#9670;&nbsp;</a></span>name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::scan_code::name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; std::string
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the name associated with the scan code. </p>
+<dl class="section return"><dt>Returns</dt><dd>the name associated with the scan code.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="af55cbd8a6c750e7a2ca3c614ed537f16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af55cbd8a6c750e7a2ca3c614ed537f16">&#9670;&nbsp;</a></span>to_key_code()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::scan_code::to_key_code </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; SDL_KeyCode
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the corresponding <code>SDL_KeyCode</code>. </p>
+<dl class="section return"><dt>Returns</dt><dd>the key code associated with the internal scan code.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code>SDL_GetKeyFromScancode</code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
+
+</div>
+</div>
+<a id="a090be44050062ffcb2b0751acb8f1af4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a090be44050062ffcb2b0751acb8f1af4">&#9670;&nbsp;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::scan_code::get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; SDL_Scancode
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the internal scan code. </p>
+<dl class="section return"><dt>Returns</dt><dd>the internal scan code.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a9f8b1f4474c216a744c8fefebc75b878"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f8b1f4474c216a744c8fefebc75b878">&#9670;&nbsp;</a></span>operator SDL_Scancode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr cen::scan_code::operator SDL_Scancode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts to <code>SDL_Scancode</code>. </p>
+<dl class="section return"><dt>Returns</dt><dd>the internal scan code.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a276513e44c09627c3ab8973657404732"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a276513e44c09627c3ab8973657404732">&#9670;&nbsp;</a></span>operator SDL_KeyCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cen::scan_code::operator SDL_KeyCode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts to <code>SDL_KeyCode</code>. </p>
+<dl class="section return"><dt>Returns</dt><dd>the key code associated with the internal scan code.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code>SDL_GetKeyFromScancode</code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
 </div>
@@ -802,67 +863,6 @@ template&lt;typename Archive &gt; </div>
   </dd>
 </dl>
 <dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
-<a id="af55cbd8a6c750e7a2ca3c614ed537f16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af55cbd8a6c750e7a2ca3c614ed537f16">&#9670;&nbsp;</a></span>to_key_code()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::scan_code::to_key_code </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; SDL_KeyCode
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the corresponding <code>SDL_KeyCode</code>. </p>
-<dl class="section return"><dt>Returns</dt><dd>the key code associated with the internal scan code.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><code>SDL_GetKeyFromScancode</code></dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.1.0 </dd></dl>
-
-</div>
-</div>
-<a id="af530d0597d8a0957f028ce23be08d747"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af530d0597d8a0957f028ce23be08d747">&#9670;&nbsp;</a></span>unknown()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto cen::scan_code::unknown </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the stored scan code is <code>SDL_SCANCODE_UNKNOWN</code>. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the internal scan code is <code>SDL_SCANCODE_UNKNOWN</code>; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
 </div>

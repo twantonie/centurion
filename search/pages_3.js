@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['event_20dispatcher_3846',['Event Dispatcher',['../page-event-dispatcher.html',1,'page-examples']]],
-  ['examples_3847',['Examples',['../page-examples.html',1,'']]]
+  ['event_20dispatcher_3949',['Event Dispatcher',['../page-event-dispatcher.html',1,'page-examples']]],
+  ['examples_3950',['Examples',['../page-examples.html',1,'']]]
 ];

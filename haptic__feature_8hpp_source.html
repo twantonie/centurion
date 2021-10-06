@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -130,77 +130,75 @@ $(document).ready(function(){initNavTree('haptic__feature_8hpp_source.html','');
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
 <div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="group__audio.html#ga62ab80ba7171cf7c049917c5e26c8f85">   61</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(<span class="keyword">const</span> <a class="code" href="group__input.html#ga4ea56d7f61011d136f61eb40243cc034">haptic_feature</a> feature) -&gt; std::string_view</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordflow">switch</span> (feature)</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga4ea56d7f61011d136f61eb40243cc034a617ac08757d38a5a7ed91c224f0e90a0">haptic_feature::constant</a>:</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;constant&quot;</span>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga4ea56d7f61011d136f61eb40243cc034a925212d1624625aed9491413b4b7be05">haptic_feature::sine</a>:</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;sine&quot;</span>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga4ea56d7f61011d136f61eb40243cc034a08a010915177ddfd2111f482e845be6e">haptic_feature::left_right</a>:</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;left_right&quot;</span>;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga4ea56d7f61011d136f61eb40243cc034acef44b46f16ae8ecf664df4266ffdbf9">haptic_feature::triangle</a>:</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;triangle&quot;</span>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga4ea56d7f61011d136f61eb40243cc034a1fe2a2902c91c3db9a8dfd5cb560e8cc">haptic_feature::sawtooth_up</a>:</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;sawtooth_up&quot;</span>;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga4ea56d7f61011d136f61eb40243cc034a237705a0b3549fc1e44f298404cc0ca8">haptic_feature::sawtooth_down</a>:</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;sawtooth_down&quot;</span>;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga4ea56d7f61011d136f61eb40243cc034a93939238f5427e2d2d2b1365d18483f9">haptic_feature::ramp</a>:</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;ramp&quot;</span>;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga4ea56d7f61011d136f61eb40243cc034a2a2d595e6ed9a0b24f027f2b63b134d6">haptic_feature::spring</a>:</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;spring&quot;</span>;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga4ea56d7f61011d136f61eb40243cc034af995f784a3f2f57b5d7cc8e8bb4b33a3">haptic_feature::damper</a>:</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;damper&quot;</span>;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga4ea56d7f61011d136f61eb40243cc034a119f13a70555b4078773f20bcc6a4e42">haptic_feature::inertia</a>:</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;inertia&quot;</span>;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga4ea56d7f61011d136f61eb40243cc034a22354ce144c7e1834dbc69848e79906b">haptic_feature::friction</a>:</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;friction&quot;</span>;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga4ea56d7f61011d136f61eb40243cc034a8b9035807842a4e4dbe009f3f1478127">haptic_feature::custom</a>:</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;custom&quot;</span>;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga4ea56d7f61011d136f61eb40243cc034ad2d74b47b149d8090871a2f33e80809b">haptic_feature::gain</a>:</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;gain&quot;</span>;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga4ea56d7f61011d136f61eb40243cc034a7e57cbac11917a071cb849c2c6209181">haptic_feature::autocenter</a>:</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;autocenter&quot;</span>;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga4ea56d7f61011d136f61eb40243cc034a9acb44549b41563697bb490144ec6258">haptic_feature::status</a>:</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;status&quot;</span>;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga4ea56d7f61011d136f61eb40243cc034aec1b81965109165de6b38cd92c1e39f9">haptic_feature::pause</a>:</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;pause&quot;</span>;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1cen__error.html">cen_error</a>{<span class="stringliteral">&quot;Did not recognize haptic feature!&quot;</span>};</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  }</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="group__audio.html#gab198f60ac1a38a37bc4b05199b687442">  135</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">operator&lt;&lt;</a>(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code" href="group__input.html#ga4ea56d7f61011d136f61eb40243cc034">haptic_feature</a> feature)</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    -&gt; std::ostream&amp;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;{</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <span class="keywordflow">return</span> stream &lt;&lt; <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(feature);</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;}</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordflow">switch</span> (feature) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga4ea56d7f61011d136f61eb40243cc034a617ac08757d38a5a7ed91c224f0e90a0">haptic_feature::constant</a>:</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;constant&quot;</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga4ea56d7f61011d136f61eb40243cc034a925212d1624625aed9491413b4b7be05">haptic_feature::sine</a>:</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;sine&quot;</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga4ea56d7f61011d136f61eb40243cc034a08a010915177ddfd2111f482e845be6e">haptic_feature::left_right</a>:</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;left_right&quot;</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga4ea56d7f61011d136f61eb40243cc034acef44b46f16ae8ecf664df4266ffdbf9">haptic_feature::triangle</a>:</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;triangle&quot;</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga4ea56d7f61011d136f61eb40243cc034a1fe2a2902c91c3db9a8dfd5cb560e8cc">haptic_feature::sawtooth_up</a>:</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;sawtooth_up&quot;</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga4ea56d7f61011d136f61eb40243cc034a237705a0b3549fc1e44f298404cc0ca8">haptic_feature::sawtooth_down</a>:</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;sawtooth_down&quot;</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga4ea56d7f61011d136f61eb40243cc034a93939238f5427e2d2d2b1365d18483f9">haptic_feature::ramp</a>:</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;ramp&quot;</span>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga4ea56d7f61011d136f61eb40243cc034a2a2d595e6ed9a0b24f027f2b63b134d6">haptic_feature::spring</a>:</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;spring&quot;</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga4ea56d7f61011d136f61eb40243cc034af995f784a3f2f57b5d7cc8e8bb4b33a3">haptic_feature::damper</a>:</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;damper&quot;</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga4ea56d7f61011d136f61eb40243cc034a119f13a70555b4078773f20bcc6a4e42">haptic_feature::inertia</a>:</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;inertia&quot;</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga4ea56d7f61011d136f61eb40243cc034a22354ce144c7e1834dbc69848e79906b">haptic_feature::friction</a>:</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;friction&quot;</span>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga4ea56d7f61011d136f61eb40243cc034a8b9035807842a4e4dbe009f3f1478127">haptic_feature::custom</a>:</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;custom&quot;</span>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga4ea56d7f61011d136f61eb40243cc034ad2d74b47b149d8090871a2f33e80809b">haptic_feature::gain</a>:</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;gain&quot;</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga4ea56d7f61011d136f61eb40243cc034a7e57cbac11917a071cb849c2c6209181">haptic_feature::autocenter</a>:</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;autocenter&quot;</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga4ea56d7f61011d136f61eb40243cc034a9acb44549b41563697bb490144ec6258">haptic_feature::status</a>:</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;status&quot;</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#gga4ea56d7f61011d136f61eb40243cc034aec1b81965109165de6b38cd92c1e39f9">haptic_feature::pause</a>:</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;pause&quot;</span>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1cen__error.html">cen_error</a>{<span class="stringliteral">&quot;Did not recognize haptic feature!&quot;</span>};</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="group__audio.html#gab198f60ac1a38a37bc4b05199b687442">  134</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">operator&lt;&lt;</a>(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code" href="group__input.html#ga4ea56d7f61011d136f61eb40243cc034">haptic_feature</a> feature) -&gt; std::ostream&amp;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;{</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <span class="keywordflow">return</span> stream &lt;&lt; <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(feature);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;}  <span class="comment">// namespace cen</span></div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;}  <span class="comment">// namespace cen</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_HAPTIC_FEATURE_HEADER</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_HAPTIC_FEATURE_HEADER</span></div>
 <div class="ttc" id="aclasscen_1_1cen__error_html"><div class="ttname"><a href="classcen_1_1cen__error.html">cen::cen_error</a></div><div class="ttdoc">The base of all exceptions explicitly thrown by the library.</div><div class="ttdef"><b>Definition:</b> exception.hpp:35</div></div>
-<div class="ttc" id="agroup__audio_html_ga83f366781618f05bf8bcb60c753e9ced"><div class="ttname"><a href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">cen::operator&lt;&lt;</a></div><div class="ttdeci">auto operator&lt;&lt;(std::ostream &amp;stream, const fade_status status) -&gt; std::ostream &amp;</div><div class="ttdoc">Prints a textual representation of a fade status enumerator.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:86</div></div>
-<div class="ttc" id="agroup__audio_html_ga9ebd3f26fcc0f89398ff473b06e9dcbe"><div class="ttname"><a href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">cen::to_string</a></div><div class="ttdeci">constexpr auto to_string(const fade_status status) -&gt; std::string_view</div><div class="ttdoc">Returns a textual version of the supplied fade status.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:51</div></div>
+<div class="ttc" id="agroup__audio_html_ga83f366781618f05bf8bcb60c753e9ced"><div class="ttname"><a href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">cen::operator&lt;&lt;</a></div><div class="ttdeci">auto operator&lt;&lt;(std::ostream &amp;stream, const fade_status status) -&gt; std::ostream &amp;</div><div class="ttdoc">Prints a textual representation of a fade status enumerator.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:98</div></div>
+<div class="ttc" id="agroup__audio_html_ga9ebd3f26fcc0f89398ff473b06e9dcbe"><div class="ttname"><a href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">cen::to_string</a></div><div class="ttdeci">constexpr auto to_string(const fade_status status) -&gt; std::string_view</div><div class="ttdoc">Returns a textual version of the supplied fade status.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:64</div></div>
 <div class="ttc" id="agroup__core_html_gaf548af65ed935a05b3fbbccc0c708481"><div class="ttname"><a href="group__core.html#gaf548af65ed935a05b3fbbccc0c708481">cen::uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdoc">Alias for an unsigned integer.</div><div class="ttdef"><b>Definition:</b> integers.hpp:19</div></div>
 <div class="ttc" id="agroup__input_html_ga4ea56d7f61011d136f61eb40243cc034"><div class="ttname"><a href="group__input.html#ga4ea56d7f61011d136f61eb40243cc034">cen::haptic_feature</a></div><div class="ttdeci">haptic_feature</div><div class="ttdoc">Provides values that represent all of the haptic features.</div><div class="ttdef"><b>Definition:</b> haptic_feature.hpp:25</div></div>
 <div class="ttc" id="agroup__input_html_gga4ea56d7f61011d136f61eb40243cc034a08a010915177ddfd2111f482e845be6e"><div class="ttname"><a href="group__input.html#gga4ea56d7f61011d136f61eb40243cc034a08a010915177ddfd2111f482e845be6e">cen::haptic_feature::left_right</a></div><div class="ttdeci">@ left_right</div></div>

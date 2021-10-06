@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -135,15 +135,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ad9ef27ae6ffeeb20fb308d10638be91d"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#ad9ef27ae6ffeeb20fb308d10638be91d">from_hsv</a> (float hue, float saturation, float value) -&gt; <a class="el" href="classcen_1_1color.html">color</a></td></tr>
 <tr class="memdesc:ad9ef27ae6ffeeb20fb308d10638be91d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a color from HSV-encoded values.  <a href="classcen_1_1color.html#ad9ef27ae6ffeeb20fb308d10638be91d">More...</a><br /></td></tr>
 <tr class="separator:ad9ef27ae6ffeeb20fb308d10638be91d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66336ff07300d79d336fe2c04e684df5"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#a66336ff07300d79d336fe2c04e684df5">from_hsv</a> (const double hue, const double saturation, const double value) -&gt; <a class="el" href="classcen_1_1color.html">color</a></td></tr>
-<tr class="memdesc:a66336ff07300d79d336fe2c04e684df5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a color from HSV-encoded values.  <a href="classcen_1_1color.html#a66336ff07300d79d336fe2c04e684df5">More...</a><br /></td></tr>
-<tr class="separator:a66336ff07300d79d336fe2c04e684df5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69fa2f3722d87a534454a66baa30a324"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#a69fa2f3722d87a534454a66baa30a324">from_hsl</a> (float hue, float saturation, float lightness) -&gt; <a class="el" href="classcen_1_1color.html">color</a></td></tr>
 <tr class="memdesc:a69fa2f3722d87a534454a66baa30a324"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a color from HSL-encoded values.  <a href="classcen_1_1color.html#a69fa2f3722d87a534454a66baa30a324">More...</a><br /></td></tr>
 <tr class="separator:a69fa2f3722d87a534454a66baa30a324"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c56573ca7f6a9f25cad2ae2cf070f79"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#a1c56573ca7f6a9f25cad2ae2cf070f79">from_hsl</a> (const double hue, const double saturation, const double lightness) -&gt; <a class="el" href="classcen_1_1color.html">color</a></td></tr>
-<tr class="memdesc:a1c56573ca7f6a9f25cad2ae2cf070f79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a color from HSL-encoded values.  <a href="classcen_1_1color.html#a1c56573ca7f6a9f25cad2ae2cf070f79">More...</a><br /></td></tr>
-<tr class="separator:a1c56573ca7f6a9f25cad2ae2cf070f79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69c2df049b39a47858e2b1aa438c0f38"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcen_1_1color.html#a69c2df049b39a47858e2b1aa438c0f38">from_rgb</a> (const std::string_view rgb) -&gt; std::optional&lt; <a class="el" href="classcen_1_1color.html">color</a> &gt;</td></tr>
 <tr class="memdesc:a69c2df049b39a47858e2b1aa438c0f38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a color from a hexadecimal RGB color string.  <a href="classcen_1_1color.html#a69c2df049b39a47858e2b1aa438c0f38">More...</a><br /></td></tr>
 <tr class="separator:a69c2df049b39a47858e2b1aa438c0f38"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -398,8 +392,8 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a75259be5cc0aa4bf06270c93fcfe5260"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a75259be5cc0aa4bf06270c93fcfe5260">&#9670;&nbsp;</a></span>alpha()</h2>
+<a id="ad9ef27ae6ffeeb20fb308d10638be91d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9ef27ae6ffeeb20fb308d10638be91d">&#9670;&nbsp;</a></span>from_hsv()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -408,347 +402,22 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr auto cen::color::alpha </td>
+          <td class="memname">static auto cen::color::from_hsv </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the value of the alpha component. </p>
-<dl class="section return"><dt>Returns</dt><dd>the value of the alpha component, in the range [0, 255].</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="abd268bcf887767d76e474f9e5b429753"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd268bcf887767d76e474f9e5b429753">&#9670;&nbsp;</a></span>alpha_norm()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto cen::color::alpha_norm </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; float
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the normalized alpha component of the color. </p>
-<dl class="section return"><dt>Returns</dt><dd>the alpha component value, in the range [0, 1].</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.1.0 </dd></dl>
-
-</div>
-</div>
-<a id="aa946bb9279e48d71ffd4c0125b9cab7e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa946bb9279e48d71ffd4c0125b9cab7e">&#9670;&nbsp;</a></span>as_argb()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::color::as_argb </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; std::string
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a hexadecimal ARGB color string that represents the color. </p>
-<p>The returned string is guaranteed to use uppercase hexadecimal digits (A-F).</p>
-<dl class="section return"><dt>Returns</dt><dd>a hexadecimal color string representation, on the format "#AARRGGBB".</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1color.html#a23bc49d9afd575ba8c7b797adb895eeb" title="Returns a hexadecimal RGB color string that represents the color.">as_rgb()</a></code> </dd>
-<dd>
-<code><a class="el" href="classcen_1_1color.html#adab1637bf3b8b816ed55fa0f7dc3dcc2" title="Returns a hexadecimal RGBA color string that represents the color.">as_rgba()</a></code></dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.1.0 </dd></dl>
-
-</div>
-</div>
-<a id="a23bc49d9afd575ba8c7b797adb895eeb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23bc49d9afd575ba8c7b797adb895eeb">&#9670;&nbsp;</a></span>as_rgb()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::color::as_rgb </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; std::string
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a hexadecimal RGB color string that represents the color. </p>
-<p>The returned string is guaranteed to use uppercase hexadecimal digits (A-F).</p>
-<dl class="section return"><dt>Returns</dt><dd>a hexadecimal color string representation, on the format "#RRGGBB".</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1color.html#adab1637bf3b8b816ed55fa0f7dc3dcc2" title="Returns a hexadecimal RGBA color string that represents the color.">as_rgba()</a></code> </dd>
-<dd>
-<code><a class="el" href="classcen_1_1color.html#aa946bb9279e48d71ffd4c0125b9cab7e" title="Returns a hexadecimal ARGB color string that represents the color.">as_argb()</a></code></dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.1.0 </dd></dl>
-
-</div>
-</div>
-<a id="adab1637bf3b8b816ed55fa0f7dc3dcc2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adab1637bf3b8b816ed55fa0f7dc3dcc2">&#9670;&nbsp;</a></span>as_rgba()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::color::as_rgba </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; std::string
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a hexadecimal RGBA color string that represents the color. </p>
-<p>The returned string is guaranteed to use uppercase hexadecimal digits (A-F).</p>
-<dl class="section return"><dt>Returns</dt><dd>a hexadecimal color string representation, on the format "#RRGGBBAA".</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1color.html#a23bc49d9afd575ba8c7b797adb895eeb" title="Returns a hexadecimal RGB color string that represents the color.">as_rgb()</a></code> </dd>
-<dd>
-<code><a class="el" href="classcen_1_1color.html#aa946bb9279e48d71ffd4c0125b9cab7e" title="Returns a hexadecimal ARGB color string that represents the color.">as_argb()</a></code></dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.1.0 </dd></dl>
-
-</div>
-</div>
-<a id="a50b4e69de99c10cd8c299570f2b30ed3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50b4e69de99c10cd8c299570f2b30ed3">&#9670;&nbsp;</a></span>blue()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto cen::color::blue </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the value of the blue component. </p>
-<dl class="section return"><dt>Returns</dt><dd>the value of the blue component, in the range [0, 255].</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a40bfe76551c3e8fa51b688b024686d06"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40bfe76551c3e8fa51b688b024686d06">&#9670;&nbsp;</a></span>blue_norm()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto cen::color::blue_norm </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; float
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the normalized blue component of the color. </p>
-<dl class="section return"><dt>Returns</dt><dd>the blue component value, in the range [0, 1].</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.1.0 </dd></dl>
-
-</div>
-</div>
-<a id="a5a7888775629285bad41ad2715c196f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a7888775629285bad41ad2715c196f1">&#9670;&nbsp;</a></span>data() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::color::data </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; const SDL_Color*
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a pointer to the internal SDL color. </p>
-<dl class="section warning"><dt>Warning</dt><dd>Do not cache the returned pointer!</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the internal color instance.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ad44bc91787b4b153c05f2e56988ab370"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad44bc91787b4b153c05f2e56988ab370">&#9670;&nbsp;</a></span>data() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::color::data </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; SDL_Color*
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a pointer to the internal SDL color. </p>
-<dl class="section warning"><dt>Warning</dt><dd>Do not cache the returned pointer!</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the internal color instance.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="aa25f6361edff98a18a25acc67cb8df38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa25f6361edff98a18a25acc67cb8df38">&#9670;&nbsp;</a></span>from_argb()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto cen::color::from_argb </td>
-          <td>(</td>
-          <td class="paramtype">const std::string_view&#160;</td>
-          <td class="paramname"><em>argb</em></td><td>)</td>
-          <td> -&gt; std::optional&lt;<a class="el" href="classcen_1_1color.html">color</a>&gt;
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Creates a color from a hexadecimal ARGB color string. </p>
-<p>The supplied string must feature a leading '#' character, and be 9 characters long.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">argb</td><td>the hexadecimal ARGB color string, using the format "#AARRGGBB".</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>a corresponding color; <code>std::nullopt</code> if something goes wrong.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1color.html#a69c2df049b39a47858e2b1aa438c0f38" title="Creates a color from a hexadecimal RGB color string.">from_rgb()</a></code> </dd>
-<dd>
-<code><a class="el" href="classcen_1_1color.html#a9dec1d62dd4e057cb72b37eb5a1417f6" title="Creates a color from a hexadecimal RGBA color string.">from_rgba()</a></code></dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.1.0 </dd></dl>
-
-</div>
-</div>
-<a id="a1c56573ca7f6a9f25cad2ae2cf070f79"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c56573ca7f6a9f25cad2ae2cf070f79">&#9670;&nbsp;</a></span>from_hsl() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto cen::color::from_hsl </td>
-          <td>(</td>
-          <td class="paramtype">const double&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>hue</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const double&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>saturation</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const double&#160;</td>
-          <td class="paramname"><em>lightness</em>&#160;</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -764,24 +433,23 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Creates a color from HSL-encoded values. </p>
+<p>Creates a color from HSV-encoded values. </p>
 <dl class="section note"><dt>Note</dt><dd>The values will be clamped to be within their respective ranges.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">hue</td><td>the hue of the color, in the range [0, 360]. </td></tr>
     <tr><td class="paramname">saturation</td><td>the saturation of the color, in the range [0, 100]. </td></tr>
-    <tr><td class="paramname">lightness</td><td>the lightness of the color, in the range [0, 100].</td></tr>
+    <tr><td class="paramname">value</td><td>the value of the color, in the range [0, 100].</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>an RGBA color converted from the HSL values.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>an RGBA color converted from the HSV values.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000017">Deprecated:</a></b></dt><dd>Since 6.1.0, use the <code>float</code> overload instead. </dd></dl>
 
 </div>
 </div>
 <a id="a69fa2f3722d87a534454a66baa30a324"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69fa2f3722d87a534454a66baa30a324">&#9670;&nbsp;</a></span>from_hsl() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a69fa2f3722d87a534454a66baa30a324">&#9670;&nbsp;</a></span>from_hsl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -833,182 +501,6 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>an RGBA color converted from the HSL values.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
-<a id="a66336ff07300d79d336fe2c04e684df5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a66336ff07300d79d336fe2c04e684df5">&#9670;&nbsp;</a></span>from_hsv() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto cen::color::from_hsv </td>
-          <td>(</td>
-          <td class="paramtype">const double&#160;</td>
-          <td class="paramname"><em>hue</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const double&#160;</td>
-          <td class="paramname"><em>saturation</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const double&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; <a class="el" href="classcen_1_1color.html">color</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Creates a color from HSV-encoded values. </p>
-<dl class="section note"><dt>Note</dt><dd>The values will be clamped to be within their respective ranges.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">hue</td><td>the hue of the color, in the range [0, 360]. </td></tr>
-    <tr><td class="paramname">saturation</td><td>the saturation of the color, in the range [0, 100]. </td></tr>
-    <tr><td class="paramname">value</td><td>the value of the color, in the range [0, 100].</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>an RGBA color converted from the HSV values.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000016">Deprecated:</a></b></dt><dd>Since 6.1.0, use the <code>float</code> overload instead. </dd></dl>
-
-</div>
-</div>
-<a id="ad9ef27ae6ffeeb20fb308d10638be91d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9ef27ae6ffeeb20fb308d10638be91d">&#9670;&nbsp;</a></span>from_hsv() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto cen::color::from_hsv </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>hue</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>saturation</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; <a class="el" href="classcen_1_1color.html">color</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Creates a color from HSV-encoded values. </p>
-<dl class="section note"><dt>Note</dt><dd>The values will be clamped to be within their respective ranges.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">hue</td><td>the hue of the color, in the range [0, 360]. </td></tr>
-    <tr><td class="paramname">saturation</td><td>the saturation of the color, in the range [0, 100]. </td></tr>
-    <tr><td class="paramname">value</td><td>the value of the color, in the range [0, 100].</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>an RGBA color converted from the HSV values.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.3.0 </dd></dl>
-
-</div>
-</div>
-<a id="af6c7aa198fe60958a12c6d7693445f1d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6c7aa198fe60958a12c6d7693445f1d">&#9670;&nbsp;</a></span>from_norm()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static auto cen::color::from_norm </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>red</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>green</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>blue</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>alpha</em> = <code>1.0f</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; <a class="el" href="classcen_1_1color.html">color</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Creates a color from normalized color component values. </p>
-<dl class="section note"><dt>Note</dt><dd>The color components will be clamped to the range [0, 1].</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">red</td><td>the red component value, in the range [0, 1]. </td></tr>
-    <tr><td class="paramname">green</td><td>the green component value, in the range [0, 1]. </td></tr>
-    <tr><td class="paramname">blue</td><td>the blue component value, in the range [0, 1]. </td></tr>
-    <tr><td class="paramname">alpha</td><td>the alpha component value, in the range [0, 1].</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>a color with the supplied color components.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.1.0 </dd></dl>
 
 </div>
 </div>
@@ -1094,8 +586,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a791f432c479fc71f48384840ac1adc14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a791f432c479fc71f48384840ac1adc14">&#9670;&nbsp;</a></span>get()</h2>
+<a id="aa25f6361edff98a18a25acc67cb8df38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa25f6361edff98a18a25acc67cb8df38">&#9670;&nbsp;</a></span>from_argb()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1104,88 +596,39 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::color::get </td>
+          <td class="memname">static auto cen::color::from_argb </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; const SDL_Color&amp;
+          <td class="paramtype">const std::string_view&#160;</td>
+          <td class="paramname"><em>argb</em></td><td>)</td>
+          <td> -&gt; std::optional&lt;<a class="el" href="classcen_1_1color.html">color</a>&gt;
   </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the internal color instance. </p>
-<dl class="section return"><dt>Returns</dt><dd>a reference to the internal color.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="aa832ab02fc6d92501cb3050d2b134370"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa832ab02fc6d92501cb3050d2b134370">&#9670;&nbsp;</a></span>green()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto cen::color::green </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the value of the green component. </p>
-<dl class="section return"><dt>Returns</dt><dd>the value of the green component, in the range [0, 255].</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="aea19e3d5d5a010a2e1a7d69d2780d47b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea19e3d5d5a010a2e1a7d69d2780d47b">&#9670;&nbsp;</a></span>green_norm()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto cen::color::green_norm </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; float
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the normalized green component of the color. </p>
-<dl class="section return"><dt>Returns</dt><dd>the green component value, in the range [0, 1].</dd></dl>
+<p>Creates a color from a hexadecimal ARGB color string. </p>
+<p>The supplied string must feature a leading '#' character, and be 9 characters long.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argb</td><td>the hexadecimal ARGB color string, using the format "#AARRGGBB".</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a corresponding color; <code>std::nullopt</code> if something goes wrong.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1color.html#a69c2df049b39a47858e2b1aa438c0f38" title="Creates a color from a hexadecimal RGB color string.">from_rgb()</a></code> </dd>
+<dd>
+<code><a class="el" href="classcen_1_1color.html#a9dec1d62dd4e057cb72b37eb5a1417f6" title="Creates a color from a hexadecimal RGBA color string.">from_rgba()</a></code></dd></dl>
 <dl class="section since"><dt>Since</dt><dd>6.1.0 </dd></dl>
 
 </div>
 </div>
-<a id="a116165dfe8ace648ee5f0aca32bcf5ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a116165dfe8ace648ee5f0aca32bcf5ba">&#9670;&nbsp;</a></span>max()</h2>
+<a id="af6c7aa198fe60958a12c6d7693445f1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6c7aa198fe60958a12c6d7693445f1d">&#9670;&nbsp;</a></span>from_norm()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1194,28 +637,61 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr static auto cen::color::max </td>
+          <td class="memname">static auto cen::color::from_norm </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>red</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>green</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>blue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>alpha</em> = <code>1.0f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; <a class="el" href="classcen_1_1color.html">color</a>
   </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the maximum possible value of a color component. </p>
-<dl class="section return"><dt>Returns</dt><dd>the maximum possible value of a color component.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+<p>Creates a color from normalized color component values. </p>
+<dl class="section note"><dt>Note</dt><dd>The color components will be clamped to the range [0, 1].</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">red</td><td>the red component value, in the range [0, 1]. </td></tr>
+    <tr><td class="paramname">green</td><td>the green component value, in the range [0, 1]. </td></tr>
+    <tr><td class="paramname">blue</td><td>the blue component value, in the range [0, 1]. </td></tr>
+    <tr><td class="paramname">alpha</td><td>the alpha component value, in the range [0, 1].</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a color with the supplied color components.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.1.0 </dd></dl>
 
 </div>
 </div>
-<a id="a618b1e8b9626b3ac0cb65945d327bb38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a618b1e8b9626b3ac0cb65945d327bb38">&#9670;&nbsp;</a></span>operator const SDL_Color *()</h2>
+<a id="a24765375a834c452659a64622cfad429"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24765375a834c452659a64622cfad429">&#9670;&nbsp;</a></span>set_red()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1224,87 +700,33 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">cen::color::operator const SDL_Color * </td>
+          <td class="memname">constexpr void cen::color::set_red </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Converts the color to <code>const SDL_Color*</code>. </p>
-<dl class="section warning"><dt>Warning</dt><dd>The returned pointer is not to be freed or stored away!</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the internal color instance.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0,0 </dd></dl>
-
-</div>
-</div>
-<a id="a16deb80a8bcc7636f537cc1fef1b3f90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16deb80a8bcc7636f537cc1fef1b3f90">&#9670;&nbsp;</a></span>operator SDL_Color()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr cen::color::operator SDL_Color </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Converts the the color into an <code>SDL_Color</code>. </p>
-<dl class="section return"><dt>Returns</dt><dd>an <code>SDL_Color</code> that is equivalent to this color.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a27c55c48d305f3c8a49413b04e52a833"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27c55c48d305f3c8a49413b04e52a833">&#9670;&nbsp;</a></span>operator SDL_Color *()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">cen::color::operator SDL_Color * </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>&#160;</td>
+          <td class="paramname"><em>red</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Converts the color to <code>SDL_Color*</code>. </p>
-<dl class="section warning"><dt>Warning</dt><dd>The returned pointer is not to be freed or stored away!</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the internal color instance.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0,0 </dd></dl>
+<p>Sets the value of the red component. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">red</td><td>the new value of the red component.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 
 </div>
 </div>
-<a id="abc968709909e4b252cc3ccb9403162f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc968709909e4b252cc3ccb9403162f9">&#9670;&nbsp;</a></span>operator SDL_MessageBoxColor()</h2>
+<a id="a5f50fc776129d4b32eb8b699f4347adf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f50fc776129d4b32eb8b699f4347adf">&#9670;&nbsp;</a></span>set_green()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1313,22 +735,97 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr cen::color::operator SDL_MessageBoxColor </td>
+          <td class="memname">constexpr void cen::color::set_green </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>&#160;</td>
+          <td class="paramname"><em>green</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Converts the the color into an <code>SDL_MessageBoxColor</code>. </p>
-<dl class="section note"><dt>Note</dt><dd>Message box colors don't feature an alpha value!</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>an <code>SDL_MessageBoxColor</code> that is equivalent to this color.</dd></dl>
+<p>Sets the value of the green component. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">green</td><td>the new value of the green component.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ac51df49b84e5893db49240920f30d01a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac51df49b84e5893db49240920f30d01a">&#9670;&nbsp;</a></span>set_blue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr void cen::color::set_blue </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>&#160;</td>
+          <td class="paramname"><em>blue</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the value of the blue component. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">blue</td><td>the new value of the blue component.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a2e5e5c4a486eee0e28f05eee7eca457d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e5e5c4a486eee0e28f05eee7eca457d">&#9670;&nbsp;</a></span>set_alpha()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr void cen::color::set_alpha </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>&#160;</td>
+          <td class="paramname"><em>alpha</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the value of the alpha component. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alpha</td><td>the new value of the alpha component.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 
 </div>
@@ -1363,6 +860,96 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="aa832ab02fc6d92501cb3050d2b134370"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa832ab02fc6d92501cb3050d2b134370">&#9670;&nbsp;</a></span>green()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::color::green </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the value of the green component. </p>
+<dl class="section return"><dt>Returns</dt><dd>the value of the green component, in the range [0, 255].</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a50b4e69de99c10cd8c299570f2b30ed3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50b4e69de99c10cd8c299570f2b30ed3">&#9670;&nbsp;</a></span>blue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::color::blue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the value of the blue component. </p>
+<dl class="section return"><dt>Returns</dt><dd>the value of the blue component, in the range [0, 255].</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a75259be5cc0aa4bf06270c93fcfe5260"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75259be5cc0aa4bf06270c93fcfe5260">&#9670;&nbsp;</a></span>alpha()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::color::alpha </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the value of the alpha component. </p>
+<dl class="section return"><dt>Returns</dt><dd>the value of the alpha component, in the range [0, 255].</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
 <a id="a8498de2b9402e5a2edb4647ff9f69b8e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8498de2b9402e5a2edb4647ff9f69b8e">&#9670;&nbsp;</a></span>red_norm()</h2>
 
@@ -1390,6 +977,409 @@ Static Public Member Functions</h2></td></tr>
 <p>Returns the normalized red component of the color. </p>
 <dl class="section return"><dt>Returns</dt><dd>the red component value, in the range [0, 1].</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>6.1.0 </dd></dl>
+
+</div>
+</div>
+<a id="aea19e3d5d5a010a2e1a7d69d2780d47b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea19e3d5d5a010a2e1a7d69d2780d47b">&#9670;&nbsp;</a></span>green_norm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::color::green_norm </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; float
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the normalized green component of the color. </p>
+<dl class="section return"><dt>Returns</dt><dd>the green component value, in the range [0, 1].</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.1.0 </dd></dl>
+
+</div>
+</div>
+<a id="a40bfe76551c3e8fa51b688b024686d06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40bfe76551c3e8fa51b688b024686d06">&#9670;&nbsp;</a></span>blue_norm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::color::blue_norm </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; float
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the normalized blue component of the color. </p>
+<dl class="section return"><dt>Returns</dt><dd>the blue component value, in the range [0, 1].</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.1.0 </dd></dl>
+
+</div>
+</div>
+<a id="abd268bcf887767d76e474f9e5b429753"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd268bcf887767d76e474f9e5b429753">&#9670;&nbsp;</a></span>alpha_norm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto cen::color::alpha_norm </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; float
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the normalized alpha component of the color. </p>
+<dl class="section return"><dt>Returns</dt><dd>the alpha component value, in the range [0, 1].</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.1.0 </dd></dl>
+
+</div>
+</div>
+<a id="ad44bc91787b4b153c05f2e56988ab370"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad44bc91787b4b153c05f2e56988ab370">&#9670;&nbsp;</a></span>data() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::color::data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; SDL_Color*
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the internal SDL color. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Do not cache the returned pointer!</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the internal color instance.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a5a7888775629285bad41ad2715c196f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a7888775629285bad41ad2715c196f1">&#9670;&nbsp;</a></span>data() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::color::data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; const SDL_Color*
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the internal SDL color. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Do not cache the returned pointer!</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the internal color instance.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a791f432c479fc71f48384840ac1adc14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a791f432c479fc71f48384840ac1adc14">&#9670;&nbsp;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::color::get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; const SDL_Color&amp;
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the internal color instance. </p>
+<dl class="section return"><dt>Returns</dt><dd>a reference to the internal color.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a23bc49d9afd575ba8c7b797adb895eeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23bc49d9afd575ba8c7b797adb895eeb">&#9670;&nbsp;</a></span>as_rgb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::color::as_rgb </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; std::string
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a hexadecimal RGB color string that represents the color. </p>
+<p>The returned string is guaranteed to use uppercase hexadecimal digits (A-F).</p>
+<dl class="section return"><dt>Returns</dt><dd>a hexadecimal color string representation, on the format "#RRGGBB".</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1color.html#adab1637bf3b8b816ed55fa0f7dc3dcc2" title="Returns a hexadecimal RGBA color string that represents the color.">as_rgba()</a></code> </dd>
+<dd>
+<code><a class="el" href="classcen_1_1color.html#aa946bb9279e48d71ffd4c0125b9cab7e" title="Returns a hexadecimal ARGB color string that represents the color.">as_argb()</a></code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.1.0 </dd></dl>
+
+</div>
+</div>
+<a id="adab1637bf3b8b816ed55fa0f7dc3dcc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adab1637bf3b8b816ed55fa0f7dc3dcc2">&#9670;&nbsp;</a></span>as_rgba()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::color::as_rgba </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; std::string
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a hexadecimal RGBA color string that represents the color. </p>
+<p>The returned string is guaranteed to use uppercase hexadecimal digits (A-F).</p>
+<dl class="section return"><dt>Returns</dt><dd>a hexadecimal color string representation, on the format "#RRGGBBAA".</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1color.html#a23bc49d9afd575ba8c7b797adb895eeb" title="Returns a hexadecimal RGB color string that represents the color.">as_rgb()</a></code> </dd>
+<dd>
+<code><a class="el" href="classcen_1_1color.html#aa946bb9279e48d71ffd4c0125b9cab7e" title="Returns a hexadecimal ARGB color string that represents the color.">as_argb()</a></code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.1.0 </dd></dl>
+
+</div>
+</div>
+<a id="aa946bb9279e48d71ffd4c0125b9cab7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa946bb9279e48d71ffd4c0125b9cab7e">&#9670;&nbsp;</a></span>as_argb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::color::as_argb </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; std::string
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a hexadecimal ARGB color string that represents the color. </p>
+<p>The returned string is guaranteed to use uppercase hexadecimal digits (A-F).</p>
+<dl class="section return"><dt>Returns</dt><dd>a hexadecimal color string representation, on the format "#AARRGGBB".</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classcen_1_1color.html#a23bc49d9afd575ba8c7b797adb895eeb" title="Returns a hexadecimal RGB color string that represents the color.">as_rgb()</a></code> </dd>
+<dd>
+<code><a class="el" href="classcen_1_1color.html#adab1637bf3b8b816ed55fa0f7dc3dcc2" title="Returns a hexadecimal RGBA color string that represents the color.">as_rgba()</a></code></dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.1.0 </dd></dl>
+
+</div>
+</div>
+<a id="a16deb80a8bcc7636f537cc1fef1b3f90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16deb80a8bcc7636f537cc1fef1b3f90">&#9670;&nbsp;</a></span>operator SDL_Color()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr cen::color::operator SDL_Color </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts the the color into an <code>SDL_Color</code>. </p>
+<dl class="section return"><dt>Returns</dt><dd>an <code>SDL_Color</code> that is equivalent to this color.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="abc968709909e4b252cc3ccb9403162f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc968709909e4b252cc3ccb9403162f9">&#9670;&nbsp;</a></span>operator SDL_MessageBoxColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr cen::color::operator SDL_MessageBoxColor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts the the color into an <code>SDL_MessageBoxColor</code>. </p>
+<dl class="section note"><dt>Note</dt><dd>Message box colors don't feature an alpha value!</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>an <code>SDL_MessageBoxColor</code> that is equivalent to this color.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a27c55c48d305f3c8a49413b04e52a833"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27c55c48d305f3c8a49413b04e52a833">&#9670;&nbsp;</a></span>operator SDL_Color *()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cen::color::operator SDL_Color * </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts the color to <code>SDL_Color*</code>. </p>
+<dl class="section warning"><dt>Warning</dt><dd>The returned pointer is not to be freed or stored away!</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the internal color instance.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0,0 </dd></dl>
+
+</div>
+</div>
+<a id="a618b1e8b9626b3ac0cb65945d327bb38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a618b1e8b9626b3ac0cb65945d327bb38">&#9670;&nbsp;</a></span>operator const SDL_Color *()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cen::color::operator const SDL_Color * </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts the color to <code>const SDL_Color*</code>. </p>
+<dl class="section warning"><dt>Warning</dt><dd>The returned pointer is not to be freed or stored away!</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the internal color instance.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0,0 </dd></dl>
 
 </div>
 </div>
@@ -1437,146 +1427,6 @@ template&lt;typename Archive &gt; </div>
 
 </div>
 </div>
-<a id="a2e5e5c4a486eee0e28f05eee7eca457d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e5e5c4a486eee0e28f05eee7eca457d">&#9670;&nbsp;</a></span>set_alpha()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr void cen::color::set_alpha </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>&#160;</td>
-          <td class="paramname"><em>alpha</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the value of the alpha component. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">alpha</td><td>the new value of the alpha component.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ac51df49b84e5893db49240920f30d01a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac51df49b84e5893db49240920f30d01a">&#9670;&nbsp;</a></span>set_blue()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr void cen::color::set_blue </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>&#160;</td>
-          <td class="paramname"><em>blue</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the value of the blue component. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">blue</td><td>the new value of the blue component.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a5f50fc776129d4b32eb8b699f4347adf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f50fc776129d4b32eb8b699f4347adf">&#9670;&nbsp;</a></span>set_green()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr void cen::color::set_green </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>&#160;</td>
-          <td class="paramname"><em>green</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the value of the green component. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">green</td><td>the new value of the green component.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a24765375a834c452659a64622cfad429"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24765375a834c452659a64622cfad429">&#9670;&nbsp;</a></span>set_red()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr void cen::color::set_red </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>&#160;</td>
-          <td class="paramname"><em>red</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the value of the red component. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">red</td><td>the new value of the red component.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
 <a id="a7345d87d41f6efd646be6e53392863c8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7345d87d41f6efd646be6e53392863c8">&#9670;&nbsp;</a></span>with_alpha()</h2>
 
@@ -1610,6 +1460,36 @@ template&lt;typename Archive &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a color that is identical to the color except for the alpha component.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a116165dfe8ace648ee5f0aca32bcf5ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a116165dfe8ace648ee5f0aca32bcf5ba">&#9670;&nbsp;</a></span>max()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr static auto cen::color::max </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the maximum possible value of a color component. </p>
+<dl class="section return"><dt>Returns</dt><dd>the maximum possible value of a color component.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>

@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -237,8 +237,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a842501b0dae1787ea15c32461dc92794"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a842501b0dae1787ea15c32461dc92794">&#9670;&nbsp;</a></span>axis()</h2>
+<a id="af762277c17dd0b3c2453d893015de3b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af762277c17dd0b3c2453d893015de3b9">&#9670;&nbsp;</a></span>set_which()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -247,11 +247,11 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::controller_axis_event::axis </td>
+          <td class="memname">void cen::controller_axis_event::set_which </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__input.html#ga1e58560c3414740db4b3f78929e9ddc3">controller_axis</a>
-  </td>
+          <td class="paramtype">const SDL_JoystickID&#160;</td>
+          <td class="paramname"><em>which</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -261,9 +261,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the game controller axis value associated with the event. </p>
-<dl class="section return"><dt>Returns</dt><dd>the game controller axis value associated with the event.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><code>GameControllerAxis</code></dd></dl>
+<p>Sets the joystick instance ID associated with the event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">which</td><td>the instance ID of the joystick that the event is associated with.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
@@ -338,8 +342,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="af762277c17dd0b3c2453d893015de3b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af762277c17dd0b3c2453d893015de3b9">&#9670;&nbsp;</a></span>set_which()</h2>
+<a id="a04127a5e853b12e21fc49d4165ecdd5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04127a5e853b12e21fc49d4165ecdd5f">&#9670;&nbsp;</a></span>which()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -348,11 +352,11 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void cen::controller_axis_event::set_which </td>
+          <td class="memname">auto cen::controller_axis_event::which </td>
           <td>(</td>
-          <td class="paramtype">const SDL_JoystickID&#160;</td>
-          <td class="paramname"><em>which</em></td><td>)</td>
-          <td></td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; SDL_JoystickID
+  </td>
         </tr>
       </table>
   </td>
@@ -362,13 +366,39 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sets the joystick instance ID associated with the event. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">which</td><td>the instance ID of the joystick that the event is associated with.</td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Returns the joystick instance ID associated with the event. </p>
+<dl class="section return"><dt>Returns</dt><dd>the joystick instance ID associated with the event.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a842501b0dae1787ea15c32461dc92794"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a842501b0dae1787ea15c32461dc92794">&#9670;&nbsp;</a></span>axis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::controller_axis_event::axis </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__input.html#ga1e58560c3414740db4b3f78929e9ddc3">controller_axis</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the game controller axis value associated with the event. </p>
+<dl class="section return"><dt>Returns</dt><dd>the game controller axis value associated with the event.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code>GameControllerAxis</code></dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
@@ -399,36 +429,6 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Returns the axis value associated with the event. </p>
 <dl class="section return"><dt>Returns</dt><dd>the axis value associated with the event.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a04127a5e853b12e21fc49d4165ecdd5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a04127a5e853b12e21fc49d4165ecdd5f">&#9670;&nbsp;</a></span>which()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::controller_axis_event::which </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; SDL_JoystickID
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the joystick instance ID associated with the event. </p>
-<dl class="section return"><dt>Returns</dt><dd>the joystick instance ID associated with the event.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>

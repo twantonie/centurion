@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -244,8 +244,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a57ada5e19083beb77bf4956b196d50af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57ada5e19083beb77bf4956b196d50af">&#9670;&nbsp;</a></span>button()</h2>
+<a id="a6eff82ac9634053ca1149bcc7cc35b3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6eff82ac9634053ca1149bcc7cc35b3a">&#9670;&nbsp;</a></span>set_which()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -254,11 +254,11 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::joy_button_event::button </td>
+          <td class="memname">void cen::joy_button_event::set_which </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>
-  </td>
+          <td class="paramtype">const SDL_JoystickID&#160;</td>
+          <td class="paramname"><em>which</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -268,69 +268,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the index of the button that changed. </p>
-<dl class="section return"><dt>Returns</dt><dd>the index of the button that changed.</dd></dl>
+<p>Sets the joystick instance ID associated with the event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">which</td><td>the joystick instance ID associated with the event.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a8ab02b21f29067d2d27f40df80d964b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ab02b21f29067d2d27f40df80d964b0">&#9670;&nbsp;</a></span>pressed()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::joy_button_event::pressed </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the associated button is pressed. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the associated button is pressed; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a9f21636b8d223df6db6f2da4df3918d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f21636b8d223df6db6f2da4df3918d1">&#9670;&nbsp;</a></span>released()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::joy_button_event::released </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; bool
-  </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether or not the associated button is released. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the associated button is released; <code>false</code> otherwise.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
 </div>
@@ -404,8 +349,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a6eff82ac9634053ca1149bcc7cc35b3a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6eff82ac9634053ca1149bcc7cc35b3a">&#9670;&nbsp;</a></span>set_which()</h2>
+<a id="a335a30095478ff52283983c719c9da68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a335a30095478ff52283983c719c9da68">&#9670;&nbsp;</a></span>which()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -414,11 +359,11 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void cen::joy_button_event::set_which </td>
+          <td class="memname">auto cen::joy_button_event::which </td>
           <td>(</td>
-          <td class="paramtype">const SDL_JoystickID&#160;</td>
-          <td class="paramname"><em>which</em></td><td>)</td>
-          <td></td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; SDL_JoystickID
+  </td>
         </tr>
       </table>
   </td>
@@ -428,13 +373,38 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sets the joystick instance ID associated with the event. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">which</td><td>the joystick instance ID associated with the event.</td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Returns the joystick instance ID associated with the event. </p>
+<dl class="section return"><dt>Returns</dt><dd>the joystick instance ID associated with the event.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a57ada5e19083beb77bf4956b196d50af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57ada5e19083beb77bf4956b196d50af">&#9670;&nbsp;</a></span>button()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::joy_button_event::button </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; <a class="el" href="group__core.html#ga89b6da3d8b9fb42c7799b22d6afd1093">u8</a>
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the index of the button that changed. </p>
+<dl class="section return"><dt>Returns</dt><dd>the index of the button that changed.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
 
 </div>
@@ -469,8 +439,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a335a30095478ff52283983c719c9da68"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a335a30095478ff52283983c719c9da68">&#9670;&nbsp;</a></span>which()</h2>
+<a id="a8ab02b21f29067d2d27f40df80d964b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ab02b21f29067d2d27f40df80d964b0">&#9670;&nbsp;</a></span>pressed()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -479,10 +449,10 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::joy_button_event::which </td>
+          <td class="memname">auto cen::joy_button_event::pressed </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; SDL_JoystickID
+          <td> const -&gt; bool
   </td>
         </tr>
       </table>
@@ -493,9 +463,39 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the joystick instance ID associated with the event. </p>
-<dl class="section return"><dt>Returns</dt><dd>the joystick instance ID associated with the event.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>4.0.0 </dd></dl>
+<p>Indicates whether or not the associated button is pressed. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the associated button is pressed; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a9f21636b8d223df6db6f2da4df3918d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f21636b8d223df6db6f2da4df3918d1">&#9670;&nbsp;</a></span>released()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::joy_button_event::released </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; bool
+  </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates whether or not the associated button is released. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the associated button is released; <code>false</code> otherwise.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
 </div>

@@ -18,6 +18,7 @@ var hierarchy =
     [ "cen::basic_texture< T >", "classcen_1_1basic__texture.html", null ],
     [ "cen::basic_texture< detail::owning_type >", "classcen_1_1basic__texture.html", null ],
     [ "cen::basic_window< T >", "classcen_1_1basic__window.html", null ],
+    [ "cen::blend_task", "structcen_1_1blend__task.html", null ],
     [ "detail::bool_hint", null, [
       [ "cen::hint::accelerometer_as_joystick", "structcen_1_1hint_1_1accelerometer__as__joystick.html", null ],
       [ "cen::hint::allow_screensaver", "structcen_1_1hint_1_1allow__screensaver.html", null ],
@@ -98,6 +99,15 @@ var hierarchy =
     [ "cen::common_event< SDL_ControllerDeviceEvent >", "classcen_1_1common__event.html", [
       [ "cen::controller_device_event", "classcen_1_1controller__device__event.html", null ]
     ] ],
+    [ "cen::common_event< SDL_ControllerSensorEvent >", "classcen_1_1common__event.html", [
+      [ "cen::controller_sensor_event", "classcen_1_1controller__sensor__event.html", null ]
+    ] ],
+    [ "cen::common_event< SDL_ControllerTouchpadEvent >", "classcen_1_1common__event.html", [
+      [ "cen::controller_touchpad_event", "classcen_1_1controller__touchpad__event.html", null ]
+    ] ],
+    [ "cen::common_event< SDL_DisplayEvent >", "classcen_1_1common__event.html", [
+      [ "cen::display_event", "classcen_1_1display__event.html", null ]
+    ] ],
     [ "cen::common_event< SDL_DollarGestureEvent >", "classcen_1_1common__event.html", [
       [ "cen::dollar_gesture_event", "classcen_1_1dollar__gesture__event.html", null ]
     ] ],
@@ -137,6 +147,9 @@ var hierarchy =
     [ "cen::common_event< SDL_QuitEvent >", "classcen_1_1common__event.html", [
       [ "cen::quit_event", "classcen_1_1quit__event.html", null ]
     ] ],
+    [ "cen::common_event< SDL_SensorEvent >", "classcen_1_1common__event.html", [
+      [ "cen::sensor_event", "classcen_1_1sensor__event.html", null ]
+    ] ],
     [ "cen::common_event< SDL_TextEditingEvent >", "classcen_1_1common__event.html", [
       [ "cen::text_editing_event", "classcen_1_1text__editing__event.html", null ]
     ] ],
@@ -145,6 +158,9 @@ var hierarchy =
     ] ],
     [ "cen::common_event< SDL_TouchFingerEvent >", "classcen_1_1common__event.html", [
       [ "cen::touch_finger_event", "classcen_1_1touch__finger__event.html", null ]
+    ] ],
+    [ "cen::common_event< SDL_UserEvent >", "classcen_1_1common__event.html", [
+      [ "cen::user_event", "classcen_1_1user__event.html", null ]
     ] ],
     [ "cen::common_event< SDL_WindowEvent >", "classcen_1_1common__event.html", [
       [ "cen::window_event", "classcen_1_1window__event.html", null ]

@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -153,44 +153,6 @@ Functions</h2></td></tr>
 <div class="textblock"><p>Contains functions that provide information about screen(s). </p>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="ac6a89a9d863744805f4632fd21027a2c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6a89a9d863744805f4632fd21027a2c">&#9670;&nbsp;</a></span>bounds()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::screen::bounds </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>index</em> = <code>0</code></td><td>)</td>
-          <td> -&gt; std::optional&lt;<a class="el" href="group__math.html#gac693dcf48436f48e7aa257db423e1bdc">irect</a>&gt;
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the bounds of a display. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">index</td><td>the index of the queried display, in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76" title="Returns the amount of available displays.">cen::screen::count()</a></code>].</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the bounds of the specified display; <code>std::nullopt</code> if something went wrong.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd>SDL_GetDisplayBounds</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
 <a id="a0949b8c22f4f1066f751221fbdd61f76"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0949b8c22f4f1066f751221fbdd61f76">&#9670;&nbsp;</a></span>count()</h2>
 
@@ -217,267 +179,6 @@ Functions</h2></td></tr>
 
 <p>Returns the amount of available displays. </p>
 <dl class="section return"><dt>Returns</dt><dd>the number of available displays.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="acc13ac78fed12fd4f2680f30bd525239"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc13ac78fed12fd4f2680f30bd525239">&#9670;&nbsp;</a></span>diagonal_dpi()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::screen::diagonal_dpi </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>index</em> = <code>0</code></td><td>)</td>
-          <td> -&gt; std::optional&lt;float&gt;
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns diagonal DPI information about a display. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">index</td><td>the index of the queried display, in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76" title="Returns the amount of available displays.">cen::screen::count()</a></code>].</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the diagonal DPI information about the specified display; <code>std::nullopt</code> if something went wrong.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a47081ee7e5039b6173bf4b7fea612355"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47081ee7e5039b6173bf4b7fea612355">&#9670;&nbsp;</a></span>display_mode()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::screen::display_mode </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>index</em> = <code>0</code></td><td>)</td>
-          <td> -&gt; std::optional&lt;SDL_DisplayMode&gt;
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the desktop display mode. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">index</td><td>the index of the queried display, in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76" title="Returns the amount of available displays.">cen::screen::count()</a></code>].</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the desktop display mode; <code>std::nullopt</code> if something goes wrong.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="abfb5c9e3f2d1f64c09ab10a58b5052d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abfb5c9e3f2d1f64c09ab10a58b5052d8">&#9670;&nbsp;</a></span>dpi()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::screen::dpi </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>index</em> = <code>0</code></td><td>)</td>
-          <td> -&gt; std::optional&lt;<a class="el" href="structcen_1_1dpi__info.html">dpi_info</a>&gt;
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns DPI information about a display. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">index</td><td>the index of the queried display, in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76" title="Returns the amount of available displays.">cen::screen::count()</a></code>].</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>DPI information about the specified display; <code>std::nullopt</code> if something went wrong.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd>SDL_GetDisplayDPI</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a15c9623bbc9f459152623391acbddb68"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15c9623bbc9f459152623391acbddb68">&#9670;&nbsp;</a></span>get_orientation()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::screen::get_orientation </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>index</em> = <code>0</code></td><td>)</td>
-          <td> -&gt; <a class="el" href="group__video.html#ga522ad9ba5315e9ce7570fe4a9456537a">screen_orientation</a>
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the orientation of the specified display. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">index</td><td>the index of the queried display, in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76" title="Returns the amount of available displays.">cen::screen::count()</a></code>].</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the orientation of the specified display.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="a388facc4d335b83f431eaf012919e1a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a388facc4d335b83f431eaf012919e1a7">&#9670;&nbsp;</a></span>get_pixel_format()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::screen::get_pixel_format </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>index</em> = <code>0</code></td><td>)</td>
-          <td> -&gt; std::optional&lt;<a class="el" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a>&gt;
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the pixel format of the desktop display mode. </p>
-<dl class="section note"><dt>Note</dt><dd>This function returns the pixel format used by the desktop display mode, i.e. the fullscreen display mode, so it might not be accurate for non-fullscreen windows.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">index</td><td>the index of the queried display, in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76" title="Returns the amount of available displays.">cen::screen::count()</a></code>].</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the pixel format of the desktop display mode; <code>std::nullopt</code> if something goes wrong.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ae5098cd098c4b2d13c14f7adc47013eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5098cd098c4b2d13c14f7adc47013eb">&#9670;&nbsp;</a></span>height()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::screen::height </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>index</em> = <code>0</code></td><td>)</td>
-          <td> -&gt; std::optional&lt;int&gt;
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the height of the screen. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">index</td><td>the index of the queried display, in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76" title="Returns the amount of available displays.">cen::screen::count()</a></code>].</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the height of the screen; <code>std::nullopt</code> if something goes wrong.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
-
-</div>
-</div>
-<a id="ab98d95c12e70ee77cd835149c9368d69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab98d95c12e70ee77cd835149c9368d69">&#9670;&nbsp;</a></span>horizontal_dpi()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto cen::screen::horizontal_dpi </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>index</em> = <code>0</code></td><td>)</td>
-          <td> -&gt; std::optional&lt;float&gt;
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns horizontal DPI information about a display. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">index</td><td>the index of the queried display, in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76" title="Returns the amount of available displays.">cen::screen::count()</a></code>].</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the horizontal DPI information about the specified display; <code>std::nullopt</code> if something went wrong.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
@@ -519,6 +220,80 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a15c9623bbc9f459152623391acbddb68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15c9623bbc9f459152623391acbddb68">&#9670;&nbsp;</a></span>get_orientation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::screen::get_orientation </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>index</em> = <code>0</code></td><td>)</td>
+          <td> -&gt; <a class="el" href="group__video.html#ga522ad9ba5315e9ce7570fe4a9456537a">screen_orientation</a>
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the orientation of the specified display. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the index of the queried display, in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76" title="Returns the amount of available displays.">cen::screen::count()</a></code>].</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the orientation of the specified display.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a47081ee7e5039b6173bf4b7fea612355"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47081ee7e5039b6173bf4b7fea612355">&#9670;&nbsp;</a></span>display_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::screen::display_mode </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>index</em> = <code>0</code></td><td>)</td>
+          <td> -&gt; std::optional&lt;SDL_DisplayMode&gt;
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the desktop display mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the index of the queried display, in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76" title="Returns the amount of available displays.">cen::screen::count()</a></code>].</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the desktop display mode; <code>std::nullopt</code> if something goes wrong.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>6.0.0 </dd></dl>
+
+</div>
+</div>
 <a id="af7b850a3c8072e199e803a3749937126"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af7b850a3c8072e199e803a3749937126">&#9670;&nbsp;</a></span>refresh_rate()</h2>
 
@@ -552,6 +327,118 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the refresh rate of the screen; <code>std::nullopt</code> if something goes wrong.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a388facc4d335b83f431eaf012919e1a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a388facc4d335b83f431eaf012919e1a7">&#9670;&nbsp;</a></span>get_pixel_format()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::screen::get_pixel_format </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>index</em> = <code>0</code></td><td>)</td>
+          <td> -&gt; std::optional&lt;<a class="el" href="group__video.html#ga453f61f77c1356db822463d49e1c6aa6">pixel_format</a>&gt;
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the pixel format of the desktop display mode. </p>
+<dl class="section note"><dt>Note</dt><dd>This function returns the pixel format used by the desktop display mode, i.e. the fullscreen display mode, so it might not be accurate for non-fullscreen windows.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the index of the queried display, in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76" title="Returns the amount of available displays.">cen::screen::count()</a></code>].</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the pixel format of the desktop display mode; <code>std::nullopt</code> if something goes wrong.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a51418b5e332ae0740b0c7a6d4e6f91ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51418b5e332ae0740b0c7a6d4e6f91ff">&#9670;&nbsp;</a></span>width()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::screen::width </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>index</em> = <code>0</code></td><td>)</td>
+          <td> -&gt; std::optional&lt;int&gt;
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the width of the screen. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the index of the queried display, in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76" title="Returns the amount of available displays.">cen::screen::count()</a></code>].</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the width of the screen; <code>std::nullopt</code> if something goes wrong.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ae5098cd098c4b2d13c14f7adc47013eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5098cd098c4b2d13c14f7adc47013eb">&#9670;&nbsp;</a></span>height()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::screen::height </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>index</em> = <code>0</code></td><td>)</td>
+          <td> -&gt; std::optional&lt;int&gt;
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the height of the screen. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the index of the queried display, in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76" title="Returns the amount of available displays.">cen::screen::count()</a></code>].</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the height of the screen; <code>std::nullopt</code> if something goes wrong.</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
 
 </div>
@@ -593,8 +480,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a49dd3b4f11b36b17a3275eca78ca420c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49dd3b4f11b36b17a3275eca78ca420c">&#9670;&nbsp;</a></span>usable_bounds()</h2>
+<a id="abfb5c9e3f2d1f64c09ab10a58b5052d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfb5c9e3f2d1f64c09ab10a58b5052d8">&#9670;&nbsp;</a></span>dpi()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -603,11 +490,11 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::screen::usable_bounds </td>
+          <td class="memname">auto cen::screen::dpi </td>
           <td>(</td>
           <td class="paramtype">const int&#160;</td>
           <td class="paramname"><em>index</em> = <code>0</code></td><td>)</td>
-          <td> -&gt; std::optional&lt;<a class="el" href="group__math.html#gac693dcf48436f48e7aa257db423e1bdc">irect</a>&gt;
+          <td> -&gt; std::optional&lt;<a class="el" href="structcen_1_1dpi__info.html">dpi_info</a>&gt;
 </td>
         </tr>
       </table>
@@ -618,15 +505,15 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the usable bounds of a display. </p>
+<p>Returns DPI information about a display. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">index</td><td>the index of the queried display, in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76" title="Returns the amount of available displays.">cen::screen::count()</a></code>].</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the usable bounds of the specified display; <code>std::nullopt</code> if something went wrong.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd>SDL_GetDisplayUsableBounds</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>DPI information about the specified display; <code>std::nullopt</code> if something went wrong.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd>SDL_GetDisplayDPI</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
@@ -668,8 +555,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a51418b5e332ae0740b0c7a6d4e6f91ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51418b5e332ae0740b0c7a6d4e6f91ff">&#9670;&nbsp;</a></span>width()</h2>
+<a id="acc13ac78fed12fd4f2680f30bd525239"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc13ac78fed12fd4f2680f30bd525239">&#9670;&nbsp;</a></span>diagonal_dpi()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -678,11 +565,11 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto cen::screen::width </td>
+          <td class="memname">auto cen::screen::diagonal_dpi </td>
           <td>(</td>
           <td class="paramtype">const int&#160;</td>
           <td class="paramname"><em>index</em> = <code>0</code></td><td>)</td>
-          <td> -&gt; std::optional&lt;int&gt;
+          <td> -&gt; std::optional&lt;float&gt;
 </td>
         </tr>
       </table>
@@ -693,15 +580,128 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the width of the screen. </p>
+<p>Returns diagonal DPI information about a display. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">index</td><td>the index of the queried display, in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76" title="Returns the amount of available displays.">cen::screen::count()</a></code>].</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the width of the screen; <code>std::nullopt</code> if something goes wrong.</dd></dl>
-<dl class="section since"><dt>Since</dt><dd>3.0.0 </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the diagonal DPI information about the specified display; <code>std::nullopt</code> if something went wrong.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ab98d95c12e70ee77cd835149c9368d69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab98d95c12e70ee77cd835149c9368d69">&#9670;&nbsp;</a></span>horizontal_dpi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::screen::horizontal_dpi </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>index</em> = <code>0</code></td><td>)</td>
+          <td> -&gt; std::optional&lt;float&gt;
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns horizontal DPI information about a display. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the index of the queried display, in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76" title="Returns the amount of available displays.">cen::screen::count()</a></code>].</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the horizontal DPI information about the specified display; <code>std::nullopt</code> if something went wrong.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="ac6a89a9d863744805f4632fd21027a2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6a89a9d863744805f4632fd21027a2c">&#9670;&nbsp;</a></span>bounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::screen::bounds </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>index</em> = <code>0</code></td><td>)</td>
+          <td> -&gt; std::optional&lt;<a class="el" href="group__math.html#gac693dcf48436f48e7aa257db423e1bdc">irect</a>&gt;
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the bounds of a display. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the index of the queried display, in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76" title="Returns the amount of available displays.">cen::screen::count()</a></code>].</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the bounds of the specified display; <code>std::nullopt</code> if something went wrong.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd>SDL_GetDisplayBounds</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
+
+</div>
+</div>
+<a id="a49dd3b4f11b36b17a3275eca78ca420c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49dd3b4f11b36b17a3275eca78ca420c">&#9670;&nbsp;</a></span>usable_bounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cen::screen::usable_bounds </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>index</em> = <code>0</code></td><td>)</td>
+          <td> -&gt; std::optional&lt;<a class="el" href="group__math.html#gac693dcf48436f48e7aa257db423e1bdc">irect</a>&gt;
+</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the usable bounds of a display. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the index of the queried display, in the range [0, <code><a class="el" href="namespacecen_1_1screen.html#a0949b8c22f4f1066f751221fbdd61f76" title="Returns the amount of available displays.">cen::screen::count()</a></code>].</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the usable bounds of the specified display; <code>std::nullopt</code> if something went wrong.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd>SDL_GetDisplayUsableBounds</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>5.0.0 </dd></dl>
 
 </div>
 </div>

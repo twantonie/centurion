@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -145,132 +145,128 @@ $(document).ready(function(){initNavTree('controller__button_8hpp_source.html','
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
 <div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="group__audio.html#gafb512c6e798d997f6fe1110c12036f5a">   78</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(<span class="keyword">const</span> <a class="code" href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">controller_button</a> button) -&gt; std::string_view</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordflow">switch</span> (<a class="code" href="group__input.html#gga2779bd4878fed7a711e390b086f77444ace50a09343724eb82df11390e2c1de18">button</a>)</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2afedb2d84cafe20862cb4399751a8a7e3">controller_button::invalid</a>:</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;invalid&quot;</span>;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a0cc175b9c0f1b6a831c399e269772661">controller_button::a</a>:</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;a&quot;</span>;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a92eb5ffee6ae2fec3ad71c777531578f">controller_button::b</a>:</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;b&quot;</span>;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a9dd4e461268c8034f5c8564e155c67a6">controller_button::x</a>:</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;x&quot;</span>;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a415290769594460e2e485922904f345d">controller_button::y</a>:</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;y&quot;</span>;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a469bba0a564235dfceede42db14f17b0">controller_button::back</a>:</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;back&quot;</span>;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2aa0c391dc49c440fc9962168353cedde3">controller_button::guide</a>:</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;guide&quot;</span>;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2aea2b2676c28c0db26d39331a336c6b92">controller_button::start</a>:</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;start&quot;</span>;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2ab810fe1f945311a38d838972f67fcb42">controller_button::left_stick</a>:</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;left_stick&quot;</span>;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a9ee49271089699c3dd1f25d03b604c7f">controller_button::right_stick</a>:</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;right_stick&quot;</span>;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a34393bb6b1fe8e3920c3927e4236c117">controller_button::left_shoulder</a>:</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;left_shoulder&quot;</span>;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2ace0469a0c7649308d65659282fc6a2bb">controller_button::right_shoulder</a>:</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;right_shoulder&quot;</span>;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a1fe4725ee7b6b0c38cdb10308c071383">controller_button::dpad_up</a>:</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;dpad_up&quot;</span>;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a043e5061624a2eb9ec091348e81730a0">controller_button::dpad_down</a>:</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;dpad_down&quot;</span>;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a4c670f509ea633e6a97d419a0037420b">controller_button::dpad_left</a>:</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;dpad_left&quot;</span>;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2ab0c048a3ced53c0689bc37cbc80ee742">controller_button::dpad_right</a>:</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;dpad_right&quot;</span>;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">#if SDL_VERSION_ATLEAST(2, 0, 14)</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a97771c2b239c9a6c28bfdba6e6af0494">controller_button::misc1</a>:</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;misc1&quot;</span>;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2af167c2c53cbfcabfb67247cc93c36cbc">controller_button::paddle1</a>:</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;paddle1&quot;</span>;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a8f89dd445137954871ffd98090113372">controller_button::paddle2</a>:</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;paddle2&quot;</span>;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a191b5107c1c270d395894ba928b91a20">controller_button::paddle3</a>:</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;paddle3&quot;</span>;</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a8a9e13477a69297324357ebb14814e6f">controller_button::paddle4</a>:</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;paddle4&quot;</span>;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2ad299d30071a84c63744533f2543e0e45">controller_button::touchpad</a>:</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;touchpad&quot;</span>;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// SDL_VERSION_ATLEAST(2, 0, 14)</span></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a2ffe4e77325d9a7152f7086ea7aa5114">controller_button::max</a>:</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;max&quot;</span>;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1cen__error.html">cen_error</a>{<span class="stringliteral">&quot;Did not recognize controller button!&quot;</span>};</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  }</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;}</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
-<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="group__audio.html#ga354405a4b46cb6446c4c3d73ff8cd55e">  177</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">operator&lt;&lt;</a>(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code" href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">controller_button</a> button)</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    -&gt; std::ostream&amp;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;{</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  <span class="keywordflow">return</span> stream &lt;&lt; <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(<a class="code" href="group__input.html#gga2779bd4878fed7a711e390b086f77444ace50a09343724eb82df11390e2c1de18">button</a>);</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;}</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordflow">switch</span> (<a class="code" href="group__input.html#gga2779bd4878fed7a711e390b086f77444ace50a09343724eb82df11390e2c1de18">button</a>) {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2afedb2d84cafe20862cb4399751a8a7e3">controller_button::invalid</a>:</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;invalid&quot;</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a0cc175b9c0f1b6a831c399e269772661">controller_button::a</a>:</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;a&quot;</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a92eb5ffee6ae2fec3ad71c777531578f">controller_button::b</a>:</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;b&quot;</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a9dd4e461268c8034f5c8564e155c67a6">controller_button::x</a>:</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;x&quot;</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a415290769594460e2e485922904f345d">controller_button::y</a>:</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;y&quot;</span>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a469bba0a564235dfceede42db14f17b0">controller_button::back</a>:</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;back&quot;</span>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2aa0c391dc49c440fc9962168353cedde3">controller_button::guide</a>:</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;guide&quot;</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2aea2b2676c28c0db26d39331a336c6b92">controller_button::start</a>:</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;start&quot;</span>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2ab810fe1f945311a38d838972f67fcb42">controller_button::left_stick</a>:</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;left_stick&quot;</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a9ee49271089699c3dd1f25d03b604c7f">controller_button::right_stick</a>:</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;right_stick&quot;</span>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a34393bb6b1fe8e3920c3927e4236c117">controller_button::left_shoulder</a>:</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;left_shoulder&quot;</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2ace0469a0c7649308d65659282fc6a2bb">controller_button::right_shoulder</a>:</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;right_shoulder&quot;</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a1fe4725ee7b6b0c38cdb10308c071383">controller_button::dpad_up</a>:</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;dpad_up&quot;</span>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a043e5061624a2eb9ec091348e81730a0">controller_button::dpad_down</a>:</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;dpad_down&quot;</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a4c670f509ea633e6a97d419a0037420b">controller_button::dpad_left</a>:</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;dpad_left&quot;</span>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2ab0c048a3ced53c0689bc37cbc80ee742">controller_button::dpad_right</a>:</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;dpad_right&quot;</span>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">#if SDL_VERSION_ATLEAST(2, 0, 14)</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a97771c2b239c9a6c28bfdba6e6af0494">controller_button::misc1</a>:</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;misc1&quot;</span>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2af167c2c53cbfcabfb67247cc93c36cbc">controller_button::paddle1</a>:</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;paddle1&quot;</span>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a8f89dd445137954871ffd98090113372">controller_button::paddle2</a>:</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;paddle2&quot;</span>;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a191b5107c1c270d395894ba928b91a20">controller_button::paddle3</a>:</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;paddle3&quot;</span>;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a8a9e13477a69297324357ebb14814e6f">controller_button::paddle4</a>:</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;paddle4&quot;</span>;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2ad299d30071a84c63744533f2543e0e45">controller_button::touchpad</a>:</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;touchpad&quot;</span>;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// SDL_VERSION_ATLEAST(2, 0, 14)</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a2ffe4e77325d9a7152f7086ea7aa5114">controller_button::max</a>:</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;max&quot;</span>;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1cen__error.html">cen_error</a>{<span class="stringliteral">&quot;Did not recognize controller button!&quot;</span>};</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;}</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="group__audio.html#ga354405a4b46cb6446c4c3d73ff8cd55e">  176</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">operator&lt;&lt;</a>(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code" href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">controller_button</a> button) -&gt; std::ostream&amp;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;{</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <span class="keywordflow">return</span> stream &lt;&lt; <a class="code" href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">to_string</a>(<a class="code" href="group__input.html#gga2779bd4878fed7a711e390b086f77444ace50a09343724eb82df11390e2c1de18">button</a>);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;}</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
-<div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="group__input.html#gab3fcfe90949742327d4203fd96de93ac">  200</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> <a class="code" href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">controller_button</a> lhs,</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                                        <span class="keyword">const</span> SDL_GameControllerButton rhs) noexcept</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;{</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>SDL_GameControllerButton<span class="keyword">&gt;</span>(lhs) == rhs;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;}</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
-<div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="group__input.html#ga91b496cbd9f30993ed0a89d10accc300">  208</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> SDL_GameControllerButton lhs,</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">controller_button</a> rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;{</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  <span class="keywordflow">return</span> rhs == lhs;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;}</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
-<div class="line"><a name="l00226"></a><span class="lineno"><a class="line" href="group__input.html#gab90e186158a7f798b2fa72aa2e92adcf">  226</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> <a class="code" href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">controller_button</a> lhs,</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                                        <span class="keyword">const</span> SDL_GameControllerButton rhs) noexcept</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;{</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;}</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
-<div class="line"><a name="l00234"></a><span class="lineno"><a class="line" href="group__input.html#gaee064f6f4974ff8627428d2ef0ab6674">  234</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> SDL_GameControllerButton lhs,</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">controller_button</a> rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;{</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;}</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="group__input.html#gab3fcfe90949742327d4203fd96de93ac">  198</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> <a class="code" href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">controller_button</a> lhs,</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                                        <span class="keyword">const</span> SDL_GameControllerButton rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;{</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>SDL_GameControllerButton<span class="keyword">&gt;</span>(lhs) == rhs;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;}</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="group__input.html#ga91b496cbd9f30993ed0a89d10accc300">  205</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">operator==</a>(<span class="keyword">const</span> SDL_GameControllerButton lhs,</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">controller_button</a> rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;{</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  <span class="keywordflow">return</span> rhs == lhs;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;}</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno"><a class="line" href="group__input.html#gab90e186158a7f798b2fa72aa2e92adcf">  223</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> <a class="code" href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">controller_button</a> lhs,</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                                        <span class="keyword">const</span> SDL_GameControllerButton rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;{</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;}</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
+<div class="line"><a name="l00230"></a><span class="lineno"><a class="line" href="group__input.html#gaee064f6f4974ff8627428d2ef0ab6674">  230</a></span>&#160;[[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">operator!=</a>(<span class="keyword">const</span> SDL_GameControllerButton lhs,</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">controller_button</a> rhs) noexcept -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;{</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  <span class="keywordflow">return</span> !(lhs == rhs);</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;}</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;}  <span class="comment">// namespace cen</span></div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;}  <span class="comment">// namespace cen</span></div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_CONTROLLER_BUTTON_HEADER</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_CONTROLLER_BUTTON_HEADER</span></div>
 <div class="ttc" id="aclasscen_1_1cen__error_html"><div class="ttname"><a href="classcen_1_1cen__error.html">cen::cen_error</a></div><div class="ttdoc">The base of all exceptions explicitly thrown by the library.</div><div class="ttdef"><b>Definition:</b> exception.hpp:35</div></div>
-<div class="ttc" id="agroup__audio_html_ga322c699fa08098bd801164819d2f4cc8"><div class="ttname"><a href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">cen::operator!=</a></div><div class="ttdeci">constexpr auto operator!=(const fade_status lhs, const Mix_Fading rhs) noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the fading status values represent aren't the same.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:129</div></div>
-<div class="ttc" id="agroup__audio_html_ga83f366781618f05bf8bcb60c753e9ced"><div class="ttname"><a href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">cen::operator&lt;&lt;</a></div><div class="ttdeci">auto operator&lt;&lt;(std::ostream &amp;stream, const fade_status status) -&gt; std::ostream &amp;</div><div class="ttdoc">Prints a textual representation of a fade status enumerator.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:86</div></div>
-<div class="ttc" id="agroup__audio_html_ga9ebd3f26fcc0f89398ff473b06e9dcbe"><div class="ttname"><a href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">cen::to_string</a></div><div class="ttdeci">constexpr auto to_string(const fade_status status) -&gt; std::string_view</div><div class="ttdoc">Returns a textual version of the supplied fade status.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:51</div></div>
-<div class="ttc" id="agroup__audio_html_gaf72595df3886dbb34dbcf030d14333d2"><div class="ttname"><a href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">cen::operator==</a></div><div class="ttdeci">constexpr auto operator==(const fade_status lhs, const Mix_Fading rhs) noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the fading status values represent are the same.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:106</div></div>
+<div class="ttc" id="agroup__audio_html_ga322c699fa08098bd801164819d2f4cc8"><div class="ttname"><a href="group__audio.html#ga322c699fa08098bd801164819d2f4cc8">cen::operator!=</a></div><div class="ttdeci">constexpr auto operator!=(const fade_status lhs, const Mix_Fading rhs) noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the fading status values represent aren't the same.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:141</div></div>
+<div class="ttc" id="agroup__audio_html_ga83f366781618f05bf8bcb60c753e9ced"><div class="ttname"><a href="group__audio.html#ga83f366781618f05bf8bcb60c753e9ced">cen::operator&lt;&lt;</a></div><div class="ttdeci">auto operator&lt;&lt;(std::ostream &amp;stream, const fade_status status) -&gt; std::ostream &amp;</div><div class="ttdoc">Prints a textual representation of a fade status enumerator.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:98</div></div>
+<div class="ttc" id="agroup__audio_html_ga9ebd3f26fcc0f89398ff473b06e9dcbe"><div class="ttname"><a href="group__audio.html#ga9ebd3f26fcc0f89398ff473b06e9dcbe">cen::to_string</a></div><div class="ttdeci">constexpr auto to_string(const fade_status status) -&gt; std::string_view</div><div class="ttdoc">Returns a textual version of the supplied fade status.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:64</div></div>
+<div class="ttc" id="agroup__audio_html_gaf72595df3886dbb34dbcf030d14333d2"><div class="ttname"><a href="group__audio.html#gaf72595df3886dbb34dbcf030d14333d2">cen::operator==</a></div><div class="ttdeci">constexpr auto operator==(const fade_status lhs, const Mix_Fading rhs) noexcept -&gt; bool</div><div class="ttdoc">Indicates whether or not the fading status values represent are the same.</div><div class="ttdef"><b>Definition:</b> fade_status.hpp:118</div></div>
 <div class="ttc" id="agroup__input_html_gadeba7b364c5b4830cc2c8e2541e334b2"><div class="ttname"><a href="group__input.html#gadeba7b364c5b4830cc2c8e2541e334b2">cen::controller_button</a></div><div class="ttdeci">controller_button</div><div class="ttdoc">Represents different game controller buttons.</div><div class="ttdef"><b>Definition:</b> controller_button.hpp:26</div></div>
 <div class="ttc" id="agroup__input_html_gga2779bd4878fed7a711e390b086f77444ace50a09343724eb82df11390e2c1de18"><div class="ttname"><a href="group__input.html#gga2779bd4878fed7a711e390b086f77444ace50a09343724eb82df11390e2c1de18">cen::controller_bind_type::button</a></div><div class="ttdeci">@ button</div></div>
 <div class="ttc" id="agroup__input_html_ggadeba7b364c5b4830cc2c8e2541e334b2a043e5061624a2eb9ec091348e81730a0"><div class="ttname"><a href="group__input.html#ggadeba7b364c5b4830cc2c8e2541e334b2a043e5061624a2eb9ec091348e81730a0">cen::controller_button::dpad_down</a></div><div class="ttdeci">@ dpad_down</div></div>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['todo_20list_3853',['Todo List',['../todo.html',1,'']]]
+  ['static_20configuration_3956',['Static Configuration',['../configuration.html',1,'']]]
 ];

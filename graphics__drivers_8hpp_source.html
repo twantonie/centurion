@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -117,20 +117,18 @@ $(document).ready(function(){initNavTree('graphics__drivers_8hpp_source.html',''
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    -&gt; std::optional&lt;SDL_RendererInfo&gt;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  SDL_RendererInfo <a class="code" href="group__core.html#gga910862a214870faa7b625862de858c52acaf9b6b99962bf5c2264824231d7a40c">info</a>{};</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordflow">if</span> (SDL_GetRenderDriverInfo(index, &amp;<a class="code" href="group__core.html#gga910862a214870faa7b625862de858c52acaf9b6b99962bf5c2264824231d7a40c">info</a>) == 0)</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__core.html#gga910862a214870faa7b625862de858c52acaf9b6b99962bf5c2264824231d7a40c">info</a>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">return</span> std::nullopt;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordflow">if</span> (SDL_GetRenderDriverInfo(index, &amp;<a class="code" href="group__core.html#gga910862a214870faa7b625862de858c52acaf9b6b99962bf5c2264824231d7a40c">info</a>) == 0) {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__core.html#gga910862a214870faa7b625862de858c52acaf9b6b99962bf5c2264824231d7a40c">info</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}  <span class="comment">// namespace cen</span></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}  <span class="comment">// namespace cen</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_GRAPHICS_DRIVERS_HEADER</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_GRAPHICS_DRIVERS_HEADER</span></div>
 <div class="ttc" id="agroup__core_html_gga910862a214870faa7b625862de858c52acaf9b6b99962bf5c2264824231d7a40c"><div class="ttname"><a href="group__core.html#gga910862a214870faa7b625862de858c52acaf9b6b99962bf5c2264824231d7a40c">cen::log_priority::info</a></div><div class="ttdeci">@ info</div></div>
 <div class="ttc" id="agroup__video_html_ga0039a648fc274ab80c66edad84dce0b7"><div class="ttname"><a href="group__video.html#ga0039a648fc274ab80c66edad84dce0b7">cen::render_driver_count</a></div><div class="ttdeci">auto render_driver_count() noexcept -&gt; int</div><div class="ttdoc">Returns the number of available rendering drivers.</div><div class="ttdef"><b>Definition:</b> graphics_drivers.hpp:22</div></div>
 <div class="ttc" id="agroup__video_html_ga04f7d45a46958019399eacc281cec4ca"><div class="ttname"><a href="group__video.html#ga04f7d45a46958019399eacc281cec4ca">cen::get_render_driver_info</a></div><div class="ttdeci">auto get_render_driver_info(const int index) noexcept -&gt; std::optional&lt; SDL_RendererInfo &gt;</div><div class="ttdoc">Returns the information associated with a rendering driver.</div><div class="ttdef"><b>Definition:</b> graphics_drivers.hpp:49</div></div>

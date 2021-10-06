@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -98,68 +98,63 @@ $(document).ready(function(){initNavTree('gl__library_8hpp_source.html',''); ini
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifndef CENTURION_NO_OPENGL</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// clang-format off</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../../compiler/features.hpp&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// clang-format on</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;SDL.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;cassert&gt;</span>  <span class="comment">// assert</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;SDL.h&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;SDL_opengl.h&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;cassert&gt;</span>  <span class="comment">// assert</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../../compiler/features.hpp&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../../core/exception.hpp&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../../core/not_null.hpp&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../../core/str.hpp&quot;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;../../core/exception.hpp&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;../../core/not_null.hpp&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;../../core/str.hpp&quot;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecen.html">cen</a> {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classcen_1_1gl__library.html">   31</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcen_1_1gl__library.html">gl_library</a> final</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classcen_1_1gl__library.html#a458a583f2ac0a4318efd442d2942c7dc">   44</a></span>&#160;  <a class="code" href="group__compiler.html#ga9bad82e58fd112125ce91d50ce59b583">CENTURION_NODISCARD_CTOR</a> <span class="keyword">explicit</span> <a class="code" href="classcen_1_1gl__library.html#a458a583f2ac0a4318efd442d2942c7dc">gl_library</a>(<span class="keyword">const</span> <a class="code" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a> path = <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">if</span> (SDL_GL_LoadLibrary(path) == -1)</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1sdl__error.html">sdl_error</a>{};</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classcen_1_1gl__library.html#a8e05ccbad7c5d3ecf0e7462561d1e3ef">   52</a></span>&#160;  <a class="code" href="classcen_1_1gl__library.html#a8e05ccbad7c5d3ecf0e7462561d1e3ef">gl_library</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1gl__library.html">gl_library</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classcen_1_1gl__library.html#ade121c2b7963659372e6d56e1021d90a">   53</a></span>&#160;  <a class="code" href="classcen_1_1gl__library.html#ade121c2b7963659372e6d56e1021d90a">gl_library</a>(<a class="code" href="classcen_1_1gl__library.html">gl_library</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classcen_1_1gl__library.html#a5fe3e20562bfa96f352ccea53421db93">   55</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1gl__library.html#a5fe3e20562bfa96f352ccea53421db93">operator=</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1gl__library.html">gl_library</a>&amp;) -&gt; <a class="code" href="classcen_1_1gl__library.html">gl_library</a>&amp; = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classcen_1_1gl__library.html#ac12e250d568cc3719dccca3a2952eafa">   56</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1gl__library.html#ac12e250d568cc3719dccca3a2952eafa">operator=</a>(<a class="code" href="classcen_1_1gl__library.html">gl_library</a>&amp;&amp;) -&gt; <a class="code" href="classcen_1_1gl__library.html">gl_library</a>&amp; = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecen.html">cen</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classcen_1_1gl__library.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcen_1_1gl__library.html">gl_library</a> final</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classcen_1_1gl__library.html#a458a583f2ac0a4318efd442d2942c7dc">   40</a></span>&#160;  <a class="code" href="group__compiler.html#ga9bad82e58fd112125ce91d50ce59b583">CENTURION_NODISCARD_CTOR</a> <span class="keyword">explicit</span> <a class="code" href="classcen_1_1gl__library.html#a458a583f2ac0a4318efd442d2942c7dc">gl_library</a>(<span class="keyword">const</span> <a class="code" href="group__core.html#ga4e8103830e67a437b6c50dce918d0d8a">str</a> path = <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">if</span> (SDL_GL_LoadLibrary(path) == -1) {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcen_1_1sdl__error.html">sdl_error</a>{};</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classcen_1_1gl__library.html#a8e05ccbad7c5d3ecf0e7462561d1e3ef">   47</a></span>&#160;  <a class="code" href="classcen_1_1gl__library.html#a8e05ccbad7c5d3ecf0e7462561d1e3ef">gl_library</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1gl__library.html">gl_library</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classcen_1_1gl__library.html#ade121c2b7963659372e6d56e1021d90a">   48</a></span>&#160;  <a class="code" href="classcen_1_1gl__library.html#ade121c2b7963659372e6d56e1021d90a">gl_library</a>(<a class="code" href="classcen_1_1gl__library.html">gl_library</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classcen_1_1gl__library.html#a5fe3e20562bfa96f352ccea53421db93">   50</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1gl__library.html#a5fe3e20562bfa96f352ccea53421db93">operator=</a>(<span class="keyword">const</span> <a class="code" href="classcen_1_1gl__library.html">gl_library</a>&amp;) -&gt; <a class="code" href="classcen_1_1gl__library.html">gl_library</a>&amp; = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classcen_1_1gl__library.html#ac12e250d568cc3719dccca3a2952eafa">   51</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classcen_1_1gl__library.html#ac12e250d568cc3719dccca3a2952eafa">operator=</a>(<a class="code" href="classcen_1_1gl__library.html">gl_library</a>&amp;&amp;) -&gt; <a class="code" href="classcen_1_1gl__library.html">gl_library</a>&amp; = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classcen_1_1gl__library.html#ac544c6acd605919b6d318892f11d2845">   53</a></span>&#160;  <a class="code" href="classcen_1_1gl__library.html#ac544c6acd605919b6d318892f11d2845">~gl_library</a>() noexcept</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    SDL_GL_UnloadLibrary();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  }</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classcen_1_1gl__library.html#ac544c6acd605919b6d318892f11d2845">   58</a></span>&#160;  <a class="code" href="classcen_1_1gl__library.html#ac544c6acd605919b6d318892f11d2845">~gl_library</a>() noexcept</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    SDL_GL_UnloadLibrary();</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="comment">// clang-format off</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classcen_1_1gl__library.html#a514cca53ee402dfd10b2752fdcbb62cc">   82</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1gl__library.html#a514cca53ee402dfd10b2752fdcbb62cc">address_of</a>(<span class="keyword">const</span> <a class="code" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null&lt;str&gt;</a> <span class="keyword">function</span>) <span class="keyword">const</span> noexcept <span class="comment">// NOLINT</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      -&gt; <span class="keywordtype">void</span>*</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="group__core.html#gga5a2bed2933e3748ad2a77961417a102bae44e4612f62d2fb8f8738bab118a9850">assert</a>(<span class="keyword">function</span>);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">return</span> SDL_GL_GetProcAddress(<span class="keyword">function</span>);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="comment">// clang-format off</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classcen_1_1gl__library.html#a514cca53ee402dfd10b2752fdcbb62cc">   77</a></span>&#160;  [[nodiscard]] <span class="keyword">auto</span> <a class="code" href="classcen_1_1gl__library.html#a514cca53ee402dfd10b2752fdcbb62cc">address_of</a>(<span class="keyword">const</span> <a class="code" href="group__core.html#ga9f195a3e65e79c88a96dd7b767dc0657">not_null&lt;str&gt;</a> <span class="keyword">function</span>) <span class="keyword">const</span> noexcept <span class="comment">// NOLINT</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      -&gt; <span class="keywordtype">void</span>*</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="group__core.html#gga5a2bed2933e3748ad2a77961417a102bae44e4612f62d2fb8f8738bab118a9850">assert</a>(<span class="keyword">function</span>);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">return</span> SDL_GL_GetProcAddress(<span class="keyword">function</span>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="comment">// clang-format on</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;};</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="comment">// clang-format on</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;};</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}  <span class="comment">// namespace cen</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_NO_OPENGL</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_GL_LIBRARY_HEADER</span></div>
-<div class="ttc" id="aclasscen_1_1gl__library_html"><div class="ttname"><a href="classcen_1_1gl__library.html">cen::gl_library</a></div><div class="ttdoc">Manages the initialization and de-initialization of an OpenGL library.</div><div class="ttdef"><b>Definition:</b> gl_library.hpp:32</div></div>
-<div class="ttc" id="aclasscen_1_1gl__library_html_a458a583f2ac0a4318efd442d2942c7dc"><div class="ttname"><a href="classcen_1_1gl__library.html#a458a583f2ac0a4318efd442d2942c7dc">cen::gl_library::gl_library</a></div><div class="ttdeci">gl_library(const str path=nullptr)</div><div class="ttdoc">Loads an OpenGL library.</div><div class="ttdef"><b>Definition:</b> gl_library.hpp:44</div></div>
-<div class="ttc" id="aclasscen_1_1gl__library_html_a514cca53ee402dfd10b2752fdcbb62cc"><div class="ttname"><a href="classcen_1_1gl__library.html#a514cca53ee402dfd10b2752fdcbb62cc">cen::gl_library::address_of</a></div><div class="ttdeci">auto address_of(const not_null&lt; str &gt; function) const noexcept -&gt; void *</div><div class="ttdoc">Returns the address of an OpenGL function.</div><div class="ttdef"><b>Definition:</b> gl_library.hpp:82</div></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}  <span class="comment">// namespace cen</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_NO_OPENGL</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// CENTURION_GL_LIBRARY_HEADER</span></div>
+<div class="ttc" id="aclasscen_1_1gl__library_html"><div class="ttname"><a href="classcen_1_1gl__library.html">cen::gl_library</a></div><div class="ttdoc">Manages the initialization and de-initialization of an OpenGL library.</div><div class="ttdef"><b>Definition:</b> gl_library.hpp:28</div></div>
+<div class="ttc" id="aclasscen_1_1gl__library_html_a458a583f2ac0a4318efd442d2942c7dc"><div class="ttname"><a href="classcen_1_1gl__library.html#a458a583f2ac0a4318efd442d2942c7dc">cen::gl_library::gl_library</a></div><div class="ttdeci">gl_library(const str path=nullptr)</div><div class="ttdoc">Loads an OpenGL library.</div><div class="ttdef"><b>Definition:</b> gl_library.hpp:40</div></div>
+<div class="ttc" id="aclasscen_1_1gl__library_html_a514cca53ee402dfd10b2752fdcbb62cc"><div class="ttname"><a href="classcen_1_1gl__library.html#a514cca53ee402dfd10b2752fdcbb62cc">cen::gl_library::address_of</a></div><div class="ttdeci">auto address_of(const not_null&lt; str &gt; function) const noexcept -&gt; void *</div><div class="ttdoc">Returns the address of an OpenGL function.</div><div class="ttdef"><b>Definition:</b> gl_library.hpp:77</div></div>
 <div class="ttc" id="aclasscen_1_1gl__library_html_a5fe3e20562bfa96f352ccea53421db93"><div class="ttname"><a href="classcen_1_1gl__library.html#a5fe3e20562bfa96f352ccea53421db93">cen::gl_library::operator=</a></div><div class="ttdeci">auto operator=(const gl_library &amp;) -&gt; gl_library &amp;=delete</div></div>
 <div class="ttc" id="aclasscen_1_1gl__library_html_a8e05ccbad7c5d3ecf0e7462561d1e3ef"><div class="ttname"><a href="classcen_1_1gl__library.html#a8e05ccbad7c5d3ecf0e7462561d1e3ef">cen::gl_library::gl_library</a></div><div class="ttdeci">gl_library(const gl_library &amp;)=delete</div></div>
 <div class="ttc" id="aclasscen_1_1gl__library_html_ac12e250d568cc3719dccca3a2952eafa"><div class="ttname"><a href="classcen_1_1gl__library.html#ac12e250d568cc3719dccca3a2952eafa">cen::gl_library::operator=</a></div><div class="ttdeci">auto operator=(gl_library &amp;&amp;) -&gt; gl_library &amp;=delete</div></div>
-<div class="ttc" id="aclasscen_1_1gl__library_html_ac544c6acd605919b6d318892f11d2845"><div class="ttname"><a href="classcen_1_1gl__library.html#ac544c6acd605919b6d318892f11d2845">cen::gl_library::~gl_library</a></div><div class="ttdeci">~gl_library() noexcept</div><div class="ttdef"><b>Definition:</b> gl_library.hpp:58</div></div>
+<div class="ttc" id="aclasscen_1_1gl__library_html_ac544c6acd605919b6d318892f11d2845"><div class="ttname"><a href="classcen_1_1gl__library.html#ac544c6acd605919b6d318892f11d2845">cen::gl_library::~gl_library</a></div><div class="ttdeci">~gl_library() noexcept</div><div class="ttdef"><b>Definition:</b> gl_library.hpp:53</div></div>
 <div class="ttc" id="aclasscen_1_1gl__library_html_ade121c2b7963659372e6d56e1021d90a"><div class="ttname"><a href="classcen_1_1gl__library.html#ade121c2b7963659372e6d56e1021d90a">cen::gl_library::gl_library</a></div><div class="ttdeci">gl_library(gl_library &amp;&amp;)=delete</div></div>
 <div class="ttc" id="aclasscen_1_1sdl__error_html"><div class="ttname"><a href="classcen_1_1sdl__error.html">cen::sdl_error</a></div><div class="ttdoc">Represents an error related to the core SDL2 library.</div><div class="ttdef"><b>Definition:</b> exception.hpp:64</div></div>
 <div class="ttc" id="agroup__compiler_html_ga9bad82e58fd112125ce91d50ce59b583"><div class="ttname"><a href="group__compiler.html#ga9bad82e58fd112125ce91d50ce59b583">CENTURION_NODISCARD_CTOR</a></div><div class="ttdeci">#define CENTURION_NODISCARD_CTOR</div><div class="ttdef"><b>Definition:</b> features.hpp:18</div></div>

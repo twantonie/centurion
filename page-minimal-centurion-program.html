@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Centurion
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">A modern C++ wrapper library for SDL2</div>
   </td>
@@ -97,7 +97,7 @@ $(document).ready(function(){initNavTree('page-minimal-centurion-program.html','
 <dl class="section note"><dt>Note</dt><dd>The signature of the <code>main</code> function must be equivalent to <code>int(int, char**)</code>.</dd></dl>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;centurion.hpp&gt;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span>, <span class="keywordtype">char</span>**)</div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span>, <span class="keywordtype">char</span>**)  <span class="comment">// The signature of main must be equivalent to this!</span></div>
 <div class="line">{</div>
 <div class="line">  <a class="code" href="classcen_1_1library.html">cen::library</a> centurion;</div>
 <div class="line"> </div>
@@ -105,7 +105,7 @@ $(document).ready(function(){initNavTree('page-minimal-centurion-program.html','
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aclasscen_1_1library_html"><div class="ttname"><a href="classcen_1_1library.html">cen::library</a></div><div class="ttdoc">Used to initialize and de-initialize the library.</div><div class="ttdef"><b>Definition:</b> library.hpp:174</div></div>
+<div class="ttc" id="aclasscen_1_1library_html"><div class="ttname"><a href="classcen_1_1library.html">cen::library</a></div><div class="ttdoc">Used to initialize and de-initialize the library.</div><div class="ttdef"><b>Definition:</b> library.hpp:172</div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
