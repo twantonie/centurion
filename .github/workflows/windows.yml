@@ -6,6 +6,7 @@ env:
   IMG_VERSION: 2.0.5
   MIX_VERSION: 2.0.4
   TTF_VERSION: 2.0.15
+  CENTURION_OPTIONS: -DCEN_EXAMPLES=ON -DCEN_TESTS=ON -DCEN_MOCK_FRIENDLY_MODE=ON
 
 jobs:
   windows-latest-test:
@@ -63,7 +64,7 @@ jobs:
           SDL2MIXERDIR: ${{github.workspace}}/SDL2_mixer-${{env.MIX_VERSION}}
           SDL2TTFDIR: ${{github.workspace}}/SDL2_ttf-${{env.TTF_VERSION}}
         run: |
-          cmake .. -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_STANDARD=${{matrix.CPP_VERSION}} -GNinja
+          cmake .. -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_STANDARD=${{matrix.CPP_VERSION}} ${{env.CENTURION_OPTIONS}} -GNinja
           ninja
 
       - name: Run mocked test suite

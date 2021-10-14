@@ -4,6 +4,7 @@ on: [ push, pull_request ]
 
 env:
   MIX_VERSION: 2.0.4
+  CENTURION_OPTIONS: -DCEN_EXAMPLES=ON -DCEN_TESTS=ON -DCEN_MOCK_FRIENDLY_MODE=ON
 
 jobs:
   macos-test:
@@ -54,7 +55,7 @@ jobs:
         working-directory: ./build
         shell: bash
         run: |
-          cmake .. -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_STANDARD=${{matrix.CPP_VERSION}} -GNinja
+          cmake .. -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_STANDARD=${{matrix.CPP_VERSION}} ${{env.CENTURION_OPTIONS}} -GNinja
           ninja
 
       - name: Run unit tests

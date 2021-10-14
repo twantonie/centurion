@@ -6,6 +6,7 @@ env:
   SDL_LATEST: 2.0.16
   SDL_VIDEODRIVER: x11
   DISPLAY: :99.0
+  CENTURION_OPTIONS: -DCEN_EXAMPLES=ON -DCEN_TESTS=ON -DCEN_MOCK_FRIENDLY_MODE=ON -DCEN_AUDIO=OFF
 
 jobs:
   ubuntu-test:
@@ -90,9 +91,9 @@ jobs:
         run: |
           if [[ "${{matrix.SDL_VERSION}}" == "${{env.SDL_LATEST}}" && "${{matrix.CPP_VERSION}}" == "20" ]];
           then
-            cmake .. -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_STANDARD=${{matrix.CPP_VERSION}} -DCEN_AUDIO=OFF -DCEN_COVERAGE=ON -DCEN_EXAMPLES=OFF -GNinja
+            cmake .. -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_STANDARD=${{matrix.CPP_VERSION}} -DCEN_COVERAGE=ON ${{env.CENTURION_OPTIONS}} -GNinja
           else
-            cmake .. -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_STANDARD=${{matrix.CPP_VERSION}} -DCEN_AUDIO=OFF -DCEN_COVERAGE=OFF -DCEN_EXAMPLES=OFF -GNinja
+            cmake .. -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_STANDARD=${{matrix.CPP_VERSION}} -DCEN_AUDIO=OFF ${{env.CENTURION_OPTIONS}} -GNinja
           fi
 
       - name: Build

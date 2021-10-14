@@ -1,11 +1,15 @@
 cmake_minimum_required(VERSION 3.15)
 
+set(CEN_VERSION 6.4.0)
+
 project(centurion
-    VERSION 6.4.0
+    VERSION ${CEN_VERSION}
     HOMEPAGE_URL "https://github.com/albin-johansson/centurion"
     LANGUAGES CXX)
 
 set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
+
+message("Centurion version: ${CENTURION_VERSION}")
 
 if ("${CMAKE_CXX_STANDARD}" STREQUAL "")
   message("No explicit C++ version specified, assuming C++17...")
@@ -26,17 +30,15 @@ set(CEN_SOURCE_DIR ${PROJECT_SOURCE_DIR}/src/centurion)
 set(CEN_BINARIES_DIR ${PROJECT_SOURCE_DIR}/bin)
 set(CENTURION_VERSION ${CMAKE_PROJECT_VERSION})
 
-message("Centurion version: ${CENTURION_VERSION}")
-
 set(CENTURION_LIB_TARGET libcenturion)
 set(CENTURION_TEST_TARGET testcenturion)
 set(CENTURION_MOCK_TARGET mockcenturion)
 
 option(CEN_COVERAGE "Enable coverage data" OFF)
-option(CEN_TESTS "Build the Centurion tests" ON)
-option(CEN_EXAMPLES "Build the examples" ON)
+option(CEN_TESTS "Build the Centurion tests" OFF)
+option(CEN_EXAMPLES "Build the examples" OFF)
 option(CEN_INSTALL OFF)
-option(CENTURION_MOCK_FRIENDLY_MODE "Enable more mocked tests" ON)
+option(CEN_MOCK_FRIENDLY_MODE "Enable more mocked tests" OFF)
 
 if (WIN32)
   find_env_var(SDL2DIR SDL2)
@@ -322,8 +324,6 @@ if (CEN_EXAMPLES)
 endif ()
 
 if (CEN_INSTALL)
-  message("Installing...")
-
   include(CMakePackageConfigHelpers)
   include(GNUInstallDirs)
 
