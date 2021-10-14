@@ -67,6 +67,28 @@ The library is distributed in two flavours, either as a _single_ amalgamated `ce
 download the headers include them in your project, and the library it's ready to be used! You will
 of course also need to install SDL2.
 
+### Using FetchContent
+
+It's possible to make use of CMake's `FetchContent` module to download the repository and install
+the library. See the following example of how to set up a CMake target for Centurion.
+
+```CMake
+include(FetchContent)
+
+FetchContent_Declare(centurion
+                     GIT_REPOSITORY "https://github.com/albin-johansson/centurion.git"
+                     GIT_TAG "main")
+
+# Centurion options can be set here
+# set(CEN_EXAMPLES ON)
+
+FetchContent_MakeAvailable(centurion)
+
+# Conventional naming of variables used with target_include_directories and target_link_libraries
+set(CENTURION_INCLUDE_DIRS "${centurion_SOURCE_DIR}/src")
+set(CENTURION_LIBRARIES centurion)
+```
+
 ## Documentation
 
 The Doxygen documentation for the latest stable release can be
