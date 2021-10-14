@@ -1,0 +1,9 @@
+includedir=@CMAKE_INSTALL_FULL_INCLUDEDIR@
+libdir=@CMAKE_INSTALL_FULL_LIBDIR@
+
+Name: centurion
+Description: A modern C++ wrapper library for SDL2
+Version: @CEN_VERSION@
+URL: https://github.com/albin-johansson/centurion
+Libs: -L${libdir} -lcenturion
+Cflags: -I${includedir}
