@@ -332,13 +332,16 @@ if (CEN_INSTALL)
   set(CEN_GENERATED_DIR "${CMAKE_CURRENT_BINARY_DIR}/generated")
   set(CEN_CONFIG_INSTALL_DIR "${CMAKE_INSTALL_LIBDIR}/cmake/${CEN_PACKAGE_NAME}")
 
-  set(CEN_CONFIG_FILE "${CEN_GENERATED_DIR}/${CEN_PACKAGE_NAME}-config.cmake")
   set(CEN_VERSION_FILE "${CEN_GENERATED_DIR}/${CEN_PACKAGE_NAME}-config-version.cmake")
+  set(CEN_CONFIG_FILE "${CEN_GENERATED_DIR}/${CEN_PACKAGE_NAME}-config.cmake")
+  set(CEN_PKGCONFIG_FILE "${CEN_GENERATED_DIR}/${CEN_PACKAGE_NAME}.pc")
 
   write_basic_package_version_file(${CEN_VERSION_FILE}
       VERSION ${CMAKE_PROJECT_VERSION}
       COMPATIBILITY SameMinorVersion
       ARCH_INDEPENDENT)
+
+  configure_file("${PROJECT_SOURCE_DIR}/centurion.pc.in" "${CEN_PKGCONFIG_FILE}" @ONLY)
 
   configure_package_config_file("${PROJECT_SOURCE_DIR}/centurion-config.cmake.in"
       "${CEN_CONFIG_FILE}"
