@@ -9,7 +9,7 @@ project(centurion
 
 set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 
-message("Centurion version: ${CENTURION_VERSION}")
+message("Centurion version: ${CEN_VERSION}")
 
 if ("${CMAKE_CXX_STANDARD}" STREQUAL "")
   message("No explicit C++ version specified, assuming C++17...")
@@ -28,7 +28,6 @@ set(CEN_ROOT_DIR ${PROJECT_SOURCE_DIR})
 set(CEN_RESOURCES_DIR ${PROJECT_SOURCE_DIR}/test/resources)
 set(CEN_SOURCE_DIR ${PROJECT_SOURCE_DIR}/src/centurion)
 set(CEN_BINARIES_DIR ${PROJECT_SOURCE_DIR}/bin)
-set(CENTURION_VERSION ${CMAKE_PROJECT_VERSION})
 
 set(CENTURION_LIB_TARGET centurion)
 set(CENTURION_TEST_TARGET testcenturion)
