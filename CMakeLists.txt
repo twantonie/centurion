@@ -47,9 +47,9 @@ if (WIN32)
 endif ()
 
 find_package(SDL2 REQUIRED)
-find_package(SDL2_image REQUIRED)
-find_package(SDL2_mixer REQUIRED)
-find_package(SDL2_ttf REQUIRED)
+find_package(SDL2_image)
+find_package(SDL2_mixer)
+find_package(SDL2_ttf)
 
 if (CEN_COVERAGE)
   include(CodeCoverage)
