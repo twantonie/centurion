@@ -39,17 +39,39 @@ option(CEN_EXAMPLES "Build the examples" OFF)
 option(CEN_INSTALL OFF)
 option(CEN_MOCK_FRIENDLY_MODE "Enable more mocked tests" OFF)
 
+option(CEN_USE_TTF "Include SDL2_ttf" ON)
+option(CEN_USE_IMG "Include SDL2_image" ON)
+option(CEN_USE_MIX "Include SDL2_mixer" ON)
+
 if (WIN32)
   find_env_var(SDL2DIR SDL2)
-  find_env_var(SDL2IMAGEDIR SDL2_image)
-  find_env_var(SDL2MIXERDIR SDL2_mixer)
-  find_env_var(SDL2TTFDIR SDL2_ttf)
+
+  if (CEN_USE_IMG)
+    find_env_var(SDL2IMAGEDIR SDL2_image)
+  endif ()
+
+  if (CEN_USE_MIX)
+    find_env_var(SDL2MIXERDIR SDL2_mixer)
+  endif ()
+
+  if (CEN_USE_TTF)
+    find_env_var(SDL2TTFDIR SDL2_ttf)
+  endif ()
 endif ()
 
 find_package(SDL2 REQUIRED)
-find_package(SDL2_image)
-find_package(SDL2_mixer)
-find_package(SDL2_ttf)
+
+if (CEN_USE_IMG)
+  find_package(SDL2_image)
+endif ()
+
+if (CEN_USE_MIX)
+  find_package(SDL2_mixer)
+endif ()
+
+if (CEN_USE_TTF)
+  find_package(SDL2_ttf)
+endif ()
 
 if (CEN_COVERAGE)
   include(CodeCoverage)
@@ -274,21 +296,40 @@ target_sources(${CENTURION_LIB_TARGET} PUBLIC INTERFACE
 target_include_directories(${CENTURION_LIB_TARGET}
     INTERFACE
     $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/src>
-    $<INSTALL_INTERFACE:include>
+    # $<INSTALL_INTERFACE:include>
 
     PUBLIC INTERFACE
     $<BUILD_INTERFACE:${SDL2_INCLUDE_DIR}>
-    $<BUILD_INTERFACE:${SDL2_IMAGE_INCLUDE_DIRS}>
-    $<BUILD_INTERFACE:${SDL2_TTF_INCLUDE_DIRS}>
-    $<BUILD_INTERFACE:${SDL2_MIXER_INCLUDE_DIRS}>
     )
 
-target_link_libraries(${CENTURION_LIB_TARGET} PUBLIC INTERFACE
-    ${SDL2_LIBRARY}
-    ${SDL2_IMAGE_LIBRARIES}
-    ${SDL2_TTF_LIBRARIES}
-    ${SDL2_MIXER_LIBRARIES}
-    )
+if (CEN_USE_IMG)
+  target_include_directories(${CENTURION_LIB_TARGET}
+      PUBLIC INTERFACE $<BUILD_INTERFACE:${SDL2_IMAGE_INCLUDE_DIRS}>)
+endif ()
+
+if (CEN_USE_TTF)
+  target_include_directories(${CENTURION_LIB_TARGET}
+      PUBLIC INTERFACE $<BUILD_INTERFACE:${SDL2_TTF_INCLUDE_DIRS}>)
+endif ()
+
+if (CEN_USE_MIX)
+  target_include_directories(${CENTURION_LIB_TARGET}
+      PUBLIC INTERFACE $<BUILD_INTERFACE:${SDL2_MIXER_INCLUDE_DIRS}>)
+endif ()
+
+target_link_libraries(${CENTURION_LIB_TARGET} PUBLIC INTERFACE ${SDL2_LIBRARY})
+
+if (CEN_USE_IMG)
+  target_link_libraries(${CENTURION_LIB_TARGET} PUBLIC INTERFACE ${SDL2_IMAGE_LIBRARIES})
+endif ()
+
+if (CEN_USE_TTF)
+  target_link_libraries(${CENTURION_LIB_TARGET} PUBLIC INTERFACE ${SDL2_TTF_LIBRARIES})
+endif ()
+
+if (CEN_USE_MIX)
+  target_link_libraries(${CENTURION_LIB_TARGET} PUBLIC INTERFACE ${SDL2_MIXER_LIBRARIES})
+endif ()
 
 if (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
   target_compile_options(${CENTURION_LIB_TARGET} PRIVATE INTERFACE
