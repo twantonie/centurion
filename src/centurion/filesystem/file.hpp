@@ -39,7 +39,7 @@ namespace cen {
  *
  * \since 5.3.0
  */
-class file final
+class rw_ops 
 {
  public:
   using size_type = std::size_t;
@@ -54,32 +54,9 @@ class file final
    *
    * \since 5.3.0
    */
-  explicit file(SDL_RWops* context) noexcept : m_context{context}
+  explicit rw_ops(SDL_RWops* context) noexcept : m_context{context}
   {}
 
-  /**
-   * \brief Opens the file at the specified file path.
-   *
-   * \details Be sure to check the validity of the file, after construction.
-   * \code{cpp}
-   *   cen::file file{"foo", cen::file_mode::read_existing_binary};
-   *   if (file) {
-   *     // File was opened successfully!
-   *   }
-   * \endcode
-   *
-   * \param path the path of the file.
-   * \param mode the mode that will be used to open the file.
-   *
-   * \since 5.3.0
-   */
-  file(const not_null<str> path, const file_mode mode) noexcept
-      : m_context{SDL_RWFromFile(path, to_string(mode))}
-  {}
-
-  /// \copydoc file(not_null<str>, file_mode)
-  file(const std::string& path, const file_mode mode) noexcept : file{path.c_str(), mode}
-  {}
 
   /// \} End of construction
 
@@ -758,7 +735,7 @@ class file final
     return m_context != nullptr;
   }
 
- private:
+ protected:
   struct deleter final
   {
     void operator()(SDL_RWops* context) noexcept
@@ -811,6 +788,34 @@ class file final
         return "ab+";
     }
   }
+};
+
+class file final : public rw_ops 
+{
+ public:
+  /**
+   * \brief Opens the file at the specified file path.
+   *
+   * \details Be sure to check the validity of the file, after construction.
+   * \code{cpp}
+   *   cen::file file{"foo", cen::file_mode::read_existing_binary};
+   *   if (file) {
+   *     // File was opened successfully!
+   *   }
+   * \endcode
+   *
+   * \param path the path of the file.
+   * \param mode the mode that will be used to open the file.
+   *
+   * \since 5.3.0
+   */
+  file(const not_null<str> path, const file_mode mode) noexcept
+      : rw_ops{SDL_RWFromFile(path, to_string(mode))}
+  {}
+
+  /// \copydoc file(not_null<str>, file_mode)
+  file(const std::string& path, const file_mode mode) noexcept : file{path.c_str(), mode}
+  {}
 };
 
 /// \} End of group filesystem
