@@ -5,7 +5,7 @@ project(centurion
     HOMEPAGE_URL "https://github.com/albin-johansson/centurion"
     LANGUAGES CXX)
 
-set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_BINARY_DIR}" "${PROJECT_SOURCE_DIR}/cmake")
 
 if ("${CMAKE_CXX_STANDARD}" STREQUAL "")
   message("No explicit C++ version specified, assuming C++17...")
@@ -37,17 +37,11 @@ option(CEN_TESTS "Build the Centurion tests" ON)
 option(CEN_EXAMPLES "Build the examples" ON)
 option(CENTURION_MOCK_FRIENDLY_MODE "Enable more mocked tests" ON)
 
-if (WIN32)
-  find_env_var(SDL2DIR SDL2)
-  find_env_var(SDL2IMAGEDIR SDL2_image)
-  find_env_var(SDL2MIXERDIR SDL2_mixer)
-  find_env_var(SDL2TTFDIR SDL2_ttf)
-endif ()
-
 find_package(SDL2 REQUIRED)
-find_package(SDL2_image REQUIRED)
-find_package(SDL2_mixer REQUIRED)
-find_package(SDL2_ttf REQUIRED)
+find_package(SDL2_image)
+find_package(SDL2_mixer)
+find_package(SDL2_ttf)
+
 
 if (CEN_COVERAGE)
   include(CodeCoverage)
@@ -285,6 +279,10 @@ target_link_libraries(${CENTURION_LIB_TARGET} PUBLIC INTERFACE
     ${SDL2_TTF_LIBRARIES}
     ${SDL2_MIXER_LIBRARIES}
     )
+
+if (NOT SDL2_mixer_FOUND)
+  target_compile_definitions(${CENTURION_LIB_TARGET} INTERFACE -DCENTURION_NO_SDL_MIXER)
+endif()
 
 if (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
   target_compile_options(${CENTURION_LIB_TARGET} PUBLIC INTERFACE
