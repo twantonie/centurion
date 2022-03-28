@@ -182,6 +182,22 @@ class font final
   font(const std::string& file, const int size) : font{file.c_str(), size}
   {}
 
+  /**
+   * \brief Creates a font based from the raw sdl font.
+   *
+   * \param font the raw font created by the user.
+   *
+   * \throws ttf_error if the font cannot be loaded.
+   *
+   * \since 6.4.0
+   */
+  font(TTF_Font *font) : m_font{font}, m_size{0}
+  {
+    if (!m_font) {
+      throw ttf_error{};
+    }
+  }
+
   /// \} End of construction
 
   /// \name Style functions
